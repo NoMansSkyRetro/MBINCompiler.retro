@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC28AABC895BFBC2, NameHash = 0xD25823AF)]
+    [NMS(GUID = 0x306BB504322B47EA, NameHash = 0xD25823AF)]
     public class GcDamageMultiplierLookup : NMSTemplate
     {
         [NMS(Index = 0)]

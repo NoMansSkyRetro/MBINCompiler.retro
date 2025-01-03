@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x46D959E5BB271880, NameHash = 0x375BF10B)]
+    [NMS(GUID = 0x5C961BFB7AAC01B5, NameHash = 0x375BF10B)]
     public class GcModSettingsInfo : NMSTemplate
     {
         [NMS(Index = 8)]
@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 4)]
         /* 0x020 */ public ulong LastUpdated;
         [NMS(Index = 5)]
-        /* 0x028 */ public ushort LoadOrder;
+        /* 0x028 */ public ushort ModPriority;
         [NMS(Index = 1)]
         /* 0x02A */ public NMSString0x80 Author;
         [NMS(Index = 0)]

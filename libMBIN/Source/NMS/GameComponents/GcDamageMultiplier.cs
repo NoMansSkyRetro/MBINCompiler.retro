@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEB75E72E7D42FA2C, NameHash = 0x814EEACD)]
+    [NMS(GUID = 0x13A9179A6B33E6F4, NameHash = 0x814EEACD)]
     public class GcDamageMultiplier : NMSTemplate
     {
         [NMS(Index = 1)]

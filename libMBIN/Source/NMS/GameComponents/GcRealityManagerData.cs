@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB249DA5FE95C2124, NameHash = 0xEDA97B90)]
+    [NMS(GUID = 0x5835758F417EB3A7, NameHash = 0xEDA97B90)]
     public class GcRealityManagerData : NMSTemplate
     {
         [NMS(Index = 63, Size = 0x9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
