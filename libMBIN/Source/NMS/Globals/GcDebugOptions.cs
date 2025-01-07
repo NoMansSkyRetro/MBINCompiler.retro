@@ -4,72 +4,72 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xDAE823E5095C57C4, NameHash = 0xAA861200)]
+    [NMS(GUID = 0x1DB07416A20057BE, NameHash = 0xAA861200)]
     public class GcDebugOptions : NMSTemplate
     {
-        [NMS(Index = 422)]
+        [NMS(Index = 423)]
         /* 0x0000 */ public GcSeasonTransferInventoryConfig SeasonTransferInventoryConfigOverride;
-        [NMS(Index = 197)]
+        [NMS(Index = 198)]
         /* 0x0030 */ public VariableSizeString CrashDumpPath;
-        [NMS(Index = 419)]
+        [NMS(Index = 420)]
         /* 0x0040 */ public NMSString0x10 CreateSeasonContextMaskIdOverride;
-        [NMS(Index = 307)]
+        [NMS(Index = 308)]
         /* 0x0050 */ public VariableSizeString CursorTexture;
-        [NMS(Index = 305)]
-        /* 0x0060 */ public VariableSizeString DebugFont;
         [NMS(Index = 306)]
+        /* 0x0060 */ public VariableSizeString DebugFont;
+        [NMS(Index = 307)]
         /* 0x0070 */ public VariableSizeString DebugFontTexture;
         [NMS(Index = 104)]
         /* 0x0080 */ public VariableSizeString DebugScene;
-        [NMS(Index = 339)]
+        [NMS(Index = 340)]
         /* 0x0090 */ public NMSString0x10 DefaultAirCreatureTable;
-        [NMS(Index = 341)]
+        [NMS(Index = 342)]
         /* 0x00A0 */ public NMSString0x10 DefaultCaveCreatureTable;
-        [NMS(Index = 338)]
+        [NMS(Index = 339)]
         /* 0x00B0 */ public NMSString0x10 DefaultGroundCreatureTable;
         [NMS(Index = 175)]
         /* 0x00C0 */ public VariableSizeString DefaultSaveData;
-        [NMS(Index = 340)]
+        [NMS(Index = 341)]
         /* 0x00D0 */ public NMSString0x10 DefaultWaterCreatureTable;
         [NMS(Index = 68)]
         /* 0x00E0 */ public NMSString0x10 ForceBuilderMissionBoardMission;
         [NMS(Index = 174)]
         /* 0x00F0 */ public List<NMSString0x20> LocTableList;
-        [NMS(Index = 308)]
-        /* 0x0100 */ public VariableSizeString PauseTexture;
-        [NMS(Index = 253)]
-        /* 0x0110 */ public VariableSizeString PipelineFile;
-        [NMS(Index = 255)]
-        /* 0x0120 */ public VariableSizeString PipelineFileEditor;
-        [NMS(Index = 254)]
-        /* 0x0130 */ public VariableSizeString PipelineFileFrontend;
         [NMS(Index = 309)]
+        /* 0x0100 */ public VariableSizeString PauseTexture;
+        [NMS(Index = 254)]
+        /* 0x0110 */ public VariableSizeString PipelineFile;
+        [NMS(Index = 256)]
+        /* 0x0120 */ public VariableSizeString PipelineFileEditor;
+        [NMS(Index = 255)]
+        /* 0x0130 */ public VariableSizeString PipelineFileFrontend;
+        [NMS(Index = 310)]
         /* 0x0140 */ public VariableSizeString PlayTexture;
         [NMS(Index = 172)]
         /* 0x0150 */ public VariableSizeString RealityPresetFile;
-        [NMS(Index = 311)]
+        [NMS(Index = 312)]
         /* 0x0160 */ public VariableSizeString RenderToTexture;
         [NMS(Index = 102)]
         /* 0x0170 */ public VariableSizeString SceneSettings;
-        [NMS(Index = 310)]
+        [NMS(Index = 311)]
         /* 0x0180 */ public VariableSizeString StepTexture;
-        [NMS(Index = 420)]
+        [NMS(Index = 421)]
         /* 0x0190 */ public NMSString0x10 SwitchSeasonContextMaskIdOverride;
-        [NMS(Index = 195)]
+        [NMS(Index = 196)]
         /* 0x01A0 */ public ulong ForceTimeToEpoch;
         [NMS(Index = 4)]
         /* 0x01A8 */ public ulong OverrideAbandonedFreighterSeed;
-        [NMS(Index = 403)]
+        [NMS(Index = 404)]
         /* 0x01B0 */ public TkGlobals ToolkitGlobals;
         [NMS(Index = 183)]
         /* 0x068C */ public float _3dTextDistance;
         [NMS(Index = 184)]
         /* 0x0690 */ public float _3dTextMinScale;
-        [NMS(Index = 393)]
+        [NMS(Index = 394)]
         /* 0x0694 */ public GcBaseBuildingPartStyle AutomaticPartSpawnStyle;
-        [NMS(Index = 388)]
+        [NMS(Index = 389)]
         /* 0x0698 */ public float BaseDownloadTimeout;
-        [NMS(Index = 400)]
+        [NMS(Index = 401)]
         /* 0x069C */ public uint BasePayloadMultiplier;
         [NMS(Index = 11)]
         /* 0x06A0 */ public int BootDirectlyIntoSaveSlot;
@@ -97,15 +97,15 @@ namespace libMBIN.NMS.Globals
         /* 0x06AC */ public BootModeEnum BootMode;
         [NMS(Index = 164)]
         /* 0x06B0 */ public TkLanguages DebugLanguage;
-        [NMS(Index = 206)]
-        /* 0x06B4 */ public float DebugMenuAlpha;
-        [NMS(Index = 208)]
-        /* 0x06B8 */ public float DebugTextLineHeight;
         [NMS(Index = 207)]
+        /* 0x06B4 */ public float DebugMenuAlpha;
+        [NMS(Index = 209)]
+        /* 0x06B8 */ public float DebugTextLineHeight;
+        [NMS(Index = 208)]
         /* 0x06BC */ public float DebugTextSize;
-        [NMS(Index = 298)]
+        [NMS(Index = 299)]
         /* 0x06C0 */ public int DebugTextureSize;
-        [NMS(Index = 271)]
+        [NMS(Index = 272)]
         /* 0x06C4 */ public int DiscoveryAutoSyncIntervalSeconds;
         // size: 0x3
         public enum EnableWorldsGraphicsEnum : uint {
@@ -113,21 +113,21 @@ namespace libMBIN.NMS.Globals
             True,
             False,
         }
-        [NMS(Index = 201)]
+        [NMS(Index = 202)]
         /* 0x06C8 */ public EnableWorldsGraphicsEnum EnableWorldsGraphics;
-        [NMS(Index = 350)]
+        [NMS(Index = 351)]
         /* 0x06CC */ public GcGalaxyStarAnomaly ForceAnomalyTo;
-        [NMS(Index = 368)]
+        [NMS(Index = 369)]
         /* 0x06D0 */ public int ForceAsteroidSystemIndex;
-        [NMS(Index = 329)]
+        [NMS(Index = 330)]
         /* 0x06D4 */ public GcBiomeSubType ForceBiomeSubTypeTo;
-        [NMS(Index = 328)]
+        [NMS(Index = 329)]
         /* 0x06D8 */ public GcBiomeType ForceBiomeTo;
-        [NMS(Index = 333)]
+        [NMS(Index = 334)]
         /* 0x06DC */ public GcAlienRace ForceBuildingRaceTo;
-        [NMS(Index = 342)]
+        [NMS(Index = 343)]
         /* 0x06E0 */ public GcPlanetLife ForceCreatureLifeLevelTo;
-        [NMS(Index = 361)]
+        [NMS(Index = 362)]
         /* 0x06E4 */ public int ForceGrassColourIndex;
         [NMS(Index = 113)]
         /* 0x06E8 */ public float ForceInitialTimeOfDay;
@@ -135,37 +135,37 @@ namespace libMBIN.NMS.Globals
         /* 0x06EC */ public int ForceInteractionIndex;
         [NMS(Index = 167)]
         /* 0x06F0 */ public GcAlienRace ForceInteractionRaceTo;
-        [NMS(Index = 335)]
+        [NMS(Index = 336)]
         /* 0x06F4 */ public GcPlanetLife ForceLifeLevelTo;
         [NMS(Index = 160)]
         /* 0x06F8 */ public GcAlienPuzzleCategory ForceNPCPuzzleCategory;
-        [NMS(Index = 331)]
+        [NMS(Index = 332)]
         /* 0x06FC */ public GcScreenFilters ForceScreenFilterTo;
-        [NMS(Index = 353)]
+        [NMS(Index = 354)]
         /* 0x0700 */ public float ForceSeaLevel;
-        [NMS(Index = 356)]
+        [NMS(Index = 357)]
         /* 0x0704 */ public int ForceSkyColourIndex;
-        [NMS(Index = 359)]
+        [NMS(Index = 360)]
         /* 0x0708 */ public uint ForceSkyColourSeed;
         [NMS(Index = 40)]
         /* 0x070C */ public int ForceSpaceBattleLevel;
-        [NMS(Index = 357)]
+        [NMS(Index = 358)]
         /* 0x0710 */ public int ForceSpaceSkyColourIndex;
-        [NMS(Index = 326)]
+        [NMS(Index = 327)]
         /* 0x0714 */ public GcGalaxyStarTypes ForceStarTypeTo;
         [NMS(Index = 115)]
         /* 0x0718 */ public float ForceSunAngle;
-        [NMS(Index = 343)]
+        [NMS(Index = 344)]
         /* 0x071C */ public GcPlanetLife ForceTerrainSettings;
-        [NMS(Index = 345)]
+        [NMS(Index = 346)]
         /* 0x0720 */ public TkVoxelGeneratorSettingsTypes ForceTerrainTypeTo;
         [NMS(Index = 112)]
         /* 0x0724 */ public float ForceTimeOfDay;
-        [NMS(Index = 360)]
+        [NMS(Index = 361)]
         /* 0x0728 */ public int ForceWaterColourIndex;
-        [NMS(Index = 355)]
+        [NMS(Index = 356)]
         /* 0x072C */ public TkWaterCondition ForceWaterConditionTo;
-        [NMS(Index = 352)]
+        [NMS(Index = 353)]
         /* 0x0730 */ public int ForceWaterObjectFileIndex;
         // size: 0x3
         public enum GameStateModeEnum : uint {
@@ -175,31 +175,31 @@ namespace libMBIN.NMS.Globals
         }
         [NMS(Index = 99)]
         /* 0x0734 */ public GameStateModeEnum GameStateMode;
-        [NMS(Index = 377)]
-        /* 0x0738 */ public float GenerateCostAngle;
-        [NMS(Index = 376)]
-        /* 0x073C */ public float GenerateCostDistance;
         [NMS(Index = 378)]
-        /* 0x0740 */ public float GenerateCostLOD;
+        /* 0x0738 */ public float GenerateCostAngle;
+        [NMS(Index = 377)]
+        /* 0x073C */ public float GenerateCostDistance;
         [NMS(Index = 379)]
+        /* 0x0740 */ public float GenerateCostLOD;
+        [NMS(Index = 380)]
         /* 0x0744 */ public float GenerateCostWait;
-        [NMS(Index = 374)]
+        [NMS(Index = 375)]
         /* 0x0748 */ public int GenerateFarLodBuildingDist;
-        [NMS(Index = 296)]
+        [NMS(Index = 297)]
         /* 0x074C */ public int MaxNumDebugMessages;
-        [NMS(Index = 391)]
+        [NMS(Index = 392)]
         /* 0x0750 */ public int MoveBaseIndex;
-        [NMS(Index = 415)]
+        [NMS(Index = 416)]
         /* 0x0754 */ public int MultipleFingersSamePressFrameDelta;
         [NMS(Index = 13)]
         /* 0x0758 */ public GcGameMode NewSaveGameMode;
-        [NMS(Index = 278)]
+        [NMS(Index = 279)]
         /* 0x075C */ public int OverrideMatchmakingVersion;
-        [NMS(Index = 288)]
+        [NMS(Index = 289)]
         /* 0x0760 */ public int OverrideServerSeasonEndTime;
-        [NMS(Index = 287)]
+        [NMS(Index = 288)]
         /* 0x0764 */ public int OverrideServerSeasonNumber;
-        [NMS(Index = 418)]
+        [NMS(Index = 419)]
         /* 0x0768 */ public float PanDeadzone;
         // size: 0x7
         public enum PlayerSpawnLocationOverrideEnum : uint {
@@ -213,19 +213,19 @@ namespace libMBIN.NMS.Globals
         }
         [NMS(Index = 101)]
         /* 0x076C */ public PlayerSpawnLocationOverrideEnum PlayerSpawnLocationOverride;
-        [NMS(Index = 301)]
-        /* 0x0770 */ public int ProceduralModelBatchSize;
         [NMS(Index = 302)]
+        /* 0x0770 */ public int ProceduralModelBatchSize;
+        [NMS(Index = 303)]
         /* 0x0774 */ public int ProceduralModelFilterMatchretryCount;
-        [NMS(Index = 300)]
+        [NMS(Index = 301)]
         /* 0x0778 */ public int ProceduralModelsShown;
-        [NMS(Index = 304)]
+        [NMS(Index = 305)]
         /* 0x077C */ public int ProceduralModelsThumbnailSize;
-        [NMS(Index = 395)]
-        /* 0x0780 */ public int ProfilerPartIndexPhase;
         [NMS(Index = 396)]
-        /* 0x0784 */ public int ProfilerPartIndexStride;
+        /* 0x0780 */ public int ProfilerPartIndexPhase;
         [NMS(Index = 397)]
+        /* 0x0784 */ public int ProfilerPartIndexStride;
+        [NMS(Index = 398)]
         /* 0x0788 */ public int ProfilerPartIteration;
         // size: 0x3
         public enum ProxyTypeEnum : uint {
@@ -233,7 +233,7 @@ namespace libMBIN.NMS.Globals
             ManualURI,
             InetProxy,
         }
-        [NMS(Index = 265)]
+        [NMS(Index = 266)]
         /* 0x078C */ public ProxyTypeEnum ProxyType;
         // size: 0x2
         public enum RealityModeEnum : uint {
@@ -250,11 +250,11 @@ namespace libMBIN.NMS.Globals
         }
         [NMS(Index = 185)]
         /* 0x0794 */ public RecordSettingEnum RecordSetting;
-        [NMS(Index = 194)]
+        [NMS(Index = 195)]
         /* 0x0798 */ public int RecurrenceTimeOffset;
-        [NMS(Index = 414)]
+        [NMS(Index = 415)]
         /* 0x079C */ public int ScreenshotForUploadHeight;
-        [NMS(Index = 413)]
+        [NMS(Index = 414)]
         /* 0x07A0 */ public int ScreenshotForUploadWidth;
         // size: 0x9
         public enum ServerEnvEnum : uint {
@@ -268,7 +268,7 @@ namespace libMBIN.NMS.Globals
             merged,
             local,
         }
-        [NMS(Index = 267)]
+        [NMS(Index = 268)]
         /* 0x07A4 */ public ServerEnvEnum ServerEnv;
         // size: 0x2
         public enum ShaderPreloadEnum : uint {
@@ -277,19 +277,19 @@ namespace libMBIN.NMS.Globals
         }
         [NMS(Index = 106)]
         /* 0x07A8 */ public ShaderPreloadEnum ShaderPreload;
-        [NMS(Index = 218)]
+        [NMS(Index = 219)]
         /* 0x07AC */ public int ShowSpecificGraph;
-        [NMS(Index = 234)]
-        /* 0x07B0 */ public int SmokeTestConfigCaptureCycles;
         [NMS(Index = 235)]
-        /* 0x07B4 */ public float SmokeTestConfigCaptureDurationInSeconds;
+        /* 0x07B0 */ public int SmokeTestConfigCaptureCycles;
         [NMS(Index = 236)]
+        /* 0x07B4 */ public float SmokeTestConfigCaptureDurationInSeconds;
+        [NMS(Index = 237)]
         /* 0x07B8 */ public int SmokeTestConfigCaptureFolderNameNumberOffset;
-        [NMS(Index = 227)]
-        /* 0x07BC */ public int SmokeTestConfigPlanetPositionCount;
-        [NMS(Index = 229)]
-        /* 0x07C0 */ public float SmokeTestConfigScenarioLength;
         [NMS(Index = 228)]
+        /* 0x07BC */ public int SmokeTestConfigPlanetPositionCount;
+        [NMS(Index = 230)]
+        /* 0x07C0 */ public float SmokeTestConfigScenarioLength;
+        [NMS(Index = 229)]
         /* 0x07C4 */ public float SmokeTestConfigScenarioPreambleLength;
         // size: 0x7
         public enum SmokeTestCycleModeEnum : uint {
@@ -301,7 +301,7 @@ namespace libMBIN.NMS.Globals
             TourShortUDAs,
             TourRandomWarps,
         }
-        [NMS(Index = 224)]
+        [NMS(Index = 225)]
         /* 0x07C8 */ public SmokeTestCycleModeEnum SmokeTestCycleMode;
         // size: 0x8
         public enum SmokeTestScenarioEnum : uint {
@@ -314,9 +314,9 @@ namespace libMBIN.NMS.Globals
             LeakDetector,
             WalkingSnapshot,
         }
-        [NMS(Index = 225)]
+        [NMS(Index = 226)]
         /* 0x07CC */ public SmokeTestScenarioEnum SmokeTestScenario;
-        [NMS(Index = 240)]
+        [NMS(Index = 241)]
         /* 0x07D0 */ public int SmokeTestSmokeBotTargetWarps;
         // size: 0x2
         public enum SolarSystemBootEnum : uint {
@@ -325,11 +325,11 @@ namespace libMBIN.NMS.Globals
         }
         [NMS(Index = 105)]
         /* 0x07D4 */ public SolarSystemBootEnum SolarSystemBoot;
-        [NMS(Index = 416)]
-        /* 0x07D8 */ public int SwipeDetectionMaxFrames;
         [NMS(Index = 417)]
+        /* 0x07D8 */ public int SwipeDetectionMaxFrames;
+        [NMS(Index = 418)]
         /* 0x07DC */ public float SwipeDetectionNormalizedTravelThreshold;
-        [NMS(Index = 294)]
+        [NMS(Index = 295)]
         /* 0x07E0 */ public int SynergyPort;
         // size: 0x3
         public enum UseBanksEnum : uint {
@@ -343,63 +343,63 @@ namespace libMBIN.NMS.Globals
         /* 0x07E8 */ public float WeaponScale3P;
         [NMS(Index = 173)]
         /* 0x07EC */ public ushort RealityGenerationIteration;
-        [NMS(Index = 274)]
+        [NMS(Index = 275)]
         /* 0x07EE */ public NMSString0x800 AutoJoinUserNames;
         [NMS(Index = 83)]
         /* 0x0FEE */ public NMSString0x400 DebugTwitchRewards;
-        [NMS(Index = 279)]
+        [NMS(Index = 280)]
         /* 0x13EE */ public NMSString0x200 LoadToBase;
         [NMS(Index = 79)]
         /* 0x15EE */ public NMSString0x200 SeasonalDataOverrideFile;
-        [NMS(Index = 289)]
+        [NMS(Index = 290)]
         /* 0x17EE */ public NMSString0x100 ForceHgAccount;
         [NMS(Index = 96)]
         /* 0x18EE */ public NMSString0x100 ForcePlayerPosition;
         [NMS(Index = 95)]
         /* 0x19EE */ public NMSString0x100 ForceUniverseAddress;
-        [NMS(Index = 282)]
+        [NMS(Index = 283)]
         /* 0x1AEE */ public NMSString0x100 GOGLogin;
-        [NMS(Index = 214)]
+        [NMS(Index = 215)]
         /* 0x1BEE */ public NMSString0x100 ShowUniverseAddressOnGalaxyMap;
         [NMS(Index = 103)]
         /* 0x1CEE */ public NMSString0x100 WorkingDirectory;
-        [NMS(Index = 268)]
+        [NMS(Index = 269)]
         /* 0x1DEE */ public NMSString0x80 AuthBaseUrl;
-        [NMS(Index = 266)]
+        [NMS(Index = 267)]
         /* 0x1E6E */ public NMSString0x80 ProxyURI;
-        [NMS(Index = 290)]
+        [NMS(Index = 291)]
         /* 0x1EEE */ public NMSString0x40 ForceBaseDownloadUser;
-        [NMS(Index = 406)]
+        [NMS(Index = 407)]
         /* 0x1F2E */ public NMSString0x40 OverrideSettlementOwnershipOnlineId;
-        [NMS(Index = 405)]
+        [NMS(Index = 406)]
         /* 0x1F6E */ public NMSString0x40 OverrideSettlementOwnershipUsername;
-        [NMS(Index = 412)]
+        [NMS(Index = 413)]
         /* 0x1FAE */ public NMSString0x40 ScreenshotForUploadName;
         [NMS(Index = 165)]
         /* 0x1FEE */ public NMSString0x20 AllowedLanguagesFile;
-        [NMS(Index = 392)]
+        [NMS(Index = 393)]
         /* 0x200E */ public NMSString0x20 AutomaticPartSpawnID;
-        [NMS(Index = 399)]
+        [NMS(Index = 400)]
         /* 0x202E */ public NMSString0x20 BaseServerPlatform;
-        [NMS(Index = 198)]
+        [NMS(Index = 199)]
         /* 0x204E */ public NMSString0x20 CrashDumpIdentifier;
-        [NMS(Index = 270)]
+        [NMS(Index = 271)]
         /* 0x206E */ public NMSString0x20 OverrideUsernameForDev;
         [NMS(Index = 189)]
         /* 0x208E */ public NMSString0x20 SaveTestingCommand;
-        [NMS(Index = 242)]
-        /* 0x20AE */ public NMSString0x20 SmokeTestForcePlanetDetail;
         [NMS(Index = 243)]
+        /* 0x20AE */ public NMSString0x20 SmokeTestForcePlanetDetail;
+        [NMS(Index = 244)]
         /* 0x20CE */ public NMSString0x20 SmokeTestRunFolder;
-        [NMS(Index = 293)]
+        [NMS(Index = 294)]
         /* 0x20EE */ public NMSString0x20 SynergyServer;
         [NMS(Index = 119)]
         /* 0x210E */ public bool AllowGalaxyMapRequests;
-        [NMS(Index = 387)]
+        [NMS(Index = 388)]
         /* 0x210F */ public bool AllowGlobalPartSnapping;
-        [NMS(Index = 320)]
+        [NMS(Index = 321)]
         /* 0x2110 */ public bool AllowNGuiVR;
-        [NMS(Index = 404)]
+        [NMS(Index = 405)]
         /* 0x2111 */ public bool AllowOverrideSettlementOwnership;
         [NMS(Index = 84)]
         /* 0x2112 */ public bool AllowPause;
@@ -421,29 +421,29 @@ namespace libMBIN.NMS.Globals
         /* 0x211A */ public bool AlwaysAllowVehicleOperations;
         [NMS(Index = 19)]
         /* 0x211B */ public bool AlwaysHaveFocus;
-        [NMS(Index = 263)]
+        [NMS(Index = 264)]
         /* 0x211C */ public bool AlwaysIncludeLocalPlayerInChatMessage;
-        [NMS(Index = 275)]
+        [NMS(Index = 276)]
         /* 0x211D */ public bool AlwaysSaveGameAsClient;
-        [NMS(Index = 216)]
+        [NMS(Index = 217)]
         /* 0x211E */ public bool AlwaysShowSaveIds;
         [NMS(Index = 70)]
         /* 0x211F */ public bool AlwaysShowURI;
         [NMS(Index = 39)]
         /* 0x2120 */ public bool AlwaysSpaceBattle;
-        [NMS(Index = 281)]
+        [NMS(Index = 282)]
         /* 0x2121 */ public bool AutoJoinRandomGames;
-        [NMS(Index = 273)]
+        [NMS(Index = 274)]
         /* 0x2122 */ public bool AutoJoinUserEnabled;
-        [NMS(Index = 394)]
+        [NMS(Index = 395)]
         /* 0x2123 */ public bool AutomaticPartSpawnInactive;
-        [NMS(Index = 398)]
+        [NMS(Index = 399)]
         /* 0x2124 */ public bool BaseAdmin;
         [NMS(Index = 89)]
         /* 0x2125 */ public bool BlockCommunicatorSignals;
-        [NMS(Index = 407)]
+        [NMS(Index = 408)]
         /* 0x2126 */ public bool BlockSettlementsNetwork;
-        [NMS(Index = 314)]
+        [NMS(Index = 315)]
         /* 0x2127 */ public bool BodyTurning;
         [NMS(Index = 12)]
         /* 0x2128 */ public bool BootDirectlyIntoLastSave;
@@ -451,7 +451,7 @@ namespace libMBIN.NMS.Globals
         /* 0x2129 */ public bool BootMusic;
         [NMS(Index = 30)]
         /* 0x212A */ public bool CanLeaveDialogs;
-        [NMS(Index = 269)]
+        [NMS(Index = 270)]
         /* 0x212B */ public bool CertificateSecurityBypass;
         [NMS(Index = 55)]
         /* 0x212C */ public bool ClothForceAsyncSimulationOff;
@@ -469,25 +469,25 @@ namespace libMBIN.NMS.Globals
         /* 0x2132 */ public bool ClothForcePositionExtrapolationSyncWithFpsLock;
         [NMS(Index = 52)]
         /* 0x2133 */ public bool ClothForcePositionExtrapolationUpdateOrderDependent;
-        [NMS(Index = 248)]
+        [NMS(Index = 249)]
         /* 0x2134 */ public bool CompressTextures;
-        [NMS(Index = 196)]
+        [NMS(Index = 197)]
         /* 0x2135 */ public bool CrashDumpFull;
-        [NMS(Index = 244)]
-        /* 0x2136 */ public bool CreatureChatter;
-        [NMS(Index = 246)]
-        /* 0x2137 */ public bool CreatureDrawVocals;
         [NMS(Index = 245)]
+        /* 0x2136 */ public bool CreatureChatter;
+        [NMS(Index = 247)]
+        /* 0x2137 */ public bool CreatureDrawVocals;
+        [NMS(Index = 246)]
         /* 0x2138 */ public bool CreatureErrors;
-        [NMS(Index = 401)]
+        [NMS(Index = 402)]
         /* 0x2139 */ public bool CrossPlatformFeaturedBases;
-        [NMS(Index = 381)]
-        /* 0x213A */ public bool DChecksEnabled;
-        [NMS(Index = 383)]
-        /* 0x213B */ public bool DChecksOutputBinary;
-        [NMS(Index = 384)]
-        /* 0x213C */ public bool DChecksOutputFileLine;
         [NMS(Index = 382)]
+        /* 0x213A */ public bool DChecksEnabled;
+        [NMS(Index = 384)]
+        /* 0x213B */ public bool DChecksOutputBinary;
+        [NMS(Index = 385)]
+        /* 0x213C */ public bool DChecksOutputFileLine;
+        [NMS(Index = 383)]
         /* 0x213D */ public bool DChecksOutputJson;
         [NMS(Index = 186)]
         /* 0x213E */ public bool DebugBuildingSpawns;
@@ -495,27 +495,27 @@ namespace libMBIN.NMS.Globals
         /* 0x213F */ public bool DebugDrawPlayerInteract;
         [NMS(Index = 21)]
         /* 0x2140 */ public bool DebugGalaxyMapInQuickMenu;
-        [NMS(Index = 249)]
+        [NMS(Index = 250)]
         /* 0x2141 */ public bool DebugIBL;
         [NMS(Index = 169)]
         /* 0x2142 */ public bool DebugPersistentInteractions;
-        [NMS(Index = 250)]
-        /* 0x2143 */ public bool DebugSpotlights;
         [NMS(Index = 251)]
+        /* 0x2143 */ public bool DebugSpotlights;
+        [NMS(Index = 252)]
         /* 0x2144 */ public bool DebugTerrainTextures;
-        [NMS(Index = 199)]
+        [NMS(Index = 200)]
         /* 0x2145 */ public bool DebugThreatLevels;
-        [NMS(Index = 375)]
+        [NMS(Index = 376)]
         /* 0x2146 */ public bool DeferRegionBodies;
         [NMS(Index = 3)]
         /* 0x2147 */ public bool DisableAbandonedFreighterRoomsOptimisation;
-        [NMS(Index = 385)]
-        /* 0x2148 */ public bool DisableBaseBuilding;
         [NMS(Index = 386)]
+        /* 0x2148 */ public bool DisableBaseBuilding;
+        [NMS(Index = 387)]
         /* 0x2149 */ public bool DisableBaseBuildingLimits;
-        [NMS(Index = 389)]
+        [NMS(Index = 390)]
         /* 0x214A */ public bool DisableBasePowerRequirements;
-        [NMS(Index = 262)]
+        [NMS(Index = 263)]
         /* 0x214B */ public bool DisableClouds;
         [NMS(Index = 44)]
         /* 0x214C */ public bool DisableContinuousSaving;
@@ -523,21 +523,21 @@ namespace libMBIN.NMS.Globals
         /* 0x214D */ public bool DisableDebugControls;
         [NMS(Index = 156)]
         /* 0x214E */ public bool DisableDiscoveryNaming;
-        [NMS(Index = 193)]
+        [NMS(Index = 194)]
         /* 0x214F */ public bool DisableFileWatcher;
         [NMS(Index = 28)]
         /* 0x2150 */ public bool DisableHazards;
-        [NMS(Index = 318)]
+        [NMS(Index = 319)]
         /* 0x2151 */ public bool DisableHeadConstraints;
         [NMS(Index = 45)]
         /* 0x2152 */ public bool DisableInvalidSaveVersion;
-        [NMS(Index = 317)]
+        [NMS(Index = 318)]
         /* 0x2153 */ public bool DisableLeftHand;
-        [NMS(Index = 369)]
+        [NMS(Index = 370)]
         /* 0x2154 */ public bool DisableLimits;
         [NMS(Index = 171)]
         /* 0x2155 */ public bool DisableMissionShop;
-        [NMS(Index = 276)]
+        [NMS(Index = 277)]
         /* 0x2156 */ public bool DisableMonumentDownloads;
         [NMS(Index = 65)]
         /* 0x2157 */ public bool DisableNPCHiddenUntilScanned;
@@ -545,21 +545,21 @@ namespace libMBIN.NMS.Globals
         /* 0x2158 */ public bool DisableNPCs;
         [NMS(Index = 31)]
         /* 0x2159 */ public bool DisableOldMissions;
-        [NMS(Index = 409)]
+        [NMS(Index = 410)]
         /* 0x215A */ public bool DisablePartialStories;
-        [NMS(Index = 192)]
+        [NMS(Index = 193)]
         /* 0x215B */ public bool DisableProfanityFilter;
         [NMS(Index = 42)]
         /* 0x215C */ public bool DisableSaveSlotSorting;
-        [NMS(Index = 291)]
+        [NMS(Index = 292)]
         /* 0x215D */ public bool DisableSaveUploadRateLimits;
         [NMS(Index = 43)]
         /* 0x215E */ public bool DisableSaving;
         [NMS(Index = 86)]
         /* 0x215F */ public bool DisableSettlements;
-        [NMS(Index = 252)]
+        [NMS(Index = 253)]
         /* 0x2160 */ public bool DisableShadowSwitching;
-        [NMS(Index = 272)]
+        [NMS(Index = 273)]
         /* 0x2161 */ public bool DisableSpaceStationSpawnOnJoin;
         [NMS(Index = 46)]
         /* 0x2162 */ public bool DisableStorms;
@@ -567,23 +567,23 @@ namespace libMBIN.NMS.Globals
         /* 0x2163 */ public bool DisableVibration;
         [NMS(Index = 166)]
         /* 0x2164 */ public bool DoAlienLanguage;
-        [NMS(Index = 247)]
+        [NMS(Index = 248)]
         /* 0x2165 */ public bool DrawCreaturesInRoutines;
-        [NMS(Index = 200)]
+        [NMS(Index = 201)]
         /* 0x2166 */ public bool DumpManifestContents;
-        [NMS(Index = 408)]
+        [NMS(Index = 409)]
         /* 0x2167 */ public bool EnableAccessibleUI;
         [NMS(Index = 150)]
         /* 0x2168 */ public bool EnableBaseBuildingExpandables;
-        [NMS(Index = 390)]
+        [NMS(Index = 391)]
         /* 0x2169 */ public bool EnableBaseMovingOption;
         [NMS(Index = 125)]
         /* 0x216A */ public bool EnableCloudAnimation;
-        [NMS(Index = 257)]
+        [NMS(Index = 258)]
         /* 0x216B */ public bool EnableComputePost;
         [NMS(Index = 134)]
         /* 0x216C */ public bool EnableDayNightCycle;
-        [NMS(Index = 258)]
+        [NMS(Index = 259)]
         /* 0x216D */ public bool EnableEvenOddRender;
         [NMS(Index = 117)]
         /* 0x216E */ public bool EnableFrontendPreload;
@@ -591,9 +591,9 @@ namespace libMBIN.NMS.Globals
         /* 0x216F */ public bool EnableGalaxyRecolouring;
         [NMS(Index = 88)]
         /* 0x2170 */ public bool EnableMemoryPoolAllocPrint;
-        [NMS(Index = 319)]
+        [NMS(Index = 320)]
         /* 0x2171 */ public bool EnablePhotomodeVR;
-        [NMS(Index = 292)]
+        [NMS(Index = 293)]
         /* 0x2172 */ public bool EnableSynergy;
         [NMS(Index = 91)]
         /* 0x2173 */ public bool EnableTouchScreenDebugging;
@@ -603,7 +603,7 @@ namespace libMBIN.NMS.Globals
         /* 0x2175 */ public bool EverythingIsKnown;
         [NMS(Index = 26)]
         /* 0x2176 */ public bool EverythingIsStar;
-        [NMS(Index = 284)]
+        [NMS(Index = 285)]
         /* 0x2177 */ public bool FakeHandsInMultiplayer;
         [NMS(Index = 41)]
         /* 0x2178 */ public bool FastAndFrequentFleetInterventions;
@@ -615,19 +615,19 @@ namespace libMBIN.NMS.Globals
         /* 0x217B */ public bool FleetDirectorAutoMode;
         [NMS(Index = 177)]
         /* 0x217C */ public bool ForceBasicLoadScreen;
-        [NMS(Index = 348)]
+        [NMS(Index = 349)]
         /* 0x217D */ public bool ForceBinaryStar;
-        [NMS(Index = 327)]
+        [NMS(Index = 328)]
         /* 0x217E */ public bool ForceBiome;
         [NMS(Index = 67)]
         /* 0x217F */ public bool ForceBuildersAlwaysKnown;
-        [NMS(Index = 332)]
+        [NMS(Index = 333)]
         /* 0x2180 */ public bool ForceBuildingRace;
-        [NMS(Index = 323)]
+        [NMS(Index = 324)]
         /* 0x2181 */ public bool ForceCorruptSentinels;
-        [NMS(Index = 336)]
-        /* 0x2182 */ public bool ForceCreatureLifeLevel;
         [NMS(Index = 337)]
+        /* 0x2182 */ public bool ForceCreatureLifeLevel;
+        [NMS(Index = 338)]
         /* 0x2183 */ public bool ForceDefaultCreatureFile;
         [NMS(Index = 48)]
         /* 0x2184 */ public bool ForceDisableClothComponent;
@@ -647,9 +647,9 @@ namespace libMBIN.NMS.Globals
         /* 0x218B */ public bool ForceEnableSplitIkOptimisation;
         [NMS(Index = 57)]
         /* 0x218C */ public bool ForceEnableSpringComponent;
-        [NMS(Index = 322)]
+        [NMS(Index = 323)]
         /* 0x218D */ public bool ForceExtremeSentinels;
-        [NMS(Index = 321)]
+        [NMS(Index = 322)]
         /* 0x218E */ public bool ForceExtremeWeather;
         [NMS(Index = 97)]
         /* 0x218F */ public bool ForceInitialShip;
@@ -657,307 +657,309 @@ namespace libMBIN.NMS.Globals
         /* 0x2190 */ public bool ForceInitialWeapon;
         [NMS(Index = 158)]
         /* 0x2191 */ public bool ForceInteractionToSettings;
-        [NMS(Index = 334)]
+        [NMS(Index = 335)]
         /* 0x2192 */ public bool ForceLifeLevel;
-        [NMS(Index = 325)]
+        [NMS(Index = 326)]
         /* 0x2193 */ public bool ForceLoadAllWeather;
         [NMS(Index = 145)]
         /* 0x2194 */ public bool ForceNexusInQuickMenu;
-        [NMS(Index = 346)]
-        /* 0x2195 */ public bool ForcePirateSystem;
-        [NMS(Index = 364)]
-        /* 0x2196 */ public bool ForcePlanetsToHaveNoCaves;
-        [NMS(Index = 365)]
-        /* 0x2197 */ public bool ForcePlanetsToHaveNoNoiseLayers;
-        [NMS(Index = 366)]
-        /* 0x2198 */ public bool ForcePlanetsToHaveNoTerrainFeatures;
-        [NMS(Index = 363)]
-        /* 0x2199 */ public bool ForcePlanetsToHaveNoWater;
-        [NMS(Index = 351)]
-        /* 0x219A */ public bool ForcePlanetsToHaveWater;
         [NMS(Index = 347)]
-        /* 0x219B */ public bool ForcePrimeTerrain;
+        /* 0x2195 */ public bool ForcePirateSystem;
+        [NMS(Index = 365)]
+        /* 0x2196 */ public bool ForcePlanetsToHaveNoCaves;
+        [NMS(Index = 366)]
+        /* 0x2197 */ public bool ForcePlanetsToHaveNoNoiseLayers;
         [NMS(Index = 367)]
+        /* 0x2198 */ public bool ForcePlanetsToHaveNoTerrainFeatures;
+        [NMS(Index = 364)]
+        /* 0x2199 */ public bool ForcePlanetsToHaveNoWater;
+        [NMS(Index = 352)]
+        /* 0x219A */ public bool ForcePlanetsToHaveWater;
+        [NMS(Index = 348)]
+        /* 0x219B */ public bool ForcePrimeTerrain;
+        [NMS(Index = 368)]
         /* 0x219C */ public bool ForceRareAsteroidSystem;
         [NMS(Index = 0)]
         /* 0x219D */ public bool ForceScanEventsToGoPrime;
-        [NMS(Index = 330)]
+        [NMS(Index = 331)]
         /* 0x219E */ public bool ForceScreenFilter;
-        [NMS(Index = 285)]
+        [NMS(Index = 286)]
         /* 0x219F */ public bool ForceSmallLobby;
-        [NMS(Index = 358)]
+        [NMS(Index = 359)]
         /* 0x21A0 */ public bool ForceSpaceSkyColourRare;
-        [NMS(Index = 324)]
+        [NMS(Index = 325)]
         /* 0x21A1 */ public bool ForceStarType;
         [NMS(Index = 114)]
         /* 0x21A2 */ public bool ForceSunDirectionFromPhotoMode;
-        [NMS(Index = 349)]
+        [NMS(Index = 350)]
         /* 0x21A3 */ public bool ForceTernaryStar;
-        [NMS(Index = 344)]
+        [NMS(Index = 345)]
         /* 0x21A4 */ public bool ForceTerrainType;
         [NMS(Index = 93)]
         /* 0x21A5 */ public bool ForceTgaDlc;
-        [NMS(Index = 286)]
+        [NMS(Index = 287)]
         /* 0x21A6 */ public bool ForceTinyLobby;
         [NMS(Index = 36)]
         /* 0x21A7 */ public bool ForceTranslateAllAlienText;
-        [NMS(Index = 354)]
+        [NMS(Index = 355)]
         /* 0x21A8 */ public bool ForceWaterCondition;
         [NMS(Index = 176)]
         /* 0x21A9 */ public bool FormatDownloadStorageAreaOnBoot;
         [NMS(Index = 16)]
         /* 0x21AA */ public bool GodMode;
-        [NMS(Index = 219)]
-        /* 0x21AB */ public bool GraphCommandBuffer;
-        [NMS(Index = 221)]
-        /* 0x21AC */ public bool GraphFPS;
         [NMS(Index = 220)]
-        /* 0x21AD */ public bool GraphGeneration;
+        /* 0x21AB */ public bool GraphCommandBuffer;
         [NMS(Index = 222)]
+        /* 0x21AC */ public bool GraphFPS;
+        [NMS(Index = 221)]
+        /* 0x21AD */ public bool GraphGeneration;
+        [NMS(Index = 223)]
         /* 0x21AE */ public bool GraphTexStreaming;
         [NMS(Index = 191)]
         /* 0x21AF */ public bool HangOnCrash;
-        [NMS(Index = 312)]
-        /* 0x21B0 */ public bool HmdFrameShiftEnabled;
         [NMS(Index = 313)]
+        /* 0x21B0 */ public bool HmdFrameShiftEnabled;
+        [NMS(Index = 314)]
         /* 0x21B1 */ public bool HmdUseSolidGuiPointer;
+        [NMS(Index = 192)]
+        /* 0x21B2 */ public bool HotReloadModGlobals;
         [NMS(Index = 37)]
-        /* 0x21B2 */ public bool IgnoreFreighterSpawnWarpRequirement;
+        /* 0x21B3 */ public bool IgnoreFreighterSpawnWarpRequirement;
         [NMS(Index = 29)]
-        /* 0x21B3 */ public bool IgnoreMissionRank;
+        /* 0x21B4 */ public bool IgnoreMissionRank;
         [NMS(Index = 149)]
-        /* 0x21B4 */ public bool IgnoreSteamDev;
-        [NMS(Index = 280)]
-        /* 0x21B5 */ public bool IgnoreTransactionTimeouts;
+        /* 0x21B5 */ public bool IgnoreSteamDev;
+        [NMS(Index = 281)]
+        /* 0x21B6 */ public bool IgnoreTransactionTimeouts;
         [NMS(Index = 162)]
-        /* 0x21B6 */ public bool InfiniteInteractions;
+        /* 0x21B7 */ public bool InfiniteInteractions;
         [NMS(Index = 27)]
-        /* 0x21B7 */ public bool InfiniteStamina;
+        /* 0x21B8 */ public bool InfiniteStamina;
         [NMS(Index = 140)]
-        /* 0x21B8 */ public bool InstanceCollision;
+        /* 0x21B9 */ public bool InstanceCollision;
         [NMS(Index = 161)]
-        /* 0x21B9 */ public bool InteractionsAllwaysGivesTech;
+        /* 0x21BA */ public bool InteractionsAllwaysGivesTech;
+        [NMS(Index = 374)]
+        /* 0x21BB */ public bool LimitGlobalBodies;
         [NMS(Index = 373)]
-        /* 0x21BA */ public bool LimitGlobalBodies;
+        /* 0x21BC */ public bool LimitGlobalInstances;
         [NMS(Index = 372)]
-        /* 0x21BB */ public bool LimitGlobalInstances;
+        /* 0x21BD */ public bool LimitPerRegionBodies;
         [NMS(Index = 371)]
-        /* 0x21BC */ public bool LimitPerRegionBodies;
-        [NMS(Index = 370)]
-        /* 0x21BD */ public bool LimitPerRegionInstances;
+        /* 0x21BE */ public bool LimitPerRegionInstances;
         [NMS(Index = 141)]
-        /* 0x21BE */ public bool LoadMissions;
-        [NMS(Index = 261)]
-        /* 0x21BF */ public bool LoadShaderSourceIfRenderdocEnabled;
+        /* 0x21BF */ public bool LoadMissions;
+        [NMS(Index = 262)]
+        /* 0x21C0 */ public bool LoadShaderSourceIfRenderdocEnabled;
         [NMS(Index = 75)]
-        /* 0x21C0 */ public bool LockAllTitles;
+        /* 0x21C1 */ public bool LockAllTitles;
         [NMS(Index = 181)]
-        /* 0x21C1 */ public bool LogMissingLocalisedText;
+        /* 0x21C2 */ public bool LogMissingLocalisedText;
         [NMS(Index = 23)]
-        /* 0x21C2 */ public bool MapWarpCheckIgnoreDrive;
+        /* 0x21C3 */ public bool MapWarpCheckIgnoreDrive;
         [NMS(Index = 22)]
-        /* 0x21C3 */ public bool MapWarpCheckIgnoreFuel;
+        /* 0x21C4 */ public bool MapWarpCheckIgnoreFuel;
         [NMS(Index = 38)]
-        /* 0x21C4 */ public bool MaximumFreighterSpawns;
+        /* 0x21C5 */ public bool MaximumFreighterSpawns;
         [NMS(Index = 111)]
-        /* 0x21C5 */ public bool MemCsv;
+        /* 0x21C6 */ public bool MemCsv;
         [NMS(Index = 120)]
-        /* 0x21C6 */ public bool MissionMessageLoggingEnabled;
+        /* 0x21C7 */ public bool MissionMessageLoggingEnabled;
         [NMS(Index = 121)]
-        /* 0x21C7 */ public bool MissionNGUIShowsConditionResults;
+        /* 0x21C8 */ public bool MissionNGUIShowsConditionResults;
         [NMS(Index = 146)]
-        /* 0x21C8 */ public bool MissionSurveyEnabled;
-        [NMS(Index = 362)]
-        /* 0x21C9 */ public bool ModifyPlanetsInInitialSystems;
+        /* 0x21C9 */ public bool MissionSurveyEnabled;
+        [NMS(Index = 363)]
+        /* 0x21CA */ public bool ModifyPlanetsInInitialSystems;
         [NMS(Index = 142)]
-        /* 0x21CA */ public bool MPMissions;
+        /* 0x21CB */ public bool MPMissions;
         [NMS(Index = 71)]
-        /* 0x21CB */ public bool MPMissionsAlwaysEPIC;
+        /* 0x21CC */ public bool MPMissionsAlwaysEPIC;
         [NMS(Index = 144)]
-        /* 0x21CC */ public bool MultiplePlayerFreightersInASystem;
+        /* 0x21CD */ public bool MultiplePlayerFreightersInASystem;
         [NMS(Index = 87)]
-        /* 0x21CD */ public bool PlaceOnGroundWhenLeavingDebugCamera;
-        [NMS(Index = 297)]
-        /* 0x21CE */ public bool PreloadToolbox;
-        [NMS(Index = 209)]
-        /* 0x21CF */ public bool PrintAvgFrameTimes;
-        [NMS(Index = 303)]
-        /* 0x21D0 */ public bool ProceduralModelsDeterministicSequence;
-        [NMS(Index = 259)]
-        /* 0x21D1 */ public bool Proto2DevKit;
-        [NMS(Index = 283)]
-        /* 0x21D2 */ public bool RecordNetworkStatsOnBoot;
-        [NMS(Index = 34)]
-        /* 0x21D3 */ public bool RenderCreatureDetails;
-        [NMS(Index = 155)]
-        /* 0x21D4 */ public bool RenderHud;
-        [NMS(Index = 256)]
-        /* 0x21D5 */ public bool RenderLowFramerate;
-        [NMS(Index = 116)]
-        /* 0x21D6 */ public bool ResetForcedSaveSlotOnLoad;
-        [NMS(Index = 94)]
-        /* 0x21D7 */ public bool ResetToSupportedResolution;
-        [NMS(Index = 73)]
-        /* 0x21D8 */ public bool RevealAllTitles;
-        [NMS(Index = 423)]
-        /* 0x21D9 */ public bool ScratchpadPlanetEnvironment;
-        [NMS(Index = 154)]
-        /* 0x21DA */ public bool ScreenshotMode;
-        [NMS(Index = 109)]
-        /* 0x21DB */ public bool ShaderCaching;
-        [NMS(Index = 107)]
-        /* 0x21DC */ public bool ShaderPreloadListExport;
-        [NMS(Index = 108)]
-        /* 0x21DD */ public bool ShaderPreloadListImport;
-        [NMS(Index = 66)]
-        /* 0x21DE */ public bool ShipSalvageGivesAllParts;
-        [NMS(Index = 202)]
-        /* 0x21DF */ public bool ShowDebugMessages;
-        [NMS(Index = 205)]
-        /* 0x21E0 */ public bool ShowDynamicResScale;
-        [NMS(Index = 295)]
-        /* 0x21E1 */ public bool ShowEditorPlacementPreview;
-        [NMS(Index = 72)]
-        /* 0x21E2 */ public bool ShowFireteamMembersUA;
-        [NMS(Index = 203)]
-        /* 0x21E3 */ public bool ShowFramerate;
-        [NMS(Index = 211)]
-        /* 0x21E4 */ public bool ShowGPUMemory;
-        [NMS(Index = 204)]
-        /* 0x21E5 */ public bool ShowGPURenderTime;
-        [NMS(Index = 217)]
-        /* 0x21E6 */ public bool ShowGraphs;
-        [NMS(Index = 315)]
-        /* 0x21E7 */ public bool ShowHmdHandControllers;
-        [NMS(Index = 188)]
-        /* 0x21E8 */ public bool ShowLongestStrings;
-        [NMS(Index = 212)]
-        /* 0x21E9 */ public bool ShowMempoolOverlay;
-        [NMS(Index = 402)]
-        /* 0x21EA */ public bool ShowMissionIdInTitle;
-        [NMS(Index = 213)]
-        /* 0x21EB */ public bool ShowMouseSmoothing;
+        /* 0x21CE */ public bool PlaceOnGroundWhenLeavingDebugCamera;
+        [NMS(Index = 298)]
+        /* 0x21CF */ public bool PreloadToolbox;
         [NMS(Index = 210)]
-        /* 0x21EC */ public bool ShowPositionDebug;
-        [NMS(Index = 215)]
-        /* 0x21ED */ public bool ShowRenderStatsDisplay;
-        [NMS(Index = 316)]
-        /* 0x21EE */ public bool ShowTeleportEffectLocally;
+        /* 0x21D0 */ public bool PrintAvgFrameTimes;
+        [NMS(Index = 304)]
+        /* 0x21D1 */ public bool ProceduralModelsDeterministicSequence;
         [NMS(Index = 260)]
-        /* 0x21EF */ public bool SimulateDisabledParticleRefractions;
-        [NMS(Index = 264)]
-        /* 0x21F0 */ public bool SimulateNoNetworkConnection;
+        /* 0x21D2 */ public bool Proto2DevKit;
+        [NMS(Index = 284)]
+        /* 0x21D3 */ public bool RecordNetworkStatsOnBoot;
+        [NMS(Index = 34)]
+        /* 0x21D4 */ public bool RenderCreatureDetails;
+        [NMS(Index = 155)]
+        /* 0x21D5 */ public bool RenderHud;
+        [NMS(Index = 257)]
+        /* 0x21D6 */ public bool RenderLowFramerate;
+        [NMS(Index = 116)]
+        /* 0x21D7 */ public bool ResetForcedSaveSlotOnLoad;
+        [NMS(Index = 94)]
+        /* 0x21D8 */ public bool ResetToSupportedResolution;
+        [NMS(Index = 73)]
+        /* 0x21D9 */ public bool RevealAllTitles;
+        [NMS(Index = 424)]
+        /* 0x21DA */ public bool ScratchpadPlanetEnvironment;
+        [NMS(Index = 154)]
+        /* 0x21DB */ public bool ScreenshotMode;
+        [NMS(Index = 109)]
+        /* 0x21DC */ public bool ShaderCaching;
+        [NMS(Index = 107)]
+        /* 0x21DD */ public bool ShaderPreloadListExport;
+        [NMS(Index = 108)]
+        /* 0x21DE */ public bool ShaderPreloadListImport;
+        [NMS(Index = 66)]
+        /* 0x21DF */ public bool ShipSalvageGivesAllParts;
+        [NMS(Index = 203)]
+        /* 0x21E0 */ public bool ShowDebugMessages;
+        [NMS(Index = 206)]
+        /* 0x21E1 */ public bool ShowDynamicResScale;
+        [NMS(Index = 296)]
+        /* 0x21E2 */ public bool ShowEditorPlacementPreview;
+        [NMS(Index = 72)]
+        /* 0x21E3 */ public bool ShowFireteamMembersUA;
+        [NMS(Index = 204)]
+        /* 0x21E4 */ public bool ShowFramerate;
+        [NMS(Index = 212)]
+        /* 0x21E5 */ public bool ShowGPUMemory;
+        [NMS(Index = 205)]
+        /* 0x21E6 */ public bool ShowGPURenderTime;
+        [NMS(Index = 218)]
+        /* 0x21E7 */ public bool ShowGraphs;
+        [NMS(Index = 316)]
+        /* 0x21E8 */ public bool ShowHmdHandControllers;
+        [NMS(Index = 188)]
+        /* 0x21E9 */ public bool ShowLongestStrings;
+        [NMS(Index = 213)]
+        /* 0x21EA */ public bool ShowMempoolOverlay;
+        [NMS(Index = 403)]
+        /* 0x21EB */ public bool ShowMissionIdInTitle;
+        [NMS(Index = 214)]
+        /* 0x21EC */ public bool ShowMouseSmoothing;
+        [NMS(Index = 211)]
+        /* 0x21ED */ public bool ShowPositionDebug;
+        [NMS(Index = 216)]
+        /* 0x21EE */ public bool ShowRenderStatsDisplay;
+        [NMS(Index = 317)]
+        /* 0x21EF */ public bool ShowTeleportEffectLocally;
+        [NMS(Index = 261)]
+        /* 0x21F0 */ public bool SimulateDisabledParticleRefractions;
+        [NMS(Index = 265)]
+        /* 0x21F1 */ public bool SimulateNoNetworkConnection;
         [NMS(Index = 1)]
-        /* 0x21F1 */ public bool SkipAbandonedFreighterUnlocking;
+        /* 0x21F2 */ public bool SkipAbandonedFreighterUnlocking;
         [NMS(Index = 7)]
-        /* 0x21F2 */ public bool SkipIntro;
+        /* 0x21F3 */ public bool SkipIntro;
         [NMS(Index = 8)]
-        /* 0x21F3 */ public bool SkipLogos;
+        /* 0x21F4 */ public bool SkipLogos;
         [NMS(Index = 14)]
-        /* 0x21F4 */ public bool SkipPlanetDiscoverOnBoot;
+        /* 0x21F5 */ public bool SkipPlanetDiscoverOnBoot;
         [NMS(Index = 35)]
-        /* 0x21F5 */ public bool SkipTutorial;
+        /* 0x21F6 */ public bool SkipTutorial;
         [NMS(Index = 9)]
-        /* 0x21F6 */ public bool SkipUITimers;
-        [NMS(Index = 231)]
-        /* 0x21F7 */ public bool SmokeTestCameraFly;
-        [NMS(Index = 237)]
-        /* 0x21F8 */ public bool SmokeTestConfigRandomizePlanetSeed;
-        [NMS(Index = 223)]
-        /* 0x21F9 */ public bool SmokeTestDumpStatsMode;
-        [NMS(Index = 230)]
-        /* 0x21FA */ public bool SmokeTestFastExit;
-        [NMS(Index = 226)]
-        /* 0x21FB */ public bool SmokeTestLegacyOutput;
+        /* 0x21F7 */ public bool SkipUITimers;
         [NMS(Index = 232)]
-        /* 0x21FC */ public bool SmokeTestOutputOnly;
-        [NMS(Index = 241)]
-        /* 0x21FD */ public bool SmokeTestPostBandwidthStats;
-        [NMS(Index = 233)]
-        /* 0x21FE */ public bool SmokeTestPureFlight;
-        [NMS(Index = 239)]
-        /* 0x21FF */ public bool SmokeTestSmokeBotAutoStart;
+        /* 0x21F8 */ public bool SmokeTestCameraFly;
         [NMS(Index = 238)]
-        /* 0x2200 */ public bool SmokeTestSmokeBotEnabled;
+        /* 0x21F9 */ public bool SmokeTestConfigRandomizePlanetSeed;
+        [NMS(Index = 224)]
+        /* 0x21FA */ public bool SmokeTestDumpStatsMode;
+        [NMS(Index = 231)]
+        /* 0x21FB */ public bool SmokeTestFastExit;
+        [NMS(Index = 227)]
+        /* 0x21FC */ public bool SmokeTestLegacyOutput;
+        [NMS(Index = 233)]
+        /* 0x21FD */ public bool SmokeTestOutputOnly;
+        [NMS(Index = 242)]
+        /* 0x21FE */ public bool SmokeTestPostBandwidthStats;
+        [NMS(Index = 234)]
+        /* 0x21FF */ public bool SmokeTestPureFlight;
+        [NMS(Index = 240)]
+        /* 0x2200 */ public bool SmokeTestSmokeBotAutoStart;
+        [NMS(Index = 239)]
+        /* 0x2201 */ public bool SmokeTestSmokeBotEnabled;
         [NMS(Index = 136)]
-        /* 0x2201 */ public bool SpawnPirates;
+        /* 0x2202 */ public bool SpawnPirates;
         [NMS(Index = 139)]
-        /* 0x2202 */ public bool SpawnPulseEncounters;
+        /* 0x2203 */ public bool SpawnPulseEncounters;
         [NMS(Index = 137)]
-        /* 0x2203 */ public bool SpawnRobots;
+        /* 0x2204 */ public bool SpawnRobots;
         [NMS(Index = 138)]
-        /* 0x2204 */ public bool SpawnShips;
+        /* 0x2205 */ public bool SpawnShips;
         [NMS(Index = 143)]
-        /* 0x2205 */ public bool SpecialsShop;
+        /* 0x2206 */ public bool SpecialsShop;
         [NMS(Index = 151)]
-        /* 0x2206 */ public bool StartPaused;
+        /* 0x2207 */ public bool StartPaused;
         [NMS(Index = 163)]
-        /* 0x2207 */ public bool StopSwitchingToSecondaryInteractions;
+        /* 0x2208 */ public bool StopSwitchingToSecondaryInteractions;
         [NMS(Index = 187)]
-        /* 0x2208 */ public bool StressTestLongNameDisplay;
+        /* 0x2209 */ public bool StressTestLongNameDisplay;
         [NMS(Index = 18)]
-        /* 0x2209 */ public bool SuperKillGuns;
+        /* 0x220A */ public bool SuperKillGuns;
         [NMS(Index = 17)]
-        /* 0x220A */ public bool TakeNoDamage;
+        /* 0x220B */ public bool TakeNoDamage;
         [NMS(Index = 5)]
-        /* 0x220B */ public bool ThirdPersonIsDefaultCameraForPlayer;
+        /* 0x220C */ public bool ThirdPersonIsDefaultCameraForPlayer;
         [NMS(Index = 6)]
-        /* 0x220C */ public bool ThirdPersonIsDefaultCameraForShipAndVehicles;
+        /* 0x220D */ public bool ThirdPersonIsDefaultCameraForShipAndVehicles;
         [NMS(Index = 82)]
-        /* 0x220D */ public bool UnlockAllPlatformRewards;
+        /* 0x220E */ public bool UnlockAllPlatformRewards;
         [NMS(Index = 80)]
-        /* 0x220E */ public bool UnlockAllSeasonRewards;
-        [NMS(Index = 410)]
-        /* 0x220F */ public bool UnlockAllStories;
-        [NMS(Index = 74)]
-        /* 0x2210 */ public bool UnlockAllTitles;
-        [NMS(Index = 81)]
-        /* 0x2211 */ public bool UnlockAllTwitchRewards;
+        /* 0x220F */ public bool UnlockAllSeasonRewards;
         [NMS(Index = 411)]
-        /* 0x2212 */ public bool UnlockAllWords;
+        /* 0x2210 */ public bool UnlockAllStories;
+        [NMS(Index = 74)]
+        /* 0x2211 */ public bool UnlockAllTitles;
+        [NMS(Index = 81)]
+        /* 0x2212 */ public bool UnlockAllTwitchRewards;
+        [NMS(Index = 412)]
+        /* 0x2213 */ public bool UnlockAllWords;
         [NMS(Index = 129)]
-        /* 0x2213 */ public bool UseBuildings;
+        /* 0x2214 */ public bool UseBuildings;
         [NMS(Index = 124)]
-        /* 0x2214 */ public bool UseClouds;
+        /* 0x2215 */ public bool UseClouds;
         [NMS(Index = 130)]
-        /* 0x2215 */ public bool UseCreatures;
+        /* 0x2216 */ public bool UseCreatures;
         [NMS(Index = 131)]
-        /* 0x2216 */ public bool UseElevation;
+        /* 0x2217 */ public bool UseElevation;
         [NMS(Index = 33)]
-        /* 0x2217 */ public bool UseGunImpactEffect;
+        /* 0x2218 */ public bool UseGunImpactEffect;
         [NMS(Index = 170)]
-        /* 0x2218 */ public bool UseHighlightedOptionStyle;
+        /* 0x2219 */ public bool UseHighlightedOptionStyle;
         [NMS(Index = 92)]
-        /* 0x2219 */ public bool UseImmediateModeFrontend;
+        /* 0x221A */ public bool UseImmediateModeFrontend;
         [NMS(Index = 127)]
-        /* 0x221A */ public bool UseInstances;
+        /* 0x221B */ public bool UseInstances;
         [NMS(Index = 133)]
-        /* 0x221B */ public bool UseLegacyBuildingTable;
+        /* 0x221C */ public bool UseLegacyBuildingTable;
         [NMS(Index = 132)]
-        /* 0x221C */ public bool UseLegacyFreighters;
+        /* 0x221D */ public bool UseLegacyFreighters;
         [NMS(Index = 90)]
-        /* 0x221D */ public bool UseMovementStickForRun;
+        /* 0x221E */ public bool UseMovementStickForRun;
         [NMS(Index = 128)]
-        /* 0x221E */ public bool UseObjects;
-        [NMS(Index = 380)]
-        /* 0x221F */ public bool UseOldTerrainMeshing;
-        [NMS(Index = 277)]
-        /* 0x2220 */ public bool UsePadOnUnfocusedWindow;
+        /* 0x221F */ public bool UseObjects;
+        [NMS(Index = 381)]
+        /* 0x2220 */ public bool UseOldTerrainMeshing;
+        [NMS(Index = 278)]
+        /* 0x2221 */ public bool UsePadOnUnfocusedWindow;
         [NMS(Index = 122)]
-        /* 0x2221 */ public bool UseParticles;
-        [NMS(Index = 299)]
-        /* 0x2222 */ public bool UseProcTextureDebugger;
+        /* 0x2222 */ public bool UseParticles;
+        [NMS(Index = 300)]
+        /* 0x2223 */ public bool UseProcTextureDebugger;
         [NMS(Index = 118)]
-        /* 0x2223 */ public bool UseSceneInfoWindow;
+        /* 0x2224 */ public bool UseSceneInfoWindow;
         [NMS(Index = 32)]
-        /* 0x2224 */ public bool UseScreenEffects;
-        [NMS(Index = 421)]
-        /* 0x2225 */ public bool UseSeasonTransferInventoryConfigOverride;
+        /* 0x2225 */ public bool UseScreenEffects;
+        [NMS(Index = 422)]
+        /* 0x2226 */ public bool UseSeasonTransferInventoryConfigOverride;
         [NMS(Index = 126)]
-        /* 0x2226 */ public bool UseTerrain;
+        /* 0x2227 */ public bool UseTerrain;
         [NMS(Index = 123)]
-        /* 0x2227 */ public bool UseVolumetrics;
+        /* 0x2228 */ public bool UseVolumetrics;
         [NMS(Index = 15)]
-        /* 0x2228 */ public bool VideoCaptureMode;
+        /* 0x2229 */ public bool VideoCaptureMode;
     }
 }
