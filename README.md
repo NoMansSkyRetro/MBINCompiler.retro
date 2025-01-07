@@ -98,7 +98,7 @@ While this library targets multiple frameworks, building MBINCompiler and libMBI
 The full command to build all the libraries under the .NET  framework looks like:
 
 ```sh
-dotnet publish -c Release -f net6.0-windows -r win-x64 -o Build/Release/net6/ /nowarn:cs0618
+dotnet publish -c Release -f net6.0-windows -r win-x64 -o Build/Release/net6/ /nowarn:cs0618 /nowarn:cs0169 /nowarn:cs0414
 ```
 
 For convenience we have included two batch scripts which build either the entire project for the .NET 6 framework (`build-net6.bat`) or the .NET 7 framework (`build-net7.bat`)

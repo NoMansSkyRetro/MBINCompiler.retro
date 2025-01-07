@@ -105,7 +105,8 @@ namespace libMBIN
             var xmlSettings = new XmlWriterSettings
             {
                 Indent = true,
-                Encoding = Encoding.UTF8
+                Encoding = Encoding.UTF8,
+                IndentChars = "\t",
             };
             using (var stringWriter = new EncodedStringWriter(Encoding.UTF8))
             using (var xmlTextWriter = XmlWriter.Create(stringWriter, xmlSettings))

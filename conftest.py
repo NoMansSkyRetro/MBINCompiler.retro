@@ -82,6 +82,7 @@ def pytest_sessionstart(session):
 @pytest.fixture(scope='session')
 def convert_files():
     # First, figure out the first part of the MBINCompiler call.
+    print("HI")
     platform = os.environ.get('platform')
     mbincompiler_path = os.environ.get('mbincompiler_path')
     if mbincompiler_path is not None:

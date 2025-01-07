@@ -1158,6 +1158,7 @@ namespace libMBIN
                 case "Int64":
                 case "UInt64":
                     valueString = value?.ToString() ?? "";
+                    if (fieldType.Name == "Boolean") valueString = valueString.ToLower();
                     if (fieldType.Name != "Int32") break;
 
                     if ((int) value == -1 ) break;
@@ -1196,11 +1197,21 @@ namespace libMBIN
                     IList templates = (IList)value;
                     if ( templates != null ) {
                         i = 0;
-                        foreach ( var template in templates ) {
-                            EXmlBase data = SerializeEXmlValue( listType, field, settings, template, false );
-                            data.Name = null;
-
-                            listProperty.Elements.Add( data );
+                        if ( typeof(INMSString).IsAssignableFrom(listType) ) {
+                            // For lists of strings, just write the data directly.
+                            foreach ( var template in templates ) {
+                                EXmlBase data = new EXmlProperty {
+                                    Name = field.Name,
+                                    Value = ((INMSString)template).StringValue(),
+                                };
+                                listProperty.Elements.Add( data );
+                            }
+                        } else {
+                            foreach ( var template in templates ) {
+                                EXmlBase data = SerializeEXmlValue( listType, field, settings, template, false );
+                                data.Name = field.Name;
+                                listProperty.Elements.Add( data );
+                            }
                         }
                     }
 
@@ -1209,7 +1220,7 @@ namespace libMBIN
                     if ( value != null ) {
                         NMSTemplate template = (NMSTemplate) value;
 
-                        var templateXmlData = template.SerializeEXml( true );
+                        var templateXmlData = template.SerializeEXml( true, true );
                         templateXmlData.Name = field.Name;
 
                         return templateXmlData;
@@ -1360,10 +1371,16 @@ namespace libMBIN
             return GetEnumNames( fieldName, settings ).Length;
         }
 
-        public EXmlBase SerializeEXml(bool isChildTemplate) {
+        public EXmlBase SerializeEXml(bool isChildTemplate, bool isGenericTemplate = false) {
             Type type = GetType();
             string typeName = type.Name != "NMSString0x20A" ? type.Name : "NMSString0x20";
             EXmlBase xmlData = new EXmlProperty { Value = typeName + ".xml" };
+            EXmlBase subElement = null;
+            if ( isGenericTemplate ) {
+                xmlData = new EXmlProperty { Value = typeName };
+                subElement = new EXmlProperty { Name = typeName };
+                xmlData.Elements.Add(subElement);
+            }
 
             if ( !isChildTemplate ) {
                 xmlData = new EXmlData { Template = type.Name };
@@ -1377,7 +1394,12 @@ namespace libMBIN
                 if ( settings == null ) settings = new NMSAttribute();
                 if ( settings.Ignore ) continue;
 
-                xmlData.Elements.Add( SerializeEXmlValue( field.FieldType, field, settings, field.GetValue( this ) ) );
+                if ( isGenericTemplate ) {
+                    subElement.Elements.Add( SerializeEXmlValue( field.FieldType, field, settings, field.GetValue( this ) ) );
+                } else {
+                    xmlData.Elements.Add( SerializeEXmlValue( field.FieldType, field, settings, field.GetValue( this ) ) );
+                }
+                
             }
 
             return xmlData;
@@ -1546,8 +1568,9 @@ namespace libMBIN
             }
         }
 
-        public static NMSTemplate DeserializeEXml( EXmlBase xmlData ) {    // this is the inital code that is run when converting exml to mbin.
-        // this code is run to parse over the exml file and put it into a data structure that is processed by SerializeBytes() (I think...)
+        public static NMSTemplate DeserializeEXml( EXmlBase xmlData, bool isGenericTemplate = false ) {
+            // This is the inital code that is run when converting exml to mbin.
+            // This code is run to parse over the exml file and put it into a data structure that is processed by SerializeBytes()
 
             NMSTemplate template = null;
 
@@ -1563,7 +1586,12 @@ namespace libMBIN
 
             Type templateType = template.GetType();
 
+
             using ( var indentScope = new Logger.IndentScope() ) {
+                if ( isGenericTemplate ) {
+                    // For a generic template, the field is nested a level deeper.
+                    xmlData = xmlData.Elements[0];
+                }
 
                 foreach ( var xmlElement in xmlData.Elements ) {
                     if ( xmlElement.GetType() == typeof( EXmlProperty ) ) {
@@ -1579,7 +1607,7 @@ namespace libMBIN
                         Type fieldType = field.FieldType;
                         if ((fieldType == typeof( NMSTemplate ) || fieldType.BaseType == typeof( NMSTemplate ))
                             && !typeof(INMSString).IsAssignableFrom(fieldType) && !(fieldType.IsGenericType && fieldType.GetGenericTypeDefinition() == typeof(HashMap<>))) {
-                            fieldValue = DeserializeEXml( xmlProperty );
+                            fieldValue = DeserializeEXml( xmlProperty, fieldType.Name == "NMSTemplate" );
                         } else {
                             NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
                             fieldValue = DeserializeEXmlValue( template, fieldType, field, xmlProperty, templateType, settings );

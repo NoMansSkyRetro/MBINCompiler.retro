@@ -25,7 +25,7 @@ def pytest_generate_tests(metafunc):
         for root, _, files in os.walk(datapath):
             for fname in files:
                 fname_, ext = op.splitext(fname)
-                if ext == '.MBIN':
+                if ext.upper() == '.MBIN':
                     fpaths.append(op.relpath(op.join(root, fname_), datapath))
     metafunc.parametrize("fname", fpaths)
 
