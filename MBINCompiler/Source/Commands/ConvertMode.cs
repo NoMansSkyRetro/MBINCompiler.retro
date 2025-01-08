@@ -51,10 +51,10 @@ namespace MBINCompiler.Commands {
             var defaultInclude = "*";
             bool autoFormat = (formatI == null) && (formatO == null);
             if ( autoFormat ) {
-                defaultInclude = "*.MBIN;*.MBIN.PC;*.EXML";
+                defaultInclude = "*.MBIN;*.MBIN.PC;*.MXML";
             } else {
                 if ( !SetFormatOptions( formatI, formatO ) ) return (int) ErrorCode.CommandLine;
-                defaultInclude = (InputFormat == FormatType.MBIN) ? "*.MBIN;*.MBIN.PC" : "*.EXML";
+                defaultInclude = (InputFormat == FormatType.MBIN) ? "*.MBIN;*.MBIN.PC" : "*.MXML";
             }
 
             var defaultExclude = @"LANGUAGE\*;*.GEOMETRY.*";
@@ -101,7 +101,7 @@ namespace MBINCompiler.Commands {
         private static bool SetFormatOptions( string formatI, string formatO ) {
             if ( formatI != null ) {
                 InputFormat = (formatI == "MBIN") ? FormatType.MBIN : InputFormat;
-                InputFormat = (formatI == "EXML") ? FormatType.EXML : InputFormat;
+                InputFormat = (formatI == "MXML") ? FormatType.MXML : InputFormat;
                 if ( InputFormat == FormatType.Unknown ) {
                     CommandLine.ShowCommandLineError( $"Invalid format specified: {formatI}" );
                     return false;
@@ -110,15 +110,15 @@ namespace MBINCompiler.Commands {
 
             if ( formatO != null ) {
                 OutputFormat = (formatO == "MBIN") ? FormatType.MBIN : OutputFormat;
-                OutputFormat = (formatO == "EXML") ? FormatType.EXML : OutputFormat;
+                OutputFormat = (formatO == "MXML") ? FormatType.MXML : OutputFormat;
                 if ( OutputFormat == FormatType.Unknown ) {
                     CommandLine.ShowCommandLineError( $"Invalid format specified: {formatO}" );
                     return false;
                 }
             }
 
-            if ( formatI == null ) InputFormat = (OutputFormat == FormatType.MBIN) ? FormatType.EXML : FormatType.MBIN;
-            if ( formatO == null ) OutputFormat = (InputFormat == FormatType.MBIN) ? FormatType.EXML : FormatType.MBIN;
+            if ( formatI == null ) InputFormat = (OutputFormat == FormatType.MBIN) ? FormatType.MXML : FormatType.MBIN;
+            if ( formatO == null ) OutputFormat = (InputFormat == FormatType.MBIN) ? FormatType.MXML : FormatType.MBIN;
 
             if ( InputFormat == OutputFormat ) {
                 CommandLine.ShowCommandLineError( "--input-format and --output-format cannot be the same type!" );
@@ -172,11 +172,11 @@ namespace MBINCompiler.Commands {
             return new string[] { };
         }
 
-        private static string DetectFormat( string file, ref bool foundMBIN, ref bool foundEXML ) {
+        private static string DetectFormat( string file, ref bool foundMBIN, ref bool foundMXML ) {
             if ( Path.HasExtension( file ) ) {
                 var ext = Path.GetExtension( file ).ToUpper();
                 foundMBIN |= (ext == ".MBIN") || (ext == ".PC");
-                foundEXML |= (ext == ".EXML");
+                foundMXML |= (ext == ".MXML");
             }
             return file;
         }
@@ -184,48 +184,48 @@ namespace MBINCompiler.Commands {
         private static bool AutoDetectFormat( ref List<string> fileList ) {
             // detect what types of file formats are found
             bool foundMBIN = false;
-            bool foundEXML = false;
+            bool foundMXML = false;
 
-            foreach ( var file in fileList ) DetectFormat( file, ref foundMBIN, ref foundEXML );
+            foreach ( var file in fileList ) DetectFormat( file, ref foundMBIN, ref foundMXML );
 
             // TODO: this should be handled better
-            if ( !foundMBIN && !foundEXML ) {
+            if ( !foundMBIN && !foundMXML ) {
                 if ( (fileList.Count == 1) && File.Exists( fileList[0] ) ) {
                     using ( var fIn = new FileStream( fileList[0], FileMode.Open ) ) {
                         // possibly MBIN? check for a valid header
                         using ( var mbin = new MBINFile( fIn, true ) ) foundMBIN = (mbin.Load() && mbin.Header.IsValid);
-                        if ( !foundMBIN ) { // possibly EXML? check for a valid xml tag
+                        if ( !foundMBIN ) { // possibly MXML? check for a valid xml tag
                             var xmlTag = "<?xml version=\"1.0\" encoding=\"utf-8\"?>".ToLower();
                             var bytes = new byte[xmlTag.Length];
                             // TODO: handle potential leading whitespace?
                             if ( fIn.Read( bytes, 0, xmlTag.Length ) == xmlTag.Length ) {
                                 var txt = System.Text.Encoding.ASCII.GetString( bytes ).ToLower();
-                                foundEXML = (txt == xmlTag);
+                                foundMXML = (txt == xmlTag);
                             }
                         }
                     }
                 }
             }
 
-            if ( foundMBIN && foundEXML ) {
+            if ( foundMBIN && foundMXML ) {
                 const string msg = "Unable to automatically determine the --input-format type.";
                 if ( Quiet ) return (CommandLine.ShowError( msg ) == (int) ErrorCode.Success);
                 CommandLine.ShowWarning( msg );
-                Console.Out.WriteLine( "Both MBIN and EXML file types were detected!\n" );
+                Console.Out.WriteLine( "Both MBIN and MXML file types were detected!\n" );
                 InputFormat = Utils.PromptInputFormat();
                 Console.WriteLine();
             } else if ( foundMBIN ) {
                 if (!StreamToConsole) Logger.LogInfo( "Auto-Detected --input-format=MBIN" );
                 InputFormat = FormatType.MBIN;
-            } else if ( foundEXML ) {
-                if (!StreamToConsole) Logger.LogInfo( "Auto-Detected --input-format=EXML" );
-                InputFormat = FormatType.EXML;
+            } else if ( foundMXML ) {
+                if (!StreamToConsole) Logger.LogInfo( "Auto-Detected --input-format=MXML" );
+                InputFormat = FormatType.MXML;
             } else {
                 CommandLine.ShowError( "No valid files found!" );
                 return false;
             }
 
-            OutputFormat = (InputFormat == FormatType.MBIN) ? FormatType.EXML : FormatType.MBIN;
+            OutputFormat = (InputFormat == FormatType.MBIN) ? FormatType.MXML : FormatType.MBIN;
             Logger.LogMessage( "INFO", $"--input-format={InputFormat} --output-format={OutputFormat}" );
 
             // exclude any files that don't match InputFormat

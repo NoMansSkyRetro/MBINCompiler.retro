@@ -159,7 +159,7 @@ namespace MBINCompiler.Commands {
 
                     if ( inputFormat == FormatType.MBIN ) {
                         fileOut = ConvertMBIN( inputPath, fIn, ms, fileOut );
-                    } else if ( inputFormat == FormatType.EXML ) {
+                    } else if ( inputFormat == FormatType.MXML ) {
                         fileOut = ConvertEXML( inputPath, fIn, ms, fileOut );
                     }
                     if (!(StreamToConsole && inputFormat == FormatType.MBIN)) {
@@ -217,18 +217,18 @@ namespace MBINCompiler.Commands {
                 data = mbin.GetData();
                 if ( data is null ) throw new InvalidDataException( "Invalid MBIN data." );
 
-                msg = $"Failed serializing {mbin.Header.GetXMLTemplateName()} to EXML.";
-                string exml = EXmlFile.WriteTemplate(data, HideVersionInfo);
+                msg = $"Failed serializing {mbin.Header.GetXMLTemplateName()} to MXML.";
+                string mxml = EXmlFile.WriteTemplate(data, HideVersionInfo);
 
                 if ( StreamToConsole ) {
                     EmitInfo($"");
                     EmitInfo($"[INPUT]: {inputPath}");
-                    EmitInfo($"{exml}");
+                    EmitInfo($"{mxml}");
                 }
                 else {
-                    sw.Write(exml);
+                    sw.Write(mxml);
                     sw.Flush();
-                    if ( msOut.Length == 0 ) throw new InvalidDataException( "Invalid EXML data." );
+                    if ( msOut.Length == 0 ) throw new InvalidDataException( "Invalid MXML data." );
                 }
             } catch ( Exception e ) {
                 throw new MbinException( msg, e, fIn.Name, mbin );
@@ -323,7 +323,7 @@ namespace MBINCompiler.Commands {
                 if ( x == ".PC" ) file = Path.ChangeExtension( file, null );
                 x = Path.GetExtension( file ).ToUpper();
                 if ( x == ".MBIN" ) return Path.ChangeExtension( file, ext );
-                if ( x == ".EXML" ) return Path.ChangeExtension( file, ext );
+                if ( x == ".MXML" ) return Path.ChangeExtension( file, ext );
             }
             return file + $".{ext}";
         }

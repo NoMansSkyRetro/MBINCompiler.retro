@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("libMBIN")]
-[assembly: AssemblyDescription("A modding tool for the game: No Man's Sky that converts the game's MBIN data files (binary) into human-readable EXML files (text) that can be edited with any text editor and then converted back again for use in a modded game.")]
+[assembly: AssemblyDescription("A modding tool for the game: No Man's Sky that converts the game's MBIN data files (binary) into human-readable MXML files (text) that can be edited with any text editor and then converted back again for use in a modded game.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("libMBIN")]

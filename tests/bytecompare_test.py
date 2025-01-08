@@ -7,7 +7,7 @@ from utils import compare_mbins, failed_files
 
 
 DATA_PATH = op.join(op.dirname(__file__), 'data')
-TO_EXML_FAIL = 'Failed conversion to EXML'
+TO_MXML_FAIL = 'Failed conversion to MXML'
 TO_MBIN_FAIL = 'Failed conversion to MBIN'
 
 
@@ -36,11 +36,11 @@ def test_compare(convert_files, fname):
     .MBIN files in the ./data directory.
     """
     converted_exml_dir, converted_mbin_dir = convert_files
-    converted_exml = op.join(converted_exml_dir, fname + '.EXML')
+    converted_exml = op.join(converted_exml_dir, fname + '.MXML')
     converted_mbin = op.join(converted_mbin_dir, fname + '.MBIN')
     if not op.exists(converted_exml):
-        # If the .EXML file doesn't exist, fail.
-        print(f'{fname},{TO_EXML_FAIL}')
+        # If the .MXML file doesn't exist, fail.
+        print(f'{fname},{TO_MXML_FAIL}')
         pytest.fail()
     elif not op.exists(converted_mbin):
         # If the .MBIN file doesn't exist, fail.
