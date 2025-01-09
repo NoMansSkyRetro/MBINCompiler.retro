@@ -144,7 +144,7 @@ namespace MBINCompiler
                                         "glob patterns. A glob pattern is a filepath with wildcards." +
                                         "The * and ? wildcard characters can be used.\n" +
                                         "Multiple glob patterns are separated by a semicolon.\n" +
-                                        "The default is --exclude=\"LANGUAGE\\*;*.GEOMETRY.*\".\n" +
+                                        "The default is --exclude=\"\" (nothing).\n" +
                                         "The --exclude filter is applied after --include." },
 
             new Option { shortName = 'V', longName = "format-version", param = "[0|1|2]", isHidden = true,

@@ -57,7 +57,7 @@ namespace MBINCompiler.Commands {
                 defaultInclude = (InputFormat == FormatType.MBIN) ? "*.MBIN;*.MBIN.PC" : "*.MXML";
             }
 
-            var defaultExclude = @"LANGUAGE\*;*.GEOMETRY.*";
+            var defaultExclude = @"";
 
             //#if DEBUG
             //defaultExclude = "";
