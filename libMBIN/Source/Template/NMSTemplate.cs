@@ -1144,7 +1144,6 @@ namespace libMBIN
             int i = 0;
             string valueString = String.Empty;
 
-
             switch (fieldType.Name)
             {
                 case "String":
@@ -1200,7 +1199,7 @@ namespace libMBIN
                         if ( typeof(INMSString).IsAssignableFrom(listType) ) {
                             // For lists of strings, just write the data directly.
                             foreach ( var template in templates ) {
-                                EXmlBase data = new EXmlProperty {
+                                EXmlProperty data = new EXmlProperty {
                                     Name = field.Name,
                                     Value = ((INMSString)template).StringValue(),
                                 };
@@ -1468,16 +1467,23 @@ namespace libMBIN
 
                         var type = innerXmlData.GetType();
                         var data = innerXmlData as EXmlProperty;
-                        if (typeof(INMSString).IsAssignableFrom(elementType) && elementType.Name == "NMSString0x20A") {
-                            // If the data is actually a NMSString0x20A, then make sure we try and serialize it as such.
-                            data.Value = "NMSString0x20A.xml";
+                        bool isGenericTemplate = false;
+
+                        if (typeof(INMSString).IsAssignableFrom(elementType)) {
+                            // If the data is a string, we read as a property since it won't have the type.
+                            type = typeof(EXmlProperty);
+                        } else if (elementType == typeof(NMSTemplate)) {
+                            isGenericTemplate = true;
+                            type = typeof(EXmlData);
+                        } else {
+                            type = (data?.Value.EndsWith( ".xml" ) ?? false) ? typeof( EXmlData ) : type;
                         }
-                        type = (data?.Value.EndsWith( ".xml" ) ?? false) ? typeof( EXmlData ) : type;
 
                         if (type == typeof(EXmlProperty)) {
                             element = DeserializeEXmlValue(template, elementType, field, (EXmlProperty)innerXmlData, templateType, settings);
                         }  else if (type == typeof(EXmlData)) {
-                            element = DeserializeEXml(innerXmlData); // child template if <Data> tag or <Property> tag with value ending in .xml (todo: better way of finding <Property> child templates)
+                            // child template if <Data> tag or <Property> tag with value ending in .xml (todo: better way of finding <Property> child templates)
+                            element = DeserializeEXml(innerXmlData, isGenericTemplate);
                         } else if (type == typeof(EXmlMeta)) {
                             DebugLogComment(((EXmlMeta)innerXmlData).Comment);
                         }

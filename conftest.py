@@ -82,7 +82,6 @@ def pytest_sessionstart(session):
 @pytest.fixture(scope='session')
 def convert_files():
     # First, figure out the first part of the MBINCompiler call.
-    print("HI")
     platform = os.environ.get('platform')
     mbincompiler_path = os.environ.get('mbincompiler_path')
     if mbincompiler_path is not None:
@@ -99,19 +98,19 @@ def convert_files():
 
     datapath = os.environ.get('datapath', DATA_PATH)
 
-    # Next, convert all the mbin files in the data folder to a `data_exml`
+    # Next, convert all the mbin files in the data folder to a `data_mxml`
     # folder.
     # We'll have a double nested with statement so we can have both temp
     # directories existing for the whole lifecycle of the tests.
-    with tempfile.TemporaryDirectory(prefix='exml_') as temp_exml_dir:
+    with tempfile.TemporaryDirectory(prefix='mxml_') as temp_mxml_dir:
         with tempfile.TemporaryDirectory(prefix='mbin_') as temp_mbin_dir:
-            print('Converting the original files to .EXML')
-            subprocess.run(cmd + [datapath, '-iMBIN', f'--output-dir={temp_exml_dir}'])
-            print('Converting the converted .EXML files back to .MBIN')
+            print('Converting the original files to .MXML')
+            subprocess.run(cmd + [datapath, '-iMBIN', f'--output-dir={temp_mxml_dir}'])
+            print('Converting the converted .MXML files back to .MBIN')
             subprocess.run(
-                cmd + [temp_exml_dir, '-iEXML', f'--output-dir={temp_mbin_dir}']
+                cmd + [temp_mxml_dir, '-iMXML', f'--output-dir={temp_mbin_dir}']
             )
-            yield temp_exml_dir, temp_mbin_dir
+            yield temp_mxml_dir, temp_mbin_dir
 
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)

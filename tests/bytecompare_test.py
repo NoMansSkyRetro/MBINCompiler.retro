@@ -35,10 +35,10 @@ def test_compare(convert_files, fname):
     This test is parameterised by fpath which will contain the paths of all
     .MBIN files in the ./data directory.
     """
-    converted_exml_dir, converted_mbin_dir = convert_files
-    converted_exml = op.join(converted_exml_dir, fname + '.MXML')
+    converted_mxml_dir, converted_mbin_dir = convert_files
+    converted_mxml = op.join(converted_mxml_dir, fname + '.MXML')
     converted_mbin = op.join(converted_mbin_dir, fname + '.MBIN')
-    if not op.exists(converted_exml):
+    if not op.exists(converted_mxml):
         # If the .MXML file doesn't exist, fail.
         print(f'{fname},{TO_MXML_FAIL}')
         pytest.fail()
