@@ -6,13 +6,13 @@ namespace libMBIN.NMS
     [NMS(Size = 0x8, Alignment = 0x4)]
     public class Vector2f : NMSTemplate
     {
-        public float x;
-        public float y;
+        public float X;
+        public float Y;
 
         public Vector2f(float x, float y)
         {
-            this.x = x;
-            this.y = y;
+            this.X = x;
+            this.Y = y;
         }
 
         public Vector2f() { }
@@ -24,7 +24,7 @@ namespace libMBIN.NMS
         /// <returns></returns>
         public override string ToString()
         {
-            return $"({this.x}, {this.y})";
+            return $"({this.X}, {this.Y})";
         }
     }
 }

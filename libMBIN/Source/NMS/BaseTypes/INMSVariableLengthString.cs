@@ -5,7 +5,6 @@ namespace libMBIN.NMS
 {
     public interface INMSVariableLengthString: INMSString
     {
-        string StringValue();
         string String { get; set; }
     }
 }

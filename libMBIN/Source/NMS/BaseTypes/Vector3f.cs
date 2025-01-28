@@ -6,15 +6,15 @@ namespace libMBIN.NMS
     [NMS(Size = 0x10, Alignment = 0x10)]
     public class Vector3f : NMSTemplate
     {
-        public float x;
-        public float y;
-        public float z;
+        public float X;
+        public float Y;
+        public float Z;
 
         public Vector3f(float x, float y, float z)
         {
-            this.x = x;
-            this.y = y;
-            this.z = z;
+            this.X = x;
+            this.Y = y;
+            this.Z = z;
         }
 
         public Vector3f() { }
@@ -26,7 +26,7 @@ namespace libMBIN.NMS
         /// <returns></returns>
         public override string ToString()
         {
-            return $"({this.x}, {this.y}, {this.z})";
+            return $"({this.X}, {this.Y}, {this.Z})";
         }
     }
 }
