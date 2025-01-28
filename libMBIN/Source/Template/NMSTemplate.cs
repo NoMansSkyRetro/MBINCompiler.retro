@@ -1206,18 +1206,16 @@ namespace libMBIN
                 case "LinkableNMSTemplate":
                     LinkableNMSTemplate linkedTemplate = (LinkableNMSTemplate) value;
                     if (linkedTemplate.Template != null) {
-                        EXmlProperty linkedProp = new EXmlProperty {
-                            Name = field.Name,
-                            Value = linkedTemplate.Template.GetType().Name,
-                        };
+                        EXmlProperty templateXmlData = (EXmlProperty)linkedTemplate.Template.SerializeEXml( true, true );
+                        templateXmlData.Name = field.Name;
+                        templateXmlData.Value = linkedTemplate.Template.GetType().Name;
                         if (linkedTemplate.Linked.StringValue() != "") {
-                            linkedProp.Linked = linkedTemplate.Linked.StringValue();
+                            templateXmlData.Linked = linkedTemplate.Linked.StringValue();
                         }
-                        EXmlBase templateXmlData = linkedTemplate.Template.SerializeEXml( true, false );
-                        linkedProp.Elements.Add(templateXmlData);
-                        return linkedProp;
+                        return templateXmlData;
                     } else {
-                        EXmlProperty linkedProp = new EXmlProperty {
+                        EXmlProperty linkedProp = new EXmlProperty()
+                        {
                             Name = field.Name,
                         };
                         return linkedProp;
@@ -1412,10 +1410,10 @@ namespace libMBIN
         public EXmlBase SerializeEXml(bool isChildTemplate, bool isGenericTemplate = false) {
             Type type = GetType();
             string typeName = type.Name != "NMSString0x20A" ? type.Name : "NMSString0x20";
-            EXmlBase xmlData = new EXmlProperty { Name = typeName };
+            EXmlBase xmlData = new EXmlProperty { Value = typeName };
             EXmlBase subElement = null;
             if ( isGenericTemplate ) {
-                xmlData = new EXmlProperty { Value = typeName };
+                xmlData = new EXmlProperty { Name = typeName };
                 subElement = new EXmlProperty { Name = typeName };
                 xmlData.Elements.Add(subElement);
             }
