@@ -128,13 +128,13 @@ namespace libMBIN.NMS.Toolkit
                         {
                         List<UInt16> convertedQ = new List<UInt16>
                         {
-                            ConvertQuat(q.x),
-                            ConvertQuat(q.y),
-                            ConvertQuat(q.z),
-                            ConvertQuat(q.w),
+                            ConvertQuat(q.X),
+                            ConvertQuat(q.Y),
+                            ConvertQuat(q.Z),
+                            ConvertQuat(q.W),
                         };
 
-                        // Get the drop component from the value stored in the exml.
+                        // Get the drop component from the value stored in the mxml.
                         // For more details see the comment above the DetermineDropComponent method.
                         int dropcomponent = q.dropComponent;
                         // int dropcomponent = DetermineDropComponent(convertedQ);

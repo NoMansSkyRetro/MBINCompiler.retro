@@ -4,7 +4,7 @@ using System.IO;
 namespace MBINCompiler
 {
 
-    internal enum FormatType { Unknown, MBIN, EXML }
+    internal enum FormatType { Unknown, MBIN, MXML, EXML }
 
     internal enum OverwriteMode { Prompt, Always, Never }
 
@@ -30,10 +30,10 @@ namespace MBINCompiler
                 Console.Write( "\n--input-format=" );
                 result = Console.ReadLine().ToUpper();
                 if ( result == "MBIN" ) break;
-                if ( result == "EXML" ) break;
+                if ( result == "MXML" ) break;
             }
 
-            return ( result == "MBIN" ) ? FormatType.MBIN : FormatType.EXML;
+            return ( result == "MBIN" ) ? FormatType.MBIN : FormatType.MXML;
         }
 
         public static bool PromptOverwrite( string fileOut, ref OverwriteMode overwrite )

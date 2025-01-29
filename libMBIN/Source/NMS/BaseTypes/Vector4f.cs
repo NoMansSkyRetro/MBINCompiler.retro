@@ -7,32 +7,29 @@ namespace libMBIN.NMS
     [NMS(Size = 0x10, Alignment = 0x10)]
     public class Vector4f : NMSTemplate
     {
-        public float x;
-        public float y;
-        public float z;
-        // t is w in NMS.exe
-        public float t;
+        public float X;
+        public float Y;
+        public float Z;
+        public float W;
 
-        // t is w in NMS.exe
-        public Vector4f(float x, float y, float z, float t)
+        public Vector4f(float x, float y, float z, float w)
         {
-            this.x = x;
-            this.y = y;
-            this.z = z;
-            // t is w in NMS.exe
-            this.t = t;
+            this.X = x;
+            this.Y = y;
+            this.Z = z;
+            this.W = w;
         }
 
         public Vector4f() { }
 
         /// <summary>
         /// Returns a formatted string for this vector.
-        /// <br/>Format: (x, y, z, t)
+        /// <br/>Format: (x, y, z, w)
         /// </summary>
         /// <returns></returns>
         public override string ToString()
         {
-            return $"({this.x}, {this.y}, {this.z}, {this.t})";
+            return $"({this.X}, {this.Y}, {this.Z}, {this.W})";
         }
     }
 }

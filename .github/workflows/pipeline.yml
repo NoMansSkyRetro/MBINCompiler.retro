@@ -29,8 +29,8 @@ jobs:
         run: |
           sed -i '\|<TargetFrameworks>net6.0;net7.0</TargetFrameworks>|a\    <RuntimeFrameworkVersion>${{ matrix.dotnet.version }}</RuntimeFrameworkVersion>' ./MBINCompiler/MBINCompiler.csproj
           sed -i '\|<TargetFrameworks>net6.0;net7.0</TargetFrameworks>|a\    <RuntimeFrameworkVersion>${{ matrix.dotnet.version }}</RuntimeFrameworkVersion>' ./libMBIN-DLL/libMBIN-DLL.csproj
-          dotnet publish libMBIN-DLL --no-self-contained -c Release -f ${{ matrix.dotnet.framework }} -r ${{ matrix.os.runtime }} /nowarn:cs0618
-          dotnet publish MBINCompiler --no-self-contained -c Release -f ${{ matrix.dotnet.framework }} -r ${{ matrix.os.runtime }} /nowarn:cs0618
+          dotnet publish libMBIN-DLL --no-self-contained -c Release -f ${{ matrix.dotnet.framework }} -r ${{ matrix.os.runtime }} /nowarn:cs0618 /nowarn:cs0169 /nowarn:cs0414
+          dotnet publish MBINCompiler --no-self-contained -c Release -f ${{ matrix.dotnet.framework }} -r ${{ matrix.os.runtime }} /nowarn:cs0618 /nowarn:cs0169 /nowarn:cs0414
       - name: Move the exe so the tests can find it easier
         run: |
           cp Build/Release/${{ matrix.dotnet.framework }}/${{ matrix.os.runtime }}/publish/MBINCompiler.exe MBINCompiler.exe
@@ -80,7 +80,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build SaveFileMapping binary
-        run: dotnet publish SaveFileMapping -c Release -f net6.0 -r win-x64 -o Build/Release/net6/ /nowarn:cs0618
+        run: dotnet publish SaveFileMapping -c Release -f net6.0 -r win-x64 -o Build/Release/net6/ /nowarn:cs0618 /nowarn:cs0169 /nowarn:cs0414
       - name: Generate save data mapping
         run : Build/Release/net6/SaveFileMapping.exe
         shell: bash

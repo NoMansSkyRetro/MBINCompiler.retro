@@ -3,7 +3,7 @@
 namespace libMBIN
 {
     [XmlType("Meta")]
-    public class EXmlMeta : EXmlBase
+    public class MXmlMeta : MXmlBase
     {
         [XmlAttribute("comment")]
         public string Comment { get; set; }

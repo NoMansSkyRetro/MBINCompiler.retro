@@ -71,6 +71,15 @@ namespace libMBIN {
         }
     }
 
+    public class UnknownGenericTypeException : TemplateException
+    {
+        public UnknownGenericTypeException(string fieldName) { }
+
+        public static string GetString(string fieldName) {
+            return $"Cannot determine the type of the generic field {fieldName}. The MXML property requires a value attribute.";
+        }
+    }
+
     public class MbinException : TemplateException
     {
         public MbinException(string fieldName, Exception innerException, string fileName) : base(GetString(fieldName, fileName), innerException) {}

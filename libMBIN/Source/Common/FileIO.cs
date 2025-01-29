@@ -14,9 +14,9 @@ namespace libMBIN
     {
         /// <summary>
         /// Loads a file and returns an NMSTemplate which can be either used as-is, or cast to a specific type.
-        /// The path to either an .exml or .mbin can be provided here and the correct method will be selected automatically.
+        /// The path to either an .mxml or .mbin can be provided here and the correct method will be selected automatically.
         /// </summary>
-        /// <param name="file">File path to the .exml or .mbin to be loaded into memory.</param>
+        /// <param name="file">File path to the .mxml or .mbin to be loaded into memory.</param>
         /// <returns>NMSTemplate</returns>
         public static NMSTemplate LoadFile(string file)
         {
@@ -24,9 +24,9 @@ namespace libMBIN
             if (Path.HasExtension(file))
             {
                 string x = Path.GetExtension(file).ToUpper();
-                if (x == ".EXML")
+                if (x == ".MXML")
                 {
-                    data = LoadExml(file);
+                    data = LoadMxml(file);
                 }
                 else if (x == ".MBIN" || x == ".PC")
                 {
@@ -34,7 +34,7 @@ namespace libMBIN
                 }
                 else
                 {
-                    throw new InvalidDataException($"{file} does not have a supported file type. File type must be one of .exml or .mbin");
+                    throw new InvalidDataException($"{file} does not have a supported file type. File type must be one of .mxml or .mbin");
                 }
             }
             return data;
@@ -65,13 +65,13 @@ namespace libMBIN
         }
 
         /// <summary>
-        /// Loads an .exml file and returns an NMSTemplate which can be either used as-is, or cast to a specific type.
+        /// Loads an .mxml file and returns an NMSTemplate which can be either used as-is, or cast to a specific type.
         /// </summary>
-        /// <param name="path">File path to the .exml to be loaded into memory.</param>
+        /// <param name="path">File path to the .mxml to be loaded into memory.</param>
         /// <returns>NMSTemplate</returns>
-        public static NMSTemplate LoadExml(string path)
+        public static NMSTemplate LoadMxml(string path)
         {
-            return EXmlFile.ReadTemplate(path);
+            return MXmlFile.ReadTemplate(path);
         }
     }
 }

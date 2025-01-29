@@ -117,7 +117,7 @@ namespace MBINCompiler
                                         "Do not pause for errors.\n" +
                                         "(Any errors will be written to MBINCompiler.log)" },
 
-            new Option { longName = "no-version", description = "Hide version info in EXML header." },
+            new Option { longName = "no-version", description = "Hide version info in MXML header." },
 
             new Option { shortName = 'd', longName = "output-dir", param = "<Directory>",
                             description = "\nSpecify the directory where files will be written to.\n" +
@@ -125,18 +125,19 @@ namespace MBINCompiler
 
             new Option { shortName = 'i', longName = "input-format", param = "<Type>",
                             description = "\nSpecify the type of input files to be converted from.\n" +
-                                        "<Type> can be either MBIN or EXML." },
+                                        "<Type> can be either MBIN or MXML." },
 
             new Option { shortName = 'o', longName = "output-format", param = "<Type>",
                             description = "\nSpecify the type of output files to be converted to.\n" +
-                                        "<Type> can be either MBIN or EXML." },
+                                        "<Type> can be either MBIN, MXML or EXML.\n" +
+                                        "Note that MBINCompiler will not accept EXML files as input." },
 
             new Option { longName = "include", param = "<Glob Pattern>[;<Glob Pattern>...]",
                             description = "\nFilter all files to include only those that match the " +
                                         "glob patterns. A glob pattern is a filepath with wildcards." +
                                         "The * and ? wildcard characters can be used.\n" +
                                         "Multiple glob patterns are separated by a semicolon.\n" +
-                                        "The default is --include=\"*.MBIN;*.MBIN.PC;*.EXML\" (all).\n" +
+                                        "The default is --include=\"*.MBIN;*.MBIN.PC;*.MXML\" (all).\n" +
                                         "The --include filter is applied before --exclude." },
 
             new Option { longName = "exclude", param = "<Glob Pattern>[;<Glob Pattern>...]",
@@ -144,7 +145,7 @@ namespace MBINCompiler
                                         "glob patterns. A glob pattern is a filepath with wildcards." +
                                         "The * and ? wildcard characters can be used.\n" +
                                         "Multiple glob patterns are separated by a semicolon.\n" +
-                                        "The default is --exclude=\"LANGUAGE\\*;*.GEOMETRY.*\".\n" +
+                                        "The default is --exclude=\"\" (nothing).\n" +
                                         "The --exclude filter is applied after --include." },
 
             new Option { shortName = 'V', longName = "format-version", param = "[0|1|2]", isHidden = true,
@@ -153,7 +154,7 @@ namespace MBINCompiler
 
             new Option { longName = "no-threads", isHidden = true, description = "Disable multi-threading." },
 
-            new Option { longName = "stream", description = "Enable sending EXML to Console." },
+            new Option { longName = "stream", description = "Enable sending MXML to Console." },
         };
         
         public static readonly List<Option> OPTIONS_LIST = new List<Option> {
@@ -190,7 +191,7 @@ namespace MBINCompiler
             sb.Append( "\n\nModes:\n\n" +
                     FormatWrapped( "  help",     20, "Show this help info.", true ) +
                     FormatWrapped( "  version",  20, "Show version info.", true ) +
-                    FormatWrapped( "  convert",  20, "Convert files between MBIN and EXML formats.", true ) +
+                    FormatWrapped( "  convert",  20, "Convert files between MBIN and MXML formats.", true ) +
                     FormatWrapped( "  register", 20, "Add MBINCompiler to your systems PATH variable.", true) );
 
             if ( OPTIONS_GENERAL.Count > 0 ) {
@@ -211,7 +212,7 @@ namespace MBINCompiler
 
             sb.Append( FormatWrapped( "\n\n[convert] [<Option>...] <Path> [<Path>...]\n\n", 4,
                     "    This mode is the default. The convert keyword is optional.\n" +
-                    "    For each <Path>, convert all files between MBIN and EXML formats." ) );
+                    "    For each <Path>, convert all files between MBIN and MXML formats." ) );
 
             if ( OPTIONS_CONVERT.Count > 0 ) {
                 sb.Append( "\nconvert Options:\n" );

@@ -159,8 +159,8 @@ namespace MBINCompiler.Commands {
 
                     if ( inputFormat == FormatType.MBIN ) {
                         fileOut = ConvertMBIN( inputPath, fIn, ms, fileOut );
-                    } else if ( inputFormat == FormatType.EXML ) {
-                        fileOut = ConvertEXML( inputPath, fIn, ms, fileOut );
+                    } else if ( inputFormat == FormatType.MXML ) {
+                        fileOut = ConvertMXML( inputPath, fIn, ms, fileOut );
                     }
                     if (!(StreamToConsole && inputFormat == FormatType.MBIN)) {
                         ms.Flush();
@@ -179,7 +179,7 @@ namespace MBINCompiler.Commands {
 
         }
 
-        /// <summary>Convert MBIN to EXML</summary>
+        /// <summary>Convert MBIN to MXML</summary>
         /// <param name="fIn">Source file</param>
         /// <param name="msOut">Output stream</param>
         /// <param name="fileOut">Output file path. Passed through as the return value. Not actually used.</param>
@@ -217,18 +217,18 @@ namespace MBINCompiler.Commands {
                 data = mbin.GetData();
                 if ( data is null ) throw new InvalidDataException( "Invalid MBIN data." );
 
-                msg = $"Failed serializing {mbin.Header.GetXMLTemplateName()} to EXML.";
-                string exml = EXmlFile.WriteTemplate(data, HideVersionInfo);
+                msg = $"Failed serializing {mbin.Header.GetXMLTemplateName()} to MXML.";
+                string mxml = MXmlFile.WriteTemplate(data, HideVersionInfo);
 
                 if ( StreamToConsole ) {
                     EmitInfo($"");
                     EmitInfo($"[INPUT]: {inputPath}");
-                    EmitInfo($"{exml}");
+                    EmitInfo($"{mxml}");
                 }
                 else {
-                    sw.Write(exml);
+                    sw.Write(mxml);
                     sw.Flush();
-                    if ( msOut.Length == 0 ) throw new InvalidDataException( "Invalid EXML data." );
+                    if ( msOut.Length == 0 ) throw new InvalidDataException( "Invalid MXML data." );
                 }
             } catch ( Exception e ) {
                 throw new MbinException( msg, e, fIn.Name, mbin );
@@ -237,22 +237,22 @@ namespace MBINCompiler.Commands {
             return fileOut;
         }
 
-        /// <summary>Convert EXML to MBIN</summary>
+        /// <summary>Convert MXML to MBIN</summary>
         /// <param name="fIn">Source file</param>
         /// <param name="msOut">Output stream</param>
         /// <param name="fileOut">Output file path. Passed through as the return value. For geometry files, ".PC" will be appended.</param>
         /// <returns>fileOut</returns>
-        private static string ConvertEXML( string inputPath, FileStream fIn, MemoryStream msOut, string fileOut ) {
+        private static string ConvertMXML( string inputPath, FileStream fIn, MemoryStream msOut, string fileOut ) {
             string templateName;
             NMSTemplate data = null;
             try {
-                data = EXmlFile.ReadTemplateFromStream( fIn, out templateName );
+                data = MXmlFile.ReadTemplateFromStream( fIn, out templateName );
 
                 Type type = NMSTemplate.GetTemplateType( templateName );
                 var nms = (NMSAttribute) (data.GetType().GetCustomAttributes( typeof( NMSAttribute ), false )?[0] ?? null);
                 if ( nms.Broken ) FileIsBroken( inputPath, data );
 
-                if ( data is null ) throw new InvalidDataException( $"Failed to deserialize EXML." );
+                if ( data is null ) throw new InvalidDataException( $"Failed to deserialize MXML." );
                 if ( data is libMBIN.NMS.Toolkit.TkGeometryData | data is libMBIN.NMS.Toolkit.TkGeometryStreamData ) fileOut += ".PC";
 
                 var mbin = new MBINFile( msOut ) { Header = new MBINHeader() };
@@ -261,7 +261,7 @@ namespace MBINCompiler.Commands {
                 mbin.Save();
             } catch ( Exception e ) {
                 Console.WriteLine($"ERR INFO: {e.StackTrace}");
-                throw new ExmlException( e, fIn.Name, data );
+                throw new MxmlException( e, fIn.Name, data );
             }
 
             return fileOut;
@@ -292,7 +292,7 @@ namespace MBINCompiler.Commands {
         private static void WarnBroken( string msg, string filePath, MBINFile mbin, NMSTemplate data = null, ulong expectedGUID = 0L ) {
             #if ERROR_ON_BROKEN
                 if (mbin != null) throw new MbinException( msg, filePath, mbin );
-                throw new ExmlException( msg, filePath, data );
+                throw new MxmlException( msg, filePath, data );
             #endif
 
             Async.SynchronizeTask( errorLock, ref errorTask, () => {
@@ -323,7 +323,7 @@ namespace MBINCompiler.Commands {
                 if ( x == ".PC" ) file = Path.ChangeExtension( file, null );
                 x = Path.GetExtension( file ).ToUpper();
                 if ( x == ".MBIN" ) return Path.ChangeExtension( file, ext );
-                if ( x == ".EXML" ) return Path.ChangeExtension( file, ext );
+                if ( x == ".MXML" ) return Path.ChangeExtension( file, ext );
             }
             return file + $".{ext}";
         }
