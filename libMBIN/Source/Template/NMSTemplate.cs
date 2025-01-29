@@ -1252,8 +1252,9 @@ namespace libMBIN
                     if ( value != null ) {
                         NMSTemplate template = (NMSTemplate) value;
 
-                        var templateXmlData = template.SerializeEXml( true, true );
+                        EXmlProperty templateXmlData = (EXmlProperty)template.SerializeEXml( true, true );
                         templateXmlData.Name = field.Name;
+                        templateXmlData.Value = template.GetType().Name;
 
                         return templateXmlData;
                     }

@@ -10,18 +10,18 @@ namespace libMBIN.NMS
 {
     public class Quaternion : NMSTemplate
     {
-        public double x;
-        public double y;
-        public double z;
-        public double w;
+        public double X;
+        public double Y;
+        public double Z;
+        public double W;
         public int dropComponent;
 
         public Quaternion(double x, double y, double z, double w, int dropComponent)
         {
-            this.x = x;
-            this.y = y;
-            this.z = z;
-            this.w = w;
+            this.X = x;
+            this.Y = y;
+            this.Z = z;
+            this.W = w;
             this.dropComponent = dropComponent;
         }
 
@@ -34,7 +34,7 @@ namespace libMBIN.NMS
         /// <returns></returns>
         public override string ToString()
         {
-            return $"({this.x}, {this.y}, {this.z}, {this.w})";
+            return $"({this.X}, {this.Y}, {this.Z}, {this.W})";
         }
 
         public override bool CustomSerialize(BinaryWriter writer, Type field, object fieldData, NMSAttribute settings, FieldInfo fieldInfo, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex)
