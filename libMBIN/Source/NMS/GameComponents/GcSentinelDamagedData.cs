@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xADAB9109B86CBB8E, NameHash = 0xCB1111B8)]
+    [NMS(GUID = 0x5D82A19E081D13B9, NameHash = 0xCB1111B8)]
     public class GcSentinelDamagedData : NMSTemplate
     {
         [NMS(Index = 2)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x3E5803332860AF5F, NameHash = 0x5EDEDF6E)]
+    [NMS(GUID = 0x6EFA4267253E020F, NameHash = 0x5EDEDF6E)]
     public class TkDynamicTreeWindFrequency : NMSTemplate
     {
         [NMS(Index = 2)]

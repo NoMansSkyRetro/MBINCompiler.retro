@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4D6FF674931C56B1, NameHash = 0x3500C026)]
+    [NMS(GUID = 0xECE5BEF774CF6E90, NameHash = 0x3500C026)]
     public class GcObjectSpawnDataArray : NMSTemplate
     {
         [NMS(Index = 2)]

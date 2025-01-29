@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x19FDFD13870CBA06, NameHash = 0x4872A14D)]
+    [NMS(GUID = 0x4254F6C68AFBB83, NameHash = 0x4872A14D)]
     public class GcHeavyAirSettingValues : NMSTemplate
     {
         [NMS(Index = 7)]
@@ -12,18 +12,18 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 4)]
         /* 0x20 */ public TkPaletteTexture Colour1;
         [NMS(Index = 5)]
-        /* 0x28 */ public TkPaletteTexture Colour2;
+        /* 0x2C */ public TkPaletteTexture Colour2;
         [NMS(Index = 2)]
-        /* 0x30 */ public float Alpha1;
+        /* 0x38 */ public float Alpha1;
         [NMS(Index = 3)]
-        /* 0x34 */ public float Alpha2;
+        /* 0x3C */ public float Alpha2;
         [NMS(Index = 1)]
-        /* 0x38 */ public float Speed;
+        /* 0x40 */ public float Speed;
         [NMS(Index = 0)]
-        /* 0x3C */ public float Thickness;
+        /* 0x44 */ public float Thickness;
         [NMS(Index = 6)]
-        /* 0x40 */ public bool ForceColour;
+        /* 0x48 */ public bool ForceColour;
         [NMS(Index = 9)]
-        /* 0x41 */ public bool ReduceThicknessWithCloudCoverage;
+        /* 0x49 */ public bool ReduceThicknessWithCloudCoverage;
     }
 }

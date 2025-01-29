@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x4303F72D523C7C23, NameHash = 0xB10C6CBF)]
+    [NMS(GUID = 0x4A609A2FA678EDF2, NameHash = 0xB10C6CBF)]
     public class TkSceneBoneRemapping : NMSTemplate
     {
         [NMS(Index = 0)]

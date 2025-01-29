@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE1CDBA931A48B895, NameHash = 0xF34407FF)]
+    [NMS(GUID = 0x8E78FE1638022364, NameHash = 0xF34407FF)]
     public class GcSentinelSpawnData : NMSTemplate
     {
         [NMS(Index = 2)]

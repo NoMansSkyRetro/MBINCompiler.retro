@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB18165FD5FFF1D56, NameHash = 0x6E91A6C)]
+    [NMS(GUID = 0x9237965931F9364A, NameHash = 0x6E91A6C)]
     public class GcTerrainControls : NMSTemplate
     {
         [NMS(Index = 1, Size = 0x9, EnumType = typeof(TkGridLayersEnum.GridLayerTypesEnum))]

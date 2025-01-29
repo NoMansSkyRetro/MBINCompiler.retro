@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD494B90ACEB9A99C, NameHash = 0xDFD0F2AF)]
+    [NMS(GUID = 0xE7347FF98731F6E3, NameHash = 0xDFD0F2AF)]
     public class GcItemNeedPurpose : NMSTemplate
     {
         // size: 0x6

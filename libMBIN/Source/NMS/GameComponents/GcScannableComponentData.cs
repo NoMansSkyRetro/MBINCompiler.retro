@@ -2,21 +2,23 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAE6D25150DDBD266, NameHash = 0x4E404FB0)]
+    [NMS(GUID = 0xF56B753DE5BC8DA9, NameHash = 0x4E404FB0)]
     public class GcScannableComponentData : NMSTemplate
     {
-        [NMS(Index = 15)]
+        [NMS(Index = 16)]
         /* 0x00 */ public NMSString0x20A FreighterObjectAlreadyUsedLocID;
-        [NMS(Index = 18)]
+        [NMS(Index = 19)]
         /* 0x20 */ public NMSString0x10 MissionSurveyId;
         [NMS(Index = 4)]
         /* 0x30 */ public float AlwaysShowRange;
+        [NMS(Index = 11)]
+        /* 0x34 */ public GcDiscoveryType BinocsDiscoIconOverride;
         [NMS(Index = 3)]
-        /* 0x34 */ public float CompassRangeMultiplier;
+        /* 0x38 */ public float CompassRangeMultiplier;
         [NMS(Index = 10)]
-        /* 0x38 */ public GcScannerIconTypes Icon;
-        [NMS(Index = 19)]
-        /* 0x3C */ public float MinDisplayDistanceOverride;
+        /* 0x3C */ public GcScannerIconTypes Icon;
+        [NMS(Index = 20)]
+        /* 0x40 */ public float MinDisplayDistanceOverride;
         // size: 0x6
         public enum ScannableTypeEnum : uint {
             Binoculars,
@@ -26,33 +28,33 @@ namespace libMBIN.NMS.GameComponents
             SpaceBattleTarget,
             None,
         }
-        [NMS(Index = 11)]
-        /* 0x40 */ public ScannableTypeEnum ScannableType;
-        [NMS(Index = 0)]
-        /* 0x44 */ public float ScanRange;
-        [NMS(Index = 2)]
-        /* 0x48 */ public float ScanTime;
-        [NMS(Index = 1)]
-        /* 0x4C */ public NMSString0x20 ScanName;
-        [NMS(Index = 16)]
-        /* 0x6C */ public bool AllowedToMerge;
-        [NMS(Index = 5)]
-        /* 0x6D */ public bool CanTagIcon;
-        [NMS(Index = 6)]
-        /* 0x6E */ public bool ClearTagOnArrival;
-        [NMS(Index = 7)]
-        /* 0x6F */ public bool DisableIfBuildingPart;
-        [NMS(Index = 8)]
-        /* 0x70 */ public bool DisableIfInBase;
         [NMS(Index = 12)]
-        /* 0x71 */ public bool IsPlacedMarker;
+        /* 0x44 */ public ScannableTypeEnum ScannableType;
+        [NMS(Index = 0)]
+        /* 0x48 */ public float ScanRange;
+        [NMS(Index = 2)]
+        /* 0x4C */ public float ScanTime;
+        [NMS(Index = 1)]
+        /* 0x50 */ public NMSString0x20 ScanName;
         [NMS(Index = 17)]
-        /* 0x72 */ public bool MarkerActiveWithNodeInactive;
+        /* 0x70 */ public bool AllowedToMerge;
+        [NMS(Index = 5)]
+        /* 0x71 */ public bool CanTagIcon;
+        [NMS(Index = 6)]
+        /* 0x72 */ public bool ClearTagOnArrival;
+        [NMS(Index = 7)]
+        /* 0x73 */ public bool DisableIfBuildingPart;
+        [NMS(Index = 8)]
+        /* 0x74 */ public bool DisableIfInBase;
         [NMS(Index = 13)]
-        /* 0x73 */ public bool ShowInFreighterBranchRoom;
+        /* 0x75 */ public bool IsPlacedMarker;
+        [NMS(Index = 18)]
+        /* 0x76 */ public bool MarkerActiveWithNodeInactive;
         [NMS(Index = 14)]
-        /* 0x74 */ public bool TellPlayerIfFreighterObjectUsed;
+        /* 0x77 */ public bool ShowInFreighterBranchRoom;
+        [NMS(Index = 15)]
+        /* 0x78 */ public bool TellPlayerIfFreighterObjectUsed;
         [NMS(Index = 9)]
-        /* 0x75 */ public bool UseModelNode;
+        /* 0x79 */ public bool UseModelNode;
     }
 }

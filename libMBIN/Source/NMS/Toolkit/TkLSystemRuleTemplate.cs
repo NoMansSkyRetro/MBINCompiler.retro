@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x67A3C9C66F037049, NameHash = 0x8AAAA061)]
+    [NMS(GUID = 0x9D3C8F24A12913F6, NameHash = 0x8AAAA061)]
     public class TkLSystemRuleTemplate : NMSTemplate
     {
         [NMS(Index = 1)]

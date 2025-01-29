@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE2881F2EE5B10A90, NameHash = 0x8728EA08)]
+    [NMS(GUID = 0x73731C4B46FB3257, NameHash = 0x8728EA08)]
     public class GcBuoyancyComponentData : NMSTemplate
     {
         [NMS(Index = 4)]

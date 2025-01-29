@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x186ECDA43BB7EA4B, NameHash = 0x9B8F010E)]
+    [NMS(GUID = 0x596B0B068DD3F7DC, NameHash = 0x9B8F010E)]
     public class GcNGuiSpecialTextImageData : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x75811DA9180574C6, NameHash = 0xB5C79582)]
+    [NMS(GUID = 0xE6793437805F634B, NameHash = 0xB5C79582)]
     public class GcTerrainTileType : NMSTemplate
     {
         // size: 0x9

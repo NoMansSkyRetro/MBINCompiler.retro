@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x4EF1F56CF5CA5B73, NameHash = 0x98C0D964)]
+    [NMS(GUID = 0x856E390F47759B5C, NameHash = 0x98C0D964)]
     public class TkGraphicsDetailTypes : NMSTemplate
     {
         // size: 0x4

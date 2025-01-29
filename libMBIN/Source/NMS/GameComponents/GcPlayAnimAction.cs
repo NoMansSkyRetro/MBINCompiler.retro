@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4508C49E10806C6E, NameHash = 0x5AA4FF5B)]
+    [NMS(GUID = 0x9E35F4459715EE11, NameHash = 0x5AA4FF5B)]
     public class GcPlayAnimAction : NMSTemplate
     {
         [NMS(Index = 0)]

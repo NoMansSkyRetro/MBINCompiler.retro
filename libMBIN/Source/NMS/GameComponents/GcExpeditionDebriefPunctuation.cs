@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5B4ACA9CBE833CA3, NameHash = 0xC1985610)]
+    [NMS(GUID = 0x2BB9FF5D0E2494A1, NameHash = 0xC1985610)]
     public class GcExpeditionDebriefPunctuation : NMSTemplate
     {
         [NMS(Index = 1)]

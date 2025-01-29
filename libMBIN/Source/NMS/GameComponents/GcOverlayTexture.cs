@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF04112F1E6E8705C, NameHash = 0x6AF2B1D8)]
+    [NMS(GUID = 0x8F05804B547CAB2D, NameHash = 0x6AF2B1D8)]
     public class GcOverlayTexture : NMSTemplate
     {
         [NMS(Index = 0)]

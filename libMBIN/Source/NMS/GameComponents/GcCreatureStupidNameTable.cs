@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCAFADE45EEAEC628, NameHash = 0xEC25B86A)]
+    [NMS(GUID = 0x82F070BB6E4F190F, NameHash = 0xEC25B86A)]
     public class GcCreatureStupidNameTable : NMSTemplate
     {
         [NMS(Index = 1)]

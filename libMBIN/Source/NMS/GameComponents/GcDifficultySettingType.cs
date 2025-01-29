@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9B70ED031EA53160, NameHash = 0x5D3AA8E3)]
+    [NMS(GUID = 0x64F866C76F6FD98, NameHash = 0x5D3AA8E3)]
     public class GcDifficultySettingType : NMSTemplate
     {
         // size: 0x2

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x423E1798587E074D, NameHash = 0xC1C59268)]
+    [NMS(GUID = 0xC9C1FA8269FB4D87, NameHash = 0xC1C59268)]
     public class GcVehicleWeaponMuzzleData : NMSTemplate
     {
         [NMS(Index = 0)]

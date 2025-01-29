@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD317F3DAC107BDAA, NameHash = 0xAC16D315)]
+    [NMS(GUID = 0x35FC49A3D4F24FAC, NameHash = 0xAC16D315)]
     public class GcWarpAction : NMSTemplate
     {
         // size: 0x2

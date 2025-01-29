@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x640A8F181059CB4, NameHash = 0x23AEA522)]
+    [NMS(GUID = 0x2D872215496EA10B, NameHash = 0x23AEA522)]
     public class TkPlatformButtonPair : NMSTemplate
     {
         [NMS(Index = 1)]

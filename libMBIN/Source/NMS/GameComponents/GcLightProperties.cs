@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x56ED413C84FCF78F, NameHash = 0xE5F4952B)]
+    [NMS(GUID = 0x8479B85AD0926F00, NameHash = 0xE5F4952B)]
     public class GcLightProperties : NMSTemplate
     {
         [NMS(Index = 2)]

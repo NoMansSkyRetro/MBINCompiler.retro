@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x21A746D0F922B571, NameHash = 0xC64CB688)]
+    [NMS(GUID = 0x46E11EA020CDD68B, NameHash = 0xC64CB688)]
     public class GcGalaxyVoxelAttributesData : NMSTemplate
     {
         [NMS(Index = 10, Size = 0xC)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x5F368615EF2850CA, NameHash = 0x5A088BDF)]
+    [NMS(GUID = 0x77CAB08AC99496C5, NameHash = 0x5A088BDF)]
     public class TkFoamProperties : NMSTemplate
     {
         [NMS(Index = 0)]

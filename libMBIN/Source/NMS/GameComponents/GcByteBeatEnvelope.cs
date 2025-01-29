@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD80E9187D6043871, NameHash = 0xC8899218)]
+    [NMS(GUID = 0x4B0A280B8C913E57, NameHash = 0xC8899218)]
     public class GcByteBeatEnvelope : NMSTemplate
     {
         // size: 0x3

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x96073F904BB26814, NameHash = 0x81929067)]
+    [NMS(GUID = 0xF69234790DC7447F, NameHash = 0x81929067)]
     public class GcInteractionBaseBuildingState : NMSTemplate
     {
         [NMS(Index = 0)]

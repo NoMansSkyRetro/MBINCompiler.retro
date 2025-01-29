@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC4D3D498FA5EAF4B, NameHash = 0x4B891E0A)]
+    [NMS(GUID = 0x625DAE63567D0AC4, NameHash = 0x4B891E0A)]
     public class GcCreatureSpawnEnum : NMSTemplate
     {
         // size: 0x1A

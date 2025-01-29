@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4732DC1B41CCE0B, NameHash = 0x60B1E1BA)]
+    [NMS(GUID = 0x1AB67B3B3F99530A, NameHash = 0x60B1E1BA)]
     public class GcBlockListPersistence : NMSTemplate
     {
         [NMS(Index = 2)]

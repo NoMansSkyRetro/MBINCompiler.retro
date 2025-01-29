@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDC524CADA5F637F2, NameHash = 0x8E122714)]
+    [NMS(GUID = 0x3E15F652DD97DDCE, NameHash = 0x8E122714)]
     public class GcMissionSequenceStartPartyEventForStage : NMSTemplate
     {
         [NMS(Index = 0)]

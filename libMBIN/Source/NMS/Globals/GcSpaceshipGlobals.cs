@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x2E4B8AC9F86B0BA0, NameHash = 0x42902548)]
+    [NMS(GUID = 0x34F9E85BB991647E, NameHash = 0x42902548)]
     public class GcSpaceshipGlobals : NMSTemplate
     {
         [NMS(Index = 199)]
@@ -145,9 +145,9 @@ namespace libMBIN.NMS.Globals
         /* 0x0F00 */ public float _3rdPersonAvoidanceAdjustRollFactor;
         [NMS(Index = 221)]
         /* 0x0F04 */ public float _3rdPersonAvoidanceAdjustYawFactor;
-        [NMS(Index = 223)]
+        [NMS(Index = 223, MxmlName = "3rdPersonFlashDuration ")]
         /* 0x0F08 */ public float _3rdPersonFlashDuration;
-        [NMS(Index = 222)]
+        [NMS(Index = 222, MxmlName = "3rdPersonFlashIntensity ")]
         /* 0x0F0C */ public float _3rdPersonFlashIntensity;
         [NMS(Index = 219)]
         /* 0x0F10 */ public float _3rdPersonHeightForceAdjustPitchFactor;
@@ -171,7 +171,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0F34 */ public float _3rdPersonRollAngleDropship;
         [NMS(Index = 204)]
         /* 0x0F38 */ public float _3rdPersonRollAngleScience;
-        [NMS(Index = 224)]
+        [NMS(Index = 224, MxmlName = "3rdPersonTransitionTime ")]
         /* 0x0F3C */ public float _3rdPersonTransitionTime;
         [NMS(Index = 201)]
         /* 0x0F40 */ public float _3rdPersonUpOffsetRollChangeSpeed;
@@ -287,7 +287,7 @@ namespace libMBIN.NMS.Globals
         /* 0x101C */ public float AvoidancePower;
         [NMS(Index = 543)]
         /* 0x1020 */ public float BoostChargeRate;
-        [NMS(Index = 510)]
+        [NMS(Index = 510, MxmlName = "BoostNoAsteroidRadius ")]
         /* 0x1024 */ public float BoostNoAsteroidRadius;
         [NMS(Index = 388)]
         /* 0x1028 */ public float CameraPostWarpFov;
@@ -771,17 +771,17 @@ namespace libMBIN.NMS.Globals
         /* 0x13E4 */ public float MiniWarpChargeTime;
         [NMS(Index = 490)]
         /* 0x13E8 */ public float MiniWarpCooldownTime;
-        [NMS(Index = 496)]
+        [NMS(Index = 496, MxmlName = "MiniWarpExitSpeed ")]
         /* 0x13EC */ public float MiniWarpExitSpeed;
-        [NMS(Index = 497)]
+        [NMS(Index = 497, MxmlName = "MiniWarpExitSpeedStation ")]
         /* 0x13F0 */ public float MiniWarpExitSpeedStation;
-        [NMS(Index = 498)]
+        [NMS(Index = 498, MxmlName = "MiniWarpExitTime ")]
         /* 0x13F4 */ public float MiniWarpExitTime;
-        [NMS(Index = 508)]
+        [NMS(Index = 508, MxmlName = "MiniWarpFlashDelay ")]
         /* 0x13F8 */ public float MiniWarpFlashDelay;
-        [NMS(Index = 507)]
+        [NMS(Index = 507, MxmlName = "MiniWarpFlashDuration ")]
         /* 0x13FC */ public float MiniWarpFlashDuration;
-        [NMS(Index = 506)]
+        [NMS(Index = 506, MxmlName = "MiniWarpFlashIntensity ")]
         /* 0x1400 */ public float MiniWarpFlashIntensity;
         [NMS(Index = 484)]
         /* 0x1404 */ public float MiniWarpFuelTime;
@@ -813,7 +813,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1438 */ public float MiniWarpMarkerApproachSlowdown;
         [NMS(Index = 492)]
         /* 0x143C */ public float MiniWarpMinPlanetDistance;
-        [NMS(Index = 509)]
+        [NMS(Index = 509, MxmlName = "MiniWarpNoAsteroidRadius ")]
         /* 0x1440 */ public float MiniWarpNoAsteroidRadius;
         [NMS(Index = 482)]
         /* 0x1444 */ public float MiniWarpPlanetRadius;
@@ -1272,82 +1272,82 @@ namespace libMBIN.NMS.Globals
         [NMS(Index = 621)]
         /* 0x17D0 */ public float WingmanViewerAngle;
         [NMS(Index = 0)]
-        /* 0x17D4 */ public NMSString0x20 HoverShipDataName;
+        /* 0x17D4 */ public GcShipDataNames HoverShipDataNames;
         [NMS(Index = 1)]
-        /* 0x17F4 */ public NMSString0x20 HoverShipDataNameSpecial;
+        /* 0x18F4 */ public GcShipDataNames HoverShipDataNamesSpecial;
         [NMS(Index = 2)]
-        /* 0x1814 */ public NMSString0x20 SpookShipDataName;
+        /* 0x1A14 */ public GcShipDataNames SpookShipDataNames;
         [NMS(Index = 78)]
-        /* 0x1834 */ public bool _3rdPersonShipEnabled;
+        /* 0x1B34 */ public bool _3rdPersonShipEnabled;
         [NMS(Index = 233)]
-        /* 0x1835 */ public TkCurveType _3rdPersonWarpWanderCurve;
+        /* 0x1B35 */ public TkCurveType _3rdPersonWarpWanderCurve;
         [NMS(Index = 11)]
-        /* 0x1836 */ public bool AddShipToCollectionOnEnter;
+        /* 0x1B36 */ public bool AddShipToCollectionOnEnter;
         [NMS(Index = 79)]
-        /* 0x1837 */ public bool AimZoomAuto;
+        /* 0x1B37 */ public bool AimZoomAuto;
         [NMS(Index = 10)]
-        /* 0x1838 */ public bool AllowSideScreenPointing;
+        /* 0x1B38 */ public bool AllowSideScreenPointing;
         [NMS(Index = 406)]
-        /* 0x1839 */ public bool AltAtmosphere;
+        /* 0x1B39 */ public bool AltAtmosphere;
         [NMS(Index = 76)]
-        /* 0x183A */ public bool AltControls;
+        /* 0x1B3A */ public bool AltControls;
         [NMS(Index = 84)]
-        /* 0x183B */ public bool ApplyHeightAlign;
+        /* 0x1B3B */ public bool ApplyHeightAlign;
         [NMS(Index = 83)]
-        /* 0x183C */ public bool ApplyHeightForce;
+        /* 0x1B3C */ public bool ApplyHeightForce;
         [NMS(Index = 358)]
-        /* 0x183D */ public bool AutoEjectOnLanding;
+        /* 0x1B3D */ public bool AutoEjectOnLanding;
         [NMS(Index = 95)]
-        /* 0x183E */ public TkCurveType CockpitExitAnimCurve;
+        /* 0x1B3E */ public TkCurveType CockpitExitAnimCurve;
         [NMS(Index = 81)]
-        /* 0x183F */ public bool CritsFromBehind;
+        /* 0x1B3F */ public bool CritsFromBehind;
         [NMS(Index = 563)]
-        /* 0x1840 */ public TkCurveType DeflectCurve;
+        /* 0x1B40 */ public TkCurveType DeflectCurve;
         [NMS(Index = 160)]
-        /* 0x1841 */ public TkCurveType DirectionDockingIndicatorCurve;
+        /* 0x1B41 */ public TkCurveType DirectionDockingIndicatorCurve;
         [NMS(Index = 85)]
-        /* 0x1842 */ public bool DoPreCollision;
+        /* 0x1B42 */ public bool DoPreCollision;
         [NMS(Index = 82)]
-        /* 0x1843 */ public bool DrawLineLockTarget;
+        /* 0x1B43 */ public bool DrawLineLockTarget;
         [NMS(Index = 80)]
-        /* 0x1844 */ public bool EnableDepthTestedCrosshairSections;
+        /* 0x1B44 */ public bool EnableDepthTestedCrosshairSections;
         [NMS(Index = 12)]
-        /* 0x1845 */ public bool EnablePulseDriveSpaceStationOrient;
+        /* 0x1B45 */ public bool EnablePulseDriveSpaceStationOrient;
         [NMS(Index = 293)]
-        /* 0x1846 */ public TkCurveType GroundHeightHardCurve;
+        /* 0x1B46 */ public TkCurveType GroundHeightHardCurve;
         [NMS(Index = 289)]
-        /* 0x1847 */ public TkCurveType GroundHeightSoftCurve;
+        /* 0x1B47 */ public TkCurveType GroundHeightSoftCurve;
         [NMS(Index = 359)]
-        /* 0x1848 */ public bool LandedCockpitFreeLook;
+        /* 0x1B48 */ public bool LandedCockpitFreeLook;
         [NMS(Index = 274)]
-        /* 0x1849 */ public bool LandingCheckBuildings;
+        /* 0x1B49 */ public bool LandingCheckBuildings;
         [NMS(Index = 318)]
-        /* 0x184A */ public TkCurveType LandingCurve;
+        /* 0x1B4A */ public TkCurveType LandingCurve;
         [NMS(Index = 319)]
-        /* 0x184B */ public TkCurveType LandingCurveHeavy;
+        /* 0x1B4B */ public TkCurveType LandingCurveHeavy;
         [NMS(Index = 320)]
-        /* 0x184C */ public TkCurveType LandingCurveWater;
+        /* 0x1B4C */ public TkCurveType LandingCurveWater;
         [NMS(Index = 505)]
-        /* 0x184D */ public TkCurveType MiniWarpCurve;
+        /* 0x1B4D */ public TkCurveType MiniWarpCurve;
         [NMS(Index = 317)]
-        /* 0x184E */ public TkCurveType PitchCorrectHeightCurve;
+        /* 0x1B4E */ public TkCurveType PitchCorrectHeightCurve;
         [NMS(Index = 35)]
-        /* 0x184F */ public TkCurveType RudderToRollCurve;
+        /* 0x1B4F */ public TkCurveType RudderToRollCurve;
         [NMS(Index = 198)]
-        /* 0x1850 */ public TkCurveType ShieldEffectHitCurve;
+        /* 0x1B50 */ public TkCurveType ShieldEffectHitCurve;
         [NMS(Index = 670)]
-        /* 0x1851 */ public bool SpaceCombatFollowModeUseBoost;
+        /* 0x1B51 */ public bool SpaceCombatFollowModeUseBoost;
         [NMS(Index = 669)]
-        /* 0x1852 */ public bool SpaceCombatFollowModeUseEvadeTarget;
+        /* 0x1B52 */ public bool SpaceCombatFollowModeUseEvadeTarget;
         [NMS(Index = 77)]
-        /* 0x1853 */ public bool SpaceMapInWorld;
+        /* 0x1B53 */ public bool SpaceMapInWorld;
         [NMS(Index = 86)]
-        /* 0x1854 */ public bool SpeedTrackModeEnabled;
+        /* 0x1B54 */ public bool SpeedTrackModeEnabled;
         [NMS(Index = 234)]
-        /* 0x1855 */ public bool SpringSpeedSpringEnabled;
+        /* 0x1B55 */ public bool SpringSpeedSpringEnabled;
         [NMS(Index = 170)]
-        /* 0x1856 */ public bool TestShipAnims;
+        /* 0x1B56 */ public bool TestShipAnims;
         [NMS(Index = 136)]
-        /* 0x1857 */ public TkCurveType WarpInCurve;
+        /* 0x1B57 */ public TkCurveType WarpInCurve;
     }
 }

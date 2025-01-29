@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD1A56B836B2CE4AA, NameHash = 0x3780BAA2)]
+    [NMS(GUID = 0xDD7C3E0CBF80D6B3, NameHash = 0x3780BAA2)]
     public class GcInteractionType : NMSTemplate
     {
-        // size: 0x8E
+        // size: 0x90
         public enum InteractionTypeEnum : uint {
             None,
             Shop,
@@ -147,6 +147,8 @@ namespace libMBIN.NMS.GameComponents
             NPC_Freighter_Captain_Pirate,
             SkiffLocker,
             CustomiseSkiff,
+            ExhibitAssembly,
+            ArchiveMultitool,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public InteractionTypeEnum InteractionType;

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x536E5AED5E4E0ED, NameHash = 0xF191BAAE)]
+    [NMS(GUID = 0x361056126A64828, NameHash = 0xF191BAAE)]
     public class TkVirtualBindingAltLayer : NMSTemplate
     {
         [NMS(Index = 1)]

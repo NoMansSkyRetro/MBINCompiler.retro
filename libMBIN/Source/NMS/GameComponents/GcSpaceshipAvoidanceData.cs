@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x96BA237E52AA7495, NameHash = 0x316D9560)]
+    [NMS(GUID = 0x4A8F321B33607D4E, NameHash = 0x316D9560)]
     public class GcSpaceshipAvoidanceData : NMSTemplate
     {
         [NMS(Index = 5)]

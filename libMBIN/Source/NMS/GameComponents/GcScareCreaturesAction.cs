@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1510742ECE62AF53, NameHash = 0xBC642110)]
+    [NMS(GUID = 0xC81E054A6549FED1, NameHash = 0xBC642110)]
     public class GcScareCreaturesAction : NMSTemplate
     {
         [NMS(Index = 1)]

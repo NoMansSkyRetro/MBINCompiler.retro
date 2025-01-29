@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCAFBE32A5A864ED9, NameHash = 0x884D78C2)]
+    [NMS(GUID = 0x889FB5A8997BCAF4, NameHash = 0x884D78C2)]
     public class GcMissionConditionUnderwaterDepth : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xC8E1FC70A412F168, NameHash = 0xE9067ED0)]
+    [NMS(GUID = 0x55657CC2FF723B9, NameHash = 0xE9067ED0)]
     public class TkEmitFromParticleInfo : NMSTemplate
     {
         // size: 0x2

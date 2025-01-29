@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xABB81F0E1180CACC, NameHash = 0x6B5C3214)]
+    [NMS(GUID = 0xEBD6972D8C264061, NameHash = 0x6B5C3214)]
     public class GcGalaxyInfoIcons : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]

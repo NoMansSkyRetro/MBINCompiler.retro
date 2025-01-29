@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB45469107511F9D5, NameHash = 0x50F5D23C)]
+    [NMS(GUID = 0x992F920499E55929, NameHash = 0x50F5D23C)]
     public class GcRealitySubstanceCraftingMix : NMSTemplate
     {
         [NMS(Index = 0)]

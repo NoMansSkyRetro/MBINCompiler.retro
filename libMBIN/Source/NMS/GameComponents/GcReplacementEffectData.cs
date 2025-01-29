@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC9DAD52BAE1B52A0, NameHash = 0x44BD38B)]
+    [NMS(GUID = 0x39112E82F02E39A4, NameHash = 0x44BD38B)]
     public class GcReplacementEffectData : NMSTemplate
     {
         [NMS(Index = 0)]

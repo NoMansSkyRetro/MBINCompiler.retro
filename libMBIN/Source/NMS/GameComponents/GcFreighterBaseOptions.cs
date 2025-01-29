@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x94791A075F3CF08B, NameHash = 0x435998E0)]
+    [NMS(GUID = 0xF228E53E2EF19A53, NameHash = 0x435998E0)]
     public class GcFreighterBaseOptions : NMSTemplate
     {
         [NMS(Index = 0)]

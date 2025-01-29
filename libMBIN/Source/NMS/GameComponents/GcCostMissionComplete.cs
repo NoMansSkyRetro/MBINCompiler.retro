@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x79BF508B8E03FF5, NameHash = 0x3F67C43C)]
+    [NMS(GUID = 0x5FFE2F97FAC9CDEF, NameHash = 0x3F67C43C)]
     public class GcCostMissionComplete : NMSTemplate
     {
         [NMS(Index = 1)]

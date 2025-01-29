@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA04E0AE29AE48208, NameHash = 0x9B74358B)]
+    [NMS(GUID = 0x893BFA95683C38C6, NameHash = 0x9B74358B)]
     public class GcSeasonPetConstraints : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x788CFEEA5BD1BAC6, NameHash = 0xA37E0F48)]
+    [NMS(GUID = 0xB5C0A34869B08ED2, NameHash = 0xA37E0F48)]
     public class GcMissionSequenceSendChatMessage : NMSTemplate
     {
         [NMS(Index = 1)]

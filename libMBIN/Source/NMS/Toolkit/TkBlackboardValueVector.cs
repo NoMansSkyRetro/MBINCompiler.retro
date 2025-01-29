@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xB627D162ED638926, NameHash = 0xC73FFBD)]
+    [NMS(GUID = 0x2FEFEF55E7B957E8, NameHash = 0xC73FFBD)]
     public class TkBlackboardValueVector : NMSTemplate
     {
         [NMS(Index = 1)]

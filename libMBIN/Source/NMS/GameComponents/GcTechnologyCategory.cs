@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x363A8B85A41FFE28, NameHash = 0x570640A8)]
+    [NMS(GUID = 0xED7EA3C66338607D, NameHash = 0x570640A8)]
     public class GcTechnologyCategory : NMSTemplate
     {
-        // size: 0x10
+        // size: 0x11
         public enum TechnologyCategoryEnum : uint {
             Ship,
             Weapon,
@@ -14,6 +14,7 @@ namespace libMBIN.NMS.GameComponents
             Freighter,
             Maintenance,
             Exocraft,
+            Colossus,
             Submarine,
             Mech,
             AllVehicles,

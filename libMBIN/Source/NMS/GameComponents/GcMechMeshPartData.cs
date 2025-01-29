@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD0AE546883EEB9CC, NameHash = 0xE4BF25FD)]
+    [NMS(GUID = 0x734B4BF5B96FE11D, NameHash = 0xE4BF25FD)]
     public class GcMechMeshPartData : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x3, EnumType = typeof(GcMechMeshType.MechMeshTypeEnum))]

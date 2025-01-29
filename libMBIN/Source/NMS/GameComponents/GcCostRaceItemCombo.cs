@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3FAA4823A8CB1661, NameHash = 0x10BF023A)]
+    [NMS(GUID = 0xB1217E0AC222B4FA, NameHash = 0x10BF023A)]
     public class GcCostRaceItemCombo : NMSTemplate
     {
         [NMS(Index = 0)]

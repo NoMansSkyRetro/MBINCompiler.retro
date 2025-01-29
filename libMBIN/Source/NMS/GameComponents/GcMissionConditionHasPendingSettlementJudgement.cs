@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1F934E68293DF1A3, NameHash = 0x83B29D57)]
+    [NMS(GUID = 0x20AC01787791088C, NameHash = 0x83B29D57)]
     public class GcMissionConditionHasPendingSettlementJudgement : NMSTemplate
     {
         [NMS(Index = 0)]

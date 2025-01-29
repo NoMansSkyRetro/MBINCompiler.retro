@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEE66D12F5AC20608, NameHash = 0xA85B7E2)]
+    [NMS(GUID = 0xCD4DA4A3DE36306E, NameHash = 0xA85B7E2)]
     public class GcMissionConditionWaitForPirates : NMSTemplate
     {
         [NMS(Index = 0)]

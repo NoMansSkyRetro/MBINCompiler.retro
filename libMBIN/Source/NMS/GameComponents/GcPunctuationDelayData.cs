@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x16415FA471BA366B, NameHash = 0x2B8ECA20)]
+    [NMS(GUID = 0x29BCE0EF6F0B596C, NameHash = 0x2B8ECA20)]
     public class GcPunctuationDelayData : NMSTemplate
     {
         [NMS(Index = 0)]

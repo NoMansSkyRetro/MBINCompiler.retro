@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA96FB95C598AC361, NameHash = 0x5E0E55BB)]
+    [NMS(GUID = 0x3A3B3FB15EA7549F, NameHash = 0x5E0E55BB)]
     public class GcDifficultyCurrencyCostOptionData : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x3, EnumType = typeof(GcCurrency.CurrencyEnum))]

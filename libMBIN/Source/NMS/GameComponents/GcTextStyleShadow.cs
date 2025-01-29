@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC2FAAE1827F52F5B, NameHash = 0xAFBCA5DD)]
+    [NMS(GUID = 0x5282F995742A4CD7, NameHash = 0xAFBCA5DD)]
     public class GcTextStyleShadow : NMSTemplate
     {
         [NMS(Index = 0)]

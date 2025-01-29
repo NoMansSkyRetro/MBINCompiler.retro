@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7185897A1C71FD16, NameHash = 0xD2CF978B)]
+    [NMS(GUID = 0xF1153527CE1DD83C, NameHash = 0xD2CF978B)]
     public class GcAlienMoodMissionOverride : NMSTemplate
     {
         [NMS(Index = 0)]

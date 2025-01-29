@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF9C5E33D19947755, NameHash = 0xC8EE93CF)]
+    [NMS(GUID = 0x105BF6B194426DF, NameHash = 0xC8EE93CF)]
     public class GcAIShipWeapons : NMSTemplate
     {
         // size: 0x3

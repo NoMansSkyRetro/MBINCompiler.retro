@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCFD97CBCDA91E0C1, NameHash = 0x1682E607)]
+    [NMS(GUID = 0xA1F4B6EBBC0B87EF, NameHash = 0x1682E607)]
     public class GcMissionConsequenceRemoveScanEvent : NMSTemplate
     {
         [NMS(Index = 0)]

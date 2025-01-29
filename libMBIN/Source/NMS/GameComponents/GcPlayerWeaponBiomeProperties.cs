@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8B089029DB980172, NameHash = 0x4F6E3733)]
+    [NMS(GUID = 0x8CE01C580ADEDCE8, NameHash = 0x4F6E3733)]
     public class GcPlayerWeaponBiomeProperties : NMSTemplate
     {
         [NMS(Index = 12)]

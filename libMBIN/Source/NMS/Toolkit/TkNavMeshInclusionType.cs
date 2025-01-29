@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x7D3BCFD9AF68C66, NameHash = 0x4DB7C299)]
+    [NMS(GUID = 0x76DB8A1128947274, NameHash = 0x4DB7C299)]
     public class TkNavMeshInclusionType : NMSTemplate
     {
         // size: 0x4

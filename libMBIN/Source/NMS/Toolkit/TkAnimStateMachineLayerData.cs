@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xA73DCA78D736C9EB, NameHash = 0x367D7C3)]
+    [NMS(GUID = 0x4285D765844F45DB, NameHash = 0x367D7C3)]
     public class TkAnimStateMachineLayerData : NMSTemplate
     {
         [NMS(Index = 1)]

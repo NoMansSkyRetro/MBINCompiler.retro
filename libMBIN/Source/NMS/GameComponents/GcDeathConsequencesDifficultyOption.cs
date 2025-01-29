@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE8CBB25AF0B05F86, NameHash = 0x117409BC)]
+    [NMS(GUID = 0xCDED3A792F70A039, NameHash = 0x117409BC)]
     public class GcDeathConsequencesDifficultyOption : NMSTemplate
     {
         // size: 0x4

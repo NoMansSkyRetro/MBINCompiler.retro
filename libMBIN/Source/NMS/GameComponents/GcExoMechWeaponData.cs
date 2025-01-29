@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE4C46129168D7C5, NameHash = 0xF90B35D6)]
+    [NMS(GUID = 0x33D1A532874C0B50, NameHash = 0xF90B35D6)]
     public class GcExoMechWeaponData : NMSTemplate
     {
         [NMS(Index = 2, Size = 0x5, EnumType = typeof(GcMechWeaponLocation.MechWeaponLocationEnum))]

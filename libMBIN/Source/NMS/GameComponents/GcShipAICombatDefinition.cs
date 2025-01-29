@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA37AA1B50F685D7D, NameHash = 0xE9D08BD5)]
+    [NMS(GUID = 0xB53BFB6F402AABC7, NameHash = 0xE9D08BD5)]
     public class GcShipAICombatDefinition : NMSTemplate
     {
         [NMS(Index = 15)]

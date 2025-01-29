@@ -2,10 +2,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4960A84B32FFCEA2, NameHash = 0xE89F09DD)]
+    [NMS(GUID = 0x8625BB36FCA8CFA0, NameHash = 0xE89F09DD)]
     public class GcWeirdCreatureRewardList : NMSTemplate
     {
-        [NMS(Index = 0, Size = 0x1C, EnumType = typeof(GcBiomeSubType.BiomeSubTypeEnum))]
+        [NMS(Index = 0, Size = 0x20, EnumType = typeof(GcBiomeSubType.BiomeSubTypeEnum))]
         /* 0x0 */ public NMSString0x10[] Rewards;
     }
 }

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB1D4FB10703606E5, NameHash = 0xC8A14730)]
+    [NMS(GUID = 0xB55C004E041D5C03, NameHash = 0xC8A14730)]
     public class GcDungeonRoomParams : NMSTemplate
     {
         [NMS(Index = 0)]

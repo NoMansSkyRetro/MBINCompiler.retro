@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC0192A72DB273C2D, NameHash = 0x5F03B020)]
+    [NMS(GUID = 0x922676C3718BDC65, NameHash = 0x5F03B020)]
     public class GcStatusMessageMissionMarkup : NMSTemplate
     {
         // size: 0x12

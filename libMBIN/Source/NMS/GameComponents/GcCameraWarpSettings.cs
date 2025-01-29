@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x44FB1E298D835821, NameHash = 0x93903429)]
+    [NMS(GUID = 0xF73C30F774F7FA11, NameHash = 0x93903429)]
     public class GcCameraWarpSettings : NMSTemplate
     {
         [NMS(Index = 0)]

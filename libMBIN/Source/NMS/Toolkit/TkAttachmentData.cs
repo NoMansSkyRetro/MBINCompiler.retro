@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE5E19C61CDC316E2, NameHash = 0x6874FF60)]
+    [NMS(GUID = 0x6FD44A638DEBFC3F, NameHash = 0x6874FF60)]
     public class TkAttachmentData : NMSTemplate
     {
         [NMS(Index = 0)]

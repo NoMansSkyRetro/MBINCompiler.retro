@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xC0055EAEE7B33DCB, NameHash = 0xCCD50D4D)]
+    [NMS(GUID = 0xA3BA11ACB406D744, NameHash = 0xCCD50D4D)]
     public class TkAudioEmitterLine : NMSTemplate
     {
         [NMS(Index = 1)]

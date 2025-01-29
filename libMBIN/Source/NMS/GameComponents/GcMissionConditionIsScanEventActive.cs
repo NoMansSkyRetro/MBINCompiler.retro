@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x344CD6CF94084593, NameHash = 0x7F011F09)]
+    [NMS(GUID = 0x989370EA957C1DA8, NameHash = 0x7F011F09)]
     public class GcMissionConditionIsScanEventActive : NMSTemplate
     {
         [NMS(Index = 0)]

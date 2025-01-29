@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA50E032FE5BED685, NameHash = 0x51B5691)]
+    [NMS(GUID = 0xADAFA447E6A6B324, NameHash = 0x51B5691)]
     public class GcWeatherProperties : NMSTemplate
     {
         [NMS(Index = 7)]
@@ -32,43 +32,43 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA80 */ public List<NMSString0x10> WeatherEffectsIds;
         [NMS(Index = 31)]
         /* 0xA90 */ public List<NMSString0x10> WeatherHazardsIds;
+        [NMS(Index = 22, Size = 0x6, EnumType = typeof(GcHazardValueTypes.HazardValueEnum))]
+        /* 0xAA0 */ public GcHazardValues[] LifeSupportDrain;
+        [NMS(Index = 19, Size = 0x6, EnumType = typeof(GcHazardValueTypes.HazardValueEnum))]
+        /* 0xAD0 */ public GcHazardValues[] Radiation;
         [NMS(Index = 25)]
-        /* 0xAA0 */ public GcSkyProperties Sky;
-        [NMS(Index = 22, Size = 0x5, EnumType = typeof(GcHazardValueTypes.HazardValueEnum))]
-        /* 0xAD0 */ public GcHazardValues[] LifeSupportDrain;
-        [NMS(Index = 19, Size = 0x5, EnumType = typeof(GcHazardValueTypes.HazardValueEnum))]
-        /* 0xAF8 */ public GcHazardValues[] Radiation;
-        [NMS(Index = 21, Size = 0x5, EnumType = typeof(GcHazardValueTypes.HazardValueEnum))]
-        /* 0xB20 */ public GcHazardValues[] SpookLevel;
-        [NMS(Index = 15, Size = 0x5, EnumType = typeof(GcHazardValueTypes.HazardValueEnum))]
-        /* 0xB48 */ public GcHazardValues[] Temperature;
-        [NMS(Index = 17, Size = 0x5, EnumType = typeof(GcHazardValueTypes.HazardValueEnum))]
-        /* 0xB70 */ public GcHazardValues[] Toxicity;
+        /* 0xB00 */ public GcSkyProperties Sky;
+        [NMS(Index = 21, Size = 0x6, EnumType = typeof(GcHazardValueTypes.HazardValueEnum))]
+        /* 0xB30 */ public GcHazardValues[] SpookLevel;
+        [NMS(Index = 15, Size = 0x6, EnumType = typeof(GcHazardValueTypes.HazardValueEnum))]
+        /* 0xB60 */ public GcHazardValues[] Temperature;
+        [NMS(Index = 17, Size = 0x6, EnumType = typeof(GcHazardValueTypes.HazardValueEnum))]
+        /* 0xB90 */ public GcHazardValues[] Toxicity;
         [NMS(Index = 8, Size = 0x4, EnumType = typeof(GcRainbowType.RainbowTypeEnum))]
-        /* 0xB98 */ public float[] RainbowChance;
+        /* 0xBC0 */ public float[] RainbowChance;
         [NMS(Index = 13)]
-        /* 0xBA8 */ public float ExtremeWeatherChance;
+        /* 0xBD0 */ public float ExtremeWeatherChance;
         [NMS(Index = 12)]
-        /* 0xBAC */ public float HighStormsChance;
+        /* 0xBD4 */ public float HighStormsChance;
         [NMS(Index = 11)]
-        /* 0xBB0 */ public float LowStormsChance;
+        /* 0xBD8 */ public float LowStormsChance;
         [NMS(Index = 6)]
-        /* 0xBB4 */ public float MaxStormFilterBlend;
+        /* 0xBDC */ public float MaxStormFilterBlend;
         [NMS(Index = 18)]
-        /* 0xBB8 */ public bool OverrideRadiation;
+        /* 0xBE0 */ public bool OverrideRadiation;
         [NMS(Index = 20)]
-        /* 0xBB9 */ public bool OverrideSpookLevel;
+        /* 0xBE1 */ public bool OverrideSpookLevel;
         [NMS(Index = 14)]
-        /* 0xBBA */ public bool OverrideTemperature;
+        /* 0xBE2 */ public bool OverrideTemperature;
         [NMS(Index = 16)]
-        /* 0xBBB */ public bool OverrideToxicity;
+        /* 0xBE3 */ public bool OverrideToxicity;
         [NMS(Index = 26)]
-        /* 0xBBC */ public bool UseLightShaftProperties;
+        /* 0xBE4 */ public bool UseLightShaftProperties;
         [NMS(Index = 28)]
-        /* 0xBBD */ public bool UseStormLightShaftProperties;
+        /* 0xBE5 */ public bool UseStormLightShaftProperties;
         [NMS(Index = 1)]
-        /* 0xBBE */ public bool UseWeatherFog;
+        /* 0xBE6 */ public bool UseWeatherFog;
         [NMS(Index = 24)]
-        /* 0xBBF */ public bool UseWeatherSky;
+        /* 0xBE7 */ public bool UseWeatherSky;
     }
 }

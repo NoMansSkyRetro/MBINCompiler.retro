@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xB9C40280E409E43B, NameHash = 0xA1A765B2)]
+    [NMS(GUID = 0xB669623B5BF47BE2, NameHash = 0xA1A765B2)]
     public class GcFreighterBaseGlobals : NMSTemplate
     {
         [NMS(Index = 5, Size = 0x5, EnumType = typeof(GcFreighterNPCType.FreighterNPCTypeEnum))]

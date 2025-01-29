@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3F6CADAE53B45555, NameHash = 0xEDAE0357)]
+    [NMS(GUID = 0x3CE642388002844E, NameHash = 0xEDAE0357)]
     public class GcShipAIPlanetPatrolData : NMSTemplate
     {
         [NMS(Index = 0)]

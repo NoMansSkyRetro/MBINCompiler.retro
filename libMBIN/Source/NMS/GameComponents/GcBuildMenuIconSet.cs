@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x99DF456F8036696D, NameHash = 0x8408F5C9)]
+    [NMS(GUID = 0x1AF30E7F7E17E31A, NameHash = 0x8408F5C9)]
     public class GcBuildMenuIconSet : NMSTemplate
     {
         [NMS(Index = 1)]

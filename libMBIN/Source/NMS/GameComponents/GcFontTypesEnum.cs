@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x32669E5C63E0E597, NameHash = 0x853286CF)]
+    [NMS(GUID = 0x5249B653B50F281E, NameHash = 0x853286CF)]
     public class GcFontTypesEnum : NMSTemplate
     {
         // size: 0x8

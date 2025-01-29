@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x24CC01D94B6A1C1B, NameHash = 0x66CF327A)]
+    [NMS(GUID = 0x823AE29E15FFFDA5, NameHash = 0x66CF327A)]
     public class GcAlienMood : NMSTemplate
     {
-        // size: 0x9
+        // size: 0xA
         public enum MoodEnum : uint {
             Neutral,
             Positive,
@@ -14,6 +14,7 @@ namespace libMBIN.NMS.GameComponents
             Sad,
             Dead,
             Confused,
+            Busy,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public MoodEnum Mood;

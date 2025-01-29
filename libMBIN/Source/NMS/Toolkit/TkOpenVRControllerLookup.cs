@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x7188F81C050BDCBE, NameHash = 0x3DF21630)]
+    [NMS(GUID = 0xA2982962D4299080, NameHash = 0x3DF21630)]
     public class TkOpenVRControllerLookup : NMSTemplate
     {
         [NMS(Index = 1)]

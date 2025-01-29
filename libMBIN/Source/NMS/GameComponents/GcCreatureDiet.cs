@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD8BBB83FF622C3C4, NameHash = 0xFE781356)]
+    [NMS(GUID = 0xB546E41F876E63CA, NameHash = 0xFE781356)]
     public class GcCreatureDiet : NMSTemplate
     {
         // size: 0x4

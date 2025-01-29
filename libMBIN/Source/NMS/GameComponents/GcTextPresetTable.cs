@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBB4AEF3C8F40D735, NameHash = 0xE4EDA275)]
+    [NMS(GUID = 0xD17B5EED0D46109, NameHash = 0xE4EDA275)]
     public class GcTextPresetTable : NMSTemplate
     {
         [NMS(Index = 0)]

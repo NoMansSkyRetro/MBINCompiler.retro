@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x70D09F375F37EEB9, NameHash = 0xE6052335)]
+    [NMS(GUID = 0x766A381FE50CEE89, NameHash = 0xE6052335)]
     public class GcCreatureJellyBossAttackData : NMSTemplate
     {
         [NMS(Index = 7)]

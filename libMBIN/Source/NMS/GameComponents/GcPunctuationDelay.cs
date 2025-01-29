@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFD227D793E1851F0, NameHash = 0xA480616B)]
+    [NMS(GUID = 0x412F0630760963F6, NameHash = 0xA480616B)]
     public class GcPunctuationDelay : NMSTemplate
     {
         [NMS(Index = 1)]

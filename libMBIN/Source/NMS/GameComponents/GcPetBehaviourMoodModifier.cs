@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x42A5D320179EEB10, NameHash = 0x1BC0143E)]
+    [NMS(GUID = 0x7FA83B4EBBD00EB1, NameHash = 0x1BC0143E)]
     public class GcPetBehaviourMoodModifier : NMSTemplate
     {
         [NMS(Index = 6)]

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2C4D33DC13A41124, NameHash = 0x7EE2A8C0)]
+    [NMS(GUID = 0x244E0BC9E6746A87, NameHash = 0x7EE2A8C0)]
     public class GcRegionHotspotData : NMSTemplate
     {
         [NMS(Index = 4, Size = 0x4, EnumType = typeof(GcInventoryClass.InventoryClassEnum))]

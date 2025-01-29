@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC4711B606E3341A0, NameHash = 0x6C829F0C)]
+    [NMS(GUID = 0x83E2B017EE0A26F2, NameHash = 0x6C829F0C)]
     public class GcDebugCameraEntry : NMSTemplate
     {
         [NMS(Index = 2)]

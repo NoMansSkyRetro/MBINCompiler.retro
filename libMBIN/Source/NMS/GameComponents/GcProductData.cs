@@ -4,79 +4,83 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x279ED224EF829416, NameHash = 0x5C7DD06F)]
+    [NMS(GUID = 0xFBDECDAD6B9DFB9B, NameHash = 0x5C7DD06F)]
     public class GcProductData : NMSTemplate
     {
         [NMS(Index = 12)]
         /* 0x000 */ public Colour Colour;
-        [NMS(Index = 5)]
-        /* 0x010 */ public NMSString0x20A Hint;
-        [NMS(Index = 35)]
-        /* 0x030 */ public NMSString0x20A PinObjective;
-        [NMS(Index = 37)]
-        /* 0x050 */ public NMSString0x20A PinObjectiveMessage;
-        [NMS(Index = 36)]
-        /* 0x070 */ public NMSString0x20A PinObjectiveTip;
         [NMS(Index = 7)]
-        /* 0x090 */ public TkModelResource DebrisFile;
+        /* 0x010 */ public TkModelResource DebrisFile;
+        [NMS(Index = 5)]
+        /* 0x030 */ public NMSString0x20A Hint;
+        [NMS(Index = 35)]
+        /* 0x050 */ public NMSString0x20A PinObjective;
+        [NMS(Index = 37)]
+        /* 0x070 */ public NMSString0x20A PinObjectiveMessage;
+        [NMS(Index = 36)]
+        /* 0x090 */ public NMSString0x20A PinObjectiveTip;
         [NMS(Index = 11)]
-        /* 0x0A8 */ public TkTextureResource HeroIcon;
+        /* 0x0B0 */ public TkTextureResource HeroIcon;
         [NMS(Index = 10)]
-        /* 0x0C0 */ public TkTextureResource Icon;
+        /* 0x0C8 */ public TkTextureResource Icon;
         [NMS(Index = 24)]
-        /* 0x0D8 */ public List<GcTechnologyRequirement> AltRequirements;
+        /* 0x0E0 */ public List<GcTechnologyRequirement> AltRequirements;
         [NMS(Index = 33)]
-        /* 0x0E8 */ public NMSString0x10 DeploysInto;
+        /* 0x0F0 */ public NMSString0x10 DeploysInto;
         [NMS(Index = 4)]
-        /* 0x0F8 */ public VariableSizeString Description;
-        [NMS(Index = 43)]
-        /* 0x108 */ public NMSString0x10 GiveRewardOnSpecialPurchase;
+        /* 0x100 */ public VariableSizeString Description;
+        [NMS(Index = 46)]
+        /* 0x110 */ public NMSString0x10 GiveRewardOnSpecialPurchase;
         [NMS(Index = 6)]
-        /* 0x118 */ public NMSString0x10 GroupID;
+        /* 0x120 */ public NMSString0x10 GroupID;
         [NMS(Index = 0)]
-        /* 0x128 */ public NMSString0x10 ID;
+        /* 0x130 */ public NMSString0x10 ID;
         [NMS(Index = 23)]
-        /* 0x138 */ public List<GcTechnologyRequirement> Requirements;
+        /* 0x140 */ public List<GcTechnologyRequirement> Requirements;
         [NMS(Index = 3)]
-        /* 0x148 */ public VariableSizeString Subtitle;
+        /* 0x150 */ public VariableSizeString Subtitle;
         [NMS(Index = 25)]
-        /* 0x158 */ public GcItemPriceModifiers Cost;
+        /* 0x160 */ public GcItemPriceModifiers Cost;
         [NMS(Index = 8)]
-        /* 0x16C */ public int BaseValue;
+        /* 0x174 */ public int BaseValue;
         [NMS(Index = 13)]
-        /* 0x170 */ public GcRealitySubstanceCategory Category;
+        /* 0x178 */ public GcRealitySubstanceCategory Category;
         [NMS(Index = 18)]
-        /* 0x174 */ public int ChargeValue;
-        [NMS(Index = 41)]
-        /* 0x178 */ public float CookingValue;
+        /* 0x17C */ public int ChargeValue;
+        [NMS(Index = 42)]
+        /* 0x180 */ public float CookingValue;
         [NMS(Index = 22)]
-        /* 0x17C */ public int CraftAmountMultiplier;
+        /* 0x184 */ public int CraftAmountMultiplier;
         [NMS(Index = 21)]
-        /* 0x180 */ public int CraftAmountStepSize;
+        /* 0x188 */ public int CraftAmountStepSize;
         [NMS(Index = 20)]
-        /* 0x184 */ public int DefaultCraftAmount;
+        /* 0x18C */ public int DefaultCraftAmount;
         [NMS(Index = 34)]
-        /* 0x188 */ public float EconomyInfluenceMultiplier;
+        /* 0x190 */ public float EconomyInfluenceMultiplier;
+        [NMS(Index = 43)]
+        /* 0x194 */ public GcStatsTypes FoodBonusStat;
+        [NMS(Index = 44)]
+        /* 0x198 */ public float FoodBonusStatAmount;
         [NMS(Index = 16)]
-        /* 0x18C */ public GcLegality Legality;
+        /* 0x19C */ public GcLegality Legality;
         [NMS(Index = 9)]
-        /* 0x190 */ public int Level;
+        /* 0x1A0 */ public int Level;
         [NMS(Index = 29)]
-        /* 0x194 */ public float NormalisedValueOffWorld;
+        /* 0x1A4 */ public float NormalisedValueOffWorld;
         [NMS(Index = 28)]
-        /* 0x198 */ public float NormalisedValueOnWorld;
+        /* 0x1A8 */ public float NormalisedValueOnWorld;
         [NMS(Index = 38)]
-        /* 0x19C */ public GcScannerIconTypes PinObjectiveScannableType;
+        /* 0x1AC */ public GcScannerIconTypes PinObjectiveScannableType;
         [NMS(Index = 15)]
-        /* 0x1A0 */ public GcRarity Rarity;
+        /* 0x1B0 */ public GcRarity Rarity;
         [NMS(Index = 26)]
-        /* 0x1A4 */ public int RecipeCost;
+        /* 0x1B4 */ public int RecipeCost;
         [NMS(Index = 19)]
-        /* 0x1A8 */ public int StackMultiplier;
+        /* 0x1B8 */ public int StackMultiplier;
         [NMS(Index = 30)]
-        /* 0x1AC */ public GcTradeCategory TradeCategory;
+        /* 0x1BC */ public GcTradeCategory TradeCategory;
         [NMS(Index = 14)]
-        /* 0x1B0 */ public GcProductCategory Type;
+        /* 0x1C0 */ public GcProductCategory Type;
         // size: 0x7
         public enum WikiCategoryEnum : uint {
             NotEnabled,
@@ -88,28 +92,30 @@ namespace libMBIN.NMS.GameComponents
             Cooking,
         }
         [NMS(Index = 31)]
-        /* 0x1B4 */ public WikiCategoryEnum WikiCategory;
+        /* 0x1C4 */ public WikiCategoryEnum WikiCategory;
         [NMS(Index = 1)]
-        /* 0x1B8 */ public NMSString0x80 Name;
+        /* 0x1C8 */ public NMSString0x80 Name;
         [NMS(Index = 2)]
-        /* 0x238 */ public NMSString0x80 NameLower;
-        [NMS(Index = 46)]
-        /* 0x2B8 */ public bool CanSendToOtherPlayers;
+        /* 0x248 */ public NMSString0x80 NameLower;
+        [NMS(Index = 49)]
+        /* 0x2C8 */ public bool CanSendToOtherPlayers;
         [NMS(Index = 17)]
-        /* 0x2B9 */ public bool Consumable;
-        [NMS(Index = 40)]
-        /* 0x2BA */ public bool CookingIngredient;
-        [NMS(Index = 44)]
-        /* 0x2BB */ public bool EggModifierIngredient;
-        [NMS(Index = 42)]
-        /* 0x2BC */ public bool GoodForSelling;
-        [NMS(Index = 32)]
-        /* 0x2BD */ public bool IsCraftable;
+        /* 0x2C9 */ public bool Consumable;
+        [NMS(Index = 41)]
+        /* 0x2CA */ public bool CookingIngredient;
+        [NMS(Index = 47)]
+        /* 0x2CB */ public bool EggModifierIngredient;
         [NMS(Index = 45)]
-        /* 0x2BE */ public bool IsTechbox;
+        /* 0x2CC */ public bool GoodForSelling;
+        [NMS(Index = 32)]
+        /* 0x2CD */ public bool IsCraftable;
+        [NMS(Index = 48)]
+        /* 0x2CE */ public bool IsTechbox;
+        [NMS(Index = 40)]
+        /* 0x2CF */ public bool NeverPinnable;
         [NMS(Index = 39)]
-        /* 0x2BF */ public bool PinObjectiveEasyToRefine;
+        /* 0x2D0 */ public bool PinObjectiveEasyToRefine;
         [NMS(Index = 27)]
-        /* 0x2C0 */ public bool SpecificChargeOnly;
+        /* 0x2D1 */ public bool SpecificChargeOnly;
     }
 }

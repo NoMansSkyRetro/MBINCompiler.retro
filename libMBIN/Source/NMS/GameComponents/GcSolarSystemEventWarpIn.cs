@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6D155C0F26AFFE31, NameHash = 0x90C3AAAC)]
+    [NMS(GUID = 0x9FDF909D3067B6CB, NameHash = 0x90C3AAAC)]
     public class GcSolarSystemEventWarpIn : NMSTemplate
     {
         [NMS(Index = 7)]
@@ -12,13 +12,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public List<int> ShipChoiceSequence;
         [NMS(Index = 0)]
         /* 0x20 */ public GcSolarSystemLocatorChoice Locator;
-        [NMS(Index = 3)]
+        [NMS(Index = 3, MxmlName = "Repeat Interval Range")]
         /* 0x4C */ public Vector2f RepeatIntervalRange;
-        [NMS(Index = 11)]
+        [NMS(Index = 11, MxmlName = "Ship Count Range")]
         /* 0x54 */ public Vector2f ShipCountRange;
-        [NMS(Index = 13)]
+        [NMS(Index = 13, MxmlName = "Speed Range")]
         /* 0x5C */ public Vector2f SpeedRange;
-        [NMS(Index = 12)]
+        [NMS(Index = 12, MxmlName = "Warp Interval Range")]
         /* 0x64 */ public Vector2f WarpIntervalRange;
         [NMS(Index = 8)]
         /* 0x6C */ public GcRealityCommonFactions Faction;

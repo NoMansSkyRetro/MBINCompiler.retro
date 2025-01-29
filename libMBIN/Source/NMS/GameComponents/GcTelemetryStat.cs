@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xADCFA1F25E016AA, NameHash = 0x2721C06D)]
+    [NMS(GUID = 0xE73F43630AD4DB, NameHash = 0x2721C06D)]
     public class GcTelemetryStat : NMSTemplate
     {
         [NMS(Index = 0)]

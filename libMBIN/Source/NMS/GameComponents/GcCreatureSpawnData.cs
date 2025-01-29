@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x76A6E9E8E6075454, NameHash = 0x17785270)]
+    [NMS(GUID = 0x849CAA91C95E0CBE, NameHash = 0x17785270)]
     public class GcCreatureSpawnData : NMSTemplate
     {
         [NMS(Index = 2)]
@@ -37,7 +37,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x12C */ public GcCreatureHemiSphere HemiSphere;
         [NMS(Index = 7)]
         /* 0x130 */ public float MaxScale;
-        [NMS(Index = 6)]
+        [NMS(Index = 6, MxmlName = "MinScale ")]
         /* 0x134 */ public float MinScale;
         [NMS(Index = 20)]
         /* 0x138 */ public GcRarity Rarity;

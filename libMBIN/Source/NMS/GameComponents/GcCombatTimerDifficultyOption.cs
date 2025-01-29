@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x39060AAC417BAD2A, NameHash = 0xAD500621)]
+    [NMS(GUID = 0xC0ED55EFE2BD9F41, NameHash = 0xAD500621)]
     public class GcCombatTimerDifficultyOption : NMSTemplate
     {
         // size: 0x4

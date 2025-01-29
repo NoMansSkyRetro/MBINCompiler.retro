@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xD640554FEB2D7B3, NameHash = 0x370CC0E4)]
+    [NMS(GUID = 0xF922C6F113B29248, NameHash = 0x370CC0E4)]
     public class TkAnimAnimNode : NMSTemplate
     {
         [NMS(Index = 0)]

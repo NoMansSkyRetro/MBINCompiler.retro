@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xB98C5B4B4CDAAC89, NameHash = 0x14D0AAC9)]
+    [NMS(GUID = 0x9DDCECAE18AD8615, NameHash = 0x14D0AAC9)]
     public class TkProceduralInstanceData : NMSTemplate
     {
         [NMS(Index = 0)]

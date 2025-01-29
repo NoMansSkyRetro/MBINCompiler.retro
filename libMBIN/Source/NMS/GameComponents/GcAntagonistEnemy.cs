@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x49A73B7296D1026A, NameHash = 0xBAE45375)]
+    [NMS(GUID = 0xCE4385306D5AB66E, NameHash = 0xBAE45375)]
     public class GcAntagonistEnemy : NMSTemplate
     {
         [NMS(Index = 2)]

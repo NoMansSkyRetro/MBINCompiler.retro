@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBCAD9FF33170C830, NameHash = 0x6F652B7C)]
+    [NMS(GUID = 0x368BED3876954F80, NameHash = 0x6F652B7C)]
     public class GcRewardFactionStanding : NMSTemplate
     {
         [NMS(Index = 2)]

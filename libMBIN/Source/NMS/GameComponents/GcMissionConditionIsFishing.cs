@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFC563FDA40F64820, NameHash = 0xE5ADFDFC)]
+    [NMS(GUID = 0x7BA49E24CEF05D35, NameHash = 0xE5ADFDFC)]
     public class GcMissionConditionIsFishing : NMSTemplate
     {
         [NMS(Index = 0)]

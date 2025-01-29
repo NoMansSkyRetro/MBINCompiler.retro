@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE4ECCECC4F792113, NameHash = 0x961C864D)]
+    [NMS(GUID = 0x6A2E2BB64F958684, NameHash = 0x961C864D)]
     public class GcFontTable : NMSTemplate
     {
         [NMS(Index = 1)]

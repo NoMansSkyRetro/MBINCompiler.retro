@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x76172A4A9CF61ADE, NameHash = 0x4CC30FAE)]
+    [NMS(GUID = 0xB645A80901E4D887, NameHash = 0x4CC30FAE)]
     public class GcTracerData : NMSTemplate
     {
         [NMS(Index = 5)]

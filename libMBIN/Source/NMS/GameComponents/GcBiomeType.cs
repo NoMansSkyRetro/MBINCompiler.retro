@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9F5CC8BA811F301D, NameHash = 0xCA9B582D)]
+    [NMS(GUID = 0xAF7120F3BC22E0B3, NameHash = 0xCA9B582D)]
     public class GcBiomeType : NMSTemplate
     {
-        // size: 0x10
+        // size: 0x11
         public enum BiomeEnum : uint {
             Lush,
             Toxic,
@@ -20,6 +20,7 @@ namespace libMBIN.NMS.GameComponents
             Swamp,
             Lava,
             Waterworld,
+            GasGiant,
             All,
         }
         [NMS(Index = 0)]

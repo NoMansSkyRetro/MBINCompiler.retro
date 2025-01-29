@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA268E5F835875CA1, NameHash = 0x783396CB)]
+    [NMS(GUID = 0x7A3F038F04B08B04, NameHash = 0x783396CB)]
     public class GcGenericMissionVersionProgress : NMSTemplate
     {
         [NMS(Index = 1)]

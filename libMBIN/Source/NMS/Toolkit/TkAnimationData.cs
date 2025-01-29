@@ -3,29 +3,31 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE2ED7FED1D171506, NameHash = 0x6E59DA5E)]
+    [NMS(GUID = 0x8EB7DFFAD879F830, NameHash = 0x6E59DA5E)]
     public class TkAnimationData : NMSTemplate
     {
         [NMS(Index = 12)]
-        /* 0x00 */ public NMSString0x20A Mask;
+        /* 0x000 */ public NMSString0x20A Mask;
         [NMS(Index = 19)]
-        /* 0x20 */ public List<TkAnimationAction> Actions;
+        /* 0x020 */ public List<TkAnimationAction> Actions;
         [NMS(Index = 10)]
-        /* 0x30 */ public NMSString0x10 AdditiveBaseAnim;
+        /* 0x030 */ public NMSString0x10 AdditiveBaseAnim;
         [NMS(Index = 0)]
-        /* 0x40 */ public NMSString0x10 Anim;
+        /* 0x040 */ public NMSString0x10 Anim;
         [NMS(Index = 9)]
-        /* 0x50 */ public List<NMSString0x40> ExtraStartNodes;
+        /* 0x050 */ public List<NMSString0x40> ExtraStartNodes;
         [NMS(Index = 1)]
-        /* 0x60 */ public VariableSizeString Filename;
-        [NMS(Index = 25)]
-        /* 0x70 */ public TkAnimationGameData GameData;
+        /* 0x060 */ public VariableSizeString Filename;
+        [NMS(Index = 21)]
+        /* 0x070 */ public List<TkAnimationNotify> Notifies;
+        [NMS(Index = 26)]
+        /* 0x080 */ public TkAnimationGameData GameData;
         [NMS(Index = 18)]
-        /* 0x7C */ public float ActionFrame;
+        /* 0x08C */ public float ActionFrame;
         [NMS(Index = 17)]
-        /* 0x80 */ public float ActionStartFrame;
+        /* 0x090 */ public float ActionStartFrame;
         [NMS(Index = 11)]
-        /* 0x84 */ public float AdditiveBaseFrame;
+        /* 0x094 */ public float AdditiveBaseFrame;
         // size: 0x4
         public enum AnimTypeEnum : uint {
             Loop,
@@ -34,7 +36,7 @@ namespace libMBIN.NMS.Toolkit
             Control,
         }
         [NMS(Index = 2)]
-        /* 0x88 */ public AnimTypeEnum AnimType;
+        /* 0x098 */ public AnimTypeEnum AnimType;
         // size: 0x3
         public enum CreatureSizeEnum : uint {
             AllSizes,
@@ -42,34 +44,34 @@ namespace libMBIN.NMS.Toolkit
             LargeOnly,
         }
         [NMS(Index = 20)]
-        /* 0x8C */ public CreatureSizeEnum CreatureSize;
+        /* 0x09C */ public CreatureSizeEnum CreatureSize;
         [NMS(Index = 15)]
-        /* 0x90 */ public float Delay;
+        /* 0x0A0 */ public float Delay;
         [NMS(Index = 6)]
-        /* 0x94 */ public int FrameEnd;
+        /* 0x0A4 */ public int FrameEnd;
         [NMS(Index = 7)]
-        /* 0x98 */ public int FrameEndGame;
+        /* 0x0A8 */ public int FrameEndGame;
         [NMS(Index = 5)]
-        /* 0x9C */ public int FrameStart;
+        /* 0x0AC */ public int FrameStart;
         [NMS(Index = 14)]
-        /* 0xA0 */ public float OffsetMax;
+        /* 0x0B0 */ public float OffsetMax;
         [NMS(Index = 13)]
-        /* 0xA4 */ public float OffsetMin;
+        /* 0x0B4 */ public float OffsetMin;
         [NMS(Index = 4)]
-        /* 0xA8 */ public int Priority;
+        /* 0x0B8 */ public int Priority;
         [NMS(Index = 16)]
-        /* 0xAC */ public float Speed;
+        /* 0x0BC */ public float Speed;
         [NMS(Index = 8)]
-        /* 0xB0 */ public NMSString0x40 StartNode;
-        [NMS(Index = 23)]
-        /* 0xF0 */ public bool Active;
-        [NMS(Index = 21)]
-        /* 0xF1 */ public bool Additive;
-        [NMS(Index = 3)]
-        /* 0xF2 */ public bool AnimGroupOverride;
+        /* 0x0C0 */ public NMSString0x40 StartNode;
         [NMS(Index = 24)]
-        /* 0xF3 */ public bool Has30HzFrames;
+        /* 0x100 */ public bool Active;
         [NMS(Index = 22)]
-        /* 0xF4 */ public bool Mirrored;
+        /* 0x101 */ public bool Additive;
+        [NMS(Index = 3)]
+        /* 0x102 */ public bool AnimGroupOverride;
+        [NMS(Index = 25)]
+        /* 0x103 */ public bool Has30HzFrames;
+        [NMS(Index = 23)]
+        /* 0x104 */ public bool Mirrored;
     }
 }

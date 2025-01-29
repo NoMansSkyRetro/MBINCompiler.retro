@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x1125A8E8B5C277F6, NameHash = 0x199FE2B)]
+    [NMS(GUID = 0xFAB765899D5B7C37, NameHash = 0x199FE2B)]
     public class TkMaterialFlags : NMSTemplate
     {
         // size: 0x40
@@ -42,10 +42,10 @@ namespace libMBIN.NMS.Toolkit
             _F35_GLOW_MASK,
             _F36_DOUBLESIDED,
             _F37_EXPLICIT_MOTION_VECTORS,
-            _F38_NO_DEFORM,
+            _F38_BENT_NORMALS,
             _F39_METALLIC_MASK,
             _F40_SUBSURFACE_MASK,
-            _F41_DETAIL_DIFFUSE,
+            _F41_REFLECTANCE_MASK,
             _F42_DETAIL_NORMAL,
             _F43_NORMAL_TILING,
             _F44_IMPOSTER,
@@ -61,7 +61,7 @@ namespace libMBIN.NMS.Toolkit
             _F54_COLOURMASK,
             _F55_MULTITEXTURE,
             _F56_MATCH_GROUND,
-            _F57_ENV_OVERLAY,
+            _F57_VERTEXALPHA_AO,
             _F58_USE_CENTRAL_NORMAL,
             _F59_BIASED_REACTIVITY,
             _F60_ACUTE_ANGLE_FADE,

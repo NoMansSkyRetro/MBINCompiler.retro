@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x155BB986196A3F36, NameHash = 0xC0171D3B)]
+    [NMS(GUID = 0xF198F3634AC7B24D, NameHash = 0xC0171D3B)]
     public class GcRewardUpgradeShipClass : NMSTemplate
     {
         [NMS(Index = 1)]

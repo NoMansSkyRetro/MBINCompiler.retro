@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8E6B3A09AA566A56, NameHash = 0xFA1032FC)]
+    [NMS(GUID = 0x45AE53911BDDFA37, NameHash = 0xFA1032FC)]
     public class GcLegacyItem : NMSTemplate
     {
         [NMS(Index = 1)]

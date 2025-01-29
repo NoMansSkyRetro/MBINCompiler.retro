@@ -1,11 +1,15 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE85BA739408AAF81, NameHash = 0x41722F61)]
+    [NMS(GUID = 0x51F3C7940B7E0D2D, NameHash = 0x41722F61)]
     public class TkGravityComponentData : NMSTemplate
     {
+        [NMS(Index = 3)]
+        /* 0x00 */ public Vector3f OverrideBounds;
         [NMS(Index = 1)]
-        /* 0x0 */ public float FalloffRadius;
+        /* 0x10 */ public float FalloffRadius;
         [NMS(Index = 0)]
-        /* 0x4 */ public float Strength;
+        /* 0x14 */ public float Strength;
+        [NMS(Index = 2)]
+        /* 0x18 */ public bool MoveWithParent;
     }
 }

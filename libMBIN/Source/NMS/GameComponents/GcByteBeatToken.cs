@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA3F301BA6206E62D, NameHash = 0xDF04CB7)]
+    [NMS(GUID = 0xC8EDA75443C60FCD, NameHash = 0xDF04CB7)]
     public class GcByteBeatToken : NMSTemplate
     {
         // size: 0x12

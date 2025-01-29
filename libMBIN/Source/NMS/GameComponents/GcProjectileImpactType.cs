@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAB6F35E6A5707415, NameHash = 0xF6A61103)]
+    [NMS(GUID = 0x831ED513AA3B0717, NameHash = 0xF6A61103)]
     public class GcProjectileImpactType : NMSTemplate
     {
         // size: 0x12

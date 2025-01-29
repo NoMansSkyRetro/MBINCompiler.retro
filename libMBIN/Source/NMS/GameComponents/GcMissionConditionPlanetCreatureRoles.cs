@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD645F28189DA9312, NameHash = 0x2EDEF58E)]
+    [NMS(GUID = 0xCE42304BED9F9FEC, NameHash = 0x2EDEF58E)]
     public class GcMissionConditionPlanetCreatureRoles : NMSTemplate
     {
         [NMS(Index = 0)]

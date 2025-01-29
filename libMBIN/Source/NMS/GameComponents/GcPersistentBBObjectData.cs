@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7D7FF833C771C288, NameHash = 0x79C571E2)]
+    [NMS(GUID = 0xC669876050512BBC, NameHash = 0x79C571E2)]
     public class GcPersistentBBObjectData : NMSTemplate
     {
         [NMS(Index = 7)]

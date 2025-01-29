@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD9FCDF892789C007, NameHash = 0xB14955DB)]
+    [NMS(GUID = 0x91A00D9B30F71A89, NameHash = 0xB14955DB)]
     public class GcFlyingSnakeData : NMSTemplate
     {
         [NMS(Index = 9)]

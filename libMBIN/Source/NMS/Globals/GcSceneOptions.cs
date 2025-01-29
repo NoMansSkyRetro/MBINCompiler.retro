@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x4DDA4C989AD367CC, NameHash = 0x7DECDDEB)]
+    [NMS(GUID = 0x9CF34288163F3743, NameHash = 0x7DECDDEB)]
     public class GcSceneOptions : NMSTemplate
     {
         [NMS(Index = 11)]

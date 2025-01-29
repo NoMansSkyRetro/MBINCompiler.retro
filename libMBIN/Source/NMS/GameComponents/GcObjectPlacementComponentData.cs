@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x887FA308DDE5E67D, NameHash = 0x415580A8)]
+    [NMS(GUID = 0xEA09B26DC213ED17, NameHash = 0x415580A8)]
     public class GcObjectPlacementComponentData : NMSTemplate
     {
         // size: 0x2

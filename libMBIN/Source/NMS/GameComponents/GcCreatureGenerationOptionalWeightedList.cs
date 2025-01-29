@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x576EF93B865D4862, NameHash = 0x9AC9845E)]
+    [NMS(GUID = 0xF417ACF7BB67FB6F, NameHash = 0x9AC9845E)]
     public class GcCreatureGenerationOptionalWeightedList : NMSTemplate
     {
         [NMS(Index = 2)]

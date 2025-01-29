@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBEE365BEC9A6019F, NameHash = 0xD8286D09)]
+    [NMS(GUID = 0x68BFC80F20B3C1AA, NameHash = 0xD8286D09)]
     public class GcHeavyAirColourData : NMSTemplate
     {
         [NMS(Index = 0)]

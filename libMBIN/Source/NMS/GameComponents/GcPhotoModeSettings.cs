@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD51F6676FEB9CC69, NameHash = 0x4696788D)]
+    [NMS(GUID = 0x67641FD8A1F53577, NameHash = 0x4696788D)]
     public class GcPhotoModeSettings : NMSTemplate
     {
         [NMS(Index = 2)]

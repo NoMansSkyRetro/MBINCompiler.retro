@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x914C53F9BFAA96E1, NameHash = 0xD7C471B8)]
+    [NMS(GUID = 0xE132CD7BD860C555, NameHash = 0xD7C471B8)]
     public class GcDroneControlData : NMSTemplate
     {
         [NMS(Index = 2)]

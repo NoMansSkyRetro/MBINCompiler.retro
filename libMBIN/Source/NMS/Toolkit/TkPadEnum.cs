@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xBA66DB1C5C67A3C0, NameHash = 0xB4C05EB8)]
+    [NMS(GUID = 0x54D0C0242267EC90, NameHash = 0xB4C05EB8)]
     public class TkPadEnum : NMSTemplate
     {
         // size: 0x11

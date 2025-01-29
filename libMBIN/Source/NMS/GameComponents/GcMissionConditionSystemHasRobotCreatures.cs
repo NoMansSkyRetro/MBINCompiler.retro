@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA72FEDC230E2271E, NameHash = 0x26568C57)]
+    [NMS(GUID = 0xA8B1334EE6DF5D42, NameHash = 0x26568C57)]
     public class GcMissionConditionSystemHasRobotCreatures : NMSTemplate
     {
         [NMS(Index = 0)]

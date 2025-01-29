@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x38EE3AC5336946AB, NameHash = 0x9BBC4842)]
+    [NMS(GUID = 0x1EC8AA3738569D1A, NameHash = 0x9BBC4842)]
     public class GcPerformanceFlyby : NMSTemplate
     {
         [NMS(Index = 0)]

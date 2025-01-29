@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x898640C1D1FF6958, NameHash = 0xE6CB9CDC)]
+    [NMS(GUID = 0x6B7C119FC2CFE845, NameHash = 0xE6CB9CDC)]
     public class GcMissionSequenceCompleteSettlementJudgement : NMSTemplate
     {
         [NMS(Index = 2)]

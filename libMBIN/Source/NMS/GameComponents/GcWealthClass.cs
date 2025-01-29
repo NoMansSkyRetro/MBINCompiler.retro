@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEF25EE5283DBF5E4, NameHash = 0xAD0FA53F)]
+    [NMS(GUID = 0x81D2220302782E92, NameHash = 0xAD0FA53F)]
     public class GcWealthClass : NMSTemplate
     {
         // size: 0x4

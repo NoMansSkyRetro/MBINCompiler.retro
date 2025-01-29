@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF0A3717BF2AB49B3, NameHash = 0x18D6647A)]
+    [NMS(GUID = 0x5E1BC36FA0FDBBC7, NameHash = 0x18D6647A)]
     public class GcExperienceTimers : NMSTemplate
     {
         [NMS(Index = 2)]

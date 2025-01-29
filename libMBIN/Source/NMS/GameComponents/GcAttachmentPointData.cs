@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x57878A41DE9669CC, NameHash = 0x7ECCAEA3)]
+    [NMS(GUID = 0xC4D253C4A183BE17, NameHash = 0x7ECCAEA3)]
     public class GcAttachmentPointData : NMSTemplate
     {
         [NMS(Index = 0)]

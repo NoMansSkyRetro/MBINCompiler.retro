@@ -2,7 +2,7 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x29BF52BAA2C7EB9C, NameHash = 0x6CA73DFD)]
+    [NMS(GUID = 0xD6A529BC1555D9A5, NameHash = 0x6CA73DFD)]
     public class GcCreatureParticleEffectTrigger : NMSTemplate
     {
         // size: 0x7

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x48959E8D8B7150F7, NameHash = 0x4494847D)]
+    [NMS(GUID = 0xBEAC0FCB9B8250B0, NameHash = 0x4494847D)]
     public class GcMissionIDEpochPair : NMSTemplate
     {
         [NMS(Index = 0)]

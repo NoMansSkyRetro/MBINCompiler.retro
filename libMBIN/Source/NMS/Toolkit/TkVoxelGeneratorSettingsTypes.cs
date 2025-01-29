@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x89AB0100FEC886B9, NameHash = 0x8DBE54DD)]
+    [NMS(GUID = 0xB7F7C51FCDEB07D8, NameHash = 0x8DBE54DD)]
     public class TkVoxelGeneratorSettingsTypes : NMSTemplate
     {
-        // size: 0x15
+        // size: 0x1F
         public enum TerrainSettingsEnum : uint {
             FloatingIslands,
             GrandCanyon,
@@ -26,6 +26,16 @@ namespace libMBIN.NMS.Toolkit
             AlpinePrime,
             LilyPadPrime,
             DesertPrime,
+            FloatingIslandsPurple,
+            GrandCanyonPurple,
+            MountainRavinesPurple,
+            HugeArchesPurple,
+            AlienPurple,
+            CratersPurple,
+            CavernsPurple,
+            AlpinePurple,
+            LilyPadPurple,
+            DesertPurple,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public TerrainSettingsEnum TerrainSettings;

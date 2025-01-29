@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8B12A7765BF54C2D, NameHash = 0xE7A841F6)]
+    [NMS(GUID = 0xF0E70EC1054D8791, NameHash = 0xE7A841F6)]
     public class GcRewardRepairWholeInventory : NMSTemplate
     {
         // size: 0x8

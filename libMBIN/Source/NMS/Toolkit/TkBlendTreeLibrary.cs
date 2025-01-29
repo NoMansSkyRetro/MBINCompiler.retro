@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE212452D62D67AD8, NameHash = 0xBB62146B)]
+    [NMS(GUID = 0xAB9ABD5B5CB47B87, NameHash = 0xBB62146B)]
     public class TkBlendTreeLibrary : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3475FBDFCC71DF04, NameHash = 0xDBDCD31E)]
+    [NMS(GUID = 0x4DF3761CEFA7650C, NameHash = 0xDBDCD31E)]
     public class GcMessageCrime : NMSTemplate
     {
         [NMS(Index = 1)]

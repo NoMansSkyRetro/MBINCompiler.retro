@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCADAD6D5CCC25506, NameHash = 0x143A6A5A)]
+    [NMS(GUID = 0xD01E0DDA32631247, NameHash = 0x143A6A5A)]
     public class GcRewardAdvancePortalState : NMSTemplate
     {
         [NMS(Index = 0)]

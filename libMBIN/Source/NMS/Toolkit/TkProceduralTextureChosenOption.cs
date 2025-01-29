@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x24D3F9D1A141F135, NameHash = 0x98A0D82)]
+    [NMS(GUID = 0x42984755A532AECD, NameHash = 0x98A0D82)]
     public class TkProceduralTextureChosenOption : NMSTemplate
     {
         [NMS(Index = 4)]
@@ -16,6 +16,6 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 2)]
         /* 0x50 */ public TkPaletteTexture Palette;
         [NMS(Index = 3)]
-        /* 0x58 */ public bool OverrideColour;
+        /* 0x5C */ public bool OverrideColour;
     }
 }

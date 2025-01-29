@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xB6BCA3F1B468CD9F, NameHash = 0xEBF3EA11)]
+    [NMS(GUID = 0xC81F0C0124210EB8, NameHash = 0xEBF3EA11)]
     public class TkNGuiLayoutListData : NMSTemplate
     {
         [NMS(Index = 2)]

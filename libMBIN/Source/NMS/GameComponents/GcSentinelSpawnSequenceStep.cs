@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4DE7ABFCCCE8E40, NameHash = 0x373A09FF)]
+    [NMS(GUID = 0xCD22865074B5364B, NameHash = 0x373A09FF)]
     public class GcSentinelSpawnSequenceStep : NMSTemplate
     {
         [NMS(Index = 0)]

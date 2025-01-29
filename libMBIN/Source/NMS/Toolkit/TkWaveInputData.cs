@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xB261AAEF6338017A, NameHash = 0x654F0023)]
+    [NMS(GUID = 0x9AF5A85D5D3223E5, NameHash = 0x654F0023)]
     public class TkWaveInputData : NMSTemplate
     {
         [NMS(Index = 0)]

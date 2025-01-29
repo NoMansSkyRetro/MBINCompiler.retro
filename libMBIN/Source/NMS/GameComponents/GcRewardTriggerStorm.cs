@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x544931DEBF9DE62, NameHash = 0x7CB4ED54)]
+    [NMS(GUID = 0xF2EE5F20B7ABDDA8, NameHash = 0x7CB4ED54)]
     public class GcRewardTriggerStorm : NMSTemplate
     {
         [NMS(Index = 0)]

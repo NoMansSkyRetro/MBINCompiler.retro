@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x39AAD75B014BF34D, NameHash = 0x3B132872)]
+    [NMS(GUID = 0xD63F0BBEBE41DA78, NameHash = 0x3B132872)]
     public class GcTerrainTexture : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x3A807E379D7198C4, NameHash = 0x9525F86C)]
+    [NMS(GUID = 0xA59570CA7B9544A9, NameHash = 0x9525F86C)]
     public class TkJointMirrorAxis : NMSTemplate
     {
         [NMS(Index = 10)]

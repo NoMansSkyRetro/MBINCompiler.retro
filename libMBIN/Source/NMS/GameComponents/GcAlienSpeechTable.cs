@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7DBEC1C7E7AE88DF, NameHash = 0x27475417)]
+    [NMS(GUID = 0x29A23A2F80FBE6D8, NameHash = 0x27475417)]
     public class GcAlienSpeechTable : NMSTemplate
     {
         [NMS(Index = 0)]

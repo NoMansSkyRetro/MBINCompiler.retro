@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8BD0C64908DD6BBA, NameHash = 0x28731EF9)]
+    [NMS(GUID = 0xA3A725320FACDF2D, NameHash = 0x28731EF9)]
     public class GcRewardStatDiff : NMSTemplate
     {
         [NMS(Index = 1)]
@@ -17,5 +17,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x34 */ public GcCurrency RewardCurrency;
         [NMS(Index = 5)]
         /* 0x38 */ public int StatRewardCap;
+        [NMS(Index = 6)]
+        /* 0x3C */ public bool OKToGiveZero;
     }
 }

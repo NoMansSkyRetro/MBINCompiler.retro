@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x17C9E37591325BC6, NameHash = 0x5F4A54D2)]
+    [NMS(GUID = 0x7DE13CFB6BC263E0, NameHash = 0x5F4A54D2)]
     public class GcInteractionBuffer : NMSTemplate
     {
         [NMS(Index = 0)]

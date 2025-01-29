@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3EC7B722797A2056, NameHash = 0xCF5A623A)]
+    [NMS(GUID = 0xFA4E510D5929BA9D, NameHash = 0xCF5A623A)]
     public class GcCreatureFootParticleSingleData : NMSTemplate
     {
         [NMS(Index = 0)]

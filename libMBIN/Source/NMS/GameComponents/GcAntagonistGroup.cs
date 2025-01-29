@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x389DCB7F89EAC210, NameHash = 0x19DADEA2)]
+    [NMS(GUID = 0x256D198A2AEE52B6, NameHash = 0x19DADEA2)]
     public class GcAntagonistGroup : NMSTemplate
     {
         // size: 0x6

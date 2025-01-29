@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x3D6BB0F5B60CB4ED, NameHash = 0xC4938428)]
+    [NMS(GUID = 0x4B28F5115E084DC1, NameHash = 0xC4938428)]
     public class TkNoiseFlattenPoint : NMSTemplate
     {
         [NMS(Index = 5)]

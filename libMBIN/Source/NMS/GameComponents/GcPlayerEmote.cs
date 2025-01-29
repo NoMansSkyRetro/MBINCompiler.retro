@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5F38C02961DB3BB7, NameHash = 0x8817C4F1)]
+    [NMS(GUID = 0x84222FE75EE0CD17, NameHash = 0x8817C4F1)]
     public class GcPlayerEmote : NMSTemplate
     {
         [NMS(Index = 5)]

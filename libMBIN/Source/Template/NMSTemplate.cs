@@ -1161,6 +1161,8 @@ namespace libMBIN
             int i = 0;
             string valueString = String.Empty;
 
+            string fieldName = field.GetCustomAttribute<NMSAttribute>()?.MxmlName ?? field.Name;
+
             switch (fieldType.Name)
             {
                 case "String":
@@ -1207,7 +1209,7 @@ namespace libMBIN
                     LinkableNMSTemplate linkedTemplate = (LinkableNMSTemplate) value;
                     if (linkedTemplate.Template != null) {
                         MXmlProperty templateXmlData = (MXmlProperty)linkedTemplate.Template.SerializeMXml( true, true );
-                        templateXmlData.Name = field.Name;
+                        templateXmlData.Name = fieldName;
                         templateXmlData.Value = linkedTemplate.Template.GetType().Name;
                         if (linkedTemplate.Linked.StringValue() != "") {
                             templateXmlData.Linked = linkedTemplate.Linked.StringValue();
@@ -1216,14 +1218,14 @@ namespace libMBIN
                     } else {
                         MXmlProperty linkedProp = new MXmlProperty()
                         {
-                            Name = field.Name,
+                            Name = fieldName,
                         };
                         return linkedProp;
                     }
                 case "List`1":
                     var listType = field.FieldType.GetGenericArguments()[0];
                     MXmlProperty listProperty = new MXmlProperty {
-                        Name = field.Name
+                        Name = fieldName
                     };
 
                     IList templates = (IList)value;
@@ -1233,7 +1235,7 @@ namespace libMBIN
                             // For lists of strings, just write the data directly.
                             foreach ( var template in templates ) {
                                 MXmlProperty data = new MXmlProperty {
-                                    Name = field.Name,
+                                    Name = fieldName,
                                     Value = ((INMSString)template).StringValue(),
                                 };
                                 listProperty.Elements.Add( data );
@@ -1241,7 +1243,7 @@ namespace libMBIN
                         } else {
                             foreach ( var template in templates ) {
                                 MXmlBase data = SerializeMXmlValue( listType, field, settings, template, false );
-                                data.Name = field.Name;
+                                data.Name = fieldName;
                                 listProperty.Elements.Add( data );
                             }
                         }
@@ -1253,7 +1255,7 @@ namespace libMBIN
                         NMSTemplate template = (NMSTemplate) value;
 
                         MXmlProperty templateXmlData = (MXmlProperty)template.SerializeMXml( true, true );
-                        templateXmlData.Name = field.Name;
+                        templateXmlData.Name = fieldName;
                         templateXmlData.Value = template.GetType().Name;
 
                         return templateXmlData;
@@ -1271,7 +1273,7 @@ namespace libMBIN
                         Type hashMapType = field.FieldType.GetGenericArguments()[0];
 
                         // We basically treat the hashmap as an enumerable (so like a List<T>).
-                        MXmlProperty listProp = new MXmlProperty { Name = field.Name };
+                        MXmlProperty listProp = new MXmlProperty { Name = fieldName };
 
                         foreach ( var template in (IEnumerable)value ) {
                             MXmlBase data = SerializeMXmlValue( hashMapType, field, settings, template, false );
@@ -1291,13 +1293,13 @@ namespace libMBIN
                         }
 
                         var templateXmlData = template.SerializeMXml( true );
-                        templateXmlData.Name = field.Name;
+                        templateXmlData.Name = fieldName;
 
                         return templateXmlData;
                     } else if ( fieldType.IsArray ) {
                         var arrayType = field.FieldType.GetElementType();
                         MXmlProperty arrayProperty = new MXmlProperty {
-                            Name = field.Name
+                            Name = fieldName
                         };
 
                         Array array = (Array) value;
@@ -1325,7 +1327,7 @@ namespace libMBIN
             }
 
             return new MXmlProperty {
-                Name = field.Name,
+                Name = fieldName,
                 Value = valueString
             };
         }
@@ -1653,7 +1655,7 @@ namespace libMBIN
                 foreach ( var xmlElement in xmlData.Elements ) {
                     if ( xmlElement.GetType() == typeof( MXmlProperty ) ) {
                         MXmlProperty xmlProperty = (MXmlProperty) xmlElement;
-                        FieldInfo field = templateType.GetField( xmlProperty.Name );
+                        FieldInfo field = templateType.GetField( xmlProperty.Name.Replace(" ", "") );
                         if (field == null) {
                             // The MXML file contains a field which is no longer in the class definition.
                             // Raise a more helpful error.
@@ -1705,7 +1707,7 @@ namespace libMBIN
                     } else if ( xmlElement.GetType() == typeof( MXmlData ) ) {
                         // TODO: This will never be hit as we never have data child elements
                         MXmlData innerXmlData = (MXmlData) xmlElement;
-                        FieldInfo field = templateType.GetField( innerXmlData.Name );
+                        FieldInfo field = templateType.GetField( innerXmlData.Name.Replace(" ", "") );
                         NMSTemplate innerTemplate = DeserializeMXml( innerXmlData );
                         field.SetValue( template, innerTemplate );
                     } else if ( xmlElement.GetType() == typeof( MXmlMeta ) ) {

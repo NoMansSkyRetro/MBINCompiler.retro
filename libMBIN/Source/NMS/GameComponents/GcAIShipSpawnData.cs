@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAC1E79EB9FFB3722, NameHash = 0x466A95A0)]
+    [NMS(GUID = 0x1C2A29CB6EF85C1F, NameHash = 0x466A95A0)]
     public class GcAIShipSpawnData : NMSTemplate
     {
         [NMS(Index = 14)]

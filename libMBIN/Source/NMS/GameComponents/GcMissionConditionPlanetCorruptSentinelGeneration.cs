@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x37D9D3025D0E7D55, NameHash = 0xF022FF8E)]
+    [NMS(GUID = 0x2D045B24781EBB2F, NameHash = 0xF022FF8E)]
     public class GcMissionConditionPlanetCorruptSentinelGeneration : NMSTemplate
     {
     }

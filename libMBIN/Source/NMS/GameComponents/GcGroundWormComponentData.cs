@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFBC7C308C4BAA4A9, NameHash = 0xA8ED0FE1)]
+    [NMS(GUID = 0x587F5D2170DE741D, NameHash = 0xA8ED0FE1)]
     public class GcGroundWormComponentData : NMSTemplate
     {
         [NMS(Index = 16)]

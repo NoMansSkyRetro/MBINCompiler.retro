@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x84054D993BC6A79E, NameHash = 0x241A36BA)]
+    [NMS(GUID = 0xB353ABC6B8FA855D, NameHash = 0x241A36BA)]
     public class GcRewardSignalScan : NMSTemplate
     {
         // size: 0x8

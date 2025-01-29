@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7CEBC3C23900162E, NameHash = 0x7D610529)]
+    [NMS(GUID = 0xA6CFFEB24D6DC0BD, NameHash = 0x7D610529)]
     public class GcNGuiStyleAnimationKeyframeData : NMSTemplate
     {
         [NMS(Index = 1)]

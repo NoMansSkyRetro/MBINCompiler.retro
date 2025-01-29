@@ -3,24 +3,24 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x299619D7E0DF865, NameHash = 0x4737D48A)]
+    [NMS(GUID = 0xDBDEABF3E233AEB9, NameHash = 0x4737D48A)]
     public class TkMaterialData : NMSTemplate
     {
-        [NMS(Index = 9)]
+        [NMS(Index = 10)]
         /* 0x00 */ public List<TkMaterialFlags> Flags;
-        [NMS(Index = 7)]
+        [NMS(Index = 8)]
         /* 0x10 */ public VariableSizeString Link;
         [NMS(Index = 1)]
         /* 0x20 */ public VariableSizeString Metamaterial;
         [NMS(Index = 0)]
         /* 0x30 */ public VariableSizeString Name;
-        [NMS(Index = 11)]
-        /* 0x40 */ public List<TkMaterialSampler> Samplers;
-        [NMS(Index = 8)]
-        /* 0x50 */ public VariableSizeString Shader;
-        [NMS(Index = 10)]
-        /* 0x60 */ public List<TkMaterialUniform> Uniforms;
         [NMS(Index = 12)]
+        /* 0x40 */ public List<TkMaterialSampler> Samplers;
+        [NMS(Index = 9)]
+        /* 0x50 */ public VariableSizeString Shader;
+        [NMS(Index = 11)]
+        /* 0x60 */ public List<TkMaterialUniform> Uniforms;
+        [NMS(Index = 13)]
         /* 0x70 */ public long ShaderMillDataHash;
         [NMS(Index = 3)]
         /* 0x78 */ public int TransparencyLayerID;
@@ -32,5 +32,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x9D */ public bool CreateFur;
         [NMS(Index = 5)]
         /* 0x9E */ public bool DisableZTest;
+        [NMS(Index = 7)]
+        /* 0x9F */ public bool EnableLodFade;
     }
 }

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2BE6ED1768B2EED2, NameHash = 0x8E0BDE4C)]
+    [NMS(GUID = 0xBEAD243B3C8FDADD, NameHash = 0x8E0BDE4C)]
     public class GcCreatureEffectTriggerRequirementCreatureSize : NMSTemplate
     {
         [NMS(Index = 1)]

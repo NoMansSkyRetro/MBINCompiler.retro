@@ -1,8 +1,9 @@
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE0FF3B392D9EE51, NameHash = 0xE11E0D40)]
+    [NMS(GUID = 0x9149D733CA6E0A64, NameHash = 0xE11E0D40)]
     public class GcPlayerTitle : NMSTemplate
     {
         [NMS(Index = 3)]
@@ -15,25 +16,27 @@ namespace libMBIN.NMS.GameComponents
         /* 0x60 */ public NMSString0x10 ID;
         [NMS(Index = 4)]
         /* 0x70 */ public NMSString0x10 RevealedBy;
+        [NMS(Index = 15)]
+        /* 0x80 */ public List<NMSString0x10> TitleUnlocksSpecials;
         [NMS(Index = 6)]
-        /* 0x80 */ public NMSString0x10 UnlockedByMission;
+        /* 0x90 */ public NMSString0x10 UnlockedByMission;
         [NMS(Index = 5)]
-        /* 0x90 */ public NMSString0x10 UnlockedByProductRecipe;
+        /* 0xA0 */ public NMSString0x10 UnlockedByProductRecipe;
         [NMS(Index = 8)]
-        /* 0xA0 */ public NMSString0x10 UnlockedByStat;
+        /* 0xB0 */ public NMSString0x10 UnlockedByStat;
         [NMS(Index = 7)]
-        /* 0xB0 */ public NMSString0x10 UnlockedByTrophy;
+        /* 0xC0 */ public NMSString0x10 UnlockedByTrophy;
         [NMS(Index = 11)]
-        /* 0xC0 */ public GcInteractionType UnlockedByInteraction;
+        /* 0xD0 */ public GcInteractionType UnlockedByInteraction;
         [NMS(Index = 12)]
-        /* 0xC4 */ public int UnlockedByInteractionIndex;
+        /* 0xD4 */ public int UnlockedByInteractionIndex;
         [NMS(Index = 13)]
-        /* 0xC8 */ public GcAlienRace UnlockedByInteractionRace;
+        /* 0xD8 */ public GcAlienRace UnlockedByInteractionRace;
         [NMS(Index = 10)]
-        /* 0xCC */ public int UnlockedByLeveledStatRank;
+        /* 0xDC */ public int UnlockedByLeveledStatRank;
         [NMS(Index = 9)]
-        /* 0xD0 */ public float UnlockedByStatValue;
+        /* 0xE0 */ public float UnlockedByStatValue;
         [NMS(Index = 14)]
-        /* 0xD4 */ public bool UnlockedByInteractionOnlyTestMainRaces;
+        /* 0xE4 */ public bool UnlockedByInteractionOnlyTestMainRaces;
     }
 }

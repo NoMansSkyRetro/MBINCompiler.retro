@@ -1,11 +1,11 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xED9FE360DD361862, NameHash = 0xA2483F68)]
+    [NMS(GUID = 0x7028800486731C30, NameHash = 0xA2483F68)]
     public class GcMissionSequenceCreateSpecificPulseEncounter : NMSTemplate
     {
         [NMS(Index = 5)]
         /* 0x00 */ public NMSString0x20A ShipHUDOverrideWhenReady;
-        [NMS(Index = 12)]
+        [NMS(Index = 13)]
         /* 0x20 */ public VariableSizeString DebugText;
         [NMS(Index = 0)]
         /* 0x30 */ public VariableSizeString Message;
@@ -25,9 +25,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x94 */ public bool AllowAnyEncounter;
         [NMS(Index = 11)]
         /* 0x95 */ public bool AllowOutsideShip;
+        [NMS(Index = 12)]
+        /* 0x96 */ public bool EnsureClearOfSolarSystemObjects;
         [NMS(Index = 10)]
-        /* 0x96 */ public bool Silent;
+        /* 0x97 */ public bool Silent;
         [NMS(Index = 8)]
-        /* 0x97 */ public bool TakeEncounterIDFromSeasonData;
+        /* 0x98 */ public bool TakeEncounterIDFromSeasonData;
     }
 }

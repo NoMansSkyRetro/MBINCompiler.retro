@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC267BE8341FCF478, NameHash = 0x4AEDCD0D)]
+    [NMS(GUID = 0x9960981328A00041, NameHash = 0x4AEDCD0D)]
     public class GcExpeditionInterventionEventData : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE1B76AA2CFEDE092, NameHash = 0xC8C2FA1E)]
+    [NMS(GUID = 0xB59544729DF1B854, NameHash = 0xC8C2FA1E)]
     public class GcRealityGameIcons : NMSTemplate
     {
-        // size: 0x5C
+        // size: 0x6D
         public enum GameIconsEnum : uint {
             Stamina,
             NoStamina,
@@ -96,7 +96,24 @@ namespace libMBIN.NMS.GameComponents
             Stealth,
             StealthEmpty,
             DefenceForce,
+            CookShop,
             HazardIndicatorSpook,
+            BioShip,
+            CargoShip,
+            ExoticShip,
+            FighterShip,
+            ScienceShip,
+            SentinelShip,
+            ShuttleShip,
+            SailShip,
+            PistolWeapon,
+            RifleWeapon,
+            PristineWeapon,
+            AlienWeapon,
+            RoyalWeapon,
+            RobotWeapon,
+            AtlasWeapon,
+            StaffWeapon,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public GameIconsEnum GameIcons;

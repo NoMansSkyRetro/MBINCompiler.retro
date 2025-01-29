@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDEC80C791DDDB35E, NameHash = 0x54855C0F)]
+    [NMS(GUID = 0x8C2781124D11E738, NameHash = 0x54855C0F)]
     public class GcCloudProperties : NMSTemplate
     {
         [NMS(Index = 2)]
@@ -13,9 +13,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public Vector4f CloudHeightGradient3;
         [NMS(Index = 3)]
         /* 0x40 */ public Colour CloudTopColour;
-        [NMS(Index = 16)]
+        [NMS(Index = 16, MxmlName = "Stratosphere Wind Offset")]
         /* 0x50 */ public Vector2f StratosphereWindOffset;
-        [NMS(Index = 15)]
+        [NMS(Index = 15, MxmlName = "Wind Offset")]
         /* 0x58 */ public Vector2f WindOffset;
         [NMS(Index = 13)]
         /* 0x60 */ public float AbsorptionFactor;

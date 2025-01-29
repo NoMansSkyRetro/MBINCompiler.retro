@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x82C2E1DE66FB5479, NameHash = 0x1AD5DE55)]
+    [NMS(GUID = 0xDE216334ECD5F687, NameHash = 0x1AD5DE55)]
     public class GcRewardOpenPage : NMSTemplate
     {
-        // size: 0x10
+        // size: 0x13
         public enum PageToOpenEnum : uint {
             FreighterShipTransfer,
             DisplayPortalUa,
@@ -21,6 +21,9 @@ namespace libMBIN.NMS.GameComponents
             SquadronRecruitment,
             FleetManagement,
             WeaponCustomisation,
+            FoodUnit,
+            CookTrade,
+            ArchiveManagementShip,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public PageToOpenEnum PageToOpen;

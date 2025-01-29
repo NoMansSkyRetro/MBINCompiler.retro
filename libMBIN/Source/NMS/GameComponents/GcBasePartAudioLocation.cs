@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2E789F51CF31C9D9, NameHash = 0xBBF7B05E)]
+    [NMS(GUID = 0x7BA877F44A046D15, NameHash = 0xBBF7B05E)]
     public class GcBasePartAudioLocation : NMSTemplate
     {
         // size: 0x5

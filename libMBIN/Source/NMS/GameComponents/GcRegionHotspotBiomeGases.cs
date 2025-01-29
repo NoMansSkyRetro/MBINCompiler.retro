@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2471F8D3AEC4B278, NameHash = 0xE49B93C5)]
+    [NMS(GUID = 0xE33915D86194E055, NameHash = 0xE49B93C5)]
     public class GcRegionHotspotBiomeGases : NMSTemplate
     {
         [NMS(Index = 0)]

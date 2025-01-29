@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x803144C8B3A28351, NameHash = 0x3D1218BD)]
+    [NMS(GUID = 0xF54AEE458E94A738, NameHash = 0x3D1218BD)]
     public class GcMissionSequenceGetToScanEvent : NMSTemplate
     {
         [NMS(Index = 4)]

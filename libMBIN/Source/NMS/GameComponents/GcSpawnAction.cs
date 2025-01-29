@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9D599C9F977D836A, NameHash = 0x83C186D2)]
+    [NMS(GUID = 0xE3F4055ABF79B516, NameHash = 0x83C186D2)]
     public class GcSpawnAction : NMSTemplate
     {
         [NMS(Index = 0)]

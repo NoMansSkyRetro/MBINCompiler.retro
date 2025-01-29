@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x22A8BC986FF384B8, NameHash = 0x3849DC69)]
+    [NMS(GUID = 0x45ECFD93BAB923E4, NameHash = 0x3849DC69)]
     public class GcExperienceDebugTriggerActionTypes : NMSTemplate
     {
-        // size: 0x37
+        // size: 0x38
         public enum ExperienceDebugTriggerActionEnum : uint {
             None,
             Drones,
@@ -60,6 +60,7 @@ namespace libMBIN.NMS.GameComponents
             EndStorm,
             SpawnBugQueen,
             RemoveAllFiendsAndBugs,
+            WaterTransition,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public ExperienceDebugTriggerActionEnum ExperienceDebugTriggerAction;

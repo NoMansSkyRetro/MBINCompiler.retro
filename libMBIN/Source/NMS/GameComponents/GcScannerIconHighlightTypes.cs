@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x34F3912D22FD83AB, NameHash = 0xCD6DAAA6)]
+    [NMS(GUID = 0x4266A620F518DDB7, NameHash = 0xCD6DAAA6)]
     public class GcScannerIconHighlightTypes : NMSTemplate
     {
         // size: 0x5

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7EAEBFC53D8634E2, NameHash = 0x395FEECB)]
+    [NMS(GUID = 0xBB312B838D60248C, NameHash = 0x395FEECB)]
     public class GcMissionConditionInSeasonalUA : NMSTemplate
     {
         [NMS(Index = 0)]

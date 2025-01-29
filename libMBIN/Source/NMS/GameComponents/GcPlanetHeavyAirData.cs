@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9B14EDCCD9AFFD2A, NameHash = 0xF2CCFFA0)]
+    [NMS(GUID = 0x765B04254880C554, NameHash = 0xF2CCFFA0)]
     public class GcPlanetHeavyAirData : NMSTemplate
     {
         [NMS(Index = 1, Size = 0x5)]

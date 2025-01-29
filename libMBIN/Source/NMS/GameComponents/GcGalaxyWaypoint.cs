@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF972F2C454624D8C, NameHash = 0xF59D530C)]
+    [NMS(GUID = 0xFFCDC63864F6E542, NameHash = 0xF59D530C)]
     public class GcGalaxyWaypoint : NMSTemplate
     {
         [NMS(Index = 2)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA96E4896558B51C1, NameHash = 0xE1F664A6)]
+    [NMS(GUID = 0x55FD426A97A3832F, NameHash = 0xE1F664A6)]
     public class GcPlayerSpawnStateData : NMSTemplate
     {
         [NMS(Index = 10)]

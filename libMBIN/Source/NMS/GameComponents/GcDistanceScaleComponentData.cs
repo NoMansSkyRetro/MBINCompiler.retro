@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x97C9FEF84459C10F, NameHash = 0x545566B9)]
+    [NMS(GUID = 0xA1DA53FCD1E925DC, NameHash = 0x545566B9)]
     public class GcDistanceScaleComponentData : NMSTemplate
     {
         [NMS(Index = 3)]

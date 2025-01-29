@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x24F098D345F57C65, NameHash = 0xC8C9F116)]
+    [NMS(GUID = 0x657B086EF8298EB5, NameHash = 0xC8C9F116)]
     public class GcMissionSequenceCloseMenu : NMSTemplate
     {
         [NMS(Index = 2)]

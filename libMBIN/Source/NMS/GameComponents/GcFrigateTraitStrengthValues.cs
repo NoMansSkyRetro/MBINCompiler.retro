@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAB803B103230EE7F, NameHash = 0xD56F3515)]
+    [NMS(GUID = 0xEFE305CBF4E4992B, NameHash = 0xD56F3515)]
     public class GcFrigateTraitStrengthValues : NMSTemplate
     {
         [NMS(Index = 1)]

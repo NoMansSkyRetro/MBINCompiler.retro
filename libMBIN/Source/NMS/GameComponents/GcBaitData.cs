@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x73919151F7278A3A, NameHash = 0xC12B753A)]
+    [NMS(GUID = 0x5036C433C883B049, NameHash = 0xC12B753A)]
     public class GcBaitData : NMSTemplate
     {
         [NMS(Index = 0)]

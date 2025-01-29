@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6FE548A6019F0E3C, NameHash = 0xAC316DD4)]
+    [NMS(GUID = 0xFE05663DB80856AA, NameHash = 0xAC316DD4)]
     public class GcDifficultyInventoryStackSizeOptionData : NMSTemplate
     {
         [NMS(Index = 3, Size = 0xD, EnumType = typeof(GcInventoryStackSizeGroup.InventoryStackSizeGroupEnum))]

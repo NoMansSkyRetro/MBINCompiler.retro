@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x581BD1663F042826, NameHash = 0x459CBCAF)]
+    [NMS(GUID = 0x391F5A1BA3ECB53F, NameHash = 0x459CBCAF)]
     public class GcMissionConditionHasAnySettlementBuildingInProgress : NMSTemplate
     {
         [NMS(Index = 0)]

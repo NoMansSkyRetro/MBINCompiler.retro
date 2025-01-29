@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEA60AAF299570D8C, NameHash = 0xC5AD54C6)]
+    [NMS(GUID = 0x1F555C299AC0D791, NameHash = 0xC5AD54C6)]
     public class GcRewardFillInventoryWithBrokenSlots : NMSTemplate
     {
         [NMS(Index = 3)]

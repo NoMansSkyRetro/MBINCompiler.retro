@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD8AD71C286DECFF3, NameHash = 0x24A858F2)]
+    [NMS(GUID = 0xCD77462CB50E896D, NameHash = 0x24A858F2)]
     public class GcPetBehaviours : NMSTemplate
     {
         // size: 0x1C

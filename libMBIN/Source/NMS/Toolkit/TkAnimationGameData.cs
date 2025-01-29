@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xD532F0F507713BDA, NameHash = 0xFC7077C2)]
+    [NMS(GUID = 0x1857D80E0D173CE6, NameHash = 0xFC7077C2)]
     public class TkAnimationGameData : NMSTemplate
     {
         // size: 0x3

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5117881284BBB64D, NameHash = 0x86999DB6)]
+    [NMS(GUID = 0x257F64DC69CF530F, NameHash = 0x86999DB6)]
     public class GcShipAIAttackData : NMSTemplate
     {
         [NMS(Index = 0)]

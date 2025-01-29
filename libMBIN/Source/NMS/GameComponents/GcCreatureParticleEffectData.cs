@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2D405B48D2BC470C, NameHash = 0x3C48FCCD)]
+    [NMS(GUID = 0x989AF9E290CCEA47, NameHash = 0x3C48FCCD)]
     public class GcCreatureParticleEffectData : NMSTemplate
     {
         [NMS(Index = 2)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x4466DA55A3C74D9F, NameHash = 0x67952ED4)]
+    [NMS(GUID = 0x9E88471A92F39B97, NameHash = 0x67952ED4)]
     public class TkControllerButtonLookup : NMSTemplate
     {
         [NMS(Index = 1)]

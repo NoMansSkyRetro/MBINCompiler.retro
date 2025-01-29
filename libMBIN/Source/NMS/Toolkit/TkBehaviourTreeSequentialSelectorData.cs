@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xD65DA5CDBAC707E0, NameHash = 0x22976703)]
+    [NMS(GUID = 0x1CD16BE21C48ACC5, NameHash = 0x22976703)]
     public class TkBehaviourTreeSequentialSelectorData : NMSTemplate
     {
         [NMS(Index = 3)]
