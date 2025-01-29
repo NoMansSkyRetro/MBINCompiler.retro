@@ -40,24 +40,24 @@ namespace MBINCompiler {
         }
     }
 
-    internal class ExmlException : CompilerException {
-        private const string DEFAULT_MESSAGE = "An EXML exception has occurred!";
+    internal class MxmlException : CompilerException {
+        private const string DEFAULT_MESSAGE = "An MXML exception has occurred!";
 
         public new NMSTemplate Data { get; private set; }
 
-        public ExmlException()                                                                              : this( DEFAULT_MESSAGE, null          , ""      , null ) { }
-        public ExmlException( string message )                                                              : this( message        , null          , ""      , null ) { }
-        public ExmlException(                 Exception innerException )                                    : this( DEFAULT_MESSAGE, innerException, ""      , null ) { }
-        public ExmlException( string message, Exception innerException )                                    : this( message        , innerException, ""      , null ) { }
-        public ExmlException( string message,                           string fileName )                   : this( message        , null          , fileName, null ) { }
-        public ExmlException( string message,                                            NMSTemplate data ) : this( message        , null          , ""      , data ) { }
-        public ExmlException( string message,                           string fileName, NMSTemplate data ) : this( message        , null          , fileName, null ) { }
-        public ExmlException(                 Exception innerException, string fileName )                   : this( DEFAULT_MESSAGE, innerException, fileName, null ) { }
-        public ExmlException(                 Exception innerException,                  NMSTemplate data ) : this( DEFAULT_MESSAGE, innerException, ""      , data ) { }
-        public ExmlException(                 Exception innerException, string fileName, NMSTemplate data ) : this( DEFAULT_MESSAGE, innerException, fileName, data ) { }
-        public ExmlException( string message, Exception innerException, string fileName )                   : this( message        , innerException, fileName, null ) { }
-        public ExmlException( string message, Exception innerException,                  NMSTemplate data ) : this( message        , innerException, ""      , data ) { }
-        public ExmlException( string message, Exception innerException, string fileName, NMSTemplate data ) : base( message        , innerException, fileName       ) {
+        public MxmlException()                                                                              : this( DEFAULT_MESSAGE, null          , ""      , null ) { }
+        public MxmlException( string message )                                                              : this( message        , null          , ""      , null ) { }
+        public MxmlException(                 Exception innerException )                                    : this( DEFAULT_MESSAGE, innerException, ""      , null ) { }
+        public MxmlException( string message, Exception innerException )                                    : this( message        , innerException, ""      , null ) { }
+        public MxmlException( string message,                           string fileName )                   : this( message        , null          , fileName, null ) { }
+        public MxmlException( string message,                                            NMSTemplate data ) : this( message        , null          , ""      , data ) { }
+        public MxmlException( string message,                           string fileName, NMSTemplate data ) : this( message        , null          , fileName, null ) { }
+        public MxmlException(                 Exception innerException, string fileName )                   : this( DEFAULT_MESSAGE, innerException, fileName, null ) { }
+        public MxmlException(                 Exception innerException,                  NMSTemplate data ) : this( DEFAULT_MESSAGE, innerException, ""      , data ) { }
+        public MxmlException(                 Exception innerException, string fileName, NMSTemplate data ) : this( DEFAULT_MESSAGE, innerException, fileName, data ) { }
+        public MxmlException( string message, Exception innerException, string fileName )                   : this( message        , innerException, fileName, null ) { }
+        public MxmlException( string message, Exception innerException,                  NMSTemplate data ) : this( message        , innerException, ""      , data ) { }
+        public MxmlException( string message, Exception innerException, string fileName, NMSTemplate data ) : base( message        , innerException, fileName       ) {
             this.Data = data;
         }
     }

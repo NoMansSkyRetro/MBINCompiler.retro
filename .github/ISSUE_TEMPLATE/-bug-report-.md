@@ -13,7 +13,7 @@ _When you're done, then delete any instructions, example text and irrelevant sec
 _Please select the project on the sidebar where you encountered the problem._
 
 **Things to check before you raise an issue**
-- Make sure that you have looked at the log file and determined that the issue is in fact an issue with MBINCompiler, and not an issue with the exml file being modified incorrect etc.
+- Make sure that you have looked at the log file and determined that the issue is in fact an issue with MBINCompiler, and not an issue with the mxml file being modified incorrect etc.
 - Check to see that an issue has not already been raised of the same manner.
 - If there has been a recent update, check to see for any issues marked `[UPDATE]` to see if the struct you are having issues with is in fact supported yet or not. If not ticked off, please do not post an issue.
 **IMPORTANT**: If there was a recent release and there is no issue with the update info, please do not raise an issue about single broken files. It may take some time for this issue to be created, so please be patient. Opening multiple issues will not help and they will just be closed.

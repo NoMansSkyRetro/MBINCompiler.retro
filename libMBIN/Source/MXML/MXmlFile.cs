@@ -8,9 +8,9 @@ using System.Xml.Serialization;
 
 namespace libMBIN
 {
-    public static class EXmlFile
+    public static class MXmlFile
     {
-        private static readonly XmlSerializer Serializer = new XmlSerializer(typeof(EXmlData));
+        private static readonly XmlSerializer Serializer = new XmlSerializer(typeof(MXmlData));
         private static readonly XmlSerializerNamespaces Namespaces = new XmlSerializerNamespaces(new[] { new XmlQualifiedName("", "") });
 
         private static XmlReaderSettings readerSettings = new XmlReaderSettings();
@@ -65,13 +65,13 @@ namespace libMBIN
         }
 
         private static NMSTemplate ReadTemplateFromXmlReader( XmlReader reader, out string templateName ) {
-            EXmlData root = (EXmlData) Serializer.Deserialize( reader );
+            MXmlData root = (MXmlData) Serializer.Deserialize( reader );
             templateName = root?.Template;
-            NMSTemplate rootTemplate = NMSTemplate.DeserializeEXml( root );
+            NMSTemplate rootTemplate = NMSTemplate.DeserializeMXml( root );
             return rootTemplate;
         }
 
-        public static EXmlData ReadExmlDataFromString(string xml)
+        public static MXmlData ReadMXmlDataFromString(string xml)
         {
             var origCulture = Thread.CurrentThread.CurrentCulture;
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
@@ -80,7 +80,7 @@ namespace libMBIN
             using (var reader = new StringReader(xml))
             using (var xmlReader = XmlReader.Create(reader, readerSettings))
             {
-                var data = (EXmlData)Serializer.Deserialize(xmlReader);
+                var data = (MXmlData)Serializer.Deserialize(xmlReader);
                 Thread.CurrentThread.CurrentCulture = origCulture;
                 return data;
             }
@@ -90,13 +90,13 @@ namespace libMBIN
         /// Writes the NMSTemplate object to an .mxml file.
         /// </summary>
         /// <param name="outputpath">The location to write the .mxml file.</param>
-        /// <param name="hideVersionInfo">version info is written to the EXML file.</param>
+        /// <param name="hideVersionInfo">version info is written to the MXML file.</param>
         public static string WriteTemplate(NMSTemplate template) => WriteTemplate(template, false);
         /// <summary>
         /// Writes the NMSTemplate object to an .mxml file.
         /// </summary>
         /// <param name="outputpath">The location to write the .mxml file.</param>
-        /// <param name="hideVersionInfo">If true, version info is not written to the EXML file.</param>
+        /// <param name="hideVersionInfo">If true, version info is not written to the MXML file.</param>
         public static string WriteTemplate(NMSTemplate template, bool hideVersionInfo)
         {
             var origCulture = Thread.CurrentThread.CurrentCulture;
@@ -114,7 +114,7 @@ namespace libMBIN
                 var ver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
                 string str_ver = $"{ver.Major}.{ver.Minor:00}.{ver.Build}.{ver.Revision}";
                 if ( !hideVersionInfo ) xmlTextWriter.WriteComment($"File created using MBINCompiler version ({str_ver})");
-                var data = template.SerializeEXml(false);
+                var data = template.SerializeMXml(false);
                 Serializer.Serialize(xmlTextWriter, data, Namespaces);
                 xmlTextWriter.Flush();
 
