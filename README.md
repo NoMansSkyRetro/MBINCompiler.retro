@@ -8,22 +8,20 @@ _**For Developers:** You can download a precompiled DLL or get the libMBIN sourc
 
 [DOWNLOAD LATEST RELEASE](../../releases)  
 
-**PLEASE NOTE:** MBINCompiler requires .NET 6 to run. If you do not have this you can download is [here](https://dotnet.microsoft.com/download/dotnet/6.0/runtime)
+** PLEASE NOTE:** MBINCompiler requires .NET 6 to run. If you do not have this you can download is [here](https://dotnet.microsoft.com/download/dotnet/6.0/runtime)
 Select an appropriate download under the the "Run desktop apps" set of downloads
-
-**ALSO NOTE:** As of the Worlds part 2 update, MBINCompiler will no longer generate or handle EXML files, and will instead handle MXML files. This is to (finally) get MBINCompiler producing files in the same format as NMS expects. For modding puposes the MXML are not the actual files you need to place in a mod directory. To do this, you can rename the MXML file to EXML.
 
 Each release contains the following files:
 
 - libMBIN.dll: A library which can be used by other applications to directly interface with the serilialised data contained within .MBIN files.
-- MBINCompiler.exe: The main application used to convert .MBIN file to .MXML files and back again. Drag a file or folder of files onto the exe and away you go!
+- MBINCompiler.exe: The main application used to convert .MBIN file to .EXML files and back again. Drag a file or folder of files onto the exe and away you go!
 - mapping.json: A .json file which contains a mapping to de-obfuscate the save file .json used by the game.
 - report.json: A report generated which indicated which of the test files passed or failed the automated tests. This is just for reporting purposes.
 
 ## DESCRIPTION
-A modding tool for the game: [No Man's Sky](https://www.nomanssky.com/) that converts the game's MBIN data files (binary) into human-readable MXML files (text) that can be edited with any text editor and then converted back again for use in a modded game.
+A modding tool for the game: [No Man's Sky](https://www.nomanssky.com/) that converts the game's MBIN data files (binary) into human-readable EXML files (text) that can be edited with any text editor and then converted back again for use in a modded game.
 
-Various MBIN files have different data formats. MBINCompiler maps all of these formats to be able to understand how to read the binary data from file, convert it to MXML and vice versa.
+Various MBIN files have different data formats. MBINCompiler maps all of these formats to be able to understand how to read the binary data from file, convert it to EXML and vice versa.
 
 **Please note** that every update to the game breaks any number of MBIN formats. This requires updating MBINCompiler for each game update and depending on the size and frequency of updates, can take some time so please be patient as new game updates roll out.
 
@@ -31,7 +29,7 @@ Because each version of MBINCompiler is tied to a specific version of NMS, it is
 
 If you need to find out what version of MBINCompiler to download for a particular MBIN file, there is a `--version` command line option that will tell you what version the MBIN file was compiled with. You can get more information about the command line options in the [User Documentation](https://github.com/monkeyman192/MBINCompiler/wiki/User-Documentation).
 
-If you are a developer, you can access all the functionality that MBINCompiler uses for it's own command line interface by downloading or compiling the libMBIN.dll and linking it in your own application. The API makes things like MBIN/MXML de/serialization acessible as well as all the MBIN structure definitions. The structures are C# classes that map the mbin data as public fields, so they can be used in code like any other class.
+If you are a developer, you can access all the functionality that MBINCompiler uses for it's own command line interface by downloading or compiling the libMBIN.dll and linking it in your own application. The API makes things like MBIN/EXML de/serialization acessible as well as all the MBIN structure definitions. The structures are C# classes that map the mbin data as public fields, so they can be used in code like any other class.
 
 If you need help, would like to help or just interested in NMS modding, check out the [No Man's Sky Modding Server](https://discordapp.com/invite/22ZAU9H) on discord chat.
 
@@ -46,11 +44,11 @@ Before you decompile any MBIN files you must know how to unpack the game assets.
 To use your recompiled MBIN files, you must know how to enable mods, install them and how to repack assets into your own mods.
 
 To create a modified MBIN:  
-1) Drag the MBIN file onto the MBINCompiler.exe to create an MXML file in the same directory as the MBIN file.  
+1) Drag the MBIN file onto the MBINCompiler.exe to create an EXML file in the same directory as the MBIN file.  
 _The exe does not need to be in the same directory._
-2) Open the MXML file with a text, xml or code editor. Make your changes and save.  
+2) Open the EXML file with a text, xml or code editor. Make your changes and save.  
 _[Notepad++](https://notepad-plus-plus.org/) is good._
-3) Drag the MXML file onto the MBINCompiler.exe to recompile back to an MBIN file.
+3) Drag the EXML file onto the MBINCompiler.exe to recompile back to an MBIN file.
 
 Repack your file(s) into a new mod and add to your game.
 
@@ -62,11 +60,11 @@ MBINCompiler/libMBIN are required for [AMUMSS](https://www.nexusmods.com/nomanss
 
 MBINCompiler has a number of arguments that can be called from the command line which may be useful:
 
-`MBINCompiler.exe version [<Option> ...] [<File>]` - prints the version of the MBINCompiler binary (if no arguments provided), or the version of MBINCompiler that was used to generate the .MBIN or .MXML file if the filepath to one is provided.
+`MBINCompiler.exe version [<Option> ...] [<File>]` - prints the version of the MBINCompiler binary (if no arguments provided), or the version of MBINCompiler that was used to generate the .MBIN or .EXML file if the filepath to one is provided.
 
 `MBINCompiler.exe register` - Registers the directory that the MBINCompiler.exe resides in to your system path. This allows you to call `MBINCompiler` from anywhere on your computer which is useful.
 
-`MBINCompiler.exe <path> [<path> ...]` - Converts the input path(s) from their input format (either .MBIN or .MXML) to the output format (.MBIN -> .MXML, .MXML -> .MBIN). This is the default mode.
+`MBINCompiler.exe <path> [<path> ...]` - Converts the input path(s) from their input format (either .MBIN or .EXML) to the output format (.MBIN -> .EXML, .EXML -> .MBIN). This is the default mode.
 
 There are also a number of other options that can be passed to the executable in most modes. To see all the details call `MBINCompiler.exe help` to see the help details.
 
@@ -74,10 +72,10 @@ There are also a number of other options that can be passed to the executable in
 
 If you run into errors, in most cases the errors are because:
 
-a) You made an error when editing the MXML file and it fails to recompile.
-Check if it's a problem with your file or with MBINCompiler by decompiling the vanilla MBIN to MXML and then recompling it back to MBIN to verify that it works or not. If the vanilla file recompiles fine, then it's most likely a problem with your file changes.
+a) You made an error when editing the EXML file and it fails to recompile.
+Check if it's a problem with your file or with MBINCompiler by decompiling the vanilla MBIN to EXML and then recompling it back to MBIN to verify that it works or not. If the vanilla file recompiles fine, then it's most likely a problem with your file changes.
 
-b) You are trying to use an older version of MBINCompiler with a newer version of MBIN/MXML or vice versa.  
+b) You are trying to use an older version of MBINCompiler with a newer version of MBIN/EXML or vice versa.  
 Make sure you are using the correct version of MBINCompiler for the file you are trying to process.
 
 c) MBINCompiler has yet to be updated for the current game version of the data structure used by a particular file.  

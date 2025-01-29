@@ -26,7 +26,7 @@ namespace libMBIN
                 string x = Path.GetExtension(file).ToUpper();
                 if (x == ".MXML")
                 {
-                    data = LoadMxml(file);
+                    data = LoadExml(file);
                 }
                 else if (x == ".MBIN" || x == ".PC")
                 {
@@ -69,9 +69,9 @@ namespace libMBIN
         /// </summary>
         /// <param name="path">File path to the .mxml to be loaded into memory.</param>
         /// <returns>NMSTemplate</returns>
-        public static NMSTemplate LoadMxml(string path)
+        public static NMSTemplate LoadExml(string path)
         {
-            return MXmlFile.ReadTemplate(path);
+            return EXmlFile.ReadTemplate(path);
         }
     }
 }

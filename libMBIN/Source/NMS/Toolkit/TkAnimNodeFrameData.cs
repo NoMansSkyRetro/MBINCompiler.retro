@@ -134,7 +134,7 @@ namespace libMBIN.NMS.Toolkit
                             ConvertQuat(q.W),
                         };
 
-                        // Get the drop component from the value stored in the mxml.
+                        // Get the drop component from the value stored in the exml.
                         // For more details see the comment above the DetermineDropComponent method.
                         int dropcomponent = q.dropComponent;
                         // int dropcomponent = DetermineDropComponent(convertedQ);

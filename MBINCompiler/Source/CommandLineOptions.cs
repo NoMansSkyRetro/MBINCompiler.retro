@@ -129,8 +129,7 @@ namespace MBINCompiler
 
             new Option { shortName = 'o', longName = "output-format", param = "<Type>",
                             description = "\nSpecify the type of output files to be converted to.\n" +
-                                        "<Type> can be either MBIN, MXML or EXML.\n" +
-                                        "Note that MBINCompiler will not accept EXML files as input." },
+                                        "<Type> can be either MBIN or MXML." },
 
             new Option { longName = "include", param = "<Glob Pattern>[;<Glob Pattern>...]",
                             description = "\nFilter all files to include only those that match the " +

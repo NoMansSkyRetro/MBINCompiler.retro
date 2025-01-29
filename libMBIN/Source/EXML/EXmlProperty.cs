@@ -3,7 +3,7 @@
 namespace libMBIN
 {
     [XmlType("Property")]
-    public class MXmlProperty : MXmlBase
+    public class EXmlProperty : EXmlBase
     {
         [XmlAttribute("value")]
         public string Value { get; set; }

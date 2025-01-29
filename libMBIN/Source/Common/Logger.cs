@@ -538,7 +538,7 @@ namespace libMBIN {
                     lines = string.Format(format, args).Replace("\r\n", "\n").Split(new char[] { '\n' });
                 }
                 catch {
-                    // to allow LANGUAGE MXML files to work
+                    // to allow LANGUAGE EXML files to work
                     lines = format.Replace("\r\n", "\n").Split(new char[] { '\n' });
                 }
 

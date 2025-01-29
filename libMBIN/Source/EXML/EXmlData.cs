@@ -3,7 +3,7 @@
 namespace libMBIN
 {
     [XmlType("Data")]
-    public class MXmlData : MXmlBase
+    public class EXmlData : EXmlBase
     {
         [XmlAttribute("template")]
         public string Template { get; set; }

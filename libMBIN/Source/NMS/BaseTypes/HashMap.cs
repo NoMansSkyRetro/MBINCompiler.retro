@@ -32,7 +32,7 @@ namespace libMBIN.NMS {
         }
 
         // IMPORTANT: If any further constructors are added with one argument, some code in NMSTemplate will break!
-        // See DeserializeMXml method.
+        // See DeserializeEXml method.
         public HashMap() {
             Elements = new List<T>();
         }
