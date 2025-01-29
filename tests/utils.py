@@ -9,7 +9,7 @@ import requests
 
 
 FAILED_FNAME = '_failed.txt'
-TO_EXML_FAIL = 'Failed conversion to EXML'
+TO_MXML_FAIL = 'Failed conversion to MXML'
 TO_MBIN_FAIL = 'Failed conversion to MBIN'
 SIZE_MISMATCH = 'Size mismatch'
 INCORRECT_GUID = 'Incorrect GUID'

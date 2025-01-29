@@ -4,7 +4,7 @@ using System.IO;
 namespace MBINCompiler
 {
 
-    internal enum FormatType { Unknown, MBIN, MXML }
+    internal enum FormatType { Unknown, MBIN, MXML, EXML }
 
     internal enum OverwriteMode { Prompt, Always, Never }
 

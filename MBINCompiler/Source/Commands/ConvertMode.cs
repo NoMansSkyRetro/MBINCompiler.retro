@@ -111,6 +111,7 @@ namespace MBINCompiler.Commands {
             if ( formatO != null ) {
                 OutputFormat = (formatO == "MBIN") ? FormatType.MBIN : OutputFormat;
                 OutputFormat = (formatO == "MXML") ? FormatType.MXML : OutputFormat;
+                OutputFormat = (formatO == "EXML") ? FormatType.EXML : OutputFormat;
                 if ( OutputFormat == FormatType.Unknown ) {
                     CommandLine.ShowCommandLineError( $"Invalid format specified: {formatO}" );
                     return false;
