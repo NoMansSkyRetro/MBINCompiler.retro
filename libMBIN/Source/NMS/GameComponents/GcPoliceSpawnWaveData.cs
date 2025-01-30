@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xABDE2D04E18C9569, NameHash = 0xD5360DDC)]
+    [NMS(GUID = 0xFC9D4F68D1D4D106, NameHash = 0xD5360DDC)]
     public class GcPoliceSpawnWaveData : NMSTemplate
     {
         [NMS(Index = 0)]

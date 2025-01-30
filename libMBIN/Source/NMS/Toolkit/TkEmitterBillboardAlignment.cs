@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x2738B795E1C06C20, NameHash = 0xD39E0796)]
+    [NMS(GUID = 0xFA38C9974430449, NameHash = 0xD39E0796)]
     public class TkEmitterBillboardAlignment : NMSTemplate
     {
         // size: 0x8

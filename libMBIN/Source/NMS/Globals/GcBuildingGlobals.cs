@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x79765E0C815DC0EA, NameHash = 0x1A517154)]
+    [NMS(GUID = 0x1464C222D9649237, NameHash = 0x1A517154)]
     public class GcBuildingGlobals : NMSTemplate
     {
         [NMS(Index = 0)]

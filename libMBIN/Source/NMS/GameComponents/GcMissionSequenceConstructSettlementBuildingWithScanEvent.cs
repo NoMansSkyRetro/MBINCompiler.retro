@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA43BADA39803D849, NameHash = 0x8D739B46)]
+    [NMS(GUID = 0x725A28E54B579F63, NameHash = 0x8D739B46)]
     public class GcMissionSequenceConstructSettlementBuildingWithScanEvent : NMSTemplate
     {
         [NMS(Index = 4)]

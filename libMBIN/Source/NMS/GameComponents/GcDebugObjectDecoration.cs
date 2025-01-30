@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDCE416001ECF6380, NameHash = 0xBC09F4D6)]
+    [NMS(GUID = 0x144248DF5174A0CE, NameHash = 0xBC09F4D6)]
     public class GcDebugObjectDecoration : NMSTemplate
     {
         [NMS(Index = 5)]

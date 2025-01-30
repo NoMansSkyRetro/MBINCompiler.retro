@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x15D8973DA4EF9716, NameHash = 0xCB7DBF48)]
+    [NMS(GUID = 0x75DFB0F0C3570AA3, NameHash = 0xCB7DBF48)]
     public class GcSeasonEndRewardsRedemptionState : NMSTemplate
     {
         // size: 0x4

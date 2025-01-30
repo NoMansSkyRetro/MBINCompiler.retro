@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x63F32414B145C38C, NameHash = 0x4FD33F95)]
+    [NMS(GUID = 0xEA031959CA3294D4, NameHash = 0x4FD33F95)]
     public class GcActiveSurvivalBarsDifficultyOption : NMSTemplate
     {
         // size: 0x4

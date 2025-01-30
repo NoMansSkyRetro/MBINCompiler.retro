@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x871FBE2D8A78D352, NameHash = 0x792E9B30)]
+    [NMS(GUID = 0xCC45533FEC6886DA, NameHash = 0x792E9B30)]
     public class TkAnimMaskBone : NMSTemplate
     {
         [NMS(Index = 1)]

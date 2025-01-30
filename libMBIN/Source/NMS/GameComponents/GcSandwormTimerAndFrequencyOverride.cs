@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x901B78EC034FCAF5, NameHash = 0x57B3D6E5)]
+    [NMS(GUID = 0x91471FDC92CC33E8, NameHash = 0x57B3D6E5)]
     public class GcSandwormTimerAndFrequencyOverride : NMSTemplate
     {
         [NMS(Index = 0)]

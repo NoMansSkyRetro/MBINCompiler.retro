@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD93B3EE5F54FCEDF, NameHash = 0xA1DFF0E5)]
+    [NMS(GUID = 0x744354C2C9570001, NameHash = 0xA1DFF0E5)]
     public class GcGalaxyStarAttributesData : NMSTemplate
     {
         [NMS(Index = 6, Size = 0x10)]
@@ -27,9 +27,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x19C */ public GcGalaxyStarTypes Type;
         [NMS(Index = 10)]
         /* 0x1A0 */ public bool AbandonedSystem;
+        [NMS(Index = 14)]
+        /* 0x1A1 */ public bool IsGasGiantSystem;
+        [NMS(Index = 13)]
+        /* 0x1A2 */ public bool IsGiantSystem;
         [NMS(Index = 11)]
-        /* 0x1A1 */ public bool IsPirateSystem;
+        /* 0x1A3 */ public bool IsPirateSystem;
         [NMS(Index = 12)]
-        /* 0x1A2 */ public bool IsSystemSafe;
+        /* 0x1A4 */ public bool IsSystemSafe;
     }
 }

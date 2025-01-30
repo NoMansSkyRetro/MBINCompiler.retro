@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCFCB61BDC2999525, NameHash = 0x2E760FD1)]
+    [NMS(GUID = 0x269A6881DC8F0A2A, NameHash = 0x2E760FD1)]
     public class GcBlockedMessage : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3DBC6B459C9AD900, NameHash = 0x797E4FFC)]
+    [NMS(GUID = 0xB750C117DDA312FF, NameHash = 0x797E4FFC)]
     public class GcMissionConditionOnPlanetWithSandwormsOverriden : NMSTemplate
     {
         [NMS(Index = 1)]

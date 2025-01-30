@@ -3,24 +3,24 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xCC719BC9A54E75DE, NameHash = 0xE9E49954)]
+    [NMS(GUID = 0x309B0C1094EFDDC3, NameHash = 0xE9E49954)]
     public class TkNGuiEditorStyleData : NMSTemplate
     {
-        [NMS(Index = 4, Size = 0x5D, EnumType = typeof(TkNGuiEditorGraphicType.NGuiEditorGraphicEnum))]
+        [NMS(Index = 4, Size = 0x5F, EnumType = typeof(TkNGuiEditorGraphicType.NGuiEditorGraphicEnum))]
         /* 0x0000 */ public TkNGuiGraphicStyle[] GraphicStyles;
         [NMS(Index = 5, Size = 0xF, EnumType = typeof(TKNGuiEditorTextType.NGuiEditorTextEnum))]
-        /* 0xBFD0 */ public TkNGuiTextStyle[] TextStyles;
-        [NMS(Index = 1, Size = 0x8)]
-        /* 0xD0B0 */ public TkNGuiEditorStyleColour[] SkinColours;
+        /* 0xD5C0 */ public TkNGuiTextStyle[] TextStyles;
+        [NMS(Index = 1, Size = 0x8, MxmlName = "Skin Colours")]
+        /* 0xE6A0 */ public TkNGuiEditorStyleColour[] SkinColours;
         [NMS(Index = 3)]
-        /* 0xD530 */ public VariableSizeString Font;
+        /* 0xEB20 */ public VariableSizeString Font;
         [NMS(Index = 7)]
-        /* 0xD540 */ public List<TkNGuiLayoutShortcut> LayoutShortcuts;
+        /* 0xEB30 */ public List<TkNGuiLayoutShortcut> LayoutShortcuts;
         [NMS(Index = 6)]
-        /* 0xD550 */ public List<float> SnapSettings;
-        [NMS(Index = 0, Size = 0x3E, EnumType = typeof(TKNGuiEditorComponentSize.NGuiEditorComponentSizeEnum))]
-        /* 0xD560 */ public float[] Sizes;
-        [NMS(Index = 2)]
-        /* 0xD658 */ public float SkinFontHeight;
+        /* 0xEB40 */ public List<float> SnapSettings;
+        [NMS(Index = 0, Size = 0x41, EnumType = typeof(TKNGuiEditorComponentSize.NGuiEditorComponentSizeEnum))]
+        /* 0xEB50 */ public float[] Sizes;
+        [NMS(Index = 2, MxmlName = "Skin Font Height")]
+        /* 0xEC54 */ public float SkinFontHeight;
     }
 }

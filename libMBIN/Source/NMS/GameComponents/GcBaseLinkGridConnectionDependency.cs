@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7D80E159B5E345C, NameHash = 0x2A3874B9)]
+    [NMS(GUID = 0x3E2B5046AAE8FE3C, NameHash = 0x2A3874B9)]
     public class GcBaseLinkGridConnectionDependency : NMSTemplate
     {
         [NMS(Index = 0)]

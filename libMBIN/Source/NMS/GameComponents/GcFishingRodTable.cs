@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEA103B6799D7024D, NameHash = 0x7A1015F7)]
+    [NMS(GUID = 0x3CB14EDBFD258CA0, NameHash = 0x7A1015F7)]
     public class GcFishingRodTable : NMSTemplate
     {
         [NMS(Index = 0)]

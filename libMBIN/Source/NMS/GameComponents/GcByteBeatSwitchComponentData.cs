@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAE662DF29C9D0C8A, NameHash = 0x1E67FAFC)]
+    [NMS(GUID = 0x9518309039D3F7AF, NameHash = 0x1E67FAFC)]
     public class GcByteBeatSwitchComponentData : NMSTemplate
     {
         [NMS(Index = 0)]

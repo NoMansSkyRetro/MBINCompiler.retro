@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE2EECC3116ACD89D, NameHash = 0x171D4081)]
+    [NMS(GUID = 0xEDE688BDEED25942, NameHash = 0x171D4081)]
     public class TkPaletteTexture : NMSTemplate
     {
         // size: 0x8
@@ -16,7 +16,9 @@ namespace libMBIN.NMS.Toolkit
         }
         [NMS(Index = 1)]
         /* 0x0 */ public ColourAltEnum ColourAlt;
-        // size: 0x3F
+        [NMS(Index = 2)]
+        /* 0x4 */ public int Index;
+        // size: 0x40
         public enum PaletteEnum : uint {
             Grass,
             Plant,
@@ -81,8 +83,9 @@ namespace libMBIN.NMS.Toolkit
             SpaceStationBase,
             SpaceStationAlt,
             SpaceStationLights,
+            DeepWaterBioLum,
         }
         [NMS(Index = 0)]
-        /* 0x4 */ public PaletteEnum Palette;
+        /* 0x8 */ public PaletteEnum Palette;
     }
 }

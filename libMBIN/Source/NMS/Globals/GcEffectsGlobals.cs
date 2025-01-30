@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x7D2763CF74F70C28, NameHash = 0x8D8BC974)]
+    [NMS(GUID = 0xC6497DC8F502AD74, NameHash = 0x8D8BC974)]
     public class GcEffectsGlobals : NMSTemplate
     {
         [NMS(Index = 2)]

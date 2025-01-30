@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF189140C460B6E65, NameHash = 0x40A9FF42)]
+    [NMS(GUID = 0xAFDB5ABECFCA388F, NameHash = 0x40A9FF42)]
     public class GcRewardPlanetSubstance : NMSTemplate
     {
         [NMS(Index = 1)]

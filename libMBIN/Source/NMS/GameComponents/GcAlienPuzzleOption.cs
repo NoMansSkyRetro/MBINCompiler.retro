@@ -3,50 +3,56 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x342931E8595F1383, NameHash = 0x981A51EE)]
+    [NMS(GUID = 0x6C1ED4D6AF6647D3, NameHash = 0x981A51EE)]
     public class GcAlienPuzzleOption : NMSTemplate
     {
-        [NMS(Index = 19)]
+        [NMS(Index = 22)]
         /* 0x00 */ public NMSString0x20A EnablingConditionId;
         [NMS(Index = 0)]
         /* 0x20 */ public NMSString0x20A Name;
-        [NMS(Index = 13)]
+        [NMS(Index = 15)]
         /* 0x40 */ public NMSString0x20A NextInteraction;
         [NMS(Index = 1)]
         /* 0x60 */ public NMSString0x20A Text;
-        [NMS(Index = 16)]
-        /* 0x80 */ public NMSString0x20A TitleOverride;
-        [NMS(Index = 3)]
-        /* 0xA0 */ public NMSString0x10 Cost;
         [NMS(Index = 18)]
-        /* 0xB0 */ public List<NMSTemplate> EnablingConditions;
+        /* 0x80 */ public NMSString0x20A TitleOverride;
         [NMS(Index = 4)]
-        /* 0xC0 */ public List<NMSString0x10> Rewards;
-        [NMS(Index = 15)]
-        /* 0xD0 */ public GcAudioWwiseEvents AudioEvent;
-        [NMS(Index = 17)]
-        /* 0xD4 */ public GcMissionConditionTest EnablingConditionTest;
+        /* 0xA0 */ public NMSString0x10 Cost;
+        [NMS(Index = 21)]
+        /* 0xB0 */ public List<NMSTemplate> EnablingConditions;
         [NMS(Index = 5)]
-        /* 0xD8 */ public GcAlienMood Mood;
-        [NMS(Index = 6)]
-        /* 0xDC */ public GcNPCPropType Prop;
-        [NMS(Index = 20)]
-        /* 0xE0 */ public GcWordCategoryTableEnum WordCategory;
-        [NMS(Index = 10)]
-        /* 0xE4 */ public bool DisplayCost;
-        [NMS(Index = 2)]
-        /* 0xE5 */ public bool IsAlien;
+        /* 0xC0 */ public List<NMSString0x10> Rewards;
         [NMS(Index = 9)]
-        /* 0xE6 */ public bool KeepOpen;
-        [NMS(Index = 12)]
-        /* 0xE7 */ public bool MarkInteractionComplete;
+        /* 0xD0 */ public GcAlienRace AlienWordSpecificRace;
+        [NMS(Index = 17)]
+        /* 0xD4 */ public GcAudioWwiseEvents AudioEvent;
+        [NMS(Index = 20)]
+        /* 0xD8 */ public GcMissionConditionTest EnablingConditionTest;
+        [NMS(Index = 6)]
+        /* 0xDC */ public GcAlienMood Mood;
         [NMS(Index = 7)]
-        /* 0xE8 */ public bool OverrideWithAlienWord;
-        [NMS(Index = 8)]
-        /* 0xE9 */ public bool ReseedInteractionOnUse;
-        [NMS(Index = 14)]
-        /* 0xEA */ public bool SelectedOnBackOut;
+        /* 0xE0 */ public GcNPCPropType Prop;
+        [NMS(Index = 3)]
+        /* 0xE4 */ public GcAlienRace ResponseLanguageOverride;
+        [NMS(Index = 23)]
+        /* 0xE8 */ public GcWordCategoryTableEnum WordCategory;
+        [NMS(Index = 12)]
+        /* 0xEC */ public bool DisplayCost;
+        [NMS(Index = 2)]
+        /* 0xED */ public bool IsAlien;
         [NMS(Index = 11)]
-        /* 0xEB */ public bool TruncateCost;
+        /* 0xEE */ public bool KeepOpen;
+        [NMS(Index = 14)]
+        /* 0xEF */ public bool MarkInteractionComplete;
+        [NMS(Index = 8)]
+        /* 0xF0 */ public bool OverrideWithAlienWord;
+        [NMS(Index = 10)]
+        /* 0xF1 */ public bool ReseedInteractionOnUse;
+        [NMS(Index = 16)]
+        /* 0xF2 */ public bool SelectedOnBackOut;
+        [NMS(Index = 19)]
+        /* 0xF3 */ public bool SkipStraightToOptionsOnNextPuzzle;
+        [NMS(Index = 13)]
+        /* 0xF4 */ public bool TruncateCost;
     }
 }

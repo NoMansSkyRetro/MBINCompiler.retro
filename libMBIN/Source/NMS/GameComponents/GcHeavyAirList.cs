@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x42B96E6C683A52C7, NameHash = 0x8CFEB3CA)]
+    [NMS(GUID = 0x4CED9B807DAB2670, NameHash = 0x8CFEB3CA)]
     public class GcHeavyAirList : NMSTemplate
     {
         [NMS(Index = 0)]

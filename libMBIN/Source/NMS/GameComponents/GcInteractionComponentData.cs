@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6D4F402452DAD025, NameHash = 0xBE246A5)]
+    [NMS(GUID = 0x5E245D1D555A19F6, NameHash = 0xBE246A5)]
     public class GcInteractionComponentData : NMSTemplate
     {
         [NMS(Index = 3)]
@@ -87,19 +87,21 @@ namespace libMBIN.NMS.GameComponents
         /* 0x346 */ public bool InteractInvertFace;
         [NMS(Index = 37)]
         /* 0x347 */ public bool InWorldUIUseCameraUp;
-        [NMS(Index = 8)]
-        /* 0x348 */ public bool RepeatInteraction;
-        [NMS(Index = 30)]
-        /* 0x349 */ public bool ReseedAfterRewardSuccess;
-        [NMS(Index = 7)]
-        /* 0x34A */ public bool SecondaryMeshAlwaysVisible;
-        [NMS(Index = 9)]
-        /* 0x34B */ public bool UseInteractCamera;
-        [NMS(Index = 2)]
-        /* 0x34C */ public bool UseIntermediateUI;
-        [NMS(Index = 31)]
-        /* 0x34D */ public bool UsePersonalPersistentBuffer;
         [NMS(Index = 40)]
-        /* 0x34E */ public bool UseUnlockedInteractionIfMaintDone;
+        /* 0x348 */ public bool OnlyAvailableInAbandonedMode;
+        [NMS(Index = 8)]
+        /* 0x349 */ public bool RepeatInteraction;
+        [NMS(Index = 30)]
+        /* 0x34A */ public bool ReseedAfterRewardSuccess;
+        [NMS(Index = 7)]
+        /* 0x34B */ public bool SecondaryMeshAlwaysVisible;
+        [NMS(Index = 9)]
+        /* 0x34C */ public bool UseInteractCamera;
+        [NMS(Index = 2)]
+        /* 0x34D */ public bool UseIntermediateUI;
+        [NMS(Index = 31)]
+        /* 0x34E */ public bool UsePersonalPersistentBuffer;
+        [NMS(Index = 41)]
+        /* 0x34F */ public bool UseUnlockedInteractionIfMaintDone;
     }
 }

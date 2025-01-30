@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x39B9A7A9078A0304, NameHash = 0xE4938804)]
+    [NMS(GUID = 0x892424A3686B355D, NameHash = 0xE4938804)]
     public class GcTechnologyRarity : NMSTemplate
     {
         // size: 0x7

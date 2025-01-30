@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x383A0AC2EEDD879D, NameHash = 0x77AFB727)]
+    [NMS(GUID = 0xB488F497D9D42294, NameHash = 0x77AFB727)]
     public class GcTechnology : NMSTemplate
     {
         [NMS(Index = 10)]
@@ -27,13 +27,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C8 */ public NMSString0x10 AmmoId;
         [NMS(Index = 15)]
         /* 0x0D8 */ public List<NMSString0x10> ChargeBy;
-        [NMS(Index = 45)]
+        [NMS(Index = 46)]
         /* 0x0E8 */ public VariableSizeString DamagedDescription;
         [NMS(Index = 5)]
         /* 0x0F8 */ public VariableSizeString Description;
         [NMS(Index = 0)]
         /* 0x108 */ public NMSString0x10 ID;
-        [NMS(Index = 46)]
+        [NMS(Index = 47)]
         /* 0x118 */ public NMSString0x10 ParentTechId;
         [NMS(Index = 32)]
         /* 0x128 */ public NMSString0x10 RequiredTech;
@@ -87,23 +87,25 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2C6 */ public bool Chargeable;
         [NMS(Index = 22)]
         /* 0x2C7 */ public bool Core;
-        [NMS(Index = 48)]
+        [NMS(Index = 49)]
         /* 0x2C8 */ public bool ExclusivePrimaryStat;
-        [NMS(Index = 47)]
+        [NMS(Index = 48)]
         /* 0x2C9 */ public bool IsTemplate;
+        [NMS(Index = 45)]
+        /* 0x2CA */ public bool NeverPinnable;
         [NMS(Index = 20)]
-        /* 0x2CA */ public bool PrimaryItem;
+        /* 0x2CB */ public bool PrimaryItem;
         [NMS(Index = 24)]
-        /* 0x2CB */ public bool Procedural;
+        /* 0x2CC */ public bool Procedural;
         [NMS(Index = 23)]
-        /* 0x2CC */ public bool RepairTech;
+        /* 0x2CD */ public bool RepairTech;
         [NMS(Index = 6)]
-        /* 0x2CD */ public bool Teach;
+        /* 0x2CE */ public bool Teach;
         [NMS(Index = 21)]
-        /* 0x2CE */ public bool Upgrade;
+        /* 0x2CF */ public bool Upgrade;
         [NMS(Index = 18)]
-        /* 0x2CF */ public bool UsesAmmo;
+        /* 0x2D0 */ public bool UsesAmmo;
         [NMS(Index = 44)]
-        /* 0x2D0 */ public bool WikiEnabled;
+        /* 0x2D1 */ public bool WikiEnabled;
     }
 }

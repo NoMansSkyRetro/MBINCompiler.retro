@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBA5F10A4BCFA5402, NameHash = 0xE11F7108)]
+    [NMS(GUID = 0x7FAB7A88F032BD9F, NameHash = 0xE11F7108)]
     public class GcSpookFiendSpawnData : NMSTemplate
     {
         [NMS(Index = 3)]

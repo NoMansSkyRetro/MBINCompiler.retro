@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDCB4FAC8D44DA285, NameHash = 0x8E41A670)]
+    [NMS(GUID = 0x393A36CAB5D611A3, NameHash = 0x8E41A670)]
     public class GcTeleportEndpoint : NMSTemplate
     {
         [NMS(Index = 2)]
@@ -31,7 +31,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3C */ public NMSString0x40 Name;
         [NMS(Index = 5)]
         /* 0x7C */ public bool CalcWarpOffset;
+        [NMS(Index = 7)]
+        /* 0x7D */ public bool IsFavourite;
         [NMS(Index = 6)]
-        /* 0x7D */ public bool IsFeatured;
+        /* 0x7E */ public bool IsFeatured;
     }
 }

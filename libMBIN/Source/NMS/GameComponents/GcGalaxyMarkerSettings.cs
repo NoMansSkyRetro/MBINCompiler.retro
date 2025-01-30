@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6D667D7BB2965536, NameHash = 0xF40606FF)]
+    [NMS(GUID = 0x9FCB5196584D709, NameHash = 0xF40606FF)]
     public class GcGalaxyMarkerSettings : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x3)]

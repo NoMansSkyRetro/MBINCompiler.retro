@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCDFCCF477FD77B55, NameHash = 0x98CE7C23)]
+    [NMS(GUID = 0xD07E269F3AF7AE63, NameHash = 0x98CE7C23)]
     public class GcRoomCountRule : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD4E735E7FF4915CD, NameHash = 0xE12C13F5)]
+    [NMS(GUID = 0x1DAE3DF211012061, NameHash = 0xE12C13F5)]
     public class GcMissionConditionHasMilestoneThatCouldRewardItem : NMSTemplate
     {
         [NMS(Index = 0)]

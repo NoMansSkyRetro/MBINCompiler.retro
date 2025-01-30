@@ -1,18 +1,23 @@
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA43F86BFE792D272, NameHash = 0x695F3196)]
+    [NMS(GUID = 0xC2EC3C69A9F9E13F, NameHash = 0x695F3196)]
     public class GcPuzzleTextFlow : NMSTemplate
     {
+        [NMS(Index = 11)]
+        /* 0x00 */ public NMSString0x20A DisablingConditionId;
         [NMS(Index = 0)]
-        /* 0x00 */ public NMSString0x20A Text;
+        /* 0x20 */ public NMSString0x20A Text;
         [NMS(Index = 2)]
-        /* 0x20 */ public NMSString0x20A Title;
+        /* 0x40 */ public NMSString0x20A Title;
+        [NMS(Index = 10)]
+        /* 0x60 */ public List<NMSTemplate> DisablingConditions;
         [NMS(Index = 6)]
-        /* 0x40 */ public GcAlienRace AlienLanguageOverride;
+        /* 0x70 */ public GcAlienRace AlienLanguageOverride;
         [NMS(Index = 7)]
-        /* 0x44 */ public GcAudioWwiseEvents AudioEvent;
+        /* 0x74 */ public GcAudioWwiseEvents AudioEvent;
         // size: 0x3
         public enum BracketsOverrideEnum : uint {
             None,
@@ -20,9 +25,11 @@ namespace libMBIN.NMS.GameComponents
             NoBrackets,
         }
         [NMS(Index = 5)]
-        /* 0x48 */ public BracketsOverrideEnum BracketsOverride;
+        /* 0x78 */ public BracketsOverrideEnum BracketsOverride;
+        [NMS(Index = 9)]
+        /* 0x7C */ public GcMissionConditionTest DisablingConditionTest;
         [NMS(Index = 3)]
-        /* 0x4C */ public GcAlienMood Mood;
+        /* 0x80 */ public GcAlienMood Mood;
         // size: 0x3
         public enum TranslateAlienTextOverrideEnum : uint {
             None,
@@ -30,10 +37,10 @@ namespace libMBIN.NMS.GameComponents
             DoNotTranslate,
         }
         [NMS(Index = 4)]
-        /* 0x50 */ public TranslateAlienTextOverrideEnum TranslateAlienTextOverride;
+        /* 0x84 */ public TranslateAlienTextOverrideEnum TranslateAlienTextOverride;
         [NMS(Index = 1)]
-        /* 0x54 */ public bool IsAlien;
+        /* 0x88 */ public bool IsAlien;
         [NMS(Index = 8)]
-        /* 0x55 */ public bool ShowHologram;
+        /* 0x89 */ public bool ShowHologram;
     }
 }

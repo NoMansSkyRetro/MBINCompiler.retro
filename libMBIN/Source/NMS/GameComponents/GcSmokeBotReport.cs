@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9B44AFEA396F9ADE, NameHash = 0xDB29C43F)]
+    [NMS(GUID = 0xBD7078641B15810F, NameHash = 0xDB29C43F)]
     public class GcSmokeBotReport : NMSTemplate
     {
         [NMS(Index = 1)]

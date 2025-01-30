@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x27DD5057D4EAD44C, NameHash = 0x966BC337)]
+    [NMS(GUID = 0x9B7A4AE7E4AB5592, NameHash = 0x966BC337)]
     public class GcWeatherHazardTornadoData : NMSTemplate
     {
         [NMS(Index = 0)]

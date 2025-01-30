@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x24CDC442E48BD290, NameHash = 0xD64AF9E2)]
+    [NMS(GUID = 0x7033522B6F5D966C, NameHash = 0xD64AF9E2)]
     public class GcWFCModulePrototype : NMSTemplate
     {
         [NMS(Index = 17)]
@@ -20,7 +20,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x258 */ public GcWFCFace Up;
         [NMS(Index = 1)]
         /* 0x2D0 */ public NMSString0x10 Id;
-        [NMS(Index = 11)]
+        [NMS(Index = 11, MxmlName = "Layout Group")]
         /* 0x2E0 */ public NMSString0x10 LayoutGroup;
         [NMS(Index = 12)]
         /* 0x2F0 */ public List<GcWeightedResource> Scenes;
@@ -34,7 +34,7 @@ namespace libMBIN.NMS.GameComponents
         }
         [NMS(Index = 21)]
         /* 0x310 */ public FreighterModuleTypeEnum FreighterModuleType;
-        [NMS(Index = 3)]
+        [NMS(Index = 3, MxmlName = "Relative Probability")]
         /* 0x314 */ public float RelativeProbability;
         // size: 0x4
         public enum TerrainEditsEnum : uint {
@@ -49,19 +49,19 @@ namespace libMBIN.NMS.GameComponents
         /* 0x31C */ public NMSString0x80 Group;
         [NMS(Index = 0)]
         /* 0x39C */ public NMSString0x80 Name;
-        [NMS(Index = 10)]
+        [NMS(Index = 10, MxmlName = "Dont Rotate Model")]
         /* 0x41C */ public bool DontRotateModel;
-        [NMS(Index = 5)]
+        [NMS(Index = 5, MxmlName = "Exclude On Ground")]
         /* 0x41D */ public bool ExcludeOnGround;
-        [NMS(Index = 6)]
+        [NMS(Index = 6, MxmlName = "Exclude On Top")]
         /* 0x41E */ public bool ExcludeOnTop;
-        [NMS(Index = 9)]
+        [NMS(Index = 9, MxmlName = "Exclude Rotated Variants")]
         /* 0x41F */ public bool ExcludeRotatedVariants;
         [NMS(Index = 4)]
         /* 0x420 */ public bool Include;
         [NMS(Index = 7)]
         /* 0x421 */ public bool Indoors;
-        [NMS(Index = 8)]
+        [NMS(Index = 8, MxmlName = "Limit To One Per Level")]
         /* 0x422 */ public bool LimitToOnePerLevel;
     }
 }

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7ACC4533B6665BE9, NameHash = 0xE9977E68)]
+    [NMS(GUID = 0x673E3DE53E8ECA46, NameHash = 0xE9977E68)]
     public class GcGyroSettingsData : NMSTemplate
     {
         [NMS(Index = 17)]

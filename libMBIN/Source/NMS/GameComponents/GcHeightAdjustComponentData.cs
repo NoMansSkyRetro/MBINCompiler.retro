@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x60BB2921BB92E2E, NameHash = 0x9BFBC889)]
+    [NMS(GUID = 0x2C1153EA244B406D, NameHash = 0x9BFBC889)]
     public class GcHeightAdjustComponentData : NMSTemplate
     {
         [NMS(Index = 0)]

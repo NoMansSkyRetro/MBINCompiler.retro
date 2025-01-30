@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x24ADD8EC8EA3B9D, NameHash = 0x2A4439CA)]
+    [NMS(GUID = 0xFA6DCA08B14055CD, NameHash = 0x2A4439CA)]
     public class GcTextStyleOutline : NMSTemplate
     {
         [NMS(Index = 0)]

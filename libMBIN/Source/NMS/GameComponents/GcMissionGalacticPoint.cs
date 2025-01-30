@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x216768598125DA74, NameHash = 0xA85196CE)]
+    [NMS(GUID = 0xF349E8932D906873, NameHash = 0xA85196CE)]
     public class GcMissionGalacticPoint : NMSTemplate
     {
         // size: 0x2

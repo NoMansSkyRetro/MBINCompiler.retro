@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD8038AC56819AFA1, NameHash = 0x2402A13D)]
+    [NMS(GUID = 0xE360AC38DE0BB2B2, NameHash = 0x2402A13D)]
     public class GcGaussianCurveData : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4F97900670DEC029, NameHash = 0x6F4816B2)]
+    [NMS(GUID = 0xD4D2DA9190EE5152, NameHash = 0x6F4816B2)]
     public class GcPowerStateAction : NMSTemplate
     {
         [NMS(Index = 1)]

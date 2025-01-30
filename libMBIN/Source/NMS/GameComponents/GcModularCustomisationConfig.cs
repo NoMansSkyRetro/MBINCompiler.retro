@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD0DD6CB1BAE9E3B1, NameHash = 0xF24F11E8)]
+    [NMS(GUID = 0xF9600B4BAE7E012D, NameHash = 0xF24F11E8)]
     public class GcModularCustomisationConfig : NMSTemplate
     {
-        [NMS(Index = 8)]
+        [NMS(Index = 9)]
         /* 0x000 */ public TkModelRendererData InteractionCameraData;
         [NMS(Index = 7)]
         /* 0x0B0 */ public TkModelRendererData ModelRenderData;
@@ -29,13 +29,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x230 */ public List<GcModularCustomisationSlotConfig> Slots;
         [NMS(Index = 13)]
         /* 0x240 */ public List<GcModularCustomisationTextureGroup> TextureData;
-        [NMS(Index = 9)]
-        /* 0x250 */ public GcCustomisationCameraData CameraData;
+        [NMS(Index = 15)]
+        /* 0x250 */ public GcModularCustomisationEffectsData Effects;
         [NMS(Index = 10)]
-        /* 0x284 */ public float HologramOffset;
+        /* 0x258 */ public float HologramOffset;
         [NMS(Index = 11)]
-        /* 0x288 */ public float HologramScale;
+        /* 0x25C */ public float HologramScale;
         [NMS(Index = 0)]
-        /* 0x28C */ public bool IsEnabled;
+        /* 0x260 */ public bool IsEnabled;
+        [NMS(Index = 8)]
+        /* 0x261 */ public bool OverrideInteractionCamera;
     }
 }

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x87445091AC91B41D, NameHash = 0x9A59306B)]
+    [NMS(GUID = 0x3785C0AEAA2AE223, NameHash = 0x9A59306B)]
     public class GcDebugPlanetPos : NMSTemplate
     {
         [NMS(Index = 0)]

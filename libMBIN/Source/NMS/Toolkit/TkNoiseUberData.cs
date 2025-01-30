@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xBC6530CC576628F9, NameHash = 0xEBC6EB93)]
+    [NMS(GUID = 0x3A430A02B56CB0A6, NameHash = 0xEBC6EB93)]
     public class TkNoiseUberData : NMSTemplate
     {
         [NMS(Index = 6)]
@@ -24,13 +24,13 @@ namespace libMBIN.NMS.Toolkit
         /* 0x14 */ public int Octaves;
         [NMS(Index = 5)]
         /* 0x18 */ public float PerturbFeatures;
-        [NMS(Index = 12)]
+        [NMS(Index = 12, MxmlName = "Remap From Max")]
         /* 0x1C */ public float RemapFromMax;
-        [NMS(Index = 11)]
+        [NMS(Index = 11, MxmlName = "Remap From Min")]
         /* 0x20 */ public float RemapFromMin;
-        [NMS(Index = 14)]
+        [NMS(Index = 14, MxmlName = "Remap To Max")]
         /* 0x24 */ public float RemapToMax;
-        [NMS(Index = 13)]
+        [NMS(Index = 13, MxmlName = "Remap To Min")]
         /* 0x28 */ public float RemapToMin;
         [NMS(Index = 7)]
         /* 0x2C */ public float RidgeErosion;

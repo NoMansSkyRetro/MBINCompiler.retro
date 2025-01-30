@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEBD2B9A30628DD26, NameHash = 0x7DC88F68)]
+    [NMS(GUID = 0xC525AE2F8309FBD0, NameHash = 0x7DC88F68)]
     public class GcStatModifyType : NMSTemplate
     {
         // size: 0x3

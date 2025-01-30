@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCEE69AA1BFE4850E, NameHash = 0x295B6FBB)]
+    [NMS(GUID = 0xAA1BBCFCE987C0BD, NameHash = 0x295B6FBB)]
     public class GcCostCanFreighterMegaWarp : NMSTemplate
     {
     }

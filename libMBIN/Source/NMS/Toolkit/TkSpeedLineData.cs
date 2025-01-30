@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x98864004439E76CE, NameHash = 0x1145CAF4)]
+    [NMS(GUID = 0x640A3391BD76D62, NameHash = 0x1145CAF4)]
     public class TkSpeedLineData : NMSTemplate
     {
         [NMS(Index = 13)]
@@ -28,7 +28,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x44 */ public float MaxVisibleSpeed;
         [NMS(Index = 8)]
         /* 0x48 */ public float MinVisibleSpeed;
-        [NMS(Index = 1)]
+        [NMS(Index = 1, MxmlName = "Number Of Particles")]
         /* 0x4C */ public int NumberOfParticles;
         [NMS(Index = 2)]
         /* 0x50 */ public float Radius;

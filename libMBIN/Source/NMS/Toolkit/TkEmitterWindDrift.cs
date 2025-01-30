@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x1B9F59C95103EA24, NameHash = 0x65E2FA9B)]
+    [NMS(GUID = 0x22D1797264152CE3, NameHash = 0x65E2FA9B)]
     public class TkEmitterWindDrift : NMSTemplate
     {
         [NMS(Index = 7)]

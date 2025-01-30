@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x9D328C98F0BCF55D, NameHash = 0xDCEADB8A)]
+    [NMS(GUID = 0x6D783CE23FCAD012, NameHash = 0xDCEADB8A)]
     public class TkImGuiSettings : NMSTemplate
     {
         [NMS(Index = 7)]

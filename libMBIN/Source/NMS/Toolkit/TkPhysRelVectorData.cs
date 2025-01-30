@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xFC6B1DE697634A98, NameHash = 0xD3AB937B)]
+    [NMS(GUID = 0x117FD42A4BB0B09D, NameHash = 0xD3AB937B)]
     public class TkPhysRelVectorData : NMSTemplate
     {
         [NMS(Index = 0)]

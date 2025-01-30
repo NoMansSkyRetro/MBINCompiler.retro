@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x67F8CE2CC9703F74, NameHash = 0xB2185EDD)]
+    [NMS(GUID = 0x9E1CB867F3B8E001, NameHash = 0xB2185EDD)]
     public class GcRewardEndScanEvent : NMSTemplate
     {
         [NMS(Index = 0)]

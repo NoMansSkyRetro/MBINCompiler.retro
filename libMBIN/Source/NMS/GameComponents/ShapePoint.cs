@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB29B1EEBB6B552F9, NameHash = 0x41EC737F)]
+    [NMS(GUID = 0xB8445E2D187A8010, NameHash = 0x41EC737F)]
     public class ShapePoint : NMSTemplate
     {
         [NMS(Index = 0)]

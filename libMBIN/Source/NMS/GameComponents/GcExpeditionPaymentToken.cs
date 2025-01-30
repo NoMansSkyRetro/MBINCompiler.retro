@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x25EF5B34653E792A, NameHash = 0x8595D52D)]
+    [NMS(GUID = 0x7302372CCC808BCF, NameHash = 0x8595D52D)]
     public class GcExpeditionPaymentToken : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA041098462C7EC70, NameHash = 0x2B863F63)]
+    [NMS(GUID = 0xCF3B4EE88158EA5E, NameHash = 0x2B863F63)]
     public class GcPetVocabularyWords : NMSTemplate
     {
         // size: 0xF

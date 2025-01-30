@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAE0DC72B6B6FBED9, NameHash = 0xC28EE602)]
+    [NMS(GUID = 0xD63FCF8FDB3AC4D6, NameHash = 0xC28EE602)]
     public class GcRewardTraderFlyby : NMSTemplate
     {
         [NMS(Index = 0)]

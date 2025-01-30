@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBE5902E99DCD4975, NameHash = 0xA39B9EC2)]
+    [NMS(GUID = 0xB2FFD36ACDF15913, NameHash = 0xA39B9EC2)]
     public class GcSpawnDensity : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -10,12 +10,12 @@ namespace libMBIN
         [Obsolete( "Use EnumType instead." )]
         public string[] EnumValue { get; set; }
         public Type EnumType { get; set; }
-        public byte Padding { get; set; }
         public int Alignment { get; set; }
         public ulong GUID { get; set; }
         public uint NameHash { get; set; }
         public bool Broken { get; set; }
         public bool IDField { get; set; } = false;
         public int Index { get; set; }
+        public string MxmlName { get; set; }
     }
 }

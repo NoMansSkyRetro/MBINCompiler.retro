@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4A64EF544CBE5042, NameHash = 0x6061AFB)]
+    [NMS(GUID = 0x605867213E01AA73, NameHash = 0x6061AFB)]
     public class GcWorldUISettings : NMSTemplate
     {
         [NMS(Index = 18)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x8D3F330A59DD835A, NameHash = 0xA51FB490)]
+    [NMS(GUID = 0xCD6D8A6D161DA16C, NameHash = 0xA51FB490)]
     public class TkAnimStateMachineParameterTrigger : NMSTemplate
     {
         [NMS(Index = 0)]

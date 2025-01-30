@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3C3D17C663E1577C, NameHash = 0x37C3B9C6)]
+    [NMS(GUID = 0xFC57115368591925, NameHash = 0x37C3B9C6)]
     public class GcVibrationData : NMSTemplate
     {
         [NMS(Index = 2)]

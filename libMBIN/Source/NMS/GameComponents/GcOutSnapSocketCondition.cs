@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBC112DF5594C83C6, NameHash = 0xCEA77CD4)]
+    [NMS(GUID = 0x8119C3922E0DFE87, NameHash = 0xCEA77CD4)]
     public class GcOutSnapSocketCondition : NMSTemplate
     {
         [NMS(Index = 3)]

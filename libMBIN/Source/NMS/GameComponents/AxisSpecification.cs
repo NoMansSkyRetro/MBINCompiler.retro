@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBE02DA7E4A80CDBA, NameHash = 0x297A9843)]
+    [NMS(GUID = 0x7D03FF5D22FE8495, NameHash = 0x297A9843)]
     public class AxisSpecification : NMSTemplate
     {
         [NMS(Index = 1)]

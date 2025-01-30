@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF4F01E7B0E9E4931, NameHash = 0xB10B54EF)]
+    [NMS(GUID = 0x3241AE5D41881AC4, NameHash = 0xB10B54EF)]
     public class GcUnlockableTwitchReward : NMSTemplate
     {
         [NMS(Index = 2)]

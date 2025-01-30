@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE9EDF1DF8469B388, NameHash = 0x8830D7E)]
+    [NMS(GUID = 0xC58C7C1A42F395CD, NameHash = 0x8830D7E)]
     public class GcMissionSequenceWaitForCompletionMessage : NMSTemplate
     {
         [NMS(Index = 2)]

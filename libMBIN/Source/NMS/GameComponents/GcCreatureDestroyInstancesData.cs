@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3E80F72EEDED813D, NameHash = 0xB4DB6AA2)]
+    [NMS(GUID = 0x3AC230A527BC9ADC, NameHash = 0xB4DB6AA2)]
     public class GcCreatureDestroyInstancesData : NMSTemplate
     {
         [NMS(Index = 1)]

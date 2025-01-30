@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF99D3AA654E92C67, NameHash = 0x54BE616E)]
+    [NMS(GUID = 0x38F56B42F9F7FDA3, NameHash = 0x54BE616E)]
     public class GcFishingDifficultyOption : NMSTemplate
     {
         // size: 0x4

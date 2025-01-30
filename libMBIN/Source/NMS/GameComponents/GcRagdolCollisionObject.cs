@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9CD4E738C1281C4A, NameHash = 0x1BAB3C5B)]
+    [NMS(GUID = 0xAEF4257CADB8E8EF, NameHash = 0x1BAB3C5B)]
     public class GcRagdolCollisionObject : NMSTemplate
     {
         [NMS(Index = 1)]

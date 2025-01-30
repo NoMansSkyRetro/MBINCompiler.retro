@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF0134CF3BA5B4F8B, NameHash = 0x4B8C0F87)]
+    [NMS(GUID = 0xA4D69B0AA52386BC, NameHash = 0x4B8C0F87)]
     public class GcFishingRecord : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x100)]

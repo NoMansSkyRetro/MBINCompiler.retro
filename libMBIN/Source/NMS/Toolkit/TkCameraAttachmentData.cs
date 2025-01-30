@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xBE610CE1E59DB420, NameHash = 0x55E4C0EB)]
+    [NMS(GUID = 0x652032F29C327D35, NameHash = 0x55E4C0EB)]
     public class TkCameraAttachmentData : NMSTemplate
     {
         [NMS(Index = 0)]

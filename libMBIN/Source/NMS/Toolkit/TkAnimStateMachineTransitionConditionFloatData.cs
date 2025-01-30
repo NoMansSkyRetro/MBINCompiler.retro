@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xB17C2748189B63D2, NameHash = 0x912D00C7)]
+    [NMS(GUID = 0x96B9CAB43F5EFDF, NameHash = 0x912D00C7)]
     public class TkAnimStateMachineTransitionConditionFloatData : NMSTemplate
     {
         [NMS(Index = 0)]

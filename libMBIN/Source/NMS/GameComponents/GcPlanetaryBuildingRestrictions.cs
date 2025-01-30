@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF7D92CBED552638A, NameHash = 0x2179CD2A)]
+    [NMS(GUID = 0xF185E70538819434, NameHash = 0x2179CD2A)]
     public class GcPlanetaryBuildingRestrictions : NMSTemplate
     {
         [NMS(Index = 0)]

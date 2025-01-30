@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x78944A6E94DE7B51, NameHash = 0xE7723C85)]
+    [NMS(GUID = 0x6729EA76D468C6AB, NameHash = 0xE7723C85)]
     public class GcBuildingOverrideData : NMSTemplate
     {
         [NMS(Index = 1)]

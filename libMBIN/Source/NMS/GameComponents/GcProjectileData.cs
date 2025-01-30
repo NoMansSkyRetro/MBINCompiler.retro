@@ -4,30 +4,30 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF02FF914C4DB7B62, NameHash = 0x1119BAC1)]
+    [NMS(GUID = 0xEFAE44815889A154, NameHash = 0x1119BAC1)]
     public class GcProjectileData : NMSTemplate
     {
-        [NMS(Index = 43)]
+        [NMS(Index = 50)]
         /* 0x000 */ public Colour Colour;
-        [NMS(Index = 52)]
+        [NMS(Index = 59)]
         /* 0x010 */ public Vector3f ImpactOffset;
-        [NMS(Index = 45)]
+        [NMS(Index = 52)]
         /* 0x020 */ public Colour LightColour;
         [NMS(Index = 1)]
         /* 0x030 */ public GcResourceElement Model;
-        [NMS(Index = 53)]
+        [NMS(Index = 60)]
         /* 0x078 */ public List<GcImpactCombatEffectData> CombatEffectsOnImpact;
-        [NMS(Index = 49)]
+        [NMS(Index = 56)]
         /* 0x088 */ public NMSString0x10 CriticalImpact;
-        [NMS(Index = 48)]
+        [NMS(Index = 55)]
         /* 0x098 */ public NMSString0x10 DefaultImpact;
         [NMS(Index = 0)]
         /* 0x0A8 */ public NMSString0x10 Id;
-        [NMS(Index = 51)]
+        [NMS(Index = 58)]
         /* 0x0B8 */ public List<GcProjectileImpactData> Impacts;
         [NMS(Index = 26)]
         /* 0x0C8 */ public NMSString0x10 PlayerDamage;
-        [NMS(Index = 38)]
+        [NMS(Index = 45)]
         /* 0x0D8 */ public GcProjectileLineData CustomBulletData;
         // size: 0x8
         [Flags]
@@ -41,7 +41,7 @@ namespace libMBIN.NMS.GameComponents
             ScareCreatures = 0x20,
             ExplosionForce = 0x40,
         }
-        [NMS(Index = 46)]
+        [NMS(Index = 53)]
         /* 0x100 */ public BehaviourFlagsEnum BehaviourFlags;
         [NMS(Index = 23)]
         /* 0x104 */ public float BounceDamping;
@@ -60,15 +60,15 @@ namespace libMBIN.NMS.GameComponents
             Ship,
             Robot,
         }
-        [NMS(Index = 47)]
+        [NMS(Index = 54)]
         /* 0x118 */ public ClassEnum Class;
         [NMS(Index = 27)]
         /* 0x11C */ public float CriticalHitModifier;
-        [NMS(Index = 40)]
+        [NMS(Index = 47)]
         /* 0x120 */ public float DamageImpactMergeTime;
-        [NMS(Index = 42)]
+        [NMS(Index = 49)]
         /* 0x124 */ public float DamageImpactMinDistance;
-        [NMS(Index = 41)]
+        [NMS(Index = 48)]
         /* 0x128 */ public float DamageImpactTimeBetweenNumbers;
         [NMS(Index = 20)]
         /* 0x12C */ public GcDamageType DamageType;
@@ -86,23 +86,23 @@ namespace libMBIN.NMS.GameComponents
         /* 0x144 */ public GcAudioWwiseEvents FireAudioEvent;
         [NMS(Index = 12)]
         /* 0x148 */ public float Gravity;
-        [NMS(Index = 29)]
+        [NMS(Index = 36)]
         /* 0x14C */ public float HomingDelay;
-        [NMS(Index = 30)]
+        [NMS(Index = 37)]
         /* 0x150 */ public float HomingDelayAcceleration;
-        [NMS(Index = 31)]
+        [NMS(Index = 38)]
         /* 0x154 */ public float HomingDuration;
         [NMS(Index = 13)]
         /* 0x158 */ public float Life;
-        [NMS(Index = 32)]
+        [NMS(Index = 39)]
         /* 0x15C */ public float MaxHomingAcceleration;
-        [NMS(Index = 33)]
+        [NMS(Index = 40)]
         /* 0x160 */ public float MaxHomingTargetAngleLower;
-        [NMS(Index = 35)]
+        [NMS(Index = 42)]
         /* 0x164 */ public float MaxHomingTargetAngleLowerDistance;
-        [NMS(Index = 34)]
+        [NMS(Index = 41)]
         /* 0x168 */ public float MaxHomingTargetAngleUpper;
-        [NMS(Index = 36)]
+        [NMS(Index = 43)]
         /* 0x16C */ public float MaxHomingTargetAngleUpperDistance;
         [NMS(Index = 14)]
         /* 0x170 */ public float Offset;
@@ -112,27 +112,41 @@ namespace libMBIN.NMS.GameComponents
         /* 0x178 */ public float PhysicsPush;
         [NMS(Index = 28)]
         /* 0x17C */ public float PiercingDamagePercentage;
+        [NMS(Index = 31)]
+        /* 0x180 */ public float PusherForce;
+        [NMS(Index = 35)]
+        /* 0x184 */ public float PusherImpactDuration;
+        [NMS(Index = 34)]
+        /* 0x188 */ public float PusherImpactForce;
+        [NMS(Index = 33)]
+        /* 0x18C */ public float PusherImpactRadius;
+        [NMS(Index = 30)]
+        /* 0x190 */ public float PusherRadius;
         [NMS(Index = 9)]
-        /* 0x180 */ public float Radius;
+        /* 0x194 */ public float Radius;
         [NMS(Index = 15)]
-        /* 0x184 */ public float RagdollPush;
+        /* 0x198 */ public float RagdollPush;
         [NMS(Index = 6)]
-        /* 0x188 */ public float Scale;
+        /* 0x19C */ public float Scale;
         [NMS(Index = 8)]
-        /* 0x18C */ public bool ApplyCombatLevelMultipliers;
+        /* 0x1A0 */ public bool ApplyCombatLevelMultipliers;
         [NMS(Index = 25)]
-        /* 0x18D */ public bool HitOnBounce;
+        /* 0x1A1 */ public bool HitOnBounce;
         [NMS(Index = 7)]
-        /* 0x18E */ public bool IsAutonomous;
+        /* 0x1A2 */ public bool IsAutonomous;
+        [NMS(Index = 51)]
+        /* 0x1A3 */ public bool OverrideLightColour;
+        [NMS(Index = 57)]
+        /* 0x1A4 */ public bool ShootableCanOverrideImpact;
         [NMS(Index = 44)]
-        /* 0x18F */ public bool OverrideLightColour;
-        [NMS(Index = 50)]
-        /* 0x190 */ public bool ShootableCanOverrideImpact;
-        [NMS(Index = 37)]
-        /* 0x191 */ public bool UseCustomBulletData;
-        [NMS(Index = 39)]
-        /* 0x192 */ public bool UseDamageNumberData;
+        /* 0x1A5 */ public bool UseCustomBulletData;
+        [NMS(Index = 46)]
+        /* 0x1A6 */ public bool UseDamageNumberData;
         [NMS(Index = 2)]
-        /* 0x193 */ public bool UsePersistentAudio;
+        /* 0x1A7 */ public bool UsePersistentAudio;
+        [NMS(Index = 32)]
+        /* 0x1A8 */ public bool UsePusherForImpact;
+        [NMS(Index = 29)]
+        /* 0x1A9 */ public bool UsePusherForProjectile;
     }
 }

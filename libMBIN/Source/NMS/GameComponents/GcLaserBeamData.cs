@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6A91CF5D48597545, NameHash = 0xFD1E1F96)]
+    [NMS(GUID = 0x83FEE13AB40CAB3B, NameHash = 0xFD1E1F96)]
     public class GcLaserBeamData : NMSTemplate
     {
         [NMS(Index = 32)]
@@ -52,33 +52,43 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0E4 */ public float HitRate;
         [NMS(Index = 5)]
         /* 0x0E8 */ public float HitWidth;
+        [NMS(Index = 41)]
+        /* 0x0EC */ public float ImpactPusherPulseOffset;
+        [NMS(Index = 40)]
+        /* 0x0F0 */ public float ImpactPusherPulseSpeed;
+        [NMS(Index = 39)]
+        /* 0x0F4 */ public float ImpactPusherRadius;
+        [NMS(Index = 38)]
+        /* 0x0F8 */ public float ImpactPusherWeight;
         [NMS(Index = 30)]
-        /* 0x0EC */ public float LightIntensity;
+        /* 0x0FC */ public float LightIntensity;
         [NMS(Index = 24)]
-        /* 0x0F0 */ public float MiningHitRate;
+        /* 0x100 */ public float MiningHitRate;
         [NMS(Index = 23)]
-        /* 0x0F4 */ public float PhysicsPush;
+        /* 0x104 */ public float PhysicsPush;
         [NMS(Index = 29)]
-        /* 0x0F8 */ public float PiercingDamagePercentage;
+        /* 0x108 */ public float PiercingDamagePercentage;
         [NMS(Index = 7)]
-        /* 0x0FC */ public float PulseAmplitude;
+        /* 0x10C */ public float PulseAmplitude;
         [NMS(Index = 6)]
-        /* 0x100 */ public float PulseFrequency;
+        /* 0x110 */ public float PulseFrequency;
         [NMS(Index = 22)]
-        /* 0x104 */ public float RagdollPush;
+        /* 0x114 */ public float RagdollPush;
         [NMS(Index = 36)]
-        /* 0x108 */ public float Speed;
+        /* 0x118 */ public float Speed;
         [NMS(Index = 8)]
-        /* 0x10C */ public float StartTime;
+        /* 0x11C */ public float StartTime;
         [NMS(Index = 4)]
-        /* 0x110 */ public float Width;
+        /* 0x120 */ public float Width;
         [NMS(Index = 27)]
-        /* 0x114 */ public bool ApplyCombatLevelMultipliers;
+        /* 0x124 */ public bool ApplyCombatLevelMultipliers;
         [NMS(Index = 26)]
-        /* 0x115 */ public bool CanMine;
+        /* 0x125 */ public bool CanMine;
+        [NMS(Index = 37)]
+        /* 0x126 */ public bool CreatesImpactPusher;
         [NMS(Index = 25)]
-        /* 0x116 */ public bool HasLight;
+        /* 0x127 */ public bool HasLight;
         [NMS(Index = 21)]
-        /* 0x117 */ public bool SingleHit;
+        /* 0x128 */ public bool SingleHit;
     }
 }

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8A017C47CF69898E, NameHash = 0x5CA711BA)]
+    [NMS(GUID = 0x8FF5921EFF3A2326, NameHash = 0x5CA711BA)]
     public class GcMissionSequenceWaitForWonderValue : NMSTemplate
     {
         [NMS(Index = 10)]

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFAC137396B5E1DEF, NameHash = 0xBBFF31AB)]
+    [NMS(GUID = 0x7154CB12A35E2AB7, NameHash = 0xBBFF31AB)]
     public class GcMultitoolPoolData : NMSTemplate
     {
         [NMS(Index = 0)]

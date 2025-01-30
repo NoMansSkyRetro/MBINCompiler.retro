@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAFFC602E6B4D1BCE, NameHash = 0xDF48072A)]
+    [NMS(GUID = 0x7A53376884FA1DFA, NameHash = 0xDF48072A)]
     public class GcSentinelSpawnWave : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE6BCC7662105914B, NameHash = 0x1123713C)]
+    [NMS(GUID = 0xBA4EFA4623C8DA1E, NameHash = 0x1123713C)]
     public class GcSkiffSaveData : NMSTemplate
     {
         [NMS(Index = 2)]

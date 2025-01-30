@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE6573D02D0E90B8A, NameHash = 0xA8072216)]
+    [NMS(GUID = 0x8D295B9D22A8B526, NameHash = 0xA8072216)]
     public class GcCreatureFlockMovementData : NMSTemplate
     {
         [NMS(Index = 21)]

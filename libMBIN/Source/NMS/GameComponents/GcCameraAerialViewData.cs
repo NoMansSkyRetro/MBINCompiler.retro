@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEDD38A313E2BE875, NameHash = 0x60B7C44B)]
+    [NMS(GUID = 0x6BF50DC2005536E7, NameHash = 0x60B7C44B)]
     public class GcCameraAerialViewData : NMSTemplate
     {
         // size: 0x4

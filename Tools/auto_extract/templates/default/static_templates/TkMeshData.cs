@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x70272DC777DDD6BD, NameHash = 0x18D05F06)]
+    [NMS(GUID = 0xA5E773D3424BA9FA, NameHash = 0x18D05F06)]
     public class TkMeshData : NMSTemplate
     {
         [NMS(Index = 0)]

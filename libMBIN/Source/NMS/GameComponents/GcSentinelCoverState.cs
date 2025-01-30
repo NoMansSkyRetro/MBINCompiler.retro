@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x22072DF17EC2DAE, NameHash = 0xE1645A55)]
+    [NMS(GUID = 0x6EC06CCD804BFA60, NameHash = 0xE1645A55)]
     public class GcSentinelCoverState : NMSTemplate
     {
         // size: 0x4

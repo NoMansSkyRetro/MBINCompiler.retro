@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA0BB8D17766199A6, NameHash = 0x278294BC)]
+    [NMS(GUID = 0x79431E678B722231, NameHash = 0x278294BC)]
     public class GcRewardShipSlot : NMSTemplate
     {
         [NMS(Index = 0)]

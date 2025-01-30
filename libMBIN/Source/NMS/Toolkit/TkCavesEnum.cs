@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xC82D553728BC3D02, NameHash = 0xA12C289C)]
+    [NMS(GUID = 0xC030AA469952A455, NameHash = 0xA12C289C)]
     public class TkCavesEnum : NMSTemplate
     {
         // size: 0x1

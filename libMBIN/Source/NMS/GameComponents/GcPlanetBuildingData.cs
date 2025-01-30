@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x76FC3A027DE9C14, NameHash = 0xF086FF97)]
+    [NMS(GUID = 0x97E9B2A2173196D0, NameHash = 0xF086FF97)]
     public class GcPlanetBuildingData : NMSTemplate
     {
         [NMS(Index = 1)]
@@ -26,5 +26,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x44 */ public bool InitialBuildingsPlaced;
         [NMS(Index = 9)]
         /* 0x45 */ public bool IsPrime;
+        [NMS(Index = 10)]
+        /* 0x46 */ public bool IsWaterworld;
     }
 }

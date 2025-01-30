@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x9BEB641914C9DFD6, NameHash = 0x89B44B6A)]
+    [NMS(GUID = 0xB0097874841CCD61, NameHash = 0x89B44B6A)]
     public class TkNGuiForcedStyle : NMSTemplate
     {
         // size: 0x4

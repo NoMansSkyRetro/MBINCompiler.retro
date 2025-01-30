@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4046270B51305193, NameHash = 0xAB971169)]
+    [NMS(GUID = 0xEEAC4AA63205BADA, NameHash = 0xAB971169)]
     public class GcFrigateUITraitLines : NMSTemplate
     {
         [NMS(Index = 0)]

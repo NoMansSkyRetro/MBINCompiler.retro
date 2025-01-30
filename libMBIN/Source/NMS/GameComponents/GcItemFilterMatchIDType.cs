@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB833EE9086DE092, NameHash = 0x57D3563B)]
+    [NMS(GUID = 0x73A6B045475BCB62, NameHash = 0x57D3563B)]
     public class GcItemFilterMatchIDType : NMSTemplate
     {
         // size: 0x3

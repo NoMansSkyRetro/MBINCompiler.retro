@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCDA43052420EA671, NameHash = 0x9DFC1E2E)]
+    [NMS(GUID = 0x472BF99916F6F3F8, NameHash = 0x9DFC1E2E)]
     public class GcExpeditionDifficultyKeyframe : NMSTemplate
     {
         [NMS(Index = 1)]

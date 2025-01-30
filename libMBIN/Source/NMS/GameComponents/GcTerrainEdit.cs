@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6C854E2211264F1E, NameHash = 0x27B66AD0)]
+    [NMS(GUID = 0x2BB88D5D9C642935, NameHash = 0x27B66AD0)]
     public class GcTerrainEdit : NMSTemplate
     {
         [NMS(Index = 1)]

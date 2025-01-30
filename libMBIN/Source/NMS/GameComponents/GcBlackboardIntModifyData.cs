@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1913360EBEF482CB, NameHash = 0xB8BEDD3C)]
+    [NMS(GUID = 0x61A4702AF6AB0731, NameHash = 0xB8BEDD3C)]
     public class GcBlackboardIntModifyData : NMSTemplate
     {
         [NMS(Index = 0)]

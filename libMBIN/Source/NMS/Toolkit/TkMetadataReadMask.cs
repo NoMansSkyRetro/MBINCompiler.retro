@@ -2,7 +2,7 @@ using System;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE5E072016B296CBC, NameHash = 0x11C23A82)]
+    [NMS(GUID = 0x2BD012CC164AA3A7, NameHash = 0x11C23A82)]
     public class TkMetadataReadMask : NMSTemplate
     {
         // size: 0x5

@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x67C169FE5F0A1325, NameHash = 0x7396A29C)]
+    [NMS(GUID = 0x6B2C50D9BE53D968, NameHash = 0x7396A29C)]
     public class TkVoxelGeneratorData : NMSTemplate
     {
         [NMS(Index = 7, Size = 0x9, EnumType = typeof(TkGridLayersEnum.GridLayerTypesEnum))]

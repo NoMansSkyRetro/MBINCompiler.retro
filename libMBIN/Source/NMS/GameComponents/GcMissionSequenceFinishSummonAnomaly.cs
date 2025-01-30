@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF0924E305783C4E2, NameHash = 0xEF2EF8F2)]
+    [NMS(GUID = 0xAF3347071A21DD07, NameHash = 0xEF2EF8F2)]
     public class GcMissionSequenceFinishSummonAnomaly : NMSTemplate
     {
         [NMS(Index = 0)]

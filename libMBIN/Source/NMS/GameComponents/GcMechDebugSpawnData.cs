@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA43D68EF9CEF5F8C, NameHash = 0xCA24AFF)]
+    [NMS(GUID = 0xE6ABC42B5EF06074, NameHash = 0xCA24AFF)]
     public class GcMechDebugSpawnData : NMSTemplate
     {
         [NMS(Index = 3)]

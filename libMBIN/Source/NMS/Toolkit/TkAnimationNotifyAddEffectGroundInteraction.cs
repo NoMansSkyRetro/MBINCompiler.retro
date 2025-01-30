@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x2DEF634DF212DD56, NameHash = 0xDFD01A1)]
+    [NMS(GUID = 0xC61E76EE0B7FF2BA, NameHash = 0xDFD01A1)]
     public class TkAnimationNotifyAddEffectGroundInteraction : NMSTemplate
     {
         [NMS(Index = 3)]

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x81973CF091F38865, NameHash = 0x466CC80B)]
+    [NMS(GUID = 0xCB7DA6E6637CACDA, NameHash = 0x466CC80B)]
     public class GcStatusMessageDefinitions : NMSTemplate
     {
-        [NMS(Index = 1)]
+        [NMS(Index = 1, MxmlName = "Mission Markup Colour")]
         /* 0x000 */ public Colour MissionMarkupColour;
         [NMS(Index = 3, Size = 0x15, EnumType = typeof(GcPetChatType.PetChatTypeEnum))]
         /* 0x010 */ public GcPetVocabularyEntry[] PetChatTemplates;

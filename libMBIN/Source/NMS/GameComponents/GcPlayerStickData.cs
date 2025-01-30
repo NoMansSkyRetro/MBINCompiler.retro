@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x31902F59BCD54452, NameHash = 0xC851C48E)]
+    [NMS(GUID = 0x7DA4959458BD36A2, NameHash = 0xC851C48E)]
     public class GcPlayerStickData : NMSTemplate
     {
         [NMS(Index = 2)]

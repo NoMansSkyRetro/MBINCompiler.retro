@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x73828FAB1EE7FA49, NameHash = 0x4BADBACC)]
+    [NMS(GUID = 0xC7BFB09504C3D8F7, NameHash = 0x4BADBACC)]
     public class GcPresetTextureData : NMSTemplate
     {
         [NMS(Index = 1)]

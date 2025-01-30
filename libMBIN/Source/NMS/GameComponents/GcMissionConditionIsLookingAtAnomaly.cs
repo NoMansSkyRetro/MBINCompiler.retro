@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEDAF1A6865541C28, NameHash = 0x59139D1E)]
+    [NMS(GUID = 0x3F7D8AB6F788C4F0, NameHash = 0x59139D1E)]
     public class GcMissionConditionIsLookingAtAnomaly : NMSTemplate
     {
         [NMS(Index = 0)]

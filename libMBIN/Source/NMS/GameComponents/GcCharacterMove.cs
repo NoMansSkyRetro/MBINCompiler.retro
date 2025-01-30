@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x248058F9C534424E, NameHash = 0x40E7868E)]
+    [NMS(GUID = 0x77054C30BC8FC9B9, NameHash = 0x40E7868E)]
     public class GcCharacterMove : NMSTemplate
     {
         [NMS(Index = 0)]

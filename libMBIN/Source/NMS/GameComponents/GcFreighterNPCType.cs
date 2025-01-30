@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFB83EA1F426900E2, NameHash = 0x822165CA)]
+    [NMS(GUID = 0x77C97A1F24751F65, NameHash = 0x822165CA)]
     public class GcFreighterNPCType : NMSTemplate
     {
         // size: 0x5

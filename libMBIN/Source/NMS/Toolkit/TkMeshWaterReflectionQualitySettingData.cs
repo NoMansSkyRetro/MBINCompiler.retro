@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x2F1F6AFF4F2E47B7, NameHash = 0xC3087351)]
+    [NMS(GUID = 0x5F1A86AE19120E50, NameHash = 0xC3087351)]
     public class TkMeshWaterReflectionQualitySettingData : NMSTemplate
     {
         // size: 0x3

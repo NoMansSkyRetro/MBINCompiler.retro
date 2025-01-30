@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8926B114AFFE4B52, NameHash = 0x68A2FEED)]
+    [NMS(GUID = 0x6129D2CDCBBC75E7, NameHash = 0x68A2FEED)]
     public class GcTerrainEditsBuffer : NMSTemplate
     {
         [NMS(Index = 3, Size = 0x100)]

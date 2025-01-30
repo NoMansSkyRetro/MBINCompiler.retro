@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x9EA7BF9D76C20264, NameHash = 0xDAFDD0DB)]
+    [NMS(GUID = 0x64EC3ABA2BA6A33B, NameHash = 0xDAFDD0DB)]
     public class GcMultiplayerGlobals : NMSTemplate
     {
         [NMS(Index = 70)]

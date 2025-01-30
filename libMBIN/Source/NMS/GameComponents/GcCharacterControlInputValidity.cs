@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x28FD8E5FE5649E4B, NameHash = 0xE1190DEF)]
+    [NMS(GUID = 0x4BCE3A572C91A061, NameHash = 0xE1190DEF)]
     public class GcCharacterControlInputValidity : NMSTemplate
     {
         // size: 0x3

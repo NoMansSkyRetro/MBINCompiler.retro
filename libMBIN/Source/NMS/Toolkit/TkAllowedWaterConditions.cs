@@ -1,12 +1,11 @@
 using libMBIN.NMS.Toolkit;
-using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x2167356EBA3C7AF2, NameHash = 0x19CB938A)]
+    [NMS(GUID = 0xAC8C8B34F602315A, NameHash = 0x19CB938A)]
     public class TkAllowedWaterConditions : NMSTemplate
     {
-        [NMS(Index = 0)]
-        /* 0x0 */ public List<TkWaterCondition> AllowedConditions;
+        [NMS(Index = 0, Size = 0xE, EnumType = typeof(TkWaterCondition.WaterConditionEnum))]
+        /* 0x0 */ public float[] ConditionWeights;
     }
 }

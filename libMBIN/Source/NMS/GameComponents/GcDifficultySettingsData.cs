@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDE3666B870136C8C, NameHash = 0xB2C2E03A)]
+    [NMS(GUID = 0xBC06B43D23CE6EE4, NameHash = 0xB2C2E03A)]
     public class GcDifficultySettingsData : NMSTemplate
     {
         [NMS(Index = 11)]
@@ -37,31 +37,33 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38 */ public GcItemShopAvailabilityDifficultyOption ItemShopAvailability;
         [NMS(Index = 18)]
         /* 0x3C */ public GcLaunchFuelCostDifficultyOption LaunchFuelCost;
+        [NMS(Index = 29)]
+        /* 0x40 */ public GcNPCPopulationDifficultyOption NPCPopulation;
         [NMS(Index = 22)]
-        /* 0x40 */ public GcReputationGainDifficultyOption ReputationGain;
+        /* 0x44 */ public GcReputationGainDifficultyOption ReputationGain;
         [NMS(Index = 21)]
-        /* 0x44 */ public GcScannerRechargeDifficultyOption ScannerRecharge;
+        /* 0x48 */ public GcScannerRechargeDifficultyOption ScannerRecharge;
         [NMS(Index = 24)]
-        /* 0x48 */ public GcCombatTimerDifficultyOption SpaceCombatTimers;
+        /* 0x4C */ public GcCombatTimerDifficultyOption SpaceCombatTimers;
         [NMS(Index = 26)]
-        /* 0x4C */ public GcSprintingCostDifficultyOption SprintingCost;
+        /* 0x50 */ public GcSprintingCostDifficultyOption SprintingCost;
         [NMS(Index = 14)]
-        /* 0x50 */ public GcSubstanceCollectionDifficultyOption SubstanceCollection;
+        /* 0x54 */ public GcSubstanceCollectionDifficultyOption SubstanceCollection;
         [NMS(Index = 2)]
-        /* 0x54 */ public bool AllSlotsUnlocked;
+        /* 0x58 */ public bool AllSlotsUnlocked;
         [NMS(Index = 7)]
-        /* 0x55 */ public bool BaseAutoPower;
+        /* 0x59 */ public bool BaseAutoPower;
         [NMS(Index = 4)]
-        /* 0x56 */ public bool CraftingIsFree;
+        /* 0x5A */ public bool CraftingIsFree;
         [NMS(Index = 1)]
-        /* 0x57 */ public bool InventoriesAlwaysInRange;
+        /* 0x5B */ public bool InventoriesAlwaysInRange;
         [NMS(Index = 0)]
-        /* 0x58 */ public bool SettingsLocked;
+        /* 0x5C */ public bool SettingsLocked;
         [NMS(Index = 6)]
-        /* 0x59 */ public bool StartWithAllItemsKnown;
+        /* 0x5D */ public bool StartWithAllItemsKnown;
         [NMS(Index = 5)]
-        /* 0x5A */ public bool TutorialEnabled;
+        /* 0x5E */ public bool TutorialEnabled;
         [NMS(Index = 3)]
-        /* 0x5B */ public bool WarpDriveRequirements;
+        /* 0x5F */ public bool WarpDriveRequirements;
     }
 }

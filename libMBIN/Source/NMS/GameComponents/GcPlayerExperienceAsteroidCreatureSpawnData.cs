@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF461E5617022E546, NameHash = 0x8711E4A9)]
+    [NMS(GUID = 0x3B1FF73C58459697, NameHash = 0x8711E4A9)]
     public class GcPlayerExperienceAsteroidCreatureSpawnData : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD9C99A5585D50A4A, NameHash = 0x5988883A)]
+    [NMS(GUID = 0x1AF7B80BD7081BF4, NameHash = 0x5988883A)]
     public class GcSelectableObjectData : NMSTemplate
     {
         [NMS(Index = 0)]

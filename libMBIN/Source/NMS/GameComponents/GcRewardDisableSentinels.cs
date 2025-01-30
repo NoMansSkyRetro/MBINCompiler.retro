@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1728C908172FDEC2, NameHash = 0xC8E666B2)]
+    [NMS(GUID = 0x3E9D21FB1307659, NameHash = 0xC8E666B2)]
     public class GcRewardDisableSentinels : NMSTemplate
     {
         [NMS(Index = 1)]

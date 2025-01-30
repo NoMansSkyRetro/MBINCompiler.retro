@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB62ADD01EBEC2640, NameHash = 0x9B04F25E)]
+    [NMS(GUID = 0xDC6B27ED1A9D8FF4, NameHash = 0x9B04F25E)]
     public class GcExpeditionDurationValues : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x5, EnumType = typeof(GcExpeditionDuration.ExpeditionDurationEnum))]

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xB48BD9D8116C0902, NameHash = 0xF4A9BB29)]
+    [NMS(GUID = 0x9471BE18F607F317, NameHash = 0xF4A9BB29)]
     public class TkResourceDescriptorList : NMSTemplate
     {
         [NMS(Index = 1)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE087386F100C7DD3, NameHash = 0xA866E946)]
+    [NMS(GUID = 0x37AC952FB531A714, NameHash = 0xA866E946)]
     public class GcTerrainOverlayColours : NMSTemplate
     {
         [NMS(Index = 0)]

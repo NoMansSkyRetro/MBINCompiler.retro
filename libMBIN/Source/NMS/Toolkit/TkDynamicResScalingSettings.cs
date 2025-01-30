@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x2D1136770F659038, NameHash = 0x10AD2F18)]
+    [NMS(GUID = 0xFB46E2BD5664177D, NameHash = 0x10AD2F18)]
     public class TkDynamicResScalingSettings : NMSTemplate
     {
         // size: 0x3

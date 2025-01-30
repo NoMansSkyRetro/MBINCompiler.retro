@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x352A1BB7D717B072, NameHash = 0x3E528ACC)]
+    [NMS(GUID = 0xCCFB970F8E2D6439, NameHash = 0x3E528ACC)]
     public class GcDebugShipTravelLine : NMSTemplate
     {
         [NMS(Index = 1)]

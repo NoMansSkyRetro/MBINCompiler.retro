@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x39D37D294E47C3C4, NameHash = 0xED0B8631)]
+    [NMS(GUID = 0x51DAF7E0A440899C, NameHash = 0xED0B8631)]
     public class GcRewardSpecificSeasonalSubstance : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF781A3EF1E6C48E5, NameHash = 0x4631805D)]
+    [NMS(GUID = 0x8C81AFC0D1151A4C, NameHash = 0x4631805D)]
     public class GcWeatherColourModifiers : NMSTemplate
     {
         [NMS(Index = 9, Size = 0x5)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC5D9BD01CE5291CE, NameHash = 0x9ED6EB52)]
+    [NMS(GUID = 0x951EAECC13592DF1, NameHash = 0x9ED6EB52)]
     public class MappingInfluence : NMSTemplate
     {
         [NMS(Index = 3)]

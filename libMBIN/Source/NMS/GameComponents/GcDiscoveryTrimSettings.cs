@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x43FB38148FD8E0B8, NameHash = 0x5CDDC22A)]
+    [NMS(GUID = 0xD0431B7D88E1EBDB, NameHash = 0x5CDDC22A)]
     public class GcDiscoveryTrimSettings : NMSTemplate
     {
         [NMS(Index = 1)]

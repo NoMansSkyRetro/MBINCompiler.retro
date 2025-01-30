@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x567763C499C0458C, NameHash = 0xAB21CE05)]
+    [NMS(GUID = 0xCD9EC8429F5AEE20, NameHash = 0xAB21CE05)]
     public class GcMissionConditionOnFootCombatEnabled : NMSTemplate
     {
         [NMS(Index = 0)]

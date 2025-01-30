@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCBE1685FBF011336, NameHash = 0xC47EFA1C)]
+    [NMS(GUID = 0xA4757B3E05A71945, NameHash = 0xC47EFA1C)]
     public class GcCreatureHealthData : NMSTemplate
     {
         [NMS(Index = 1)]

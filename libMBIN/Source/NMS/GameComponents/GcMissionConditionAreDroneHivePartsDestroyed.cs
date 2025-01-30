@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4C3460FB18F89BD6, NameHash = 0xF0FF602E)]
+    [NMS(GUID = 0x726C330305D2CFBE, NameHash = 0xF0FF602E)]
     public class GcMissionConditionAreDroneHivePartsDestroyed : NMSTemplate
     {
         [NMS(Index = 0)]

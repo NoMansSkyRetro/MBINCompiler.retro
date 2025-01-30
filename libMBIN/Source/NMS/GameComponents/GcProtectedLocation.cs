@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x757B2BAB74F6DCCA, NameHash = 0xED643334)]
+    [NMS(GUID = 0xFB20046015D38F91, NameHash = 0xED643334)]
     public class GcProtectedLocation : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x981F260136F9536A, NameHash = 0x1F6385E)]
+    [NMS(GUID = 0xDFA50628D1F77027, NameHash = 0x1F6385E)]
     public class GcMissionConditionTotalWarpsNumber : NMSTemplate
     {
         [NMS(Index = 0)]

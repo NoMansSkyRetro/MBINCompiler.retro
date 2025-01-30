@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x94F2D5F233E770D4, NameHash = 0x12504775)]
+    [NMS(GUID = 0xB8523BF1E05433E9, NameHash = 0x12504775)]
     public class GcGalacticAddressData : NMSTemplate
     {
         [NMS(Index = 4)]

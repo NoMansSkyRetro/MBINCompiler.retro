@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xADA26EA67A0AA85C, NameHash = 0xDD7BF3A3)]
+    [NMS(GUID = 0xD595CF87A7ADBCDE, NameHash = 0xDD7BF3A3)]
     public class GcWonderRecord : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x2)]

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAC4B4A24704DB991, NameHash = 0x724191EA)]
+    [NMS(GUID = 0x236C932ABF70D473, NameHash = 0x724191EA)]
     public class GcWFCDecorationItem : NMSTemplate
     {
         [NMS(Index = 6)]
@@ -46,9 +46,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x360 */ public int MaxPerBuilding;
         [NMS(Index = 10)]
         /* 0x364 */ public int MinPerBuilding;
-        [NMS(Index = 3)]
+        [NMS(Index = 3, MxmlName = "No Scene Probability")]
         /* 0x368 */ public float NoSceneProbability;
-        [NMS(Index = 2)]
+        [NMS(Index = 2, MxmlName = "Relative Probability")]
         /* 0x36C */ public float RelativeProbability;
         [NMS(Index = 4)]
         /* 0x370 */ public bool Include;

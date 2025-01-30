@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x1E0F7291EFAFB51B, NameHash = 0xE6DFCD18)]
+    [NMS(GUID = 0x45191F0BF93FE4E3, NameHash = 0xE6DFCD18)]
     public class TkDynamicChainComponentData : NMSTemplate
     {
         [NMS(Index = 14)]

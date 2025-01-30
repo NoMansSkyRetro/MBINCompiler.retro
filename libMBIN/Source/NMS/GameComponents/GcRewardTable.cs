@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x99134C06CCF0C2C9, NameHash = 0x67E289CF)]
+    [NMS(GUID = 0x664961E91453A7C7, NameHash = 0x67E289CF)]
     public class GcRewardTable : NMSTemplate
     {
         [NMS(Index = 1)]
@@ -42,35 +42,43 @@ namespace libMBIN.NMS.GameComponents
         /* 0x100 */ public List<GcGenericRewardTableEntry> SeasonRewardTable15;
         [NMS(Index = 32)]
         /* 0x110 */ public List<GcGenericRewardTableEntry> SeasonRewardTable16;
+        [NMS(Index = 33)]
+        /* 0x120 */ public List<GcGenericRewardTableEntry> SeasonRewardTable17;
+        [NMS(Index = 34)]
+        /* 0x130 */ public List<GcGenericRewardTableEntry> SeasonRewardTable18;
+        [NMS(Index = 35)]
+        /* 0x140 */ public List<GcGenericRewardTableEntry> SeasonRewardTable19;
         [NMS(Index = 18)]
-        /* 0x120 */ public List<GcGenericRewardTableEntry> SeasonRewardTable2;
+        /* 0x150 */ public List<GcGenericRewardTableEntry> SeasonRewardTable2;
+        [NMS(Index = 36)]
+        /* 0x160 */ public List<GcGenericRewardTableEntry> SeasonRewardTable20;
         [NMS(Index = 19)]
-        /* 0x130 */ public List<GcGenericRewardTableEntry> SeasonRewardTable3;
+        /* 0x170 */ public List<GcGenericRewardTableEntry> SeasonRewardTable3;
         [NMS(Index = 20)]
-        /* 0x140 */ public List<GcGenericRewardTableEntry> SeasonRewardTable4;
+        /* 0x180 */ public List<GcGenericRewardTableEntry> SeasonRewardTable4;
         [NMS(Index = 21)]
-        /* 0x150 */ public List<GcGenericRewardTableEntry> SeasonRewardTable5;
+        /* 0x190 */ public List<GcGenericRewardTableEntry> SeasonRewardTable5;
         [NMS(Index = 22)]
-        /* 0x160 */ public List<GcGenericRewardTableEntry> SeasonRewardTable6;
+        /* 0x1A0 */ public List<GcGenericRewardTableEntry> SeasonRewardTable6;
         [NMS(Index = 23)]
-        /* 0x170 */ public List<GcGenericRewardTableEntry> SeasonRewardTable7;
+        /* 0x1B0 */ public List<GcGenericRewardTableEntry> SeasonRewardTable7;
         [NMS(Index = 24)]
-        /* 0x180 */ public List<GcGenericRewardTableEntry> SeasonRewardTable8;
+        /* 0x1C0 */ public List<GcGenericRewardTableEntry> SeasonRewardTable8;
         [NMS(Index = 25)]
-        /* 0x190 */ public List<GcGenericRewardTableEntry> SeasonRewardTable9;
+        /* 0x1D0 */ public List<GcGenericRewardTableEntry> SeasonRewardTable9;
         [NMS(Index = 16)]
-        /* 0x1A0 */ public List<GcGenericRewardTableEntry> SettlementTable;
+        /* 0x1E0 */ public List<GcGenericRewardTableEntry> SettlementTable;
         [NMS(Index = 8)]
-        /* 0x1B0 */ public List<GcGenericRewardTableEntry> ShipSalvageTable;
+        /* 0x1F0 */ public List<GcGenericRewardTableEntry> ShipSalvageTable;
         [NMS(Index = 4)]
-        /* 0x1C0 */ public List<GcGenericRewardTableEntry> SpecialRewardTable;
+        /* 0x200 */ public List<GcGenericRewardTableEntry> SpecialRewardTable;
         [NMS(Index = 10)]
-        /* 0x1D0 */ public List<GcRewardTableEntry> Table;
+        /* 0x210 */ public List<GcRewardTableEntry> Table;
         [NMS(Index = 11)]
-        /* 0x1E0 */ public List<NMSString0x10> TechRewardOrder;
+        /* 0x220 */ public List<NMSString0x10> TechRewardOrder;
         [NMS(Index = 14)]
-        /* 0x1F0 */ public List<GcGenericRewardTableEntry> TwitchRewardTable;
+        /* 0x230 */ public List<GcGenericRewardTableEntry> TwitchRewardTable;
         [NMS(Index = 7)]
-        /* 0x200 */ public List<GcGenericRewardTableEntry> WikiProgressTable;
+        /* 0x240 */ public List<GcGenericRewardTableEntry> WikiProgressTable;
     }
 }

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA82B1D70DE62E35A, NameHash = 0x72ADBEFC)]
+    [NMS(GUID = 0x6EE56BC9B1C348C, NameHash = 0x72ADBEFC)]
     public class GcFreighterDungeonParams : NMSTemplate
     {
         [NMS(Index = 1)]

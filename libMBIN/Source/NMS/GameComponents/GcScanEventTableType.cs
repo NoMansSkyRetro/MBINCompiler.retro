@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1815B0A103BF81B7, NameHash = 0xCE5B4876)]
+    [NMS(GUID = 0xA2FEFFBB5B556EBB, NameHash = 0xCE5B4876)]
     public class GcScanEventTableType : NMSTemplate
     {
         // size: 0x8

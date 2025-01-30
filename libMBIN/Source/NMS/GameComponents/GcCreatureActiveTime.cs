@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x25FB62A959721723, NameHash = 0x1E3DFA8A)]
+    [NMS(GUID = 0x5951376B7BB966B0, NameHash = 0x1E3DFA8A)]
     public class GcCreatureActiveTime : NMSTemplate
     {
         // size: 0x5

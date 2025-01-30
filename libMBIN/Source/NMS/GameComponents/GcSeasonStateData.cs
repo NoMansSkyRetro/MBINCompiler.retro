@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x45562B85264EBCDB, NameHash = 0xF5D18571)]
+    [NMS(GUID = 0x67672AC2A4F67E14, NameHash = 0xF5D18571)]
     public class GcSeasonStateData : NMSTemplate
     {
         [NMS(Index = 8)]

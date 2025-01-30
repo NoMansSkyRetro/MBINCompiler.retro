@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x82614740EF36942A, NameHash = 0x7318F981)]
+    [NMS(GUID = 0x67FEFB996ECC3993, NameHash = 0x7318F981)]
     public class TkBlackboardType : NMSTemplate
     {
         // size: 0x7

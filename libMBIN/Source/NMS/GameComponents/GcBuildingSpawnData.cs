@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x902A6A65CDD3131E, NameHash = 0x55D62B6D)]
+    [NMS(GUID = 0x88E53ABA85348E2E, NameHash = 0x55D62B6D)]
     public class GcBuildingSpawnData : NMSTemplate
     {
         [NMS(Index = 22)]
@@ -38,7 +38,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0xC0 */ public float MinHeight;
         [NMS(Index = 17)]
         /* 0xC4 */ public float Radius;
-        [NMS(Index = 15)]
+        [NMS(Index = 15, MxmlName = "Scale ")]
         /* 0xC8 */ public float Scale;
         [NMS(Index = 4)]
         /* 0xCC */ public int WFCBuildingPreset;

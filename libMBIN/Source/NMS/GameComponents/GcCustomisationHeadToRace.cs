@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE7838A6FC478D8C1, NameHash = 0x31D36259)]
+    [NMS(GUID = 0x5C4108E210A0FF04, NameHash = 0x31D36259)]
     public class GcCustomisationHeadToRace : NMSTemplate
     {
         [NMS(Index = 0)]

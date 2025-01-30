@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8252843446DD7B7E, NameHash = 0x87AA2A7F)]
+    [NMS(GUID = 0xDD5600FF2471091F, NameHash = 0x87AA2A7F)]
     public class GcSeasonalMilestoneEncryption : NMSTemplate
     {
         [NMS(Index = 3)]

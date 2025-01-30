@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6612E5ED349DC772, NameHash = 0x3921F6BD)]
+    [NMS(GUID = 0xA294657AA960DB6C, NameHash = 0x3921F6BD)]
     public class GcMessageTrackTargetAlert : NMSTemplate
     {
         [NMS(Index = 2)]

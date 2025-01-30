@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xC47D421BA1A1E5EB, NameHash = 0x2E6D021B)]
+    [NMS(GUID = 0x97370B7EE5D9AB7C, NameHash = 0x2E6D021B)]
     public class TkModelRendererData : NMSTemplate
     {
         [NMS(Index = 0)]

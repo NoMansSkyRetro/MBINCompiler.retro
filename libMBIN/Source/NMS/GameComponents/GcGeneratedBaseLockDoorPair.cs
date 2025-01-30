@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC115C0BF13722829, NameHash = 0x99F61670)]
+    [NMS(GUID = 0xA9CCC1CA46875E7E, NameHash = 0x99F61670)]
     public class GcGeneratedBaseLockDoorPair : NMSTemplate
     {
         [NMS(Index = 0)]

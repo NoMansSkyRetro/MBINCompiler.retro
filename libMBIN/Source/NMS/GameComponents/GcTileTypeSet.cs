@@ -2,12 +2,12 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAC51492EF13E3829, NameHash = 0xD14E108F)]
+    [NMS(GUID = 0x3BC6E7FE6F6F1881, NameHash = 0xD14E108F)]
     public class GcTileTypeSet : NMSTemplate
     {
         [NMS(Index = 1, Size = 0xC)]
         /* 0x00 */ public TkPaletteTexture[] Colours;
         [NMS(Index = 0)]
-        /* 0x60 */ public float Probability;
+        /* 0x90 */ public float Probability;
     }
 }

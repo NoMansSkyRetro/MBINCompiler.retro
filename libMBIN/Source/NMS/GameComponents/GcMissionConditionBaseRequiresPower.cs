@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5CAAE6794A444C5A, NameHash = 0x90D5CD66)]
+    [NMS(GUID = 0x21ED0F3E32E9A6D2, NameHash = 0x90D5CD66)]
     public class GcMissionConditionBaseRequiresPower : NMSTemplate
     {
         [NMS(Index = 0)]

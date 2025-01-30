@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x22BE53D6B3BAA7A5, NameHash = 0x4B906CC8)]
+    [NMS(GUID = 0xCE9DA703DE2DFDD3, NameHash = 0x4B906CC8)]
     public class TkWaterConditionData : NMSTemplate
     {
         [NMS(Index = 0)]

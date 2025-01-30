@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC8544E9094821E70, NameHash = 0xC99016EC)]
+    [NMS(GUID = 0x752AFE438B6E49E5, NameHash = 0xC99016EC)]
     public class GcMissionConditionIsScanEventLocalOrNear : NMSTemplate
     {
         [NMS(Index = 0)]

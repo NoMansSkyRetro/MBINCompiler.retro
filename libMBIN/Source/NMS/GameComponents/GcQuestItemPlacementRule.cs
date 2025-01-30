@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4E32CE326DE54EDF, NameHash = 0x13E20C35)]
+    [NMS(GUID = 0xB294526D2BD01C78, NameHash = 0x13E20C35)]
     public class GcQuestItemPlacementRule : NMSTemplate
     {
         [NMS(Index = 4)]

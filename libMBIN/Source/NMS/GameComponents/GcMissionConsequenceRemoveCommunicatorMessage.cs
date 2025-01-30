@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA2938A901D7AE71E, NameHash = 0xC7F56AA6)]
+    [NMS(GUID = 0xF101306DF8518B8C, NameHash = 0xC7F56AA6)]
     public class GcMissionConsequenceRemoveCommunicatorMessage : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF8944A35F1313994, NameHash = 0x8CD019E0)]
+    [NMS(GUID = 0xC8217EA84DA04131, NameHash = 0x8CD019E0)]
     public class GcBuildingPlacementErrorTypes : NMSTemplate
     {
         // size: 0x17

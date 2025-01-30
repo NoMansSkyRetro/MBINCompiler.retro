@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4AE19368948E649F, NameHash = 0xE99625D7)]
+    [NMS(GUID = 0x1000BDCC4B22C6C, NameHash = 0xE99625D7)]
     public class GcStormProperties : NMSTemplate
     {
         [NMS(Index = 2)]

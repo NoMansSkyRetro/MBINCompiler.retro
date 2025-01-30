@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x79949766BD798E20, NameHash = 0x26A0D337)]
+    [NMS(GUID = 0x41CB54FCD5CA0584, NameHash = 0x26A0D337)]
     public class GcInputActions : NMSTemplate
     {
-        // size: 0x122
+        // size: 0x123
         public enum InputActionEnum : uint {
             Invalid,
             Player_Forward,
@@ -60,6 +60,7 @@ namespace libMBIN.NMS.GameComponents
             Vehicle_Scan,
             Vehicle_Boost,
             Vehicle_Jump,
+            Vehicle_Dive,
             Vehicle_Horn,
             Vehicle_AddCheckpoint,
             Vehicle_DeleteCheckpoint,

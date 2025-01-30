@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAF677C1767AD4C6C, NameHash = 0xF3FD4BE5)]
+    [NMS(GUID = 0x9A0AC4684B718DBF, NameHash = 0xF3FD4BE5)]
     public class GcStoryEntryBranch : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x94BD5022544C6C42, NameHash = 0x6C564DBA)]
+    [NMS(GUID = 0xA6AC37C74DCC7EA0, NameHash = 0x6C564DBA)]
     public class TkMeshMetaData : NMSTemplate
     {
         [NMS(Index = 0)]

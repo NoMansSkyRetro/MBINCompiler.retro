@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xB9F17954D3E62F66, NameHash = 0xB05D46CA)]
+    [NMS(GUID = 0x4DE3EBE31B56BFA1, NameHash = 0xB05D46CA)]
     public class TkGridLayersEnum : NMSTemplate
     {
         // size: 0x9

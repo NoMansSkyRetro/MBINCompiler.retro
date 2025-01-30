@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFEECAE1AE6297591, NameHash = 0x5B7C3EF1)]
+    [NMS(GUID = 0x2C84CFB0D0D4BDCB, NameHash = 0x5B7C3EF1)]
     public class GcCreatureGroupProbability : NMSTemplate
     {
         [NMS(Index = 0)]

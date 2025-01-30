@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDA819A0F96399DB0, NameHash = 0xDEC89720)]
+    [NMS(GUID = 0x94CE5FF29CD9ECCF, NameHash = 0xDEC89720)]
     public class GcMaintenanceComponentData : NMSTemplate
     {
         [NMS(Index = 23)]
@@ -103,31 +103,33 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3DD */ public bool AllowTransferIn;
         [NMS(Index = 12)]
         /* 0x3DE */ public bool AutoCompleteOnStart;
+        [NMS(Index = 55)]
+        /* 0x3DF */ public bool CanUseOutsideOfBase;
         [NMS(Index = 54)]
-        /* 0x3DF */ public bool DisableSynchronise;
+        /* 0x3E0 */ public bool DisableSynchronise;
         [NMS(Index = 19)]
-        /* 0x3E0 */ public bool ForceNoninteraction;
+        /* 0x3E1 */ public bool ForceNoninteraction;
         [NMS(Index = 51)]
-        /* 0x3E1 */ public bool ForceOneClickRepair;
+        /* 0x3E2 */ public bool ForceOneClickRepair;
         [NMS(Index = 16)]
-        /* 0x3E2 */ public bool ForceRemoveUIRenderLayer;
+        /* 0x3E3 */ public bool ForceRemoveUIRenderLayer;
         [NMS(Index = 17)]
-        /* 0x3E3 */ public bool HideMaxAmountOnProductSlots;
+        /* 0x3E4 */ public bool HideMaxAmountOnProductSlots;
         [NMS(Index = 45)]
-        /* 0x3E4 */ public bool InteractionRequiresPower;
+        /* 0x3E5 */ public bool InteractionRequiresPower;
         [NMS(Index = 44)]
-        /* 0x3E5 */ public bool InWorldUIUseCameraUp;
+        /* 0x3E6 */ public bool InWorldUIUseCameraUp;
         [NMS(Index = 50)]
-        /* 0x3E6 */ public bool OpenInteractionOnQuit;
+        /* 0x3E7 */ public bool OpenInteractionOnQuit;
         [NMS(Index = 21)]
-        /* 0x3E7 */ public bool ShareInteractionModelRender;
+        /* 0x3E8 */ public bool ShareInteractionModelRender;
         [NMS(Index = 38)]
-        /* 0x3E8 */ public bool SilenceSuitVOIAlerts;
+        /* 0x3E9 */ public bool SilenceSuitVOIAlerts;
         [NMS(Index = 14)]
-        /* 0x3E9 */ public bool UseBoundsForIconCentre;
+        /* 0x3EA */ public bool UseBoundsForIconCentre;
         [NMS(Index = 22)]
-        /* 0x3EA */ public bool UseInteractionStyleCameraEvent;
+        /* 0x3EB */ public bool UseInteractionStyleCameraEvent;
         [NMS(Index = 13)]
-        /* 0x3EB */ public bool UseModelResourceRenderer;
+        /* 0x3EC */ public bool UseModelResourceRenderer;
     }
 }

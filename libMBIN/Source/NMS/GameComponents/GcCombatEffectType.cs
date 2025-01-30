@@ -1,14 +1,16 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF353736FC3B7065, NameHash = 0xADE60E03)]
+    [NMS(GUID = 0xC3313009AA846ACB, NameHash = 0xADE60E03)]
     public class GcCombatEffectType : NMSTemplate
     {
-        // size: 0x4
+        // size: 0x6
         public enum CombatEffectTypeEnum : uint {
             None,
             Fire,
             Stun,
             Slow,
+            ElectricDOT,
+            SpookyLight,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public CombatEffectTypeEnum CombatEffectType;

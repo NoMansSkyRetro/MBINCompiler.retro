@@ -7,15 +7,15 @@ using System.Linq;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xB2E78D75B9088DB6, NameHash = 0xADF5F9C3)]
+    [NMS(GUID = 0xDD8A411B84D2D5DC, NameHash = 0xADF5F9C3)]
     public class TkAnimNodeFrameData : NMSTemplate
     {
         [NMS(Index = 0)]
         /* 0x00 */ public List<Quaternion> Rotations;
         [NMS(Index = 2)]
-        /* 0x10 */ public List<Vector4f> Scales;
+        /* 0x10 */ public List<Vector3f> Scales;
         [NMS(Index = 1)]
-        /* 0x20 */ public List<Vector4f> Translations;
+        /* 0x20 */ public List<Vector3f> Translations;
 
         public override object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo) {
             var fieldName = fieldInfo.Name;

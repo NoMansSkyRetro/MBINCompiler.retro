@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xD326498633352814, NameHash = 0x5AA13C3E)]
+    [NMS(GUID = 0x2F0B6DF1771383FF, NameHash = 0x5AA13C3E)]
     public class TkNGuiEditorSavedTreeNodeModification : NMSTemplate
     {
         [NMS(Index = 2)]

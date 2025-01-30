@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x89F8ED6A89A7E06A, NameHash = 0x1A55832)]
+    [NMS(GUID = 0x7CC2FBC562E1087, NameHash = 0x1A55832)]
     public class DirectMesh : NMSTemplate
     {
         [NMS(Index = 1)]

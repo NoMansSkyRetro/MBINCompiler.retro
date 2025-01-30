@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x1B15E3D087AB4E84, NameHash = 0xA0749579)]
+    [NMS(GUID = 0x4BF0369E749D80C0, NameHash = 0xA0749579)]
     public class TkEngineSettingTypes : NMSTemplate
     {
-        // size: 0x37
+        // size: 0x36
         public enum EngineSettingEnum : uint {
             FullScreen,
             Borderless,
@@ -18,7 +18,6 @@ namespace libMBIN.NMS.Toolkit
             TextureQuality,
             AnimationQuality,
             ShadowQuality,
-            ReflectionsMultiplier,
             ReflectionProbesMultiplier,
             ReflectionProbes,
             ScreenSpaceReflections,

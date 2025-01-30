@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB277459DBA8DF730, NameHash = 0xB8966761)]
+    [NMS(GUID = 0xEF0A633C2229DBB7, NameHash = 0xB8966761)]
     public class GcGoToStateAction : NMSTemplate
     {
         [NMS(Index = 0)]

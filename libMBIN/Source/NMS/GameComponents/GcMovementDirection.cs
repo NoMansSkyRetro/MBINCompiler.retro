@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4499ADCE00A38AC7, NameHash = 0x9723C08A)]
+    [NMS(GUID = 0xE085E550B9940712, NameHash = 0x9723C08A)]
     public class GcMovementDirection : NMSTemplate
     {
         // size: 0x4

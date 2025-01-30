@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9A4BE3B0AB0F3DDD, NameHash = 0x58A5B69E)]
+    [NMS(GUID = 0xA54631F958D88E30, NameHash = 0x58A5B69E)]
     public class GcPortalSaveData : NMSTemplate
     {
         [NMS(Index = 0)]

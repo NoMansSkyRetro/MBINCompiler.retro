@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x28FA69A5F4E283D5, NameHash = 0x3DB87E47)]
+    [NMS(GUID = 0x42A57794F683F216, NameHash = 0x3DB87E47)]
     public class TkSceneNodeData : NMSTemplate
     {
         [NMS(Index = 5)]

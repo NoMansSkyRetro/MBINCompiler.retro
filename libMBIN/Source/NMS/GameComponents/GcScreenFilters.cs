@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x357CF418881FF5B8, NameHash = 0x99BB0142)]
+    [NMS(GUID = 0x1A0CD3B0154181CF, NameHash = 0x99BB0142)]
     public class GcScreenFilters : NMSTemplate
     {
-        // size: 0x53
+        // size: 0x54
         public enum ScreenFilterEnum : uint {
             Default,
             DefaultStorm,
@@ -88,6 +88,7 @@ namespace libMBIN.NMS.GameComponents
             NMSRetroF,
             NMSRetroG,
             CorruptSentinels,
+            DeepWater,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public ScreenFilterEnum ScreenFilter;

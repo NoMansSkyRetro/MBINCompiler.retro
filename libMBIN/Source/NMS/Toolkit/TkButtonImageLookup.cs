@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x4E24122A8CCC28EA, NameHash = 0x9219269B)]
+    [NMS(GUID = 0xF0F29F2388E0DF57, NameHash = 0x9219269B)]
     public class TkButtonImageLookup : NMSTemplate
     {
         [NMS(Index = 0)]

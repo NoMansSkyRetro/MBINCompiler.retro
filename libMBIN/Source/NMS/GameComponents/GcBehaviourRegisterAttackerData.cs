@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x92A4553A4AB24117, NameHash = 0x41AB5455)]
+    [NMS(GUID = 0x9D8ABAF67741344F, NameHash = 0x41AB5455)]
     public class GcBehaviourRegisterAttackerData : NMSTemplate
     {
         [NMS(Index = 0)]

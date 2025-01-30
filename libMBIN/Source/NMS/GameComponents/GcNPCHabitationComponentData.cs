@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFF711CE044F84310, NameHash = 0xBDFDEA25)]
+    [NMS(GUID = 0x872123780A1F5048, NameHash = 0xBDFDEA25)]
     public class GcNPCHabitationComponentData : NMSTemplate
     {
         [NMS(Index = 0)]

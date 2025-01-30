@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE71733076795313F, NameHash = 0x15BA5DC9)]
+    [NMS(GUID = 0xCFB1A1D65E43508C, NameHash = 0x15BA5DC9)]
     public class TkButtonPathMapping : NMSTemplate
     {
         [NMS(Index = 1)]

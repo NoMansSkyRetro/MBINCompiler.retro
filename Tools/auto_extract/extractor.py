@@ -156,12 +156,12 @@ EXTRA_ATTRIBUTES = {
 # methods.
 # TODO: If the GUID changes we need to raise an important message so that we may
 # fix it manually.
-DONT_OVERRIDE = [
-    'TkAnimNodeFrameData',
+DONT_OVERRIDE = {
+    'TkAnimNodeFrameData': 0xDD8A411B84D2D5DC,
     # 'TkAnimNodeFrameHalfData',
-    'TkGeometryData',
-    'TkMeshData',
-]
+    'TkGeometryData': 0xED9C2FCDA6D4B22F,
+    'TkMeshData': 0xA5E773D3424BA9FA,
+}
 
 SUMMARY_FILE = op.join(op.dirname(__file__), 'summary.txt')
 TEMPLATES_DIR = op.join(op.dirname(__file__), TEMPLATE_DIR)
@@ -304,7 +304,7 @@ class Field(ABC):
         self._is_list_field = False
 
         # Get the name of the field.
-        self._field_name = nms_mem.read_string(
+        self._field_name: str = nms_mem.read_string(
             struct.unpack_from('<Q', data, offset=0x0)[0], byte=128
         )
         # Some field names are annoyingly duplicated in the exe. c# doesn't
@@ -328,14 +328,19 @@ class Field(ABC):
         )
 
     @property
+    def has_space_in_name(self):
+        return " " in self._field_name
+
+    @property
     def field_name(self):
-        if self._field_name[0].isdigit():
-            return '_' + self._field_name
+        field_name = self._field_name.replace(" ", "")
+        if field_name[0].isdigit():
+            return '_' + field_name
         if self._field_name_is_duplicate:
-            return self._field_name + '_' + self.field_type
-        if self._field_name[:2].lower() in {'gc', 'tk'}:
-            return self._field_name[2:]
-        return self._field_name
+            return field_name + '_' + self.field_type
+        if field_name[:2].lower() in {'gc', 'tk'}:
+            return field_name[2:]
+        return field_name
 
     @property
     def field_offset(self):
@@ -736,6 +741,8 @@ def read_class(
         dir_ = 'Globals'
     else:
         dir_ = PREFIX_MAPPING.get(name[:3].lower(), "GameComponents")
+    if name in DONT_OVERRIDE and DONT_OVERRIDE[name] != guid:
+        print(f'The template {name} has been updated. Please check')
     if (config['general'].getboolean('replace_existing_files', fallback=False)
         and name[1:] not in DONT_OVERRIDE
     ):

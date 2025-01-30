@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xA7661CCFD3D0504C, NameHash = 0x56688699)]
+    [NMS(GUID = 0xEEA91635ED1C54BB, NameHash = 0x56688699)]
     public class TkAnimationNotify : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x932FB3213B02066D, NameHash = 0xFACED760)]
+    [NMS(GUID = 0x95EA3BF7ED3E2EAB, NameHash = 0xFACED760)]
     public class GcNetworkInterpolationComponentData : NMSTemplate
     {
         // size: 0x3
@@ -13,5 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0 */ public SynchroniseScaleEnum SynchroniseScale;
         [NMS(Index = 1)]
         /* 0x4 */ public bool SupportTeleportation;
+        [NMS(Index = 2)]
+        /* 0x5 */ public bool UpdateWhileInactive;
     }
 }

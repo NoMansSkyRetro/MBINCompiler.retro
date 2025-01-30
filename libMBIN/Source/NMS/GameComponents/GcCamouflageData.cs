@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8091C6D88EC210B0, NameHash = 0x3883FEBB)]
+    [NMS(GUID = 0x7E0B250CFA6EBD82, NameHash = 0x3883FEBB)]
     public class GcCamouflageData : NMSTemplate
     {
         [NMS(Index = 0)]

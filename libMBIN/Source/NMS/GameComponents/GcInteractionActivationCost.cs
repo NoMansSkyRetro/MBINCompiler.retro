@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE69775A432B7DE63, NameHash = 0xC2CAB264)]
+    [NMS(GUID = 0x9ADE1A322E0BCEA5, NameHash = 0xC2CAB264)]
     public class GcInteractionActivationCost : NMSTemplate
     {
         [NMS(Index = 1)]

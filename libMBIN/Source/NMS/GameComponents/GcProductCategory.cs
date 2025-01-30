@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2B65C7F96546BC10, NameHash = 0xE9C3D15D)]
+    [NMS(GUID = 0x1A66BD114CB85379, NameHash = 0xE9C3D15D)]
     public class GcProductCategory : NMSTemplate
     {
-        // size: 0xA
+        // size: 0xB
         public enum ProductCategoryEnum : uint {
             Component,
             Consumable,
@@ -15,6 +15,7 @@ namespace libMBIN.NMS.GameComponents
             CustomisationPart,
             CreatureEgg,
             Fish,
+            ExhibitBone,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public ProductCategoryEnum ProductCategory;

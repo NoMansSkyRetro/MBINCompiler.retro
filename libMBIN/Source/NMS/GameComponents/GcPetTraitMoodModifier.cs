@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x11C06A4BDDAD187C, NameHash = 0xD8A63B68)]
+    [NMS(GUID = 0x61B80A4F24BBA20C, NameHash = 0xD8A63B68)]
     public class GcPetTraitMoodModifier : NMSTemplate
     {
         [NMS(Index = 3)]

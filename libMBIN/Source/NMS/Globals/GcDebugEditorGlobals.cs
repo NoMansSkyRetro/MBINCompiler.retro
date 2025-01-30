@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x14B690A0E217F007, NameHash = 0x267B7994)]
+    [NMS(GUID = 0x58763CF170AD0423, NameHash = 0x267B7994)]
     public class GcDebugEditorGlobals : NMSTemplate
     {
         [NMS(Index = 19)]

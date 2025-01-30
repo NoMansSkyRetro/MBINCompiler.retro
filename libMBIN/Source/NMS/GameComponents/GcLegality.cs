@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xADA9902A1B950F4D, NameHash = 0xEAABC6B9)]
+    [NMS(GUID = 0xE51197160ACEF6C7, NameHash = 0xEAABC6B9)]
     public class GcLegality : NMSTemplate
     {
         // size: 0x2

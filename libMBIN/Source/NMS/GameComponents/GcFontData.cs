@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7119B895413DD133, NameHash = 0xE98A05A5)]
+    [NMS(GUID = 0xBE2EB3339FBF0F49, NameHash = 0xE98A05A5)]
     public class GcFontData : NMSTemplate
     {
         [NMS(Index = 0)]

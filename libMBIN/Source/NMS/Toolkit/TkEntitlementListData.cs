@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x5D44992908864ABF, NameHash = 0xC299E896)]
+    [NMS(GUID = 0x32E755FD3B60E694, NameHash = 0xC299E896)]
     public class TkEntitlementListData : NMSTemplate
     {
         [NMS(Index = 0)]

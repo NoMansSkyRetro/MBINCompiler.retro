@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x9E2B8955F564F0A2, NameHash = 0xF2200AD2)]
+    [NMS(GUID = 0x1B725E62595EECB3, NameHash = 0xF2200AD2)]
     public class TkNGuiEditorStyleColour : NMSTemplate
     {
         [NMS(Index = 1)]

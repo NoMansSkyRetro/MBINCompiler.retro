@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2FC360A5CA52D87D, NameHash = 0x73A12A5C)]
+    [NMS(GUID = 0xA17FC0CFC1E0AC4C, NameHash = 0x73A12A5C)]
     public class GcFireSimpleInteractionAction : NMSTemplate
     {
     }

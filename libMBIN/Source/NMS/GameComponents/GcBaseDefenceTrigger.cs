@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9B352248F21001D4, NameHash = 0x8B201943)]
+    [NMS(GUID = 0x76AE871348899EB2, NameHash = 0x8B201943)]
     public class GcBaseDefenceTrigger : NMSTemplate
     {
         [NMS(Index = 4)]

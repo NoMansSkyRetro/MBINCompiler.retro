@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x64AC479EAF05385D, NameHash = 0x7BFA5FEC)]
+    [NMS(GUID = 0x3305BA411E91F00C, NameHash = 0x7BFA5FEC)]
     public class GcMissionConditionMultiplayerFreighterAvailable : NMSTemplate
     {
     }

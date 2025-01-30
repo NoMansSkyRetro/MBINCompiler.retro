@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB03780BB009D3F26, NameHash = 0xF7974213)]
+    [NMS(GUID = 0x2150CB77724F125D, NameHash = 0xF7974213)]
     public class GcMissionConditionSeasonNumber : NMSTemplate
     {
         [NMS(Index = 2)]

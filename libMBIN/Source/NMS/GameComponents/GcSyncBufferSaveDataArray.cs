@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x58585E16D68D56C2, NameHash = 0x85DDBDB8)]
+    [NMS(GUID = 0x7E50420BA98B940A, NameHash = 0x85DDBDB8)]
     public class GcSyncBufferSaveDataArray : NMSTemplate
     {
         [NMS(Index = 0)]

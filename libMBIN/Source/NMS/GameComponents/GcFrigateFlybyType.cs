@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x521EA079410C9677, NameHash = 0xD6D9F16C)]
+    [NMS(GUID = 0xB1F730CC940B60A8, NameHash = 0xD6D9F16C)]
     public class GcFrigateFlybyType : NMSTemplate
     {
         // size: 0x6

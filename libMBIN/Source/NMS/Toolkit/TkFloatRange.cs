@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xBF47086F53468551, NameHash = 0x359F7497)]
+    [NMS(GUID = 0xFF0075CCC1E02339, NameHash = 0x359F7497)]
     public class TkFloatRange : NMSTemplate
     {
         [NMS(Index = 1)]

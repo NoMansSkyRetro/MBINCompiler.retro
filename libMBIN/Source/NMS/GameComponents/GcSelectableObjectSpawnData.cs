@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2ADA807439157DCD, NameHash = 0xBB7EFD7B)]
+    [NMS(GUID = 0x7CDDA1B474739133, NameHash = 0xBB7EFD7B)]
     public class GcSelectableObjectSpawnData : NMSTemplate
     {
         [NMS(Index = 0)]
