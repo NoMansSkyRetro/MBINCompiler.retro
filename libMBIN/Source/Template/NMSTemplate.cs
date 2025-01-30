@@ -1655,7 +1655,11 @@ namespace libMBIN
                 foreach ( var xmlElement in xmlData.Elements ) {
                     if ( xmlElement.GetType() == typeof( MXmlProperty ) ) {
                         MXmlProperty xmlProperty = (MXmlProperty) xmlElement;
-                        FieldInfo field = templateType.GetField( xmlProperty.Name.Replace(" ", "") );
+                        string fieldName = xmlProperty.Name.Replace(" ", "");
+                        if (char.IsNumber(fieldName[0])) {
+                            fieldName = "_" + fieldName;
+                        }
+                        FieldInfo field = templateType.GetField(fieldName);
                         if (field == null) {
                             // The MXML file contains a field which is no longer in the class definition.
                             // Raise a more helpful error.
