@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA80B56F99C67F88, NameHash = 0xDB330A9F)]
+    [NMS(GUID = 0x612BA9575232E52B, NameHash = 0xDB330A9F)]
     public class GcMissionConditionHasProduct : NMSTemplate
     {
         [NMS(Index = 1)]
@@ -43,13 +43,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3B */ public bool TakeAmountFromSeasonData;
         [NMS(Index = 11)]
         /* 0x3C */ public bool TakeIdFromSeasonData;
+        [NMS(Index = 23)]
+        /* 0x3D */ public bool TeachIfNotKnown;
         [NMS(Index = 15)]
-        /* 0x3D */ public bool UseAffordRecipeForTextFormatting;
+        /* 0x3E */ public bool UseAffordRecipeForTextFormatting;
         [NMS(Index = 3)]
-        /* 0x3E */ public bool UseDefaultAmount;
+        /* 0x3F */ public bool UseDefaultAmount;
         [NMS(Index = 21)]
-        /* 0x3F */ public bool UseProductCategory;
+        /* 0x40 */ public bool UseProductCategory;
         [NMS(Index = 19)]
-        /* 0x40 */ public bool UseProductIconAsMissionIcon;
+        /* 0x41 */ public bool UseProductIconAsMissionIcon;
     }
 }
