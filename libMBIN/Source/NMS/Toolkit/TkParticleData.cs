@@ -45,7 +45,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x3C8 */ public TkEmitterFloatProperty ParticleSpeedMultiplier;
         [NMS(Index = 33)]
         /* 0x400 */ public TkEmitterFloatProperty Rotation;
-        [NMS(Index = 1)]
+        [NMS(Index = 1, MxmlName = "3DGeom")]
         /* 0x438 */ public VariableSizeString _3DGeom;
         [NMS(Index = 2)]
         /* 0x448 */ public VariableSizeString TrailPath;

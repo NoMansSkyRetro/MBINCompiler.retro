@@ -328,8 +328,9 @@ class Field(ABC):
         )
 
     @property
-    def has_space_in_name(self):
-        return " " in self._field_name
+    def has_mxml_name(self):
+        if " " in self._field_name or self._field_name[0].isdigit():
+            return True
 
     @property
     def field_name(self):
