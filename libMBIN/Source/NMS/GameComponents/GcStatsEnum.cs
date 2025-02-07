@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1E3BF6019ED33AC5, NameHash = 0xB29233BB)]
+    [NMS(GUID = 0xE7E255F6B3A8BEC4, NameHash = 0xB29233BB)]
     public class GcStatsEnum : NMSTemplate
     {
-        // size: 0x17
+        // size: 0x18
         public enum StatEnumEnum : uint {
             None,
             DEPOTS_BROKEN,
@@ -28,6 +28,7 @@ namespace libMBIN.NMS.GameComponents
             MECHS_KILLED,
             SPIDERS_KILLED,
             SM_SPIDER_KILLS,
+            SEAGLASS,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public StatEnumEnum StatEnum;
