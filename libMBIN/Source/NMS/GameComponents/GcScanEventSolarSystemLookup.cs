@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD3F1335EAE3D36B3, NameHash = 0x9CE4FFF3)]
+    [NMS(GUID = 0x2C65FA5CE638A49C, NameHash = 0x9CE4FFF3)]
     public class GcScanEventSolarSystemLookup : NMSTemplate
     {
         [NMS(Index = 36)]
@@ -13,7 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public NMSString0x10 SystemNeedsResourceHint;
         [NMS(Index = 7)]
         /* 0x40 */ public GcPlanetTradingData TradingData;
-        [NMS(Index = 45)]
+        [NMS(Index = 46)]
         /* 0x48 */ public int MinPlanets;
         [NMS(Index = 27)]
         /* 0x4C */ public GcBiomeType NeedsBiomeType;
@@ -69,33 +69,35 @@ namespace libMBIN.NMS.GameComponents
         /* 0x7A */ public bool NeverAllowExtremeSentinelPlanet;
         [NMS(Index = 22)]
         /* 0x7B */ public bool NeverAllowExtremeWeatherPlanet;
+        [NMS(Index = 45)]
+        /* 0x7C */ public bool NeverAllowGasGiantSystem;
         [NMS(Index = 12)]
-        /* 0x7C */ public bool RequireUndiscovered;
+        /* 0x7D */ public bool RequireUndiscovered;
         [NMS(Index = 32)]
-        /* 0x7D */ public bool SuitableForCreatureDiscovery;
+        /* 0x7E */ public bool SuitableForCreatureDiscovery;
         [NMS(Index = 35)]
-        /* 0x7E */ public bool SuitableForCreatureTaming;
+        /* 0x7F */ public bool SuitableForCreatureTaming;
         [NMS(Index = 34)]
-        /* 0x7F */ public bool SuitableForRobotCreatureDiscovery;
+        /* 0x80 */ public bool SuitableForRobotCreatureDiscovery;
         [NMS(Index = 33)]
-        /* 0x80 */ public bool SuitableForWeirdCreatureDiscovery;
+        /* 0x81 */ public bool SuitableForWeirdCreatureDiscovery;
         [NMS(Index = 42)]
-        /* 0x81 */ public bool SystemNeedsCorruptSentinelPlanet;
+        /* 0x82 */ public bool SystemNeedsCorruptSentinelPlanet;
         [NMS(Index = 43)]
-        /* 0x82 */ public bool SystemNeedsExtremeStormPlanet;
+        /* 0x83 */ public bool SystemNeedsExtremeStormPlanet;
         [NMS(Index = 44)]
-        /* 0x83 */ public bool SystemNeedsGasGiant;
+        /* 0x84 */ public bool SystemNeedsGasGiant;
         [NMS(Index = 41)]
-        /* 0x84 */ public bool SystemNeedsInfestedPlanet;
+        /* 0x85 */ public bool SystemNeedsInfestedPlanet;
         [NMS(Index = 39)]
-        /* 0x85 */ public bool SystemNeedsWater;
+        /* 0x86 */ public bool SystemNeedsWater;
         [NMS(Index = 40)]
-        /* 0x86 */ public bool SystemNeedsWeirdPlanet;
+        /* 0x87 */ public bool SystemNeedsWeirdPlanet;
         [NMS(Index = 0)]
-        /* 0x87 */ public bool UseStarType;
+        /* 0x88 */ public bool UseStarType;
         [NMS(Index = 2)]
-        /* 0x88 */ public bool UseTrading;
+        /* 0x89 */ public bool UseTrading;
         [NMS(Index = 1)]
-        /* 0x89 */ public bool UseWealth;
+        /* 0x8A */ public bool UseWealth;
     }
 }

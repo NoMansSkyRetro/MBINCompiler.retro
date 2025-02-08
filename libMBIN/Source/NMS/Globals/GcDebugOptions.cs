@@ -61,9 +61,9 @@ namespace libMBIN.NMS.Globals
         /* 0x01A8 */ public ulong OverrideAbandonedFreighterSeed;
         [NMS(Index = 416)]
         /* 0x01B0 */ public TkGlobals ToolkitGlobals;
-        [NMS(Index = 189)]
+        [NMS(Index = 189, MxmlName = "3dTextDistance")]
         /* 0x068C */ public float _3dTextDistance;
-        [NMS(Index = 190)]
+        [NMS(Index = 190, MxmlName = "3dTextMinScale")]
         /* 0x0690 */ public float _3dTextMinScale;
         [NMS(Index = 406)]
         /* 0x0694 */ public GcBaseBuildingPartStyle AutomaticPartSpawnStyle;

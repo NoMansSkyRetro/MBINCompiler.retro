@@ -131,69 +131,69 @@ namespace libMBIN.NMS.Globals
         /* 0x0EDC */ public Vector2f DeathSpinPitch;
         [NMS(Index = 433)]
         /* 0x0EE4 */ public Vector2f DeathSpinRoll;
-        [NMS(Index = 210)]
+        [NMS(Index = 210, MxmlName = "3rdPersonAngleMinSpeed")]
         /* 0x0EEC */ public float _3rdPersonAngleMinSpeed;
-        [NMS(Index = 211)]
+        [NMS(Index = 211, MxmlName = "3rdPersonAngleSpeedRangePitch")]
         /* 0x0EF0 */ public float _3rdPersonAngleSpeedRangePitch;
-        [NMS(Index = 212)]
+        [NMS(Index = 212, MxmlName = "3rdPersonAngleSpeedRangeYaw")]
         /* 0x0EF4 */ public float _3rdPersonAngleSpeedRangeYaw;
-        [NMS(Index = 209)]
+        [NMS(Index = 209, MxmlName = "3rdPersonAngleSpringTime")]
         /* 0x0EF8 */ public float _3rdPersonAngleSpringTime;
-        [NMS(Index = 218)]
+        [NMS(Index = 218, MxmlName = "3rdPersonAvoidanceAdjustPitchFactor")]
         /* 0x0EFC */ public float _3rdPersonAvoidanceAdjustPitchFactor;
-        [NMS(Index = 220)]
+        [NMS(Index = 220, MxmlName = "3rdPersonAvoidanceAdjustRollFactor")]
         /* 0x0F00 */ public float _3rdPersonAvoidanceAdjustRollFactor;
-        [NMS(Index = 221)]
+        [NMS(Index = 221, MxmlName = "3rdPersonAvoidanceAdjustYawFactor")]
         /* 0x0F04 */ public float _3rdPersonAvoidanceAdjustYawFactor;
         [NMS(Index = 223, MxmlName = "3rdPersonFlashDuration ")]
         /* 0x0F08 */ public float _3rdPersonFlashDuration;
         [NMS(Index = 222, MxmlName = "3rdPersonFlashIntensity ")]
         /* 0x0F0C */ public float _3rdPersonFlashIntensity;
-        [NMS(Index = 219)]
+        [NMS(Index = 219, MxmlName = "3rdPersonHeightForceAdjustPitchFactor")]
         /* 0x0F10 */ public float _3rdPersonHeightForceAdjustPitchFactor;
-        [NMS(Index = 214)]
+        [NMS(Index = 214, MxmlName = "3rdPersonLowHeightMax")]
         /* 0x0F14 */ public float _3rdPersonLowHeightMax;
-        [NMS(Index = 213)]
+        [NMS(Index = 213, MxmlName = "3rdPersonLowHeightMin")]
         /* 0x0F18 */ public float _3rdPersonLowHeightMin;
-        [NMS(Index = 215)]
+        [NMS(Index = 215, MxmlName = "3rdPersonLowHeightOffsetVertRotationY")]
         /* 0x0F1C */ public float _3rdPersonLowHeightOffsetVertRotationY;
-        [NMS(Index = 216)]
+        [NMS(Index = 216, MxmlName = "3rdPersonLowHeightOffsetY")]
         /* 0x0F20 */ public float _3rdPersonLowHeightOffsetY;
-        [NMS(Index = 217)]
+        [NMS(Index = 217, MxmlName = "3rdPersonLowHeightSpringTime")]
         /* 0x0F24 */ public float _3rdPersonLowHeightSpringTime;
-        [NMS(Index = 206)]
+        [NMS(Index = 206, MxmlName = "3rdPersonPitchAngle")]
         /* 0x0F28 */ public float _3rdPersonPitchAngle;
-        [NMS(Index = 202)]
+        [NMS(Index = 202, MxmlName = "3rdPersonRollAngle")]
         /* 0x0F2C */ public float _3rdPersonRollAngle;
-        [NMS(Index = 205)]
+        [NMS(Index = 205, MxmlName = "3rdPersonRollAngleAlien")]
         /* 0x0F30 */ public float _3rdPersonRollAngleAlien;
-        [NMS(Index = 203)]
+        [NMS(Index = 203, MxmlName = "3rdPersonRollAngleDropship")]
         /* 0x0F34 */ public float _3rdPersonRollAngleDropship;
-        [NMS(Index = 204)]
+        [NMS(Index = 204, MxmlName = "3rdPersonRollAngleScience")]
         /* 0x0F38 */ public float _3rdPersonRollAngleScience;
         [NMS(Index = 224, MxmlName = "3rdPersonTransitionTime ")]
         /* 0x0F3C */ public float _3rdPersonTransitionTime;
-        [NMS(Index = 201)]
+        [NMS(Index = 201, MxmlName = "3rdPersonUpOffsetRollChangeSpeed")]
         /* 0x0F40 */ public float _3rdPersonUpOffsetRollChangeSpeed;
-        [NMS(Index = 229)]
+        [NMS(Index = 229, MxmlName = "3rdPersonWarpWanderSpring")]
         /* 0x0F44 */ public float _3rdPersonWarpWanderSpring;
-        [NMS(Index = 228)]
+        [NMS(Index = 228, MxmlName = "3rdPersonWarpWanderStartTime")]
         /* 0x0F48 */ public float _3rdPersonWarpWanderStartTime;
-        [NMS(Index = 230)]
+        [NMS(Index = 230, MxmlName = "3rdPersonWarpWanderTimeX")]
         /* 0x0F4C */ public float _3rdPersonWarpWanderTimeX;
-        [NMS(Index = 231)]
+        [NMS(Index = 231, MxmlName = "3rdPersonWarpWanderTimeY")]
         /* 0x0F50 */ public float _3rdPersonWarpWanderTimeY;
-        [NMS(Index = 232)]
+        [NMS(Index = 232, MxmlName = "3rdPersonWarpWanderTimeZ")]
         /* 0x0F54 */ public float _3rdPersonWarpWanderTimeZ;
-        [NMS(Index = 225)]
+        [NMS(Index = 225, MxmlName = "3rdPersonWarpXWander")]
         /* 0x0F58 */ public float _3rdPersonWarpXWander;
-        [NMS(Index = 226)]
+        [NMS(Index = 226, MxmlName = "3rdPersonWarpYWander")]
         /* 0x0F5C */ public float _3rdPersonWarpYWander;
-        [NMS(Index = 227)]
+        [NMS(Index = 227, MxmlName = "3rdPersonWarpZWander")]
         /* 0x0F60 */ public float _3rdPersonWarpZWander;
-        [NMS(Index = 207)]
+        [NMS(Index = 207, MxmlName = "3rdPersonYawAngle")]
         /* 0x0F64 */ public float _3rdPersonYawAngle;
-        [NMS(Index = 208)]
+        [NMS(Index = 208, MxmlName = "3rdPersonYawAngleLateralExtra")]
         /* 0x0F68 */ public float _3rdPersonYawAngleLateralExtra;
         [NMS(Index = 200)]
         /* 0x0F6C */ public float AcrobaticLowFlightLevel;
@@ -1277,9 +1277,9 @@ namespace libMBIN.NMS.Globals
         /* 0x18F4 */ public GcShipDataNames HoverShipDataNamesSpecial;
         [NMS(Index = 2)]
         /* 0x1A14 */ public GcShipDataNames SpookShipDataNames;
-        [NMS(Index = 78)]
+        [NMS(Index = 78, MxmlName = "3rdPersonShipEnabled")]
         /* 0x1B34 */ public bool _3rdPersonShipEnabled;
-        [NMS(Index = 233)]
+        [NMS(Index = 233, MxmlName = "3rdPersonWarpWanderCurve")]
         /* 0x1B35 */ public TkCurveType _3rdPersonWarpWanderCurve;
         [NMS(Index = 11)]
         /* 0x1B36 */ public bool AddShipToCollectionOnEnter;

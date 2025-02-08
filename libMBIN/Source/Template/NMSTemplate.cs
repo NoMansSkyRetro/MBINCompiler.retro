@@ -30,6 +30,7 @@ namespace libMBIN
 {
     public class NMSTemplate
     {
+        internal static readonly string[] FakeTypes = { "Colour", "Vector2f", "Vector3f", "Vector4f" };
         internal static readonly Dictionary<string, Type> NMSTemplateMap = Assembly.GetExecutingAssembly()
                 .GetTypes()
                 .Where(t => t.BaseType == typeof(NMSTemplate))
@@ -1291,7 +1292,6 @@ namespace libMBIN
                         } else {
                             template = (NMSTemplate) value;
                         }
-
                         var templateXmlData = template.SerializeMXml( true );
                         templateXmlData.Name = fieldName;
 
@@ -1413,7 +1413,11 @@ namespace libMBIN
         public MXmlBase SerializeMXml(bool isChildTemplate, bool isGenericTemplate = false) {
             Type type = GetType();
             string typeName = type.Name != "NMSString0x20A" ? type.Name : "NMSString0x20";
-            MXmlBase xmlData = new MXmlProperty { Value = typeName };
+            MXmlBase xmlData = new MXmlProperty {};
+            // Only add the type as a value if we need to.
+            if (!FakeTypes.Contains(typeName)) {
+                ((MXmlProperty)xmlData).Value = typeName;
+            }
             MXmlBase subElement = null;
             if ( isGenericTemplate ) {
                 xmlData = new MXmlProperty { Name = typeName };
@@ -1422,7 +1426,7 @@ namespace libMBIN
             }
 
             if ( !isChildTemplate ) {
-                xmlData = new MXmlData { Template = type.Name };
+                xmlData = new MXmlData { Template = "c" + type.Name };
             }
 
             var fields = type.GetFields().OrderBy(field => field.GetCustomAttribute<NMSAttribute>()?.Index ?? field.MetadataToken); // Order fields in declared order
@@ -1634,7 +1638,7 @@ namespace libMBIN
                 }
             } else {
                 if ( xmlData.GetType() == typeof( MXmlData ) ) {
-                    template = TemplateFromName( ((MXmlData) xmlData).Template );
+                    template = TemplateFromName( ((MXmlData) xmlData).Template[1..] );
                 } else if ( xmlData.GetType() == typeof( MXmlProperty ) ) {
                     string value = ((MXmlProperty) xmlData).Value;
                     if (value == null && templateTypeKnown != null) {

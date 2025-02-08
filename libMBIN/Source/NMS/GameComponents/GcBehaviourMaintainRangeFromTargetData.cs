@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x40 */ public float AvoidCreaturesStrength;
         [NMS(Index = 5)]
         /* 0x44 */ public float SpeedModifier;
-        [NMS(Index = 3)]
+        [NMS(Index = 3, MxmlName = "2D")]
         /* 0x48 */ public bool _2D;
         [NMS(Index = 4)]
         /* 0x49 */ public bool SucceedWhenInRange;
