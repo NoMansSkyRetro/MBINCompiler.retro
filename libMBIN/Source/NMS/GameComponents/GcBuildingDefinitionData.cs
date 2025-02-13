@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDBCE72F402346218, NameHash = 0x15C14AC1)]
+    [NMS(GUID = 0x1978387435F26873, NameHash = 0x15C14AC1)]
     public class GcBuildingDefinitionData : NMSTemplate
     {
-        [NMS(Index = 7)]
+        [NMS(Index = 8)]
         /* 0x00 */ public NMSString0x20A TextureNameHint;
         [NMS(Index = 1)]
         /* 0x20 */ public NMSString0x10 ClusterLayout;
@@ -16,23 +16,25 @@ namespace libMBIN.NMS.GameComponents
         /* 0x50 */ public TkNoiseFlattenOptions FlattenType;
         [NMS(Index = 2)]
         /* 0x58 */ public float ClusterSpacing;
-        [NMS(Index = 11)]
+        [NMS(Index = 12)]
         /* 0x5C */ public float MaxHeight;
-        [NMS(Index = 10)]
+        [NMS(Index = 11)]
         /* 0x60 */ public float MinHeight;
-        [NMS(Index = 6)]
+        [NMS(Index = 7)]
         /* 0x64 */ public int NumModelsToGenerate;
         [NMS(Index = 5)]
         /* 0x68 */ public int NumOverridesToGenerate;
-        [NMS(Index = 8, MxmlName = "OverrideRadius ")]
-        /* 0x6C */ public float OverrideRadius;
-        [NMS(Index = 12)]
-        /* 0x70 */ public GcPlanetaryBuildingRestrictions PlanetRestrictions;
-        [NMS(Index = 4)]
-        /* 0x72 */ public bool EnabledWhenPlanetHasNoNPCs;
-        [NMS(Index = 9)]
-        /* 0x73 */ public bool GivesShelter;
+        [NMS(Index = 6)]
+        /* 0x6C */ public int NumOverridesToGenerateWaterworlds;
+        [NMS(Index = 9, MxmlName = "OverrideRadius ")]
+        /* 0x70 */ public float OverrideRadius;
         [NMS(Index = 13)]
-        /* 0x74 */ public bool IgnoreParticlesInAABB;
+        /* 0x74 */ public GcPlanetaryBuildingRestrictions PlanetRestrictions;
+        [NMS(Index = 4)]
+        /* 0x76 */ public bool EnabledWhenPlanetHasNoNPCs;
+        [NMS(Index = 10)]
+        /* 0x77 */ public bool GivesShelter;
+        [NMS(Index = 14)]
+        /* 0x78 */ public bool IgnoreParticlesInAABB;
     }
 }
