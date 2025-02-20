@@ -3,20 +3,20 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4E30D514A8E6E836, NameHash = 0x9858A3C5)]
+    [NMS(GUID = 0x81C11302C70F6AD4, NameHash = 0x9858A3C5)]
     public class GcObjectSpawnData : NMSTemplate
     {
-        [NMS(Index = 44)]
+        [NMS(Index = 45)]
         /* 0x000 */ public GcObjectSpawnDataVariant QualityVariantData;
         [NMS(Index = 0)]
         /* 0x048 */ public GcResourceElement Resource;
-        [NMS(Index = 42)]
+        [NMS(Index = 43)]
         /* 0x090 */ public List<GcResourceElement> AltResources;
         [NMS(Index = 1)]
         /* 0x0A0 */ public NMSString0x10 DebugName;
-        [NMS(Index = 41)]
+        [NMS(Index = 42)]
         /* 0x0B0 */ public NMSString0x10 DestroyedByVehicleEffect;
-        [NMS(Index = 43)]
+        [NMS(Index = 44)]
         /* 0x0C0 */ public List<GcTerrainTileType> ExtraTileTypes;
         [NMS(Index = 4)]
         /* 0x0D0 */ public NMSString0x10 Placement;
@@ -117,17 +117,19 @@ namespace libMBIN.NMS.GameComponents
         /* 0x15B */ public bool DestroyedByTerrainEdit;
         [NMS(Index = 36)]
         /* 0x15C */ public bool InvisibleToCamera;
-        [NMS(Index = 40)]
+        [NMS(Index = 41)]
         /* 0x15D */ public bool IsFloatingIsland;
         [NMS(Index = 26)]
         /* 0x15E */ public bool MatchGroundColour;
+        [NMS(Index = 40)]
+        /* 0x15F */ public bool MoveToGroundOnUpgrade;
         [NMS(Index = 25)]
-        /* 0x15F */ public bool RelativeToSeaLevel;
+        /* 0x160 */ public bool RelativeToSeaLevel;
         [NMS(Index = 39)]
-        /* 0x160 */ public bool SupportsScanToReveal;
+        /* 0x161 */ public bool SupportsScanToReveal;
         [NMS(Index = 29)]
-        /* 0x161 */ public bool SwapPrimaryForRandomColour;
+        /* 0x162 */ public bool SwapPrimaryForRandomColour;
         [NMS(Index = 28)]
-        /* 0x162 */ public bool SwapPrimaryForSecondaryColour;
+        /* 0x163 */ public bool SwapPrimaryForSecondaryColour;
     }
 }

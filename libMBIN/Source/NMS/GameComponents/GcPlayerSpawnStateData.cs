@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x55FD426A97A3832F, NameHash = 0xE1F664A6)]
+    [NMS(GUID = 0x758F78C58D4C358A, NameHash = 0xE1F664A6)]
     public class GcPlayerSpawnStateData : NMSTemplate
     {
         [NMS(Index = 10)]
@@ -27,7 +27,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA0 */ public Vector4f ShipPositionInSystem;
         [NMS(Index = 5)]
         /* 0xB0 */ public Vector4f ShipTransformAt;
-        // size: 0x7
+        // size: 0x8
         public enum LastKnownPlayerStateEnum : uint {
             OnFoot,
             InShip,
@@ -36,6 +36,7 @@ namespace libMBIN.NMS.GameComponents
             InNexus,
             AbandonedFreighter,
             InShipLanded,
+            InVehicle,
         }
         [NMS(Index = 6)]
         /* 0xC0 */ public LastKnownPlayerStateEnum LastKnownPlayerState;

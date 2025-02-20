@@ -30,7 +30,7 @@ namespace libMBIN
 {
     public class NMSTemplate
     {
-        internal static readonly string[] FakeTypes = { "Colour", "Vector2f", "Vector3f", "Vector4f" };
+        internal static readonly string[] FakeTypes = { "Colour", "Vector2f", "Vector3f", "Vector4f", "Colour32" };
         internal static readonly Dictionary<string, Type> NMSTemplateMap = Assembly.GetExecutingAssembly()
                 .GetTypes()
                 .Where(t => t.BaseType == typeof(NMSTemplate))
@@ -448,6 +448,14 @@ namespace libMBIN
                         }
                     }
                     return null;
+                case "Colour32":
+                    uint col = reader.ReadUInt32();
+                    byte A = (byte)((col >> 24) & 0xFF);
+                    byte B = (byte)((col >> 16) & 0xFF);
+                    byte G = (byte)((col >> 8) & 0xFF);
+                    byte R = (byte)(col & 0xFF);
+                    Colour32 colour = new Colour32(R, G, B, A);
+                    return colour;
                 case "HashMap`1":
                     reader.Align(8);
                     Type subType = field.GetGenericArguments()[0];
@@ -743,6 +751,11 @@ namespace libMBIN
                     } else {
                         writer.Write( (UInt64) fieldData );
                     }
+                    break;
+                case "Colour32":
+                    Colour32 colour = (Colour32)fieldData;
+                    uint col = ((uint)(colour.A * 255f) << 24) + ((uint)(colour.B * 255f) << 16) + ((uint)(colour.G * 255f) << 8) + (uint)(colour.R * 255f);
+                    writer.Write(col);
                     break;
                 case "List`1":
                     writer.Align( 8, field?.Name ?? fieldType.Name, paddingByte );
@@ -1304,14 +1317,15 @@ namespace libMBIN
 
                         Array array = (Array) value;
                         string[] names = GetEnumNames( field.Name, array.Length, settings );
-
                         i = 0;
                         foreach ( var template in array ) {
-                            MXmlBase data = SerializeMXmlValue( arrayType, field, settings, template, false );
+                            MXmlProperty data = (MXmlProperty)SerializeMXmlValue( arrayType, field, settings, template, false );
                             // Only change the name if we have an associated enum.
                             string overwriteName = names[i++];
                             if (overwriteName != null && overwriteName != "") {
                                 data.Name = overwriteName;
+                            } else {
+                                data.Index = i.ToString();
                             }
 
                             arrayProperty.Elements.Add( data );

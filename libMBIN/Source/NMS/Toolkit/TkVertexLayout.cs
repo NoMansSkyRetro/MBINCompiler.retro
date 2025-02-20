@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x41692BF0F10B2A3, NameHash = 0x33314386)]
+    [NMS(GUID = 0x8EA91FEDF878654F, NameHash = 0x33314386)]
     public class TkVertexLayout : NMSTemplate
     {
         [NMS(Index = 3)]

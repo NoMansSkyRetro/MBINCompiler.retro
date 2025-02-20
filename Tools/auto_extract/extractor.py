@@ -159,7 +159,7 @@ EXTRA_ATTRIBUTES = {
 DONT_OVERRIDE = {
     'TkAnimNodeFrameData': 0xDD8A411B84D2D5DC,
     # 'TkAnimNodeFrameHalfData',
-    'TkGeometryData': 0xED9C2FCDA6D4B22F,
+    'TkGeometryData': 0xE2C133EF90E9F7A3,
     'TkMeshData': 0xA5E773D3424BA9FA,
 }
 
@@ -189,9 +189,9 @@ TYPE_MAPPING = {
     0x0C: 'VariableSizeString',  # Technically a "filename" -> GcFilename (?)
     0x0D: 'FLAGENUM',
     0x0E: 'float',
-    0x0F: 'NMSString0x10',
-    0x10: 'NMSString0x20A',  # There seems to be no difference in use between this
-    0x11: 'NMSString0x20A',  # and this...
+    0x0F: 'NMSString0x10',   # Id
+    0x10: 'NMSString0x20A',  # Id256
+    0x11: 'NMSString0x20A',  # LocId
     0x12: 'sbyte',
     0x13: 'short',
     0x14: 'int',
@@ -219,6 +219,7 @@ TYPE_MAPPING = {
     0x2A: 'halfVector3',
     0x2B: 'TkPhysRelVec3',
     0x2C: 'HashMap',
+    0x2D: 'Colour32',  # 4 channel colour with each channel packed as a byte
 }
 
 TYPE_MAPPING_REV = {value: key for key, value in TYPE_MAPPING.items()}

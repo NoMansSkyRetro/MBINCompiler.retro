@@ -2,19 +2,19 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x79AA9AF064027FF8, NameHash = 0x80EBCD8A)]
+    [NMS(GUID = 0x1B5D669E28609266, NameHash = 0x80EBCD8A)]
     public class TkNGuiGraphicStyle : NMSTemplate
     {
         [NMS(Index = 2)]
         /* 0x000 */ public TkNGuiGraphicStyleData Active;
         [NMS(Index = 0)]
-        /* 0x0B0 */ public TkNGuiGraphicStyleData Default;
+        /* 0x070 */ public TkNGuiGraphicStyleData Default;
         [NMS(Index = 1)]
-        /* 0x160 */ public TkNGuiGraphicStyleData Highlight;
+        /* 0x0E0 */ public TkNGuiGraphicStyleData Highlight;
         [NMS(Index = 15)]
-        /* 0x210 */ public Vector2f CustomMaxStart;
+        /* 0x150 */ public Vector2f CustomMaxStart;
         [NMS(Index = 14)]
-        /* 0x218 */ public Vector2f CustomMinStart;
+        /* 0x158 */ public Vector2f CustomMinStart;
         // size: 0x6
         public enum AnimateEnum : uint {
             None,
@@ -25,26 +25,26 @@ namespace libMBIN.NMS.Toolkit
             CustomWipeAlpha,
         }
         [NMS(Index = 9)]
-        /* 0x220 */ public AnimateEnum Animate;
+        /* 0x160 */ public AnimateEnum Animate;
         [NMS(Index = 11)]
-        /* 0x224 */ public float AnimSplit;
+        /* 0x164 */ public float AnimSplit;
         [NMS(Index = 10)]
-        /* 0x228 */ public float AnimTime;
+        /* 0x168 */ public float AnimTime;
         [NMS(Index = 8)]
-        /* 0x22C */ public float GlobalFade;
+        /* 0x16C */ public float GlobalFade;
         [NMS(Index = 7)]
-        /* 0x230 */ public float HighlightScale;
+        /* 0x170 */ public float HighlightScale;
         [NMS(Index = 6)]
-        /* 0x234 */ public float HighlightTime;
+        /* 0x174 */ public float HighlightTime;
         [NMS(Index = 12)]
-        /* 0x238 */ public TkCurveType AnimCurve1;
+        /* 0x178 */ public TkCurveType AnimCurve1;
         [NMS(Index = 13)]
-        /* 0x239 */ public TkCurveType AnimCurve2;
+        /* 0x179 */ public TkCurveType AnimCurve2;
         [NMS(Index = 5)]
-        /* 0x23A */ public bool DistributeChildrenHeight;
+        /* 0x17A */ public bool DistributeChildrenHeight;
         [NMS(Index = 4)]
-        /* 0x23B */ public bool DistributeChildrenWidth;
+        /* 0x17B */ public bool DistributeChildrenWidth;
         [NMS(Index = 3)]
-        /* 0x23C */ public bool InheritStyleFromParentLayer;
+        /* 0x17C */ public bool InheritStyleFromParentLayer;
     }
 }

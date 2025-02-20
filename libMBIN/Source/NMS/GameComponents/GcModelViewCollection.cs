@@ -3,10 +3,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x711A0264DD1002D6, NameHash = 0xA5C6254C)]
+    [NMS(GUID = 0x557F9F1CF91A2D2F, NameHash = 0xA5C6254C)]
     public class GcModelViewCollection : NMSTemplate
     {
-        [NMS(Index = 0, Size = 0x30, EnumType = typeof(GcModelViews.ModelViewsEnum))]
+        [NMS(Index = 0, Size = 0x31, EnumType = typeof(GcModelViews.ModelViewsEnum))]
         /* 0x0 */ public TkModelRendererData[] ModelViewData;
     }
 }
