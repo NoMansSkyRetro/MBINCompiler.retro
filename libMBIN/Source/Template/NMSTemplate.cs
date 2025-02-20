@@ -126,6 +126,18 @@ namespace libMBIN
             return null; // Template type doesn't exist
         }
 
+        public static string TypeHasID(Type templateType) {
+            IEnumerable<string> fieldNames = templateType.GetFields().Select(
+                field => field.Name
+            ).Where(
+                fieldName => fieldName.ToLower() == "id"
+            );
+            if (fieldNames.Count() == 1) {
+                return fieldNames.First();
+            }
+            return null;
+        }
+
         public static bool ValueSerializable(Type fieldType) {
             if (typeof(INMSString).IsAssignableFrom(fieldType)) {
                 // If the data is a string, we read as a property since it won't have the type.
@@ -1251,14 +1263,35 @@ namespace libMBIN
                                 MXmlProperty data = new MXmlProperty {
                                     Name = fieldName,
                                     Value = ((INMSString)template).StringValue(),
+                                    Index = i.ToString()
                                 };
                                 listProperty.Elements.Add( data );
+                                i++;
                             }
                         } else {
+                            Dictionary<string, uint> IdCounter = new Dictionary<string, uint>{};
                             foreach ( var template in templates ) {
-                                MXmlBase data = SerializeMXmlValue( listType, field, settings, template, false );
+                                MXmlProperty data = (MXmlProperty)SerializeMXmlValue( listType, field, settings, template, false );
                                 data.Name = fieldName;
+                                string typeIdField = TypeHasID(listType);
+                                if (typeIdField != null) {
+                                    MXmlProperty IdData = (MXmlProperty)data.Elements.Where(
+                                        element => element.Name == typeIdField
+                                    ).First();
+                                    if (IdData != null) {
+                                        data.ID = IdData.Value;
+                                        if (!IdCounter.ContainsKey(IdData.Value)) {
+                                            IdCounter.Add(IdData.Value, 1);
+                                        } else {
+                                            data.Index = IdCounter[IdData.Value].ToString();
+                                            IdCounter[IdData.Value] = IdCounter[IdData.Value] + 1;
+                                        }
+                                    }
+                                } else {
+                                    data.Index = i.ToString();
+                                }
                                 listProperty.Elements.Add( data );
+                                i++;
                             }
                         }
                     }
@@ -1321,7 +1354,7 @@ namespace libMBIN
                         foreach ( var template in array ) {
                             MXmlProperty data = (MXmlProperty)SerializeMXmlValue( arrayType, field, settings, template, false );
                             // Only change the name if we have an associated enum.
-                            string overwriteName = names[i++];
+                            string overwriteName = names[i];
                             if (overwriteName != null && overwriteName != "") {
                                 data.Name = overwriteName;
                             } else {
@@ -1329,6 +1362,7 @@ namespace libMBIN
                             }
 
                             arrayProperty.Elements.Add( data );
+                            i++;
                         }
 
                         return arrayProperty;
