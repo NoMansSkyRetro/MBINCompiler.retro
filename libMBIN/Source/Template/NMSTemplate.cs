@@ -1045,6 +1045,9 @@ namespace libMBIN
             // write the list header into the template
             if ( list.Count > 0 ) {
                 writer.Write( listPosition - listHeaderPosition );
+            } else if ( list.Count == 0 && writingHashMap) {
+                // For some reason an empty HashMap still has a size of 50...
+                writer.Write( 0x50 );
             } else {
                 writer.Write( (long) 0 ); // lists with 0 entries have offset set to 0
             }
