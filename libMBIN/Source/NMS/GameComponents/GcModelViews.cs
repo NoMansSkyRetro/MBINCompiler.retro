@@ -1,11 +1,12 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x94F827A6B17429F2, NameHash = 0x69104096)]
+    [NMS(GUID = 0xD33BED5F7DEAE49C, NameHash = 0x69104096)]
     public class GcModelViews : NMSTemplate
     {
-        // size: 0x30
+        // size: 0x31
         public enum ModelViewsEnum : uint {
             Suit,
+            SplitSuit,
             SuitWithCape,
             Weapon,
             Ship,

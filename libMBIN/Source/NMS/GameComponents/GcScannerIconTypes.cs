@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9147857D3041EE52, NameHash = 0x1BEA2B30)]
+    [NMS(GUID = 0x71882E8812EE6F3A, NameHash = 0x1BEA2B30)]
     public class GcScannerIconTypes : NMSTemplate
     {
-        // size: 0x47
+        // size: 0x48
         public enum ScanIconTypeEnum : uint {
             None,
             Health,
@@ -76,6 +76,7 @@ namespace libMBIN.NMS.GameComponents
             FishPot,
             RuinBeacon,
             SeaGlass,
+            LocalWeatherHazard,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public ScanIconTypeEnum ScanIconType;

@@ -1,12 +1,11 @@
 using libMBIN.NMS.GameComponents;
-using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC0F37F4F313F0B8D, NameHash = 0x4E2556EB)]
+    [NMS(GUID = 0x156C71F266F647C6, NameHash = 0x4E2556EB)]
     public class GcMissionTable : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x0 */ public List<GcGenericMissionSequence> Missions;
+        /* 0x0 */ public HashMap<GcGenericMissionSequence> Missions;
     }
 }

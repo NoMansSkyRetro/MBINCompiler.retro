@@ -4,19 +4,19 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x39E3571F52A35BD6, NameHash = 0xA151C99F)]
+    [NMS(GUID = 0x1741B0AD04B60F1D, NameHash = 0xA151C99F)]
     public class GcNGuiLayerData : NMSTemplate
     {
-        [NMS(Index = 1)]
-        /* 0x000 */ public TkNGuiGraphicStyle Style;
         [NMS(Index = 0, MxmlName = "Element Data")]
-        /* 0x240 */ public GcNGuiElementData ElementData;
+        /* 0x000 */ public GcNGuiElementData ElementData;
         [NMS(Index = 3)]
-        /* 0x2A8 */ public List<NMSTemplate> Children;
+        /* 0x068 */ public List<NMSTemplate> Children;
         [NMS(Index = 4)]
-        /* 0x2B8 */ public VariableSizeString DataFilename;
+        /* 0x078 */ public VariableSizeString DataFilename;
         [NMS(Index = 2)]
-        /* 0x2C8 */ public VariableSizeString Image;
+        /* 0x088 */ public VariableSizeString Image;
+        [NMS(Index = 1)]
+        /* 0x098 */ public TkNGuiGraphicStyle Style;
         // size: 0x5
         public enum AltModeEnum : uint {
             None,
@@ -26,6 +26,6 @@ namespace libMBIN.NMS.GameComponents
             OnlyOnTouch,
         }
         [NMS(Index = 5)]
-        /* 0x2D8 */ public AltModeEnum AltMode;
+        /* 0x218 */ public AltModeEnum AltMode;
     }
 }

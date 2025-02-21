@@ -8,7 +8,11 @@ namespace libMBIN
         [XmlAttribute("value")]
         public string Value { get; set; }
         [XmlAttribute("linked")]
-        public string Linked {get; set; }
+        public string Linked { get; set; }
+        [XmlAttribute("_id")]
+        public string ID { get; set; }
+        [XmlAttribute("_index")]
+        public string Index { get; set; }
 
         public override string ToString()
         {

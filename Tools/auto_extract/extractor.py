@@ -159,7 +159,7 @@ EXTRA_ATTRIBUTES = {
 DONT_OVERRIDE = {
     'TkAnimNodeFrameData': 0xDD8A411B84D2D5DC,
     # 'TkAnimNodeFrameHalfData',
-    'TkGeometryData': 0xED9C2FCDA6D4B22F,
+    'TkGeometryData': 0xE2C133EF90E9F7A3,
     'TkMeshData': 0xA5E773D3424BA9FA,
 }
 
@@ -189,9 +189,9 @@ TYPE_MAPPING = {
     0x0C: 'VariableSizeString',  # Technically a "filename" -> GcFilename (?)
     0x0D: 'FLAGENUM',
     0x0E: 'float',
-    0x0F: 'NMSString0x10',
-    0x10: 'NMSString0x20A',  # There seems to be no difference in use between this
-    0x11: 'NMSString0x20A',  # and this...
+    0x0F: 'NMSString0x10',   # Id
+    0x10: 'NMSString0x20A',  # Id256
+    0x11: 'NMSString0x20A',  # LocId
     0x12: 'sbyte',
     0x13: 'short',
     0x14: 'int',
@@ -219,6 +219,7 @@ TYPE_MAPPING = {
     0x2A: 'halfVector3',
     0x2B: 'TkPhysRelVec3',
     0x2C: 'HashMap',
+    0x2D: 'Colour32',  # 4 channel colour with each channel packed as a byte
 }
 
 TYPE_MAPPING_REV = {value: key for key, value in TYPE_MAPPING.items()}
@@ -231,22 +232,21 @@ PREFIX_MAPPING = {
 
 
 """
-Details on the format of the 0x60 bytes for each field (from cTkMetaDataMember definition):
+Details on the format of the 0x58 bytes for each field (from cTkMetaDataMember definition):
 
 0x00: char *mpacName;
 0x08: unsigned int miNameHash;
-0x10: char *mpacCategoryName;
-0x18: unsigned int miCategoryHash;
-0x1C: cTkMetaDataMember::eType mType;
-0x20: cTkMetaDataMember::eType mInnerType;
-0x24: int miSize;
-0x28: int miCount;
-0x2C: int miOffset;
-0x30: cTkMetaDataClass *mpClassMetadata;
-0x38: cTkMetaDataEnumLookup *mpEnumLookup;
-0x40: int miNumEnumMembers;
-0x44: FloatEditOptions mFloatEditOptions;
-0x50: FloatLimits mFloatLimits;
+0x0C: cTkMetaDataMember::eType mType;
+0x10: cTkMetaDataMember::eType mInnerType;
+0x14: int miSize;
+0x18: int miCount;
+0x1C: int miOffset;
+0x20: cTkMetaDataClass *mpClassMetadata;
+0x28: char *mpIdField;
+0x30: cTkMetaDataEnumLookup *mpEnumLookup;
+0x38: int miNumEnumMembers;
+0x3C: FloatEditOptions mFloatEditOptions;
+0x48: FloatLimits mFloatLimits;
 
 0x00: (uint64*) pointer to the name of the field. This is null-terminated.
 0x08: ???
@@ -310,9 +310,9 @@ class Field(ABC):
         # Some field names are annoyingly duplicated in the exe. c# doesn't
         # allow this, so we need to add something to the name to make it unique.
         self._field_name_is_duplicate = False
-        self.field_size = struct.unpack_from('<I', data, offset=0x24)[0]
-        self._array_size = struct.unpack_from('<I', data, offset=0x28)[0]
-        self._field_offset = int(struct.unpack_from('<I', data, offset=0x2C)[0])
+        self.field_size = struct.unpack_from('<I', data, offset=0x14)[0]
+        self._array_size = struct.unpack_from('<I', data, offset=0x18)[0]
+        self._field_offset = int(struct.unpack_from('<I', data, offset=0x1C)[0])
 
         # Sort out the requirements for this field.
         self.required_using: set = set()
@@ -360,7 +360,7 @@ class Field(ABC):
         This allows us to simplify the logic regarding deserialising the field
         by deferring it to the individual classes.
         """
-        raw_type = struct.unpack_from('<I', data, offset=0x1C)[0]
+        raw_type = struct.unpack_from('<I', data, offset=0xC)[0]
         if raw_type == TYPE_MAPPING_REV['ENUM'] or raw_type == TYPE_MAPPING_REV['FLAGENUM']:
             ef = EnumField(data, nms_mem)
             if raw_type == TYPE_MAPPING_REV['FLAGENUM']:
@@ -392,7 +392,7 @@ class CustomField(Field):
 
         # Get the pointer to the custom type name.
         ptr_custom_type = nms_mem.read_ulonglong(
-            struct.unpack_from('<Q', data, offset=0x30)[0]
+            struct.unpack_from('<Q', data, offset=0x20)[0]
         )
         # Now get the actual name.
         self._field_type = nms_mem.read_string(ptr_custom_type, byte=128)[1:]
@@ -422,11 +422,11 @@ class HashMapField(Field):
         self._is_hash_map_field = True
         self.local_enum = False
 
-        array_type_raw = struct.unpack_from('<I', data, offset=0x20)[0]
+        array_type_raw = struct.unpack_from('<I', data, offset=0x10)[0]
         # A custom array subtype.
         if array_type_raw == TYPE_MAPPING_REV['CUSTOM']:
             ptr_custom_type = nms_mem.read_ulonglong(
-                struct.unpack_from('<Q', data, offset=0x30)[0]
+                struct.unpack_from('<Q', data, offset=0x20)[0]
             )
             self._field_type = nms_mem.read_string(ptr_custom_type, byte=128)[1:]
             self.required_using.add(
@@ -438,7 +438,7 @@ class HashMapField(Field):
                 array_type_raw, f'unknown {array_type_raw:X}'
             )
         # Determine the associated EnumType
-        self.ptr_enum = struct.unpack_from('<Q', data, offset=0x38)[0]
+        self.ptr_enum = struct.unpack_from('<Q', data, offset=0x30)[0]
         # This may be a nullptr, in which case we end as we have no enum to get.
         if self.ptr_enum == 0:
             return
@@ -455,6 +455,12 @@ class HashMapField(Field):
             if name in RESTRICTED_NAMES:
                 name = name.capitalize()
             self.array_enum.append(name)
+
+        # Check to see if we have an IdField defined
+        idField_ptr = struct.unpack_from('<Q', data, offset=0x28)[0]
+        if idField_ptr != 0:
+            idField: str = nms_mem.read_string(ptr_enum_name, byte=128)
+            print(f"{self.field_name} has an ID field: {idField}")
 
     @property
     def field_type(self):
@@ -473,11 +479,11 @@ class ArrayField(Field):
         self._is_array_field = True
         self.local_enum = False
 
-        array_type_raw = struct.unpack_from('<I', data, offset=0x20)[0]
+        array_type_raw = struct.unpack_from('<I', data, offset=0x10)[0]
         # A custom array subtype.
         if array_type_raw == TYPE_MAPPING_REV['CUSTOM']:
             ptr_custom_type = nms_mem.read_ulonglong(
-                struct.unpack_from('<Q', data, offset=0x30)[0]
+                struct.unpack_from('<Q', data, offset=0x20)[0]
             )
             self._field_type = nms_mem.read_string(ptr_custom_type, byte=128)[1:]
             self.required_using.add(
@@ -489,7 +495,7 @@ class ArrayField(Field):
                 array_type_raw, f'unknown {array_type_raw:X}'
             )
         # Determine the associated EnumType
-        self.ptr_enum = struct.unpack_from('<Q', data, offset=0x38)[0]
+        self.ptr_enum = struct.unpack_from('<Q', data, offset=0x30)[0]
         # This may be a nullptr, in which case we end as we have no enum to get.
         if self.ptr_enum == 0:
             return
@@ -520,11 +526,15 @@ class ListField(Field):
         self.required_using.add('System.Collections.Generic')
         self._is_list_field = True
 
-        array_type_raw = struct.unpack_from('<I', data, offset=0x20)[0]
+        array_type_raw = struct.unpack_from('<I', data, offset=0x10)[0]
         if array_type_raw == 0x03:
-            ptr_custom_type = nms_mem.read_ulonglong(
-                struct.unpack_from('<Q', data, offset=0x30)[0]
-            )
+            try:
+                ptr_custom_type = nms_mem.read_ulonglong(
+                    struct.unpack_from('<Q', data, offset=0x20)[0]
+                )
+            except:
+                print(self.field_name)
+                raise
             self._field_type = nms_mem.read_string(ptr_custom_type, byte=128)[1:]
             self.required_using.add(
                 constants.USING_MAPPING.get(self._field_type[:2].lower(),
@@ -548,8 +558,8 @@ class EnumField(Field):
         self.requires_values = False
         self._is_enum_field = True
 
-        enum_count = struct.unpack_from('<I', data, offset=0x40)[0]
-        self.ptr_enum = struct.unpack_from('<Q', data, offset=0x38)[0]
+        enum_count = struct.unpack_from('<I', data, offset=0x38)[0]
+        self.ptr_enum = struct.unpack_from('<Q', data, offset=0x30)[0]
         self.enum_data = []
         # For each enum value, read the index, and a pointer to the name.
         for i in range(enum_count):
@@ -768,11 +778,11 @@ def read_class(
 
 
 def extract(nms_mem: pymem.Pymem, address: int, field_count: int) -> tuple[list[Field], bool]:
-    # Take the 0x60 bytes and process them.
+    # Take the 0x58 bytes and process them.
     fields = []
     has_enum_arrays = False
     for i in range(field_count):
-        data = nms_mem.read_bytes(address + i * 0x60, 0x60)
+        data = nms_mem.read_bytes(address + i * 0x58, 0x58)
         field = Field.instantiate(data, nms_mem)
         field.field_index = i
         # As we add fields, determine if the field is an array with an
