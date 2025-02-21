@@ -2,10 +2,10 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFCD45809E9408C91, NameHash = 0x6A2D4F5A)]
+    [NMS(GUID = 0xA06D547501556B30, NameHash = 0x6A2D4F5A)]
     public class GcPhysicsCollisionGroups : NMSTemplate
     {
-        // size: 0x41
+        // size: 0x46
         [Flags]
         public enum CollisionGroupEnum : uint {
             Normal,
@@ -68,6 +68,11 @@ namespace libMBIN.NMS.GameComponents
             Raycast_AiShipTravel,
             Raycast_ObstructionQuery,
             Raycast_GeometryProbe,
+            Raycast_DroneTargetSensing_Friendly,
+            Raycast_DroneTargetSensing_Unfriendly,
+            Raycast_DroneTargetSensing_Friendly_NoShield,
+            Raycast_DroneTargetSensing_Unfriendly_NoShield,
+            Raycast_ObjectPlacementAddObject,
             Raycast_CatchCreatures,
             Raycast_CatchNormal,
             Raycast_CatchTerrain,
