@@ -242,7 +242,7 @@ Details on the format of the 0x58 bytes for each field (from cTkMetaDataMember d
 0x18: int miCount;
 0x1C: int miOffset;
 0x20: cTkMetaDataClass *mpClassMetadata;
-0x28: char *mpIdField;
+0x28: cTkMetaDataMember *mpHashMapIdMember;
 0x30: cTkMetaDataEnumLookup *mpEnumLookup;
 0x38: int miNumEnumMembers;
 0x3C: FloatEditOptions mFloatEditOptions;
@@ -437,30 +437,13 @@ class HashMapField(Field):
             self._field_type = TYPE_MAPPING.get(
                 array_type_raw, f'unknown {array_type_raw:X}'
             )
-        # Determine the associated EnumType
-        self.ptr_enum = struct.unpack_from('<Q', data, offset=0x30)[0]
-        # This may be a nullptr, in which case we end as we have no enum to get.
-        if self.ptr_enum == 0:
-            return
-        # If the pointer is non-zero, then it will be a pointer to the enums
-        # either associated with some other class, or an inline one.
-        # We need to keep track of the pointer do we can determine what class
-        # it was later.
-        # Get all the values of the enum:
-        self.array_enum = []
-        for i in range(self._array_size):
-            ptr_enum_name = nms_mem.read_ulonglong(self.ptr_enum + i * 0x10 + 0x8)
-            name: str = nms_mem.read_string(ptr_enum_name, byte=128)
-            # Capitalize restricted words in c#
-            if name in RESTRICTED_NAMES:
-                name = name.capitalize()
-            self.array_enum.append(name)
 
-        # Check to see if we have an IdField defined
-        idField_ptr = struct.unpack_from('<Q', data, offset=0x28)[0]
+        idField_ptr = struct.unpack_from("<Q", data, offset=0x28)[0]
         if idField_ptr != 0:
-            idField: str = nms_mem.read_string(ptr_enum_name, byte=128)
-            print(f"{self.field_name} has an ID field: {idField}")
+            # This is a cTkMetaDataMember*. We only need to read the first char* in it to get the field name.
+            self.id_field = nms_mem.read_string(nms_mem.read_ulonglong(idField_ptr), byte=128)
+        else:
+            self.id_field = ""
 
     @property
     def field_type(self):
@@ -527,7 +510,7 @@ class ListField(Field):
         self._is_list_field = True
 
         array_type_raw = struct.unpack_from('<I', data, offset=0x10)[0]
-        if array_type_raw == 0x03:
+        if array_type_raw == TYPE_MAPPING_REV['CUSTOM']:
             try:
                 ptr_custom_type = nms_mem.read_ulonglong(
                     struct.unpack_from('<Q', data, offset=0x20)[0]

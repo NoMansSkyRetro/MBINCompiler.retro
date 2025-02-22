@@ -766,7 +766,7 @@ namespace libMBIN
                     break;
                 case "Colour32":
                     Colour32 colour = (Colour32)fieldData;
-                    uint col = ((uint)(colour.A * 255f) << 24) + ((uint)(colour.B * 255f) << 16) + ((uint)(colour.G * 255f) << 8) + (uint)(colour.R * 255f);
+                    uint col = (uint)(colour.A << 24) + (uint)(colour.B << 16) + (uint)(colour.G << 8) + colour.R;
                     writer.Write(col);
                     break;
                 case "List`1":
@@ -1234,6 +1234,12 @@ namespace libMBIN
                     GcSeed seed = (GcSeed)value;
                     valueString = (seed.Seed == 0 && !seed.UseSeedValue) ? "NONE" : seed.Seed.ToString();
                     break;
+                case "Colour32":
+                    // Handle the Colour32 explicitly since we want to write floats to the MXML, not ints.
+                    Colour colour = new Colour((Colour32)value);
+                    MXmlProperty colour_field = (MXmlProperty)colour.SerializeMXml( true );
+                    colour_field.Name = fieldName;
+                    return colour_field;
                 case "LinkableNMSTemplate":
                     LinkableNMSTemplate linkedTemplate = (LinkableNMSTemplate) value;
                     if (linkedTemplate.Template != null) {
@@ -1325,9 +1331,20 @@ namespace libMBIN
                         // We basically treat the hashmap as an enumerable (so like a List<T>).
                         MXmlProperty listProp = new MXmlProperty { Name = fieldName };
 
+                        // Get the name of the field which is used as the id so we can extract it out of the deserialized data in a few lines.
+                        string id_field = field.GetCustomAttribute<NMSAttribute>()?.KeyField ?? "";
+
                         foreach ( var template in (IEnumerable)value ) {
-                            MXmlBase data = SerializeMXmlValue( hashMapType, field, settings, template, false );
+                            MXmlProperty data = (MXmlProperty)SerializeMXmlValue( hashMapType, field, settings, template, false );
                             data.Name = null;
+
+                            // Get aforementioned id field and write to the `_id` attribute.
+                            MXmlProperty IdData = (MXmlProperty)data.Elements.Where(
+                                element => element.Name == id_field
+                            ).First();
+                            if (IdData != null) {
+                                data.ID = IdData.Value;
+                            }
 
                             listProp.Elements.Add( data );
                         }
@@ -1741,7 +1758,12 @@ namespace libMBIN
                             }
                         } else {
                             NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                            fieldValue = DeserializeMXmlValue( xmlProperty, template, fieldType, field, templateType, settings );
+                            if (templateType == typeof(Colour32)) {
+                                // We have written `Colour32` fields to MXML as float, so we have to read them back specially.
+                                fieldValue = (byte)(255f * (float)DeserializeMXmlValue( xmlProperty, template, typeof(float), field, templateType, settings ));
+                            } else {
+                                fieldValue = DeserializeMXmlValue( xmlProperty, template, fieldType, field, templateType, settings );
+                            }
                         }
 
                         if (fieldType.IsGenericType && fieldType.GetGenericTypeDefinition() == typeof(HashMap<>)) {
@@ -1811,23 +1833,6 @@ namespace libMBIN
         {
             var data = MXmlFile.WriteTemplate(this, hideVersionInfo);
             File.WriteAllText(outputpath, data);
-        }
-
-        public string GetID()
-        {
-            string ID = null;
-            var type = GetType();
-            var fields = type.GetFields();
-            foreach (var field in fields)
-            {
-                NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                if (settings?.IDField ?? false)
-                {
-                    ID = field.GetValue(this).ToString();
-                    return ID;
-                }
-            }
-            return ID;
         }
 
         // func thats run after template is deserialized, can be used for checks etc

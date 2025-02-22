@@ -14,7 +14,7 @@ namespace libMBIN
         public ulong GUID { get; set; }
         public uint NameHash { get; set; }
         public bool Broken { get; set; }
-        public bool IDField { get; set; } = false;
+        public string KeyField { get; set; } = "";
         public int Index { get; set; }
         public string MxmlName { get; set; }
     }
