@@ -35,7 +35,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1308 */ public TkTextureResource[] DifficultyUIOptionIcons;
         [NMS(Index = 7, Size = 0x4, EnumType = typeof(GcPlayerConflictData.ConflictLevelEnum))]
         /* 0x1368 */ public TkTextureResource[] DiscoveryPageConflictIcons;
-        [NMS(Index = 16)]
+        [NMS(Index = 16, KeyField = "ID")]
         /* 0x13C8 */ public HashMap<GcRealityIcon> MissionDetailIcons;
         [NMS(Index = 10)]
         /* 0x13F8 */ public TkTextureResource DiscoveryPageConflictUnknown;

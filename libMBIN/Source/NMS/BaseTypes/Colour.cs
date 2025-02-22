@@ -73,6 +73,13 @@ namespace libMBIN.NMS
             this.A = A / 255f;
         }
 
+        public Colour(Colour32 col) {
+            this.R = col.R / 255f;
+            this.G = col.G / 255f;
+            this.B = col.B / 255f;
+            this.A = col.A / 255f;
+        }
+
         public Colour() { }
 
         /// <summary>

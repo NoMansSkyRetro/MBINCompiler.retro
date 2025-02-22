@@ -18,7 +18,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x0030 */ public Vector4f TestVector4;
         [NMS(Index = 2)]
         /* 0x0040 */ public TkTrophyEntry TestClass;
-        [NMS(Index = 52)]
+        [NMS(Index = 52, KeyField = "Id")]
         /* 0x00B8 */ public HashMap<TkLocalisationEntry> TestHashMap;
         [NMS(Index = 48)]
         /* 0x00E8 */ public NMSString0x20A DocOptionalRenamed;

@@ -14,22 +14,22 @@ namespace libMBIN.NMS
         /// <summary>
         /// The Red component of the colour.
         /// </summary>
-        public float R;
+        public byte R;
 
         /// <summary>
         /// The Green component of the colour.
         /// </summary>
-        public float G;
+        public byte G;
 
         /// <summary>
         /// The Blue component of the colour.
         /// </summary>
-        public float B;
+        public byte B;
 
         /// <summary>
         /// The Alpha component of the colour.
         /// </summary>
-        public float A;
+        public byte A;
 
 
         /// <summary>
@@ -42,10 +42,10 @@ namespace libMBIN.NMS
         /// <param name="A">Alpha component of the colour. Value can be anything between 0 and 1.</param>
         public Colour32(float R, float G, float B, float A = 1f)
         {
-            this.R = R;
-            this.G = G;
-            this.B = B;
-            this.A = A;
+            this.R = (byte)(R * 255f);
+            this.G = (byte)(G * 255f);
+            this.B = (byte)(B * 255f);
+            this.A = (byte)(A * 255f);
         }
 
         /// <summary>
@@ -58,10 +58,17 @@ namespace libMBIN.NMS
         /// <param name="A">Alpha component of the colour. Value can be any whole number between 0 and 255.</param>
         public Colour32(byte R, byte G, byte B, byte A = 255)
         {
-            this.R = R / 255f;
-            this.G = G / 255f;
-            this.B = B / 255f;
-            this.A = A / 255f;
+            this.R = R;
+            this.G = G;
+            this.B = B;
+            this.A = A;
+        }
+
+        public Colour32(Colour col) {
+            this.R = (byte)(col.R * 255f);
+            this.G = (byte)(col.G * 255f);
+            this.B = (byte)(col.B * 255f);
+            this.A = (byte)(col.A * 255f);
         }
 
         public Colour32() { }
