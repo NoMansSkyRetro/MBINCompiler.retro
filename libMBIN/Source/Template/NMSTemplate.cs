@@ -1336,7 +1336,6 @@ namespace libMBIN
 
                         foreach ( var template in (IEnumerable)value ) {
                             MXmlProperty data = (MXmlProperty)SerializeMXmlValue( hashMapType, field, settings, template, false );
-                            data.Name = null;
 
                             // Get aforementioned id field and write to the `_id` attribute.
                             MXmlProperty IdData = (MXmlProperty)data.Elements.Where(
