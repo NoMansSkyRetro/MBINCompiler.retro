@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xAEBBBC6B661EEB05, NameHash = 0xF1C0C3FD)]
+    [NMS(GUID = 0x3A1216F8431C35F, NameHash = 0xF1C0C3FD)]
     public class GcAISpaceshipGlobals : NMSTemplate
     {
         [NMS(Index = 0)]
@@ -807,45 +807,45 @@ namespace libMBIN.NMS.Globals
         /* 0xD0C */ public float WitnessSightRange;
         [NMS(Index = 263)]
         /* 0xD10 */ public NMSString0x100 TradeRouteIcon;
-        [NMS(Index = 94, Size = 0x37, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        [NMS(Index = 94, Size = 0x39, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
         /* 0xE10 */ public bool[] PirateAttackableBuildingClasses;
         [NMS(Index = 21)]
-        /* 0xE47 */ public bool AtmosphereEffectEnabled;
+        /* 0xE49 */ public bool AtmosphereEffectEnabled;
         [NMS(Index = 70)]
-        /* 0xE48 */ public bool AttackRepositionBoost;
+        /* 0xE4A */ public bool AttackRepositionBoost;
         [NMS(Index = 71)]
-        /* 0xE49 */ public bool AttackShipsFollowLeader;
+        /* 0xE4B */ public bool AttackShipsFollowLeader;
         [NMS(Index = 158)]
-        /* 0xE4A */ public bool DisableTradeRoutes;
+        /* 0xE4C */ public bool DisableTradeRoutes;
         [NMS(Index = 12)]
-        /* 0xE4B */ public bool DisplayShipAttackTypes;
+        /* 0xE4D */ public bool DisplayShipAttackTypes;
         [NMS(Index = 277)]
-        /* 0xE4C */ public bool EnableLoot;
+        /* 0xE4E */ public bool EnableLoot;
         [NMS(Index = 38)]
-        /* 0xE4D */ public bool EnergyShieldAlwaysVisible;
+        /* 0xE4F */ public bool EnergyShieldAlwaysVisible;
         [NMS(Index = 33)]
-        /* 0xE4E */ public bool EnergyShieldsEnabled;
+        /* 0xE50 */ public bool EnergyShieldsEnabled;
         [NMS(Index = 22)]
-        /* 0xE4F */ public bool FillUpOutposts;
+        /* 0xE51 */ public bool FillUpOutposts;
         [NMS(Index = 142)]
-        /* 0xE50 */ public bool FreighterAlertLights;
+        /* 0xE52 */ public bool FreighterAlertLights;
         [NMS(Index = 295)]
-        /* 0xE51 */ public bool FreighterIgnorePlayer;
+        /* 0xE53 */ public bool FreighterIgnorePlayer;
         [NMS(Index = 19)]
-        /* 0xE52 */ public bool FreightersAlwaysAttackPlayer;
+        /* 0xE54 */ public bool FreightersAlwaysAttackPlayer;
         [NMS(Index = 232)]
-        /* 0xE53 */ public bool FreightersSamePalette;
+        /* 0xE55 */ public bool FreightersSamePalette;
         [NMS(Index = 20)]
-        /* 0xE54 */ public bool GroundEffectEnabled;
+        /* 0xE56 */ public bool GroundEffectEnabled;
         [NMS(Index = 236)]
-        /* 0xE55 */ public bool PoliceSpawnEffect;
+        /* 0xE57 */ public bool PoliceSpawnEffect;
         [NMS(Index = 330)]
-        /* 0xE56 */ public bool ScaleDisabledWhenOnFreighter;
+        /* 0xE58 */ public bool ScaleDisabledWhenOnFreighter;
         [NMS(Index = 18)]
-        /* 0xE57 */ public bool TradersAttackPirates;
+        /* 0xE59 */ public bool TradersAttackPirates;
         [NMS(Index = 260)]
-        /* 0xE58 */ public TkCurveType TrailScaleCurve;
+        /* 0xE5A */ public TkCurveType TrailScaleCurve;
         [NMS(Index = 336)]
-        /* 0xE59 */ public TkCurveType WarpInCurve;
+        /* 0xE5B */ public TkCurveType WarpInCurve;
     }
 }

@@ -2,14 +2,16 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE36DD55D50F64A08, NameHash = 0xBFA2B54B)]
+    [NMS(GUID = 0x64F56B8D08586A2D, NameHash = 0xBFA2B54B)]
     public class GcMissionConditionHasProcProduct : NMSTemplate
     {
         [NMS(Index = 0)]
         /* 0x0 */ public GcProceduralProductCategory ProcProduct;
         [NMS(Index = 1)]
-        /* 0x4 */ public bool ForceSearchFreighterAndChests;
+        /* 0x4 */ public GcModularCustomisationResourceType SpecificFossilType;
         [NMS(Index = 2)]
-        /* 0x5 */ public bool SearchEveryShip;
+        /* 0x8 */ public bool ForceSearchFreighterAndChests;
+        [NMS(Index = 3)]
+        /* 0x9 */ public bool SearchEveryShip;
     }
 }

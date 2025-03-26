@@ -5,7 +5,7 @@ using System;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x547A3B81BB412A15, NameHash = 0x69A0FDE1)]
+    [NMS(GUID = 0x669D5546733D6F99, NameHash = 0x69A0FDE1)]
     public class TkTestMetadata : NMSTemplate
     {
         [NMS(Index = 46)]
@@ -87,24 +87,22 @@ namespace libMBIN.NMS.Toolkit
         }
         [NMS(Index = 10)]
         /* 0x0264 */ public TestEnumEnum TestEnum;
-        // size: 0x4
+        // size: 0x3
         public enum TestEnumUInt32BitFieldEnum : uint {
-            Enum1 = 0x1,
-            Enum2 = 0x2,
-            Enum3 = 0x4,
-            None = 0x0,
+            None,
+            Enum1,
+            Enum2,
         }
         [NMS(Index = 12)]
         /* 0x0268 */ public TestEnumUInt32BitFieldEnum TestEnumUInt32BitField;
         [NMS(Index = 14)]
         /* 0x026C */ public TkLanguages TestExternalEnum;
-        // size: 0x4
+        // size: 0x3
         [Flags]
         public enum TestFlagsEnum : uint {
-            None = 0x0,
-            Flag1 = 0x1,
-            Flag2 = 0x2,
-            Flag3 = 0x4,
+            None,
+            Flag1,
+            Flag2,
         }
         [NMS(Index = 17)]
         /* 0x0270 */ public TestFlagsEnum TestFlags;

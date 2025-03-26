@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDD7C3E0CBF80D6B3, NameHash = 0x3780BAA2)]
+    [NMS(GUID = 0x2C6BA88E68CE7924, NameHash = 0x3780BAA2)]
     public class GcInteractionType : NMSTemplate
     {
-        // size: 0x90
+        // size: 0x91
         public enum InteractionTypeEnum : uint {
             None,
             Shop,
@@ -149,6 +149,7 @@ namespace libMBIN.NMS.GameComponents
             CustomiseSkiff,
             ExhibitAssembly,
             ArchiveMultitool,
+            BoneShop,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public InteractionTypeEnum InteractionType;

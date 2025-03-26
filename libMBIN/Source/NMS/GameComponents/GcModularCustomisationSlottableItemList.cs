@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBDC5F76F3EBDF682, NameHash = 0xDCC36C7C)]
+    [NMS(GUID = 0xEBDE5D44064E60B4, NameHash = 0xDCC36C7C)]
     public class GcModularCustomisationSlottableItemList : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAC0D89B7CE1F85CF, NameHash = 0xB1AE9E88)]
+    [NMS(GUID = 0x906425CFA0874489, NameHash = 0xB1AE9E88)]
     public class GcNPCSettlementBehaviourData : NMSTemplate
     {
         [NMS(Index = 1, Size = 0x5, EnumType = typeof(GcNPCSettlementBehaviourState.NPCSettlementBehaviourStateEnum))]

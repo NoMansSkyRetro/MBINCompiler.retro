@@ -4,7 +4,7 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEFAE44815889A154, NameHash = 0x1119BAC1)]
+    [NMS(GUID = 0xD9D1C7A51CC2FEF3, NameHash = 0x1119BAC1)]
     public class GcProjectileData : NMSTemplate
     {
         [NMS(Index = 50)]
@@ -29,7 +29,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0C8 */ public NMSString0x10 PlayerDamage;
         [NMS(Index = 45)]
         /* 0x0D8 */ public GcProjectileLineData CustomBulletData;
-        // size: 0x8
+        // size: 0x7
         [Flags]
         public enum BehaviourFlagsEnum : uint {
             None = 0x0,
@@ -39,7 +39,6 @@ namespace libMBIN.NMS.GameComponents
             Homing = 0x8,
             HomingLaser = 0x10,
             ScareCreatures = 0x20,
-            ExplosionForce = 0x40,
         }
         [NMS(Index = 53)]
         /* 0x100 */ public BehaviourFlagsEnum BehaviourFlags;
