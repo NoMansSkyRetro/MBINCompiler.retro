@@ -2,44 +2,44 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x48CC989022BD316, NameHash = 0xBF805707)]
+    [NMS(GUID = 0x6EE9FF0520C0DBEE, NameHash = 0xBF805707)]
     public class GcMissionSequenceFish : NMSTemplate
     {
         [NMS(Index = 7)]
-        /* 0x00 */ public GcFishData TargetFishInfo;
+        /* 0x00 */ public GcMissionFishData TargetFishInfo;
         [NMS(Index = 17)]
-        /* 0x68 */ public VariableSizeString DebugText;
+        /* 0x30 */ public VariableSizeString DebugText;
         [NMS(Index = 15)]
-        /* 0x78 */ public NMSString0x10 FormatStatIntoText;
+        /* 0x40 */ public NMSString0x10 FormatStatIntoText;
         [NMS(Index = 0)]
-        /* 0x88 */ public VariableSizeString Message;
+        /* 0x50 */ public VariableSizeString Message;
         [NMS(Index = 1)]
-        /* 0x98 */ public VariableSizeString MessageAvailableNearby;
+        /* 0x60 */ public VariableSizeString MessageAvailableNearby;
         [NMS(Index = 4)]
-        /* 0xA8 */ public VariableSizeString MessageNoFishLaserEquipped;
+        /* 0x70 */ public VariableSizeString MessageNoFishLaserEquipped;
         [NMS(Index = 3)]
-        /* 0xB8 */ public VariableSizeString MessageNoFishLaserInstalled;
+        /* 0x80 */ public VariableSizeString MessageNoFishLaserInstalled;
         [NMS(Index = 2)]
-        /* 0xC8 */ public VariableSizeString MessageNoneInSystem;
+        /* 0x90 */ public VariableSizeString MessageNoneInSystem;
         [NMS(Index = 5)]
-        /* 0xD8 */ public int Amount;
+        /* 0xA0 */ public int Amount;
         [NMS(Index = 12)]
-        /* 0xDC */ public float DepthToFormatIntoText;
+        /* 0xA4 */ public float DepthToFormatIntoText;
         [NMS(Index = 6)]
-        /* 0xE0 */ public bool FromNow;
+        /* 0xA8 */ public bool FromNow;
         [NMS(Index = 16)]
-        /* 0xE1 */ public bool Multiplayer;
+        /* 0xA9 */ public bool Multiplayer;
         [NMS(Index = 14)]
-        /* 0xE2 */ public bool NeverCompleteSequence;
+        /* 0xAA */ public bool NeverCompleteSequence;
         [NMS(Index = 8)]
-        /* 0xE3 */ public bool QualityTestIsEqualOrGreater;
+        /* 0xAB */ public bool QualityTestIsEqualOrGreater;
         [NMS(Index = 9)]
-        /* 0xE4 */ public bool SizeTestIsEqualOrGreater;
+        /* 0xAC */ public bool SizeTestIsEqualOrGreater;
         [NMS(Index = 10)]
-        /* 0xE5 */ public bool TakeAmountFromDefaultNumber;
+        /* 0xAD */ public bool TakeAmountFromDefaultNumber;
         [NMS(Index = 11)]
-        /* 0xE6 */ public bool TakeAmountFromSeasonData;
+        /* 0xAE */ public bool TakeAmountFromSeasonData;
         [NMS(Index = 13)]
-        /* 0xE7 */ public bool TakeDepthFromSeasonData;
+        /* 0xAF */ public bool TakeDepthFromSeasonData;
     }
 }

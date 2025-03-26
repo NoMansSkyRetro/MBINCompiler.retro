@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF7CAF945EF193078, NameHash = 0xCC7E718A)]
+    [NMS(GUID = 0x905E7E7EC2AFE6C7, NameHash = 0xCC7E718A)]
     public class GcMissionConditionPlanetResourceHint : NMSTemplate
     {
         [NMS(Index = 1)]
@@ -14,6 +14,8 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 3)]
         /* 0x34 */ public bool AllowInShip;
         [NMS(Index = 4)]
-        /* 0x35 */ public bool TestAllPlanetsInSystem;
+        /* 0x35 */ public bool AllowNexus;
+        [NMS(Index = 5)]
+        /* 0x36 */ public bool TestAllPlanetsInSystem;
     }
 }

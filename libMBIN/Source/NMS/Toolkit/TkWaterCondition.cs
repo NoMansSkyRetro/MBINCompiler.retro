@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xAC2AAC62E745C7FC, NameHash = 0x3C58F148)]
+    [NMS(GUID = 0xDB781EC82CEC6A65, NameHash = 0x3C58F148)]
     public class TkWaterCondition : NMSTemplate
     {
-        // size: 0xE
+        // size: 0xF
         public enum WaterConditionEnum : uint {
             Absolutely_Tranquil,
             Breezy_Lake,
@@ -19,6 +19,7 @@ namespace libMBIN.NMS.Toolkit
             Very_Choppy_Sea,
             White_Horses,
             Ocean_Planet,
+            Wall_Of_Water,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public WaterConditionEnum WaterCondition;

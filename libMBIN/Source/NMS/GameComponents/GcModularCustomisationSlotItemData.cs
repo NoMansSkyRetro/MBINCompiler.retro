@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3701980E0A2B25F4, NameHash = 0xD1DB960B)]
+    [NMS(GUID = 0x1C73D0DFADEC7BB6, NameHash = 0xD1DB960B)]
     public class GcModularCustomisationSlotItemData : NMSTemplate
     {
         [NMS(Index = 2)]
@@ -25,5 +25,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38 */ public GcInventoryClass InventoryClass;
         [NMS(Index = 3)]
         /* 0x3C */ public bool SetInventoryClass;
+        [NMS(Index = 7)]
+        /* 0x3D */ public bool UseAltCamera;
     }
 }

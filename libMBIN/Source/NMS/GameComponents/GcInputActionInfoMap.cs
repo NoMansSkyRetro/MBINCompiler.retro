@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x747744A03CFA4F20, NameHash = 0x25517A76)]
+    [NMS(GUID = 0x409BF0145A5F7413, NameHash = 0x25517A76)]
     public class GcInputActionInfoMap : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x123, EnumType = typeof(GcInputActions.InputActionEnum))]

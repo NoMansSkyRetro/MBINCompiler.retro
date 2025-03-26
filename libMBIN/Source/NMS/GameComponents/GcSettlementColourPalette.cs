@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5A0F3A3263C80AE2, NameHash = 0x972DE7E0)]
+    [NMS(GUID = 0x120387CF72615E89, NameHash = 0x972DE7E0)]
     public class GcSettlementColourPalette : NMSTemplate
     {
         [NMS(Index = 4)]

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x94CE5FF29CD9ECCF, NameHash = 0xDEC89720)]
+    [NMS(GUID = 0x74E0402ED28A48A9, NameHash = 0xDEC89720)]
     public class GcMaintenanceComponentData : NMSTemplate
     {
         [NMS(Index = 23)]
@@ -131,5 +131,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x3EB */ public bool UseInteractionStyleCameraEvent;
         [NMS(Index = 13)]
         /* 0x3EC */ public bool UseModelResourceRenderer;
+        [NMS(Index = 56)]
+        /* 0x3ED */ public bool UseNetworkLock;
     }
 }

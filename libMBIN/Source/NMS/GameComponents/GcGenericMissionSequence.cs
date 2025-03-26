@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3D2B98ABA8CC85E3, NameHash = 0x7FD50C85)]
+    [NMS(GUID = 0xAA527F8B566C4370, NameHash = 0x7FD50C85)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         [NMS(Index = 24)]
@@ -12,59 +12,59 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 40)]
         /* 0x010 */ public GcTradeData TradingDataOverride;
         [NMS(Index = 32)]
-        /* 0x0E0 */ public GcMissionBoardOptions MissionBoardOptions;
+        /* 0x0F8 */ public GcMissionBoardOptions MissionBoardOptions;
         [NMS(Index = 7)]
-        /* 0x160 */ public GcSeasonalLogOverrides SeasonalLogTextOverrides;
+        /* 0x178 */ public GcSeasonalLogOverrides SeasonalLogTextOverrides;
         [NMS(Index = 27)]
-        /* 0x1D0 */ public GcDefaultMissionItemsTable DefaultItems;
+        /* 0x1E8 */ public GcDefaultMissionItemsTable DefaultItems;
         [NMS(Index = 21)]
-        /* 0x220 */ public NMSString0x20A MissionPageLocID;
+        /* 0x238 */ public NMSString0x20A MissionPageLocID;
         [NMS(Index = 6)]
-        /* 0x240 */ public GcNumberedTextList MissionDescriptions;
+        /* 0x258 */ public GcNumberedTextList MissionDescriptions;
         [NMS(Index = 15)]
-        /* 0x258 */ public TkTextureResource MissionIcon;
+        /* 0x270 */ public TkTextureResource MissionIcon;
         [NMS(Index = 17)]
-        /* 0x270 */ public TkTextureResource MissionIconNotSelected;
+        /* 0x288 */ public TkTextureResource MissionIconNotSelected;
         [NMS(Index = 16)]
-        /* 0x288 */ public TkTextureResource MissionIconSelected;
+        /* 0x2A0 */ public TkTextureResource MissionIconSelected;
         [NMS(Index = 10)]
-        /* 0x2A0 */ public GcNumberedTextList MissionProcDescriptionA;
+        /* 0x2B8 */ public GcNumberedTextList MissionProcDescriptionA;
         [NMS(Index = 11)]
-        /* 0x2B8 */ public GcNumberedTextList MissionProcDescriptionB;
+        /* 0x2D0 */ public GcNumberedTextList MissionProcDescriptionB;
         [NMS(Index = 12)]
-        /* 0x2D0 */ public GcNumberedTextList MissionProcDescriptionC;
+        /* 0x2E8 */ public GcNumberedTextList MissionProcDescriptionC;
         [NMS(Index = 9)]
-        /* 0x2E8 */ public GcNumberedTextList MissionProcDescriptionHeader;
+        /* 0x300 */ public GcNumberedTextList MissionProcDescriptionHeader;
         [NMS(Index = 5)]
-        /* 0x300 */ public GcNumberedTextList MissionSubtitles;
+        /* 0x318 */ public GcNumberedTextList MissionSubtitles;
         [NMS(Index = 4)]
-        /* 0x318 */ public GcNumberedTextList MissionTitles;
+        /* 0x330 */ public GcNumberedTextList MissionTitles;
         [NMS(Index = 45)]
-        /* 0x330 */ public List<NMSTemplate> CancelingConditions;
+        /* 0x348 */ public List<NMSTemplate> CancelingConditions;
         [NMS(Index = 39)]
-        /* 0x340 */ public List<GcCostTableEntry> Costs;
+        /* 0x358 */ public List<GcCostTableEntry> Costs;
         [NMS(Index = 36)]
-        /* 0x350 */ public GcAlienPuzzleTable Dialog;
+        /* 0x368 */ public GcAlienPuzzleTable Dialog;
         [NMS(Index = 46)]
-        /* 0x360 */ public List<GcGenericMissionVersionProgress> FinalStageVersions;
+        /* 0x378 */ public List<GcGenericMissionVersionProgress> FinalStageVersions;
         [NMS(Index = 22)]
-        /* 0x370 */ public NMSString0x10 MissionBuildMenuHint;
+        /* 0x388 */ public NMSString0x10 MissionBuildMenuHint;
         [NMS(Index = 0)]
-        /* 0x380 */ public NMSString0x10 MissionID;
+        /* 0x398 */ public NMSString0x10 MissionID;
         [NMS(Index = 29)]
-        /* 0x390 */ public NMSString0x10 NextMissionHint;
+        /* 0x3A8 */ public NMSString0x10 NextMissionHint;
         [NMS(Index = 38)]
-        /* 0x3A0 */ public List<GcGenericRewardTableEntry> Rewards;
+        /* 0x3B8 */ public List<GcGenericRewardTableEntry> Rewards;
         [NMS(Index = 37)]
-        /* 0x3B0 */ public List<GcScanEventData> ScanEvents;
+        /* 0x3C8 */ public List<GcScanEventData> ScanEvents;
         [NMS(Index = 47)]
-        /* 0x3C0 */ public List<GcGenericMissionStage> Stages;
+        /* 0x3D8 */ public List<GcGenericMissionStage> Stages;
         [NMS(Index = 44)]
-        /* 0x3D0 */ public List<NMSTemplate> StartingConditions;
+        /* 0x3E8 */ public List<NMSTemplate> StartingConditions;
         [NMS(Index = 55)]
-        /* 0x3E0 */ public NMSString0x10 UseCommunityMissionForLog;
+        /* 0x3F8 */ public NMSString0x10 UseCommunityMissionForLog;
         [NMS(Index = 26)]
-        /* 0x3F0 */ public List<int> WikiMissionBlockedBySeasons;
+        /* 0x408 */ public List<int> WikiMissionBlockedBySeasons;
         // size: 0x4
         public enum AutoStartEnum : uint {
             None,
@@ -73,11 +73,11 @@ namespace libMBIN.NMS.GameComponents
             OnSelected,
         }
         [NMS(Index = 33)]
-        /* 0x400 */ public AutoStartEnum AutoStart;
+        /* 0x418 */ public AutoStartEnum AutoStart;
         [NMS(Index = 25)]
-        /* 0x404 */ public int BeginCheckFrequency;
+        /* 0x41C */ public int BeginCheckFrequency;
         [NMS(Index = 42)]
-        /* 0x408 */ public GcMissionConditionTest CancelConditionTest;
+        /* 0x420 */ public GcMissionConditionTest CancelConditionTest;
         // size: 0x3
         public enum MessageCompleteEnum : uint {
             Default,
@@ -85,7 +85,7 @@ namespace libMBIN.NMS.GameComponents
             Never,
         }
         [NMS(Index = 30)]
-        /* 0x40C */ public MessageCompleteEnum MessageComplete;
+        /* 0x424 */ public MessageCompleteEnum MessageComplete;
         // size: 0x3
         public enum MessageStartEnum : uint {
             Default,
@@ -93,9 +93,9 @@ namespace libMBIN.NMS.GameComponents
             Never,
         }
         [NMS(Index = 31)]
-        /* 0x410 */ public MessageStartEnum MessageStart;
+        /* 0x428 */ public MessageStartEnum MessageStart;
         [NMS(Index = 19)]
-        /* 0x414 */ public GcMissionCategory MissionCategory;
+        /* 0x42C */ public GcMissionCategory MissionCategory;
         // size: 0xA
         public enum MissionClassEnum : uint {
             Primary,
@@ -110,52 +110,52 @@ namespace libMBIN.NMS.GameComponents
             FleetSupport,
         }
         [NMS(Index = 1)]
-        /* 0x418 */ public MissionClassEnum MissionClass;
+        /* 0x430 */ public MissionClassEnum MissionClass;
         [NMS(Index = 20)]
-        /* 0x41C */ public GcMissionPageHint MissionPageHint;
+        /* 0x434 */ public GcMissionPageHint MissionPageHint;
         [NMS(Index = 18)]
-        /* 0x420 */ public int MissionPriority;
+        /* 0x438 */ public int MissionPriority;
         [NMS(Index = 41)]
-        /* 0x424 */ public GcMissionConditionTest StartConditionTest;
+        /* 0x43C */ public GcMissionConditionTest StartConditionTest;
         [NMS(Index = 8)]
-        /* 0x428 */ public NMSString0x20 MissionDescSwitchOverride;
+        /* 0x440 */ public NMSString0x20 MissionDescSwitchOverride;
         [NMS(Index = 3)]
-        /* 0x448 */ public NMSString0x20 MissionObjective;
+        /* 0x460 */ public NMSString0x20 MissionObjective;
         [NMS(Index = 53)]
-        /* 0x468 */ public bool BlocksPinning;
+        /* 0x480 */ public bool BlocksPinning;
         [NMS(Index = 35)]
-        /* 0x469 */ public bool CancelSetsComplete;
+        /* 0x481 */ public bool CancelSetsComplete;
         [NMS(Index = 54)]
-        /* 0x46A */ public bool CanRenounce;
+        /* 0x482 */ public bool CanRenounce;
         [NMS(Index = 49)]
-        /* 0x46B */ public bool ForcesBuildMenuHint;
+        /* 0x483 */ public bool ForcesBuildMenuHint;
         [NMS(Index = 48)]
-        /* 0x46C */ public bool ForcesPageHint;
+        /* 0x484 */ public bool ForcesPageHint;
         [NMS(Index = 52)]
-        /* 0x46D */ public bool IsLegacy;
+        /* 0x485 */ public bool IsLegacy;
         [NMS(Index = 50)]
-        /* 0x46E */ public bool IsProceduralAllowed;
+        /* 0x486 */ public bool IsProceduralAllowed;
         [NMS(Index = 51)]
-        /* 0x46F */ public bool IsRecurring;
+        /* 0x487 */ public bool IsRecurring;
         [NMS(Index = 23)]
-        /* 0x470 */ public bool MissionHasColourOverride;
+        /* 0x488 */ public bool MissionHasColourOverride;
         [NMS(Index = 2)]
-        /* 0x471 */ public bool MissionIsCritical;
+        /* 0x489 */ public bool MissionIsCritical;
         [NMS(Index = 28)]
-        /* 0x472 */ public bool PrefixTitle;
+        /* 0x48A */ public bool PrefixTitle;
         [NMS(Index = 34)]
-        /* 0x473 */ public bool RestartOnCompletion;
+        /* 0x48B */ public bool RestartOnCompletion;
         [NMS(Index = 43)]
-        /* 0x474 */ public bool StartIsCancel;
+        /* 0x48C */ public bool StartIsCancel;
         [NMS(Index = 56)]
-        /* 0x475 */ public bool TakeCommunityMissionIDFromSeasonData;
+        /* 0x48D */ public bool TakeCommunityMissionIDFromSeasonData;
         [NMS(Index = 57)]
-        /* 0x476 */ public bool TelemetryUpload;
+        /* 0x48E */ public bool TelemetryUpload;
         [NMS(Index = 14)]
-        /* 0x477 */ public bool UseFirstPurpleSystemDetailsInLogInfo;
+        /* 0x48F */ public bool UseFirstPurpleSystemDetailsInLogInfo;
         [NMS(Index = 13)]
-        /* 0x478 */ public bool UseScanEventDetailsInLogInfo;
+        /* 0x490 */ public bool UseScanEventDetailsInLogInfo;
         [NMS(Index = 58)]
-        /* 0x479 */ public bool UseSeasonTitleOverride;
+        /* 0x491 */ public bool UseSeasonTitleOverride;
     }
 }

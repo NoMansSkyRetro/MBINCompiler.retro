@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x38DF0AFCFF79B130, NameHash = 0xE51499F8)]
+    [NMS(GUID = 0xDFD05019681C272A, NameHash = 0xE51499F8)]
     public class GcMarkerType : NMSTemplate
     {
-        // size: 0x43
+        // size: 0x45
         public enum MarkerTypeEnum : uint {
             Default,
             PlanetPoleNorth,
@@ -14,6 +14,7 @@ namespace libMBIN.NMS.GameComponents
             TerrainResource,
             Object,
             Tagged,
+            TaggedPlanet,
             Unknown,
             Ship,
             Freighter,
@@ -72,6 +73,7 @@ namespace libMBIN.NMS.GameComponents
             FrigateFlyby,
             ShipExperienceSpawn,
             FriendlyDrone,
+            ImportantNPC,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public MarkerTypeEnum MarkerType;

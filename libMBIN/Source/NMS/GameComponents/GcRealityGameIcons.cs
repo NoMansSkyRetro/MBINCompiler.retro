@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB59544729DF1B854, NameHash = 0xC8C2FA1E)]
+    [NMS(GUID = 0x9655C7D45B7E7F62, NameHash = 0xC8C2FA1E)]
     public class GcRealityGameIcons : NMSTemplate
     {
-        // size: 0x6D
+        // size: 0x6E
         public enum GameIconsEnum : uint {
             Stamina,
             NoStamina,
@@ -82,6 +82,7 @@ namespace libMBIN.NMS.GameComponents
             GarageMarkerWheeledBike,
             GarageMarkerHovercraft,
             CorruptedDrone,
+            AncientGuardian,
             HandHold,
             ShipThumbnailBG,
             CClass,

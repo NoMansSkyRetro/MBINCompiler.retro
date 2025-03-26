@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCF18AC27E761CDD5, NameHash = 0x61BD77C0)]
+    [NMS(GUID = 0xB1F4FAC6A24F2734, NameHash = 0x61BD77C0)]
     public class GcExplosionDataTable : NMSTemplate
     {
         [NMS(Index = 1)]

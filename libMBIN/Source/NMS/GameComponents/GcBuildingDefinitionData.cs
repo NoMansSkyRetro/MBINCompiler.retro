@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1978387435F26873, NameHash = 0x15C14AC1)]
+    [NMS(GUID = 0x7F2C98DFA0FD36DD, NameHash = 0x15C14AC1)]
     public class GcBuildingDefinitionData : NMSTemplate
     {
         [NMS(Index = 8)]
@@ -31,10 +31,10 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 13)]
         /* 0x74 */ public GcPlanetaryBuildingRestrictions PlanetRestrictions;
         [NMS(Index = 4)]
-        /* 0x76 */ public bool EnabledWhenPlanetHasNoNPCs;
+        /* 0x77 */ public bool EnabledWhenPlanetHasNoNPCs;
         [NMS(Index = 10)]
-        /* 0x77 */ public bool GivesShelter;
+        /* 0x78 */ public bool GivesShelter;
         [NMS(Index = 14)]
-        /* 0x78 */ public bool IgnoreParticlesInAABB;
+        /* 0x79 */ public bool IgnoreParticlesInAABB;
     }
 }
