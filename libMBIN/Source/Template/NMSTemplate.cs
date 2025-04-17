@@ -1473,6 +1473,14 @@ namespace libMBIN
             #endif
         }
 
+        private static void EmitError( string msg ) {
+            #if DEBUG
+                throw new APIException( msg );
+            #else
+                Logger.LogError( msg );
+            #endif
+        }
+
         private static int GetArrayLength( string fieldName, NMSAttribute settings ) {
             return GetEnumNames( fieldName, settings ).Length;
         }
@@ -1735,7 +1743,8 @@ namespace libMBIN
                             // The MXML file contains a field which is no longer in the class definition.
                             // Raise a more helpful error.
                             // TODO: Raise as an actual exception.
-                            Console.WriteLine($"[ERROR] The field '{xmlProperty.Name}' no longer exists in the class '{templateType.Name}'");
+                            // Console.WriteLine($"[ERROR] The field '{xmlProperty.Name}' no longer exists in the class '{templateType.Name}'");
+                            EmitError($"The field '{xmlProperty.Name}' no longer exists in the class '{templateType.Name}'");
                         }
                         object fieldValue = null;
                         Type fieldType = field.FieldType;
