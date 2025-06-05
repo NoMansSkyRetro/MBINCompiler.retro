@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9655C7D45B7E7F62, NameHash = 0xC8C2FA1E)]
+    [NMS(GUID = 0xFBE224BDE7144EC3, NameHash = 0xC8C2FA1E)]
     public class GcRealityGameIcons : NMSTemplate
     {
-        // size: 0x6E
+        // size: 0x70
         public enum GameIconsEnum : uint {
             Stamina,
             NoStamina,
@@ -94,9 +94,11 @@ namespace libMBIN.NMS.GameComponents
             ExploreMissionSystemIcon,
             PetThumbnailBG,
             SettlementOSD,
+            SettlementUpgradeOSD,
             Stealth,
             StealthEmpty,
             DefenceForce,
+            SummonSquadron,
             CookShop,
             HazardIndicatorSpook,
             BioShip,

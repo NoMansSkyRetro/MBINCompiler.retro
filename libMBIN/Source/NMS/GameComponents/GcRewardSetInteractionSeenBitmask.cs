@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB4410A5FC154FF3, NameHash = 0xA5870231)]
+    [NMS(GUID = 0x7ABCEDE0E4AC92E9, NameHash = 0xA5870231)]
     public class GcRewardSetInteractionSeenBitmask : NMSTemplate
     {
         [NMS(Index = 2)]

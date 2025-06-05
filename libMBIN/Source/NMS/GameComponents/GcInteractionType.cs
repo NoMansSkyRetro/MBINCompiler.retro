@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2C6BA88E68CE7924, NameHash = 0x3780BAA2)]
+    [NMS(GUID = 0xA3BF1B8F573B99, NameHash = 0x3780BAA2)]
     public class GcInteractionType : NMSTemplate
     {
-        // size: 0x91
+        // size: 0x95
         public enum InteractionTypeEnum : uint {
             None,
             Shop,
@@ -150,6 +150,10 @@ namespace libMBIN.NMS.GameComponents
             ExhibitAssembly,
             ArchiveMultitool,
             BoneShop,
+            SettlementBuildingDetail,
+            ByteBeatJukebox,
+            NPC_Settlement_SquadronPilot,
+            Settlement_TowerTerminal,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public InteractionTypeEnum InteractionType;

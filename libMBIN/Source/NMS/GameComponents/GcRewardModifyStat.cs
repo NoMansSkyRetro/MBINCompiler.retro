@@ -2,18 +2,20 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9945C8F22E1E9B9D, NameHash = 0x1E9EFBA2)]
+    [NMS(GUID = 0x8D99CF62C8BEE055, NameHash = 0x1E9EFBA2)]
     public class GcRewardModifyStat : NMSTemplate
     {
         [NMS(Index = 1)]
         /* 0x00 */ public NMSString0x10 OtherStat;
         [NMS(Index = 0)]
         /* 0x10 */ public NMSString0x10 Stat;
+        [NMS(Index = 5)]
+        /* 0x20 */ public NMSString0x10 StatGroup;
         [NMS(Index = 2)]
-        /* 0x20 */ public int Amount;
+        /* 0x30 */ public int Amount;
         [NMS(Index = 4)]
-        /* 0x24 */ public GcStatModifyType ModifyType;
+        /* 0x34 */ public GcStatModifyType ModifyType;
         [NMS(Index = 3)]
-        /* 0x28 */ public bool UseOtherStat;
+        /* 0x38 */ public bool UseOtherStat;
     }
 }

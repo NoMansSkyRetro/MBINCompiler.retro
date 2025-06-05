@@ -6,11 +6,11 @@ using System.Reflection;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xE2C133EF90E9F7A3, NameHash = 0x819C3220)]
+    [NMS(GUID = 0xDA1F6CA99ADEF6A6, NameHash = 0x819C3220)]
     public class TkGeometryData : NMSTemplate
     {
         [NMS(Index = 20)]
-        /* 0x000 */ public TkVertexLayout SmallVertexLayout;
+        /* 0x000 */ public TkVertexLayout PositionVertexLayout;
         [NMS(Index = 19)]
         /* 0x020 */ public TkVertexLayout VertexLayout;
         [NMS(Index = 12)]

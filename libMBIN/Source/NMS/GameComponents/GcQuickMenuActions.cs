@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x40BD81220B73F73E, NameHash = 0xBADBD713)]
+    [NMS(GUID = 0x6B5B425073137481, NameHash = 0xBADBD713)]
     public class GcQuickMenuActions : NMSTemplate
     {
-        // size: 0x3C
+        // size: 0x3D
         public enum QuickMenuActionsEnum : uint {
             None,
             CallFreighter,
@@ -64,6 +64,7 @@ namespace libMBIN.NMS.GameComponents
             SummonSkiff,
             FishBaitBox,
             FoodUnit,
+            SettlementOverview,
             Invalid,
         }
         [NMS(Index = 0)]
