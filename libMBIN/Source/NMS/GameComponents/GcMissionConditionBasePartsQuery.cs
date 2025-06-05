@@ -2,20 +2,20 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x44150D28D34AA609, NameHash = 0xF273F6C7)]
+    [NMS(GUID = 0xAD9A35E7DE0C3722, NameHash = 0xF273F6C7)]
     public class GcMissionConditionBasePartsQuery : NMSTemplate
     {
         [NMS(Index = 3)]
-        /* 0x00 */ public GcBaseSearchFilter ExcludeBasesFilter;
+        /* 0x000 */ public GcBaseSearchFilter ExcludeBasesFilter;
         [NMS(Index = 0)]
-        /* 0x98 */ public GcBasePartSearchFilter PartsSearchFilter;
+        /* 0x0C0 */ public GcBasePartSearchFilter PartsSearchFilter;
         [NMS(Index = 2)]
-        /* 0xE0 */ public int MaxPartsFound;
+        /* 0x120 */ public int MaxPartsFound;
         [NMS(Index = 1)]
-        /* 0xE4 */ public int MinPartsFound;
+        /* 0x124 */ public int MinPartsFound;
         [NMS(Index = 5)]
-        /* 0xE8 */ public float SearchDistanceLimit;
+        /* 0x128 */ public float SearchDistanceLimit;
         [NMS(Index = 4)]
-        /* 0xEC */ public bool ExcludeGlobalBuffer;
+        /* 0x12C */ public bool ExcludeGlobalBuffer;
     }
 }

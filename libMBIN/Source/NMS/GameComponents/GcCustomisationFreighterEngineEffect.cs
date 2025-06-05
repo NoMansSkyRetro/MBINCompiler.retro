@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5EA86E5715632555, NameHash = 0x1F9B959A)]
+    [NMS(GUID = 0x9714E938DD430DA8, NameHash = 0x1F9B959A)]
     public class GcCustomisationFreighterEngineEffect : NMSTemplate
     {
         [NMS(Index = 5)]

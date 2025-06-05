@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCDC38A16CF55698C, NameHash = 0x37EE71BB)]
+    [NMS(GUID = 0x84956FB017ACBFD4, NameHash = 0x37EE71BB)]
     public class GcScanEventData : NMSTemplate
     {
         [NMS(Index = 42)]
@@ -49,8 +49,6 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2E8 */ public VariableSizeString TooltipMessage;
         [NMS(Index = 49)]
         /* 0x2F8 */ public List<VariableSizeString> UAsList;
-        [NMS(Index = 34)]
-        /* 0x308 */ public GcBuildingClassification BuildingClass;
         // size: 0x7
         public enum BuildingLocationEnum : uint {
             Nearest,
@@ -62,15 +60,59 @@ namespace libMBIN.NMS.GameComponents
             PlayerSettlement,
         }
         [NMS(Index = 32)]
-        /* 0x30C */ public BuildingLocationEnum BuildingLocation;
+        /* 0x308 */ public BuildingLocationEnum BuildingLocation;
         [NMS(Index = 16)]
-        /* 0x310 */ public float BuildingPreventionRadius;
-        // size: 0x19
-        public enum BuildingTypeEnum : uint {
+        /* 0x30C */ public float BuildingPreventionRadius;
+        // size: 0x5
+        public enum EventEndTypeEnum : uint {
+            None,
+            Proximity,
+            Interact,
+            EnterBuilding,
+            TimedInteract,
+        }
+        [NMS(Index = 26)]
+        /* 0x310 */ public EventEndTypeEnum EventEndType;
+        // size: 0x2
+        public enum EventPriorityEnum : uint {
+            Regular,
+            High,
+        }
+        [NMS(Index = 27)]
+        /* 0x314 */ public EventPriorityEnum EventPriority;
+        // size: 0x6
+        public enum EventStartTypeEnum : uint {
+            None,
+            Special,
+            Discovered,
+            Timer,
+            ObjectScan,
+            LeaveBuilding,
+        }
+        [NMS(Index = 25)]
+        /* 0x318 */ public EventStartTypeEnum EventStartType;
+        [NMS(Index = 3)]
+        /* 0x31C */ public GcInteractionType ForceInteractionType;
+        [NMS(Index = 60)]
+        /* 0x320 */ public float IconTime;
+        [NMS(Index = 59)]
+        /* 0x324 */ public GcAudioWwiseEvents MessageAudio;
+        [NMS(Index = 58)]
+        /* 0x328 */ public float MessageDisplayTime;
+        [NMS(Index = 57)]
+        /* 0x32C */ public float MessageTime;
+        [NMS(Index = 55)]
+        /* 0x330 */ public GcScannerIconHighlightTypes MissionMarkerHighlightStyleOverride;
+        [NMS(Index = 6)]
+        /* 0x334 */ public GcAlienRace OverrideInteractionRace;
+        [NMS(Index = 5)]
+        /* 0x338 */ public GcAlienRace RequireInteractionRace;
+        // size: 0x1A
+        public enum SearchTypeEnum : uint {
             Any,
             AnyShelter,
             AnyNPC,
-            BuildingClass,
+            FindBuildingClass,
             SpaceStation,
             SpaceAnomaly,
             Atlas,
@@ -92,53 +134,10 @@ namespace libMBIN.NMS.GameComponents
             NPC_HideOut,
             FriendlyDrone,
             AnyRobotSite,
+            UnownedSettlement_Builders,
         }
         [NMS(Index = 33)]
-        /* 0x314 */ public BuildingTypeEnum BuildingType;
-        // size: 0x5
-        public enum EventEndTypeEnum : uint {
-            None,
-            Proximity,
-            Interact,
-            EnterBuilding,
-            TimedInteract,
-        }
-        [NMS(Index = 26)]
-        /* 0x318 */ public EventEndTypeEnum EventEndType;
-        // size: 0x2
-        public enum EventPriorityEnum : uint {
-            Regular,
-            High,
-        }
-        [NMS(Index = 27)]
-        /* 0x31C */ public EventPriorityEnum EventPriority;
-        // size: 0x6
-        public enum EventStartTypeEnum : uint {
-            None,
-            Special,
-            Discovered,
-            Timer,
-            ObjectScan,
-            LeaveBuilding,
-        }
-        [NMS(Index = 25)]
-        /* 0x320 */ public EventStartTypeEnum EventStartType;
-        [NMS(Index = 3)]
-        /* 0x324 */ public GcInteractionType ForceInteractionType;
-        [NMS(Index = 60)]
-        /* 0x328 */ public float IconTime;
-        [NMS(Index = 59)]
-        /* 0x32C */ public GcAudioWwiseEvents MessageAudio;
-        [NMS(Index = 58)]
-        /* 0x330 */ public float MessageDisplayTime;
-        [NMS(Index = 57)]
-        /* 0x334 */ public float MessageTime;
-        [NMS(Index = 55)]
-        /* 0x338 */ public GcScannerIconHighlightTypes MissionMarkerHighlightStyleOverride;
-        [NMS(Index = 6)]
-        /* 0x33C */ public GcAlienRace OverrideInteractionRace;
-        [NMS(Index = 5)]
-        /* 0x340 */ public GcAlienRace RequireInteractionRace;
+        /* 0x33C */ public SearchTypeEnum SearchType;
         // size: 0x7
         public enum SolarSystemLocationEnum : uint {
             Local,
@@ -150,7 +149,9 @@ namespace libMBIN.NMS.GameComponents
             FirstPurpleSystemUA,
         }
         [NMS(Index = 41)]
-        /* 0x344 */ public SolarSystemLocationEnum SolarSystemLocation;
+        /* 0x340 */ public SolarSystemLocationEnum SolarSystemLocation;
+        [NMS(Index = 34)]
+        /* 0x344 */ public GcBuildingClassification SpecificBuildingClass;
         [NMS(Index = 56)]
         /* 0x348 */ public float StartTime;
         [NMS(Index = 22)]

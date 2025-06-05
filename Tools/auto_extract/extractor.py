@@ -158,7 +158,7 @@ EXTRA_ATTRIBUTES = {
 # fix it manually.
 DONT_OVERRIDE = {
     'TkAnimNodeFrameData': 0xDD8A411B84D2D5DC,
-    # 'TkAnimNodeFrameHalfData',
+    # # 'TkAnimNodeFrameHalfData',
     'TkGeometryData': 0xE2C133EF90E9F7A3,
     'TkMeshData': 0xA5E773D3424BA9FA,
 }
@@ -216,10 +216,11 @@ TYPE_MAPPING = {
     0x27: 'Vector3f',
     0x28: 'Vector4f',
     0x29: 'wchar',
-    0x2A: 'halfVector3',
-    0x2B: 'TkPhysRelVec3',
-    0x2C: 'HashMap',
-    0x2D: 'Colour32',  # 4 channel colour with each channel packed as a byte
+    0x2A: 'halfVector4',
+    0x2B: 'Vector4i',
+    0x2C: 'TkPhysRelVec3',
+    0x2D: 'HashMap',
+    0x2E: 'Colour32',  # 4 channel colour with each channel packed as a byte
 }
 
 TYPE_MAPPING_REV = {value: key for key, value in TYPE_MAPPING.items()}

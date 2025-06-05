@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xBC385CA7C5CDF7E, NameHash = 0x2D59643E)]
+    [NMS(GUID = 0x60D179F58A11DD27, NameHash = 0x2D59643E)]
     public class TkGraphicsDetailPreset : NMSTemplate
     {
         [NMS(Index = 22)]
@@ -133,13 +133,15 @@ namespace libMBIN.NMS.Toolkit
         /* 0x58 */ public TkGraphicsDetailTypes VolumetricsQuality;
         [NMS(Index = 8)]
         /* 0x5C */ public TkGraphicsDetailTypes WaterQuality;
-        // size: 0x5
+        // size: 0x7
         public enum XESSQualityEnum : uint {
             UltraPerformance,
             Performance,
             Balanced,
-            MaxQuality,
+            Quality,
             UltraQuality,
+            UltraQualityPlus,
+            Native,
         }
         [NMS(Index = 16)]
         /* 0x60 */ public XESSQualityEnum XESSQuality;

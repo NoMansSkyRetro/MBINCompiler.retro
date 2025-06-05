@@ -6,31 +6,44 @@ using System.Reflection;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xA5E773D3424BA9FA, NameHash = 0x18D05F06)]
+    [NMS(GUID = 0xF365F60180618662, NameHash = 0x18D05F06)]
     public class TkMeshData : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x00 */ public VariableSizeString IdString;
-        [NMS(Index = 4)]
-        /* 0x10 */ public byte[] MeshDataStream;
+        /* 0x00 */
+        public VariableSizeString IdString;
+        [NMS(Index = 5)]
+        /* 0x10 */
+        public byte[] MeshDataStream;
+        [NMS(Index = 6)]
+        /* 0x20 */
+        public byte[] MeshPositionDataStream;
         [NMS(Index = 1)]
-        /* 0x20 */ public ulong Hash;
-        [NMS(Index = 3)]
-        /* 0x28 */ public int IndexDataSize;
+        /* 0x30 */
+        public ulong Hash;
+        [NMS(Index = 4)]
+        /* 0x38 */
+        public int IndexDataSize;
         [NMS(Index = 2)]
-        /* 0x2C */ public int VertexDataSize;
+        /* 0x3C */
+        public int VertexDataSize;
+        [NMS(Index = 3)]
+        /* 0x40 */
+        public int VertexPositionDataSize;
 
-        public override object CustomDeserialize( BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo ) {
+        public override object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo)
+        {
             var fieldName = fieldInfo.Name;
             switch (fieldName)
-                {
+            {
                 case nameof(MeshDataStream):
+                case nameof(MeshPositionDataStream):
                     long listPosition = reader.BaseStream.Position;
 
                     long listStartOffset = reader.ReadInt64();
                     int numEntries = reader.ReadInt32();
                     uint listMagic = reader.ReadUInt32();
-                    if ( (listMagic & 0xFF) != 1 ) throw new InvalidListException( listMagic, reader.BaseStream.Position );
+                    if ((listMagic & 0xFF) != 1) throw new InvalidListException(listMagic, reader.BaseStream.Position);
                     long listEndPosition = reader.BaseStream.Position;
 
                     reader.BaseStream.Position = listPosition + listStartOffset;
@@ -48,6 +61,7 @@ namespace libMBIN.NMS.Toolkit
             switch (fieldName)
                 {
                 case nameof(MeshDataStream):
+                case nameof(MeshPositionDataStream):
                     writer.Align(8, fieldName, 0xFE );
 
                     // write empty list header
@@ -63,5 +77,4 @@ namespace libMBIN.NMS.Toolkit
             return false;
         }
     }
-
 }

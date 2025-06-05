@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x43204E540E6D04F0, NameHash = 0x1AD5DE55)]
+    [NMS(GUID = 0x8FB36898D7077436, NameHash = 0x1AD5DE55)]
     public class GcRewardOpenPage : NMSTemplate
     {
-        // size: 0x14
+        // size: 0x16
         public enum PageToOpenEnum : uint {
             FreighterShipTransfer,
             DisplayPortalUa,
@@ -16,7 +16,9 @@ namespace libMBIN.NMS.GameComponents
             NexusTechShop,
             ScrapDealerShop,
             BuyShip,
+            SettlementsOverview,
             SettlementManagement,
+            SettlerNPCDetails,
             SquadronManagement,
             SquadronRecruitment,
             FleetManagement,

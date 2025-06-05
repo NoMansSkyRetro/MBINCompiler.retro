@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD61F9B72867C4C6D, NameHash = 0xF2F460E6)]
+    [NMS(GUID = 0x22F25A86827FC902, NameHash = 0xF2F460E6)]
     public class GcBuildingClassification : NMSTemplate
     {
-        // size: 0x39
+        // size: 0x3C
         public enum BuildingClassEnum : uint {
             None,
             TerrainResource,
@@ -62,6 +62,9 @@ namespace libMBIN.NMS.GameComponents
             RobotHead,
             DigSite,
             AncientGuardian,
+            Settlement_Hub_Builders,
+            Settlement_FishPond,
+            Settlement_Builders_RoboArm,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public BuildingClassEnum BuildingClass;

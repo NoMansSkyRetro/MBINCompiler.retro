@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8092D42DF5D7CADE, NameHash = 0x7A0D33C8)]
+    [NMS(GUID = 0xB7E4FB9F6E8111BD, NameHash = 0x7A0D33C8)]
     public class GcAudioWwiseEvents : NMSTemplate
     {
-        // size: 0xA9F
+        // size: 0xAA4
         public enum AkEventEnum : uint {
             INVALID_EVENT = 0x0,
             ABANDONED_DOOR_UNLOCK = 0x264BED2D,
@@ -277,6 +277,8 @@ namespace libMBIN.NMS.GameComponents
             BURNING_BARREL = 0xF24D4A35,
             BUTTERFLY = 0xD410A32,
             BYTEBEAT = 0x3DB63CCF,
+            BYTEBEAT_BAR = 0x8EEE3065,
+            BYTEBEAT_BAR_STOP = 0x4B3267A8,
             BYTEBEAT_PLAYER = 0x1DF2F9B5,
             BYTEBEAT_STOP = 0x932527FA,
             CAPSULE_COLLECT = 0xBC55E8B1,
@@ -2080,6 +2082,7 @@ namespace libMBIN.NMS.GameComponents
             SENTINENCEECHO_REVEAL = 0xAC879F8,
             SETTLEMENT_ALARM = 0x39A0EC12,
             SETTLEMENT_ALARM_SHIP = 0x9DE3B01B,
+            SETTLEMENT_ANTENNA = 0x74E20ADC,
             SETTLEMENT_ANTENNA0 = 0xDBD71864,
             SETTLEMENT_ANTENNA1 = 0xDBD71865,
             SETTLEMENT_ANTENNA2 = 0xDBD71866,
@@ -2090,8 +2093,11 @@ namespace libMBIN.NMS.GameComponents
             SETTLEMENT_GENERATOR = 0x7D11D44A,
             SETTLEMENT_GLOWGLOBE = 0xF2985AF,
             SETTLEMENT_LIGHTOUTDOOR = 0x8C6C2D83,
+            SETTLEMENT_MEDIBAY_LP = 0xEFC5D07B,
             SETTLEMENT_PUMP = 0xC2F73565,
+            SETTLEMENT_ROBOTARM = 0xC5CE471,
             SETTLEMENT_TERMINAL = 0xBD68511F,
+            SETTLEMENT_WATERTOWER = 0x13117793,
             SFX_FADEDOWN = 0xED6AB3EB,
             SFX_FADEUP = 0x71E96FAC,
             SHARK_LP = 0x28B07C37,
@@ -2302,8 +2308,6 @@ namespace libMBIN.NMS.GameComponents
             TERRAIN_CREATE = 0xA095FDCF,
             TERRAIN_DESTROY = 0xD6350E47,
             TERRAIN_UNDO = 0x1EEA9A75,
-            TEST = 0xBC2C0BE9,
-            TEST_01 = 0xB408D015,
             TIMBER_DOOR1_SETTLEMENT_CLOSE = 0x43A6512B,
             TIMBER_DOOR1_SETTLEMENT_OPEN = 0x18A8586D,
             TIMBER_DOOR2_SETTLEMENT_CLOSE = 0xCD38E81A,
@@ -2372,6 +2376,7 @@ namespace libMBIN.NMS.GameComponents
             UI_DECISIONTEXT_MOUSEOVER = 0x2986B81F,
             UI_DESTINATION_REACHED = 0x6C649E5D,
             UI_DISMANTLE = 0x86CF5DA3,
+            UI_DUMMY_EVENT = 0xD6C96D03,
             UI_EPIC_ITEM = 0xFB7EBFED,
             UI_ERROR = 0x3C2700B8,
             UI_FRIGATE_LIVING_FEED = 0x5679A6D,
