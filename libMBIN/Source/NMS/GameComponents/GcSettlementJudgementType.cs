@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x671544E5B7E3E32E, NameHash = 0x65DD91BC)]
+    [NMS(GUID = 0xE4C46FC7760EC8B0, NameHash = 0x65DD91BC)]
     public class GcSettlementJudgementType : NMSTemplate
     {
-        // size: 0x7
+        // size: 0xC
         public enum SettlementJudgementTypeEnum : uint {
             None,
             StrangerVisit,
@@ -12,6 +12,11 @@ namespace libMBIN.NMS.GameComponents
             BuildingChoice,
             Conflict,
             Request,
+            BlessingPerkRelated,
+            JobPerkRelated,
+            ProcPerkRelated,
+            UpgradeBuilding,
+            UpgradeBuildingChoice,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public SettlementJudgementTypeEnum SettlementJudgementType;

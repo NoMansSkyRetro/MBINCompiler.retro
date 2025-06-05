@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x23B2E761290751D0, NameHash = 0x4B31BB0A)]
+    [NMS(GUID = 0x90632A4EB011CC77, NameHash = 0x4B31BB0A)]
     public class GcCustomisationThrusterEffects : NMSTemplate
     {
         [NMS(Index = 1)]

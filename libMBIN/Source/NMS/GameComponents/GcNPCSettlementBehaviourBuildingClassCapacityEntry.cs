@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB8561EF0AC6E30E2, NameHash = 0xB1E003D1)]
+    [NMS(GUID = 0x99F5E5D98928979F, NameHash = 0xB1E003D1)]
     public class GcNPCSettlementBehaviourBuildingClassCapacityEntry : NMSTemplate
     {
         [NMS(Index = 0)]

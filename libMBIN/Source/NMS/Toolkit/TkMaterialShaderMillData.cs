@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xECB6B6C6E7F2083B, NameHash = 0x2E2A495E)]
+    [NMS(GUID = 0x26F2BD6785FBCDEF, NameHash = 0x2E2A495E)]
     public class TkMaterialShaderMillData : NMSTemplate
     {
         [NMS(Index = 3)]
@@ -25,10 +25,10 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 9)]
         /* 0x050 */ public float Zoom;
         [NMS(Index = 6)]
-        /* 0x054 */ public NMSString0x200 Description;
+        /* 0x054 */ public NMSString0x100 Description;
         [NMS(Index = 5)]
-        /* 0x254 */ public NMSString0x80 Filename;
+        /* 0x154 */ public NMSString0x100 Filename;
         [NMS(Index = 4)]
-        /* 0x2D4 */ public NMSString0x40 Name;
+        /* 0x254 */ public NMSString0x40 Name;
     }
 }

@@ -30,7 +30,7 @@ namespace libMBIN
 {
     public class NMSTemplate
     {
-        internal static readonly string[] FakeTypes = { "Colour", "Vector2f", "Vector3f", "Vector4f", "Colour32" };
+        internal static readonly string[] FakeTypes = { "Colour", "Vector2f", "Vector3f", "Vector4f", "Vector4i", "Colour32" };
         internal static readonly Dictionary<string, Type> NMSTemplateMap = Assembly.GetExecutingAssembly()
                 .GetTypes()
                 .Where(t => t.BaseType == typeof(NMSTemplate))

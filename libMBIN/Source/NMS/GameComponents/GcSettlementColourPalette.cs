@@ -1,20 +1,17 @@
 using libMBIN.NMS.GameComponents;
-using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x120387CF72615E89, NameHash = 0x972DE7E0)]
+    [NMS(GUID = 0xDBCC3F041B219D2F, NameHash = 0x972DE7E0)]
     public class GcSettlementColourPalette : NMSTemplate
     {
-        [NMS(Index = 4)]
-        /* 0x00 */ public List<GcBuildingColourPalette> BuildingPalettes;
-        [NMS(Index = 3)]
-        /* 0x10 */ public List<GcWeightedColourId> DefaultPalettes;
+        [NMS(Index = 3, Size = 0x4)]
+        /* 0x000 */ public GcSettlementMaterialData[] UpgradeLevel;
         [NMS(Index = 0)]
-        /* 0x20 */ public NMSString0x10 Name;
-        [NMS(Index = 2, MxmlName = "Limit To Style")]
-        /* 0x30 */ public GcBaseBuildingPartStyle LimitToStyle;
-        [NMS(Index = 1, MxmlName = "Relative Probability")]
-        /* 0x34 */ public float RelativeProbability;
+        /* 0x100 */ public NMSString0x10 Name;
+        [NMS(Index = 1)]
+        /* 0x110 */ public float RelativeProbability;
+        [NMS(Index = 2)]
+        /* 0x114 */ public GcBaseBuildingPartStyle Style;
     }
 }

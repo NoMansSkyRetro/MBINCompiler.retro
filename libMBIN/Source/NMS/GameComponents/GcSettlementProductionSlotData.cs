@@ -1,6 +1,8 @@
+using libMBIN.NMS.GameComponents;
+
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x84097D5FCA61F8CC, NameHash = 0xA6E6CEBB)]
+    [NMS(GUID = 0x759771F0551956D1, NameHash = 0xA6E6CEBB)]
     public class GcSettlementProductionSlotData : NMSTemplate
     {
         [NMS(Index = 0)]
@@ -9,5 +11,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public ulong LastChangeTimestamp;
         [NMS(Index = 2)]
         /* 0x18 */ public int Amount;
+        [NMS(Index = 3)]
+        /* 0x1C */ public int ProductionAccumulationCap;
+        [NMS(Index = 6)]
+        /* 0x20 */ public float ProductionAmountMultiplier;
+        [NMS(Index = 7)]
+        /* 0x24 */ public float ProductionTimeMultiplier;
+        [NMS(Index = 4)]
+        /* 0x28 */ public int RequiredSettlementBuildingLevel;
+        [NMS(Index = 5)]
+        /* 0x2C */ public GcBuildingClassification RequiredSettlementBuildingType;
     }
 }

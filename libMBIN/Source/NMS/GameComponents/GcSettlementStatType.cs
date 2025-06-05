@@ -1,17 +1,18 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3FE0AC63ECE39E94, NameHash = 0xCC5A3F4F)]
+    [NMS(GUID = 0xBC55DE70E0662051, NameHash = 0xCC5A3F4F)]
     public class GcSettlementStatType : NMSTemplate
     {
-        // size: 0x7
+        // size: 0x8
         public enum SettlementStatTypeEnum : uint {
-            Population,
+            MaxPopulation,
             Happiness,
             Production,
             Upkeep,
             Sentinels,
             Debt,
             Alert,
+            BugAttack,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public SettlementStatTypeEnum SettlementStatType;
