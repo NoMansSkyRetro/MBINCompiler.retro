@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEC6A416F030BCF33, NameHash = 0x94C95B89)]
+    [NMS(GUID = 0xA6BBA8B3DA403139, NameHash = 0x94C95B89)]
     public class GcSettlementLocalSaveData : NMSTemplate
     {
         [NMS(Index = 2, Size = 0x30)]
@@ -15,7 +15,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2A0 */ public ulong Seed;
         [NMS(Index = 1, Size = 0x30)]
         /* 0x2A8 */ public int[] Buildings;
+        [NMS(Index = 6)]
+        /* 0x368 */ public bool HasScannedToReveal;
         [NMS(Index = 5)]
-        /* 0x368 */ public bool RequiresStatConversion;
+        /* 0x369 */ public bool RequiresStatConversion;
     }
 }
