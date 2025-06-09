@@ -10,26 +10,19 @@ namespace libMBIN.NMS.Toolkit
     public class TkMeshData : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x00 */
-        public VariableSizeString IdString;
+        /* 0x00 */ public VariableSizeString IdString;
         [NMS(Index = 5)]
-        /* 0x10 */
-        public byte[] MeshDataStream;
+        /* 0x10 */ public byte[] MeshDataStream;
         [NMS(Index = 6)]
-        /* 0x20 */
-        public byte[] MeshPositionDataStream;
+        /* 0x20 */ public byte[] MeshPositionDataStream;
         [NMS(Index = 1)]
-        /* 0x30 */
-        public ulong Hash;
+        /* 0x30 */ public ulong Hash;
         [NMS(Index = 4)]
-        /* 0x38 */
-        public int IndexDataSize;
+        /* 0x38 */ public int IndexDataSize;
         [NMS(Index = 2)]
-        /* 0x3C */
-        public int VertexDataSize;
+        /* 0x3C */ public int VertexDataSize;
         [NMS(Index = 3)]
-        /* 0x40 */
-        public int VertexPositionDataSize;
+        /* 0x40 */ public int VertexPositionDataSize;
 
         public override object CustomDeserialize(BinaryReader reader, Type field, NMSAttribute settings, FieldInfo fieldInfo)
         {
