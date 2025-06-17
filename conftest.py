@@ -84,16 +84,21 @@ def convert_files():
     # First, figure out the first part of the MBINCompiler call.
     platform = os.environ.get('platform')
     mbincompiler_path = os.environ.get('mbincompiler_path')
-    if mbincompiler_path is not None:
-        cmd = [mbincompiler_path, '-q', '-y']
-    else:
+    if mbincompiler_path is None:
         if platform == 'linux-x64':
-            # need to run with mono on linux
-            # Build path also includes platform on the CI
-            cmd = ['sudo', 'mono',
-                op.join(BASE_PATH, platform, 'MBINCompiler.exe'), '-q', '-y']
+            mbincompiler_path = op.join(BASE_PATH, platform, 'MBINCompiler.exe')
         else:
-            cmd = [op.join(BASE_PATH, 'MBINCompiler.exe'), '-q', '-y']
+            mbincompiler_path = op.join(BASE_PATH, 'MBINCompiler.exe')
+
+    if not op.exists(mbincompiler_path):
+        pytest.fail(f"MBINCompiler can't be found at the following path: {mbincompiler_path}", False)
+
+    if platform == 'linux-x64':
+        # need to run with mono on linux
+        # Build path also includes platform on the CI
+        cmd = ['sudo', 'mono', mbincompiler_path, '-q', '-y']
+    else:
+        cmd = [mbincompiler_path, '-q', '-y']
     cmd.append('--force')
 
     datapath = os.environ.get('datapath', DATA_PATH)
