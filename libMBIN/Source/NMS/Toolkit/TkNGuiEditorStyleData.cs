@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x682C55F8735E2E0, NameHash = 0xE9E49954)]
+    [NMS(GUID = 0x8B98ACD48ED3F63D, NameHash = 0xE9E49954)]
     public class TkNGuiEditorStyleData : NMSTemplate
     {
         [NMS(Index = 1, Size = 0x8, MxmlName = "Skin Colours")]

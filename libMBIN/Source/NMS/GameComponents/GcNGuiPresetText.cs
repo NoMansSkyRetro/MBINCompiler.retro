@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x544F3140C4DCC462, NameHash = 0x1D0BA017)]
+    [NMS(GUID = 0xBAF0598C0AEC376B, NameHash = 0x1D0BA017)]
     public class GcNGuiPresetText : NMSTemplate
     {
         [NMS(Index = 1)]

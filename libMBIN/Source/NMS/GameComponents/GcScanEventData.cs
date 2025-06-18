@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x77A3EC2B11A2AF00, NameHash = 0x37EE71BB)]
+    [NMS(GUID = 0xEBF479D0B5DFB242, NameHash = 0x37EE71BB)]
     public class GcScanEventData : NMSTemplate
     {
         [NMS(Index = 42)]
@@ -107,7 +107,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x334 */ public GcAlienRace OverrideInteractionRace;
         [NMS(Index = 5)]
         /* 0x338 */ public GcAlienRace RequireInteractionRace;
-        // size: 0x1A
+        // size: 0x1B
         public enum SearchTypeEnum : uint {
             Any,
             AnyShelter,
@@ -135,6 +135,7 @@ namespace libMBIN.NMS.GameComponents
             FriendlyDrone,
             AnyRobotSite,
             UnownedSettlement_Builders,
+            OwnedSettlementHub,
         }
         [NMS(Index = 33)]
         /* 0x33C */ public SearchTypeEnum SearchType;
