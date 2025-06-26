@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3CB81B072767776A, NameHash = 0x3514EB26)]
+    [NMS(GUID = 0xEC7BF86DB52CD000, NameHash = 0x3514EB26)]
     public class GcSettlementJudgementOption : NMSTemplate
     {
         [NMS(Index = 0)]
@@ -18,17 +18,25 @@ namespace libMBIN.NMS.GameComponents
         /* 0x50 */ public List<GcSettlementJudgementPerkOption> Perks;
         [NMS(Index = 4)]
         /* 0x60 */ public List<GcSettlementStatChange> StatChanges;
-        [NMS(Index = 3)]
-        /* 0x70 */ public bool HidePerkInJudgement;
+        // size: 0x3
+        public enum JudgementOptionStandingEnum : uint {
+            None,
+            Positive,
+            Negative,
+        }
         [NMS(Index = 11)]
-        /* 0x71 */ public bool OptionIsPositiveForNPC;
+        /* 0x70 */ public JudgementOptionStandingEnum JudgementOptionStanding;
+        [NMS(Index = 3)]
+        /* 0x74 */ public bool HidePerkInJudgement;
+        [NMS(Index = 12)]
+        /* 0x75 */ public bool OptionIsPositiveForNPC;
         [NMS(Index = 9)]
-        /* 0x72 */ public bool UseGiftReward;
+        /* 0x76 */ public bool UseGiftReward;
         [NMS(Index = 7)]
-        /* 0x73 */ public bool UsePolicyPerk;
+        /* 0x77 */ public bool UsePolicyPerk;
         [NMS(Index = 8)]
-        /* 0x74 */ public bool UsePolicyStat;
+        /* 0x78 */ public bool UsePolicyStat;
         [NMS(Index = 10)]
-        /* 0x75 */ public bool UseTechPerk;
+        /* 0x79 */ public bool UseTechPerk;
     }
 }
