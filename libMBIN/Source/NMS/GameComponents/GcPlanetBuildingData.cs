@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB9399C08D325A00E, NameHash = 0xF086FF97)]
+    [NMS(GUID = 0xBE572A6B5BD62925, NameHash = 0xF086FF97)]
     public class GcPlanetBuildingData : NMSTemplate
     {
         [NMS(Index = 1)]
@@ -12,21 +12,23 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public List<GcBuildingSpawnSlot> BuildingSlots;
         [NMS(Index = 2)]
         /* 0x20 */ public List<GcBuildingOverrideData> OverrideBuildings;
+        [NMS(Index = 11)]
+        /* 0x30 */ public ulong PlanetUA;
         [NMS(Index = 4)]
-        /* 0x30 */ public float PlanetRadius;
+        /* 0x38 */ public float PlanetRadius;
         [NMS(Index = 3)]
-        /* 0x34 */ public float Spacing;
+        /* 0x3C */ public float Spacing;
         [NMS(Index = 5)]
-        /* 0x38 */ public float VoronoiPointDivisions;
+        /* 0x40 */ public float VoronoiPointDivisions;
         [NMS(Index = 7)]
-        /* 0x3C */ public int VoronoiPointSeed;
+        /* 0x44 */ public int VoronoiPointSeed;
         [NMS(Index = 6)]
-        /* 0x40 */ public int VoronoiSectorSeed;
+        /* 0x48 */ public int VoronoiSectorSeed;
         [NMS(Index = 8)]
-        /* 0x44 */ public bool InitialBuildingsPlaced;
+        /* 0x4C */ public bool InitialBuildingsPlaced;
         [NMS(Index = 9)]
-        /* 0x45 */ public bool IsPrime;
+        /* 0x4D */ public bool IsPrime;
         [NMS(Index = 10)]
-        /* 0x46 */ public bool IsWaterworld;
+        /* 0x4E */ public bool IsWaterworld;
     }
 }
