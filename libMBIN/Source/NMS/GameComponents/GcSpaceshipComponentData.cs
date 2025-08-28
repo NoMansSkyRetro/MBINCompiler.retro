@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x171AD988EEB32CAC, NameHash = 0x4600F6B4)]
+    [NMS(GUID = 0xF0AE85EDC9346A96, NameHash = 0x4600F6B4)]
     public class GcSpaceshipComponentData : NMSTemplate
     {
         [NMS(Index = 7)]
@@ -22,7 +22,5 @@ namespace libMBIN.NMS.GameComponents
         /* 0xD0 */ public float MaxHeadPitchUp;
         [NMS(Index = 2)]
         /* 0xD4 */ public float MaxHeadTurn;
-        [NMS(Index = 8)]
-        /* 0xD8 */ public bool Buildable;
     }
 }

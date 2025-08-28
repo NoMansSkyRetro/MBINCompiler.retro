@@ -2,14 +2,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x240ED5E880222DC5, NameHash = 0xEE9DB27A)]
+    [NMS(GUID = 0x3904666C1D319232, NameHash = 0xEE9DB27A)]
     public class GcModBasePart : NMSTemplate
     {
         [NMS(Index = 1)]
         /* 0x000 */ public GcProductData ProductData;
         [NMS(Index = 2)]
-        /* 0x2E0 */ public GcBaseBuildingEntry PartData;
+        /* 0x300 */ public GcBaseBuildingEntry PartData;
         [NMS(Index = 0)]
-        /* 0x510 */ public NMSString0x40 ID;
+        /* 0x540 */ public NMSString0x40 ID;
     }
 }

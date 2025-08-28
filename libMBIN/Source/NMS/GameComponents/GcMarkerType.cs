@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDFD05019681C272A, NameHash = 0xE51499F8)]
+    [NMS(GUID = 0x3BFCDEEA61A35AD7, NameHash = 0xE51499F8)]
     public class GcMarkerType : NMSTemplate
     {
-        // size: 0x45
-        public enum MarkerTypeEnum : uint {
+        // size: 0x49
+        public enum MarkerTypeEnum : byte {
             Default,
             PlanetPoleNorth,
             PlanetPoleSouth,
@@ -17,6 +17,7 @@ namespace libMBIN.NMS.GameComponents
             TaggedPlanet,
             Unknown,
             Ship,
+            Corvette,
             Freighter,
             NetworkPlayerFireTeamFreighter,
             FreighterBase,
@@ -74,6 +75,9 @@ namespace libMBIN.NMS.GameComponents
             ShipExperienceSpawn,
             FriendlyDrone,
             ImportantNPC,
+            CorvetteAutopilotDestination,
+            CorvetteDeployedTeleporter,
+            CorvettePadLink,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public MarkerTypeEnum MarkerType;

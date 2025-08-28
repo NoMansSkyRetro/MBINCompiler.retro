@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD87AF8D04541C3B5, NameHash = 0xDA4AB69C)]
+    [NMS(GUID = 0x7555A2E1A7617D76, NameHash = 0xDA4AB69C)]
     public class GcPlanetTerrainColour : NMSTemplate
     {
         [NMS(Index = 0)]

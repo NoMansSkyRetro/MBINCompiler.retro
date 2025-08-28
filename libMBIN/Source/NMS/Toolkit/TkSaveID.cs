@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x4A31FD6DEDC4AC7F, NameHash = 0x11AE9CD)]
+    [NMS(GUID = 0x65409E48A5CEE0CA, NameHash = 0x11AE9CD)]
     public class TkSaveID : NMSTemplate
     {
         [NMS(Index = 0)]

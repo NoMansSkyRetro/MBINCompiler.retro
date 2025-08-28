@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x180AC14A039B187E, NameHash = 0xD4D0EA68)]
+    [NMS(GUID = 0x5D00249DF1376C41, NameHash = 0xD4D0EA68)]
     public class TkWaterData : NMSTemplate
     {
         [NMS(Index = 1, Size = 0xF, EnumType = typeof(TkWaterCondition.WaterConditionEnum))]

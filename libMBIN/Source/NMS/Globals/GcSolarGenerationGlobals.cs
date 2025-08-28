@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xA77439420322066, NameHash = 0x557E3282)]
+    [NMS(GUID = 0x3F60C6AB9A2DD741, NameHash = 0x557E3282)]
     public class GcSolarGenerationGlobals : NMSTemplate
     {
         [NMS(Index = 68)]

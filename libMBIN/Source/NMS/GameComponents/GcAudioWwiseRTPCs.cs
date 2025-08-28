@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x996E959946E094C0, NameHash = 0xA7A8D1DB)]
+    [NMS(GUID = 0x96D9454DA3E2F540, NameHash = 0xA7A8D1DB)]
     public class GcAudioWwiseRTPCs : NMSTemplate
     {
-        // size: 0x66
+        // size: 0x67
         public enum AkRTPCEnum : uint {
             INVALID_RTPC = 0x0,
             BASE_BATTERY_CHARGING = 0x7C13B3BA,
@@ -87,6 +87,7 @@ namespace libMBIN.NMS.GameComponents
             SENTINEL_DETECTOR = 0x8157313E,
             SETTLEMENT_DISTANCE = 0x4B8316B2,
             SETTLEMENT_INTENSITY = 0x11CAF8FA,
+            SHIP_BUILDABLE_SIZE = 0x74118A72,
             SHIP_WATER_LANDING = 0x1315AFAF,
             SHORELINE = 0x1A1A962,
             SHUTTLE_THRUST = 0x51D5A621,

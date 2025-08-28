@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCD89FEF8D4A80AE8, NameHash = 0x514AD10F)]
+    [NMS(GUID = 0xE20D488A443AC282, NameHash = 0x514AD10F)]
     public class GcStatsTypes : NMSTemplate
     {
-        // size: 0xCB
+        // size: 0xCE
         public enum StatsTypeEnum : uint {
             Unspecified,
             Weapon_Laser,
@@ -167,6 +167,9 @@ namespace libMBIN.NMS.GameComponents
             Ship_BoostManeuverability,
             Ship_LifeSupport,
             Ship_Drift,
+            Ship_Inventory,
+            Ship_Tech_Slots,
+            Ship_Cargo_Slots,
             Ship_Teleport,
             Ship_CargoShield,
             Ship_WaterLandingJet,

@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xA60B0B1867B8D4F4, NameHash = 0xF584C2AF)]
+    [NMS(GUID = 0xEC8106E627E57657, NameHash = 0xF584C2AF)]
     public class TkMeshWaterQualitySettings : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]

@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6B703E65133AA860, NameHash = 0xB4F01F64)]
+    [NMS(GUID = 0x9EED5A450512E5CC, NameHash = 0xB4F01F64)]
     public class GcPlayerCharacterStateType : NMSTemplate
     {
-        // size: 0x13
+        // size: 0x14
         public enum CharacterStateEnum : uint {
             Idle,
             Jog,
@@ -20,7 +20,8 @@ namespace libMBIN.NMS.GameComponents
             SwimmingJetpack,
             Death,
             FullBodyOverride,
-            InSpace,
+            Spacewalk,
+            SpacewalkAtmosphere,
             LowGWalk,
             LowGRun,
             Fishing,

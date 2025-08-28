@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x93CD5ECB1BFDF0BA, NameHash = 0x1CF33F48)]
+    [NMS(GUID = 0xB7598875DBA786B7, NameHash = 0x1CF33F48)]
     public class TkAudioComponentData : NMSTemplate
     {
         [NMS(Index = 1)]

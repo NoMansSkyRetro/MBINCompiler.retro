@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x3D9E72845056C24D, NameHash = 0x903BF7DD)]
+    [NMS(GUID = 0x31A0D98362246A50, NameHash = 0x903BF7DD)]
     public class TkNGuiTextStyleData : NMSTemplate
     {
         [NMS(Index = 5, MxmlName = "Drop Shadow Angle")]
@@ -27,19 +27,19 @@ namespace libMBIN.NMS.Toolkit
         /* 0x24 */ public TkNGuiAlignment Align;
         [NMS(Index = 14, MxmlName = "Allow Scroll")]
         /* 0x26 */ public bool AllowScroll;
-        [NMS(Index = 17, MxmlName = "Auto Adjust Font Height")]
+        [NMS(Index = 18, MxmlName = "Auto Adjust Font Height")]
         /* 0x27 */ public bool AutoAdjustFontHeight;
-        [NMS(Index = 16, MxmlName = "Auto Adjust Height")]
+        [NMS(Index = 17, MxmlName = "Auto Adjust Height")]
         /* 0x28 */ public bool AutoAdjustHeight;
-        [NMS(Index = 18, MxmlName = "Block Audio")]
+        [NMS(Index = 19, MxmlName = "Block Audio")]
         /* 0x29 */ public bool BlockAudio;
-        [NMS(Index = 19, MxmlName = "Bypass Style Colours")]
+        [NMS(Index = 20, MxmlName = "Bypass Style Colours")]
         /* 0x2A */ public bool BypassStyleColours;
-        [NMS(Index = 20, MxmlName = "Bypass Style Font")]
+        [NMS(Index = 21, MxmlName = "Bypass Style Font")]
         /* 0x2B */ public bool BypassStyleFont;
-        [NMS(Index = 21, MxmlName = "Bypass Style Font Height")]
+        [NMS(Index = 22, MxmlName = "Bypass Style Font Height")]
         /* 0x2C */ public bool BypassStyleFontHeight;
-        [NMS(Index = 15, MxmlName = "Force Upper Case")]
+        [NMS(Index = 16, MxmlName = "Force Upper Case")]
         /* 0x2D */ public bool ForceUpperCase;
         [NMS(Index = 11, MxmlName = "Has Drop Shadow")]
         /* 0x2E */ public bool HasDropShadow;
@@ -49,5 +49,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x30 */ public bool IsIndented;
         [NMS(Index = 13, MxmlName = "Is Paragraph")]
         /* 0x31 */ public bool IsParagraph;
+        [NMS(Index = 15, MxmlName = "Scroll On Hover")]
+        /* 0x32 */ public bool ScrollOnHover;
     }
 }

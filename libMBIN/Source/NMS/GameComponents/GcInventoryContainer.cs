@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x42F87119795D1877, NameHash = 0xA98CD11F)]
+    [NMS(GUID = 0x2129C9C70217322, NameHash = 0xA98CD11F)]
     public class GcInventoryContainer : NMSTemplate
     {
         [NMS(Index = 4)]
@@ -18,15 +18,17 @@ namespace libMBIN.NMS.GameComponents
         /* 0x040 */ public GcInventoryClass Class;
         [NMS(Index = 7)]
         /* 0x044 */ public int Height;
+        [NMS(Index = 11)]
+        /* 0x048 */ public int NumSlotsFromTech;
         [NMS(Index = 3)]
-        /* 0x048 */ public GcInventoryStackSizeGroup StackSizeGroup;
+        /* 0x04C */ public GcInventoryStackSizeGroup StackSizeGroup;
         [NMS(Index = 10)]
-        /* 0x04C */ public int Version;
+        /* 0x050 */ public int Version;
         [NMS(Index = 6)]
-        /* 0x050 */ public int Width;
+        /* 0x054 */ public int Width;
         [NMS(Index = 9)]
-        /* 0x054 */ public NMSString0x100 Name;
+        /* 0x058 */ public NMSString0x100 Name;
         [NMS(Index = 8)]
-        /* 0x154 */ public bool IsCool;
+        /* 0x158 */ public bool IsCool;
     }
 }

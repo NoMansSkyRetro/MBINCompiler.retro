@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4FAF700AABEDE88, NameHash = 0xF2AF28FE)]
+    [NMS(GUID = 0x7E4C2C2BE3DCB232, NameHash = 0xF2AF28FE)]
     public class GcPhotoModeAdjustData : NMSTemplate
     {
         [NMS(Index = 2)]

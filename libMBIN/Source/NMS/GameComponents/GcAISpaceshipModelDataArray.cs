@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCEDB8C3AD9A872F2, NameHash = 0x241CDC95)]
+    [NMS(GUID = 0xA96117AF033FCEBE, NameHash = 0x241CDC95)]
     public class GcAISpaceshipModelDataArray : NMSTemplate
     {
         [NMS(Index = 0)]

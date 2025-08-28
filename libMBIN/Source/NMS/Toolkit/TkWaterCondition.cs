@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xDB781EC82CEC6A65, NameHash = 0x3C58F148)]
+    [NMS(GUID = 0x7CE6EC257BFEF9D7, NameHash = 0x3C58F148)]
     public class TkWaterCondition : NMSTemplate
     {
         // size: 0xF

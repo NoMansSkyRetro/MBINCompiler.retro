@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x8B98ACD48ED3F63D, NameHash = 0xE9E49954)]
+    [NMS(GUID = 0xC86AC685EC0CB8D5, NameHash = 0xE9E49954)]
     public class TkNGuiEditorStyleData : NMSTemplate
     {
         [NMS(Index = 1, Size = 0x8, MxmlName = "Skin Colours")]
@@ -17,10 +17,10 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 4, Size = 0x5F, EnumType = typeof(TkNGuiEditorGraphicType.NGuiEditorGraphicEnum))]
         /* 0x04B0 */ public TkNGuiGraphicStyle[] GraphicStyles;
         [NMS(Index = 5, Size = 0xF, EnumType = typeof(TKNGuiEditorTextType.NGuiEditorTextEnum))]
-        /* 0x9330 */ public TkNGuiTextStyle[] TextStyles;
+        /* 0x6F90 */ public TkNGuiTextStyle[] TextStyles;
         [NMS(Index = 0, Size = 0x41, EnumType = typeof(TKNGuiEditorComponentSize.NGuiEditorComponentSizeEnum))]
-        /* 0x9C54 */ public float[] Sizes;
+        /* 0x78B4 */ public float[] Sizes;
         [NMS(Index = 2, MxmlName = "Skin Font Height")]
-        /* 0x9D58 */ public float SkinFontHeight;
+        /* 0x79B8 */ public float SkinFontHeight;
     }
 }

@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x76DB8A1128947274, NameHash = 0x4DB7C299)]
+    [NMS(GUID = 0xB4ECED34D2B78698, NameHash = 0x4DB7C299)]
     public class TkNavMeshInclusionType : NMSTemplate
     {
         // size: 0x4
-        public enum NavMeshInclusionTypeEnum : uint {
+        public enum NavMeshInclusionTypeEnum : byte {
             Auto,
             Ignore,
             Obstacle,

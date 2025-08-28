@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x8AB07255D69F3820, NameHash = 0xFE434BF3)]
+    [NMS(GUID = 0x58A3F8D88C8AF0DD, NameHash = 0xFE434BF3)]
     public class TkEmitterFloatProperty : NMSTemplate
     {
         [NMS(Index = 11)]

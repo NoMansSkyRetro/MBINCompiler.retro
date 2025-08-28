@@ -5,34 +5,34 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEAB2C7B5904FD144, NameHash = 0x6C799781)]
+    [NMS(GUID = 0x1BB0CCAC0A54D76A, NameHash = 0x6C799781)]
     public class GcUserSettingsData : NMSTemplate
     {
-        [NMS(Index = 32)]
-        /* 0x0000 */ public List<NMSString0x10> SeenProducts;
-        [NMS(Index = 30)]
-        /* 0x0010 */ public List<NMSString0x10> SeenSubstances;
-        [NMS(Index = 31)]
-        /* 0x0020 */ public List<NMSString0x10> SeenTechnologies;
         [NMS(Index = 33)]
-        /* 0x0030 */ public List<NMSString0x20A> SeenWikiTopics;
-        [NMS(Index = 39)]
-        /* 0x0040 */ public List<NMSString0x10> UnlockedPlatformRewards;
-        [NMS(Index = 37)]
-        /* 0x0050 */ public List<NMSString0x10> UnlockedSeasonRewards;
-        [NMS(Index = 36)]
-        /* 0x0060 */ public List<NMSString0x10> UnlockedSpecials;
-        [NMS(Index = 35)]
-        /* 0x0070 */ public List<NMSString0x10> UnlockedTitles;
-        [NMS(Index = 38)]
-        /* 0x0080 */ public List<NMSString0x10> UnlockedTwitchRewards;
+        /* 0x0000 */ public List<NMSString0x10> SeenProducts;
+        [NMS(Index = 31)]
+        /* 0x0010 */ public List<NMSString0x10> SeenSubstances;
+        [NMS(Index = 32)]
+        /* 0x0020 */ public List<NMSString0x10> SeenTechnologies;
         [NMS(Index = 34)]
+        /* 0x0030 */ public List<NMSString0x20A> SeenWikiTopics;
+        [NMS(Index = 40)]
+        /* 0x0040 */ public List<NMSString0x10> UnlockedPlatformRewards;
+        [NMS(Index = 38)]
+        /* 0x0050 */ public List<NMSString0x10> UnlockedSeasonRewards;
+        [NMS(Index = 37)]
+        /* 0x0060 */ public List<NMSString0x10> UnlockedSpecials;
+        [NMS(Index = 36)]
+        /* 0x0070 */ public List<NMSString0x10> UnlockedTitles;
+        [NMS(Index = 39)]
+        /* 0x0080 */ public List<NMSString0x10> UnlockedTwitchRewards;
+        [NMS(Index = 35)]
         /* 0x0090 */ public List<NMSString0x20A> UnlockedWikiTopics;
-        [NMS(Index = 80)]
+        [NMS(Index = 81)]
         /* 0x00A0 */ public List<NMSString0x80> UpgradedUsers;
         [NMS(Index = 19)]
         /* 0x00B0 */ public GcBlockListPersistence BlockList;
-        [NMS(Index = 89)]
+        [NMS(Index = 90)]
         /* 0x3900 */ public GcGyroSettingsData GyroSettings;
         // size: 0x3
         public enum BaseSharingModeEnum : uint {
@@ -40,62 +40,63 @@ namespace libMBIN.NMS.GameComponents
             On,
             Off,
         }
-        [NMS(Index = 29)]
+        [NMS(Index = 30)]
         /* 0x3974 */ public BaseSharingModeEnum BaseSharingMode;
-        [NMS(Index = 77)]
+        [NMS(Index = 78)]
         /* 0x3978 */ public int CamerShakeStrength;
         // size: 0x2
         public enum ConsoleHFREnum : uint {
             False,
             True,
         }
-        [NMS(Index = 28)]
+        [NMS(Index = 29)]
         /* 0x397C */ public ConsoleHFREnum ConsoleHFR;
-        [NMS(Index = 64)]
+        [NMS(Index = 65)]
         /* 0x3980 */ public float CrossSavesUploadTimeout;
         [NMS(Index = 16)]
         /* 0x3984 */ public int CursorSensitivityMode1;
         [NMS(Index = 17)]
         /* 0x3988 */ public int CursorSensitivityMode2;
-        [NMS(Index = 92)]
+        [NMS(Index = 93)]
         /* 0x398C */ public GcHand DominantHand;
-        // size: 0x3
+        // size: 0x4
         [Flags]
         public enum EyeTrackingFlagsEnum : uint {
-            None,
-            BaseBuilding,
-            WristMenus,
+            None = 0x0,
+            BaseBuilding = 0x1,
+            WristMenus = 0x2,
+            Menus = 0x4,
         }
-        [NMS(Index = 87)]
+        [NMS(Index = 88)]
         /* 0x3990 */ public EyeTrackingFlagsEnum EyeTrackingFlags;
         [NMS(Index = 21)]
         /* 0x3994 */ public int Filter;
-        [NMS(Index = 74)]
+        [NMS(Index = 75)]
         /* 0x3998 */ public int FireteamSessionCount;
         [NMS(Index = 14)]
         /* 0x399C */ public int FlightSensitivityMode1;
         [NMS(Index = 15)]
         /* 0x39A0 */ public int FlightSensitivityMode2;
-        [NMS(Index = 61)]
+        [NMS(Index = 62)]
         /* 0x39A4 */ public float FrontendZoom;
-        [NMS(Index = 93)]
+        [NMS(Index = 94)]
         /* 0x39A8 */ public float HazardEffectsStrength;
-        [NMS(Index = 75)]
+        [NMS(Index = 76)]
         /* 0x39AC */ public int HeadsetVibrationStrength;
         // size: 0x2
         public enum HighResVRUIEnum : uint {
             High,
             Low,
         }
-        [NMS(Index = 96)]
+        [NMS(Index = 98)]
         /* 0x39B0 */ public HighResVRUIEnum HighResVRUI;
-        [NMS(Index = 60)]
+        [NMS(Index = 61)]
         /* 0x39B4 */ public float HUDZoom;
-        [NMS(Index = 90)]
+        [NMS(Index = 91)]
         /* 0x39B8 */ public TkLanguages Language;
-        [NMS(Index = 50)]
-        /* 0x39BC */ public int LastSeenCommunityMission;
         [NMS(Index = 51)]
+        /* 0x39BC */ public int LastSeenCommunityMission;
+        [NMS(Index = 52)]
         /* 0x39C0 */ public int LastSeenCommunityMissionTier;
         [NMS(Index = 12)]
         /* 0x39C4 */ public int LookSensitivityMode1;
@@ -105,20 +106,20 @@ namespace libMBIN.NMS.GameComponents
         /* 0x39CC */ public int MotionBlurAmount;
         [NMS(Index = 18)]
         /* 0x39D0 */ public int MouseSpringSmoothing;
-        [NMS(Index = 54)]
+        [NMS(Index = 55)]
         /* 0x39D4 */ public GcMovementDirection MovementDirectionHands;
-        [NMS(Index = 53)]
+        [NMS(Index = 54)]
         /* 0x39D8 */ public GcMovementDirection MovementDirectionPad;
         // size: 0x2
         public enum MovementModeEnum : uint {
             Teleporter,
             Smooth,
         }
-        [NMS(Index = 52)]
+        [NMS(Index = 53)]
         /* 0x39DC */ public MovementModeEnum MovementMode;
         [NMS(Index = 7)]
         /* 0x39E0 */ public int MusicVolume;
-        [NMS(Index = 97)]
+        [NMS(Index = 99)]
         /* 0x39E4 */ public float PlayerHUDVROffset;
         // size: 0x4
         public enum PlayerVoiceEnum : uint {
@@ -146,7 +147,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x39F8 */ public int ScreenBrightness;
         [NMS(Index = 8)]
         /* 0x39FC */ public int SfxVolume;
-        [NMS(Index = 98)]
+        [NMS(Index = 100)]
         /* 0x3A00 */ public float ShipHUDVROffset;
         // size: 0x3
         public enum SpaceCombatFollowModeEnum : uint {
@@ -154,7 +155,7 @@ namespace libMBIN.NMS.GameComponents
             Hold,
             Toggle,
         }
-        [NMS(Index = 79)]
+        [NMS(Index = 80)]
         /* 0x3A04 */ public SpaceCombatFollowModeEnum SpaceCombatFollowMode;
         // size: 0x3
         public enum SuitVoiceEnum : uint {
@@ -171,16 +172,16 @@ namespace libMBIN.NMS.GameComponents
             F,
             K,
         }
-        [NMS(Index = 48)]
+        [NMS(Index = 49)]
         /* 0x3A0C */ public TemperatureUnitEnum TemperatureUnit;
-        [NMS(Index = 78)]
+        [NMS(Index = 79)]
         /* 0x3A10 */ public int TriggerFeedbackStrength;
         // size: 0x2
         public enum TurnModeEnum : uint {
             Smooth,
             Snap,
         }
-        [NMS(Index = 57)]
+        [NMS(Index = 58)]
         /* 0x3A14 */ public TurnModeEnum TurnMode;
         // size: 0x4
         public enum UIColourSchemeEnum : uint {
@@ -189,101 +190,105 @@ namespace libMBIN.NMS.GameComponents
             Deuteranopia,
             Tritanopia,
         }
-        [NMS(Index = 66)]
-        /* 0x3A18 */ public UIColourSchemeEnum UIColourScheme;
-        [NMS(Index = 76)]
-        /* 0x3A1C */ public int VibrationStrength;
-        [NMS(Index = 9)]
-        /* 0x3A20 */ public int VoiceVolume;
-        [NMS(Index = 58)]
-        /* 0x3A24 */ public float VRVignetteStrength;
-        [NMS(Index = 82)]
-        /* 0x3A28 */ public bool AccessibleText;
-        [NMS(Index = 81)]
-        /* 0x3A29 */ public bool AllowWhiteScreenTransitions;
-        [NMS(Index = 91)]
-        /* 0x3A2A */ public bool AutoRotateThirdPersonPlayerCamera;
-        [NMS(Index = 83)]
-        /* 0x3A2B */ public bool AutoScanDiscoveries;
-        [NMS(Index = 56)]
-        /* 0x3A2C */ public bool BaseBuildingShowOptionsFromVision;
-        [NMS(Index = 72)]
-        /* 0x3A2D */ public bool BaseComplexityLimitsEnabled;
-        [NMS(Index = 46)]
-        /* 0x3A2E */ public bool CrossPlatform;
-        [NMS(Index = 47)]
-        /* 0x3A2F */ public bool CrossSaves;
-        [NMS(Index = 63)]
-        /* 0x3A30 */ public bool CrossSavesAutoUploads;
-        [NMS(Index = 65)]
-        /* 0x3A31 */ public bool CrossSavesSuppressAutoUploadTimeoutPopup;
-        [NMS(Index = 22)]
-        /* 0x3A32 */ public bool DamageNumbers;
-        [NMS(Index = 55)]
-        /* 0x3A33 */ public bool EnableControllerCursorInVR;
-        [NMS(Index = 73)]
-        /* 0x3A34 */ public bool EnableLargeLobbies;
         [NMS(Index = 67)]
-        /* 0x3A35 */ public bool EnableModdingConsole;
-        [NMS(Index = 68)]
-        /* 0x3A36 */ public bool HeadBob;
-        [NMS(Index = 99)]
-        /* 0x3A37 */ public bool HighlightInteractableObjects;
-        [NMS(Index = 4)]
-        /* 0x3A38 */ public bool HUDHidden;
-        [NMS(Index = 86)]
-        /* 0x3A39 */ public bool IncreaseMissionTextContrast;
-        [NMS(Index = 43)]
-        /* 0x3A3A */ public bool InstantUIDelete;
-        [NMS(Index = 42)]
-        /* 0x3A3B */ public bool InstantUIInputs;
-        [NMS(Index = 1)]
-        /* 0x3A3C */ public bool InvertFlightControls;
-        [NMS(Index = 0)]
-        /* 0x3A3D */ public bool InvertLookControls;
-        [NMS(Index = 2)]
-        /* 0x3A3E */ public bool InvertVRInWorldFlightControls;
-        [NMS(Index = 88)]
-        /* 0x3A3F */ public bool MoveableWristMenus;
-        [NMS(Index = 41)]
-        /* 0x3A40 */ public bool Multiplayer;
-        [NMS(Index = 85)]
-        /* 0x3A41 */ public bool PlaceJumpSwap;
-        [NMS(Index = 27)]
-        /* 0x3A42 */ public bool PS4VignetteAndScanlines;
+        /* 0x3A18 */ public UIColourSchemeEnum UIColourScheme;
         [NMS(Index = 95)]
-        /* 0x3A43 */ public bool QuickMenuBuildMenuSwap;
-        [NMS(Index = 44)]
-        /* 0x3A44 */ public bool SpeechToText;
-        [NMS(Index = 94)]
-        /* 0x3A45 */ public bool SpookHazardSkySpin;
-        [NMS(Index = 84)]
-        /* 0x3A46 */ public bool SprintScanSwap;
-        [NMS(Index = 45)]
-        /* 0x3A47 */ public bool Translate;
-        [NMS(Index = 62)]
-        /* 0x3A48 */ public bool UseAutoTorch;
-        [NMS(Index = 71)]
-        /* 0x3A49 */ public bool UseCharacterHeightForCamera;
-        [NMS(Index = 49)]
-        /* 0x3A4A */ public bool UseOldMouseFlight;
+        /* 0x3A1C */ public float UnderwaterDepthOfFieldStrength;
+        [NMS(Index = 77)]
+        /* 0x3A20 */ public int VibrationStrength;
+        [NMS(Index = 9)]
+        /* 0x3A24 */ public int VoiceVolume;
         [NMS(Index = 59)]
-        /* 0x3A4B */ public bool UseShipAutoControlVignette;
-        [NMS(Index = 5)]
-        /* 0x3A4C */ public bool Vibration;
-        [NMS(Index = 40)]
-        /* 0x3A4D */ public bool VoiceChat;
-        [NMS(Index = 101)]
-        /* 0x3A4E */ public bool VRHandControllerEnableTwist;
-        [NMS(Index = 100)]
-        /* 0x3A4F */ public bool VRHandControllerSwapYawAndRoll;
+        /* 0x3A28 */ public float VRVignetteStrength;
+        [NMS(Index = 83)]
+        /* 0x3A2C */ public bool AccessibleText;
+        [NMS(Index = 82)]
+        /* 0x3A2D */ public bool AllowWhiteScreenTransitions;
+        [NMS(Index = 92)]
+        /* 0x3A2E */ public bool AutoRotateThirdPersonPlayerCamera;
+        [NMS(Index = 84)]
+        /* 0x3A2F */ public bool AutoScanDiscoveries;
+        [NMS(Index = 57)]
+        /* 0x3A30 */ public bool BaseBuildingShowOptionsFromVision;
+        [NMS(Index = 73)]
+        /* 0x3A31 */ public bool BaseComplexityLimitsEnabled;
+        [NMS(Index = 47)]
+        /* 0x3A32 */ public bool CrossPlatform;
+        [NMS(Index = 48)]
+        /* 0x3A33 */ public bool CrossSaves;
+        [NMS(Index = 64)]
+        /* 0x3A34 */ public bool CrossSavesAutoUploads;
+        [NMS(Index = 66)]
+        /* 0x3A35 */ public bool CrossSavesSuppressAutoUploadTimeoutPopup;
+        [NMS(Index = 22)]
+        /* 0x3A36 */ public bool DamageNumbers;
+        [NMS(Index = 56)]
+        /* 0x3A37 */ public bool EnableControllerCursorInVR;
+        [NMS(Index = 74)]
+        /* 0x3A38 */ public bool EnableLargeLobbies;
+        [NMS(Index = 68)]
+        /* 0x3A39 */ public bool EnableModdingConsole;
         [NMS(Index = 69)]
-        /* 0x3A50 */ public bool VRHeadBob;
+        /* 0x3A3A */ public bool HeadBob;
+        [NMS(Index = 101)]
+        /* 0x3A3B */ public bool HighlightInteractableObjects;
+        [NMS(Index = 4)]
+        /* 0x3A3C */ public bool HUDHidden;
+        [NMS(Index = 87)]
+        /* 0x3A3D */ public bool IncreaseMissionTextContrast;
+        [NMS(Index = 44)]
+        /* 0x3A3E */ public bool InstantUIDelete;
+        [NMS(Index = 43)]
+        /* 0x3A3F */ public bool InstantUIInputs;
+        [NMS(Index = 1)]
+        /* 0x3A40 */ public bool InvertFlightControls;
+        [NMS(Index = 0)]
+        /* 0x3A41 */ public bool InvertLookControls;
+        [NMS(Index = 2)]
+        /* 0x3A42 */ public bool InvertVRInWorldFlightControls;
+        [NMS(Index = 89)]
+        /* 0x3A43 */ public bool MoveableWristMenus;
+        [NMS(Index = 42)]
+        /* 0x3A44 */ public bool Multiplayer;
+        [NMS(Index = 86)]
+        /* 0x3A45 */ public bool PlaceJumpSwap;
+        [NMS(Index = 28)]
+        /* 0x3A46 */ public bool PS4VignetteAndScanlines;
+        [NMS(Index = 27)]
+        /* 0x3A47 */ public bool PS5ProVRPSSR;
+        [NMS(Index = 97)]
+        /* 0x3A48 */ public bool QuickMenuBuildMenuSwap;
+        [NMS(Index = 45)]
+        /* 0x3A49 */ public bool SpeechToText;
+        [NMS(Index = 96)]
+        /* 0x3A4A */ public bool SpookHazardSkySpin;
+        [NMS(Index = 85)]
+        /* 0x3A4B */ public bool SprintScanSwap;
+        [NMS(Index = 46)]
+        /* 0x3A4C */ public bool Translate;
+        [NMS(Index = 63)]
+        /* 0x3A4D */ public bool UseAutoTorch;
+        [NMS(Index = 72)]
+        /* 0x3A4E */ public bool UseCharacterHeightForCamera;
+        [NMS(Index = 50)]
+        /* 0x3A4F */ public bool UseOldMouseFlight;
+        [NMS(Index = 60)]
+        /* 0x3A50 */ public bool UseShipAutoControlVignette;
+        [NMS(Index = 5)]
+        /* 0x3A51 */ public bool Vibration;
+        [NMS(Index = 41)]
+        /* 0x3A52 */ public bool VoiceChat;
+        [NMS(Index = 103)]
+        /* 0x3A53 */ public bool VRHandControllerEnableTwist;
+        [NMS(Index = 102)]
+        /* 0x3A54 */ public bool VRHandControllerSwapYawAndRoll;
         [NMS(Index = 70)]
-        /* 0x3A51 */ public bool VRShowBody;
+        /* 0x3A55 */ public bool VRHeadBob;
+        [NMS(Index = 71)]
+        /* 0x3A56 */ public bool VRShowBody;
         [NMS(Index = 3)]
-        /* 0x3A52 */ public bool VRVehiclesUseWorldControls;
+        /* 0x3A57 */ public bool VRVehiclesUseWorldControls;
         [NMS(Index = 26)]
-        /* 0x3A53 */ public bool XboxOneXHighResolutionMode;
+        /* 0x3A58 */ public bool XboxOneXHighResolutionMode;
     }
 }

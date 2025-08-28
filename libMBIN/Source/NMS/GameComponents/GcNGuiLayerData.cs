@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA06FCC79368A22F4, NameHash = 0xA151C99F)]
+    [NMS(GUID = 0x2C801571042C3319, NameHash = 0xA151C99F)]
     public class GcNGuiLayerData : NMSTemplate
     {
         [NMS(Index = 0, MxmlName = "Element Data")]
@@ -26,6 +26,6 @@ namespace libMBIN.NMS.GameComponents
             OnlyOnTouch,
         }
         [NMS(Index = 5)]
-        /* 0x218 */ public AltModeEnum AltMode;
+        /* 0x1B8 */ public AltModeEnum AltMode;
     }
 }

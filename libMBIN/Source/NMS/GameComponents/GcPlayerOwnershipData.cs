@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB91EAFC7BB99A886, NameHash = 0x40268557)]
+    [NMS(GUID = 0xA7B7BB25C9EA98D3, NameHash = 0x40268557)]
     public class GcPlayerOwnershipData : NMSTemplate
     {
         [NMS(Index = 8)]
@@ -12,16 +12,16 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 2)]
         /* 0x020 */ public GcInventoryContainer Inventory;
         [NMS(Index = 3)]
-        /* 0x178 */ public GcInventoryContainer Inventory_Cargo;
+        /* 0x180 */ public GcInventoryContainer Inventory_Cargo;
         [NMS(Index = 4)]
-        /* 0x2D0 */ public GcInventoryContainer Inventory_TechOnly;
+        /* 0x2E0 */ public GcInventoryContainer Inventory_TechOnly;
         [NMS(Index = 1)]
-        /* 0x428 */ public GcResourceElement Resource;
+        /* 0x440 */ public GcResourceElement Resource;
         [NMS(Index = 5)]
-        /* 0x470 */ public GcInventoryLayout InventoryLayout;
+        /* 0x488 */ public GcInventoryLayout InventoryLayout;
         [NMS(Index = 6)]
-        /* 0x488 */ public ulong Location;
+        /* 0x4A0 */ public ulong Location;
         [NMS(Index = 0)]
-        /* 0x490 */ public NMSString0x20 Name;
+        /* 0x4A8 */ public NMSString0x20 Name;
     }
 }

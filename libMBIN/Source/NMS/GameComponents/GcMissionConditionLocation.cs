@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6447E3BE1970684F, NameHash = 0x6226FC40)]
+    [NMS(GUID = 0xE487656F46361222, NameHash = 0x6226FC40)]
     public class GcMissionConditionLocation : NMSTemplate
     {
-        // size: 0x1D
+        // size: 0x22
         public enum MissionPlayerLocationEnum : uint {
             OnPlanet,
             OnPlanetInVehicle,
@@ -11,6 +11,11 @@ namespace libMBIN.NMS.GameComponents
             InShipLanded,
             InShipInPlanetOrbit,
             InShipInSpace,
+            OnFootInSpace,
+            OnFootInAnyCorvette,
+            OnFootInYourCorvette,
+            OnFootInOtherPlayerCorvette,
+            OnFootInOtherPlayerCorvetteNotLanded,
             InShipAnywhere,
             InSpaceStation,
             InFreighter,

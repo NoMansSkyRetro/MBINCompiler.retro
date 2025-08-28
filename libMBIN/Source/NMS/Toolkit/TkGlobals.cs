@@ -2,7 +2,7 @@ using System;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x877B78AAD1B64B2C, NameHash = 0xD42BEC5C)]
+    [NMS(GUID = 0xC9453D913B5E5B4E, NameHash = 0xD42BEC5C)]
     public class TkGlobals : NMSTemplate
     {
         // size: 0x4
@@ -14,7 +14,7 @@ namespace libMBIN.NMS.Toolkit
         }
         [NMS(Index = 0)]
         /* 0x000 */ public AssertsLevelEnum AssertsLevel;
-        // size: 0x8
+        // size: 0x9
         [Flags]
         public enum EnabledChannelsEnum : uint {
             None = 0x0,
@@ -25,9 +25,12 @@ namespace libMBIN.NMS.Toolkit
             Info = 0x10,
             Alt = 0x20,
             AltWarn = 0x40,
+            AltError = 0x80,
         }
-        [NMS(Index = 2)]
+        [NMS(Index = 3)]
         /* 0x004 */ public EnabledChannelsEnum EnabledChannels;
+        [NMS(Index = 33)]
+        /* 0x008 */ public int EnableOit;
         // size: 0xD
         public enum ForceGPUPresetToEnum : uint {
             PC_Low,
@@ -44,14 +47,14 @@ namespace libMBIN.NMS.Toolkit
             MacOS,
             iOS,
         }
-        [NMS(Index = 28)]
-        /* 0x008 */ public ForceGPUPresetToEnum ForceGPUPresetTo;
-        [NMS(Index = 79)]
-        /* 0x00C */ public int FrameFlipRateDefault;
-        [NMS(Index = 81)]
-        /* 0x010 */ public int FrameFlipRateGame;
-        [NMS(Index = 80)]
-        /* 0x014 */ public int FrameFlipRateLoad;
+        [NMS(Index = 29)]
+        /* 0x00C */ public ForceGPUPresetToEnum ForceGPUPresetTo;
+        [NMS(Index = 88)]
+        /* 0x010 */ public int FrameFlipRateDefault;
+        [NMS(Index = 90)]
+        /* 0x014 */ public int FrameFlipRateGame;
+        [NMS(Index = 89)]
+        /* 0x018 */ public int FrameFlipRateLoad;
         // size: 0x5
         public enum GameWindowModeEnum : uint {
             Bordered,
@@ -60,183 +63,199 @@ namespace libMBIN.NMS.Toolkit
             Maximised,
             Minimised,
         }
-        [NMS(Index = 44)]
-        /* 0x018 */ public GameWindowModeEnum GameWindowMode;
-        [NMS(Index = 25)]
-        /* 0x01C */ public int HighlightPlacementIndex;
-        [NMS(Index = 75)]
-        /* 0x020 */ public int HmdEyeBufferHeight;
-        [NMS(Index = 74)]
-        /* 0x024 */ public int HmdEyeBufferWidth;
-        [NMS(Index = 76)]
-        /* 0x028 */ public float HmdEyeScalePos;
-        [NMS(Index = 77)]
-        /* 0x02C */ public float HmdHeadScalePos;
-        [NMS(Index = 78)]
-        /* 0x030 */ public float HmdImmersionFactor;
-        [NMS(Index = 73)]
-        /* 0x034 */ public int HmdMonitor;
-        [NMS(Index = 69)]
-        /* 0x038 */ public int HmdPreviewScale;
-        [NMS(Index = 6)]
-        /* 0x03C */ public int LoadBalanceTimeoutMS;
-        [NMS(Index = 22)]
-        /* 0x040 */ public int LODOverride;
-        [NMS(Index = 82)]
-        /* 0x044 */ public float MaxFrameRate;
-        [NMS(Index = 45)]
-        /* 0x048 */ public int Monitor;
-        [NMS(Index = 59)]
-        /* 0x04C */ public int OctahedralImpostersViewCount;
-        [NMS(Index = 8)]
-        /* 0x050 */ public int PSVR2LoadBalanceTimeoutMS;
-        [NMS(Index = 88)]
-        /* 0x054 */ public float ScratchpadInstanceScale;
-        [NMS(Index = 90)]
-        /* 0x058 */ public int ScratchpadInstancesCap;
-        [NMS(Index = 87)]
-        /* 0x05C */ public float ScratchpadInstanceSpacing;
-        [NMS(Index = 89)]
-        /* 0x060 */ public int ScratchpadInstancesPerSide;
-        [NMS(Index = 91)]
-        /* 0x064 */ public float ScratchpadInstancesRandomness;
+        [NMS(Index = 48)]
+        /* 0x01C */ public GameWindowModeEnum GameWindowMode;
+        [NMS(Index = 26)]
+        /* 0x020 */ public int HighlightPlacementIndex;
         [NMS(Index = 84)]
-        /* 0x068 */ public int ScratchpadModelSeed;
-        [NMS(Index = 42)]
-        /* 0x06C */ public int ScreenHeight;
-        [NMS(Index = 41)]
-        /* 0x070 */ public int ScreenWidth;
-        [NMS(Index = 47)]
-        /* 0x074 */ public int TiledWindowsIndex;
+        /* 0x024 */ public int HmdEyeBufferHeight;
+        [NMS(Index = 83)]
+        /* 0x028 */ public int HmdEyeBufferWidth;
+        [NMS(Index = 85)]
+        /* 0x02C */ public float HmdEyeScalePos;
+        [NMS(Index = 86)]
+        /* 0x030 */ public float HmdHeadScalePos;
+        [NMS(Index = 87)]
+        /* 0x034 */ public float HmdImmersionFactor;
+        [NMS(Index = 82)]
+        /* 0x038 */ public int HmdMonitor;
+        [NMS(Index = 78)]
+        /* 0x03C */ public int HmdPreviewScale;
+        [NMS(Index = 7)]
+        /* 0x040 */ public int LoadBalanceTimeoutMS;
+        [NMS(Index = 23)]
+        /* 0x044 */ public int LODOverride;
+        [NMS(Index = 91)]
+        /* 0x048 */ public float MaxFrameRate;
+        [NMS(Index = 49)]
+        /* 0x04C */ public int Monitor;
+        [NMS(Index = 65)]
+        /* 0x050 */ public int OctahedralImpostersViewCount;
+        [NMS(Index = 9)]
+        /* 0x054 */ public int PSVR2LoadBalanceTimeoutMS;
+        [NMS(Index = 97)]
+        /* 0x058 */ public float ScratchpadInstanceScale;
+        [NMS(Index = 99)]
+        /* 0x05C */ public int ScratchpadInstancesCap;
+        [NMS(Index = 96)]
+        /* 0x060 */ public float ScratchpadInstanceSpacing;
+        [NMS(Index = 98)]
+        /* 0x064 */ public int ScratchpadInstancesPerSide;
+        [NMS(Index = 100)]
+        /* 0x068 */ public float ScratchpadInstancesRandomness;
+        [NMS(Index = 93)]
+        /* 0x06C */ public int ScratchpadModelSeed;
         [NMS(Index = 46)]
-        /* 0x078 */ public int TiledWindowsSplitCount;
-        [NMS(Index = 10)]
-        /* 0x07C */ public float TitlebarMenuOffset;
+        /* 0x070 */ public int ScreenHeight;
+        [NMS(Index = 45)]
+        /* 0x074 */ public int ScreenWidth;
+        [NMS(Index = 51)]
+        /* 0x078 */ public int TiledWindowsIndex;
+        [NMS(Index = 50)]
+        /* 0x07C */ public int TiledWindowsSplitCount;
+        [NMS(Index = 11)]
+        /* 0x080 */ public float TitlebarMenuOffset;
+        [NMS(Index = 19)]
+        /* 0x084 */ public float TouchScreenSwipeTime;
         [NMS(Index = 18)]
-        /* 0x080 */ public float TouchScreenSwipeTime;
-        [NMS(Index = 17)]
-        /* 0x084 */ public float TouchScreenSwipeTravelThreshold;
+        /* 0x088 */ public float TouchScreenSwipeTravelThreshold;
         // size: 0x3
         public enum TrialStatusEnum : uint {
             SystemDefault,
             ForceTrial,
             ForceFullGame,
         }
-        [NMS(Index = 66)]
-        /* 0x088 */ public TrialStatusEnum TrialStatus;
-        [NMS(Index = 62)]
-        /* 0x08C */ public float UpdatePeriod;
-        [NMS(Index = 63)]
-        /* 0x090 */ public float UpdatePeriodSteam;
-        [NMS(Index = 64)]
-        /* 0x094 */ public float VoiceUpdatePeriod;
-        [NMS(Index = 65)]
-        /* 0x098 */ public float VoiceUpdatePeriodSteam;
-        [NMS(Index = 7)]
-        /* 0x09C */ public int VRLoadBalanceTimeoutMS;
-        [NMS(Index = 38)]
-        /* 0x0A0 */ public int WindowPositionX;
-        [NMS(Index = 39)]
-        /* 0x0A4 */ public int WindowPositionY;
-        [NMS(Index = 32)]
-        /* 0x0A8 */ public float WwiseVibrationMultiplierPrimary;
-        [NMS(Index = 33)]
-        /* 0x0AC */ public float WwiseVibrationMultiplierSecondary;
-        [NMS(Index = 50)]
-        /* 0x0B0 */ public NMSString0x100 EditorLayout;
-        [NMS(Index = 4)]
-        /* 0x1B0 */ public NMSString0x100 ExcludeLogFilter;
-        [NMS(Index = 3)]
-        /* 0x2B0 */ public NMSString0x100 IncludeLogFilter;
-        [NMS(Index = 83)]
-        /* 0x3B0 */ public NMSString0x100 ScratchpadModel;
-        [NMS(Index = 9)]
-        /* 0x4B0 */ public bool AllowInPlaceNGuiElementRenaming;
-        [NMS(Index = 12)]
-        /* 0x4B1 */ public bool AutoTabNewlyOpenedWindows;
-        [NMS(Index = 23)]
-        /* 0x4B2 */ public bool ColourLODs;
-        [NMS(Index = 24)]
-        /* 0x4B3 */ public bool ColourVertexDensity;
-        [NMS(Index = 60)]
-        /* 0x4B4 */ public bool CompressImposterTextures;
-        [NMS(Index = 31)]
-        /* 0x4B5 */ public bool CrashOnFailedCriticalAssertion;
-        [NMS(Index = 1)]
-        /* 0x4B6 */ public bool DefaultSelectIgnoreAsserts;
-        [NMS(Index = 36)]
-        /* 0x4B7 */ public bool DisableMultiplayer;
-        [NMS(Index = 21)]
-        /* 0x4B8 */ public bool DisableResScaling;
-        [NMS(Index = 19)]
-        /* 0x4B9 */ public bool DisableSwitchingAwayFromPad;
-        [NMS(Index = 61)]
-        /* 0x4BA */ public bool DisableUndergrowthInstanceRendering;
-        [NMS(Index = 43)]
-        /* 0x4BB */ public bool DisableVSync;
-        [NMS(Index = 55)]
-        /* 0x4BC */ public bool EnableGpuBreadcrumbs;
-        [NMS(Index = 54)]
-        /* 0x4BD */ public bool EnableNvidiaAftermath;
-        [NMS(Index = 52)]
-        /* 0x4BE */ public bool EnableRenderdoc;
-        [NMS(Index = 20)]
-        /* 0x4BF */ public bool EnableShaderReload;
-        [NMS(Index = 16)]
-        /* 0x4C0 */ public bool EnableVirtualTouchScreen;
-        [NMS(Index = 5)]
-        /* 0x4C1 */ public bool EnableZstdSaves;
-        [NMS(Index = 13)]
-        /* 0x4C2 */ public bool FavouritesAndUndoEnabledByDefault;
-        [NMS(Index = 11)]
-        /* 0x4C3 */ public bool FilterTranslatedTextWhenSearching;
-        [NMS(Index = 27)]
-        /* 0x4C4 */ public bool ForceGPUPreset;
-        [NMS(Index = 30)]
-        /* 0x4C5 */ public bool FreezeCulling;
-        [NMS(Index = 53)]
-        /* 0x4C6 */ public bool HideRenderdocOverlay;
-        [NMS(Index = 72)]
-        /* 0x4C7 */ public bool HmdDistortionPassthru;
-        [NMS(Index = 67)]
-        /* 0x4C8 */ public bool HmdEnable;
-        [NMS(Index = 68)]
-        /* 0x4C9 */ public bool HmdFoveated;
+        [NMS(Index = 75)]
+        /* 0x08C */ public TrialStatusEnum TrialStatus;
         [NMS(Index = 71)]
-        /* 0x4CA */ public bool HmdStereoRender;
-        [NMS(Index = 70)]
-        /* 0x4CB */ public bool HmdTracking;
-        [NMS(Index = 51)]
-        /* 0x4CC */ public bool LoadRelativeEditorLayouts;
-        [NMS(Index = 15)]
-        /* 0x4CD */ public bool LogInputChanges;
-        [NMS(Index = 14)]
-        /* 0x4CE */ public bool LogInputSetup;
-        [NMS(Index = 29)]
-        /* 0x4CF */ public bool MakeUnusedUniformsNaN;
-        [NMS(Index = 26)]
-        /* 0x4D0 */ public bool MinGPUMode;
-        [NMS(Index = 57)]
-        /* 0x4D1 */ public bool OctahedralImpostersDisable;
-        [NMS(Index = 56)]
-        /* 0x4D2 */ public bool OctahedralImpostersEnable;
-        [NMS(Index = 58)]
-        /* 0x4D3 */ public bool OctahedralImpostersViewFromSpace;
-        [NMS(Index = 48)]
-        /* 0x4D4 */ public bool SampleCollisionWithCamera;
-        [NMS(Index = 85)]
-        /* 0x4D5 */ public bool ScratchpadInstanced;
-        [NMS(Index = 86)]
-        /* 0x4D6 */ public bool ScratchpadWind;
-        [NMS(Index = 49)]
-        /* 0x4D7 */ public bool ShowPlayerCollisions;
-        [NMS(Index = 35)]
-        /* 0x4D8 */ public bool SimulateDisabledParticleRefractions;
+        /* 0x090 */ public float UpdatePeriod;
+        [NMS(Index = 72)]
+        /* 0x094 */ public float UpdatePeriodSteam;
+        [NMS(Index = 73)]
+        /* 0x098 */ public float VoiceUpdatePeriod;
+        [NMS(Index = 74)]
+        /* 0x09C */ public float VoiceUpdatePeriodSteam;
+        [NMS(Index = 8)]
+        /* 0x0A0 */ public int VRLoadBalanceTimeoutMS;
+        [NMS(Index = 42)]
+        /* 0x0A4 */ public int WindowPositionX;
+        [NMS(Index = 43)]
+        /* 0x0A8 */ public int WindowPositionY;
+        [NMS(Index = 36)]
+        /* 0x0AC */ public float WwiseVibrationMultiplierPrimary;
         [NMS(Index = 37)]
-        /* 0x4D9 */ public bool SmokeTestSmokeBotAutoStart;
+        /* 0x0B0 */ public float WwiseVibrationMultiplierSecondary;
+        [NMS(Index = 54)]
+        /* 0x0B4 */ public NMSString0x100 EditorLayout;
+        [NMS(Index = 5)]
+        /* 0x1B4 */ public NMSString0x100 ExcludeLogFilter;
+        [NMS(Index = 4)]
+        /* 0x2B4 */ public NMSString0x100 IncludeLogFilter;
+        [NMS(Index = 92)]
+        /* 0x3B4 */ public NMSString0x100 ScratchpadModel;
+        [NMS(Index = 10)]
+        /* 0x4B4 */ public bool AllowInPlaceNGuiElementRenaming;
+        [NMS(Index = 1)]
+        /* 0x4B5 */ public bool AssertsPopupAlwaysOnTop;
+        [NMS(Index = 13)]
+        /* 0x4B6 */ public bool AutoTabNewlyOpenedWindows;
+        [NMS(Index = 24)]
+        /* 0x4B7 */ public bool ColourLODs;
+        [NMS(Index = 25)]
+        /* 0x4B8 */ public bool ColourVertexDensity;
+        [NMS(Index = 66)]
+        /* 0x4B9 */ public bool CompressImposterTextures;
+        [NMS(Index = 35)]
+        /* 0x4BA */ public bool CrashOnFailedCriticalAssertion;
+        [NMS(Index = 2)]
+        /* 0x4BB */ public bool DefaultSelectIgnoreAsserts;
+        [NMS(Index = 32)]
+        /* 0x4BC */ public bool DisableImposters;
         [NMS(Index = 40)]
-        /* 0x4DA */ public bool UseDebugScreenSettings;
+        /* 0x4BD */ public bool DisableMultiplayer;
+        [NMS(Index = 22)]
+        /* 0x4BE */ public bool DisableResScaling;
+        [NMS(Index = 20)]
+        /* 0x4BF */ public bool DisableSwitchingAwayFromPad;
+        [NMS(Index = 67)]
+        /* 0x4C0 */ public bool DisableUndergrowthInstanceRendering;
+        [NMS(Index = 47)]
+        /* 0x4C1 */ public bool DisableVSync;
+        [NMS(Index = 60)]
+        /* 0x4C2 */ public bool EnableGpuBreadcrumbs;
+        [NMS(Index = 59)]
+        /* 0x4C3 */ public bool EnableNvidiaAftermath;
+        [NMS(Index = 57)]
+        /* 0x4C4 */ public bool EnablePix;
+        [NMS(Index = 61)]
+        /* 0x4C5 */ public bool EnableRayTracing;
+        [NMS(Index = 56)]
+        /* 0x4C6 */ public bool EnableRenderdoc;
+        [NMS(Index = 21)]
+        /* 0x4C7 */ public bool EnableShaderReload;
+        [NMS(Index = 17)]
+        /* 0x4C8 */ public bool EnableVirtualTouchScreen;
+        [NMS(Index = 6)]
+        /* 0x4C9 */ public bool EnableZstdSaves;
+        [NMS(Index = 14)]
+        /* 0x4CA */ public bool FavouritesAndUndoEnabledByDefault;
+        [NMS(Index = 12)]
+        /* 0x4CB */ public bool FilterTranslatedTextWhenSearching;
+        [NMS(Index = 28)]
+        /* 0x4CC */ public bool ForceGPUPreset;
+        [NMS(Index = 31)]
+        /* 0x4CD */ public bool FreezeCulling;
+        [NMS(Index = 58)]
+        /* 0x4CE */ public bool HideRenderdocOverlay;
+        [NMS(Index = 81)]
+        /* 0x4CF */ public bool HmdDistortionPassthru;
+        [NMS(Index = 76)]
+        /* 0x4D0 */ public bool HmdEnable;
+        [NMS(Index = 77)]
+        /* 0x4D1 */ public bool HmdFoveated;
+        [NMS(Index = 80)]
+        /* 0x4D2 */ public bool HmdStereoRender;
+        [NMS(Index = 79)]
+        /* 0x4D3 */ public bool HmdTracking;
         [NMS(Index = 34)]
-        /* 0x4DB */ public bool UseHeavyAir;
+        /* 0x4D4 */ public bool JitterRenderOffsetEveryFrame;
+        [NMS(Index = 55)]
+        /* 0x4D5 */ public bool LoadRelativeEditorLayouts;
+        [NMS(Index = 16)]
+        /* 0x4D6 */ public bool LogInputChanges;
+        [NMS(Index = 15)]
+        /* 0x4D7 */ public bool LogInputSetup;
+        [NMS(Index = 30)]
+        /* 0x4D8 */ public bool MakeUnusedUniformsNaN;
+        [NMS(Index = 27)]
+        /* 0x4D9 */ public bool MinGPUMode;
+        [NMS(Index = 63)]
+        /* 0x4DA */ public bool OctahedralImpostersDisable;
+        [NMS(Index = 62)]
+        /* 0x4DB */ public bool OctahedralImpostersEnable;
+        [NMS(Index = 64)]
+        /* 0x4DC */ public bool OctahedralImpostersViewFromSpace;
+        [NMS(Index = 52)]
+        /* 0x4DD */ public bool SampleCollisionWithCamera;
+        [NMS(Index = 94)]
+        /* 0x4DE */ public bool ScratchpadInstanced;
+        [NMS(Index = 95)]
+        /* 0x4DF */ public bool ScratchpadWind;
+        [NMS(Index = 53)]
+        /* 0x4E0 */ public bool ShowPlayerCollisions;
+        [NMS(Index = 39)]
+        /* 0x4E1 */ public bool SimulateDisabledParticleRefractions;
+        [NMS(Index = 41)]
+        /* 0x4E2 */ public bool SmokeTestSmokeBotAutoStart;
+        [NMS(Index = 44)]
+        /* 0x4E3 */ public bool UseDebugScreenSettings;
+        [NMS(Index = 38)]
+        /* 0x4E4 */ public bool UseHeavyAir;
+        [NMS(Index = 68)]
+        /* 0x4E5 */ public bool VulkanValidationEnabled;
+        [NMS(Index = 69)]
+        /* 0x4E6 */ public bool VulkanValidationPrintMessages;
+        [NMS(Index = 70)]
+        /* 0x4E7 */ public bool VulkanValidationPrintUniqueOnly;
     }
 }

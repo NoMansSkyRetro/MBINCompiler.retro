@@ -2,14 +2,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2C38599068A2A055, NameHash = 0x94BADD03)]
+    [NMS(GUID = 0xBF5F4F7BD7D0DA49, NameHash = 0x94BADD03)]
     public class GcCostSalvageShip : NMSTemplate
     {
-        [NMS(Index = 1, Size = 0xA, EnumType = typeof(GcSpaceshipClasses.ShipClassEnum))]
+        [NMS(Index = 1, Size = 0xB, EnumType = typeof(GcSpaceshipClasses.ShipClassEnum))]
         /* 0x000 */ public NMSString0x20A[] ShipClassStringOverride;
         [NMS(Index = 2)]
-        /* 0x140 */ public bool CannotAffordIfStringOverrideIsNull;
+        /* 0x160 */ public bool CannotAffordIfStringOverrideIsNull;
         [NMS(Index = 0)]
-        /* 0x141 */ public bool WillGiveShipParts;
+        /* 0x161 */ public bool WillGiveShipParts;
     }
 }

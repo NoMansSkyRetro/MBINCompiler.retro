@@ -1,6 +1,8 @@
+using libMBIN.NMS.GameComponents;
+
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAEF4257CADB8E8EF, NameHash = 0x1BAB3C5B)]
+    [NMS(GUID = 0x613FAD7DF597D2F7, NameHash = 0x1BAB3C5B)]
     public class GcRagdolCollisionObject : NMSTemplate
     {
         [NMS(Index = 1)]
@@ -11,15 +13,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public Vector3f HalfVector;
         [NMS(Index = 5)]
         /* 0x30 */ public Vector4f OrientationQuaternion;
-        // size: 0x4
-        public enum CollisionShapeTypeEnum : uint {
-            Box,
-            Capsule,
-            Sphere,
-            None,
-        }
         [NMS(Index = 0)]
-        /* 0x40 */ public CollisionShapeTypeEnum CollisionShapeType;
+        /* 0x40 */ public CollisionShapeType CollisionShapeType;
         [NMS(Index = 3)]
         /* 0x44 */ public float Radius;
     }

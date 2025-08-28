@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x47AEB44A8E486AC2, NameHash = 0x8CDD67C0)]
+    [NMS(GUID = 0xCB4623AE2FFA5A45, NameHash = 0x8CDD67C0)]
     public class GcWikiCategory : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -2,14 +2,18 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x914DDD74BE8A9225, NameHash = 0x77A67F2A)]
+    [NMS(GUID = 0x4C2D83299AE1394F, NameHash = 0x77A67F2A)]
     public class GcRefinerUnitComponentData : NMSTemplate
     {
         [NMS(Index = 0)]
         /* 0x000 */ public GcMaintenanceComponentData MaintenanceData;
+        [NMS(Index = 3)]
+        /* 0x410 */ public Vector3f InputOffset;
+        [NMS(Index = 4)]
+        /* 0x420 */ public Vector3f OutputOffset;
         [NMS(Index = 1)]
-        /* 0x3F0 */ public int NumInputs;
+        /* 0x430 */ public int NumInputs;
         [NMS(Index = 2)]
-        /* 0x3F4 */ public bool IsCooker;
+        /* 0x434 */ public bool IsCooker;
     }
 }

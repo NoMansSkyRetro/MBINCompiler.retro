@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5BB6B3B86E847F67, NameHash = 0xF2F4F1C8)]
+    [NMS(GUID = 0x51721836BD78D895, NameHash = 0xF2F4F1C8)]
     public class GcUnlockableItemTreeGroups : NMSTemplate
     {
-        // size: 0xE
+        // size: 0xF
         public enum UnlockableItemTreeEnum : uint {
             Test,
             BasicBaseParts,
@@ -19,6 +19,7 @@ namespace libMBIN.NMS.GameComponents
             S9BaseParts,
             S9ExoTech,
             S9ShipTech,
+            CorvetteParts,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public UnlockableItemTreeEnum UnlockableItemTree;

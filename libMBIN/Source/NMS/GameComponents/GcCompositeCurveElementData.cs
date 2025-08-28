@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA7AD44668299E8AA, NameHash = 0x3FE05D76)]
+    [NMS(GUID = 0x147AFFB8840EB4A1, NameHash = 0x3FE05D76)]
     public class GcCompositeCurveElementData : NMSTemplate
     {
         [NMS(Index = 1)]

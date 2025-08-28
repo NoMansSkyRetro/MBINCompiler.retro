@@ -2,12 +2,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x83FC6481E7A20649, NameHash = 0xA2994124)]
+    [NMS(GUID = 0x676482FB58140E0E, NameHash = 0xA2994124)]
     public class GcRewardSalvageShip : NMSTemplate
     {
-        [NMS(Index = 1, Size = 0xA, EnumType = typeof(GcSpaceshipClasses.ShipClassEnum))]
+        [NMS(Index = 1, Size = 0xB, EnumType = typeof(GcSpaceshipClasses.ShipClassEnum))]
         /* 0x00 */ public NMSString0x10[] SpecificCustomisationSlotIDs;
         [NMS(Index = 0)]
-        /* 0xA0 */ public bool RewardShipParts;
+        /* 0xB0 */ public bool RewardShipParts;
     }
 }

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDBCC3F041B219D2F, NameHash = 0x972DE7E0)]
+    [NMS(GUID = 0x63667195638EF717, NameHash = 0x972DE7E0)]
     public class GcSettlementColourPalette : NMSTemplate
     {
         [NMS(Index = 3, Size = 0x4)]

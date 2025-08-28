@@ -1508,8 +1508,9 @@ namespace libMBIN
 
             foreach ( var field in fields ) {
                 NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
-                if ( settings == null ) settings = new NMSAttribute();
+                settings ??= new NMSAttribute();
                 if ( settings.Ignore ) continue;
+                if ( field.IsInitOnly ) continue;
 
                 if ( isGenericTemplate ) {
                     subElement.Elements.Add( SerializeMXmlValue( field.FieldType, field, settings, field.GetValue( this ) ) );
