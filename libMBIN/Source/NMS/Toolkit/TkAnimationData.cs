@@ -3,31 +3,33 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x8EB7DFFAD879F830, NameHash = 0x6E59DA5E)]
+    [NMS(GUID = 0x418AE4F78C6F0253, NameHash = 0x6E59DA5E)]
     public class TkAnimationData : NMSTemplate
     {
         [NMS(Index = 12)]
         /* 0x000 */ public NMSString0x20A Mask;
-        [NMS(Index = 19)]
+        [NMS(Index = 20)]
         /* 0x020 */ public List<TkAnimationAction> Actions;
+        [NMS(Index = 13)]
+        /* 0x030 */ public List<TkAnimationMask> AdditionalMasks;
         [NMS(Index = 10)]
-        /* 0x030 */ public NMSString0x10 AdditiveBaseAnim;
+        /* 0x040 */ public NMSString0x10 AdditiveBaseAnim;
         [NMS(Index = 0)]
-        /* 0x040 */ public NMSString0x10 Anim;
+        /* 0x050 */ public NMSString0x10 Anim;
         [NMS(Index = 9)]
-        /* 0x050 */ public List<NMSString0x40> ExtraStartNodes;
+        /* 0x060 */ public List<NMSString0x40> ExtraStartNodes;
         [NMS(Index = 1)]
-        /* 0x060 */ public VariableSizeString Filename;
-        [NMS(Index = 21)]
-        /* 0x070 */ public List<TkAnimationNotify> Notifies;
-        [NMS(Index = 26)]
-        /* 0x080 */ public TkAnimationGameData GameData;
+        /* 0x070 */ public VariableSizeString Filename;
+        [NMS(Index = 22)]
+        /* 0x080 */ public List<TkAnimationNotify> Notifies;
+        [NMS(Index = 27)]
+        /* 0x090 */ public TkAnimationGameData GameData;
+        [NMS(Index = 19)]
+        /* 0x09C */ public float ActionFrame;
         [NMS(Index = 18)]
-        /* 0x08C */ public float ActionFrame;
-        [NMS(Index = 17)]
-        /* 0x090 */ public float ActionStartFrame;
+        /* 0x0A0 */ public float ActionStartFrame;
         [NMS(Index = 11)]
-        /* 0x094 */ public float AdditiveBaseFrame;
+        /* 0x0A4 */ public float AdditiveBaseFrame;
         // size: 0x4
         public enum AnimTypeEnum : uint {
             Loop,
@@ -36,42 +38,42 @@ namespace libMBIN.NMS.Toolkit
             Control,
         }
         [NMS(Index = 2)]
-        /* 0x098 */ public AnimTypeEnum AnimType;
+        /* 0x0A8 */ public AnimTypeEnum AnimType;
         // size: 0x3
         public enum CreatureSizeEnum : uint {
             AllSizes,
             SmallOnly,
             LargeOnly,
         }
-        [NMS(Index = 20)]
-        /* 0x09C */ public CreatureSizeEnum CreatureSize;
-        [NMS(Index = 15)]
-        /* 0x0A0 */ public float Delay;
-        [NMS(Index = 6)]
-        /* 0x0A4 */ public int FrameEnd;
-        [NMS(Index = 7)]
-        /* 0x0A8 */ public int FrameEndGame;
-        [NMS(Index = 5)]
-        /* 0x0AC */ public int FrameStart;
-        [NMS(Index = 14)]
-        /* 0x0B0 */ public float OffsetMax;
-        [NMS(Index = 13)]
-        /* 0x0B4 */ public float OffsetMin;
-        [NMS(Index = 4)]
-        /* 0x0B8 */ public int Priority;
+        [NMS(Index = 21)]
+        /* 0x0AC */ public CreatureSizeEnum CreatureSize;
         [NMS(Index = 16)]
-        /* 0x0BC */ public float Speed;
+        /* 0x0B0 */ public float Delay;
+        [NMS(Index = 6)]
+        /* 0x0B4 */ public int FrameEnd;
+        [NMS(Index = 7)]
+        /* 0x0B8 */ public int FrameEndGame;
+        [NMS(Index = 5)]
+        /* 0x0BC */ public int FrameStart;
+        [NMS(Index = 15)]
+        /* 0x0C0 */ public float OffsetMax;
+        [NMS(Index = 14)]
+        /* 0x0C4 */ public float OffsetMin;
+        [NMS(Index = 4)]
+        /* 0x0C8 */ public int Priority;
+        [NMS(Index = 17)]
+        /* 0x0CC */ public float Speed;
         [NMS(Index = 8)]
-        /* 0x0C0 */ public NMSString0x40 StartNode;
-        [NMS(Index = 24)]
-        /* 0x100 */ public bool Active;
-        [NMS(Index = 22)]
-        /* 0x101 */ public bool Additive;
-        [NMS(Index = 3)]
-        /* 0x102 */ public bool AnimGroupOverride;
+        /* 0x0D0 */ public NMSString0x40 StartNode;
         [NMS(Index = 25)]
-        /* 0x103 */ public bool Has30HzFrames;
+        /* 0x110 */ public bool Active;
         [NMS(Index = 23)]
-        /* 0x104 */ public bool Mirrored;
+        /* 0x111 */ public bool Additive;
+        [NMS(Index = 3)]
+        /* 0x112 */ public bool AnimGroupOverride;
+        [NMS(Index = 26)]
+        /* 0x113 */ public bool Has30HzFrames;
+        [NMS(Index = 24)]
+        /* 0x114 */ public bool Mirrored;
     }
 }

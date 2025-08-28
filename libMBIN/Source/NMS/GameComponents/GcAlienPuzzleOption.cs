@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4EAB1152BC94C8FE, NameHash = 0x981A51EE)]
+    [NMS(GUID = 0xA5907A80078F2C52, NameHash = 0x981A51EE)]
     public class GcAlienPuzzleOption : NMSTemplate
     {
         [NMS(Index = 22)]
-        /* 0x00 */ public NMSString0x20A EnablingConditionId;
+        /* 0x00 */ public NMSString0x20A DisablingConditionId;
         [NMS(Index = 0)]
         /* 0x20 */ public NMSString0x20A Name;
         [NMS(Index = 15)]
@@ -19,7 +19,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 4)]
         /* 0xA0 */ public NMSString0x10 Cost;
         [NMS(Index = 21)]
-        /* 0xB0 */ public List<NMSTemplate> EnablingConditions;
+        /* 0xB0 */ public List<NMSTemplate> DisablingConditions;
         [NMS(Index = 5)]
         /* 0xC0 */ public List<NMSString0x10> Rewards;
         [NMS(Index = 9)]
@@ -27,7 +27,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 17)]
         /* 0xD4 */ public GcAudioWwiseEvents AudioEvent;
         [NMS(Index = 20)]
-        /* 0xD8 */ public GcMissionConditionTest EnablingConditionTest;
+        /* 0xD8 */ public GcMissionConditionTest DisablingConditionTest;
         [NMS(Index = 6)]
         /* 0xDC */ public GcAlienMood Mood;
         [NMS(Index = 7)]

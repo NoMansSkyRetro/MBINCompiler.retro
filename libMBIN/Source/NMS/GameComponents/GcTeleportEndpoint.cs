@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x393A36CAB5D611A3, NameHash = 0x8E41A670)]
+    [NMS(GUID = 0x5BF04559C408968, NameHash = 0x8E41A670)]
     public class GcTeleportEndpoint : NMSTemplate
     {
         [NMS(Index = 2)]

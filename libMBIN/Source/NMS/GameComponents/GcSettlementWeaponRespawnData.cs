@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDF40CA2F120C8969, NameHash = 0x6959C018)]
+    [NMS(GUID = 0xAD360BAD746E950D, NameHash = 0x6959C018)]
     public class GcSettlementWeaponRespawnData : NMSTemplate
     {
         [NMS(Index = 0)]

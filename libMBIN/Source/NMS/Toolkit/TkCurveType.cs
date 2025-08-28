@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x4CDAF6C563727921, NameHash = 0x25A8DEF1)]
+    [NMS(GUID = 0x8A54DC72AD04103F, NameHash = 0x25A8DEF1)]
     public class TkCurveType : NMSTemplate
     {
         // size: 0x28

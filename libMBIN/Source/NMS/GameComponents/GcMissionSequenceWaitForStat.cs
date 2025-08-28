@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x678FF421142158F9, NameHash = 0x32BF48D3)]
+    [NMS(GUID = 0xCFA44D137958D7DB, NameHash = 0x32BF48D3)]
     public class GcMissionSequenceWaitForStat : NMSTemplate
     {
-        [NMS(Index = 4)]
+        [NMS(Index = 5)]
         /* 0x00 */ public VariableSizeString DebugText;
         [NMS(Index = 0)]
         /* 0x10 */ public VariableSizeString Message;
@@ -13,5 +13,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public NMSString0x10 StatGroup;
         [NMS(Index = 3)]
         /* 0x40 */ public int Amount;
+        [NMS(Index = 4)]
+        /* 0x44 */ public int AmountMax;
     }
 }

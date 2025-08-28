@@ -125,6 +125,7 @@ ENUM_OVERRIDES = {
 EXTRA_CLASSES = [
     'cAxisSpecification', 'cSimShape', 'cMapping', 'cDirectMesh',
     'cMappedMesh', 'cInfluencesOnMappedPoint', 'cShapePoint', 'cMappingInfluence',
+    "cCollisionShapeType"
 ]
 # Classes that don't look like globals but actually are.
 ACTUALLY_GLOBALS = ['GcSceneOptions', 'GcSmokeTestOptions', 'GcDebugOptions']
@@ -189,38 +190,39 @@ TYPE_MAPPING = {
     0x0C: 'VariableSizeString',  # Technically a "filename" -> GcFilename (?)
     0x0D: 'FLAGENUM',
     0x0E: 'float',
-    0x0F: 'NMSString0x10',   # Id
-    0x10: 'NMSString0x20A',  # Id256
-    0x11: 'NMSString0x20A',  # LocId
-    0x12: 'sbyte',
-    0x13: 'short',
-    0x14: 'int',
-    0x15: 'long',
-    0x16: 'GcNodeID',
-    0x17: 'GcResource',
-    0x18: 'GcSeed',
-    0x19: 'ARRAY',
-    0x1A: 'NMSString0x20',
-    0x1B: 'NMSString0x40',
-    0x1C: 'NMSString0x80',
-    0x1D: 'NMSString0x100',
-    0x1E: 'NMSString0x200',
-    0x1F: 'NMSString0x400',
-    0x20: 'NMSString0x800',
-    0x21: 'byte',
-    0x22: 'ushort',
-    0x23: 'uint',
-    0x24: 'ulong',
-    0x25: 'UniqueId',
-    0x26: 'Vector2f',
-    0x27: 'Vector3f',
-    0x28: 'Vector4f',
-    0x29: 'wchar',
-    0x2A: 'halfVector4',
-    0x2B: 'Vector4i',
-    0x2C: 'TkPhysRelVec3',
-    0x2D: 'HashMap',
-    0x2E: 'Colour32',  # 4 channel colour with each channel packed as a byte
+    0x0F: 'double',
+    0x10: 'NMSString0x10',   # Id
+    0x11: 'NMSString0x20A',  # Id256
+    0x12: 'NMSString0x20A',  # LocId
+    0x13: 'sbyte',
+    0x14: 'short',
+    0x15: 'int',
+    0x16: 'long',
+    0x17: 'GcNodeID',
+    0x18: 'GcResource',
+    0x19: 'GcSeed',
+    0x1A: 'ARRAY',
+    0x1B: 'NMSString0x20',
+    0x1C: 'NMSString0x40',
+    0x1D: 'NMSString0x80',
+    0x1E: 'NMSString0x100',
+    0x1F: 'NMSString0x200',
+    0x20: 'NMSString0x400',
+    0x21: 'NMSString0x800',
+    0x22: 'byte',
+    0x23: 'ushort',
+    0x24: 'uint',
+    0x25: 'ulong',
+    0x26: 'UniqueId',
+    0x27: 'Vector2f',
+    0x28: 'Vector3f',
+    0x29: 'Vector4f',
+    0x2A: 'wchar',
+    0x2B: 'halfVector4',
+    0x2C: 'Vector4i',
+    0x2D: 'TkBigPosData',
+    0x2E: 'HashMap',
+    0x2F: 'Colour32',  # 4 channel colour with each channel packed as a byte
 }
 
 TYPE_MAPPING_REV = {value: key for key, value in TYPE_MAPPING.items()}
@@ -303,6 +305,8 @@ class Field(ABC):
         self._is_enum_field = False
         self._is_array_field = False
         self._is_list_field = False
+        self._has_mxml_name = False
+        self._force_prefix: Optional[str] = None
 
         # Get the name of the field.
         self._field_name: str = nms_mem.read_string(
@@ -332,10 +336,13 @@ class Field(ABC):
     def has_mxml_name(self):
         if " " in self._field_name or self._field_name[0].isdigit():
             return True
+        return self._has_mxml_name
 
     @property
     def field_name(self):
         field_name = self._field_name.replace(" ", "")
+        if self._force_prefix is not None:
+            field_name = self._force_prefix + field_name
         if field_name[0].isdigit():
             return '_' + field_name
         if self._field_name_is_duplicate:
@@ -403,7 +410,7 @@ class CustomField(Field):
                 constants.USING_MAPPING.get(self.field_type[:2].lower(),
                                             constants.USING_MAPPING['gc'])
             )
-        elif self.field_type == 'AxisSpecification':
+        elif "c" + self.field_type in EXTRA_CLASSES:
             self.required_using.add(constants.USING_MAPPING['gc'])
 
     @property
@@ -645,6 +652,11 @@ class NMSClass():
         for field in fields:
             if field.required_using:
                 self.required_usings.update(field.required_using)
+            # Check to make sure the field name isn't the same as the class name:
+            if field.field_name == self.name:
+                print(f"The class {self.name} has a field called {field.field_name}")
+                field._has_mxml_name = True
+                field._force_prefix = "_"
             if field.field_name not in self._field_names:
                 self._field_names.add(field.field_name)
             else:

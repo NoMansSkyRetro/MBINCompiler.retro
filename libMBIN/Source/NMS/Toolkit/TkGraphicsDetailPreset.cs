@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x60D179F58A11DD27, NameHash = 0x2D59643E)]
+    [NMS(GUID = 0x85BB6DB5973269FE, NameHash = 0x2D59643E)]
     public class TkGraphicsDetailPreset : NMSTemplate
     {
         [NMS(Index = 22)]
@@ -48,10 +48,12 @@ namespace libMBIN.NMS.Toolkit
         /* 0x18 */ public AntiAliasingEnum AntiAliasing;
         [NMS(Index = 9)]
         /* 0x1C */ public TkGraphicsDetailTypes BaseQuality;
-        // size: 0x2
+        // size: 0x4
         public enum DLSSFrameGenerationEnum : uint {
-            On,
+            On2X,
             Off,
+            On3X,
+            On4X,
         }
         [NMS(Index = 12)]
         /* 0x20 */ public DLSSFrameGenerationEnum DLSSFrameGeneration;

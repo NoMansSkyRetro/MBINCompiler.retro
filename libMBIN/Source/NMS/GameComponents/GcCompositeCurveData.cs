@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x24130CFBE77706CB, NameHash = 0x4CD8AD55)]
+    [NMS(GUID = 0x8D8F5A903D11E13A, NameHash = 0x4CD8AD55)]
     public class GcCompositeCurveData : NMSTemplate
     {
         [NMS(Index = 1)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xCC7DF7A3BA8FDD9F, NameHash = 0xDCBDDB64)]
+    [NMS(GUID = 0x722A0519EAE206D7, NameHash = 0xDCBDDB64)]
     public class TkNavMeshAreaType : NMSTemplate
     {
         // size: 0x15
@@ -22,7 +22,7 @@ namespace libMBIN.NMS.Toolkit
             Soil,
             Resource,
             TerrainInstance,
-            Normal,
+            Structure,
             Water,
             Auto,
             UseCollisionTileType,

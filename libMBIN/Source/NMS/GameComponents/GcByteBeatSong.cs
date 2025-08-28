@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x450D91542191392, NameHash = 0x44DE8959)]
+    [NMS(GUID = 0xD9329571258E0E31, NameHash = 0x44DE8959)]
     public class GcByteBeatSong : NMSTemplate
     {
         [NMS(Index = 3)]

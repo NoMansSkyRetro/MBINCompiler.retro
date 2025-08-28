@@ -1,19 +1,19 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x758F78C58D4C358A, NameHash = 0xE1F664A6)]
+    [NMS(GUID = 0x3CC5E340946F13ED, NameHash = 0xE1F664A6)]
     public class GcPlayerSpawnStateData : NMSTemplate
     {
-        [NMS(Index = 10)]
-        /* 0x00 */ public Vector4f AbandonedFreighterPositionInSystem;
-        [NMS(Index = 11)]
-        /* 0x10 */ public Vector4f AbandonedFreighterTransformAt;
         [NMS(Index = 12)]
+        /* 0x00 */ public Vector4f AbandonedFreighterPositionInSystem;
+        [NMS(Index = 13)]
+        /* 0x10 */ public Vector4f AbandonedFreighterTransformAt;
+        [NMS(Index = 14)]
         /* 0x20 */ public Vector4f AbandonedFreighterTransformUp;
-        [NMS(Index = 7)]
-        /* 0x30 */ public Vector4f FreighterPositionInSystem;
-        [NMS(Index = 8)]
-        /* 0x40 */ public Vector4f FreighterTransformAt;
         [NMS(Index = 9)]
+        /* 0x30 */ public Vector4f FreighterPositionInSystem;
+        [NMS(Index = 10)]
+        /* 0x40 */ public Vector4f FreighterTransformAt;
+        [NMS(Index = 11)]
         /* 0x50 */ public Vector4f FreighterTransformUp;
         [NMS(Index = 2)]
         /* 0x60 */ public Vector4f PlayerDeathRespawnPositionInSystem;
@@ -27,7 +27,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0xA0 */ public Vector4f ShipPositionInSystem;
         [NMS(Index = 5)]
         /* 0xB0 */ public Vector4f ShipTransformAt;
-        // size: 0x8
+        [NMS(Index = 6)]
+        /* 0xC0 */ public Vector4f ShipTransformUp;
+        // size: 0xA
         public enum LastKnownPlayerStateEnum : uint {
             OnFoot,
             InShip,
@@ -37,8 +39,12 @@ namespace libMBIN.NMS.GameComponents
             AbandonedFreighter,
             InShipLanded,
             InVehicle,
+            OnFootInCorvette,
+            OnFootInCorvetteLanded,
         }
-        [NMS(Index = 6)]
-        /* 0xC0 */ public LastKnownPlayerStateEnum LastKnownPlayerState;
+        [NMS(Index = 8)]
+        /* 0xD0 */ public LastKnownPlayerStateEnum LastKnownPlayerState;
+        [NMS(Index = 7)]
+        /* 0xD4 */ public bool ShipHovering;
     }
 }

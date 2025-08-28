@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9EFD12433725710E, NameHash = 0xDAA4D8E3)]
+    [NMS(GUID = 0xAB3AF2E1BF176B6A, NameHash = 0xDAA4D8E3)]
     public class GcCutSceneSpawnData : NMSTemplate
     {
         [NMS(Index = 10)]

@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xDF4B8980A7858D2F, NameHash = 0x199FE2B)]
+    [NMS(GUID = 0xAC702CD1154C6203, NameHash = 0x199FE2B)]
     public class TkMaterialFlags : NMSTemplate
     {
         // size: 0x40
@@ -13,10 +13,10 @@ namespace libMBIN.NMS.Toolkit
             _F06,
             _F07_UNLIT,
             _F08,
-            _F09_TRANSPARENT,
+            _F09,
             _F10,
-            _F11_ALPHACUTOUT,
-            _F12_BATCHED_BILLBOARD,
+            _F11,
+            _F12,
             _F13_UV_EFFECT,
             _F14,
             _F15_WIND,
@@ -48,13 +48,13 @@ namespace libMBIN.NMS.Toolkit
             _F41,
             _F42_DETAIL_NORMAL,
             _F43,
-            _F44_IMPOSTER,
+            _F44,
             _F45,
             _F46,
-            _F47_REFLECTION_PROBE,
+            _F47,
             _F48,
             _F49,
-            _F50_DISABLE_POSTPROCESS,
+            _F50,
             _F51,
             _F52,
             _F53_COLOURISABLE,
@@ -63,11 +63,11 @@ namespace libMBIN.NMS.Toolkit
             _F56_MATCH_GROUND,
             _F57,
             _F58_USE_CENTRAL_NORMAL,
-            _F59_BIASED_REACTIVITY,
+            _F59,
             _F60,
             _F61,
             _F62,
-            _F63_DISSOLVE,
+            _F63,
             _F64_RESERVED_FLAG_FOR_EARLY_Z_PATCHING_DO_NOT_USE,
         }
         [NMS(Index = 0)]

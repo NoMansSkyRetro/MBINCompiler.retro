@@ -2,12 +2,12 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x641928856B50A077, NameHash = 0xB180032)]
+    [NMS(GUID = 0x67F6BF901552A021, NameHash = 0xB180032)]
     public class GcInventoryElement : NMSTemplate
     {
         [NMS(Index = 1)]
         /* 0x00 */ public NMSString0x10 Id;
-        [NMS(Index = 6)]
+        [NMS(Index = 7)]
         /* 0x10 */ public GcInventoryIndex Index;
         [NMS(Index = 2)]
         /* 0x18 */ public int Amount;
@@ -17,7 +17,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public int MaxAmount;
         [NMS(Index = 0)]
         /* 0x24 */ public GcInventoryType Type;
+        [NMS(Index = 6)]
+        /* 0x28 */ public bool AddedAutomatically;
         [NMS(Index = 5)]
-        /* 0x28 */ public bool FullyInstalled;
+        /* 0x29 */ public bool FullyInstalled;
     }
 }

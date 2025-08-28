@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE9675A37EE0B0EE8, NameHash = 0x7F665957)]
+    [NMS(GUID = 0xA00BB01714248708, NameHash = 0x7F665957)]
     public class GcCutSceneComponentData : NMSTemplate
     {
         [NMS(Index = 0)]

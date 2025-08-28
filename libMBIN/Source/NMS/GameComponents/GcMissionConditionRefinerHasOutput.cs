@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3D0D05F46E71F529, NameHash = 0x7A9148E7)]
+    [NMS(GUID = 0x56391F2A883D3EE3, NameHash = 0x7A9148E7)]
     public class GcMissionConditionRefinerHasOutput : NMSTemplate
     {
         [NMS(Index = 0)]
@@ -9,7 +9,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public int OutputAmount;
         [NMS(Index = 3)]
         /* 0x14 */ public bool MustBeCooker;
+        [NMS(Index = 4)]
+        /* 0x15 */ public bool MustBeCorvetteModule;
         [NMS(Index = 2)]
-        /* 0x15 */ public bool UseDefaultAmount;
+        /* 0x16 */ public bool UseDefaultAmount;
     }
 }

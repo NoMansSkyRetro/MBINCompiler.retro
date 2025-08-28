@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xB1D0471F5329D15C, NameHash = 0x466B710A)]
+    [NMS(GUID = 0xEBFE94A781B9A64B, NameHash = 0x466B710A)]
     public class TkNetReplicatedEntityComponentData : NMSTemplate
     {
         [NMS(Index = 0)]
@@ -29,5 +29,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x14 */ public SpawnTypeEnum SpawnType;
         [NMS(Index = 3)]
         /* 0x18 */ public bool IgnoreComponents;
+        [NMS(Index = 4)]
+        /* 0x19 */ public bool ReplicateToShipmates;
     }
 }

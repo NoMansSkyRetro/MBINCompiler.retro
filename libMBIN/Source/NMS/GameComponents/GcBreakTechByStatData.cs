@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2FF8E31F8430CAC0, NameHash = 0x627CF21D)]
+    [NMS(GUID = 0x7C8185409C52495D, NameHash = 0x627CF21D)]
     public class GcBreakTechByStatData : NMSTemplate
     {
         [NMS(Index = 0)]

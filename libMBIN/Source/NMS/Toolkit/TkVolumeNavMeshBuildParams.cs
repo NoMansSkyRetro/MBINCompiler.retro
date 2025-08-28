@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x9A1B3CAE8EB2268B, NameHash = 0x253FE95)]
+    [NMS(GUID = 0xB448D44748C9171, NameHash = 0x253FE95)]
     public class TkVolumeNavMeshBuildParams : NMSTemplate
     {
         [NMS(Index = 1)]
@@ -12,12 +12,12 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 6)]
         /* 0x20 */ public TkNavMeshBuildParams BaseParams;
         [NMS(Index = 4)]
-        /* 0x50 */ public float CellsPerUnitHeight;
+        /* 0x54 */ public float CellsPerUnitHeight;
         [NMS(Index = 3)]
-        /* 0x54 */ public float CellsPerUnitWidth;
+        /* 0x58 */ public float CellsPerUnitWidth;
         [NMS(Index = 5)]
-        /* 0x58 */ public int NumBorderCells;
+        /* 0x5C */ public int NumBorderCells;
         [NMS(Index = 2)]
-        /* 0x5C */ public float TileSize;
+        /* 0x60 */ public float TileSize;
     }
 }

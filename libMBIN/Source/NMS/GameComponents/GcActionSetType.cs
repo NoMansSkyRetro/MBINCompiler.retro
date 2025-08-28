@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x6C797FA99FF4734, NameHash = 0x7BFD50A3)]
+    [NMS(GUID = 0xD4EDB25BA2E4BB7F, NameHash = 0x7BFD50A3)]
     public class GcActionSetType : NMSTemplate
     {
-        // size: 0x28
+        // size: 0x2E
         public enum ActionSetTypeEnum : uint {
             None,
             FRONTEND,
@@ -45,6 +45,12 @@ namespace libMBIN.NMS.GameComponents
             BuildMenuPlacementMode,
             BuildMenuPlacementMode_Right,
             BuildMenuPlacementMode_Left,
+            BuildMenuBiggsSelection,
+            BuildMenuBiggsSelection_Right,
+            BuildMenuBiggsSelection_Left,
+            BuildMenuBiggsPlacement,
+            BuildMenuBiggsPlacement_Right,
+            BuildMenuBiggsPlacement_Left,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public ActionSetTypeEnum ActionSetType;

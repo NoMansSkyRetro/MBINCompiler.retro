@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x97BF55A22BE18E7A, NameHash = 0x795297DD)]
+    [NMS(GUID = 0x827EA400479A8F7, NameHash = 0x795297DD)]
     public class GcCameraFocusBuildingControlSettings : NMSTemplate
     {
         [NMS(Index = 5)]

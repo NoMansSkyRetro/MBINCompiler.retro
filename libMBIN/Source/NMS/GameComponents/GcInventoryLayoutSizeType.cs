@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC0E60DAE4E284E41, NameHash = 0x33060745)]
+    [NMS(GUID = 0x5988468BEE72BE66, NameHash = 0x33060745)]
     public class GcInventoryLayoutSizeType : NMSTemplate
     {
-        // size: 0x2B
+        // size: 0x2D
         public enum SizeTypeEnum : uint {
             SciSmall,
             SciMedium,
@@ -48,6 +48,8 @@ namespace libMBIN.NMS.GameComponents
             FishBaitBox,
             FishingPlatform,
             FoodUnit,
+            Corvette,
+            CorvetteStorage,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public SizeTypeEnum SizeType;

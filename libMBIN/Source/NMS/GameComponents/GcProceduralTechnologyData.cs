@@ -3,26 +3,26 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBFAE98857F002B53, NameHash = 0x4F77FA42)]
+    [NMS(GUID = 0x6B30F1CA23B2D192, NameHash = 0x4F77FA42)]
     public class GcProceduralTechnologyData : NMSTemplate
     {
         [NMS(Index = 7)]
         /* 0x000 */ public Colour Colour;
-        [NMS(Index = 13)]
+        [NMS(Index = 14)]
         /* 0x010 */ public Colour UpgradeColour;
         [NMS(Index = 2)]
         /* 0x020 */ public NMSString0x20A Group;
         [NMS(Index = 0)]
         /* 0x040 */ public NMSString0x10 ID;
-        [NMS(Index = 14)]
+        [NMS(Index = 15)]
         /* 0x050 */ public List<GcProceduralTechnologyStatLevel> StatLevels;
         [NMS(Index = 1)]
         /* 0x060 */ public NMSString0x10 Template;
         [NMS(Index = 9)]
         /* 0x070 */ public GcProceduralTechnologyCategory Category;
-        [NMS(Index = 11)]
+        [NMS(Index = 12)]
         /* 0x074 */ public int NumStatsMax;
-        [NMS(Index = 10)]
+        [NMS(Index = 11)]
         /* 0x078 */ public int NumStatsMin;
         // size: 0x8
         public enum QualityEnum : uint {
@@ -37,7 +37,7 @@ namespace libMBIN.NMS.GameComponents
         }
         [NMS(Index = 8)]
         /* 0x07C */ public QualityEnum Quality;
-        [NMS(Index = 12)]
+        [NMS(Index = 13)]
         /* 0x080 */ public GcWeightingCurve WeightingCurve;
         [NMS(Index = 6)]
         /* 0x084 */ public NMSString0x80 Description;
@@ -47,5 +47,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x184 */ public NMSString0x80 NameLower;
         [NMS(Index = 5)]
         /* 0x204 */ public NMSString0x80 Subtitle;
+        [NMS(Index = 10)]
+        /* 0x284 */ public bool IsBiggsProcTech;
     }
 }

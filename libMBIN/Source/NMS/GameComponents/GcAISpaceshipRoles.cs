@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9F25CC9E0CC836BF, NameHash = 0xA200B6EB)]
+    [NMS(GUID = 0x1C14C978586F4400, NameHash = 0xA200B6EB)]
     public class GcAISpaceshipRoles : NMSTemplate
     {
-        // size: 0x7
+        // size: 0x8
         public enum AIShipRoleEnum : uint {
             Standard,
             PlayerSquadron,
@@ -12,6 +12,7 @@ namespace libMBIN.NMS.GameComponents
             SmallFreighter,
             TinyFreighter,
             Frigate,
+            Biggs,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public AIShipRoleEnum AIShipRole;

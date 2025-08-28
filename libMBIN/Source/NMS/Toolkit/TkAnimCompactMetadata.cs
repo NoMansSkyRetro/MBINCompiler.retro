@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x5A0AA2B73EDD162, NameHash = 0x4AB76B4A)]
+    [NMS(GUID = 0x53B95A2F107051A2, NameHash = 0x4AB76B4A)]
     public class TkAnimCompactMetadata : NMSTemplate
     {
         [NMS(Index = 2)]

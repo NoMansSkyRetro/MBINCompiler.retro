@@ -9,6 +9,7 @@ namespace libMBIN.NMS
         public float X;
         public float Y;
         public float Z;
+        public readonly float W = 1.0f;
 
         public Vector3f(float x, float y, float z)
         {

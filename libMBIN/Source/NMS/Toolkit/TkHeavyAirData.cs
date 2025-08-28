@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x8FE1DEB5DEB9DC9F, NameHash = 0x6522C6AC)]
+    [NMS(GUID = 0x880FCBADA158F525, NameHash = 0x6522C6AC)]
     public class TkHeavyAirData : NMSTemplate
     {
         [NMS(Index = 18, MxmlName = "Amplitude Max")]

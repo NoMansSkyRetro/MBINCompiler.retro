@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC3313009AA846ACB, NameHash = 0xADE60E03)]
+    [NMS(GUID = 0xE26E00CBBAD7D87F, NameHash = 0xADE60E03)]
     public class GcCombatEffectType : NMSTemplate
     {
         // size: 0x6

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x336F978895A1C9E2, NameHash = 0xA74B7A4C)]
+    [NMS(GUID = 0xE753B0E2EB9E873F, NameHash = 0xA74B7A4C)]
     public class GcButtonSpawn : NMSTemplate
     {
         [NMS(Index = 2)]

@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x41CB54FCD5CA0584, NameHash = 0x26A0D337)]
+    [NMS(GUID = 0x1922F3F6B0425433, NameHash = 0x26A0D337)]
     public class GcInputActions : NMSTemplate
     {
-        // size: 0x123
+        // size: 0x12B
         public enum InputActionEnum : uint {
             Invalid,
             Player_Forward,
@@ -108,6 +108,11 @@ namespace libMBIN.NMS.GameComponents
             Build_AnalogueScale,
             Build_SelectionMode,
             Build_Camera,
+            Build_Orbit,
+            Build_Quit,
+            Build_ToggleCatalogue,
+            Build_Purchase,
+            Build_Flip,
             Photo_Hide,
             Photo_Sun,
             Photo_Cam,
@@ -270,6 +275,7 @@ namespace libMBIN.NMS.GameComponents
             BaseBuilding_ToggleWiring,
             BaseBuilding_Paint,
             BaseBuilding_NextPart,
+            Player_TagMarker,
             TogglePause,
             TogglePlanet,
             ToggleFreezeCulling,
@@ -295,7 +301,9 @@ namespace libMBIN.NMS.GameComponents
             SwitchRegionAxis,
             OpenLog,
             DumpVertStats,
-            Player_TagMarker,
+            ToggleDebugCamera,
+            ReturnToPlayer,
+            SetTimeOfDay,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public InputActionEnum InputAction;

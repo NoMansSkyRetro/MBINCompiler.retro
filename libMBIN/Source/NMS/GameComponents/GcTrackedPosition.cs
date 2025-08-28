@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBC47C1C08FA2BEE1, NameHash = 0xF9224EEE)]
+    [NMS(GUID = 0xC84B53D85DD07B6C, NameHash = 0xF9224EEE)]
     public class GcTrackedPosition : NMSTemplate
     {
         // size: 0x4

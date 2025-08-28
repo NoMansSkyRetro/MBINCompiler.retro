@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCA9AC36BBC64454D, NameHash = 0xB2FCF6E3)]
+    [NMS(GUID = 0xF1224ECCEEFC77E, NameHash = 0xB2FCF6E3)]
     public class GcBaseBuildingPartStyle : NMSTemplate
     {
-        // size: 0x8
+        // size: 0x34
         public enum StyleEnum : uint {
             None,
             Wood,
@@ -13,6 +13,50 @@ namespace libMBIN.NMS.GameComponents
             Timber,
             Fibreglass,
             Builders,
+            BIGGS_A,
+            BIGGS_B,
+            BIGGS_C,
+            BIGGS_D,
+            BIGGS_Empty0,
+            BIGGS_Toilet0,
+            BIGGS_Kitchen0,
+            BIGGS_Bunk0,
+            BIGGS_Cargo0,
+            BIGGS_Cargo1,
+            BIGGS_Cargo2,
+            BIGGS_Cargo3,
+            BIGGS_Cargo4,
+            BIGGS_Cargo5,
+            BIGGS_Cargo6,
+            BIGGS_Cargo7,
+            BIGGS_Cargo8,
+            BIGGS_Cargo9,
+            BIGGS_Med0,
+            BIGGS_Tech0,
+            BIGGS_Tech1,
+            BIGGS_Window0,
+            BIGGS_Window1,
+            BIGGS_Window2,
+            BIGGS_Planter0,
+            BIGGS_STR_A,
+            BIGGS_STR_B,
+            BIGGS_STR_C,
+            BIGGS_STR_D,
+            BIGGS_STR_E,
+            BIGGS_STR_F,
+            BIGGS_STR_G,
+            BIGGS_STR_H,
+            BIGGS_STR_I,
+            BIGGS_STR_J,
+            BIGGS_STR_K,
+            BIGGS_STR_L,
+            BIGGS_STR_M,
+            BIGGS_STR_N,
+            BIGGS_STR_O,
+            BIGGS_STR_P,
+            BIGGS_STR_Q,
+            BIGGS_STR_R,
+            BIGGS_STR_S,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public StyleEnum Style;

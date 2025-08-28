@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xA4482DB5131A058C, NameHash = 0x80C899CB)]
+    [NMS(GUID = 0x9D3922817B5D38AC, NameHash = 0x80C899CB)]
     public class TkNavMeshAreaFlagNavigability : NMSTemplate
     {
         [NMS(Index = 1)]

@@ -5,7 +5,7 @@ namespace libMBIN.NMS.GameComponents
     [NMS(GUID = 0x7FD24CB9E468CDF4, NameHash = 0x6CA73DFD)]
     public class GcCreatureParticleEffectTrigger : NMSTemplate
     {
-        // size: 0x6
+        // size: 0x7
         [Flags]
         public enum CreatureParticleEffectTriggerEnum : uint {
             None = 0x0,
@@ -14,6 +14,7 @@ namespace libMBIN.NMS.GameComponents
             Death = 0x4,
             Ragdoll = 0x8,
             Appear = 0x10,
+            Disappear = 0x20,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public CreatureParticleEffectTriggerEnum CreatureParticleEffectTrigger;

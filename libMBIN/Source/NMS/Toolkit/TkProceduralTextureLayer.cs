@@ -3,18 +3,20 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xA78931B670028A05, NameHash = 0x835BEB69)]
+    [NMS(GUID = 0xF74C279AA70653A4, NameHash = 0x835BEB69)]
     public class TkProceduralTextureLayer : NMSTemplate
     {
         [NMS(Index = 2)]
         /* 0x00 */ public NMSString0x10 Group;
-        [NMS(Index = 0)]
-        /* 0x10 */ public NMSString0x10 Name;
         [NMS(Index = 4)]
-        /* 0x20 */ public List<TkProceduralTexture> Textures;
+        /* 0x10 */ public NMSString0x10 LinkedLayer;
+        [NMS(Index = 0)]
+        /* 0x20 */ public NMSString0x10 Name;
+        [NMS(Index = 5)]
+        /* 0x30 */ public List<TkProceduralTexture> Textures;
         [NMS(Index = 1)]
-        /* 0x30 */ public float Probability;
+        /* 0x40 */ public float Probability;
         [NMS(Index = 3)]
-        /* 0x34 */ public bool SelectToMatchBase;
+        /* 0x44 */ public bool SelectToMatchBase;
     }
 }
