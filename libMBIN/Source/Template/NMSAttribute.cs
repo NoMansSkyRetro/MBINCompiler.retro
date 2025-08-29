@@ -7,8 +7,6 @@ namespace libMBIN
     {
         public int Size { get; set; }
         public bool Ignore { get; set; }
-        [Obsolete( "Use EnumType instead." )]
-        public string[] EnumValue { get; set; }
         public Type EnumType { get; set; }
         public int Alignment { get; set; }
         public ulong GUID { get; set; }

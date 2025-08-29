@@ -136,6 +136,7 @@ NAME_MAPPING = {
     'GCHUDEffectRewardData': 'GcHUDEffectRewardData',
 }
 # Flag enums fixes
+# TODO: This could be fragile...
 FLAG_ENUM_FIXES = {
     'false_positives': [],
     'false_negatives': [
@@ -143,6 +144,8 @@ FLAG_ENUM_FIXES = {
         'CollisionGroup',
         'MetadataReadMask',
         'InputActionInfoFlags',
+        'CorvettePartCategory',
+        'Enum',
     ],
 }
 # Lookup for classes with extra attributes.

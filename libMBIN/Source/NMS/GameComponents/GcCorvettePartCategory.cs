@@ -1,9 +1,12 @@
+using System;
+
 namespace libMBIN.NMS.GameComponents
 {
     [NMS(GUID = 0xDB079C4BED907F43, NameHash = 0x42559895)]
     public class GcCorvettePartCategory : NMSTemplate
     {
         // size: 0xD
+        [Flags]
         public enum CorvettePartCategoryEnum : uint {
             None = 0x0,
             Cockpit = 0x1,

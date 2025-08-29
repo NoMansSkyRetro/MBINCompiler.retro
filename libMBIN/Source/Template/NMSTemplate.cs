@@ -1412,53 +1412,35 @@ namespace libMBIN
         /// If the field is not an EnumArray, the names of the indices will be null.
         /// </summary>
         private static string[] GetEnumNames( string fieldName, int arrayLength, NMSAttribute settings ) {
-            // TODO: refactor this once EnumValue is no longer used.
-
             // handle EnumArray names
             string[] names = new string[arrayLength]; // default is all nulls
-
+            int length = 0;
             Type enumType = settings?.EnumType;
-            string[] enumValues = settings?.EnumValue;
-            int length = enumValues?.Length ?? 0; // TODO: deprecated
             if ( enumType != null ) { // has EnumType setting
                 if ( !enumType.IsEnum ) {
                     throw new APIException( $"Invalid type: {enumType}\n" +
                                             $"The EnumType attribute for {fieldName} must be an Enum type!" );
                 }
                 names = Enum.GetNames( enumType );
+                if (enumType.IsDefined(typeof(FlagsAttribute), inherit: false)) {
+                    // For flag types, we don't want the first element.
+                    List<string> list = new List<string>(names);
+                    list.RemoveAt(0); // Removes the element at index 0 (the first element)
+                    names = list.ToArray();
+                }
                 length = names.Length;
-
-            // TODO: deprecated
-            } else if ( length != 0 ) { // has EnumValue setting
-                length = Math.Min( names.Length, length ); // make sure we don't go out of bounds
-                for ( int i = 0; i < length; i++ ) names[i] = enumValues[i];
             }
 
-            if ( (length == 0) && (arrayLength == 0) ) { // invalid, can't determine array size
+            if ( (length == 0) && (arrayLength == 0) ) {
+                // Invalid, can't determine array size
                 throw new APIException( $"The array {fieldName} must have an NMSAttribute with a Size or EnumType setting" );
 
-            } else if ( length != 0 ) { // is EnumArray
-                // validate that length matches, unless arrayLength is 0 (auto/don't care)
+            } else if ( length != 0 ) {
+                // Validate that length matches, unless arrayLength is 0 (auto/don't care)
                 if ( (arrayLength != 0) && (arrayLength != length) ) {
                     string enumTypeName = enumType?.ToString() ?? "EnumValue";
                     EmitWarning( $"The defined Size for {fieldName} does not match the length of {enumTypeName}!\n" +
                                             $"{"0x" + arrayLength.ToString("X")} != {"0x" + length.ToString("X")}" );
-                }
-
-                // if the field has both an EnumType and EnumValue setting, then make sure they match
-                if ( (enumType != null) && (enumValues != null)) {
-                    var enumTypeNames  = Enum.GetNames( enumType );
-                    if ( enumTypeNames.Length != enumValues.Length ) {
-                        EmitWarning( $"{fieldName}: The length of EnumType != EnumValue.Length!" );
-#if DEBUG
-                    } else {
-                        throw new APIException( $"{fieldName}: EnumType and EnumValue match. Remove EnumValue" );
-#endif
-                    }
-
-                    for ( int i = 0; i < enumValues.Length; i++ ) {
-                        if ( enumTypeNames[i] != enumValues[i] ) EmitWarning( $"{fieldName}: EnumType does not match EnumValue!" );
-                    }
                 }
             }
 
@@ -1550,9 +1532,6 @@ namespace libMBIN
 
                         string[] values = (string[]) valuesMethod.Invoke( template, null );
                         return Array.FindIndex( values, v => v == xmlProperty.Value );
-                    //} else if (settings?.EnumValue != null) {
-                    //    if (String.IsNullOrEmpty(xmlProperty.Value)) return -1;
-                    //    return Array.FindIndex(settings.EnumValue, v => v == xmlProperty.Value);
                     } else {
                         return int.Parse( xmlProperty.Value );
                     }
