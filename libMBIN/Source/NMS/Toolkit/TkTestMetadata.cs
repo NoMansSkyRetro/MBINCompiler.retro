@@ -5,7 +5,7 @@ using System;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x8BB078599CAD9C0B, NameHash = 0x69A0FDE1)]
+    [NMS(GUID = 0x42D2E0F9FE41AF33, NameHash = 0x69A0FDE1)]
     public class TkTestMetadata : NMSTemplate
     {
         [NMS(Index = 47)]
@@ -18,7 +18,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x0030 */ public Vector4f TestVector4;
         [NMS(Index = 2)]
         /* 0x0040 */ public TkTrophyEntry TestClass;
-        [NMS(Index = 53, Size = 0x5, EnumType = typeof(TkTestBitFieldEnum.EnumEnum))]
+        [NMS(Index = 53, Size = 0x4, EnumType = typeof(TkTestBitFieldEnum.EnumEnum))]
         /* 0x00B8 */ public NMSString0x10[] TestExternalBitfieldEnumArray;
         [NMS(Index = 54, KeyField = "Id")]
         /* 0x00F8 */ public HashMap<TkLocalisationEntry> TestHashMap;

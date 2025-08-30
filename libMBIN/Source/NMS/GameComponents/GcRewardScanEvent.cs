@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x4E535A6856D95FEF, NameHash = 0x99900E77)]
+    [NMS(GUID = 0xB64CD6FC80BD13CB, NameHash = 0x99900E77)]
     public class GcRewardScanEvent : NMSTemplate
     {
         [NMS(Index = 0)]
@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 6)]
         /* 0x49 */ public bool ForceSilentFailure;
         [NMS(Index = 3)]
-        /* 0x4A */ public bool UseMissionSeedForEvent;
+        /* 0x4A */ public bool UseMissionIDSeedForEvent;
         [NMS(Index = 5)]
         /* 0x4B */ public bool UseStartDelayWhenNoAerialScan;
     }

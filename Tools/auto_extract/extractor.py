@@ -657,7 +657,6 @@ class NMSClass():
                 self.required_usings.update(field.required_using)
             # Check to make sure the field name isn't the same as the class name:
             if field.field_name == self.name:
-                print(f"The class {self.name} has a field called {field.field_name}")
                 field._has_mxml_name = True
                 field._force_prefix = "_"
             if field.field_name not in self._field_names:
