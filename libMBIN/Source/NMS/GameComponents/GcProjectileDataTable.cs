@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x756A1D06FB1C7D34, NameHash = 0x4BE4494B)]
+    [NMS(GUID = 0xE89FFD17BB7A717E, NameHash = 0x4BE4494B)]
     public class GcProjectileDataTable : NMSTemplate
     {
         [NMS(Index = 1)]
