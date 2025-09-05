@@ -70,6 +70,13 @@ MBINCompiler has a number of arguments that can be called from the command line 
 
 There are also a number of other options that can be passed to the executable in most modes. To see all the details call `MBINCompiler.exe help` to see the help details.
 
+### Running on linux
+
+MBINCompiler provides pre-built binaries for linux. These do not require mono to be run but will require the dotnet framework to be installed on your system.
+
+To run the binary simply call it directly (eg. `MBINCompiler ./path/to/file.MBIN`) and this will convert the provided file.
+See above for any extra command line arguments.
+
 ## SUBMITTING BUG REPORTS
 
 If you run into errors, in most cases the errors are because:
@@ -112,7 +119,7 @@ For anyone helping to develop MBINCompiler, if you are contributing new structs 
 
 ### Requirements
 
-To run the tests you will need python installed and on the path. It is recommended you get a recent version (3.7 or above).
+To run the tests you will need python installed and on the path. It is recommended you get a recent version (3.9 or above).
 The required dependencies are `pytest` and `requests`. These can be installed by entering `python -m pip install -U pytest requests` in your favorite command line program.
 Before running the tests, you need to have built a `Release` version of MBINCompiler locally.
 

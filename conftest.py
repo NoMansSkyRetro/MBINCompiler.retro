@@ -93,13 +93,7 @@ def convert_files():
     if not op.exists(mbincompiler_path):
         pytest.fail(f"MBINCompiler can't be found at the following path: {mbincompiler_path}", False)
 
-    if platform == 'linux-x64':
-        # need to run with mono on linux
-        # Build path also includes platform on the CI
-        cmd = ['sudo', 'mono', mbincompiler_path, '-q', '-y']
-    else:
-        cmd = [mbincompiler_path, '-q', '-y']
-    cmd.append('--force')
+    cmd = [mbincompiler_path, '-q', '-y', '--force']
 
     datapath = os.environ.get('datapath', DATA_PATH)
 
