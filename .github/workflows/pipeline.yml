@@ -25,6 +25,12 @@ jobs:
         dotnet: [{framework: 'net6.0', version: '6.0.0'}, {framework: 'net7.0', version: '7.0.0'}]
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v5
+        with:
+          # Install both sdk versions.
+          dotnet-version: |
+            6.0.100
+            7.0.100
       - name: Build ${{ matrix.os.name }}-dotnet ${{ matrix.dotnet }} binaries
         run: |
           sed -i '\|<TargetFrameworks>net6.0;net7.0</TargetFrameworks>|a\    <RuntimeFrameworkVersion>${{ matrix.dotnet.version }}</RuntimeFrameworkVersion>' ./MBINCompiler/MBINCompiler.csproj
