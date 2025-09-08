@@ -112,6 +112,11 @@ dotnet publish -c Release -f net6.0-windows -r win-x64 -o Build/Release/net6/ /n
 
 For convenience we have included two batch scripts which build either the entire project for the .NET 6 framework (`build-net6.bat`) or the .NET 7 framework (`build-net7.bat`)
 
+## Installing python dependencies
+
+The unit tests and auto-extractor scripts are written in python.
+The easiest way to set up the correct environment to run the tests is to install [uv](https://github.com/astral-sh/uv). You can do this by running `python -m pip install -U uv`.
+Once run, you can run `uv sync` to install all the required dependencies.
 
 ## TESTING INSTRUCTIONS
 
@@ -119,13 +124,13 @@ For anyone helping to develop MBINCompiler, if you are contributing new structs 
 
 ### Requirements
 
-To run the tests you will need python installed and on the path. It is recommended you get a recent version (3.9 or above).
-The required dependencies are `pytest` and `requests`. These can be installed by entering `python -m pip install -U pytest requests` in your favorite command line program.
 Before running the tests, you need to have built a `Release` version of MBINCompiler locally.
+You can do this by running `dotnet publish --no-self-contained -c Release -f net6.0 -r win-x64 /nowarn:cs0618 /nowarn:cs0169 /nowarn:cs0414` (change dotnet and framework version as required).
+See section above about building for more details.
 
 ### Running the tests
 
-Open a command line window in the root MBINCompiler directory and enter `python -m pytest`.
+Open a command line window in the root MBINCompiler directory and enter `uv run python -m pytest`.
 This will pull the latest test data into the directory `./tests/data`.
 
 #### Command line arguments:
@@ -148,6 +153,13 @@ This will pull the latest test data into the directory `./tests/data`.
 Use of `--use_cache=True` should only be done if you are 100% sure that the local data is up to date with the external test data as the tests run on the CI will pull the external test data every time.
 
 `--datapath` is primarily used for running tests on folder of data files to test which files pass or fail for the updating of the `MBINCompiler-test-data` repository. This option can however be used to point the tests at any other directory (such as an unpacked PCBANKS directory or sub-folder to run the tests on any of the games' files.)
+
+## Running the auto-extractor
+
+MBINCompiler has a script which can be used to automatically extract the latest .cs files for the current game version.
+To run this simply run `uv run python ./Tools/auto_extract/extractor.py`
+This will run the game and extract all the files as required.
+Note that this will overwrite the files in the local folder, so it's recommended to either back up your local files or create a new branch if you have cloned this repo.
 
 ## CREDITS
 Original project thanks to Emoose: https://github.com/emoose/MBINCompiler

@@ -18,6 +18,9 @@ from jinja2 import Template
 import pymem
 
 
+CWD = op.dirname(__file__)
+
+
 GUID_REGEX = re.compile(r'GUID = (0x[a-fA-F0-9]+)')
 
 RESTRICTED_NAMES = (
@@ -886,7 +889,7 @@ if __name__ == '__main__':
             _guid_hash = 0
             for guid in guids:
                 _guid_hash = (_guid_hash ^ guid) & 0xFFFFFFFFFFFFFFFF
-            with open(f'guids_{fmt_hex(_guid_hash)}.json', 'w') as f:
+            with open(op.join(CWD, f'guids_{fmt_hex(_guid_hash)}.json'), 'w') as f:
                 f.write(json.dumps(class_guid_mapping))
         for cls_ in classes:
             # Before writing out, loop over the fields of the class also to
