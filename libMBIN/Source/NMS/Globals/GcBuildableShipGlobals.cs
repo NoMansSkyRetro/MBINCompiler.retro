@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x34F29A47753EE2DC, NameHash = 0xCA24B3F1)]
+    [NMS(GUID = 0x59635FDBEA1BC41C, NameHash = 0xCA24B3F1)]
     public class GcBuildableShipGlobals : NMSTemplate
     {
         [NMS(Index = 2)]
@@ -21,5 +21,7 @@ namespace libMBIN.NMS.Globals
         /* 0x420 */ public int ComplexityLimitWarning;
         [NMS(Index = 4)]
         /* 0x424 */ public int ComplexityLimitWarningNX;
+        [NMS(Index = 7)]
+        /* 0x428 */ public float SpawnOnRemoteCorvetteRequiredPartsRenderingDistance;
     }
 }
