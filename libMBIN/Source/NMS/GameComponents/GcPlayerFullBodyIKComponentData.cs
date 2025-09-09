@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7717573735889F0, NameHash = 0x3ADC9403)]
+    [NMS(GUID = 0x95F082820AD5873E, NameHash = 0x3ADC9403)]
     public class GcPlayerFullBodyIKComponentData : NMSTemplate
     {
         [NMS(Index = 4)]
@@ -16,14 +16,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x2B0 */ public List<NMSString0x20> HandBones;
         [NMS(Index = 2)]
         /* 0x2C0 */ public List<GcIKConstraint> HeadConstraints;
-        [NMS(Index = 10)]
+        [NMS(Index = 11)]
         /* 0x2D0 */ public List<GcCreatureIkData> JointDataDeprecated;
         [NMS(Index = 3)]
         /* 0x2E0 */ public List<GcIKConstraint> LegConstraints;
         [NMS(Index = 5)]
         /* 0x2F0 */ public List<GcIKConstraint> RestrictConstraints;
-        [NMS(Index = 12)]
+        [NMS(Index = 13)]
         /* 0x300 */ public GcCharacterLookAtData LookAtSettings;
+        [NMS(Index = 9)]
+        /* 0x334 */ public float DisableDistanceSq;
         // size: 0x6
         public enum PlayerHeadUpAxisEnum : uint {
             X,
@@ -33,13 +35,13 @@ namespace libMBIN.NMS.GameComponents
             Z,
             ZNeg,
         }
-        [NMS(Index = 9)]
-        /* 0x334 */ public PlayerHeadUpAxisEnum PlayerHeadUpAxis;
+        [NMS(Index = 10)]
+        /* 0x338 */ public PlayerHeadUpAxisEnum PlayerHeadUpAxis;
         [NMS(Index = 0)]
-        /* 0x338 */ public bool Enabled;
+        /* 0x33C */ public bool Enabled;
         [NMS(Index = 1)]
-        /* 0x339 */ public bool EnableFootRaycasts;
-        [NMS(Index = 11)]
-        /* 0x33A */ public bool UseFootGlue;
+        /* 0x33D */ public bool EnableFootRaycasts;
+        [NMS(Index = 12)]
+        /* 0x33E */ public bool UseFootGlue;
     }
 }
