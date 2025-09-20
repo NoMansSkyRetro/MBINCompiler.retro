@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7332D2AF49789221, NameHash = 0xEDA97B90)]
+    [NMS(GUID = 0x15CD4DDB801C8A7, NameHash = 0xEDA97B90)]
     public class GcRealityManagerData : NMSTemplate
     {
         [NMS(Index = 63, Size = 0x9, EnumType = typeof(GcRealitySubstanceCategory.SubstanceCategoryEnum))]
@@ -175,23 +175,23 @@ namespace libMBIN.NMS.GameComponents
         /* 0x6E58 */ public VariableSizeString UnlockableTwitchRewardsTable;
         [NMS(Index = 67, Size = 0xCE, EnumType = typeof(GcStatsTypes.StatsTypeEnum))]
         /* 0x6E68 */ public GcMinMaxFloat[] FoodStatValues;
-        [NMS(Index = 24, Size = 0x98, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
+        [NMS(Index = 24, Size = 0x99, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
         /* 0x74D8 */ public GcAlienPuzzleTableIndex[] InteractionPuzzlesIndexTypes;
         [NMS(Index = 2, Size = 0x11, EnumType = typeof(GcDiscoveryType.DiscoveryTypeEnum))]
-        /* 0x7738 */ public GcDiscoveryWorth[] DiscoveryWorth;
+        /* 0x773C */ public GcDiscoveryWorth[] DiscoveryWorth;
         [NMS(Index = 85, Size = 0x5)]
-        /* 0x7914 */ public float[] NormalisedPriceLimits;
+        /* 0x7918 */ public float[] NormalisedPriceLimits;
         [NMS(Index = 3, Size = 0x4, EnumType = typeof(GcCreatureSizeClasses.CreatureSizeClassEnum))]
-        /* 0x7928 */ public float[] CreatureDiscoverySizeMultiplier;
+        /* 0x792C */ public float[] CreatureDiscoverySizeMultiplier;
         [NMS(Index = 59, Size = 0x3, EnumType = typeof(GcRarity.RarityEnum))]
-        /* 0x7938 */ public float[] WeightedTextWeights;
+        /* 0x793C */ public float[] WeightedTextWeights;
         [NMS(Index = 0)]
-        /* 0x7944 */ public ushort HomeRealityIteration;
+        /* 0x7948 */ public ushort HomeRealityIteration;
         [NMS(Index = 1)]
-        /* 0x7946 */ public ushort RealityIteration;
-        [NMS(Index = 23, Size = 0x98, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
-        /* 0x7948 */ public bool[] LoopInteractionPuzzles;
+        /* 0x794A */ public ushort RealityIteration;
+        [NMS(Index = 23, Size = 0x99, EnumType = typeof(GcInteractionType.InteractionTypeEnum))]
+        /* 0x794C */ public bool[] LoopInteractionPuzzles;
         [NMS(Index = 25, Size = 0x7, EnumType = typeof(GcWeightingCurve.WeightingCurveEnum))]
-        /* 0x79E0 */ public TkCurveType[] WeightingCurves;
+        /* 0x79E5 */ public TkCurveType[] WeightingCurves;
     }
 }

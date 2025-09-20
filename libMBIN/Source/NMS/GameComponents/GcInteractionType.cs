@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x648A1FEE45936C01, NameHash = 0x3780BAA2)]
+    [NMS(GUID = 0x385E6EE6329FA33C, NameHash = 0x3780BAA2)]
     public class GcInteractionType : NMSTemplate
     {
-        // size: 0x98
+        // size: 0x99
         public enum InteractionTypeEnum : uint {
             None,
             Shop,
@@ -157,6 +157,7 @@ namespace libMBIN.NMS.GameComponents
             EditShip,
             CorvetteTeleport,
             CorvetteTeleportReturn,
+            CorvetteMissionBoard,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public InteractionTypeEnum InteractionType;
