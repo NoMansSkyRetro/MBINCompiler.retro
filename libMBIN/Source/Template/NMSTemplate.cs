@@ -1367,6 +1367,8 @@ namespace libMBIN
                             Name = fieldName
                         };
 
+                        arrayProperty.Array = field.GetCustomAttribute<NMSAttribute>()?.Size.ToString();
+
                         Array array = (Array) value;
                         string[] names = GetEnumNames( field.Name, array.Length, settings );
                         i = 0;
