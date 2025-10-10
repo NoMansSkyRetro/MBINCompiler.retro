@@ -29,7 +29,7 @@ namespace libMBIN
                 result += $" linked=\"{this.Linked}\"";
             }
             if (this.Array != null) {
-                result += $" array=\"{this.Array}\"";
+                result += $" array_size=\"{this.Array}\"";
             }
             result += ">";
             return result;

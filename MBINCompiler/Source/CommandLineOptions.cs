@@ -28,6 +28,7 @@ namespace MBINCompiler
             public static List<string> optExcludeFilters = null;
             public static HeaderFormat optFormatVersion  = HeaderFormat.V4;
             public static bool optUseThreads             = true;
+            public static bool optTyped                  = false;
         }
 
         // --debug
@@ -79,6 +80,9 @@ namespace MBINCompiler
 
         // --no-threads
         public static bool UseThreads { get => optUseThreads; internal set => optUseThreads = value; }
+
+        // --typed
+        public static bool IncludeTypedInfo { get => optTyped; internal set => optTyped = value; }
 
         public static readonly List<Option> OPTIONS_GENERAL = new List<Option> {
             new Option { shortName = 'q', longName = "quiet",
@@ -155,6 +159,8 @@ namespace MBINCompiler
             new Option { longName = "no-threads", isHidden = true, description = "Disable multi-threading." },
 
             new Option { longName = "stream", description = "Enable sending MXML to Console." },
+
+            new Option { longName = "typed", description = "Enable typed information in MXML." },
         };
         
         public static readonly List<Option> OPTIONS_LIST = new List<Option> {

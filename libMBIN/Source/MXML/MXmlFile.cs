@@ -86,18 +86,19 @@ namespace libMBIN
             }
         }
 
-        /// <summary>
-        /// Writes the NMSTemplate object to an .mxml file.
-        /// </summary>
-        /// <param name="outputpath">The location to write the .mxml file.</param>
-        /// <param name="hideVersionInfo">version info is written to the MXML file.</param>
-        public static string WriteTemplate(NMSTemplate template) => WriteTemplate(template, false);
+        ///// <summary>
+        ///// Writes the NMSTemplate object to an .mxml file.
+        ///// </summary>
+        ///// <param name="outputpath">The location to write the .mxml file.</param>
+        ///// <param name="hideVersionInfo">version info is written to the MXML file.</param>
+        //public static string WriteTemplate(NMSTemplate template) => WriteTemplate(template, false);
         /// <summary>
         /// Writes the NMSTemplate object to an .mxml file.
         /// </summary>
         /// <param name="outputpath">The location to write the .mxml file.</param>
         /// <param name="hideVersionInfo">If true, version info is not written to the MXML file.</param>
-        public static string WriteTemplate(NMSTemplate template, bool hideVersionInfo)
+        /// <param name="IncludeTypedInfo">If true, typed info is written to the MXML file.</param>
+        public static string WriteTemplate(NMSTemplate template, bool hideVersionInfo, bool IncludeTypedInfo)
         {
             var origCulture = Thread.CurrentThread.CurrentCulture;
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
@@ -114,7 +115,7 @@ namespace libMBIN
                 var ver = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
                 string str_ver = $"{ver.Major}.{ver.Minor:00}.{ver.Build}.{ver.Revision}";
                 if ( !hideVersionInfo ) xmlTextWriter.WriteComment($"File created using MBINCompiler version ({str_ver})");
-                var data = template.SerializeMXml(false);
+                var data = template.SerializeMXml(false, false, IncludeTypedInfo);
                 Serializer.Serialize(xmlTextWriter, data, Namespaces);
                 xmlTextWriter.Flush();
 
