@@ -1367,7 +1367,7 @@ namespace libMBIN
                         } else {
                             template = (NMSTemplate) value;
                         }
-                        var templateXmlData = template.SerializeMXml( true, true, IncludeTypedInfo );
+                        var templateXmlData = template.SerializeMXml( true, false, IncludeTypedInfo );
                         templateXmlData.Name = fieldName;
 
                         return templateXmlData;
