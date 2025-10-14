@@ -9,8 +9,8 @@ namespace libMBIN
         public string Value { get; set; }
         [XmlAttribute("linked")]
         public string Linked { get; set; }
-        [XmlAttribute("array")]
-        public string Array { get; set; }
+        [XmlAttribute("array_size")]
+        public string ArraySize { get; set; }
         [XmlAttribute("_id")]
         public string ID { get; set; }
         [XmlAttribute("_index")]
