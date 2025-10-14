@@ -1378,7 +1378,7 @@ namespace libMBIN
                         };
 
                         if (IncludeTypedInfo) {
-                            arrayProperty.Array = field.GetCustomAttribute<NMSAttribute>()?.Size.ToString();
+                            arrayProperty.ArraySize = field.GetCustomAttribute<NMSAttribute>()?.Size.ToString();
                         }
 
                         Array array = (Array) value;
