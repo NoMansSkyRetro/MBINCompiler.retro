@@ -1193,7 +1193,7 @@ namespace libMBIN
         /// <param name="settings">The settings of the field.</param>
         /// <param name="value">The value of the field.</param>
         /// <param name="isField">NOT USED.</param>
-        /// <param name="IncludeTypeInfo">If true, typed info is written to the MXML file.</param>
+        /// <param name="IncludeTypeInfo">If true, type info is written to the MXML file.</param>
         public MXmlBase SerializeMXmlValue(Type fieldType, FieldInfo field, NMSAttribute settings, object value, bool isField = true, bool IncludeTypeInfo = false)
         {
             string t = fieldType.Name;
@@ -1486,7 +1486,7 @@ namespace libMBIN
         /// </summary>
         /// <param name="isChildTemplate">If true, </param>
         /// <param name="isGenericTemplate">If true, </param>
-        /// <param name="IncludeTypeInfo">If true, typed info is written to the MXML file.</param>
+        /// <param name="IncludeTypeInfo">If true, type info is written to the MXML file.</param>
         public MXmlBase SerializeMXml(bool isChildTemplate, bool isGenericTemplate = false, bool IncludeTypeInfo = false) {
             Type type = GetType();
             string typeName = type.Name != "NMSString0x20A" ? type.Name : "NMSString0x20";
@@ -1827,17 +1827,12 @@ namespace libMBIN
             }
         }
 
-        ///// <summary>
-        ///// Writes the NMSTemplate object to an .mxml file.
-        ///// </summary>
-        ///// <param name="outputpath">The location to write the .mxml file.</param>
-        //public void WriteToMxml(string outputpath) => WriteToMxml(outputpath, false);
         /// <summary>
         /// Writes the NMSTemplate object to an .mxml file.
         /// </summary>
         /// <param name="outputpath">The location to write the .mxml file.</param>
         /// <param name="hideVersionInfo">If true, version info is not written to the MXML file.</param>
-        /// <param name="IncludeTypeInfo">If true, typed info is written to the MXML file.</param>
+        /// <param name="IncludeTypeInfo">If true, type info is written to the MXML file.</param>
         public void WriteToMxml(string outputpath, bool hideVersionInfo, bool IncludeTypeInfo)
         {
             var data = MXmlFile.WriteTemplate(this, hideVersionInfo, IncludeTypeInfo);

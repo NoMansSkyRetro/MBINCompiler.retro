@@ -160,7 +160,7 @@ namespace MBINCompiler
 
             new Option { longName = "stream", description = "Enable sending MXML to Console." },
 
-            new Option { longName = "typed", description = "Enable typed information in MXML." },
+            new Option { longName = "typed", description = "Enable type information in MXML." },
         };
         
         public static readonly List<Option> OPTIONS_LIST = new List<Option> {
