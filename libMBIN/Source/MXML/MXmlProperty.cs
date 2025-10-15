@@ -9,8 +9,8 @@ namespace libMBIN
         public string Value { get; set; }
         [XmlAttribute("linked")]
         public string Linked { get; set; }
-        [XmlAttribute("array")]
-        public string Array { get; set; }
+        [XmlAttribute("array_size")]
+        public string ArraySize { get; set; }
         [XmlAttribute("_id")]
         public string ID { get; set; }
         [XmlAttribute("_index")]
@@ -28,8 +28,8 @@ namespace libMBIN
             if (this.Linked != null) {
                 result += $" linked=\"{this.Linked}\"";
             }
-            if (this.Array != null) {
-                result += $" array_size=\"{this.Array}\"";
+            if (this.ArraySize != null) {
+                result += $" array_size=\"{this.ArraySize}\"";
             }
             result += ">";
             return result;
