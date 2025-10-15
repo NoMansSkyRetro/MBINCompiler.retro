@@ -19,7 +19,7 @@ namespace MBINCompiler.Commands {
             UseThreads   = !options.GetOptionSwitch( "no-threads" );
             StreamToConsole = options.GetOptionSwitch("stream");
             HideVersionInfo = options.GetOptionSwitch("no-version");
-            IncludeTypedInfo   = options.GetOptionSwitch( "typed" );
+            IncludeTypeInfo   = options.GetOptionSwitch( "typed" );
             
             var arg = options.GetOptionArg( "format-version" );
             if ( arg != null ) {

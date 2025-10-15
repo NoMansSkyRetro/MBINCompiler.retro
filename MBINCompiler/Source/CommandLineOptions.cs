@@ -82,7 +82,7 @@ namespace MBINCompiler
         public static bool UseThreads { get => optUseThreads; internal set => optUseThreads = value; }
 
         // --typed
-        public static bool IncludeTypedInfo { get => optTyped; internal set => optTyped = value; }
+        public static bool IncludeTypeInfo { get => optTyped; internal set => optTyped = value; }
 
         public static readonly List<Option> OPTIONS_GENERAL = new List<Option> {
             new Option { shortName = 'q', longName = "quiet",

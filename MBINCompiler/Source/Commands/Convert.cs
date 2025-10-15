@@ -218,7 +218,7 @@ namespace MBINCompiler.Commands {
                 if ( data is null ) throw new InvalidDataException( "Invalid MBIN data." );
 
                 msg = $"Failed serializing {mbin.Header.GetXMLTemplateName()} to MXML.";
-                string mxml = MXmlFile.WriteTemplate(data, HideVersionInfo, IncludeTypedInfo);
+                string mxml = MXmlFile.WriteTemplate(data, HideVersionInfo, IncludeTypeInfo);
 
                 if ( StreamToConsole ) {
                     EmitInfo($"");
