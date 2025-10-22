@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x68A474012F181DBE, NameHash = 0x60BCEB20)]
+    [NMS(GUID = 0x3AE2CD9BB76699C5, NameHash = 0x60BCEB20)]
     public class GcSimpleInteractionComponentData : NMSTemplate
     {
         [NMS(Index = 19)]
@@ -28,34 +28,36 @@ namespace libMBIN.NMS.GameComponents
         /* 0x178 */ public List<GcInteractionBaseBuildingState> BaseBuildingTriggerActions;
         [NMS(Index = 3)]
         /* 0x188 */ public NMSString0x10 Id;
+        [NMS(Index = 41)]
+        /* 0x198 */ public List<int> OnlyActiveDuringSeasons;
         [NMS(Index = 36)]
-        /* 0x198 */ public List<GcPersistencyMissionOverride> PersistencyBufferOverride;
+        /* 0x1A8 */ public List<GcPersistencyMissionOverride> PersistencyBufferOverride;
         [NMS(Index = 35)]
-        /* 0x1A8 */ public List<GcRewardMissionOverride> RewardOverrideTable;
+        /* 0x1B8 */ public List<GcRewardMissionOverride> RewardOverrideTable;
         [NMS(Index = 6)]
-        /* 0x1B8 */ public NMSString0x10 TriggerAction;
+        /* 0x1C8 */ public NMSString0x10 TriggerAction;
         [NMS(Index = 7)]
-        /* 0x1C8 */ public NMSString0x10 TriggerActionOnPrepare;
+        /* 0x1D8 */ public NMSString0x10 TriggerActionOnPrepare;
         [NMS(Index = 8)]
-        /* 0x1D8 */ public NMSString0x10 TriggerActionToggle;
+        /* 0x1E8 */ public NMSString0x10 TriggerActionToggle;
         [NMS(Index = 9)]
-        /* 0x1E8 */ public float DeactivateSimilarInteractionsNearbyRadius;
+        /* 0x1F8 */ public float DeactivateSimilarInteractionsNearbyRadius;
         [NMS(Index = 11)]
-        /* 0x1EC */ public float Delay;
+        /* 0x1FC */ public float Delay;
         [NMS(Index = 17)]
-        /* 0x1F0 */ public int IncreaseCorruptSentinelWanted;
+        /* 0x200 */ public int IncreaseCorruptSentinelWanted;
         [NMS(Index = 16)]
-        /* 0x1F4 */ public int InteractCrimeLevel;
+        /* 0x204 */ public int InteractCrimeLevel;
         [NMS(Index = 1)]
-        /* 0x1F8 */ public float InteractDistance;
+        /* 0x208 */ public float InteractDistance;
         [NMS(Index = 15)]
-        /* 0x1FC */ public float InteractFiendCrimeChance;
+        /* 0x20C */ public float InteractFiendCrimeChance;
         [NMS(Index = 14)]
-        /* 0x200 */ public GcFiendCrime InteractFiendCrimeType;
+        /* 0x210 */ public GcFiendCrime InteractFiendCrimeType;
         [NMS(Index = 4)]
-        /* 0x204 */ public GcRarity Rarity;
+        /* 0x214 */ public GcRarity Rarity;
         [NMS(Index = 31)]
-        /* 0x208 */ public GcDiscoveryType ScanIcon;
+        /* 0x218 */ public GcDiscoveryType ScanIcon;
         // size: 0x27
         public enum SimpleInteractionTypeEnum : uint {
             Interact,
@@ -99,36 +101,36 @@ namespace libMBIN.NMS.GameComponents
             CorvetteRampSwitch,
         }
         [NMS(Index = 0)]
-        /* 0x20C */ public SimpleInteractionTypeEnum SimpleInteractionType;
+        /* 0x21C */ public SimpleInteractionTypeEnum SimpleInteractionType;
         [NMS(Index = 5)]
-        /* 0x210 */ public GcSizeIndicator Size;
+        /* 0x220 */ public GcSizeIndicator Size;
         [NMS(Index = 20)]
-        /* 0x214 */ public GcStatsEnum StatToTrack;
+        /* 0x224 */ public GcStatsEnum StatToTrack;
         [NMS(Index = 32)]
-        /* 0x218 */ public bool ActivateLocatorsFromRarity;
+        /* 0x228 */ public bool ActivateLocatorsFromRarity;
         [NMS(Index = 10)]
-        /* 0x219 */ public bool BroadcastTriggerAction;
+        /* 0x229 */ public bool BroadcastTriggerAction;
         [NMS(Index = 39)]
-        /* 0x21A */ public bool CanCollectInMech;
+        /* 0x22A */ public bool CanCollectInMech;
         [NMS(Index = 40)]
-        /* 0x21B */ public bool DisableAnimationUntilInteract;
+        /* 0x22B */ public bool DisableAnimationUntilInteract;
         [NMS(Index = 12)]
-        /* 0x21C */ public bool HideContents;
+        /* 0x22C */ public bool HideContents;
         [NMS(Index = 13)]
-        /* 0x21D */ public bool InteractIsCrime;
+        /* 0x22D */ public bool InteractIsCrime;
         [NMS(Index = 22)]
-        /* 0x21E */ public bool MustBeVisibleToInteract;
+        /* 0x22E */ public bool MustBeVisibleToInteract;
         [NMS(Index = 23)]
-        /* 0x21F */ public bool NeedsStorm;
+        /* 0x22F */ public bool NeedsStorm;
         [NMS(Index = 18)]
-        /* 0x220 */ public bool NotifyEncounter;
+        /* 0x230 */ public bool NotifyEncounter;
         [NMS(Index = 38)]
-        /* 0x221 */ public bool ReseedOnRewardSuccess;
+        /* 0x231 */ public bool ReseedOnRewardSuccess;
         [NMS(Index = 21)]
-        /* 0x222 */ public bool StartsBuried;
+        /* 0x232 */ public bool StartsBuried;
         [NMS(Index = 2)]
-        /* 0x223 */ public bool Use2dInteractDistance;
+        /* 0x233 */ public bool Use2dInteractDistance;
         [NMS(Index = 37)]
-        /* 0x224 */ public bool UsePersonalPersistentBuffer;
+        /* 0x234 */ public bool UsePersonalPersistentBuffer;
     }
 }

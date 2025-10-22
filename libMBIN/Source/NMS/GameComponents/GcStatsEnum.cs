@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDCE25B63B35B4C90, NameHash = 0xB29233BB)]
+    [NMS(GUID = 0x3AA532B20C668FE9, NameHash = 0xB29233BB)]
     public class GcStatsEnum : NMSTemplate
     {
-        // size: 0x1A
+        // size: 0x1B
         public enum StatEnumEnum : uint {
             None,
             DEPOTS_BROKEN,
@@ -31,6 +31,7 @@ namespace libMBIN.NMS.GameComponents
             SEAGLASS,
             RUINS_LOOTED,
             STONE_KILLS,
+            BIGGSDEBRIS_POI,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public StatEnumEnum StatEnum;
