@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD0A762BC9D47F289, NameHash = 0xDD01DB4B)]
+    [NMS(GUID = 0xC47C32EC9C95B5C0, NameHash = 0xDD01DB4B)]
     public class GcMissionSequenceAudioEvent : NMSTemplate
     {
         [NMS(Index = 2)]

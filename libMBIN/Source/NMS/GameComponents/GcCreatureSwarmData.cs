@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD73FD00E2723E9C6, NameHash = 0xD4C11879)]
+    [NMS(GUID = 0x787CA1E7D90D8378, NameHash = 0xD4C11879)]
     public class GcCreatureSwarmData : NMSTemplate
     {
-        [NMS(Index = 5)]
+        [NMS(Index = 6)]
         /* 0x00 */ public List<GcCreatureSwarmDataParams> Params;
         [NMS(Index = 1)]
         /* 0x10 */ public int MaxCount;
@@ -27,5 +27,7 @@ namespace libMBIN.NMS.GameComponents
         }
         [NMS(Index = 4)]
         /* 0x20 */ public SwarmMovementTypeEnum SwarmMovementType;
+        [NMS(Index = 5)]
+        /* 0x24 */ public bool AttractedToBait;
     }
 }

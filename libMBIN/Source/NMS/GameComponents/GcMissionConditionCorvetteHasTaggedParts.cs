@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x8E48F5F5BDA0C932, NameHash = 0x6A2D282D)]
+    [NMS(GUID = 0xDBA4C3F2E12101E0, NameHash = 0x6A2D282D)]
     public class GcMissionConditionCorvetteHasTaggedParts : NMSTemplate
     {
         [NMS(Index = 6)]
