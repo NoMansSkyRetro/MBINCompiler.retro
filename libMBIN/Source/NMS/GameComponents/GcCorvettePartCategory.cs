@@ -2,10 +2,10 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDB079C4BED907F43, NameHash = 0x42559895)]
+    [NMS(GUID = 0x28A7647CA74D939, NameHash = 0x42559895)]
     public class GcCorvettePartCategory : NMSTemplate
     {
-        // size: 0xD
+        // size: 0xE
         [Flags]
         public enum CorvettePartCategoryEnum : uint {
             None = 0x0,
@@ -21,6 +21,7 @@ namespace libMBIN.NMS.GameComponents
             Reactor = 0x200,
             Connector = 0x400,
             Decor = 0x800,
+            Interior = 0x1000,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public CorvettePartCategoryEnum CorvettePartCategory;

@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x49564CB5A1178248, NameHash = 0xD1168B3D)]
+    [NMS(GUID = 0x7761DDA189B4BFD4, NameHash = 0xD1168B3D)]
     public class GcCreatureGlobals : NMSTemplate
     {
         [NMS(Index = 102)]
         /* 0x0000 */ public GcCameraShakeData PainShake;
-        [NMS(Index = 541)]
+        [NMS(Index = 545)]
         /* 0x00C0 */ public GcScanEffectData PetOffPlanetEffect;
         [NMS(Index = 8)]
         /* 0x0110 */ public Colour AllCreaturesDiscoveredColour;
@@ -23,17 +23,17 @@ namespace libMBIN.NMS.Globals
         /* 0x0150 */ public Colour JellyBossProjectileAttackWarningColour;
         [NMS(Index = 273)]
         /* 0x0160 */ public Colour JellyBossSpawnBroodWarningColour;
-        [NMS(Index = 561)]
+        [NMS(Index = 565)]
         /* 0x0170 */ public Colour PetInteractionLightColour;
-        [NMS(Index = 462)]
+        [NMS(Index = 466)]
         /* 0x0180 */ public Colour PetRadialBadColour;
-        [NMS(Index = 465)]
+        [NMS(Index = 469)]
         /* 0x0190 */ public Colour PetRadialBoostColour;
-        [NMS(Index = 464)]
+        [NMS(Index = 468)]
         /* 0x01A0 */ public Colour PetRadialGoodColour;
-        [NMS(Index = 463)]
+        [NMS(Index = 467)]
         /* 0x01B0 */ public Colour PetRadialNeutralColour;
-        [NMS(Index = 553)]
+        [NMS(Index = 557)]
         /* 0x01C0 */ public Colour PetThrowArcColour;
         [NMS(Index = 278)]
         /* 0x01D0 */ public Colour SpookFiendAggressiveColour;
@@ -57,7 +57,7 @@ namespace libMBIN.NMS.Globals
         /* 0x0E90 */ public NMSString0x20A[] DietVeg;
         [NMS(Index = 32, Size = 0x11, EnumType = typeof(GcBiomeType.BiomeEnum))]
         /* 0x10B0 */ public NMSString0x20A[] PetBiomeClimates;
-        [NMS(Index = 607)]
+        [NMS(Index = 611)]
         /* 0x12D0 */ public GcWeirdCreatureRewardList WeirdKillingRewards;
         [NMS(Index = 20, Size = 0xB, EnumType = typeof(GcCreatureRoles.CreatureRoleEnum))]
         /* 0x14D0 */ public NMSString0x20A[] Temperments;
@@ -71,13 +71,13 @@ namespace libMBIN.NMS.Globals
         /* 0x1750 */ public NMSString0x20A PetCarePuzzleOverrideID;
         [NMS(Index = 179)]
         /* 0x1770 */ public List<GcCreatureAlertData> AlertTable;
-        [NMS(Index = 585)]
+        [NMS(Index = 589)]
         /* 0x1780 */ public NMSString0x10 AlienShipQuestCreatureWeapon;
-        [NMS(Index = 584)]
+        [NMS(Index = 588)]
         /* 0x1790 */ public NMSString0x10 AlienShipQuestKillingSubstance;
-        [NMS(Index = 600)]
+        [NMS(Index = 604)]
         /* 0x17A0 */ public NMSString0x10 BasicFeedingProduct;
-        [NMS(Index = 606)]
+        [NMS(Index = 610)]
         /* 0x17B0 */ public List<GcCreatureFoodList> CarnivoreFeedingProducts;
         [NMS(Index = 423)]
         /* 0x17C0 */ public NMSString0x10 CreatureDeathEffectBig;
@@ -95,33 +95,33 @@ namespace libMBIN.NMS.Globals
         /* 0x1820 */ public NMSString0x10 CreatureLargeWalkShake;
         [NMS(Index = 60)]
         /* 0x1830 */ public GcSeed CreatureSeed;
-        [NMS(Index = 583)]
+        [NMS(Index = 587)]
         /* 0x1840 */ public NMSString0x10 DefaultKillingSubstance;
         [NMS(Index = 424)]
         /* 0x1850 */ public NMSString0x10 FishDeathEffect;
-        [NMS(Index = 593)]
+        [NMS(Index = 597)]
         /* 0x1860 */ public List<GcCreatureHarvestSubstanceList> HarvestingProducts;
-        [NMS(Index = 605)]
+        [NMS(Index = 609)]
         /* 0x1870 */ public List<GcCreatureFoodList> HerbivoreFeedingProducts;
-        [NMS(Index = 601)]
+        [NMS(Index = 605)]
         /* 0x1880 */ public NMSString0x10 HorrorPetFeedingProduct;
-        [NMS(Index = 592)]
+        [NMS(Index = 596)]
         /* 0x1890 */ public List<GcCreatureSubstanceList> KillingProducts;
-        [NMS(Index = 586)]
+        [NMS(Index = 590)]
         /* 0x18A0 */ public List<NMSString0x10> KillingSubstances;
-        [NMS(Index = 608)]
+        [NMS(Index = 612)]
         /* 0x18B0 */ public List<NMSString0x10> LootItems;
-        [NMS(Index = 509)]
+        [NMS(Index = 513)]
         /* 0x18C0 */ public NMSString0x10 PetEggMaxChangeProduct;
-        [NMS(Index = 542)]
+        [NMS(Index = 546)]
         /* 0x18D0 */ public List<GcCreaturePetEggData> PetEggs;
-        [NMS(Index = 547)]
+        [NMS(Index = 551)]
         /* 0x18E0 */ public NMSString0x10 PetEggsplosionEffect;
-        [NMS(Index = 448)]
+        [NMS(Index = 452)]
         /* 0x18F0 */ public NMSString0x10 PetScan;
-        [NMS(Index = 602)]
+        [NMS(Index = 606)]
         /* 0x1900 */ public NMSString0x10 RobotFeedingProduct;
-        [NMS(Index = 610)]
+        [NMS(Index = 614)]
         /* 0x1910 */ public List<float> RockTransformChanceModifiers;
         [NMS(Index = 282)]
         /* 0x1920 */ public List<GcSpookFiendSpawnData> SpookFiendsSpawnData;
@@ -139,19 +139,19 @@ namespace libMBIN.NMS.Globals
         /* 0x19A8 */ public Vector2f SpookFiendsSpawnTimer;
         [NMS(Index = 217)]
         /* 0x19B0 */ public float AdultBabyKilledNoticeDistance;
-        [NMS(Index = 579)]
+        [NMS(Index = 583)]
         /* 0x19B4 */ public float AdultCorrelationValue;
         [NMS(Index = 163)]
         /* 0x19B8 */ public float AlertDistance;
         [NMS(Index = 7)]
         /* 0x19BC */ public int AllCreaturesDiscoveredBonusMul;
-        [NMS(Index = 611)]
+        [NMS(Index = 615)]
         /* 0x19C0 */ public float AngryRockProportionNormal;
-        [NMS(Index = 612)]
+        [NMS(Index = 616)]
         /* 0x19C4 */ public float AngryRockProportionSurvival;
         [NMS(Index = 177)]
         /* 0x19C8 */ public float AnimationStickToGroundSpeed;
-        [NMS(Index = 562)]
+        [NMS(Index = 566)]
         /* 0x19CC */ public float AnimChangeCoolDown;
         [NMS(Index = 330)]
         /* 0x19D0 */ public float AsteroidCreatureRichSystemSpawnPercent;
@@ -159,13 +159,13 @@ namespace libMBIN.NMS.Globals
         /* 0x19D4 */ public float AsteroidCreatureSpawnPercentOverride;
         [NMS(Index = 397)]
         /* 0x19D8 */ public float AttackPlayerDistance;
-        [NMS(Index = 491)]
+        [NMS(Index = 495)]
         /* 0x19DC */ public float AttractedMaxAvoidCreaturesDist;
-        [NMS(Index = 490)]
+        [NMS(Index = 494)]
         /* 0x19E0 */ public float AttractedMaxAvoidCreaturesStrength;
-        [NMS(Index = 489)]
+        [NMS(Index = 493)]
         /* 0x19E4 */ public float AttractedMinAvoidCreaturesDist;
-        [NMS(Index = 488)]
+        [NMS(Index = 492)]
         /* 0x19E8 */ public float AttractedMinAvoidCreaturesStrength;
         [NMS(Index = 153)]
         /* 0x19EC */ public float AttractMinDistance;
@@ -203,13 +203,13 @@ namespace libMBIN.NMS.Globals
         /* 0x1A2C */ public float CreatureBlobRidingMedMinSize;
         [NMS(Index = 87)]
         /* 0x1A30 */ public float CreatureBrakeForce;
-        [NMS(Index = 597)]
+        [NMS(Index = 601)]
         /* 0x1A34 */ public int CreatureHarvestAmountHuge;
-        [NMS(Index = 596)]
+        [NMS(Index = 600)]
         /* 0x1A38 */ public int CreatureHarvestAmountLarge;
-        [NMS(Index = 595)]
+        [NMS(Index = 599)]
         /* 0x1A3C */ public int CreatureHarvestAmountMed;
-        [NMS(Index = 594)]
+        [NMS(Index = 598)]
         /* 0x1A40 */ public int CreatureHarvestAmountSmall;
         [NMS(Index = 82)]
         /* 0x1A44 */ public float CreatureHearingRange;
@@ -221,7 +221,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1A50 */ public float CreatureHugeRunMaxShakeDist;
         [NMS(Index = 200)]
         /* 0x1A54 */ public float CreatureHugeWalkMaxShakeDist;
-        [NMS(Index = 580)]
+        [NMS(Index = 584)]
         /* 0x1A58 */ public float CreatureIndoorSpeedMultiplier;
         [NMS(Index = 18)]
         /* 0x1A5C */ public float CreatureInteractBaseRange;
@@ -239,15 +239,15 @@ namespace libMBIN.NMS.Globals
         /* 0x1A74 */ public float CreatureInteractionRangeBoostSprint;
         [NMS(Index = 16)]
         /* 0x1A78 */ public float CreatureInteractionRangeReducePredator;
-        [NMS(Index = 587)]
-        /* 0x1A7C */ public int CreatureKillRewardAmountFiend;
         [NMS(Index = 591)]
+        /* 0x1A7C */ public int CreatureKillRewardAmountFiend;
+        [NMS(Index = 595)]
         /* 0x1A80 */ public int CreatureKillRewardAmountHuge;
-        [NMS(Index = 590)]
+        [NMS(Index = 594)]
         /* 0x1A84 */ public int CreatureKillRewardAmountLarge;
-        [NMS(Index = 589)]
+        [NMS(Index = 593)]
         /* 0x1A88 */ public int CreatureKillRewardAmountMed;
-        [NMS(Index = 588)]
+        [NMS(Index = 592)]
         /* 0x1A8C */ public int CreatureKillRewardAmountSmall;
         [NMS(Index = 193)]
         /* 0x1A90 */ public int CreatureLargeHealth;
@@ -291,13 +291,13 @@ namespace libMBIN.NMS.Globals
         /* 0x1ADC */ public float CreatureSightRange;
         [NMS(Index = 191)]
         /* 0x1AE0 */ public int CreatureSmallHealth;
-        [NMS(Index = 581)]
+        [NMS(Index = 585)]
         /* 0x1AE4 */ public float CreatureSpeedMultiplier;
         [NMS(Index = 86)]
         /* 0x1AE8 */ public float CreatureTurnMax;
         [NMS(Index = 85)]
         /* 0x1AEC */ public float CreatureTurnMin;
-        [NMS(Index = 614)]
+        [NMS(Index = 618)]
         /* 0x1AF0 */ public float CreatureUpdateRateMultiplier;
         [NMS(Index = 80)]
         /* 0x1AF4 */ public float CreatureWaryTime;
@@ -337,13 +337,13 @@ namespace libMBIN.NMS.Globals
         /* 0x1B38 */ public float FadeScalePower;
         [NMS(Index = 364)]
         /* 0x1B3C */ public float FastSwimSpeed;
-        [NMS(Index = 485)]
+        [NMS(Index = 489)]
         /* 0x1B40 */ public float FeedingFollowTime;
-        [NMS(Index = 487)]
+        [NMS(Index = 491)]
         /* 0x1B44 */ public float FeedingNoticeDistance;
-        [NMS(Index = 486)]
+        [NMS(Index = 490)]
         /* 0x1B48 */ public float FeedingNoticeTime;
-        [NMS(Index = 484)]
+        [NMS(Index = 488)]
         /* 0x1B4C */ public int FeedingTaskAmount;
         [NMS(Index = 315)]
         /* 0x1B50 */ public float FiendAggroDecreasePerSpawn;
@@ -457,11 +457,11 @@ namespace libMBIN.NMS.Globals
         /* 0x1C28 */ public float FollowLeaderAlignWeight;
         [NMS(Index = 362)]
         /* 0x1C2C */ public float FollowLeaderCohereWeight;
-        [NMS(Index = 429)]
+        [NMS(Index = 433)]
         /* 0x1C30 */ public float FollowPlayerDistance;
-        [NMS(Index = 431)]
+        [NMS(Index = 435)]
         /* 0x1C34 */ public float FollowRange;
-        [NMS(Index = 430)]
+        [NMS(Index = 434)]
         /* 0x1C38 */ public float FollowRunPlayerDistance;
         [NMS(Index = 356)]
         /* 0x1C3C */ public float FollowWeight;
@@ -479,7 +479,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1C54 */ public float FreighterJellyBobFrequency;
         [NMS(Index = 248)]
         /* 0x1C58 */ public float FreighterSpawnDist;
-        [NMS(Index = 483)]
+        [NMS(Index = 487)]
         /* 0x1C5C */ public int FriendlyCreatureLimit;
         [NMS(Index = 132)]
         /* 0x1C60 */ public float GroundWormScaleMax;
@@ -503,39 +503,39 @@ namespace libMBIN.NMS.Globals
         /* 0x1C84 */ public float GroundWormSpawnSpacing;
         [NMS(Index = 124)]
         /* 0x1C88 */ public float GroundWormSpawnTimeOut;
-        [NMS(Index = 574)]
+        [NMS(Index = 578)]
         /* 0x1C8C */ public float GroupBabyHealthMultiplier;
-        [NMS(Index = 572)]
+        [NMS(Index = 576)]
         /* 0x1C90 */ public float GroupBabyProportion;
-        [NMS(Index = 564)]
-        /* 0x1C94 */ public float GroupBabyRunProbability;
-        [NMS(Index = 573)]
-        /* 0x1C98 */ public float GroupBabyScale;
-        [NMS(Index = 571)]
-        /* 0x1C9C */ public float GroupFemaleProportion;
         [NMS(Index = 568)]
+        /* 0x1C94 */ public float GroupBabyRunProbability;
+        [NMS(Index = 577)]
+        /* 0x1C98 */ public float GroupBabyScale;
+        [NMS(Index = 575)]
+        /* 0x1C9C */ public float GroupFemaleProportion;
+        [NMS(Index = 572)]
         /* 0x1CA0 */ public float GroupLookAtDurationMax;
-        [NMS(Index = 567)]
+        [NMS(Index = 571)]
         /* 0x1CA4 */ public float GroupLookAtDurationMin;
-        [NMS(Index = 566)]
-        /* 0x1CA8 */ public float GroupLookAtProbability;
         [NMS(Index = 570)]
+        /* 0x1CA8 */ public float GroupLookAtProbability;
+        [NMS(Index = 574)]
         /* 0x1CAC */ public float GroupRunDurationMax;
-        [NMS(Index = 569)]
+        [NMS(Index = 573)]
         /* 0x1CB0 */ public float GroupRunDurationMin;
-        [NMS(Index = 563)]
+        [NMS(Index = 567)]
         /* 0x1CB4 */ public float GroupRunProbability;
-        [NMS(Index = 565)]
+        [NMS(Index = 569)]
         /* 0x1CB8 */ public float GroupRunStormProbability;
-        [NMS(Index = 599)]
+        [NMS(Index = 603)]
         /* 0x1CBC */ public float HarvestCooldownMax;
-        [NMS(Index = 598)]
+        [NMS(Index = 602)]
         /* 0x1CC0 */ public float HarvestCooldownMin;
         [NMS(Index = 373)]
         /* 0x1CC4 */ public float HeightDiffPenalty;
         [NMS(Index = 160)]
         /* 0x1CC8 */ public float HeightLookAhead;
-        [NMS(Index = 576)]
+        [NMS(Index = 580)]
         /* 0x1CCC */ public float HerdGroupSizeMultiplier;
         [NMS(Index = 347)]
         /* 0x1CD0 */ public float ImpassabilityBrakeTime;
@@ -597,7 +597,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1D40 */ public float LowPerfFlockReduce;
         [NMS(Index = 64)]
         /* 0x1D44 */ public int MaxAdditionalEcosystemCreaturesForDiscovery;
-        [NMS(Index = 575)]
+        [NMS(Index = 579)]
         /* 0x1D48 */ public float MaxBirdsProportion;
         [NMS(Index = 54)]
         /* 0x1D4C */ public float MaxCreatureSize;
@@ -639,7 +639,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1D94 */ public float MiniDroneShotDelay;
         [NMS(Index = 265)]
         /* 0x1D98 */ public float MiniDroneShotMaxAngle;
-        [NMS(Index = 481)]
+        [NMS(Index = 485)]
         /* 0x1D9C */ public float MiningRandomProbability;
         [NMS(Index = 53)]
         /* 0x1DA0 */ public float MinRideSize;
@@ -667,7 +667,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1DCC */ public float PatrolMinDist;
         [NMS(Index = 103)]
         /* 0x1DD0 */ public float PatrolSwitchMinTime;
-        [NMS(Index = 613)]
+        [NMS(Index = 617)]
         /* 0x1DD4 */ public int PauseBetweenCreatureSpawnRequests;
         [NMS(Index = 375)]
         /* 0x1DD8 */ public float PelvisIkStrength;
@@ -675,207 +675,207 @@ namespace libMBIN.NMS.Globals
         /* 0x1DDC */ public float PercentagePlayerPredators;
         [NMS(Index = 411)]
         /* 0x1DE0 */ public int PerceptionUpdateRate;
-        [NMS(Index = 556)]
+        [NMS(Index = 560)]
         /* 0x1DE4 */ public float PetAccessoryMoodDisplayThreshold;
-        [NMS(Index = 557)]
+        [NMS(Index = 561)]
         /* 0x1DE8 */ public float PetAccessoryStateInterval;
-        [NMS(Index = 532)]
+        [NMS(Index = 536)]
         /* 0x1DEC */ public float PetAnimSpeedBoostSmallerThan;
-        [NMS(Index = 533)]
+        [NMS(Index = 537)]
         /* 0x1DF0 */ public float PetAnimSpeedBoostStrength;
-        [NMS(Index = 534)]
+        [NMS(Index = 538)]
         /* 0x1DF4 */ public float PetAnimSpeedMax;
-        [NMS(Index = 535)]
+        [NMS(Index = 539)]
         /* 0x1DF8 */ public float PetAnimSpeedMin;
-        [NMS(Index = 466)]
-        /* 0x1DFC */ public float PetChatCooldown;
-        [NMS(Index = 467)]
-        /* 0x1E00 */ public float PetChatUseTraitTemplateChance;
-        [NMS(Index = 471)]
-        /* 0x1E04 */ public float PetEffectSpawnOffsetHuge;
         [NMS(Index = 470)]
+        /* 0x1DFC */ public float PetChatCooldown;
+        [NMS(Index = 471)]
+        /* 0x1E00 */ public float PetChatUseTraitTemplateChance;
+        [NMS(Index = 475)]
+        /* 0x1E04 */ public float PetEffectSpawnOffsetHuge;
+        [NMS(Index = 474)]
         /* 0x1E08 */ public float PetEffectSpawnOffsetLarge;
-        [NMS(Index = 469)]
+        [NMS(Index = 473)]
         /* 0x1E0C */ public float PetEffectSpawnOffsetMed;
-        [NMS(Index = 468)]
+        [NMS(Index = 472)]
         /* 0x1E10 */ public float PetEffectSpawnOffsetSmall;
-        [NMS(Index = 520)]
-        /* 0x1E14 */ public float PetEggAccessoryChanceModifier;
-        [NMS(Index = 522)]
-        /* 0x1E18 */ public float PetEggColourChanceModifier;
-        [NMS(Index = 506)]
-        /* 0x1E1C */ public int PetEggFirstEggDelay;
-        [NMS(Index = 526)]
-        /* 0x1E20 */ public float PetEggHatchColourChangeChance;
         [NMS(Index = 524)]
-        /* 0x1E24 */ public float PetEggHatchScaleChange;
-        [NMS(Index = 525)]
-        /* 0x1E28 */ public float PetEggHatchTraitChange;
-        [NMS(Index = 504)]
-        /* 0x1E2C */ public float PetEggLayingDuration;
-        [NMS(Index = 505)]
-        /* 0x1E30 */ public int PetEggLayingInterval;
-        [NMS(Index = 521)]
-        /* 0x1E34 */ public float PetEggMaxAccessoriesChangeChance;
-        [NMS(Index = 523)]
-        /* 0x1E38 */ public float PetEggMaxColourChangeChance;
-        [NMS(Index = 516)]
-        /* 0x1E3C */ public float PetEggMaxDistStep;
-        [NMS(Index = 544)]
-        /* 0x1E40 */ public float PetEggMaxHungry;
-        [NMS(Index = 543)]
-        /* 0x1E44 */ public float PetEggMaxLonely;
-        [NMS(Index = 518)]
-        /* 0x1E48 */ public float PetEggMaxOverdosage;
-        [NMS(Index = 519)]
-        /* 0x1E4C */ public float PetEggMaxTopDescriptorChangeChance;
-        [NMS(Index = 515)]
-        /* 0x1E50 */ public float PetEggMinDistStep;
-        [NMS(Index = 545)]
-        /* 0x1E54 */ public float PetEggMinGrowthToLay;
-        [NMS(Index = 508)]
-        /* 0x1E58 */ public int PetEggModificationItemLimit;
-        [NMS(Index = 507)]
-        /* 0x1E5C */ public int PetEggModificationTime;
-        [NMS(Index = 517)]
-        /* 0x1E60 */ public float PetEggOverdosageModifier;
-        [NMS(Index = 512)]
-        /* 0x1E64 */ public float PetEggScaleRangeMax;
-        [NMS(Index = 511)]
-        /* 0x1E68 */ public float PetEggScaleRangeModifier;
+        /* 0x1E14 */ public float PetEggAccessoryChanceModifier;
+        [NMS(Index = 526)]
+        /* 0x1E18 */ public float PetEggColourChanceModifier;
         [NMS(Index = 510)]
-        /* 0x1E6C */ public float PetEggSubstanceModifier;
+        /* 0x1E1C */ public int PetEggFirstEggDelay;
+        [NMS(Index = 530)]
+        /* 0x1E20 */ public float PetEggHatchColourChangeChance;
+        [NMS(Index = 528)]
+        /* 0x1E24 */ public float PetEggHatchScaleChange;
+        [NMS(Index = 529)]
+        /* 0x1E28 */ public float PetEggHatchTraitChange;
+        [NMS(Index = 508)]
+        /* 0x1E2C */ public float PetEggLayingDuration;
+        [NMS(Index = 509)]
+        /* 0x1E30 */ public int PetEggLayingInterval;
+        [NMS(Index = 525)]
+        /* 0x1E34 */ public float PetEggMaxAccessoriesChangeChance;
+        [NMS(Index = 527)]
+        /* 0x1E38 */ public float PetEggMaxColourChangeChance;
+        [NMS(Index = 520)]
+        /* 0x1E3C */ public float PetEggMaxDistStep;
+        [NMS(Index = 548)]
+        /* 0x1E40 */ public float PetEggMaxHungry;
+        [NMS(Index = 547)]
+        /* 0x1E44 */ public float PetEggMaxLonely;
+        [NMS(Index = 522)]
+        /* 0x1E48 */ public float PetEggMaxOverdosage;
+        [NMS(Index = 523)]
+        /* 0x1E4C */ public float PetEggMaxTopDescriptorChangeChance;
+        [NMS(Index = 519)]
+        /* 0x1E50 */ public float PetEggMinDistStep;
+        [NMS(Index = 549)]
+        /* 0x1E54 */ public float PetEggMinGrowthToLay;
+        [NMS(Index = 512)]
+        /* 0x1E58 */ public int PetEggModificationItemLimit;
+        [NMS(Index = 511)]
+        /* 0x1E5C */ public int PetEggModificationTime;
+        [NMS(Index = 521)]
+        /* 0x1E60 */ public float PetEggOverdosageModifier;
+        [NMS(Index = 516)]
+        /* 0x1E64 */ public float PetEggScaleRangeMax;
+        [NMS(Index = 515)]
+        /* 0x1E68 */ public float PetEggScaleRangeModifier;
         [NMS(Index = 514)]
+        /* 0x1E6C */ public float PetEggSubstanceModifier;
+        [NMS(Index = 518)]
         /* 0x1E70 */ public float PetEggTraitRangeMax;
-        [NMS(Index = 513)]
+        [NMS(Index = 517)]
         /* 0x1E74 */ public float PetEggTraitRangeModifier;
-        [NMS(Index = 461)]
+        [NMS(Index = 465)]
         /* 0x1E78 */ public float PetFollowRange;
-        [NMS(Index = 460)]
+        [NMS(Index = 464)]
         /* 0x1E7C */ public float PetFollowRunPlayerDistance;
         [NMS(Index = 181)]
         /* 0x1E80 */ public float PetFootShakeModifier;
-        [NMS(Index = 527)]
+        [NMS(Index = 531)]
         /* 0x1E84 */ public GcPetBehaviours PetForceBehaviour;
-        [NMS(Index = 494)]
+        [NMS(Index = 498)]
         /* 0x1E88 */ public int PetGrowthTime;
-        [NMS(Index = 455)]
+        [NMS(Index = 459)]
         /* 0x1E8C */ public float PetHeartChangePerLayer;
-        [NMS(Index = 454)]
+        [NMS(Index = 458)]
         /* 0x1E90 */ public float PetHeartMaxSize;
-        [NMS(Index = 456)]
+        [NMS(Index = 460)]
         /* 0x1E94 */ public float PetHeartResponseLoopTime;
-        [NMS(Index = 457)]
+        [NMS(Index = 461)]
         /* 0x1E98 */ public float PetHeartResponseTotalTime;
-        [NMS(Index = 441)]
-        /* 0x1E9C */ public float PetHeelDistSwitchTimeMax;
-        [NMS(Index = 440)]
-        /* 0x1EA0 */ public float PetHeelDistSwitchTimeMin;
         [NMS(Index = 445)]
-        /* 0x1EA4 */ public float PetHeelLateralShiftTimeMax;
+        /* 0x1E9C */ public float PetHeelDistSwitchTimeMax;
         [NMS(Index = 444)]
+        /* 0x1EA0 */ public float PetHeelDistSwitchTimeMin;
+        [NMS(Index = 449)]
+        /* 0x1EA4 */ public float PetHeelLateralShiftTimeMax;
+        [NMS(Index = 448)]
         /* 0x1EA8 */ public float PetHeelLateralShiftTimeMin;
-        [NMS(Index = 447)]
+        [NMS(Index = 451)]
         /* 0x1EAC */ public float PetHeelPosSpringTime;
-        [NMS(Index = 495)]
+        [NMS(Index = 499)]
         /* 0x1EB0 */ public int PetIncubationTime;
         [NMS(Index = 19)]
         /* 0x1EB4 */ public float PetInteractBaseRange;
-        [NMS(Index = 558)]
+        [NMS(Index = 562)]
         /* 0x1EB8 */ public float PetInteractionLightHeight;
-        [NMS(Index = 560)]
+        [NMS(Index = 564)]
         /* 0x1EBC */ public float PetInteractionLightIntensityMax;
-        [NMS(Index = 559)]
+        [NMS(Index = 563)]
         /* 0x1EC0 */ public float PetInteractionLightIntensityMin;
-        [NMS(Index = 428)]
+        [NMS(Index = 432)]
         /* 0x1EC4 */ public float PetInteractTurnToFaceMinAngle;
-        [NMS(Index = 458)]
+        [NMS(Index = 462)]
         /* 0x1EC8 */ public float PetLastActionReportTime;
-        [NMS(Index = 528)]
+        [NMS(Index = 532)]
         /* 0x1ECC */ public float PetMaxSizeOffPlanet;
         [NMS(Index = 57)]
         /* 0x1ED0 */ public float PetMaxSummonDistance;
-        [NMS(Index = 539)]
+        [NMS(Index = 543)]
         /* 0x1ED4 */ public float PetMaxTurnRad;
         [NMS(Index = 56)]
         /* 0x1ED8 */ public float PetMinSummonDistance;
-        [NMS(Index = 503)]
+        [NMS(Index = 507)]
         /* 0x1EDC */ public float PetMinTrust;
-        [NMS(Index = 538)]
+        [NMS(Index = 542)]
         /* 0x1EE0 */ public float PetMinTurnRad;
-        [NMS(Index = 540)]
+        [NMS(Index = 544)]
         /* 0x1EE4 */ public float PetMoodCurvePower;
-        [NMS(Index = 459)]
+        [NMS(Index = 463)]
         /* 0x1EE8 */ public float PetMoodSmoothTime;
-        [NMS(Index = 537)]
+        [NMS(Index = 541)]
         /* 0x1EEC */ public float PetNavRadForMaxTurn;
-        [NMS(Index = 536)]
+        [NMS(Index = 540)]
         /* 0x1EF0 */ public float PetNavRadForMinTurn;
-        [NMS(Index = 555)]
+        [NMS(Index = 559)]
         /* 0x1EF4 */ public float PetOrderMaxRange;
-        [NMS(Index = 554)]
+        [NMS(Index = 558)]
         /* 0x1EF8 */ public float PetOrderMinRange;
-        [NMS(Index = 432)]
+        [NMS(Index = 436)]
         /* 0x1EFC */ public float PetPlayerSpeedSmoothTime;
-        [NMS(Index = 449)]
-        /* 0x1F00 */ public float PetRadialCentre;
-        [NMS(Index = 452)]
-        /* 0x1F04 */ public float PetRadialPulseMul;
         [NMS(Index = 453)]
+        /* 0x1F00 */ public float PetRadialCentre;
+        [NMS(Index = 456)]
+        /* 0x1F04 */ public float PetRadialPulseMul;
+        [NMS(Index = 457)]
         /* 0x1F08 */ public float PetRadialPulseTime;
-        [NMS(Index = 450)]
+        [NMS(Index = 454)]
         /* 0x1F0C */ public float PetRadialRadius;
-        [NMS(Index = 451)]
+        [NMS(Index = 455)]
         /* 0x1F10 */ public float PetRadialWidth;
-        [NMS(Index = 439)]
-        /* 0x1F14 */ public float PetRunAtHeelDistMax;
-        [NMS(Index = 438)]
-        /* 0x1F18 */ public float PetRunAtHeelDistMin;
         [NMS(Index = 443)]
-        /* 0x1F1C */ public float PetRunAtHeelLateralShiftMax;
+        /* 0x1F14 */ public float PetRunAtHeelDistMax;
         [NMS(Index = 442)]
+        /* 0x1F18 */ public float PetRunAtHeelDistMin;
+        [NMS(Index = 447)]
+        /* 0x1F1C */ public float PetRunAtHeelLateralShiftMax;
+        [NMS(Index = 446)]
         /* 0x1F20 */ public float PetRunAtHeelLateralShiftMin;
-        [NMS(Index = 493)]
+        [NMS(Index = 497)]
         /* 0x1F24 */ public int PetSlotsUnlockedByDefault;
-        [NMS(Index = 433)]
+        [NMS(Index = 437)]
         /* 0x1F28 */ public float PetStickySideBiasAngle;
         [NMS(Index = 58)]
         /* 0x1F2C */ public float PetSummonRotation;
-        [NMS(Index = 529)]
+        [NMS(Index = 533)]
         /* 0x1F30 */ public float PetTeleportDistOffPlanet;
-        [NMS(Index = 530)]
+        [NMS(Index = 534)]
         /* 0x1F34 */ public float PetTeleportDistOnPlanet;
-        [NMS(Index = 551)]
+        [NMS(Index = 555)]
         /* 0x1F38 */ public float PetTeleportEffectTime;
-        [NMS(Index = 552)]
+        [NMS(Index = 556)]
         /* 0x1F3C */ public float PetThrowArcRange;
-        [NMS(Index = 472)]
+        [NMS(Index = 476)]
         /* 0x1F40 */ public float PetTickleChatChance;
-        [NMS(Index = 473)]
+        [NMS(Index = 477)]
         /* 0x1F44 */ public float PetTreatChatChance;
-        [NMS(Index = 496)]
-        /* 0x1F48 */ public int PetTrustChangeInterval;
         [NMS(Index = 500)]
+        /* 0x1F48 */ public int PetTrustChangeInterval;
+        [NMS(Index = 504)]
         /* 0x1F4C */ public float PetTrustDecreaseStep;
-        [NMS(Index = 502)]
+        [NMS(Index = 506)]
         /* 0x1F50 */ public float PetTrustDecreaseThreshold;
-        [NMS(Index = 499)]
+        [NMS(Index = 503)]
         /* 0x1F54 */ public float PetTrustIncreaseStep;
-        [NMS(Index = 501)]
+        [NMS(Index = 505)]
         /* 0x1F58 */ public float PetTrustIncreaseThreshold;
-        [NMS(Index = 497)]
+        [NMS(Index = 501)]
         /* 0x1F5C */ public float PetTrustOnAdoption;
-        [NMS(Index = 498)]
+        [NMS(Index = 502)]
         /* 0x1F60 */ public float PetTrustOnHatch;
-        [NMS(Index = 434)]
+        [NMS(Index = 438)]
         /* 0x1F64 */ public float PetWalkAtHeelChanceDevoted;
-        [NMS(Index = 435)]
+        [NMS(Index = 439)]
         /* 0x1F68 */ public float PetWalkAtHeelChanceIndependent;
-        [NMS(Index = 437)]
+        [NMS(Index = 441)]
         /* 0x1F6C */ public float PetWalkAtHeelDistMax;
-        [NMS(Index = 436)]
+        [NMS(Index = 440)]
         /* 0x1F70 */ public float PetWalkAtHeelDistMin;
-        [NMS(Index = 446)]
+        [NMS(Index = 450)]
         /* 0x1F74 */ public float PetWalkAtHeelLateralShift;
         [NMS(Index = 162)]
         /* 0x1F78 */ public float PlayerBirdDistance;
@@ -927,7 +927,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1FD4 */ public float PredatorRunMoveSpeed;
         [NMS(Index = 219)]
         /* 0x1FD8 */ public int PredatorSmallHealth;
-        [NMS(Index = 582)]
+        [NMS(Index = 586)]
         /* 0x1FDC */ public float PredatorSpeedMultiplier;
         [NMS(Index = 226)]
         /* 0x1FE0 */ public float PredatorStealthDist;
@@ -981,7 +981,7 @@ namespace libMBIN.NMS.Globals
         /* 0x2040 */ public float RidingRollMaxAngleAt;
         [NMS(Index = 357)]
         /* 0x2044 */ public float RidingSteerWeight;
-        [NMS(Index = 609)]
+        [NMS(Index = 613)]
         /* 0x2048 */ public float RockTransformGlobalChance;
         [NMS(Index = 332)]
         /* 0x204C */ public float RoutineOffset;
@@ -1041,17 +1041,17 @@ namespace libMBIN.NMS.Globals
         /* 0x20B8 */ public float ScuttlerZigZagTimeMax;
         [NMS(Index = 257)]
         /* 0x20BC */ public float ScuttlerZigZagTimeMin;
-        [NMS(Index = 475)]
-        /* 0x20C0 */ public float SearchItemDistance;
-        [NMS(Index = 476)]
-        /* 0x20C4 */ public float SearchItemFrequency;
-        [NMS(Index = 477)]
-        /* 0x20C8 */ public float SearchItemGiveUpDistance;
-        [NMS(Index = 478)]
-        /* 0x20CC */ public float SearchItemGiveUpTime;
         [NMS(Index = 479)]
-        /* 0x20D0 */ public float SearchItemNotifyTime;
+        /* 0x20C0 */ public float SearchItemDistance;
         [NMS(Index = 480)]
+        /* 0x20C4 */ public float SearchItemFrequency;
+        [NMS(Index = 481)]
+        /* 0x20C8 */ public float SearchItemGiveUpDistance;
+        [NMS(Index = 482)]
+        /* 0x20CC */ public float SearchItemGiveUpTime;
+        [NMS(Index = 483)]
+        /* 0x20D0 */ public float SearchItemNotifyTime;
+        [NMS(Index = 484)]
         /* 0x20D4 */ public float SearchSpawnRandomItemProbability;
         [NMS(Index = 143)]
         /* 0x20D8 */ public float SharkAlignSpeed;
@@ -1111,131 +1111,139 @@ namespace libMBIN.NMS.Globals
         /* 0x2144 */ public float StickToGroundCastEnd;
         [NMS(Index = 174)]
         /* 0x2148 */ public float StickToGroundSpeed;
+        [NMS(Index = 431)]
+        /* 0x214C */ public float SwarmAttractEatDistance;
+        [NMS(Index = 428)]
+        /* 0x2150 */ public float SwarmAttractHeightForMaxGroundAvoid;
+        [NMS(Index = 429)]
+        /* 0x2154 */ public float SwarmAttractHeightForMinGroundAvoid;
+        [NMS(Index = 430)]
+        /* 0x2158 */ public float SwarmAttractSpeedLimit;
         [NMS(Index = 135)]
-        /* 0x214C */ public float SwarmBrakingForce;
+        /* 0x215C */ public float SwarmBrakingForce;
         [NMS(Index = 154)]
-        /* 0x2150 */ public float SwarmMoveYFactor;
+        /* 0x2160 */ public float SwarmMoveYFactor;
         [NMS(Index = 166)]
-        /* 0x2154 */ public float TargetReachedDistance;
+        /* 0x2164 */ public float TargetReachedDistance;
         [NMS(Index = 152)]
-        /* 0x2158 */ public float TargetSearchTimeout;
+        /* 0x2168 */ public float TargetSearchTimeout;
         [NMS(Index = 414)]
-        /* 0x215C */ public float TrailHalfLife;
+        /* 0x216C */ public float TrailHalfLife;
         [NMS(Index = 69)]
-        /* 0x2160 */ public float TurnInPlaceIdleTime;
+        /* 0x2170 */ public float TurnInPlaceIdleTime;
         [NMS(Index = 70)]
-        /* 0x2164 */ public float TurnInPlaceMaxAngle;
+        /* 0x2174 */ public float TurnInPlaceMaxAngle;
         [NMS(Index = 72)]
-        /* 0x2168 */ public float TurnInPlaceMaxSpeed;
+        /* 0x2178 */ public float TurnInPlaceMaxSpeed;
         [NMS(Index = 73)]
-        /* 0x216C */ public float TurnInPlaceMaxSpeedIndoor;
+        /* 0x217C */ public float TurnInPlaceMaxSpeedIndoor;
         [NMS(Index = 71)]
-        /* 0x2170 */ public float TurnInPlaceMinTime;
+        /* 0x2180 */ public float TurnInPlaceMinTime;
         [NMS(Index = 341)]
-        /* 0x2174 */ public float TurnRadiusMultiplier;
+        /* 0x2184 */ public float TurnRadiusMultiplier;
         [NMS(Index = 343)]
-        /* 0x2178 */ public float TurnSlowAreaCos;
+        /* 0x2188 */ public float TurnSlowAreaCos;
         [NMS(Index = 159)]
-        /* 0x217C */ public float VelocityAlignSpeed;
+        /* 0x218C */ public float VelocityAlignSpeed;
         [NMS(Index = 158)]
-        /* 0x2180 */ public float VelocityAlignStrength;
+        /* 0x2190 */ public float VelocityAlignStrength;
         [NMS(Index = 352)]
-        /* 0x2184 */ public float VelocityAlignYFactorMax;
+        /* 0x2194 */ public float VelocityAlignYFactorMax;
         [NMS(Index = 351)]
-        /* 0x2188 */ public float VelocityAlignYFactorMin;
+        /* 0x2198 */ public float VelocityAlignYFactorMin;
         [NMS(Index = 204)]
-        /* 0x218C */ public float WaterDepthSizeScalingMaxDepth;
+        /* 0x219C */ public float WaterDepthSizeScalingMaxDepth;
         [NMS(Index = 206)]
-        /* 0x2190 */ public float WaterDepthSizeScalingMaxScale;
+        /* 0x21A0 */ public float WaterDepthSizeScalingMaxScale;
         [NMS(Index = 203)]
-        /* 0x2194 */ public float WaterDepthSizeScalingMinDepth;
+        /* 0x21A4 */ public float WaterDepthSizeScalingMinDepth;
         [NMS(Index = 205)]
-        /* 0x2198 */ public float WaterDepthSizeScalingMinScale;
+        /* 0x21A8 */ public float WaterDepthSizeScalingMinScale;
         [NMS(Index = 171)]
-        /* 0x219C */ public float WaterSpawnOffset;
+        /* 0x21AC */ public float WaterSpawnOffset;
         [NMS(Index = 157)]
-        /* 0x21A0 */ public float WeaponRepelAmount;
+        /* 0x21B0 */ public float WeaponRepelAmount;
         [NMS(Index = 156)]
-        /* 0x21A4 */ public float WeaponRepelRange;
+        /* 0x21B4 */ public float WeaponRepelRange;
         [NMS(Index = 21, Size = 0xB, EnumType = typeof(GcCreatureRoles.CreatureRoleEnum))]
-        /* 0x21A8 */ public NMSString0x20[] TempermentDescriptions;
+        /* 0x21B8 */ public NMSString0x20[] TempermentDescriptions;
         [NMS(Index = 26, Size = 0x4, EnumType = typeof(GcCreatureDiet.DietEnum))]
-        /* 0x2308 */ public NMSString0x20[] DietDescriptions;
+        /* 0x2318 */ public NMSString0x20[] DietDescriptions;
         [NMS(Index = 27, Size = 0x4, EnumType = typeof(GcCreatureDiet.DietEnum))]
-        /* 0x2388 */ public NMSString0x20[] WaterDietDescriptions;
+        /* 0x2398 */ public NMSString0x20[] WaterDietDescriptions;
         [NMS(Index = 241)]
-        /* 0x2408 */ public bool AggressiveSharks;
-        [NMS(Index = 603)]
-        /* 0x2409 */ public bool AllBaitIsBasic;
+        /* 0x2418 */ public bool AggressiveSharks;
+        [NMS(Index = 607)]
+        /* 0x2419 */ public bool AllBaitIsBasic;
         [NMS(Index = 412)]
-        /* 0x240A */ public bool AllowSleeping;
+        /* 0x241A */ public bool AllowSleeping;
         [NMS(Index = 67)]
-        /* 0x240B */ public bool AllowSpawningOnscreen;
-        [NMS(Index = 604)]
-        /* 0x240C */ public bool CanAlwaysLayEgg;
+        /* 0x241B */ public bool AllowSpawningOnscreen;
+        [NMS(Index = 608)]
+        /* 0x241C */ public bool CanAlwaysLayEgg;
         [NMS(Index = 17)]
-        /* 0x240D */ public bool CreatureInteractWithoutRaycasts;
+        /* 0x241D */ public bool CreatureInteractWithoutRaycasts;
         [NMS(Index = 45)]
-        /* 0x240E */ public bool CreatureRideDirectControl;
+        /* 0x241E */ public bool CreatureRideDirectControl;
         [NMS(Index = 413)]
-        /* 0x240F */ public bool DebugDrawTrails;
-        [NMS(Index = 482)]
-        /* 0x2410 */ public bool DebugSearch;
+        /* 0x241F */ public bool DebugDrawTrails;
+        [NMS(Index = 486)]
+        /* 0x2420 */ public bool DebugSearch;
         [NMS(Index = 420)]
-        /* 0x2411 */ public bool DetailAnimPlayWhileWalking;
-        [NMS(Index = 577)]
-        /* 0x2412 */ public bool DrawRoutineFollowDebug;
-        [NMS(Index = 578)]
-        /* 0x2413 */ public bool DrawRoutineInfo;
+        /* 0x2421 */ public bool DetailAnimPlayWhileWalking;
+        [NMS(Index = 581)]
+        /* 0x2422 */ public bool DrawRoutineFollowDebug;
+        [NMS(Index = 582)]
+        /* 0x2423 */ public bool DrawRoutineInfo;
         [NMS(Index = 34)]
-        /* 0x2414 */ public bool EnableFlyingSnakeTails;
+        /* 0x2424 */ public bool EnableFlyingSnakeTails;
         [NMS(Index = 38)]
-        /* 0x2415 */ public bool EnableMPCreatureRide;
+        /* 0x2425 */ public bool EnableMPCreatureRide;
         [NMS(Index = 35)]
-        /* 0x2416 */ public bool EnableNewStuff;
+        /* 0x2426 */ public bool EnableNewStuff;
         [NMS(Index = 415)]
-        /* 0x2417 */ public bool EnableTrailIk;
+        /* 0x2427 */ public bool EnableTrailIk;
         [NMS(Index = 37)]
-        /* 0x2418 */ public bool EnableVRCreatureRide;
+        /* 0x2428 */ public bool EnableVRCreatureRide;
         [NMS(Index = 284)]
-        /* 0x2419 */ public bool FiendOnscreenMarkers;
+        /* 0x2429 */ public bool FiendOnscreenMarkers;
         [NMS(Index = 283)]
-        /* 0x241A */ public bool FiendsCanAttack;
+        /* 0x242A */ public bool FiendsCanAttack;
         [NMS(Index = 4)]
-        /* 0x241B */ public bool ForceShowDebugTrails;
+        /* 0x242B */ public bool ForceShowDebugTrails;
         [NMS(Index = 427)]
-        /* 0x241C */ public bool ForceStatic;
+        /* 0x242C */ public bool ForceStatic;
         [NMS(Index = 36)]
-        /* 0x241D */ public bool InstantCreatureRide;
+        /* 0x242D */ public bool InstantCreatureRide;
         [NMS(Index = 33)]
-        /* 0x241E */ public bool IsHurtingCreaturesACrime;
-        [NMS(Index = 549)]
-        /* 0x241F */ public bool PetAnimTest;
-        [NMS(Index = 531)]
-        /* 0x2420 */ public bool PetCanSummonOnFreighter;
-        [NMS(Index = 546)]
-        /* 0x2421 */ public bool PetForceSummonFromEgg;
-        [NMS(Index = 492)]
-        /* 0x2422 */ public bool PetsShowTraitClassesAsWords;
-        [NMS(Index = 426)]
-        /* 0x2423 */ public bool PiedPiper;
-        [NMS(Index = 409)]
-        /* 0x2424 */ public bool ProcessPendingSpawnRequests;
-        [NMS(Index = 548)]
-        /* 0x2425 */ public bool RidingPositionTest;
-        [NMS(Index = 250)]
-        /* 0x2426 */ public bool ScuttlersCanAttack;
-        [NMS(Index = 180)]
-        /* 0x2427 */ public bool ShowScale;
-        [NMS(Index = 46)]
-        /* 0x2428 */ public bool StaticCreatureRide;
-        [NMS(Index = 66)]
-        /* 0x2429 */ public bool UncapSpawningforVideo;
-        [NMS(Index = 474)]
-        /* 0x242A */ public bool UseCreatureAdoptOSD;
+        /* 0x242E */ public bool IsHurtingCreaturesACrime;
+        [NMS(Index = 553)]
+        /* 0x242F */ public bool PetAnimTest;
+        [NMS(Index = 535)]
+        /* 0x2430 */ public bool PetCanSummonOnFreighter;
         [NMS(Index = 550)]
-        /* 0x242B */ public bool UsePetTeleportEffect;
+        /* 0x2431 */ public bool PetForceSummonFromEgg;
+        [NMS(Index = 496)]
+        /* 0x2432 */ public bool PetsShowTraitClassesAsWords;
+        [NMS(Index = 426)]
+        /* 0x2433 */ public bool PiedPiper;
+        [NMS(Index = 409)]
+        /* 0x2434 */ public bool ProcessPendingSpawnRequests;
+        [NMS(Index = 552)]
+        /* 0x2435 */ public bool RidingPositionTest;
+        [NMS(Index = 250)]
+        /* 0x2436 */ public bool ScuttlersCanAttack;
+        [NMS(Index = 180)]
+        /* 0x2437 */ public bool ShowScale;
+        [NMS(Index = 46)]
+        /* 0x2438 */ public bool StaticCreatureRide;
+        [NMS(Index = 66)]
+        /* 0x2439 */ public bool UncapSpawningforVideo;
+        [NMS(Index = 478)]
+        /* 0x243A */ public bool UseCreatureAdoptOSD;
+        [NMS(Index = 554)]
+        /* 0x243B */ public bool UsePetTeleportEffect;
         [NMS(Index = 207)]
-        /* 0x242C */ public TkCurveType WaterDepthSizeScalingCurve;
+        /* 0x243C */ public TkCurveType WaterDepthSizeScalingCurve;
     }
 }
