@@ -92,6 +92,13 @@ namespace libMBIN
         /// <param name="outputpath">The location to write the .mxml file.</param>
         /// <param name="hideVersionInfo">If true, version info is not written to the MXML file.</param>
         /// <param name="includeTypeInfo">If true, type info is written to the MXML file.</param>
+        public static string WriteTemplate(NMSTemplate template) => WriteTemplate(template, false, false);
+        /// <summary>
+        /// Writes the NMSTemplate object to an .mxml file.
+        /// </summary>
+        /// <param name="outputpath">The location to write the .mxml file.</param>
+        /// <param name="hideVersionInfo">If true, version info is not written to the MXML file.</param>
+        /// <param name="includeTypeInfo">If true, type info is written to the MXML file.</param>
         public static string WriteTemplate(NMSTemplate template, bool hideVersionInfo, bool includeTypeInfo)
         {
             var origCulture = Thread.CurrentThread.CurrentCulture;
