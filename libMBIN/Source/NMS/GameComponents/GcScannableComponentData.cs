@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x90B819F607AE7368, NameHash = 0x4E404FB0)]
+    [NMS(GUID = 0x1EE9203770C1368F, NameHash = 0x4E404FB0)]
     public class GcScannableComponentData : NMSTemplate
     {
         [NMS(Index = 16)]
@@ -49,17 +49,19 @@ namespace libMBIN.NMS.GameComponents
         /* 0x77 */ public bool DisableIfBuildingPart;
         [NMS(Index = 8)]
         /* 0x78 */ public bool DisableIfInBase;
+        [NMS(Index = 23)]
+        /* 0x79 */ public bool ForceCompassMarkerOnForScannerIcon;
         [NMS(Index = 17)]
-        /* 0x79 */ public bool GetIconAndNameFromSettlementBuilding;
+        /* 0x7A */ public bool GetIconAndNameFromSettlementBuilding;
         [NMS(Index = 13)]
-        /* 0x7A */ public bool IsPlacedMarker;
+        /* 0x7B */ public bool IsPlacedMarker;
         [NMS(Index = 19)]
-        /* 0x7B */ public bool MarkerActiveWithNodeInactive;
+        /* 0x7C */ public bool MarkerActiveWithNodeInactive;
         [NMS(Index = 14)]
-        /* 0x7C */ public bool ShowInFreighterBranchRoom;
+        /* 0x7D */ public bool ShowInFreighterBranchRoom;
         [NMS(Index = 15)]
-        /* 0x7D */ public bool TellPlayerIfFreighterObjectUsed;
+        /* 0x7E */ public bool TellPlayerIfFreighterObjectUsed;
         [NMS(Index = 9)]
-        /* 0x7E */ public bool UseModelNode;
+        /* 0x7F */ public bool UseModelNode;
     }
 }
