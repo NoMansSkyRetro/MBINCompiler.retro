@@ -1184,7 +1184,16 @@ namespace libMBIN
                 return stream.ToArray();
             }
         }
-        public MXmlBase SerializeMXmlValue(Type fieldType, FieldInfo field, NMSAttribute settings, object value, bool isField = true)
+        
+        /// <summary>
+        /// .
+        /// </summary>
+        /// <param name="fieldType">The field type of the field.</param>
+        /// <param name="field">A field.</param>
+        /// <param name="settings">The settings of the field.</param>
+        /// <param name="value">The value of the field.</param>
+        /// <param name="IncludeTypeInfo">If true, type info is written to the MXML file.</param>
+        public MXmlBase SerializeMXmlValue(Type fieldType, FieldInfo field, NMSAttribute settings, object value, bool IncludeTypeInfo)
         {
             string t = fieldType.Name;
             int i = 0;
@@ -1237,13 +1246,13 @@ namespace libMBIN
                 case "Colour32":
                     // Handle the Colour32 explicitly since we want to write floats to the MXML, not ints.
                     Colour colour = new Colour((Colour32)value);
-                    MXmlProperty colour_field = (MXmlProperty)colour.SerializeMXml( true );
+                    MXmlProperty colour_field = (MXmlProperty)colour.SerializeMXml( true, false, IncludeTypeInfo );
                     colour_field.Name = fieldName;
                     return colour_field;
                 case "LinkableNMSTemplate":
                     LinkableNMSTemplate linkedTemplate = (LinkableNMSTemplate) value;
                     if (linkedTemplate.Template != null) {
-                        MXmlProperty templateXmlData = (MXmlProperty)linkedTemplate.Template.SerializeMXml( true, true );
+                        MXmlProperty templateXmlData = (MXmlProperty)linkedTemplate.Template.SerializeMXml( true, true, IncludeTypeInfo );
                         templateXmlData.Name = fieldName;
                         templateXmlData.Value = linkedTemplate.Template.GetType().Name;
                         if (linkedTemplate.Linked.StringValue() != "") {
@@ -1280,7 +1289,7 @@ namespace libMBIN
                         } else {
                             Dictionary<string, uint> IdCounter = new Dictionary<string, uint>{};
                             foreach ( var template in templates ) {
-                                MXmlProperty data = (MXmlProperty)SerializeMXmlValue( listType, field, settings, template, false );
+                                MXmlProperty data = (MXmlProperty)SerializeMXmlValue( listType, field, settings, template, IncludeTypeInfo );
                                 data.Name = fieldName;
                                 string typeIdField = TypeHasID(listType);
                                 if (typeIdField != null) {
@@ -1310,7 +1319,7 @@ namespace libMBIN
                     if ( value != null ) {
                         NMSTemplate template = (NMSTemplate) value;
 
-                        MXmlProperty templateXmlData = (MXmlProperty)template.SerializeMXml( true, true );
+                        MXmlProperty templateXmlData = (MXmlProperty)template.SerializeMXml( true, true, IncludeTypeInfo );
                         templateXmlData.Name = fieldName;
                         templateXmlData.Value = template.GetType().Name;
 
@@ -1335,7 +1344,7 @@ namespace libMBIN
                         string id_field = field.GetCustomAttribute<NMSAttribute>()?.KeyField ?? "";
 
                         foreach ( var template in (IEnumerable)value ) {
-                            MXmlProperty data = (MXmlProperty)SerializeMXmlValue( hashMapType, field, settings, template, false );
+                            MXmlProperty data = (MXmlProperty)SerializeMXmlValue( hashMapType, field, settings, template, IncludeTypeInfo );
 
                             // Get aforementioned id field and write to the `_id` attribute.
                             MXmlProperty IdData = (MXmlProperty)data.Elements.Where(
@@ -1357,7 +1366,7 @@ namespace libMBIN
                         } else {
                             template = (NMSTemplate) value;
                         }
-                        var templateXmlData = template.SerializeMXml( true );
+                        var templateXmlData = template.SerializeMXml( true, false, IncludeTypeInfo );
                         templateXmlData.Name = fieldName;
 
                         return templateXmlData;
@@ -1367,11 +1376,15 @@ namespace libMBIN
                             Name = fieldName
                         };
 
+                        if (IncludeTypeInfo) {
+                            arrayProperty.ArraySize = field.GetCustomAttribute<NMSAttribute>()?.Size.ToString();
+                        }
+
                         Array array = (Array) value;
                         string[] names = GetEnumNames( field.Name, array.Length, settings );
                         i = 0;
                         foreach ( var template in array ) {
-                            MXmlProperty data = (MXmlProperty)SerializeMXmlValue( arrayType, field, settings, template, false );
+                            MXmlProperty data = (MXmlProperty)SerializeMXmlValue( arrayType, field, settings, template, IncludeTypeInfo );
                             // Only change the name if we have an associated enum.
                             string overwriteName = names[i];
                             if (overwriteName != null && overwriteName != "") {
@@ -1467,7 +1480,13 @@ namespace libMBIN
             return GetEnumNames( fieldName, settings ).Length;
         }
 
-        public MXmlBase SerializeMXml(bool isChildTemplate, bool isGenericTemplate = false) {
+        /// <summary>
+        /// .
+        /// </summary>
+        /// <param name="isChildTemplate">If true, </param>
+        /// <param name="isGenericTemplate">If true, </param>
+        /// <param name="IncludeTypeInfo">If true, type info is written to the MXML file.</param>
+        public MXmlBase SerializeMXml(bool isChildTemplate, bool isGenericTemplate = false, bool IncludeTypeInfo = false) {
             Type type = GetType();
             string typeName = type.Name != "NMSString0x20A" ? type.Name : "NMSString0x20";
             MXmlBase xmlData = new MXmlProperty {};
@@ -1495,9 +1514,9 @@ namespace libMBIN
                 if ( field.IsInitOnly ) continue;
 
                 if ( isGenericTemplate ) {
-                    subElement.Elements.Add( SerializeMXmlValue( field.FieldType, field, settings, field.GetValue( this ) ) );
+                    subElement.Elements.Add( SerializeMXmlValue( field.FieldType, field, settings, field.GetValue( this ), IncludeTypeInfo ) );
                 } else {
-                    xmlData.Elements.Add( SerializeMXmlValue( field.FieldType, field, settings, field.GetValue( this ) ) );
+                    xmlData.Elements.Add( SerializeMXmlValue( field.FieldType, field, settings, field.GetValue( this ), IncludeTypeInfo ) );
                 }
             }
 
@@ -1811,15 +1830,11 @@ namespace libMBIN
         /// Writes the NMSTemplate object to an .mxml file.
         /// </summary>
         /// <param name="outputpath">The location to write the .mxml file.</param>
-        public void WriteToMxml(string outputpath) => WriteToMxml(outputpath, false);
-        /// <summary>
-        /// Writes the NMSTemplate object to an .mxml file.
-        /// </summary>
-        /// <param name="outputpath">The location to write the .mxml file.</param>
         /// <param name="hideVersionInfo">If true, version info is not written to the MXML file.</param>
-        public void WriteToMxml(string outputpath, bool hideVersionInfo)
+        /// <param name="IncludeTypeInfo">If true, type info is written to the MXML file.</param>
+        public void WriteToMxml(string outputpath, bool hideVersionInfo, bool IncludeTypeInfo)
         {
-            var data = MXmlFile.WriteTemplate(this, hideVersionInfo);
+            var data = MXmlFile.WriteTemplate(this, hideVersionInfo, IncludeTypeInfo);
             File.WriteAllText(outputpath, data);
         }
 
