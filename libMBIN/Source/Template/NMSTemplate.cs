@@ -1243,6 +1243,10 @@ namespace libMBIN
                     GcSeed seed = (GcSeed)value;
                     valueString = (seed.Seed == 0 && !seed.UseSeedValue) ? "NONE" : seed.Seed.ToString();
                     break;
+                case "GcResource":
+                    // Don't return anything. We won't write this to MXML since the data is only used internally
+                    // and isn't serialized by the game either.
+                    return null;
                 case "Colour32":
                     // Handle the Colour32 explicitly since we want to write floats to the MXML, not ints.
                     Colour colour = new Colour((Colour32)value);
