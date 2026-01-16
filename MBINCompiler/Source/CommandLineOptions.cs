@@ -142,7 +142,7 @@ namespace MBINCompiler
                                         "The * and ? wildcard characters can be used.\n" +
                                         "Multiple glob patterns are separated by a semicolon.\n" +
                                         "The default is --include=\"*.MBIN;*.MBIN.PC;*.MXML\" (all).\n" +
-                                        "The --include filter is applied before --exclude." },
+                                        "Any pattern in the --include filter will not be applied if it matches --exclude also." },
 
             new Option { longName = "exclude", param = "<Glob Pattern>[;<Glob Pattern>...]",
                             description = "\nFilter all files to exclude any that match the " +
@@ -150,7 +150,7 @@ namespace MBINCompiler
                                         "The * and ? wildcard characters can be used.\n" +
                                         "Multiple glob patterns are separated by a semicolon.\n" +
                                         "The default is --exclude=\"\" (nothing).\n" +
-                                        "The --exclude filter is applied after --include." },
+                                        "The --exclude filter overrides any value in --include." },
 
             new Option { shortName = 'V', longName = "format-version", param = "[0|1|2]", isHidden = true,
                             description = "\nOutput using the specified MBIN format version.\n" +
