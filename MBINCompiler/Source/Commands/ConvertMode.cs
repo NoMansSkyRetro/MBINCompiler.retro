@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
 using libMBIN;
@@ -7,6 +9,23 @@ using libMBIN;
 namespace MBINCompiler.Commands {
 
     using static CommandLineOptions;
+
+    public static class StringExtensions {
+        /// <summary>
+        /// Compares the string against a given pattern.
+        /// Code credit: https://stackoverflow.com/a/4146349
+        /// </summary>
+        /// <param name="str">The string.</param>
+        /// <param name="pattern">The pattern to match, where "*" means any sequence of characters, and "?" means any single character.</param>
+        /// <returns><c>true</c> if the string matches the given pattern; otherwise <c>false</c>.</returns>
+        public static bool Like(this string str, string pattern)
+        {
+            return new Regex(
+                "^" + Regex.Escape(pattern).Replace(@"\*", ".*").Replace(@"\?", ".") + "$",
+                RegexOptions.IgnoreCase | RegexOptions.Singleline
+            ).IsMatch(str);
+        }
+    }
 
     internal class ConvertCommand : Command<ConvertCommand> {
 
@@ -60,12 +79,8 @@ namespace MBINCompiler.Commands {
 
             var defaultExclude = @"";
 
-            //#if DEBUG
-            //defaultExclude = "";
-            //#endif
-
-            IncludeFilters = new List<string>((optIncludes?.value ?? defaultInclude).Split(';'));
-            ExcludeFilters = new List<string>((optExcludes?.value ?? defaultExclude).Split(';'));
+            IncludeFilters = new List<string>((optIncludes?.value.ToUpper() ?? defaultInclude).Split(';'));
+            ExcludeFilters = new List<string>((optExcludes?.value.ToUpper() ?? defaultExclude).Split(';'));
 
             // if not auto-detecting then OutputFormat can be excluded
             if ( !autoFormat ) ExcludeFilters.Add( $"*.{OutputFormat}" );
@@ -150,28 +165,20 @@ namespace MBINCompiler.Commands {
         private static List<string> GetFilteredFiles( string path ) {
             var files = new List<string>();
 
-            var includeFiles = new List<string>();
-            var excludeFiles = new List<string>();
-            foreach ( var filter in IncludeFilters ) {
-                includeFiles.AddRange( GetDirectoryFiles( path, filter ) );
-            }
-            foreach ( var filter in ExcludeFilters ) {
-                excludeFiles.AddRange( GetDirectoryFiles( path, filter ) );
-            }
-
-            // add the filtered files to fileList
-            foreach ( var file in includeFiles ) {
-                if ( !excludeFiles.Contains( file ) ) files.Add( file );
+            var allFiles = Directory.EnumerateFiles(path, "", SearchOption.AllDirectories);
+            foreach (string fname in allFiles) {
+                string upperFname = fname.ToUpper();
+                if (ExcludeFilters.Count > 0) {
+                    if (ExcludeFilters.Any(ext => upperFname.Like(ext))) {
+                        continue;
+                    }
+                }
+                if (IncludeFilters.Any(ext => upperFname.Like(ext))) {
+                    files.Add(fname);
+                }
             }
 
             return files;
-        }
-
-        private static string[] GetDirectoryFiles( string path, string filter ) {
-            try {
-                return Directory.GetFiles( path, filter, SearchOption.AllDirectories );
-            } catch ( DirectoryNotFoundException ) { }
-            return new string[] { };
         }
 
         private static string DetectFormat( string file, ref bool foundMBIN, ref bool foundMXML ) {
