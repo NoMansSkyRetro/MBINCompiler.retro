@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x96D9454DA3E2F540, NameHash = 0xA7A8D1DB)]
+    [NMS(GUID = 0xE2250ED3E5F40D3B, NameHash = 0xA7A8D1DB)]
     public class GcAudioWwiseRTPCs : NMSTemplate
     {
-        // size: 0x67
+        // size: 0x6B
         public enum AkRTPCEnum : uint {
             INVALID_RTPC = 0x0,
             BASE_BATTERY_CHARGING = 0x7C13B3BA,
@@ -40,9 +40,12 @@ namespace libMBIN.NMS.GameComponents
             MOTION_DRIVER_A = 0x732F78BC,
             MOTION_DRIVER_B = 0x732F78BF,
             MUS_FISHING = 0x6999BC45,
+            MUS_TRUCKINGALONG_MAIN = 0x375380AF,
+            MUS_TRUCKINGALONG_ONTARGET = 0x76D8EFE4,
             NPC_SHIP_DISTANCE = 0x810FD033,
             NPC_SHIP_DOPPLER = 0xD8BAE8F6,
             NPC_SHIP_SPEED = 0x925EFD57,
+            PHYSICS_IMPACT_STRENGTH = 0xC35B0E37,
             PL_AMB_HEIGHT = 0x12F4388A,
             PL_ATLASGUN = 0xF17B2015,
             PL_CAVE_ENCLOSED = 0x99475573,
@@ -102,6 +105,7 @@ namespace libMBIN.NMS.GameComponents
             VEHICLE_JUMP = 0x1E1DDD32,
             VEHICLE_SKID = 0xA1303CF3,
             VEHICLE_SPEED = 0x5979CECB,
+            VEHICLE_SPEED_LARGE = 0x8DF74417,
             VEHICLE_SUSPENSION = 0x3016F2FD,
             VEHICLE_TORQUE = 0x480D482C,
             WALKER_MOOD = 0xFB1B461B,

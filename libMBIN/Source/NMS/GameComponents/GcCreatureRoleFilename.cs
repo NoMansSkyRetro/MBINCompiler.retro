@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureRoleFilename : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x00 */ public VariableSizeString File;
+        /* 0x00 */ public GcFilename File;
         [NMS(Index = 1, Size = 0x4, EnumType = typeof(GcPlanetLife.LifeSettingEnum))]
         /* 0x10 */ public float[] BiomeProbability;
     }

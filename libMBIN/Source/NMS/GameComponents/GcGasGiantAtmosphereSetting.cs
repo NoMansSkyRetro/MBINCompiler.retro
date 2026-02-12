@@ -8,6 +8,6 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 0)]
         /* 0x10 */ public NMSString0x10 AtmosphereID;
         [NMS(Index = 1)]
-        /* 0x20 */ public VariableSizeString GradientMapResource;
+        /* 0x20 */ public GcFilename GradientMapResource;
     }
 }

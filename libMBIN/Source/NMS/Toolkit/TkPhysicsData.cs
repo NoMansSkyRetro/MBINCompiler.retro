@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xC27BACA704D255F, NameHash = 0xB85DD068)]
+    [NMS(GUID = 0x3CA69A644E888D63, NameHash = 0xB85DD068)]
     public class TkPhysicsData : NMSTemplate
     {
         [NMS(Index = 3)]
@@ -15,5 +15,7 @@ namespace libMBIN.NMS.Toolkit
         /* 0x10 */ public float Mass;
         [NMS(Index = 2)]
         /* 0x14 */ public float RollingFriction;
+        [NMS(Index = 6)]
+        /* 0x18 */ public bool CanBeTooSteepForTeleporter;
     }
 }

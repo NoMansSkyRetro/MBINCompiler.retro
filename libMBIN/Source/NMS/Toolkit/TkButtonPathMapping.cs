@@ -8,11 +8,11 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 1)]
         /* 0x00 */ public NMSString0x20A Name;
         [NMS(Index = 3)]
-        /* 0x20 */ public VariableSizeString OverlayIcon;
+        /* 0x20 */ public GcFilename OverlayIcon;
         [NMS(Index = 2)]
-        /* 0x30 */ public VariableSizeString SolidIcon;
+        /* 0x30 */ public GcFilename SolidIcon;
         [NMS(Index = 4)]
-        /* 0x40 */ public VariableSizeString SpecialIcon;
+        /* 0x40 */ public GcFilename SpecialIcon;
         [NMS(Index = 5)]
         /* 0x50 */ public TkInputHandEnum Hand;
         [NMS(Index = 0)]

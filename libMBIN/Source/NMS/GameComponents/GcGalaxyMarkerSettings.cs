@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 1)]
         /* 0x30 */ public Colour OutlineColour;
         [NMS(Index = 12)]
-        /* 0x40 */ public VariableSizeString Icon;
+        /* 0x40 */ public GcFilename Icon;
         [NMS(Index = 13)]
         /* 0x50 */ public Vector2f IconSize;
         [NMS(Index = 15)]

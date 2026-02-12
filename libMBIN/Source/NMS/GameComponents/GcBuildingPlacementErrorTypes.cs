@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x21CDDE5CC30A399B, NameHash = 0x8CD019E0)]
+    [NMS(GUID = 0x83A6CB24B46258A, NameHash = 0x8CD019E0)]
     public class GcBuildingPlacementErrorTypes : NMSTemplate
     {
-        // size: 0x19
+        // size: 0x1A
         public enum InvalidPlacementReasonEnum : uint {
             Offline,
             InvalidBiome,
@@ -30,6 +30,7 @@ namespace libMBIN.NMS.GameComponents
             ShipInside,
             PlayerInside,
             InvalidCorvettePosition,
+            DisallowedByProtectedArea,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public InvalidPlacementReasonEnum InvalidPlacementReason;

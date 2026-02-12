@@ -8,6 +8,6 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 1, Size = 0x5)]
         /* 0x000 */ public GcHeavyAirColourData[] Colours;
         [NMS(Index = 0)]
-        /* 0x140 */ public VariableSizeString Filename;
+        /* 0x140 */ public GcFilename Filename;
     }
 }

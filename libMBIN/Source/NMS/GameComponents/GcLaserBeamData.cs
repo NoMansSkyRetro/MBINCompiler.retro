@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA73AB03DA1B4C359, NameHash = 0xFD1E1F96)]
+    [NMS(GUID = 0xEFA1A0FC2CFA87EC, NameHash = 0xFD1E1F96)]
     public class GcLaserBeamData : NMSTemplate
     {
         [NMS(Index = 32)]
@@ -13,11 +13,11 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 31)]
         /* 0x020 */ public Colour LightColour;
         [NMS(Index = 2)]
-        /* 0x030 */ public VariableSizeString BeamCoreFile;
+        /* 0x030 */ public GcFilename BeamCoreFile;
         [NMS(Index = 1)]
-        /* 0x040 */ public VariableSizeString BeamFile;
+        /* 0x040 */ public GcFilename BeamFile;
         [NMS(Index = 3)]
-        /* 0x050 */ public VariableSizeString BeamTipFile;
+        /* 0x050 */ public GcFilename BeamTipFile;
         [NMS(Index = 35)]
         /* 0x060 */ public List<GcCombatEffectDamageMultiplier> CombatEffectDamageMultipliers;
         [NMS(Index = 34)]

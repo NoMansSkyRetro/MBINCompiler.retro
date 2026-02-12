@@ -7,7 +7,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkLSystemRule : NMSTemplate
     {
         [NMS(Index = 1)]
-        /* 0x00 */ public VariableSizeString Model;
+        /* 0x00 */ public GcFilename Model;
         [NMS(Index = 2)]
         /* 0x10 */ public List<TkLSystemInnerRule> Rules;
         // size: 0x2

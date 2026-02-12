@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 0)]
         /* 0x00 */ public NMSString0x10 Name;
         [NMS(Index = 9)]
-        /* 0x10 */ public List<VariableSizeString> Options;
+        /* 0x10 */ public List<GcFilename> Options;
         [NMS(Index = 1)]
         /* 0x20 */ public NMSString0x10 ResourceHint;
         [NMS(Index = 2)]

@@ -2,12 +2,12 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xEBFE94A781B9A64B, NameHash = 0x466B710A)]
+    [NMS(GUID = 0xFDCAA1CBD53D2A3E, NameHash = 0x466B710A)]
     public class TkNetReplicatedEntityComponentData : NMSTemplate
     {
         [NMS(Index = 0)]
         /* 0x00 */ public List<NMSString0x80> ReplicaComponentMask;
-        // size: 0x8
+        // size: 0x9
         public enum ReplicationRangeEnum : uint {
             NotSet,
             System,
@@ -17,6 +17,7 @@ namespace libMBIN.NMS.Toolkit
             Space,
             SpaceStation,
             Nexus,
+            Ship,
         }
         [NMS(Index = 1)]
         /* 0x10 */ public ReplicationRangeEnum ReplicationRange;

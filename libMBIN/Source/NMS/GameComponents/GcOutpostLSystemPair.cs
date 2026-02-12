@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcOutpostLSystemPair : NMSTemplate
     {
         [NMS(Index = 1, Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
-        /* 0x00 */ public VariableSizeString[] LSystems;
+        /* 0x00 */ public GcFilename[] LSystems;
         [NMS(Index = 0)]
         /* 0x90 */ public NMSString0x20 Locator;
     }

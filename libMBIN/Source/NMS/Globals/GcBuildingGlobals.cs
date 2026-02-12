@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xE6225847EA37EC81, NameHash = 0x1A517154)]
+    [NMS(GUID = 0x31192943B023654D, NameHash = 0x1A517154)]
     public class GcBuildingGlobals : NMSTemplate
     {
         [NMS(Index = 0)]
@@ -21,7 +21,7 @@ namespace libMBIN.NMS.Globals
         [NMS(Index = 13)]
         /* 0x968 */ public TkTextureResource ScreenSpaceRotationIcon;
         [NMS(Index = 192)]
-        /* 0x980 */ public VariableSizeString FreighterBaseSpawnOverride;
+        /* 0x980 */ public GcFilename FreighterBaseSpawnOverride;
         [NMS(Index = 11, Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
         /* 0x990 */ public TkLODDistances[] ActiveLodDistances;
         [NMS(Index = 12, Size = 0x4, EnumType = typeof(TkGraphicsDetailTypes.GraphicDetailEnum))]
@@ -340,16 +340,16 @@ namespace libMBIN.NMS.Globals
         /* 0xCB8 */ public float PercentagePhysicsComponentsForComplexity;
         [NMS(Index = 17)]
         /* 0xCBC */ public float PowerlineSnapDistance;
-        [NMS(Index = 71)]
-        /* 0xCC0 */ public float Radius_DoNotPlaceAnywhereNear;
         [NMS(Index = 65)]
-        /* 0xCC4 */ public float RadiusMultiplier_DoNotPlace;
+        /* 0xCC0 */ public float RadiusMultiplier_DoNotPlace;
         [NMS(Index = 67)]
-        /* 0xCC8 */ public float RadiusMultiplier_DoNotPlaceAnywhereNear;
+        /* 0xCC4 */ public float RadiusMultiplier_DoNotPlaceAnywhereNear;
         [NMS(Index = 66)]
-        /* 0xCCC */ public float RadiusMultiplier_DoNotPlaceClose;
+        /* 0xCC8 */ public float RadiusMultiplier_DoNotPlaceClose;
         [NMS(Index = 68)]
-        /* 0xCD0 */ public float RadiusMultiplier_OnlyPlaceAround;
+        /* 0xCCC */ public float RadiusMultiplier_OnlyPlaceAround;
+        [NMS(Index = 71)]
+        /* 0xCD0 */ public float Radius_DoNotPlaceAnywhereNear;
         [NMS(Index = 75)]
         /* 0xCD4 */ public float SectorMessageCenterDistance;
         [NMS(Index = 76)]

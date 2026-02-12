@@ -11,7 +11,7 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 3)]
         /* 0x118 */ public NMSString0x10 AnimGroup;
         [NMS(Index = 5)]
-        /* 0x128 */ public List<VariableSizeString> AnimLibraries;
+        /* 0x128 */ public List<GcFilename> AnimLibraries;
         [NMS(Index = 4)]
         /* 0x138 */ public List<TkAnimationData> Anims;
         [NMS(Index = 7)]

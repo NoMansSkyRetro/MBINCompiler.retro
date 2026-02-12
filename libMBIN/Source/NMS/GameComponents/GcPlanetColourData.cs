@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9FFF81052DF8BF24, NameHash = 0x3FD35145)]
+    [NMS(GUID = 0xB387EAD81C80D9FE, NameHash = 0x3FD35145)]
     public class GcPlanetColourData : NMSTemplate
     {
         // size: 0x40

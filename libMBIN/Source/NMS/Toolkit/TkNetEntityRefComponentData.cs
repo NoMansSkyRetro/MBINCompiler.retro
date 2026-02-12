@@ -4,6 +4,6 @@ namespace libMBIN.NMS.Toolkit
     public class TkNetEntityRefComponentData : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x0 */ public VariableSizeString Reference;
+        /* 0x0 */ public GcFilename Reference;
     }
 }

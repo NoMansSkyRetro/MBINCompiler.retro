@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkOpenVRControllerLookup : NMSTemplate
     {
         [NMS(Index = 1)]
-        /* 0x00 */ public VariableSizeString DeviceSpec;
+        /* 0x00 */ public GcFilename DeviceSpec;
         [NMS(Index = 2)]
         /* 0x10 */ public NMSString0x10 ResetVRViewLayerName;
         [NMS(Index = 0)]

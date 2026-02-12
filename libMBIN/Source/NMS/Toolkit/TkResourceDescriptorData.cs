@@ -10,7 +10,7 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 4)]
         /* 0x20 */ public List<NMSTemplate> Children;
         [NMS(Index = 2)]
-        /* 0x30 */ public List<VariableSizeString> ReferencePaths;
+        /* 0x30 */ public List<GcFilename> ReferencePaths;
         [NMS(Index = 3)]
         /* 0x40 */ public float Chance;
         [NMS(Index = 1)]

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x96B052FE221899B5, NameHash = 0x36E3583)]
+    [NMS(GUID = 0x1523805BD7445AE4, NameHash = 0x36E3583)]
     public class GcCollisionTable : NMSTemplate
     {
         [NMS(Index = 0)]

@@ -8,6 +8,6 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 0)]
         /* 0x00 */ public NMSString0x10 Id;
         [NMS(Index = 1)]
-        /* 0x10 */ public List<VariableSizeString> List;
+        /* 0x10 */ public List<GcFilename> List;
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x284FA95AA59596FF, NameHash = 0x42902548)]
+    [NMS(GUID = 0xBDEE5C2CBEB6AB7F, NameHash = 0x42902548)]
     public class GcSpaceshipGlobals : NMSTemplate
     {
         [NMS(Index = 214)]
@@ -86,7 +86,7 @@ namespace libMBIN.NMS.Globals
         [NMS(Index = 22)]
         /* 0x02A0 */ public NMSString0x10 SailShipCoreTechID;
         [NMS(Index = 673)]
-        /* 0x02B0 */ public List<VariableSizeString> ShipModels;
+        /* 0x02B0 */ public List<GcFilename> ShipModels;
         [NMS(Index = 120)]
         /* 0x02C0 */ public NMSString0x10 WaterEffectID;
         [NMS(Index = 124)]
@@ -125,1283 +125,1283 @@ namespace libMBIN.NMS.Globals
         /* 0x10C4 */ public GcPlayerStickData StickData;
         [NMS(Index = 479)]
         /* 0x10E0 */ public GcPlayerSpaceshipAim MissileAim;
-        [NMS(Index = 617)]
-        /* 0x10F8 */ public GcPlayerSpaceshipWarpData Warp;
         [NMS(Index = 9)]
-        /* 0x1108 */ public TkEasedFalloff CorvetteLandingRotateNoseLiftFalloff;
+        /* 0x10F8 */ public TkEasedFalloff CorvetteLandingRotateNoseLiftFalloff;
         [NMS(Index = 7)]
-        /* 0x1114 */ public TkEasedFalloff CorvetteLandingRotateTiltFalloff;
+        /* 0x110C */ public TkEasedFalloff CorvetteLandingRotateTiltFalloff;
+        [NMS(Index = 617)]
+        /* 0x1120 */ public GcPlayerSpaceshipWarpData Warp;
         [NMS(Index = 425)]
-        /* 0x1120 */ public TkHitCurveData DamageLightCurve;
+        /* 0x1130 */ public TkHitCurveData DamageLightCurve;
         [NMS(Index = 419)]
-        /* 0x112C */ public TkHitCurveData MuzzleLightCurve;
+        /* 0x113C */ public TkHitCurveData MuzzleLightCurve;
         [NMS(Index = 456)]
-        /* 0x1138 */ public Vector2f DeathSpinPitch;
+        /* 0x1148 */ public Vector2f DeathSpinPitch;
         [NMS(Index = 455)]
-        /* 0x1140 */ public Vector2f DeathSpinRoll;
+        /* 0x1150 */ public Vector2f DeathSpinRoll;
         [NMS(Index = 225, MxmlName = "3rdPersonAngleMinSpeed")]
-        /* 0x1148 */ public float _3rdPersonAngleMinSpeed;
+        /* 0x1158 */ public float _3rdPersonAngleMinSpeed;
         [NMS(Index = 226, MxmlName = "3rdPersonAngleSpeedRangePitch")]
-        /* 0x114C */ public float _3rdPersonAngleSpeedRangePitch;
+        /* 0x115C */ public float _3rdPersonAngleSpeedRangePitch;
         [NMS(Index = 227, MxmlName = "3rdPersonAngleSpeedRangeYaw")]
-        /* 0x1150 */ public float _3rdPersonAngleSpeedRangeYaw;
+        /* 0x1160 */ public float _3rdPersonAngleSpeedRangeYaw;
         [NMS(Index = 224, MxmlName = "3rdPersonAngleSpringTime")]
-        /* 0x1154 */ public float _3rdPersonAngleSpringTime;
+        /* 0x1164 */ public float _3rdPersonAngleSpringTime;
         [NMS(Index = 233, MxmlName = "3rdPersonAvoidanceAdjustPitchFactor")]
-        /* 0x1158 */ public float _3rdPersonAvoidanceAdjustPitchFactor;
+        /* 0x1168 */ public float _3rdPersonAvoidanceAdjustPitchFactor;
         [NMS(Index = 235, MxmlName = "3rdPersonAvoidanceAdjustRollFactor")]
-        /* 0x115C */ public float _3rdPersonAvoidanceAdjustRollFactor;
+        /* 0x116C */ public float _3rdPersonAvoidanceAdjustRollFactor;
         [NMS(Index = 236, MxmlName = "3rdPersonAvoidanceAdjustYawFactor")]
-        /* 0x1160 */ public float _3rdPersonAvoidanceAdjustYawFactor;
+        /* 0x1170 */ public float _3rdPersonAvoidanceAdjustYawFactor;
         [NMS(Index = 238, MxmlName = "3rdPersonFlashDuration ")]
-        /* 0x1164 */ public float _3rdPersonFlashDuration;
+        /* 0x1174 */ public float _3rdPersonFlashDuration;
         [NMS(Index = 237, MxmlName = "3rdPersonFlashIntensity ")]
-        /* 0x1168 */ public float _3rdPersonFlashIntensity;
+        /* 0x1178 */ public float _3rdPersonFlashIntensity;
         [NMS(Index = 234, MxmlName = "3rdPersonHeightForceAdjustPitchFactor")]
-        /* 0x116C */ public float _3rdPersonHeightForceAdjustPitchFactor;
+        /* 0x117C */ public float _3rdPersonHeightForceAdjustPitchFactor;
         [NMS(Index = 229, MxmlName = "3rdPersonLowHeightMax")]
-        /* 0x1170 */ public float _3rdPersonLowHeightMax;
+        /* 0x1180 */ public float _3rdPersonLowHeightMax;
         [NMS(Index = 228, MxmlName = "3rdPersonLowHeightMin")]
-        /* 0x1174 */ public float _3rdPersonLowHeightMin;
+        /* 0x1184 */ public float _3rdPersonLowHeightMin;
         [NMS(Index = 230, MxmlName = "3rdPersonLowHeightOffsetVertRotationY")]
-        /* 0x1178 */ public float _3rdPersonLowHeightOffsetVertRotationY;
+        /* 0x1188 */ public float _3rdPersonLowHeightOffsetVertRotationY;
         [NMS(Index = 231, MxmlName = "3rdPersonLowHeightOffsetY")]
-        /* 0x117C */ public float _3rdPersonLowHeightOffsetY;
+        /* 0x118C */ public float _3rdPersonLowHeightOffsetY;
         [NMS(Index = 232, MxmlName = "3rdPersonLowHeightSpringTime")]
-        /* 0x1180 */ public float _3rdPersonLowHeightSpringTime;
+        /* 0x1190 */ public float _3rdPersonLowHeightSpringTime;
         [NMS(Index = 221, MxmlName = "3rdPersonPitchAngle")]
-        /* 0x1184 */ public float _3rdPersonPitchAngle;
+        /* 0x1194 */ public float _3rdPersonPitchAngle;
         [NMS(Index = 217, MxmlName = "3rdPersonRollAngle")]
-        /* 0x1188 */ public float _3rdPersonRollAngle;
+        /* 0x1198 */ public float _3rdPersonRollAngle;
         [NMS(Index = 220, MxmlName = "3rdPersonRollAngleAlien")]
-        /* 0x118C */ public float _3rdPersonRollAngleAlien;
+        /* 0x119C */ public float _3rdPersonRollAngleAlien;
         [NMS(Index = 218, MxmlName = "3rdPersonRollAngleDropship")]
-        /* 0x1190 */ public float _3rdPersonRollAngleDropship;
+        /* 0x11A0 */ public float _3rdPersonRollAngleDropship;
         [NMS(Index = 219, MxmlName = "3rdPersonRollAngleScience")]
-        /* 0x1194 */ public float _3rdPersonRollAngleScience;
+        /* 0x11A4 */ public float _3rdPersonRollAngleScience;
         [NMS(Index = 239, MxmlName = "3rdPersonTransitionTime ")]
-        /* 0x1198 */ public float _3rdPersonTransitionTime;
+        /* 0x11A8 */ public float _3rdPersonTransitionTime;
         [NMS(Index = 216, MxmlName = "3rdPersonUpOffsetRollChangeSpeed")]
-        /* 0x119C */ public float _3rdPersonUpOffsetRollChangeSpeed;
+        /* 0x11AC */ public float _3rdPersonUpOffsetRollChangeSpeed;
         [NMS(Index = 244, MxmlName = "3rdPersonWarpWanderSpring")]
-        /* 0x11A0 */ public float _3rdPersonWarpWanderSpring;
+        /* 0x11B0 */ public float _3rdPersonWarpWanderSpring;
         [NMS(Index = 243, MxmlName = "3rdPersonWarpWanderStartTime")]
-        /* 0x11A4 */ public float _3rdPersonWarpWanderStartTime;
+        /* 0x11B4 */ public float _3rdPersonWarpWanderStartTime;
         [NMS(Index = 245, MxmlName = "3rdPersonWarpWanderTimeX")]
-        /* 0x11A8 */ public float _3rdPersonWarpWanderTimeX;
+        /* 0x11B8 */ public float _3rdPersonWarpWanderTimeX;
         [NMS(Index = 246, MxmlName = "3rdPersonWarpWanderTimeY")]
-        /* 0x11AC */ public float _3rdPersonWarpWanderTimeY;
+        /* 0x11BC */ public float _3rdPersonWarpWanderTimeY;
         [NMS(Index = 247, MxmlName = "3rdPersonWarpWanderTimeZ")]
-        /* 0x11B0 */ public float _3rdPersonWarpWanderTimeZ;
+        /* 0x11C0 */ public float _3rdPersonWarpWanderTimeZ;
         [NMS(Index = 240, MxmlName = "3rdPersonWarpXWander")]
-        /* 0x11B4 */ public float _3rdPersonWarpXWander;
+        /* 0x11C4 */ public float _3rdPersonWarpXWander;
         [NMS(Index = 241, MxmlName = "3rdPersonWarpYWander")]
-        /* 0x11B8 */ public float _3rdPersonWarpYWander;
+        /* 0x11C8 */ public float _3rdPersonWarpYWander;
         [NMS(Index = 242, MxmlName = "3rdPersonWarpZWander")]
-        /* 0x11BC */ public float _3rdPersonWarpZWander;
+        /* 0x11CC */ public float _3rdPersonWarpZWander;
         [NMS(Index = 222, MxmlName = "3rdPersonYawAngle")]
-        /* 0x11C0 */ public float _3rdPersonYawAngle;
+        /* 0x11D0 */ public float _3rdPersonYawAngle;
         [NMS(Index = 223, MxmlName = "3rdPersonYawAngleLateralExtra")]
-        /* 0x11C4 */ public float _3rdPersonYawAngleLateralExtra;
+        /* 0x11D4 */ public float _3rdPersonYawAngleLateralExtra;
         [NMS(Index = 215)]
-        /* 0x11C8 */ public float AcrobaticLowFlightLevel;
+        /* 0x11D8 */ public float AcrobaticLowFlightLevel;
         [NMS(Index = 431)]
-        /* 0x11CC */ public float AimCritAngle;
+        /* 0x11DC */ public float AimCritAngle;
         [NMS(Index = 433)]
-        /* 0x11D0 */ public float AimCritBehindAngle;
+        /* 0x11E0 */ public float AimCritBehindAngle;
         [NMS(Index = 432)]
-        /* 0x11D4 */ public float AimCritMinFwdAngle;
+        /* 0x11E4 */ public float AimCritMinFwdAngle;
         [NMS(Index = 443)]
-        /* 0x11D8 */ public float AimFoVBoost;
+        /* 0x11E8 */ public float AimFoVBoost;
         [NMS(Index = 444)]
-        /* 0x11DC */ public float AimFoVBoostTime;
+        /* 0x11EC */ public float AimFoVBoostTime;
         [NMS(Index = 445)]
-        /* 0x11E0 */ public float AimFoVBoostTimeAuto;
+        /* 0x11F0 */ public float AimFoVBoostTimeAuto;
         [NMS(Index = 447)]
-        /* 0x11E4 */ public float AimMaxAutoAngle;
+        /* 0x11F4 */ public float AimMaxAutoAngle;
         [NMS(Index = 467)]
-        /* 0x11E8 */ public float AimSpeedTrackDistance;
+        /* 0x11F8 */ public float AimSpeedTrackDistance;
         [NMS(Index = 468)]
-        /* 0x11EC */ public float AimSpeedTrackForce;
+        /* 0x11FC */ public float AimSpeedTrackForce;
         [NMS(Index = 446)]
-        /* 0x11F0 */ public float AimTurnSlower;
+        /* 0x1200 */ public float AimTurnSlower;
         [NMS(Index = 371)]
-        /* 0x11F4 */ public float AlarmLastHitTime;
+        /* 0x1204 */ public float AlarmLastHitTime;
         [NMS(Index = 366)]
-        /* 0x11F8 */ public float AlarmLightIntensity;
+        /* 0x1208 */ public float AlarmLightIntensity;
         [NMS(Index = 368)]
-        /* 0x11FC */ public float AlarmLightIntensityHostile;
+        /* 0x120C */ public float AlarmLightIntensityHostile;
         [NMS(Index = 367)]
-        /* 0x1200 */ public float AlarmRate;
+        /* 0x1210 */ public float AlarmRate;
         [NMS(Index = 370)]
-        /* 0x1204 */ public float AlarmRateHostileMax;
+        /* 0x1214 */ public float AlarmRateHostileMax;
         [NMS(Index = 369)]
-        /* 0x1208 */ public float AlarmRateHostileMin;
+        /* 0x1218 */ public float AlarmRateHostileMin;
         [NMS(Index = 601)]
-        /* 0x120C */ public float AngularDamping;
+        /* 0x121C */ public float AngularDamping;
         [NMS(Index = 557)]
-        /* 0x1210 */ public float AnomalyStationMaxApproachSpeed;
+        /* 0x1220 */ public float AnomalyStationMaxApproachSpeed;
         [NMS(Index = 429)]
-        /* 0x1214 */ public float AsteroidHitAngle;
+        /* 0x1224 */ public float AsteroidHitAngle;
         [NMS(Index = 430)]
-        /* 0x1218 */ public float AsteroidHitAngleBoosting;
+        /* 0x1228 */ public float AsteroidHitAngleBoosting;
         [NMS(Index = 625)]
-        /* 0x121C */ public float AtmosphereAngle;
+        /* 0x122C */ public float AtmosphereAngle;
         [NMS(Index = 21)]
-        /* 0x1220 */ public float AtmosphereCombatHeight;
+        /* 0x1230 */ public float AtmosphereCombatHeight;
         [NMS(Index = 128)]
-        /* 0x1224 */ public float AtmosphereLightIntensity;
+        /* 0x1234 */ public float AtmosphereLightIntensity;
         [NMS(Index = 624)]
-        /* 0x1228 */ public float AtmosphereSpeed;
+        /* 0x1238 */ public float AtmosphereSpeed;
         [NMS(Index = 379)]
-        /* 0x122C */ public float AutoLevelMaxAngle;
+        /* 0x123C */ public float AutoLevelMaxAngle;
         [NMS(Index = 377)]
-        /* 0x1230 */ public float AutoLevelMaxPitchAngle;
+        /* 0x1240 */ public float AutoLevelMaxPitchAngle;
         [NMS(Index = 378)]
-        /* 0x1234 */ public float AutoLevelMinAngle;
+        /* 0x1244 */ public float AutoLevelMinAngle;
         [NMS(Index = 376)]
-        /* 0x1238 */ public float AutoLevelMinPitchAngle;
+        /* 0x1248 */ public float AutoLevelMinPitchAngle;
         [NMS(Index = 295)]
-        /* 0x123C */ public float AutoLevelPitchCorrectMargin;
+        /* 0x124C */ public float AutoLevelPitchCorrectMargin;
         [NMS(Index = 294)]
-        /* 0x1240 */ public float AutoLevelWaterAngle;
+        /* 0x1250 */ public float AutoLevelWaterAngle;
         [NMS(Index = 292)]
-        /* 0x1244 */ public float AutoLevelWaterMargin;
+        /* 0x1254 */ public float AutoLevelWaterMargin;
         [NMS(Index = 293)]
-        /* 0x1248 */ public float AutoLevelWaterTorque;
+        /* 0x1258 */ public float AutoLevelWaterTorque;
         [NMS(Index = 484)]
-        /* 0x124C */ public float AutoPilotAlignStrength;
+        /* 0x125C */ public float AutoPilotAlignStrength;
         [NMS(Index = 485)]
-        /* 0x1250 */ public float AutoPilotAlignStrengthCorvetteAutopilot;
+        /* 0x1260 */ public float AutoPilotAlignStrengthCorvetteAutopilot;
         [NMS(Index = 489)]
-        /* 0x1254 */ public float AutoPilotCallAngle;
+        /* 0x1264 */ public float AutoPilotCallAngle;
         [NMS(Index = 492)]
-        /* 0x1258 */ public float AutoPilotCallAngleGhost;
+        /* 0x1268 */ public float AutoPilotCallAngleGhost;
         [NMS(Index = 490)]
-        /* 0x125C */ public float AutoPilotCallAngleVertical;
+        /* 0x126C */ public float AutoPilotCallAngleVertical;
         [NMS(Index = 493)]
-        /* 0x1260 */ public float AutoPilotCallAngleVerticalGhost;
+        /* 0x1270 */ public float AutoPilotCallAngleVerticalGhost;
         [NMS(Index = 487)]
-        /* 0x1264 */ public float AutoPilotCallDistance;
+        /* 0x1274 */ public float AutoPilotCallDistance;
         [NMS(Index = 491)]
-        /* 0x1268 */ public float AutoPilotCallDistanceGhost;
+        /* 0x1278 */ public float AutoPilotCallDistanceGhost;
         [NMS(Index = 488)]
-        /* 0x126C */ public float AutoPilotCallDistanceSpacePOI;
+        /* 0x127C */ public float AutoPilotCallDistanceSpacePOI;
         [NMS(Index = 494)]
-        /* 0x1270 */ public float AutoPilotPositionAlignStrength;
+        /* 0x1280 */ public float AutoPilotPositionAlignStrength;
         [NMS(Index = 486)]
-        /* 0x1274 */ public float AutoPilotSmallShipAlignStrength;
+        /* 0x1284 */ public float AutoPilotSmallShipAlignStrength;
         [NMS(Index = 518)]
-        /* 0x1278 */ public float AutoPilotStoppingMargin;
+        /* 0x1288 */ public float AutoPilotStoppingMargin;
         [NMS(Index = 257)]
-        /* 0x127C */ public float AvoidanceDistancePower;
+        /* 0x128C */ public float AvoidanceDistancePower;
         [NMS(Index = 256)]
-        /* 0x1280 */ public float AvoidancePower;
+        /* 0x1290 */ public float AvoidancePower;
         [NMS(Index = 570)]
-        /* 0x1284 */ public float BoostChargeRate;
+        /* 0x1294 */ public float BoostChargeRate;
         [NMS(Index = 536, MxmlName = "BoostNoAsteroidRadius ")]
-        /* 0x1288 */ public float BoostNoAsteroidRadius;
+        /* 0x1298 */ public float BoostNoAsteroidRadius;
         [NMS(Index = 410)]
-        /* 0x128C */ public float CameraPostWarpFov;
+        /* 0x129C */ public float CameraPostWarpFov;
         [NMS(Index = 409)]
-        /* 0x1290 */ public float CameraPostWarpFovTime;
+        /* 0x12A0 */ public float CameraPostWarpFovTime;
         [NMS(Index = 81)]
-        /* 0x1294 */ public float CockpitDriftAngle;
+        /* 0x12A4 */ public float CockpitDriftAngle;
         [NMS(Index = 78)]
-        /* 0x1298 */ public float CockpitDriftAngleHmd;
+        /* 0x12A8 */ public float CockpitDriftAngleHmd;
         [NMS(Index = 106)]
-        /* 0x129C */ public float CockpitExitAnimMul;
+        /* 0x12AC */ public float CockpitExitAnimMul;
         [NMS(Index = 108)]
-        /* 0x12A0 */ public float CockpitExitAnimOffset;
+        /* 0x12B0 */ public float CockpitExitAnimOffset;
         [NMS(Index = 107)]
-        /* 0x12A4 */ public float CockpitExitAnimTime;
+        /* 0x12B4 */ public float CockpitExitAnimTime;
         [NMS(Index = 80)]
-        /* 0x12A8 */ public float CockpitPitchCorrectAngle;
+        /* 0x12B8 */ public float CockpitPitchCorrectAngle;
         [NMS(Index = 77)]
-        /* 0x12AC */ public float CockpitPitchCorrectAngleHmd;
+        /* 0x12BC */ public float CockpitPitchCorrectAngleHmd;
         [NMS(Index = 79)]
-        /* 0x12B0 */ public float CockpitRollAngle;
+        /* 0x12C0 */ public float CockpitRollAngle;
         [NMS(Index = 82)]
-        /* 0x12B4 */ public float CockpitRollAngleExtra;
+        /* 0x12C4 */ public float CockpitRollAngleExtra;
         [NMS(Index = 76)]
-        /* 0x12B8 */ public float CockpitRollAngleHmd;
+        /* 0x12C8 */ public float CockpitRollAngleHmd;
         [NMS(Index = 84)]
-        /* 0x12BC */ public float CockpitRollMultiplierCentre;
+        /* 0x12CC */ public float CockpitRollMultiplierCentre;
         [NMS(Index = 85)]
-        /* 0x12C0 */ public float CockpitRollMultiplierOpposite;
+        /* 0x12D0 */ public float CockpitRollMultiplierOpposite;
         [NMS(Index = 83)]
-        /* 0x12C4 */ public float CockpitRollTime;
+        /* 0x12D4 */ public float CockpitRollTime;
         [NMS(Index = 259)]
-        /* 0x12C8 */ public float CollisionAlignStrength;
+        /* 0x12D8 */ public float CollisionAlignStrength;
         [NMS(Index = 580)]
-        /* 0x12CC */ public float CollisionAsteroidDamp;
+        /* 0x12DC */ public float CollisionAsteroidDamp;
         [NMS(Index = 578)]
-        /* 0x12D0 */ public float CollisionDeflectDamping;
+        /* 0x12E0 */ public float CollisionDeflectDamping;
         [NMS(Index = 258)]
-        /* 0x12D4 */ public float CollisionDeflectForce;
+        /* 0x12E4 */ public float CollisionDeflectForce;
         [NMS(Index = 579)]
-        /* 0x12D8 */ public float CollisionDeflectNormalFactor;
+        /* 0x12E8 */ public float CollisionDeflectNormalFactor;
         [NMS(Index = 577)]
-        /* 0x12DC */ public float CollisionDeflectTime;
+        /* 0x12EC */ public float CollisionDeflectTime;
         [NMS(Index = 582)]
-        /* 0x12E0 */ public float CollisionDistance;
+        /* 0x12F0 */ public float CollisionDistance;
         [NMS(Index = 584)]
-        /* 0x12E4 */ public float CollisionDistanceAsteroid;
+        /* 0x12F4 */ public float CollisionDistanceAsteroid;
         [NMS(Index = 585)]
-        /* 0x12E8 */ public float CollisionDistanceAsteroidSide;
+        /* 0x12F8 */ public float CollisionDistanceAsteroidSide;
         [NMS(Index = 583)]
-        /* 0x12EC */ public float CollisionDistanceGround;
+        /* 0x12FC */ public float CollisionDistanceGround;
         [NMS(Index = 586)]
-        /* 0x12F0 */ public float CollisionDistanceSpaceships;
+        /* 0x1300 */ public float CollisionDistanceSpaceships;
         [NMS(Index = 581)]
-        /* 0x12F4 */ public float CollisionGroundDamp;
+        /* 0x1304 */ public float CollisionGroundDamp;
         [NMS(Index = 591)]
-        /* 0x12F8 */ public float CollisionRadiusMultiplier;
+        /* 0x1308 */ public float CollisionRadiusMultiplier;
         [NMS(Index = 576)]
-        /* 0x12FC */ public float CollisionSpeedDamageAmount;
+        /* 0x130C */ public float CollisionSpeedDamageAmount;
         [NMS(Index = 469)]
-        /* 0x1300 */ public float CombatBoostMultiplier;
+        /* 0x1310 */ public float CombatBoostMultiplier;
         [NMS(Index = 470)]
-        /* 0x1304 */ public float CombatBoostTurnDamp;
+        /* 0x1314 */ public float CombatBoostTurnDamp;
         [NMS(Index = 208)]
-        /* 0x1308 */ public float ContrailDefaultAlpha;
+        /* 0x1318 */ public float ContrailDefaultAlpha;
         [NMS(Index = 197)]
-        /* 0x130C */ public float ContrailSpeedDamping;
+        /* 0x131C */ public float ContrailSpeedDamping;
         [NMS(Index = 482)]
-        /* 0x1310 */ public float CorvetteAutopilotSpeed;
+        /* 0x1320 */ public float CorvetteAutopilotSpeed;
         [NMS(Index = 483)]
-        /* 0x1314 */ public float CorvetteAutopilotSpeedSpace;
+        /* 0x1324 */ public float CorvetteAutopilotSpeedSpace;
         [NMS(Index = 4)]
-        /* 0x1318 */ public float CorvetteBignessLandingMultiplier;
+        /* 0x1328 */ public float CorvetteBignessLandingMultiplier;
         [NMS(Index = 3)]
-        /* 0x131C */ public float CorvetteBignessLandingTurnMultiplier;
+        /* 0x132C */ public float CorvetteBignessLandingTurnMultiplier;
         [NMS(Index = 10)]
-        /* 0x1320 */ public float CorvetteHoverBobPosAmount;
+        /* 0x1330 */ public float CorvetteHoverBobPosAmount;
         [NMS(Index = 11)]
-        /* 0x1324 */ public float CorvetteHoverBobPosSpeed;
+        /* 0x1334 */ public float CorvetteHoverBobPosSpeed;
         [NMS(Index = 12)]
-        /* 0x1328 */ public float CorvetteHoverBobRotationAmount;
+        /* 0x1338 */ public float CorvetteHoverBobRotationAmount;
         [NMS(Index = 13)]
-        /* 0x132C */ public float CorvetteHoverBobRotationSpeed;
+        /* 0x133C */ public float CorvetteHoverBobRotationSpeed;
         [NMS(Index = 8)]
-        /* 0x1330 */ public float CorvetteLandingRotateNoseLiftAmount;
+        /* 0x1340 */ public float CorvetteLandingRotateNoseLiftAmount;
         [NMS(Index = 6)]
-        /* 0x1334 */ public float CorvetteLandingRotateTilt;
+        /* 0x1344 */ public float CorvetteLandingRotateTilt;
         [NMS(Index = 5)]
-        /* 0x1338 */ public float CorvetteLandingRotateTime;
+        /* 0x1348 */ public float CorvetteLandingRotateTime;
         [NMS(Index = 14)]
-        /* 0x133C */ public float CorvettePulseBoost;
+        /* 0x134C */ public float CorvettePulseBoost;
         [NMS(Index = 15)]
-        /* 0x1340 */ public float CorvetteSizeMaxTurnDamping;
+        /* 0x1350 */ public float CorvetteSizeMaxTurnDamping;
         [NMS(Index = 439)]
-        /* 0x1344 */ public float CruiseForce;
+        /* 0x1354 */ public float CruiseForce;
         [NMS(Index = 435)]
-        /* 0x1348 */ public float CruiseHeight;
+        /* 0x1358 */ public float CruiseHeight;
         [NMS(Index = 436)]
-        /* 0x134C */ public float CruiseHeightRange;
+        /* 0x135C */ public float CruiseHeightRange;
         [NMS(Index = 437)]
-        /* 0x1350 */ public float CruiseOffAngle;
+        /* 0x1360 */ public float CruiseOffAngle;
         [NMS(Index = 438)]
-        /* 0x1354 */ public float CruiseOffAngleRange;
+        /* 0x1364 */ public float CruiseOffAngleRange;
         [NMS(Index = 299)]
-        /* 0x1358 */ public float DamageFlashMin;
+        /* 0x1368 */ public float DamageFlashMin;
         [NMS(Index = 298)]
-        /* 0x135C */ public float DamageFlashScale;
+        /* 0x136C */ public float DamageFlashScale;
         [NMS(Index = 424)]
-        /* 0x1360 */ public float DamageLightIntensity;
+        /* 0x1370 */ public float DamageLightIntensity;
         [NMS(Index = 572)]
-        /* 0x1364 */ public float DamageMaxHitTime;
+        /* 0x1374 */ public float DamageMaxHitTime;
         [NMS(Index = 571)]
-        /* 0x1368 */ public float DamageMinHitTime;
+        /* 0x1378 */ public float DamageMinHitTime;
         [NMS(Index = 573)]
-        /* 0x136C */ public float DamageMinWoundTime;
+        /* 0x137C */ public float DamageMinWoundTime;
         [NMS(Index = 193)]
-        /* 0x1370 */ public float DefaultTrailInitialSpeed;
+        /* 0x1380 */ public float DefaultTrailInitialSpeed;
         [NMS(Index = 195)]
-        /* 0x1374 */ public float DefaultTrailMinForwardSpeed;
+        /* 0x1384 */ public float DefaultTrailMinForwardSpeed;
         [NMS(Index = 194)]
-        /* 0x1378 */ public float DefaultTrailSpeedDamping;
+        /* 0x1388 */ public float DefaultTrailSpeedDamping;
         [NMS(Index = 589)]
-        /* 0x137C */ public float DeflectAlignTimeMax;
+        /* 0x138C */ public float DeflectAlignTimeMax;
         [NMS(Index = 588)]
-        /* 0x1380 */ public float DeflectAlignTimeMin;
+        /* 0x1390 */ public float DeflectAlignTimeMin;
         [NMS(Index = 587)]
-        /* 0x1384 */ public float DeflectDistance;
+        /* 0x1394 */ public float DeflectDistance;
         [NMS(Index = 266)]
-        /* 0x1388 */ public float DirectionBrakeVerticalMultiplier;
+        /* 0x1398 */ public float DirectionBrakeVerticalMultiplier;
         [NMS(Index = 415)]
-        /* 0x138C */ public float DirectionBrakeVRBoost;
+        /* 0x139C */ public float DirectionBrakeVRBoost;
         [NMS(Index = 603)]
-        /* 0x1390 */ public float DirectionDockingAlignmentAngle;
+        /* 0x13A0 */ public float DirectionDockingAlignmentAngle;
         [NMS(Index = 602)]
-        /* 0x1394 */ public float DirectionDockingAngle;
+        /* 0x13A4 */ public float DirectionDockingAngle;
         [NMS(Index = 169)]
-        /* 0x1398 */ public float DirectionDockingCircleOffset;
+        /* 0x13A8 */ public float DirectionDockingCircleOffset;
         [NMS(Index = 170)]
-        /* 0x139C */ public float DirectionDockingCircleOffsetExtra;
+        /* 0x13AC */ public float DirectionDockingCircleOffsetExtra;
         [NMS(Index = 172)]
-        /* 0x13A0 */ public float DirectionDockingCircleRadius;
+        /* 0x13B0 */ public float DirectionDockingCircleRadius;
         [NMS(Index = 173)]
-        /* 0x13A4 */ public float DirectionDockingCircleRadiusExtra;
+        /* 0x13B4 */ public float DirectionDockingCircleRadiusExtra;
         [NMS(Index = 171)]
-        /* 0x13A8 */ public float DirectionDockingCircleWidth;
+        /* 0x13B8 */ public float DirectionDockingCircleWidth;
         [NMS(Index = 164)]
-        /* 0x13AC */ public float DirectionDockingIndicatorAngleRange;
+        /* 0x13BC */ public float DirectionDockingIndicatorAngleRange;
         [NMS(Index = 163)]
-        /* 0x13B0 */ public float DirectionDockingIndicatorClearAngleRange;
+        /* 0x13C0 */ public float DirectionDockingIndicatorClearAngleRange;
         [NMS(Index = 166)]
-        /* 0x13B4 */ public float DirectionDockingIndicatorMaxHeight;
+        /* 0x13C4 */ public float DirectionDockingIndicatorMaxHeight;
         [NMS(Index = 165)]
-        /* 0x13B8 */ public float DirectionDockingIndicatorMinHeight;
+        /* 0x13C8 */ public float DirectionDockingIndicatorMinHeight;
         [NMS(Index = 162)]
-        /* 0x13BC */ public float DirectionDockingIndicatorRange;
+        /* 0x13CC */ public float DirectionDockingIndicatorRange;
         [NMS(Index = 174)]
-        /* 0x13C0 */ public float DirectionDockingIndicatorSpeed;
+        /* 0x13D0 */ public float DirectionDockingIndicatorSpeed;
         [NMS(Index = 605)]
-        /* 0x13C4 */ public float DirectionDockingInfoRange;
+        /* 0x13D4 */ public float DirectionDockingInfoRange;
         [NMS(Index = 604)]
-        /* 0x13C8 */ public float DirectionDockTime;
+        /* 0x13D8 */ public float DirectionDockTime;
         [NMS(Index = 88)]
-        /* 0x13CC */ public float DistanceFromShipToAllowSpawningOnFreighter;
+        /* 0x13DC */ public float DistanceFromShipToAllowSpawningOnFreighter;
         [NMS(Index = 116)]
-        /* 0x13D0 */ public float DockingApproachActiveRange;
+        /* 0x13E0 */ public float DockingApproachActiveRange;
         [NMS(Index = 28)]
-        /* 0x13D4 */ public float DockingApproachBrakeHmdMod;
+        /* 0x13E4 */ public float DockingApproachBrakeHmdMod;
         [NMS(Index = 26)]
-        /* 0x13D8 */ public float DockingApproachRollHmdMod;
+        /* 0x13E8 */ public float DockingApproachRollHmdMod;
         [NMS(Index = 27)]
-        /* 0x13DC */ public float DockingApproachSpeedHmdMod;
+        /* 0x13EC */ public float DockingApproachSpeedHmdMod;
         [NMS(Index = 618)]
-        /* 0x13E0 */ public float DockingRotateSpeed;
+        /* 0x13F0 */ public float DockingRotateSpeed;
         [NMS(Index = 619)]
-        /* 0x13E4 */ public float DockingRotateSpeedVR;
+        /* 0x13F4 */ public float DockingRotateSpeedVR;
         [NMS(Index = 297)]
-        /* 0x13E8 */ public float DrawLineLockTargetLineWidth;
+        /* 0x13F8 */ public float DrawLineLockTargetLineWidth;
         [NMS(Index = 405)]
-        /* 0x13EC */ public float DriftEffectIntensity;
+        /* 0x13FC */ public float DriftEffectIntensity;
         [NMS(Index = 412)]
-        /* 0x13F0 */ public float DriftSpring;
+        /* 0x1400 */ public float DriftSpring;
         [NMS(Index = 414)]
-        /* 0x13F4 */ public float DriftTurnBrakeMultiplier;
+        /* 0x1404 */ public float DriftTurnBrakeMultiplier;
         [NMS(Index = 413)]
-        /* 0x13F8 */ public float DriftTurnStrengthMultiplier;
+        /* 0x1408 */ public float DriftTurnStrengthMultiplier;
         [NMS(Index = 663)]
-        /* 0x13FC */ public float DroneAlertAngle;
+        /* 0x140C */ public float DroneAlertAngle;
         [NMS(Index = 664)]
-        /* 0x1400 */ public float DroneAlertRange;
+        /* 0x1410 */ public float DroneAlertRange;
         [NMS(Index = 626)]
-        /* 0x1404 */ public float DroneAlignUpTime;
+        /* 0x1414 */ public float DroneAlignUpTime;
         [NMS(Index = 627)]
-        /* 0x1408 */ public float DroneDustHeight;
+        /* 0x1418 */ public float DroneDustHeight;
         [NMS(Index = 629)]
-        /* 0x140C */ public float DroneHeightAdjust;
+        /* 0x141C */ public float DroneHeightAdjust;
         [NMS(Index = 628)]
-        /* 0x1410 */ public float DroneMinHeight;
+        /* 0x1420 */ public float DroneMinHeight;
         [NMS(Index = 666)]
-        /* 0x1414 */ public float DroneMoveArrivedRange;
+        /* 0x1424 */ public float DroneMoveArrivedRange;
         [NMS(Index = 665)]
-        /* 0x1418 */ public float DronePatrolRadius;
+        /* 0x1428 */ public float DronePatrolRadius;
         [NMS(Index = 667)]
-        /* 0x141C */ public float DronePatrolTime;
+        /* 0x142C */ public float DronePatrolTime;
         [NMS(Index = 661)]
-        /* 0x1420 */ public float DronePlanetAttackMinRange;
+        /* 0x1430 */ public float DronePlanetAttackMinRange;
         [NMS(Index = 660)]
-        /* 0x1424 */ public float DronePlanetAttackRange;
+        /* 0x1434 */ public float DronePlanetAttackRange;
         [NMS(Index = 662)]
-        /* 0x1428 */ public float DroneShootTime;
+        /* 0x1438 */ public float DroneShootTime;
         [NMS(Index = 633)]
-        /* 0x142C */ public float DroneWarpMaxForce;
+        /* 0x143C */ public float DroneWarpMaxForce;
         [NMS(Index = 632)]
-        /* 0x1430 */ public float DroneWarpMinForce;
+        /* 0x1440 */ public float DroneWarpMinForce;
         [NMS(Index = 631)]
-        /* 0x1434 */ public float DroneWarpTime;
+        /* 0x1444 */ public float DroneWarpTime;
         [NMS(Index = 621)]
-        /* 0x1438 */ public float EjectAnimSpeedFactor;
+        /* 0x1448 */ public float EjectAnimSpeedFactor;
         [NMS(Index = 620)]
-        /* 0x143C */ public float EjectAnimSwitchPoint;
+        /* 0x144C */ public float EjectAnimSwitchPoint;
         [NMS(Index = 210)]
-        /* 0x1440 */ public float EngineEffectsThrustContribution;
+        /* 0x1450 */ public float EngineEffectsThrustContribution;
         [NMS(Index = 209)]
-        /* 0x1444 */ public float EngineJetLightIntensityMultiplier;
+        /* 0x1454 */ public float EngineJetLightIntensityMultiplier;
         [NMS(Index = 176)]
-        /* 0x1448 */ public float ExhaustSpeed;
+        /* 0x1458 */ public float ExhaustSpeed;
         [NMS(Index = 361)]
-        /* 0x144C */ public float ExplorerTakeOffMod;
+        /* 0x145C */ public float ExplorerTakeOffMod;
         [NMS(Index = 359)]
-        /* 0x1450 */ public float FighterTakeOffMod;
+        /* 0x1460 */ public float FighterTakeOffMod;
         [NMS(Index = 496)]
-        /* 0x1454 */ public float FreighterApproachCombatDistanceMax;
+        /* 0x1464 */ public float FreighterApproachCombatDistanceMax;
         [NMS(Index = 495)]
-        /* 0x1458 */ public float FreighterApproachCombatDistanceMin;
+        /* 0x1468 */ public float FreighterApproachCombatDistanceMin;
         [NMS(Index = 505)]
-        /* 0x145C */ public float FreighterApproachCombatMinSpeedFactor;
+        /* 0x146C */ public float FreighterApproachCombatMinSpeedFactor;
         [NMS(Index = 498)]
-        /* 0x1460 */ public float FreighterApproachDistanceMax;
+        /* 0x1470 */ public float FreighterApproachDistanceMax;
         [NMS(Index = 497)]
-        /* 0x1464 */ public float FreighterApproachDistanceMin;
+        /* 0x1474 */ public float FreighterApproachDistanceMin;
         [NMS(Index = 504)]
-        /* 0x1468 */ public float FreighterApproachExtraMargin;
+        /* 0x1478 */ public float FreighterApproachExtraMargin;
         [NMS(Index = 502)]
-        /* 0x146C */ public float FreighterApproachExtraMarginCombat;
+        /* 0x147C */ public float FreighterApproachExtraMarginCombat;
         [NMS(Index = 503)]
-        /* 0x1470 */ public float FreighterApproachExtraMarginPirate;
+        /* 0x1480 */ public float FreighterApproachExtraMarginPirate;
         [NMS(Index = 499)]
-        /* 0x1474 */ public float FreighterApproachSpeedDamper;
+        /* 0x1484 */ public float FreighterApproachSpeedDamper;
         [NMS(Index = 89)]
-        /* 0x1478 */ public float FreighterBattleIgnoreFriendlyFireDistance;
+        /* 0x1488 */ public float FreighterBattleIgnoreFriendlyFireDistance;
         [NMS(Index = 16)]
-        /* 0x147C */ public float FreighterBattleRangeBoost;
+        /* 0x148C */ public float FreighterBattleRangeBoost;
         [NMS(Index = 501)]
-        /* 0x1480 */ public float FreighterCombatBoostMul;
+        /* 0x1490 */ public float FreighterCombatBoostMul;
         [NMS(Index = 500)]
-        /* 0x1484 */ public float FreighterCombatSpeedMul;
+        /* 0x1494 */ public float FreighterCombatSpeedMul;
         [NMS(Index = 630)]
-        /* 0x1488 */ public float FreighterSpeed;
+        /* 0x1498 */ public float FreighterSpeed;
         [NMS(Index = 382)]
-        /* 0x148C */ public float FrigateTargetLockRange;
+        /* 0x149C */ public float FrigateTargetLockRange;
         [NMS(Index = 464)]
-        /* 0x1490 */ public float GravityDropForce;
+        /* 0x14A0 */ public float GravityDropForce;
         [NMS(Index = 462)]
-        /* 0x1494 */ public float GravityDropMaxForceHeight;
+        /* 0x14A4 */ public float GravityDropMaxForceHeight;
         [NMS(Index = 463)]
-        /* 0x1498 */ public float GravityDropMaxHeight;
+        /* 0x14A8 */ public float GravityDropMaxHeight;
         [NMS(Index = 461)]
-        /* 0x149C */ public float GravityDropMinHeight;
+        /* 0x14AC */ public float GravityDropMinHeight;
         [NMS(Index = 318)]
-        /* 0x14A0 */ public float GroundHeightBrakeMultiplier;
+        /* 0x14B0 */ public float GroundHeightBrakeMultiplier;
         [NMS(Index = 317)]
-        /* 0x14A4 */ public float GroundHeightDownSpeedMultiplier;
+        /* 0x14B4 */ public float GroundHeightDownSpeedMultiplier;
         [NMS(Index = 310)]
-        /* 0x14A8 */ public float GroundHeightHard;
+        /* 0x14B8 */ public float GroundHeightHard;
         [NMS(Index = 312)]
-        /* 0x14AC */ public float GroundHeightHardCorvetteAutopilot;
+        /* 0x14BC */ public float GroundHeightHardCorvetteAutopilot;
         [NMS(Index = 311)]
-        /* 0x14B0 */ public float GroundHeightHardHorizontal;
+        /* 0x14C0 */ public float GroundHeightHardHorizontal;
         [NMS(Index = 313)]
-        /* 0x14B4 */ public float GroundHeightHardHorizontalCorvetteAutopilot;
+        /* 0x14C4 */ public float GroundHeightHardHorizontalCorvetteAutopilot;
         [NMS(Index = 309)]
-        /* 0x14B8 */ public float GroundHeightHardOverWater;
+        /* 0x14C8 */ public float GroundHeightHardOverWater;
         [NMS(Index = 593)]
-        /* 0x14BC */ public float GroundHeightHardTimeMax;
+        /* 0x14CC */ public float GroundHeightHardTimeMax;
         [NMS(Index = 592)]
-        /* 0x14C0 */ public float GroundHeightHardTimeMin;
+        /* 0x14D0 */ public float GroundHeightHardTimeMin;
         [NMS(Index = 598)]
-        /* 0x14C4 */ public int GroundHeightNumRays;
+        /* 0x14D4 */ public int GroundHeightNumRays;
         [NMS(Index = 594)]
-        /* 0x14C8 */ public float GroundHeightPostCollisionDamper;
+        /* 0x14D8 */ public float GroundHeightPostCollisionDamper;
         [NMS(Index = 315)]
-        /* 0x14CC */ public float GroundHeightPostCollisionMultiplier;
+        /* 0x14DC */ public float GroundHeightPostCollisionMultiplier;
         [NMS(Index = 316)]
-        /* 0x14D0 */ public float GroundHeightPostCollisionMultiplierTime;
+        /* 0x14E0 */ public float GroundHeightPostCollisionMultiplierTime;
         [NMS(Index = 599)]
-        /* 0x14D4 */ public float GroundHeightSmoothTime;
+        /* 0x14E4 */ public float GroundHeightSmoothTime;
         [NMS(Index = 303)]
-        /* 0x14D8 */ public float GroundHeightSoft;
+        /* 0x14E8 */ public float GroundHeightSoft;
         [NMS(Index = 306)]
-        /* 0x14DC */ public float GroundHeightSoftCorvetteAutopilot;
+        /* 0x14EC */ public float GroundHeightSoftCorvetteAutopilot;
         [NMS(Index = 302)]
-        /* 0x14E0 */ public float GroundHeightSoftForce;
+        /* 0x14F0 */ public float GroundHeightSoftForce;
         [NMS(Index = 305)]
-        /* 0x14E4 */ public float GroundHeightSoftForceCorvetteAutopilot;
+        /* 0x14F4 */ public float GroundHeightSoftForceCorvetteAutopilot;
         [NMS(Index = 304)]
-        /* 0x14E8 */ public float GroundHeightSoftHorizontal;
+        /* 0x14F8 */ public float GroundHeightSoftHorizontal;
         [NMS(Index = 307)]
-        /* 0x14EC */ public float GroundHeightSoftHorizontalCorvetteAutopilot;
+        /* 0x14FC */ public float GroundHeightSoftHorizontalCorvetteAutopilot;
         [NMS(Index = 596)]
-        /* 0x14F0 */ public float GroundHeightSpeedAngle;
+        /* 0x1500 */ public float GroundHeightSpeedAngle;
         [NMS(Index = 597)]
-        /* 0x14F4 */ public float GroundHeightSpeedAngleRange;
+        /* 0x1504 */ public float GroundHeightSpeedAngleRange;
         [NMS(Index = 595)]
-        /* 0x14F8 */ public float GroundHeightSpeedLength;
+        /* 0x1508 */ public float GroundHeightSpeedLength;
         [NMS(Index = 184)]
-        /* 0x14FC */ public float GroundNearEffectBuildingFade;
+        /* 0x150C */ public float GroundNearEffectBuildingFade;
         [NMS(Index = 181)]
-        /* 0x1500 */ public float GroundNearEffectHeight;
+        /* 0x1510 */ public float GroundNearEffectHeight;
         [NMS(Index = 125)]
-        /* 0x1504 */ public float GroundNearEffectLightFactor;
+        /* 0x1514 */ public float GroundNearEffectLightFactor;
         [NMS(Index = 183)]
-        /* 0x1508 */ public float GroundNearEffectNormalOffset;
+        /* 0x1518 */ public float GroundNearEffectNormalOffset;
         [NMS(Index = 182)]
-        /* 0x150C */ public float GroundNearEffectRange;
+        /* 0x151C */ public float GroundNearEffectRange;
         [NMS(Index = 126)]
-        /* 0x1510 */ public float GroundNearEffectWaterLightFactor;
+        /* 0x1520 */ public float GroundNearEffectWaterLightFactor;
         [NMS(Index = 127)]
-        /* 0x1514 */ public float GroundWaterSpeedFactor;
+        /* 0x1524 */ public float GroundWaterSpeedFactor;
         [NMS(Index = 478)]
-        /* 0x1518 */ public int GunAimLevel;
+        /* 0x1528 */ public int GunAimLevel;
         [NMS(Index = 472)]
-        /* 0x151C */ public int GunAmmoMultiplier;
+        /* 0x152C */ public int GunAmmoMultiplier;
         [NMS(Index = 610)]
-        /* 0x1520 */ public float GunOffset3rdPersonMultiplier;
+        /* 0x1530 */ public float GunOffset3rdPersonMultiplier;
         [NMS(Index = 61)]
-        /* 0x1524 */ public float HandControllerActiveBlendMinTime;
+        /* 0x1534 */ public float HandControllerActiveBlendMinTime;
         [NMS(Index = 62)]
-        /* 0x1528 */ public float HandControllerActiveBlendTime;
+        /* 0x1538 */ public float HandControllerActiveBlendTime;
         [NMS(Index = 74)]
-        /* 0x152C */ public float HandControllerDirOffsetAngle;
+        /* 0x153C */ public float HandControllerDirOffsetAngle;
         [NMS(Index = 75)]
-        /* 0x1530 */ public float HandControllerDirOffsetAngleMove;
+        /* 0x1540 */ public float HandControllerDirOffsetAngleMove;
         [NMS(Index = 73)]
-        /* 0x1534 */ public float HandControllerThrottleDeadZone;
+        /* 0x1544 */ public float HandControllerThrottleDeadZone;
         [NMS(Index = 71)]
-        /* 0x1538 */ public float HandControllerThrottleDistance;
+        /* 0x1548 */ public float HandControllerThrottleDistance;
         [NMS(Index = 72)]
-        /* 0x153C */ public float HandControllerThrottleRange;
+        /* 0x154C */ public float HandControllerThrottleRange;
         [NMS(Index = 69)]
-        /* 0x1540 */ public float HandControllerXReorientation;
+        /* 0x1550 */ public float HandControllerXReorientation;
         [NMS(Index = 67)]
-        /* 0x1544 */ public float HandControllerXReorientationMove;
+        /* 0x1554 */ public float HandControllerXReorientationMove;
         [NMS(Index = 70)]
-        /* 0x1548 */ public float HandControllerZReorientation;
+        /* 0x1558 */ public float HandControllerZReorientation;
         [NMS(Index = 68)]
-        /* 0x154C */ public float HandControllerZReorientationMove;
+        /* 0x155C */ public float HandControllerZReorientationMove;
         [NMS(Index = 358)]
-        /* 0x1550 */ public float HaulerTakeOffMod;
+        /* 0x1560 */ public float HaulerTakeOffMod;
         [NMS(Index = 408)]
-        /* 0x1554 */ public int HitAsteroidDamage;
+        /* 0x1564 */ public int HitAsteroidDamage;
         [NMS(Index = 274)]
-        /* 0x1558 */ public float HoverAlignTime;
+        /* 0x1568 */ public float HoverAlignTime;
         [NMS(Index = 276)]
-        /* 0x155C */ public float HoverAlignTimeAlt;
+        /* 0x156C */ public float HoverAlignTimeAlt;
         [NMS(Index = 448)]
-        /* 0x1560 */ public float HoverBrakeStrength;
+        /* 0x1570 */ public float HoverBrakeStrength;
         [NMS(Index = 278)]
-        /* 0x1564 */ public float HoverHeightFactor;
+        /* 0x1574 */ public float HoverHeightFactor;
         [NMS(Index = 286)]
-        /* 0x1568 */ public float HoverLandManeuvreBrake;
+        /* 0x1578 */ public float HoverLandManeuvreBrake;
         [NMS(Index = 288)]
-        /* 0x156C */ public float HoverLandManeuvreTimeCorvetteMultiplier;
+        /* 0x157C */ public float HoverLandManeuvreTimeCorvetteMultiplier;
         [NMS(Index = 285)]
-        /* 0x1570 */ public float HoverLandManeuvreTimeHmdMax;
+        /* 0x1580 */ public float HoverLandManeuvreTimeHmdMax;
         [NMS(Index = 284)]
-        /* 0x1574 */ public float HoverLandManeuvreTimeHmdMin;
+        /* 0x1584 */ public float HoverLandManeuvreTimeHmdMin;
         [NMS(Index = 283)]
-        /* 0x1578 */ public float HoverLandManeuvreTimeMax;
+        /* 0x1588 */ public float HoverLandManeuvreTimeMax;
         [NMS(Index = 282)]
-        /* 0x157C */ public float HoverLandManeuvreTimeMin;
+        /* 0x158C */ public float HoverLandManeuvreTimeMin;
         [NMS(Index = 287)]
-        /* 0x1580 */ public float HoverLandManeuvreTimeWaterMultiplier;
+        /* 0x1590 */ public float HoverLandManeuvreTimeWaterMultiplier;
         [NMS(Index = 281)]
-        /* 0x1584 */ public float HoverLandReachedDistance;
+        /* 0x1594 */ public float HoverLandReachedDistance;
         [NMS(Index = 280)]
-        /* 0x1588 */ public float HoverLandReachedMinTime;
+        /* 0x1598 */ public float HoverLandReachedMinTime;
         [NMS(Index = 440)]
-        /* 0x158C */ public float HoverMaxSpeed;
+        /* 0x159C */ public float HoverMaxSpeed;
         [NMS(Index = 279)]
-        /* 0x1590 */ public float HoverMinSpeed;
+        /* 0x15A0 */ public float HoverMinSpeed;
         [NMS(Index = 277)]
-        /* 0x1594 */ public float HoverSpeedFactor;
+        /* 0x15A4 */ public float HoverSpeedFactor;
         [NMS(Index = 441)]
-        /* 0x1598 */ public float HoverStopTime;
+        /* 0x15A8 */ public float HoverStopTime;
         [NMS(Index = 272)]
-        /* 0x159C */ public float HoverTakeoffHeight;
+        /* 0x15AC */ public float HoverTakeoffHeight;
         [NMS(Index = 273)]
-        /* 0x15A0 */ public float HoverTime;
+        /* 0x15B0 */ public float HoverTime;
         [NMS(Index = 275)]
-        /* 0x15A4 */ public float HoverTimeAlt;
+        /* 0x15B4 */ public float HoverTimeAlt;
         [NMS(Index = 674)]
-        /* 0x15A8 */ public float HUDBoostUpgradeMultiplier;
+        /* 0x15B8 */ public float HUDBoostUpgradeMultiplier;
         [NMS(Index = 271)]
-        /* 0x15AC */ public float KBThrustSmoothTime;
+        /* 0x15BC */ public float KBThrustSmoothTime;
         [NMS(Index = 560)]
-        /* 0x15B0 */ public float LandGroundTakeOffTime;
+        /* 0x15C0 */ public float LandGroundTakeOffTime;
         [NMS(Index = 562)]
-        /* 0x15B4 */ public float LandHeightThreshold;
+        /* 0x15C4 */ public float LandHeightThreshold;
         [NMS(Index = 566)]
-        /* 0x15B8 */ public float LandingAreaFloorOffset;
+        /* 0x15C8 */ public float LandingAreaFloorOffset;
         [NMS(Index = 565)]
-        /* 0x15BC */ public float LandingAreaRadius;
+        /* 0x15CC */ public float LandingAreaRadius;
         [NMS(Index = 300)]
-        /* 0x15C0 */ public float LandingButtonMinTime;
+        /* 0x15D0 */ public float LandingButtonMinTime;
         [NMS(Index = 291)]
-        /* 0x15C4 */ public float LandingCheckBuildingRadiusFactor;
+        /* 0x15D4 */ public float LandingCheckBuildingRadiusFactor;
         [NMS(Index = 477)]
-        /* 0x15C8 */ public int LandingCost;
+        /* 0x15D8 */ public int LandingCost;
         [NMS(Index = 29)]
-        /* 0x15CC */ public float LandingDirectionalSideOffsetFactor;
+        /* 0x15DC */ public float LandingDirectionalSideOffsetFactor;
         [NMS(Index = 554)]
-        /* 0x15D0 */ public float LandingHelperMinAngle;
+        /* 0x15E0 */ public float LandingHelperMinAngle;
         [NMS(Index = 556)]
-        /* 0x15D4 */ public float LandingHelperRollTime;
+        /* 0x15E4 */ public float LandingHelperRollTime;
         [NMS(Index = 555)]
-        /* 0x15D8 */ public float LandingHelperTurnTime;
+        /* 0x15E8 */ public float LandingHelperTurnTime;
         [NMS(Index = 30)]
-        /* 0x15DC */ public float LandingHoverOffset;
+        /* 0x15EC */ public float LandingHoverOffset;
         [NMS(Index = 36)]
-        /* 0x15E0 */ public float LandingMargin;
+        /* 0x15F0 */ public float LandingMargin;
         [NMS(Index = 35)]
-        /* 0x15E4 */ public float LandingMaxAngle;
+        /* 0x15F4 */ public float LandingMaxAngle;
         [NMS(Index = 34)]
-        /* 0x15E8 */ public float LandingMaxSpeed;
+        /* 0x15F8 */ public float LandingMaxSpeed;
         [NMS(Index = 37)]
-        /* 0x15EC */ public float LandingObstacleMinHeight;
+        /* 0x15FC */ public float LandingObstacleMinHeight;
         [NMS(Index = 289)]
-        /* 0x15F0 */ public float LandingOnGroundTip;
+        /* 0x1600 */ public float LandingOnGroundTip;
         [NMS(Index = 301)]
-        /* 0x15F4 */ public float LandingPushNoseUpFactor;
+        /* 0x1604 */ public float LandingPushNoseUpFactor;
         [NMS(Index = 38)]
-        /* 0x15F8 */ public float LandingTooManyLowPointsFraction;
+        /* 0x1608 */ public float LandingTooManyLowPointsFraction;
         [NMS(Index = 32)]
-        /* 0x15FC */ public float LandingWaterHoverHeight;
+        /* 0x160C */ public float LandingWaterHoverHeight;
         [NMS(Index = 33)]
-        /* 0x1600 */ public float LandingWaterHoverHeightCorvette;
+        /* 0x1610 */ public float LandingWaterHoverHeightCorvette;
         [NMS(Index = 31)]
-        /* 0x1604 */ public float LandingWaterHoverOffset;
+        /* 0x1614 */ public float LandingWaterHoverOffset;
         [NMS(Index = 561)]
-        /* 0x1608 */ public float LandLookingForward;
+        /* 0x1618 */ public float LandLookingForward;
         [NMS(Index = 442)]
-        /* 0x160C */ public float LandOffset;
+        /* 0x161C */ public float LandOffset;
         [NMS(Index = 564)]
-        /* 0x1610 */ public float LandSlopeMax;
+        /* 0x1620 */ public float LandSlopeMax;
         [NMS(Index = 563)]
-        /* 0x1614 */ public float LandWidthThreshold;
+        /* 0x1624 */ public float LandWidthThreshold;
         [NMS(Index = 474)]
-        /* 0x1618 */ public int LaserAimLevel;
+        /* 0x1628 */ public int LaserAimLevel;
         [NMS(Index = 540)]
-        /* 0x161C */ public float LaserCoolFactor;
+        /* 0x162C */ public float LaserCoolFactor;
         [NMS(Index = 541)]
-        /* 0x1620 */ public float LaserFireTime;
+        /* 0x1630 */ public float LaserFireTime;
         [NMS(Index = 539)]
-        /* 0x1624 */ public float LaserOverheatDownTime;
+        /* 0x1634 */ public float LaserOverheatDownTime;
         [NMS(Index = 538)]
-        /* 0x1628 */ public float LaserOverheatTime;
+        /* 0x1638 */ public float LaserOverheatTime;
         [NMS(Index = 542)]
-        /* 0x162C */ public float LaserWaitTime;
+        /* 0x163C */ public float LaserWaitTime;
         [NMS(Index = 268)]
-        /* 0x1630 */ public float LateralDriftRange;
+        /* 0x1640 */ public float LateralDriftRange;
         [NMS(Index = 267)]
-        /* 0x1634 */ public float LateralDriftRollAmount;
+        /* 0x1644 */ public float LateralDriftRollAmount;
         [NMS(Index = 676)]
-        /* 0x1638 */ public float LaunchThrustersMinimumSummonPercentage;
+        /* 0x1648 */ public float LaunchThrustersMinimumSummonPercentage;
         [NMS(Index = 675)]
-        /* 0x163C */ public float LaunchThrustersRegenTimePeriod;
+        /* 0x164C */ public float LaunchThrustersRegenTimePeriod;
         [NMS(Index = 677)]
-        /* 0x1640 */ public float LaunchThrustersSummonCostMultiplier;
+        /* 0x1650 */ public float LaunchThrustersSummonCostMultiplier;
         [NMS(Index = 600)]
-        /* 0x1644 */ public float LinearDamping;
+        /* 0x1654 */ public float LinearDamping;
         [NMS(Index = 375)]
-        /* 0x1648 */ public float LockTargetMaxScale;
+        /* 0x1658 */ public float LockTargetMaxScale;
         [NMS(Index = 372)]
-        /* 0x164C */ public float LockTargetMinDistance;
+        /* 0x165C */ public float LockTargetMinDistance;
         [NMS(Index = 374)]
-        /* 0x1650 */ public float LockTargetMinScale;
+        /* 0x1660 */ public float LockTargetMinScale;
         [NMS(Index = 373)]
-        /* 0x1654 */ public float LockTargetRange;
+        /* 0x1664 */ public float LockTargetRange;
         [NMS(Index = 606)]
-        /* 0x1658 */ public float LootAttractDistance;
+        /* 0x1668 */ public float LootAttractDistance;
         [NMS(Index = 607)]
-        /* 0x165C */ public float LootAttractTime;
+        /* 0x166C */ public float LootAttractTime;
         [NMS(Index = 609)]
-        /* 0x1660 */ public float LootCollectDistance;
+        /* 0x1670 */ public float LootCollectDistance;
         [NMS(Index = 608)]
-        /* 0x1664 */ public float LootDampForce;
+        /* 0x1674 */ public float LootDampForce;
         [NMS(Index = 177)]
-        /* 0x1668 */ public float LowAltitudeAnimationHeight;
+        /* 0x1678 */ public float LowAltitudeAnimationHeight;
         [NMS(Index = 178)]
-        /* 0x166C */ public float LowAltitudeAnimationHysteresisTime;
+        /* 0x167C */ public float LowAltitudeAnimationHysteresisTime;
         [NMS(Index = 179)]
-        /* 0x1670 */ public float LowAltitudeAnimationTime;
+        /* 0x1680 */ public float LowAltitudeAnimationTime;
         [NMS(Index = 180)]
-        /* 0x1674 */ public float LowAltitudeContrailFadeAtAnimProgress;
+        /* 0x1684 */ public float LowAltitudeContrailFadeAtAnimProgress;
         [NMS(Index = 471)]
-        /* 0x1678 */ public float MarkerEventTime;
+        /* 0x1688 */ public float MarkerEventTime;
         [NMS(Index = 86)]
-        /* 0x167C */ public float MaximumDistanceFromShipWhenExiting;
+        /* 0x168C */ public float MaximumDistanceFromShipWhenExiting;
         [NMS(Index = 87)]
-        /* 0x1680 */ public float MaximumHeightWhenExitingShip;
+        /* 0x1690 */ public float MaximumHeightWhenExitingShip;
         [NMS(Index = 198)]
-        /* 0x1684 */ public float MaxOverspeedBrake;
+        /* 0x1694 */ public float MaxOverspeedBrake;
         [NMS(Index = 682)]
-        /* 0x1688 */ public float MaxSpeedUpDistance;
+        /* 0x1698 */ public float MaxSpeedUpDistance;
         [NMS(Index = 683)]
-        /* 0x168C */ public float MaxSpeedUpVelocity;
+        /* 0x169C */ public float MaxSpeedUpVelocity;
         [NMS(Index = 139)]
-        /* 0x1690 */ public float MiniWarpAlignSlerp;
+        /* 0x16A0 */ public float MiniWarpAlignSlerp;
         [NMS(Index = 510)]
-        /* 0x1694 */ public float MiniWarpAlignStrength;
+        /* 0x16A4 */ public float MiniWarpAlignStrength;
         [NMS(Index = 511)]
-        /* 0x1698 */ public float MiniWarpChargeTime;
+        /* 0x16A8 */ public float MiniWarpChargeTime;
         [NMS(Index = 515)]
-        /* 0x169C */ public float MiniWarpCooldownTime;
+        /* 0x16AC */ public float MiniWarpCooldownTime;
         [NMS(Index = 522, MxmlName = "MiniWarpExitSpeed ")]
-        /* 0x16A0 */ public float MiniWarpExitSpeed;
+        /* 0x16B0 */ public float MiniWarpExitSpeed;
         [NMS(Index = 523, MxmlName = "MiniWarpExitSpeedStation ")]
-        /* 0x16A4 */ public float MiniWarpExitSpeedStation;
+        /* 0x16B4 */ public float MiniWarpExitSpeedStation;
         [NMS(Index = 524, MxmlName = "MiniWarpExitTime ")]
-        /* 0x16A8 */ public float MiniWarpExitTime;
+        /* 0x16B8 */ public float MiniWarpExitTime;
         [NMS(Index = 534, MxmlName = "MiniWarpFlashDelay ")]
-        /* 0x16AC */ public float MiniWarpFlashDelay;
+        /* 0x16BC */ public float MiniWarpFlashDelay;
         [NMS(Index = 533, MxmlName = "MiniWarpFlashDuration ")]
-        /* 0x16B0 */ public float MiniWarpFlashDuration;
+        /* 0x16C0 */ public float MiniWarpFlashDuration;
         [NMS(Index = 532, MxmlName = "MiniWarpFlashIntensity ")]
-        /* 0x16B4 */ public float MiniWarpFlashIntensity;
+        /* 0x16C4 */ public float MiniWarpFlashIntensity;
         [NMS(Index = 509)]
-        /* 0x16B8 */ public float MiniWarpFuelTime;
+        /* 0x16C8 */ public float MiniWarpFuelTime;
         [NMS(Index = 525)]
-        /* 0x16BC */ public float MiniWarpHUDArrowAttractAngle;
+        /* 0x16CC */ public float MiniWarpHUDArrowAttractAngle;
         [NMS(Index = 529)]
-        /* 0x16C0 */ public float MiniWarpHUDArrowAttractAngleDense;
+        /* 0x16D0 */ public float MiniWarpHUDArrowAttractAngleDense;
         [NMS(Index = 527)]
-        /* 0x16C4 */ public float MiniWarpHUDArrowAttractAngleOtherPlayerStuff;
+        /* 0x16D4 */ public float MiniWarpHUDArrowAttractAngleOtherPlayerStuff;
         [NMS(Index = 528)]
-        /* 0x16C8 */ public float MiniWarpHUDArrowAttractAngleSaveBeacon;
+        /* 0x16D8 */ public float MiniWarpHUDArrowAttractAngleSaveBeacon;
         [NMS(Index = 526)]
-        /* 0x16CC */ public float MiniWarpHUDArrowAttractAngleStation;
+        /* 0x16DC */ public float MiniWarpHUDArrowAttractAngleStation;
         [NMS(Index = 530)]
-        /* 0x16D0 */ public int MiniWarpHUDArrowNumMarkersToBeDense;
+        /* 0x16E0 */ public int MiniWarpHUDArrowNumMarkersToBeDense;
         [NMS(Index = 460)]
-        /* 0x16D4 */ public float MiniWarpLinesHeight;
+        /* 0x16E4 */ public float MiniWarpLinesHeight;
         [NMS(Index = 457)]
-        /* 0x16D8 */ public int MiniWarpLinesNum;
+        /* 0x16E8 */ public int MiniWarpLinesNum;
         [NMS(Index = 459)]
-        /* 0x16DC */ public float MiniWarpLinesOffset;
+        /* 0x16EC */ public float MiniWarpLinesOffset;
         [NMS(Index = 458)]
-        /* 0x16E0 */ public float MiniWarpLinesSpacing;
+        /* 0x16F0 */ public float MiniWarpLinesSpacing;
         [NMS(Index = 137)]
-        /* 0x16E4 */ public float MiniWarpMarkerAlignSlowdown;
+        /* 0x16F4 */ public float MiniWarpMarkerAlignSlowdown;
         [NMS(Index = 138)]
-        /* 0x16E8 */ public float MiniWarpMarkerAlignSlowdownRange;
+        /* 0x16F8 */ public float MiniWarpMarkerAlignSlowdownRange;
         [NMS(Index = 136)]
-        /* 0x16EC */ public float MiniWarpMarkerApproachSlowdown;
+        /* 0x16FC */ public float MiniWarpMarkerApproachSlowdown;
         [NMS(Index = 517)]
-        /* 0x16F0 */ public float MiniWarpMinPlanetDistance;
+        /* 0x1700 */ public float MiniWarpMinPlanetDistance;
         [NMS(Index = 535, MxmlName = "MiniWarpNoAsteroidRadius ")]
-        /* 0x16F4 */ public float MiniWarpNoAsteroidRadius;
+        /* 0x1704 */ public float MiniWarpNoAsteroidRadius;
         [NMS(Index = 507)]
-        /* 0x16F8 */ public float MiniWarpPlanetRadius;
+        /* 0x1708 */ public float MiniWarpPlanetRadius;
         [NMS(Index = 506)]
-        /* 0x16FC */ public float MiniWarpShakeStrength;
+        /* 0x170C */ public float MiniWarpShakeStrength;
         [NMS(Index = 512)]
-        /* 0x1700 */ public float MiniWarpSpeed;
+        /* 0x1710 */ public float MiniWarpSpeed;
         [NMS(Index = 508)]
-        /* 0x1704 */ public float MiniWarpStationRadius;
+        /* 0x1714 */ public float MiniWarpStationRadius;
         [NMS(Index = 519)]
-        /* 0x1708 */ public float MiniWarpStoppingMarginDefault;
+        /* 0x1718 */ public float MiniWarpStoppingMarginDefault;
         [NMS(Index = 520)]
-        /* 0x170C */ public float MiniWarpStoppingMarginLong;
+        /* 0x171C */ public float MiniWarpStoppingMarginLong;
         [NMS(Index = 516)]
-        /* 0x1710 */ public float MiniWarpStoppingMarginPlanet;
+        /* 0x1720 */ public float MiniWarpStoppingMarginPlanet;
         [NMS(Index = 514)]
-        /* 0x1714 */ public float MiniWarpTime;
+        /* 0x1724 */ public float MiniWarpTime;
         [NMS(Index = 513)]
-        /* 0x1718 */ public float MiniWarpTopSpeedTime;
+        /* 0x1728 */ public float MiniWarpTopSpeedTime;
         [NMS(Index = 521)]
-        /* 0x171C */ public float MiniWarpTrackingMargin;
+        /* 0x172C */ public float MiniWarpTrackingMargin;
         [NMS(Index = 480)]
-        /* 0x1720 */ public float MissileLockSpeedUp;
+        /* 0x1730 */ public float MissileLockSpeedUp;
         [NMS(Index = 481)]
-        /* 0x1724 */ public float MissileLockTime;
+        /* 0x1734 */ public float MissileLockTime;
         [NMS(Index = 434)]
-        /* 0x1728 */ public float MissileShootTime;
+        /* 0x1738 */ public float MissileShootTime;
         [NMS(Index = 418)]
-        /* 0x172C */ public float MuzzleAnimSpeed;
+        /* 0x173C */ public float MuzzleAnimSpeed;
         [NMS(Index = 417)]
-        /* 0x1730 */ public float MuzzleLightIntensity;
+        /* 0x1740 */ public float MuzzleLightIntensity;
         [NMS(Index = 132)]
-        /* 0x1734 */ public float NearGroundPitchCorrectMinHeight;
+        /* 0x1744 */ public float NearGroundPitchCorrectMinHeight;
         [NMS(Index = 134)]
-        /* 0x1738 */ public float NearGroundPitchCorrectMinHeightRemote;
+        /* 0x1748 */ public float NearGroundPitchCorrectMinHeightRemote;
         [NMS(Index = 133)]
-        /* 0x173C */ public float NearGroundPitchCorrectRange;
+        /* 0x174C */ public float NearGroundPitchCorrectRange;
         [NMS(Index = 135)]
-        /* 0x1740 */ public float NearGroundPitchCorrectRangeRemote;
+        /* 0x1750 */ public float NearGroundPitchCorrectRangeRemote;
         [NMS(Index = 161)]
-        /* 0x1744 */ public float NetworkDockSearchRadius;
+        /* 0x1754 */ public float NetworkDockSearchRadius;
         [NMS(Index = 393)]
-        /* 0x1748 */ public float NoBoostAnomalyDistance;
+        /* 0x1758 */ public float NoBoostAnomalyDistance;
         [NMS(Index = 400)]
-        /* 0x174C */ public float NoBoostCombatEventMinBattleTime;
+        /* 0x175C */ public float NoBoostCombatEventMinBattleTime;
         [NMS(Index = 401)]
-        /* 0x1750 */ public float NoBoostCombatEventMinFreighterBattleTime;
+        /* 0x1760 */ public float NoBoostCombatEventMinFreighterBattleTime;
         [NMS(Index = 402)]
-        /* 0x1754 */ public float NoBoostCombatEventTime;
+        /* 0x1764 */ public float NoBoostCombatEventTime;
         [NMS(Index = 396)]
-        /* 0x1758 */ public float NoBoostFreighterAngle;
+        /* 0x1768 */ public float NoBoostFreighterAngle;
         [NMS(Index = 395)]
-        /* 0x175C */ public float NoBoostFreighterDistance;
+        /* 0x176C */ public float NoBoostFreighterDistance;
         [NMS(Index = 397)]
-        /* 0x1760 */ public float NoBoostShipDistance;
+        /* 0x1770 */ public float NoBoostShipDistance;
         [NMS(Index = 399)]
-        /* 0x1764 */ public float NoBoostShipLastHitTime;
+        /* 0x1774 */ public float NoBoostShipLastHitTime;
         [NMS(Index = 398)]
-        /* 0x1768 */ public float NoBoostShipNearMinTime;
+        /* 0x1778 */ public float NoBoostShipNearMinTime;
         [NMS(Index = 394)]
-        /* 0x176C */ public float NoBoostSpaceAnomalyDistance;
+        /* 0x177C */ public float NoBoostSpaceAnomalyDistance;
         [NMS(Index = 392)]
-        /* 0x1770 */ public float NoBoostStationDistance;
+        /* 0x1780 */ public float NoBoostStationDistance;
         [NMS(Index = 130)]
-        /* 0x1774 */ public float OutpostDockSpeedAlignMinDistance;
+        /* 0x1784 */ public float OutpostDockSpeedAlignMinDistance;
         [NMS(Index = 131)]
-        /* 0x1778 */ public float OutpostDockSpeedAlignRange;
+        /* 0x1788 */ public float OutpostDockSpeedAlignRange;
         [NMS(Index = 270)]
-        /* 0x177C */ public float PadThrustSmoothTime;
+        /* 0x178C */ public float PadThrustSmoothTime;
         [NMS(Index = 269)]
-        /* 0x1780 */ public float PadTurnSpeed;
+        /* 0x1790 */ public float PadTurnSpeed;
         [NMS(Index = 325)]
-        /* 0x1784 */ public float PitchCorrectCockpitSpring;
+        /* 0x1794 */ public float PitchCorrectCockpitSpring;
         [NMS(Index = 324)]
-        /* 0x1788 */ public float PitchCorrectDownSpeedHeightMax;
+        /* 0x1798 */ public float PitchCorrectDownSpeedHeightMax;
         [NMS(Index = 323)]
-        /* 0x178C */ public float PitchCorrectDownSpeedHeightMin;
+        /* 0x179C */ public float PitchCorrectDownSpeedHeightMin;
         [NMS(Index = 322)]
-        /* 0x1790 */ public float PitchCorrectDownSpeedMaxDownAngle;
+        /* 0x17A0 */ public float PitchCorrectDownSpeedMaxDownAngle;
         [NMS(Index = 319)]
-        /* 0x1794 */ public float PitchCorrectDownSpeedMinSpeed;
+        /* 0x17A4 */ public float PitchCorrectDownSpeedMinSpeed;
         [NMS(Index = 320)]
-        /* 0x1798 */ public float PitchCorrectDownSpeedRange;
+        /* 0x17A8 */ public float PitchCorrectDownSpeedRange;
         [NMS(Index = 321)]
-        /* 0x179C */ public float PitchCorrectDownSpeedSoftAngle;
+        /* 0x17AC */ public float PitchCorrectDownSpeedSoftAngle;
         [NMS(Index = 337)]
-        /* 0x17A0 */ public float PitchCorrectHeightMax;
+        /* 0x17B0 */ public float PitchCorrectHeightMax;
         [NMS(Index = 336)]
-        /* 0x17A4 */ public float PitchCorrectHeightMin;
+        /* 0x17B4 */ public float PitchCorrectHeightMin;
         [NMS(Index = 335)]
-        /* 0x17A8 */ public float PitchCorrectHeightSpring;
+        /* 0x17B8 */ public float PitchCorrectHeightSpring;
         [NMS(Index = 327)]
-        /* 0x17AC */ public float PitchCorrectMaxDownAngle;
+        /* 0x17BC */ public float PitchCorrectMaxDownAngle;
         [NMS(Index = 328)]
-        /* 0x17B0 */ public float PitchCorrectMaxDownAnglePostCollision;
+        /* 0x17C0 */ public float PitchCorrectMaxDownAnglePostCollision;
         [NMS(Index = 330)]
-        /* 0x17B4 */ public float PitchCorrectMaxDownAngleWater;
+        /* 0x17C4 */ public float PitchCorrectMaxDownAngleWater;
         [NMS(Index = 326)]
-        /* 0x17B8 */ public float PitchCorrectSoftDownAngle;
+        /* 0x17C8 */ public float PitchCorrectSoftDownAngle;
         [NMS(Index = 329)]
-        /* 0x17BC */ public float PitchCorrectSoftDownAnglePostCollision;
+        /* 0x17CC */ public float PitchCorrectSoftDownAnglePostCollision;
         [NMS(Index = 331)]
-        /* 0x17C0 */ public float PitchCorrectSoftDownAngleWater;
+        /* 0x17D0 */ public float PitchCorrectSoftDownAngleWater;
         [NMS(Index = 334)]
-        /* 0x17C4 */ public float PitchCorrectTimeHeight;
+        /* 0x17D4 */ public float PitchCorrectTimeHeight;
         [NMS(Index = 333)]
-        /* 0x17C8 */ public float PitchCorrectTimeMax;
+        /* 0x17D8 */ public float PitchCorrectTimeMax;
         [NMS(Index = 332)]
-        /* 0x17CC */ public float PitchCorrectTimeMin;
+        /* 0x17DC */ public float PitchCorrectTimeMin;
         [NMS(Index = 411)]
-        /* 0x17D0 */ public float PlayerFreighterClearSpaceRadius;
+        /* 0x17E0 */ public float PlayerFreighterClearSpaceRadius;
         [NMS(Index = 200)]
-        /* 0x17D4 */ public float PostFreighterWarpTransitionTime;
+        /* 0x17E4 */ public float PostFreighterWarpTransitionTime;
         [NMS(Index = 199)]
-        /* 0x17D8 */ public float PostWarpSlowDownTime;
+        /* 0x17E8 */ public float PostWarpSlowDownTime;
         [NMS(Index = 353)]
-        /* 0x17DC */ public float PowerSettingEngineDamper;
+        /* 0x17EC */ public float PowerSettingEngineDamper;
         [NMS(Index = 352)]
-        /* 0x17E0 */ public float PowerSettingEngineMul;
+        /* 0x17F0 */ public float PowerSettingEngineMul;
         [NMS(Index = 357)]
-        /* 0x17E4 */ public float PowerSettingShieldDamper;
+        /* 0x17F4 */ public float PowerSettingShieldDamper;
         [NMS(Index = 356)]
-        /* 0x17E8 */ public float PowerSettingShieldMul;
+        /* 0x17F8 */ public float PowerSettingShieldMul;
         [NMS(Index = 355)]
-        /* 0x17EC */ public float PowerSettingWeaponDamper;
+        /* 0x17FC */ public float PowerSettingWeaponDamper;
         [NMS(Index = 354)]
-        /* 0x17F0 */ public float PowerSettingWeaponMul;
+        /* 0x1800 */ public float PowerSettingWeaponMul;
         [NMS(Index = 546)]
-        /* 0x17F4 */ public int ProjectileClipSize;
+        /* 0x1804 */ public int ProjectileClipSize;
         [NMS(Index = 544)]
-        /* 0x17F8 */ public float ProjectileFireRate;
+        /* 0x1808 */ public float ProjectileFireRate;
         [NMS(Index = 543)]
-        /* 0x17FC */ public float ProjectileOverheatTime;
+        /* 0x180C */ public float ProjectileOverheatTime;
         [NMS(Index = 545)]
-        /* 0x1800 */ public float ProjectileReloadTime;
+        /* 0x1810 */ public float ProjectileReloadTime;
         [NMS(Index = 41)]
-        /* 0x1804 */ public float PulseDriveBoostDoubleTapTime;
+        /* 0x1814 */ public float PulseDriveBoostDoubleTapTime;
         [NMS(Index = 203)]
-        /* 0x1808 */ public float PulseDrivePlanetApproachHeight;
+        /* 0x1818 */ public float PulseDrivePlanetApproachHeight;
         [NMS(Index = 202)]
-        /* 0x180C */ public float PulseDrivePlanetApproachMaxAngle;
+        /* 0x181C */ public float PulseDrivePlanetApproachMaxAngle;
         [NMS(Index = 201)]
-        /* 0x1810 */ public float PulseDrivePlanetApproachMinAngle;
+        /* 0x1820 */ public float PulseDrivePlanetApproachMinAngle;
         [NMS(Index = 53)]
-        /* 0x1814 */ public float PulseDriveStationApproachAngleMin;
+        /* 0x1824 */ public float PulseDriveStationApproachAngleMin;
         [NMS(Index = 54)]
-        /* 0x1818 */ public float PulseDriveStationApproachAngleRange;
+        /* 0x1828 */ public float PulseDriveStationApproachAngleRange;
         [NMS(Index = 57)]
-        /* 0x181C */ public float PulseDriveStationApproachOffset;
+        /* 0x182C */ public float PulseDriveStationApproachOffset;
         [NMS(Index = 55)]
-        /* 0x1820 */ public float PulseDriveStationApproachPerpAngleMin;
+        /* 0x1830 */ public float PulseDriveStationApproachPerpAngleMin;
         [NMS(Index = 56)]
-        /* 0x1824 */ public float PulseDriveStationApproachPerpAngleRange;
+        /* 0x1834 */ public float PulseDriveStationApproachPerpAngleRange;
         [NMS(Index = 58)]
-        /* 0x1828 */ public float PulseDriveStationApproachSlowdown;
+        /* 0x1838 */ public float PulseDriveStationApproachSlowdown;
         [NMS(Index = 60)]
-        /* 0x182C */ public float PulseDriveStationApproachSlowdownRange;
+        /* 0x183C */ public float PulseDriveStationApproachSlowdownRange;
         [NMS(Index = 59)]
-        /* 0x1830 */ public float PulseDriveStationApproachSlowdownRangeMin;
+        /* 0x1840 */ public float PulseDriveStationApproachSlowdownRangeMin;
         [NMS(Index = 387)]
-        /* 0x1834 */ public float RemotePlayerLockTimeAfterShot;
+        /* 0x1844 */ public float RemotePlayerLockTimeAfterShot;
         [NMS(Index = 383)]
-        /* 0x1838 */ public float ResetTargetLockAngle;
+        /* 0x1848 */ public float ResetTargetLockAngle;
         [NMS(Index = 466)]
-        /* 0x183C */ public float ResourceCollectOffset;
+        /* 0x184C */ public float ResourceCollectOffset;
         [NMS(Index = 362)]
-        /* 0x1840 */ public float RoyalTakeOffMod;
+        /* 0x1850 */ public float RoyalTakeOffMod;
         [NMS(Index = 52)]
-        /* 0x1844 */ public float RudderToRollAngleDownMax;
+        /* 0x1854 */ public float RudderToRollAngleDownMax;
         [NMS(Index = 51)]
-        /* 0x1848 */ public float RudderToRollAngleDownMin;
+        /* 0x1858 */ public float RudderToRollAngleDownMin;
         [NMS(Index = 50)]
-        /* 0x184C */ public float RudderToRollAngleUpMax;
+        /* 0x185C */ public float RudderToRollAngleUpMax;
         [NMS(Index = 47)]
-        /* 0x1850 */ public float RudderToRollCutoffRotation;
+        /* 0x1860 */ public float RudderToRollCutoffRotation;
         [NMS(Index = 46)]
-        /* 0x1854 */ public float RudderToRollMultiplierLow;
+        /* 0x1864 */ public float RudderToRollMultiplierLow;
         [NMS(Index = 43)]
-        /* 0x1858 */ public float RudderToRollMultiplierMax;
+        /* 0x1868 */ public float RudderToRollMultiplierMax;
         [NMS(Index = 42)]
-        /* 0x185C */ public float RudderToRollMultiplierMin;
+        /* 0x186C */ public float RudderToRollMultiplierMin;
         [NMS(Index = 44)]
-        /* 0x1860 */ public float RudderToRollMultiplierOpposite;
+        /* 0x1870 */ public float RudderToRollMultiplierOpposite;
         [NMS(Index = 45)]
-        /* 0x1864 */ public float RudderToRollMultiplierSpace;
+        /* 0x1874 */ public float RudderToRollMultiplierSpace;
         [NMS(Index = 48)]
-        /* 0x1868 */ public float RudderToRollUpsideDownRotation;
+        /* 0x1878 */ public float RudderToRollUpsideDownRotation;
         [NMS(Index = 639)]
-        /* 0x186C */ public float ShakeAlignBrake;
+        /* 0x187C */ public float ShakeAlignBrake;
         [NMS(Index = 637)]
-        /* 0x1870 */ public float ShakeMaxPower;
+        /* 0x1880 */ public float ShakeMaxPower;
         [NMS(Index = 638)]
-        /* 0x1874 */ public float ShakeMaxSpeed;
+        /* 0x1884 */ public float ShakeMaxSpeed;
         [NMS(Index = 635)]
-        /* 0x1878 */ public float ShakePowerScaler;
+        /* 0x1888 */ public float ShakePowerScaler;
         [NMS(Index = 636)]
-        /* 0x187C */ public float ShakeSpeed;
+        /* 0x188C */ public float ShakeSpeed;
         [NMS(Index = 212)]
-        /* 0x1880 */ public float ShieldEffectHitTime;
+        /* 0x1890 */ public float ShieldEffectHitTime;
         [NMS(Index = 20)]
-        /* 0x1884 */ public float ShieldLeechMul;
+        /* 0x1894 */ public float ShieldLeechMul;
         [NMS(Index = 390)]
-        /* 0x1888 */ public float ShieldRechargeMinHitTime;
+        /* 0x1898 */ public float ShieldRechargeMinHitTime;
         [NMS(Index = 391)]
-        /* 0x188C */ public float ShieldRechargeRate;
+        /* 0x189C */ public float ShieldRechargeRate;
         [NMS(Index = 623)]
-        /* 0x1890 */ public float ShipDifferentRepelAmount;
+        /* 0x18A0 */ public float ShipDifferentRepelAmount;
         [NMS(Index = 622)]
-        /* 0x1894 */ public float ShipDifferentRepelRange;
+        /* 0x18A4 */ public float ShipDifferentRepelRange;
         [NMS(Index = 669)]
-        /* 0x1898 */ public float ShipEnterAngle;
+        /* 0x18A8 */ public float ShipEnterAngle;
         [NMS(Index = 672)]
-        /* 0x189C */ public float ShipEnterMinTime;
+        /* 0x18AC */ public float ShipEnterMinTime;
         [NMS(Index = 668)]
-        /* 0x18A0 */ public float ShipEnterRange;
+        /* 0x18B0 */ public float ShipEnterRange;
         [NMS(Index = 671)]
-        /* 0x18A4 */ public float ShipEnterSpeed;
+        /* 0x18B4 */ public float ShipEnterSpeed;
         [NMS(Index = 670)]
-        /* 0x18A8 */ public float ShipEnterTransitionTime;
+        /* 0x18B8 */ public float ShipEnterTransitionTime;
         [NMS(Index = 537)]
-        /* 0x18AC */ public float ShipHeatAlertTime;
+        /* 0x18BC */ public float ShipHeatAlertTime;
         [NMS(Index = 454)]
-        /* 0x18B0 */ public float ShipMotionDeadZone;
+        /* 0x18C0 */ public float ShipMotionDeadZone;
         [NMS(Index = 18)]
-        /* 0x18B4 */ public float ShipThrottleBrakeVibrationStrength;
+        /* 0x18C4 */ public float ShipThrottleBrakeVibrationStrength;
         [NMS(Index = 17)]
-        /* 0x18B8 */ public float ShipThrottleNotchVibrationStrength;
+        /* 0x18C8 */ public float ShipThrottleNotchVibrationStrength;
         [NMS(Index = 19)]
-        /* 0x18BC */ public float ShipThrustReverseThreshhold;
+        /* 0x18CC */ public float ShipThrustReverseThreshhold;
         [NMS(Index = 360)]
-        /* 0x18C0 */ public float ShuttleTakeOffMod;
+        /* 0x18D0 */ public float ShuttleTakeOffMod;
         [NMS(Index = 575)]
-        /* 0x18C4 */ public float SpaceBrakeAngularRange;
+        /* 0x18D4 */ public float SpaceBrakeAngularRange;
         [NMS(Index = 574)]
-        /* 0x18C8 */ public float SpaceBrakeMinAngularSpeed;
+        /* 0x18D8 */ public float SpaceBrakeMinAngularSpeed;
         [NMS(Index = 688)]
-        /* 0x18CC */ public float SpaceCombatFollowModeAimTime;
+        /* 0x18DC */ public float SpaceCombatFollowModeAimTime;
         [NMS(Index = 692)]
-        /* 0x18D0 */ public float SpaceCombatFollowModeBrakeBehindAngle;
+        /* 0x18E0 */ public float SpaceCombatFollowModeBrakeBehindAngle;
         [NMS(Index = 690)]
-        /* 0x18D4 */ public float SpaceCombatFollowModeEvadeRoll;
+        /* 0x18E4 */ public float SpaceCombatFollowModeEvadeRoll;
         [NMS(Index = 695)]
-        /* 0x18D8 */ public float SpaceCombatFollowModeEvadeThrust;
+        /* 0x18E8 */ public float SpaceCombatFollowModeEvadeThrust;
         [NMS(Index = 691)]
-        /* 0x18DC */ public float SpaceCombatFollowModeEvadeTime;
+        /* 0x18EC */ public float SpaceCombatFollowModeEvadeTime;
         [NMS(Index = 693)]
-        /* 0x18E0 */ public float SpaceCombatFollowModeMaxBrakeBehind;
+        /* 0x18F0 */ public float SpaceCombatFollowModeMaxBrakeBehind;
         [NMS(Index = 694)]
-        /* 0x18E4 */ public float SpaceCombatFollowModeMaxBrakeHeadOn;
+        /* 0x18F4 */ public float SpaceCombatFollowModeMaxBrakeHeadOn;
         [NMS(Index = 687)]
-        /* 0x18E8 */ public float SpaceCombatFollowModeMaxTorque;
+        /* 0x18F8 */ public float SpaceCombatFollowModeMaxTorque;
         [NMS(Index = 689)]
-        /* 0x18EC */ public float SpaceCombatFollowModeTargetDistance;
+        /* 0x18FC */ public float SpaceCombatFollowModeTargetDistance;
         [NMS(Index = 407)]
-        /* 0x18F0 */ public float SpeedCoolNormalSpeedAmount;
+        /* 0x1900 */ public float SpeedCoolNormalSpeedAmount;
         [NMS(Index = 406)]
-        /* 0x18F4 */ public float SpeedCoolOffset;
+        /* 0x1904 */ public float SpeedCoolOffset;
         [NMS(Index = 679)]
-        /* 0x18F8 */ public float SpeedUpDistanceFadeThreshold;
+        /* 0x1908 */ public float SpeedUpDistanceFadeThreshold;
         [NMS(Index = 678)]
-        /* 0x18FC */ public float SpeedUpDistanceThreshold;
+        /* 0x190C */ public float SpeedUpDistanceThreshold;
         [NMS(Index = 681)]
-        /* 0x1900 */ public float SpeedUpVelocityCoeff;
+        /* 0x1910 */ public float SpeedUpVelocityCoeff;
         [NMS(Index = 680)]
-        /* 0x1904 */ public float SpeedUpVelocityThreshold;
+        /* 0x1914 */ public float SpeedUpVelocityThreshold;
         [NMS(Index = 254)]
-        /* 0x1908 */ public float SpringSpeedBoosting;
+        /* 0x1918 */ public float SpringSpeedBoosting;
         [NMS(Index = 255)]
-        /* 0x190C */ public float SpringSpeedBraking;
+        /* 0x191C */ public float SpringSpeedBraking;
         [NMS(Index = 252)]
-        /* 0x1910 */ public float SpringSpeedDefault;
+        /* 0x1920 */ public float SpringSpeedDefault;
         [NMS(Index = 253)]
-        /* 0x1914 */ public float SpringSpeedRolling;
+        /* 0x1924 */ public float SpringSpeedRolling;
         [NMS(Index = 251)]
-        /* 0x1918 */ public float SpringSpeedSpringSpeedIn;
+        /* 0x1928 */ public float SpringSpeedSpringSpeedIn;
         [NMS(Index = 250)]
-        /* 0x191C */ public float SpringSpeedSpringSpeedOut;
+        /* 0x192C */ public float SpringSpeedSpringSpeedOut;
         [NMS(Index = 684)]
-        /* 0x1920 */ public float StickLandThreshold;
+        /* 0x1930 */ public float StickLandThreshold;
         [NMS(Index = 685)]
-        /* 0x1924 */ public float StickPulseThreshold;
+        /* 0x1934 */ public float StickPulseThreshold;
         [NMS(Index = 453)]
-        /* 0x1928 */ public float StickyStickAngle;
+        /* 0x1938 */ public float StickyStickAngle;
         [NMS(Index = 450)]
-        /* 0x192C */ public float StickyTurnAngleRange;
+        /* 0x193C */ public float StickyTurnAngleRange;
         [NMS(Index = 452)]
-        /* 0x1930 */ public float StickyTurnHigh;
+        /* 0x1940 */ public float StickyTurnHigh;
         [NMS(Index = 451)]
-        /* 0x1934 */ public float StickyTurnLow;
+        /* 0x1944 */ public float StickyTurnLow;
         [NMS(Index = 449)]
-        /* 0x1938 */ public float StickyTurnMinAngle;
+        /* 0x1948 */ public float StickyTurnMinAngle;
         [NMS(Index = 548)]
-        /* 0x193C */ public float SummonShipAnywhereFwdOffset;
+        /* 0x194C */ public float SummonShipAnywhereFwdOffset;
         [NMS(Index = 547)]
-        /* 0x1940 */ public float SummonShipAnywhereHeightOffset;
+        /* 0x1950 */ public float SummonShipAnywhereHeightOffset;
         [NMS(Index = 551)]
-        /* 0x1944 */ public float SummonShipAnywhereRangeMin;
+        /* 0x1954 */ public float SummonShipAnywhereRangeMin;
         [NMS(Index = 553)]
-        /* 0x1948 */ public float SummonShipApproachOffset;
+        /* 0x1958 */ public float SummonShipApproachOffset;
         [NMS(Index = 552)]
-        /* 0x194C */ public float SummonShipHeightOffset;
+        /* 0x195C */ public float SummonShipHeightOffset;
         [NMS(Index = 549)]
-        /* 0x1950 */ public float SummonShipInSpaceRange;
+        /* 0x1960 */ public float SummonShipInSpaceRange;
         [NMS(Index = 476)]
-        /* 0x1954 */ public int TakeOffCost;
+        /* 0x1964 */ public int TakeOffCost;
         [NMS(Index = 558)]
-        /* 0x1958 */ public float TakeOffSphereCastLength;
+        /* 0x1968 */ public float TakeOffSphereCastLength;
         [NMS(Index = 559)]
-        /* 0x195C */ public float TakeOffSphereCastRadiusMul;
+        /* 0x196C */ public float TakeOffSphereCastRadiusMul;
         [NMS(Index = 384)]
-        /* 0x1960 */ public float TargetLockAngleTorpedo;
+        /* 0x1970 */ public float TargetLockAngleTorpedo;
         [NMS(Index = 568)]
-        /* 0x1964 */ public float TargetLockChangeTime;
+        /* 0x1974 */ public float TargetLockChangeTime;
         [NMS(Index = 569)]
-        /* 0x1968 */ public float TargetLockLoseTime;
+        /* 0x1978 */ public float TargetLockLoseTime;
         [NMS(Index = 386)]
-        /* 0x196C */ public float TargetLockNearestAngle;
+        /* 0x197C */ public float TargetLockNearestAngle;
         [NMS(Index = 385)]
-        /* 0x1970 */ public float TargetLockRange;
+        /* 0x1980 */ public float TargetLockRange;
         [NMS(Index = 567)]
-        /* 0x1974 */ public float TargetLockTime;
+        /* 0x1984 */ public float TargetLockTime;
         [NMS(Index = 206)]
-        /* 0x1978 */ public float TestJetsBoost;
+        /* 0x1988 */ public float TestJetsBoost;
         [NMS(Index = 204)]
-        /* 0x197C */ public float TestJetsStage1;
+        /* 0x198C */ public float TestJetsStage1;
         [NMS(Index = 205)]
-        /* 0x1980 */ public float TestJetsStage2;
+        /* 0x1990 */ public float TestJetsStage2;
         [NMS(Index = 211)]
-        /* 0x1984 */ public float TestShieldEffect;
+        /* 0x1994 */ public float TestShieldEffect;
         [NMS(Index = 190)]
-        /* 0x1988 */ public float TestShipAnimLowAltitude;
+        /* 0x1998 */ public float TestShipAnimLowAltitude;
         [NMS(Index = 188)]
-        /* 0x198C */ public float TestShipAnimPulse;
+        /* 0x199C */ public float TestShipAnimPulse;
         [NMS(Index = 186)]
-        /* 0x1990 */ public float TestShipAnimRoll;
+        /* 0x19A0 */ public float TestShipAnimRoll;
         [NMS(Index = 189)]
-        /* 0x1994 */ public float TestShipAnimSpace;
+        /* 0x19A4 */ public float TestShipAnimSpace;
         [NMS(Index = 187)]
-        /* 0x1998 */ public float TestShipAnimThrust;
+        /* 0x19A8 */ public float TestShipAnimThrust;
         [NMS(Index = 103)]
-        /* 0x199C */ public float TestTrailRadius;
+        /* 0x19AC */ public float TestTrailRadius;
         [NMS(Index = 102)]
-        /* 0x19A0 */ public float TestTrailSpeed;
+        /* 0x19B0 */ public float TestTrailSpeed;
         [NMS(Index = 207)]
-        /* 0x19A4 */ public float TestTrailThreshold;
+        /* 0x19B4 */ public float TestTrailThreshold;
         [NMS(Index = 403)]
-        /* 0x19A8 */ public float ThrustDecaySpring;
+        /* 0x19B8 */ public float ThrustDecaySpring;
         [NMS(Index = 404)]
-        /* 0x19AC */ public float ThrustDecaySpringCombat;
+        /* 0x19BC */ public float ThrustDecaySpringCombat;
         [NMS(Index = 101)]
-        /* 0x19B0 */ public int TrailMaxNumPointsPerFrameOverride;
+        /* 0x19C0 */ public int TrailMaxNumPointsPerFrameOverride;
         [NMS(Index = 196)]
-        /* 0x19B4 */ public float TrailVelocityFactor;
+        /* 0x19C4 */ public float TrailVelocityFactor;
         [NMS(Index = 416)]
-        /* 0x19B8 */ public float TurnRudderStrength;
+        /* 0x19C8 */ public float TurnRudderStrength;
         [NMS(Index = 39)]
-        /* 0x19BC */ public float VignetteAmountAcceleration;
+        /* 0x19CC */ public float VignetteAmountAcceleration;
         [NMS(Index = 40)]
-        /* 0x19C0 */ public float VignetteAmountTurning;
+        /* 0x19D0 */ public float VignetteAmountTurning;
         [NMS(Index = 105)]
-        /* 0x19C4 */ public float WarpAnimMaxSpeed;
+        /* 0x19D4 */ public float WarpAnimMaxSpeed;
         [NMS(Index = 104)]
-        /* 0x19C8 */ public float WarpAnimMinSpeed;
+        /* 0x19D8 */ public float WarpAnimMinSpeed;
         [NMS(Index = 148)]
-        /* 0x19CC */ public float WarpFadeInTime;
+        /* 0x19DC */ public float WarpFadeInTime;
         [NMS(Index = 141)]
-        /* 0x19D0 */ public float WarpInFlashTime;
+        /* 0x19E0 */ public float WarpInFlashTime;
         [NMS(Index = 145)]
-        /* 0x19D4 */ public float WarpInFlashTimeFreighter;
+        /* 0x19E4 */ public float WarpInFlashTimeFreighter;
         [NMS(Index = 154)]
-        /* 0x19D8 */ public float WarpInFlashTimeNexus;
+        /* 0x19E8 */ public float WarpInFlashTimeNexus;
         [NMS(Index = 149)]
-        /* 0x19DC */ public float WarpInLineWidth;
+        /* 0x19EC */ public float WarpInLineWidth;
         [NMS(Index = 142)]
-        /* 0x19E0 */ public float WarpInRange;
+        /* 0x19F0 */ public float WarpInRange;
         [NMS(Index = 146)]
-        /* 0x19E4 */ public float WarpInRangeFreighter;
+        /* 0x19F4 */ public float WarpInRangeFreighter;
         [NMS(Index = 155)]
-        /* 0x19E8 */ public float WarpInRangeNexus;
+        /* 0x19F8 */ public float WarpInRangeNexus;
         [NMS(Index = 140)]
-        /* 0x19EC */ public float WarpInTime;
+        /* 0x19FC */ public float WarpInTime;
         [NMS(Index = 144)]
-        /* 0x19F0 */ public float WarpInTimeFreighter;
+        /* 0x1A00 */ public float WarpInTimeFreighter;
         [NMS(Index = 153)]
-        /* 0x19F4 */ public float WarpInTimeNexus;
+        /* 0x1A04 */ public float WarpInTimeNexus;
         [NMS(Index = 159)]
-        /* 0x19F8 */ public float WarpNexusDistance;
+        /* 0x1A08 */ public float WarpNexusDistance;
         [NMS(Index = 158)]
-        /* 0x19FC */ public float WarpNexusPitch;
+        /* 0x1A0C */ public float WarpNexusPitch;
         [NMS(Index = 157)]
-        /* 0x1A00 */ public float WarpNexusRotation;
+        /* 0x1A10 */ public float WarpNexusRotation;
         [NMS(Index = 160)]
-        /* 0x1A04 */ public float WarpOnFootInCorvetteMaxWaitTime;
+        /* 0x1A14 */ public float WarpOnFootInCorvetteMaxWaitTime;
         [NMS(Index = 151)]
-        /* 0x1A08 */ public float WarpOutRange;
+        /* 0x1A18 */ public float WarpOutRange;
         [NMS(Index = 152)]
-        /* 0x1A0C */ public float WarpOutTime;
+        /* 0x1A1C */ public float WarpOutTime;
         [NMS(Index = 143)]
-        /* 0x1A10 */ public float WarpScale;
+        /* 0x1A20 */ public float WarpScale;
         [NMS(Index = 147)]
-        /* 0x1A14 */ public float WarpScaleFreighter;
+        /* 0x1A24 */ public float WarpScaleFreighter;
         [NMS(Index = 156)]
-        /* 0x1A18 */ public float WarpScaleNexus;
+        /* 0x1A28 */ public float WarpScaleNexus;
         [NMS(Index = 121)]
-        /* 0x1A1C */ public float WaterEffectScaler;
+        /* 0x1A2C */ public float WaterEffectScaler;
         [NMS(Index = 265)]
-        /* 0x1A20 */ public float WeaponDamagePotentialReferenceRange;
+        /* 0x1A30 */ public float WeaponDamagePotentialReferenceRange;
         [NMS(Index = 654)]
-        /* 0x1A24 */ public float WingmanAlign;
+        /* 0x1A34 */ public float WingmanAlign;
         [NMS(Index = 655)]
-        /* 0x1A28 */ public float WingmanAngle;
+        /* 0x1A38 */ public float WingmanAngle;
         [NMS(Index = 656)]
-        /* 0x1A2C */ public float WingmanAngle2;
+        /* 0x1A3C */ public float WingmanAngle2;
         [NMS(Index = 649)]
-        /* 0x1A30 */ public float WingmanAttackAimAngle;
+        /* 0x1A40 */ public float WingmanAttackAimAngle;
         [NMS(Index = 647)]
-        /* 0x1A34 */ public float WingmanAttackAngle;
+        /* 0x1A44 */ public float WingmanAttackAngle;
         [NMS(Index = 652)]
-        /* 0x1A38 */ public float WingmanAttackCoolTime;
+        /* 0x1A48 */ public float WingmanAttackCoolTime;
         [NMS(Index = 646)]
-        /* 0x1A3C */ public float WingmanAttackMinRange;
+        /* 0x1A4C */ public float WingmanAttackMinRange;
         [NMS(Index = 644)]
-        /* 0x1A40 */ public float WingmanAttackOffset;
+        /* 0x1A50 */ public float WingmanAttackOffset;
         [NMS(Index = 645)]
-        /* 0x1A44 */ public float WingmanAttackRange;
+        /* 0x1A54 */ public float WingmanAttackRange;
         [NMS(Index = 650)]
-        /* 0x1A48 */ public float WingmanAttackTime;
+        /* 0x1A58 */ public float WingmanAttackTime;
         [NMS(Index = 651)]
-        /* 0x1A4C */ public float WingmanAttackTimeout;
+        /* 0x1A5C */ public float WingmanAttackTimeout;
         [NMS(Index = 641)]
-        /* 0x1A50 */ public float WingmanAtTime;
+        /* 0x1A60 */ public float WingmanAtTime;
         [NMS(Index = 642)]
-        /* 0x1A54 */ public float WingmanAtTimeBack;
+        /* 0x1A64 */ public float WingmanAtTimeBack;
         [NMS(Index = 640)]
-        /* 0x1A58 */ public float WingmanAtTimeStart;
+        /* 0x1A68 */ public float WingmanAtTimeStart;
         [NMS(Index = 658)]
-        /* 0x1A5C */ public float WingmanFwd1;
+        /* 0x1A6C */ public float WingmanFwd1;
         [NMS(Index = 659)]
-        /* 0x1A60 */ public float WingmanFwd2;
+        /* 0x1A70 */ public float WingmanFwd2;
         [NMS(Index = 643)]
-        /* 0x1A64 */ public float WingmanPerpTime;
+        /* 0x1A74 */ public float WingmanPerpTime;
         [NMS(Index = 657)]
-        /* 0x1A68 */ public float WingmanRadius;
+        /* 0x1A78 */ public float WingmanRadius;
         [NMS(Index = 653)]
-        /* 0x1A6C */ public float WingmanSpawnDist;
+        /* 0x1A7C */ public float WingmanSpawnDist;
         [NMS(Index = 114)]
-        /* 0x1A70 */ public float WingmanSpeedApproachSpeed;
+        /* 0x1A80 */ public float WingmanSpeedApproachSpeed;
         [NMS(Index = 115)]
-        /* 0x1A74 */ public float WingmanSpeedApproachSpeedSpace;
+        /* 0x1A84 */ public float WingmanSpeedApproachSpeedSpace;
         [NMS(Index = 112)]
-        /* 0x1A78 */ public float WingmanSpeedTrackDistance;
+        /* 0x1A88 */ public float WingmanSpeedTrackDistance;
         [NMS(Index = 110)]
-        /* 0x1A7C */ public float WingmanSpeedTrackForceMax;
+        /* 0x1A8C */ public float WingmanSpeedTrackForceMax;
         [NMS(Index = 111)]
-        /* 0x1A80 */ public float WingmanSpeedTrackForceMin;
+        /* 0x1A90 */ public float WingmanSpeedTrackForceMin;
         [NMS(Index = 113)]
-        /* 0x1A84 */ public float WingmanSpeedTrackOffset;
+        /* 0x1A94 */ public float WingmanSpeedTrackOffset;
         [NMS(Index = 648)]
-        /* 0x1A88 */ public float WingmanViewerAngle;
+        /* 0x1A98 */ public float WingmanViewerAngle;
         [NMS(Index = 0)]
-        /* 0x1A8C */ public GcShipDataNames HoverShipDataNames;
+        /* 0x1A9C */ public GcShipDataNames HoverShipDataNames;
         [NMS(Index = 1)]
-        /* 0x1BAC */ public GcShipDataNames HoverShipDataNamesSpecial;
+        /* 0x1BBC */ public GcShipDataNames HoverShipDataNamesSpecial;
         [NMS(Index = 2)]
-        /* 0x1CCC */ public GcShipDataNames SpookShipDataNames;
+        /* 0x1CDC */ public GcShipDataNames SpookShipDataNames;
         [NMS(Index = 92, MxmlName = "3rdPersonShipEnabled")]
-        /* 0x1DEC */ public bool _3rdPersonShipEnabled;
+        /* 0x1DFC */ public bool _3rdPersonShipEnabled;
         [NMS(Index = 248, MxmlName = "3rdPersonWarpWanderCurve")]
-        /* 0x1DED */ public TkCurveType _3rdPersonWarpWanderCurve;
+        /* 0x1DFD */ public TkCurveType _3rdPersonWarpWanderCurve;
         [NMS(Index = 24)]
-        /* 0x1DEE */ public bool AddShipToCollectionOnEnter;
+        /* 0x1DFE */ public bool AddShipToCollectionOnEnter;
         [NMS(Index = 93)]
-        /* 0x1DEF */ public bool AimZoomAuto;
+        /* 0x1DFF */ public bool AimZoomAuto;
         [NMS(Index = 23)]
-        /* 0x1DF0 */ public bool AllowSideScreenPointing;
+        /* 0x1E00 */ public bool AllowSideScreenPointing;
         [NMS(Index = 428)]
-        /* 0x1DF1 */ public bool AltAtmosphere;
+        /* 0x1E01 */ public bool AltAtmosphere;
         [NMS(Index = 90)]
-        /* 0x1DF2 */ public bool AltControls;
+        /* 0x1E02 */ public bool AltControls;
         [NMS(Index = 98)]
-        /* 0x1DF3 */ public bool ApplyHeightAlign;
+        /* 0x1E03 */ public bool ApplyHeightAlign;
         [NMS(Index = 97)]
-        /* 0x1DF4 */ public bool ApplyHeightForce;
+        /* 0x1E04 */ public bool ApplyHeightForce;
         [NMS(Index = 380)]
-        /* 0x1DF5 */ public bool AutoEjectOnLanding;
+        /* 0x1E05 */ public bool AutoEjectOnLanding;
         [NMS(Index = 109)]
-        /* 0x1DF6 */ public TkCurveType CockpitExitAnimCurve;
+        /* 0x1E06 */ public TkCurveType CockpitExitAnimCurve;
         [NMS(Index = 95)]
-        /* 0x1DF7 */ public bool CritsFromBehind;
+        /* 0x1E07 */ public bool CritsFromBehind;
         [NMS(Index = 590)]
-        /* 0x1DF8 */ public TkCurveType DeflectCurve;
+        /* 0x1E08 */ public TkCurveType DeflectCurve;
         [NMS(Index = 175)]
-        /* 0x1DF9 */ public TkCurveType DirectionDockingIndicatorCurve;
+        /* 0x1E09 */ public TkCurveType DirectionDockingIndicatorCurve;
         [NMS(Index = 99)]
-        /* 0x1DFA */ public bool DoPreCollision;
+        /* 0x1E0A */ public bool DoPreCollision;
         [NMS(Index = 96)]
-        /* 0x1DFB */ public bool DrawLineLockTarget;
+        /* 0x1E0B */ public bool DrawLineLockTarget;
         [NMS(Index = 94)]
-        /* 0x1DFC */ public bool EnableDepthTestedCrosshairSections;
+        /* 0x1E0C */ public bool EnableDepthTestedCrosshairSections;
         [NMS(Index = 25)]
-        /* 0x1DFD */ public bool EnablePulseDriveSpaceStationOrient;
+        /* 0x1E0D */ public bool EnablePulseDriveSpaceStationOrient;
         [NMS(Index = 314)]
-        /* 0x1DFE */ public TkCurveType GroundHeightHardCurve;
+        /* 0x1E0E */ public TkCurveType GroundHeightHardCurve;
         [NMS(Index = 308)]
-        /* 0x1DFF */ public TkCurveType GroundHeightSoftCurve;
+        /* 0x1E0F */ public TkCurveType GroundHeightSoftCurve;
         [NMS(Index = 381)]
-        /* 0x1E00 */ public bool LandedCockpitFreeLook;
+        /* 0x1E10 */ public bool LandedCockpitFreeLook;
         [NMS(Index = 290)]
-        /* 0x1E01 */ public bool LandingCheckBuildings;
+        /* 0x1E11 */ public bool LandingCheckBuildings;
         [NMS(Index = 339)]
-        /* 0x1E02 */ public TkCurveType LandingCurve;
+        /* 0x1E12 */ public TkCurveType LandingCurve;
         [NMS(Index = 340)]
-        /* 0x1E03 */ public TkCurveType LandingCurveHeavy;
+        /* 0x1E13 */ public TkCurveType LandingCurveHeavy;
         [NMS(Index = 341)]
-        /* 0x1E04 */ public TkCurveType LandingCurveWater;
+        /* 0x1E14 */ public TkCurveType LandingCurveWater;
         [NMS(Index = 531)]
-        /* 0x1E05 */ public TkCurveType MiniWarpCurve;
+        /* 0x1E15 */ public TkCurveType MiniWarpCurve;
         [NMS(Index = 338)]
-        /* 0x1E06 */ public TkCurveType PitchCorrectHeightCurve;
+        /* 0x1E16 */ public TkCurveType PitchCorrectHeightCurve;
         [NMS(Index = 49)]
-        /* 0x1E07 */ public TkCurveType RudderToRollCurve;
+        /* 0x1E17 */ public TkCurveType RudderToRollCurve;
         [NMS(Index = 213)]
-        /* 0x1E08 */ public TkCurveType ShieldEffectHitCurve;
+        /* 0x1E18 */ public TkCurveType ShieldEffectHitCurve;
         [NMS(Index = 697)]
-        /* 0x1E09 */ public bool SpaceCombatFollowModeUseBoost;
+        /* 0x1E19 */ public bool SpaceCombatFollowModeUseBoost;
         [NMS(Index = 696)]
-        /* 0x1E0A */ public bool SpaceCombatFollowModeUseEvadeTarget;
+        /* 0x1E1A */ public bool SpaceCombatFollowModeUseEvadeTarget;
         [NMS(Index = 91)]
-        /* 0x1E0B */ public bool SpaceMapInWorld;
+        /* 0x1E1B */ public bool SpaceMapInWorld;
         [NMS(Index = 100)]
-        /* 0x1E0C */ public bool SpeedTrackModeEnabled;
+        /* 0x1E1C */ public bool SpeedTrackModeEnabled;
         [NMS(Index = 249)]
-        /* 0x1E0D */ public bool SpringSpeedSpringEnabled;
+        /* 0x1E1D */ public bool SpringSpeedSpringEnabled;
         [NMS(Index = 185)]
-        /* 0x1E0E */ public bool TestShipAnims;
+        /* 0x1E1E */ public bool TestShipAnims;
         [NMS(Index = 150)]
-        /* 0x1E0F */ public TkCurveType WarpInCurve;
+        /* 0x1E1F */ public TkCurveType WarpInCurve;
     }
 }

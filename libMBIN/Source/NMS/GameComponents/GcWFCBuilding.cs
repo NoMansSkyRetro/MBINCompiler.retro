@@ -7,7 +7,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWFCBuilding : NMSTemplate
     {
         [NMS(Index = 2)]
-        /* 0x00 */ public VariableSizeString DecorationSet;
+        /* 0x00 */ public GcFilename DecorationSet;
         [NMS(Index = 14, MxmlName = "Fallback Seeds")]
         /* 0x10 */ public List<long> FallbackSeeds;
         [NMS(Index = 8)]
@@ -19,7 +19,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 9)]
         /* 0x50 */ public List<GcModuleOverride> ModuleOverrides;
         [NMS(Index = 1)]
-        /* 0x60 */ public VariableSizeString ModuleSet;
+        /* 0x60 */ public GcFilename ModuleSet;
         [NMS(Index = 11)]
         /* 0x70 */ public List<NMSString0x10> NPCs;
         [NMS(Index = 15, MxmlName = "Preset Fallback Seeds")]

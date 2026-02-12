@@ -22,7 +22,7 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 5, MxmlName = "Twinkle Range")]
         /* 0x80 */ public Vector3f TwinkleRange;
         [NMS(Index = 0)]
-        /* 0x90 */ public VariableSizeString Material;
+        /* 0x90 */ public GcFilename Material;
         [NMS(Index = 9, MxmlName = "Colour 1 Alpha")]
         /* 0xA0 */ public float Colour1Alpha;
         [NMS(Index = 11, MxmlName = "Colour 2 Alpha")]

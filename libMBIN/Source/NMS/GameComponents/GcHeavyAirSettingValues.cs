@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x561029D3E0F7F62, NameHash = 0x4872A14D)]
+    [NMS(GUID = 0xF1C3AEB45537262, NameHash = 0x4872A14D)]
     public class GcHeavyAirSettingValues : NMSTemplate
     {
         [NMS(Index = 7)]

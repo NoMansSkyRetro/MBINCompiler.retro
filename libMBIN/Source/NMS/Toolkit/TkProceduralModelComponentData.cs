@@ -6,6 +6,6 @@ namespace libMBIN.NMS.Toolkit
     public class TkProceduralModelComponentData : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x0 */ public List<VariableSizeString> List;
+        /* 0x0 */ public List<GcFilename> List;
     }
 }

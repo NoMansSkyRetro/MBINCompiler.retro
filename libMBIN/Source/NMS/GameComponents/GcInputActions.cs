@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1922F3F6B0425433, NameHash = 0x26A0D337)]
+    [NMS(GUID = 0x75B230E25EAA39FE, NameHash = 0x26A0D337)]
     public class GcInputActions : NMSTemplate
     {
-        // size: 0x12B
+        // size: 0x12C
         public enum InputActionEnum : uint {
             Invalid,
             Player_Forward,
@@ -232,6 +232,7 @@ namespace libMBIN.NMS.GameComponents
             GameMode_ChangeUser,
             Binocs_NextMode,
             Binocs_PrevMode,
+            Binocs_Scan,
             BaseBuilding_PinRecipe,
             BaseBuilding_SwitchBase,
             PhotoMode_CatLeft,

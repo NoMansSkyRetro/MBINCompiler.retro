@@ -6,6 +6,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcHeavyAirList : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x0 */ public List<VariableSizeString> Options;
+        /* 0x0 */ public List<GcFilename> Options;
     }
 }

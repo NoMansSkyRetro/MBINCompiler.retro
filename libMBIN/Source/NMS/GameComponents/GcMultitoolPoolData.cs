@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcMultitoolPoolData : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x00 */ public VariableSizeString File;
+        /* 0x00 */ public GcFilename File;
         [NMS(Index = 2)]
         /* 0x10 */ public int MaxDraw;
         [NMS(Index = 1)]

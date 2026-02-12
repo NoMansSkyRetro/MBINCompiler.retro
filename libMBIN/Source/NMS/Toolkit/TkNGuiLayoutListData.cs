@@ -4,9 +4,9 @@ namespace libMBIN.NMS.Toolkit
     public class TkNGuiLayoutListData : NMSTemplate
     {
         [NMS(Index = 2)]
-        /* 0x00 */ public VariableSizeString Default;
+        /* 0x00 */ public GcFilename Default;
         [NMS(Index = 1)]
-        /* 0x10 */ public VariableSizeString Filename;
+        /* 0x10 */ public GcFilename Filename;
         [NMS(Index = 0)]
         /* 0x20 */ public NMSString0x80 Name;
         [NMS(Index = 3)]

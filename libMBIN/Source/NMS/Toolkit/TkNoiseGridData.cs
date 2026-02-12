@@ -6,7 +6,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkNoiseGridData : NMSTemplate
     {
         [NMS(Index = 7)]
-        /* 0x000 */ public VariableSizeString Filename;
+        /* 0x000 */ public GcFilename Filename;
         [NMS(Index = 18)]
         /* 0x010 */ public TkNoiseUberLayerData TurbulenceNoiseLayer;
         [NMS(Index = 30)]

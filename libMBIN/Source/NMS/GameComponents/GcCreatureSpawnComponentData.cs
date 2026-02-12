@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x19EE53BF89FBDB0D, NameHash = 0x7505BE5F)]
+    [NMS(GUID = 0x36EF86234B1DD7E7, NameHash = 0x7505BE5F)]
     public class GcCreatureSpawnComponentData : NMSTemplate
     {
         [NMS(Index = 13)]
@@ -11,7 +11,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 2)]
         /* 0x48 */ public NMSString0x10 Creature;
         [NMS(Index = 1)]
-        /* 0x58 */ public VariableSizeString Model;
+        /* 0x58 */ public GcFilename Model;
         [NMS(Index = 5)]
         /* 0x68 */ public GcSeed Seed;
         [NMS(Index = 14)]

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x92E0CEE9F54BB93B, NameHash = 0xD7B3E587)]
+    [NMS(GUID = 0xAC0B15C60C80D895, NameHash = 0xD7B3E587)]
     public class GcBiomeFileList : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x11, EnumType = typeof(GcBiomeType.BiomeEnum))]

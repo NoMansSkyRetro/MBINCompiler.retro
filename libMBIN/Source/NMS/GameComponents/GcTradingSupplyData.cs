@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x971381F4EC056BEC, NameHash = 0xAEC62A33)]
+    [NMS(GUID = 0x943F816AB7CDF7D9, NameHash = 0xAEC62A33)]
     public class GcTradingSupplyData : NMSTemplate
     {
         [NMS(Index = 3)]
@@ -17,5 +17,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x24 */ public GcInteractionType InteractionType;
         [NMS(Index = 1)]
         /* 0x28 */ public float Supply;
+        [NMS(Index = 6)]
+        /* 0x2C */ public bool IsProduct;
     }
 }

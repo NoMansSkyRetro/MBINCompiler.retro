@@ -17,7 +17,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 2, Size = 0x4, EnumType = typeof(GcInventoryClass.InventoryClassEnum))]
         /* 0x040 */ public NMSString0x10[] PilotRankAttackDefinitions;
         [NMS(Index = 90)]
-        /* 0x080 */ public List<VariableSizeString> RandomPilotNPCResources;
+        /* 0x080 */ public List<GcFilename> RandomPilotNPCResources;
         [NMS(Index = 89)]
         /* 0x090 */ public List<GcAISpaceshipModelData> RandomSpaceshipResources;
         [NMS(Index = 1, Size = 0x4, EnumType = typeof(GcInventoryClass.InventoryClassEnum))]

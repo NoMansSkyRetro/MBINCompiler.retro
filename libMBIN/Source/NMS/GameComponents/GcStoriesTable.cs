@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDE723D7C4E472540, NameHash = 0xC8295625)]
+    [NMS(GUID = 0x3AFEB59CEC0BAFBA, NameHash = 0xC8295625)]
     public class GcStoriesTable : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]

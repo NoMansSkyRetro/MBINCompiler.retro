@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE20D488A443AC282, NameHash = 0x514AD10F)]
+    [NMS(GUID = 0x12A10F6A42E73079, NameHash = 0x514AD10F)]
     public class GcStatsTypes : NMSTemplate
     {
-        // size: 0xCE
+        // size: 0xD0
         public enum StatsTypeEnum : uint {
             Unspecified,
             Weapon_Laser,
@@ -50,6 +50,7 @@ namespace libMBIN.NMS.GameComponents
             Weapon_Grenade_Homing,
             Weapon_Grenade_Clusterbomb,
             Weapon_TerrainEdit,
+            Weapon_Gravity,
             Weapon_SunLaser,
             Weapon_SoulLaser,
             Weapon_MineGrenade,
@@ -211,6 +212,7 @@ namespace libMBIN.NMS.GameComponents
             Vehicle_FlameDamage,
             Vehicle_FlameHeatTime,
             Vehicle_Refiner,
+            Vehicle_Plough,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public StatsTypeEnum StatsType;

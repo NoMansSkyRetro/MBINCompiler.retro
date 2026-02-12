@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA5E5AA41C6CDB3F, NameHash = 0x65EC65D4)]
+    [NMS(GUID = 0x193D92C5B64E5BB4, NameHash = 0x65EC65D4)]
     public class GcAreaDamageData : NMSTemplate
     {
         [NMS(Index = 0)]
@@ -11,13 +11,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x20 */ public float Damage;
         [NMS(Index = 2)]
         /* 0x24 */ public float DelayPerMetre;
+        [NMS(Index = 8)]
+        /* 0x28 */ public float PhysicsPushForce;
         [NMS(Index = 1)]
-        /* 0x28 */ public float Radius;
+        /* 0x2C */ public float Radius;
         [NMS(Index = 7)]
-        /* 0x2C */ public bool DamageCreatures;
+        /* 0x30 */ public bool DamageCreatures;
         [NMS(Index = 6)]
-        /* 0x2D */ public bool DamagePlayers;
+        /* 0x31 */ public bool DamagePlayers;
         [NMS(Index = 5)]
-        /* 0x2E */ public bool InstantKill;
+        /* 0x32 */ public bool InstantKill;
     }
 }

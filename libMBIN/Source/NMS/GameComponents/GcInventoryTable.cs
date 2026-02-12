@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x30F77AA004DD7A20, NameHash = 0x107C2CC0)]
+    [NMS(GUID = 0xCE535613787866DA, NameHash = 0x107C2CC0)]
     public class GcInventoryTable : NMSTemplate
     {
         [NMS(Index = 7, Size = 0xB, EnumType = typeof(GcSpaceshipClasses.ShipClassEnum))]

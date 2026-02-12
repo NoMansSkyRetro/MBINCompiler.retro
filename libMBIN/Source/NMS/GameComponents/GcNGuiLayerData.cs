@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2C801571042C3319, NameHash = 0xA151C99F)]
+    [NMS(GUID = 0x1002E8508C48AE50, NameHash = 0xA151C99F)]
     public class GcNGuiLayerData : NMSTemplate
     {
         [NMS(Index = 0, MxmlName = "Element Data")]
@@ -12,9 +12,9 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 3)]
         /* 0x068 */ public List<NMSTemplate> Children;
         [NMS(Index = 4)]
-        /* 0x078 */ public VariableSizeString DataFilename;
+        /* 0x078 */ public GcFilename DataFilename;
         [NMS(Index = 2)]
-        /* 0x088 */ public VariableSizeString Image;
+        /* 0x088 */ public GcFilename Image;
         [NMS(Index = 1)]
         /* 0x098 */ public TkNGuiGraphicStyle Style;
         // size: 0x5
@@ -26,6 +26,6 @@ namespace libMBIN.NMS.GameComponents
             OnlyOnTouch,
         }
         [NMS(Index = 5)]
-        /* 0x1B8 */ public AltModeEnum AltMode;
+        /* 0x218 */ public AltModeEnum AltMode;
     }
 }

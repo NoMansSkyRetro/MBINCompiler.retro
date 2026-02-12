@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcNGuiActionData : NMSTemplate
     {
         [NMS(Index = 1)]
-        /* 0x00 */ public VariableSizeString Data;
+        /* 0x00 */ public GcFilename Data;
         [NMS(Index = 0)]
         /* 0x10 */ public NMSString0x10 LayerID;
         // size: 0x4

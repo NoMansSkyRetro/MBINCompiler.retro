@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 5)]
         /* 0x00 */ public GcScanEffectData ScanEffect;
         [NMS(Index = 0)]
-        /* 0x50 */ public VariableSizeString Model;
+        /* 0x50 */ public GcFilename Model;
         [NMS(Index = 6)]
         /* 0x60 */ public float DelayTime;
         [NMS(Index = 2)]

@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x95A3F9CA131E07B3, NameHash = 0x893DE78A)]
+    [NMS(GUID = 0x9A8CF13B9F2C0352, NameHash = 0x893DE78A)]
     public class TkNGuiEditorGraphicType : NMSTemplate
     {
-        // size: 0x5F
+        // size: 0x60
         public enum NGuiEditorGraphicEnum : uint {
             Panel,
             Button,
@@ -64,7 +64,6 @@ namespace libMBIN.NMS.Toolkit
             ToolbarGraphic,
             ToolbarOptions,
             Rectangle,
-            TreeNodeBorder,
             Background,
             GroupTitle,
             TextLabelSeparator,
@@ -100,6 +99,8 @@ namespace libMBIN.NMS.Toolkit
             Tooltip,
             TooltipButton,
             ContextMenuButton,
+            TreeNodeBorder,
+            CategoryBorder,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public NGuiEditorGraphicEnum NGuiEditorGraphic;

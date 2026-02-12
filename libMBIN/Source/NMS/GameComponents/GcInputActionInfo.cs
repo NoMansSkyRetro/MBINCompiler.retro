@@ -3,7 +3,7 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE100F0942DF0558D, NameHash = 0xDEEFD6E4)]
+    [NMS(GUID = 0x9ED549355242CCBF, NameHash = 0xDEEFD6E4)]
     public class GcInputActionInfo : NMSTemplate
     {
         [NMS(Index = 4)]
@@ -11,13 +11,13 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 3)]
         /* 0x020 */ public NMSString0x20A LocTag;
         [NMS(Index = 6)]
-        /* 0x040 */ public VariableSizeString OverlayIcon;
+        /* 0x040 */ public GcFilename OverlayIcon;
         [NMS(Index = 5)]
-        /* 0x050 */ public VariableSizeString SolidIcon;
+        /* 0x050 */ public GcFilename SolidIcon;
         [NMS(Index = 7)]
-        /* 0x060 */ public VariableSizeString SpecialIcon;
+        /* 0x060 */ public GcFilename SpecialIcon;
         [NMS(Index = 8)]
-        /* 0x070 */ public VariableSizeString VirtualButtonIcon;
+        /* 0x070 */ public GcFilename VirtualButtonIcon;
         // size: 0x7
         [Flags]
         public enum InputActionInfoFlagsEnum : uint {

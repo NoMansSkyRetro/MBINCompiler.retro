@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x492F9A377E6AC84B, NameHash = 0xA10A7EF5)]
+    [NMS(GUID = 0xA9FAD54A0CF28114, NameHash = 0xA10A7EF5)]
     public class GcGalaxyGlobals : NMSTemplate
     {
         [NMS(Index = 124, Size = 0x10, EnumType = typeof(GcGalaxyMarkerTypes.GalaxyMarkerTypeEnum))]
@@ -75,7 +75,7 @@ namespace libMBIN.NMS.Globals
         [NMS(Index = 162, MxmlName = "Selection Tree Colour")]
         /* 0x1D60 */ public Colour SelectionTreeColour;
         [NMS(Index = 17)]
-        /* 0x1D70 */ public VariableSizeString MarkerDefaultHex;
+        /* 0x1D70 */ public GcFilename MarkerDefaultHex;
         [NMS(Index = 168)]
         /* 0x1D80 */ public GcGalaxyCameraData Camera;
         [NMS(Index = 179)]

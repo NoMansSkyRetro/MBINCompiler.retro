@@ -3,24 +3,24 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x4E7BFD9042E589EC, NameHash = 0x910781C3)]
+    [NMS(GUID = 0xCAACF39509FE2C9B, NameHash = 0x910781C3)]
     public class TkAnimStateMachineTransitionData : NMSTemplate
     {
         [NMS(Index = 7)]
         /* 0x00 */ public List<NMSTemplate> Conditions;
         [NMS(Index = 1)]
         /* 0x10 */ public NMSString0x10 DestinationStateDebugName;
-        [NMS(Index = 6)]
-        /* 0x20 */ public TkAnimBlendType BlendType;
         [NMS(Index = 0)]
-        /* 0x24 */ public int DestinationState;
+        /* 0x20 */ public ulong DestinationState;
+        [NMS(Index = 6)]
+        /* 0x28 */ public TkAnimBlendType BlendType;
         [NMS(Index = 3)]
-        /* 0x28 */ public float ExitTime;
+        /* 0x2C */ public float ExitTime;
         [NMS(Index = 4)]
-        /* 0x2C */ public float TransitionTime;
+        /* 0x30 */ public float TransitionTime;
         [NMS(Index = 5)]
-        /* 0x30 */ public TkAnimStateMachineBlendTimeMode TransitionTimeMode;
+        /* 0x34 */ public TkAnimStateMachineBlendTimeMode TransitionTimeMode;
         [NMS(Index = 2)]
-        /* 0x34 */ public bool HasTimedExit;
+        /* 0x38 */ public bool HasTimedExit;
     }
 }

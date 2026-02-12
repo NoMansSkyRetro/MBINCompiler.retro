@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xADC0F454E4F717B0, NameHash = 0x695F3196)]
+    [NMS(GUID = 0xD0EB03585490C212, NameHash = 0x695F3196)]
     public class GcPuzzleTextFlow : NMSTemplate
     {
         [NMS(Index = 11)]

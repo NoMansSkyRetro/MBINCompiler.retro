@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBiomeFileListOption : NMSTemplate
     {
         [NMS(Index = 1)]
-        /* 0x00 */ public VariableSizeString Filename;
+        /* 0x00 */ public GcFilename Filename;
         [NMS(Index = 3)]
         /* 0x10 */ public float PurpleSystemWeight;
         [NMS(Index = 0)]

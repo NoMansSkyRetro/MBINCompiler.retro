@@ -9,7 +9,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 7)]
         /* 0x00 */ public TkModelRendererData Renderer;
         [NMS(Index = 1)]
-        /* 0xB0 */ public VariableSizeString Cockpit;
+        /* 0xB0 */ public GcFilename Cockpit;
         [NMS(Index = 0)]
         /* 0xC0 */ public GcSpaceshipClasses Class;
         [NMS(Index = 5)]

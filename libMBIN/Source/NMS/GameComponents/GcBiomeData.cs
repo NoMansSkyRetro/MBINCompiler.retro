@@ -11,19 +11,19 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 17)]
         /* 0x060 */ public NMSString0x20A FloraLifeLocID;
         [NMS(Index = 3)]
-        /* 0x080 */ public VariableSizeString ColourPaletteFile;
+        /* 0x080 */ public GcFilename ColourPaletteFile;
         [NMS(Index = 10)]
         /* 0x090 */ public List<GcExternalObjectListOptions> ExternalObjectLists;
         [NMS(Index = 16)]
         /* 0x0A0 */ public List<GcScreenFilterOption> FilterOptions;
         [NMS(Index = 4)]
-        /* 0x0B0 */ public VariableSizeString LegacyColourPaletteFile;
+        /* 0x0B0 */ public GcFilename LegacyColourPaletteFile;
         [NMS(Index = 1)]
-        /* 0x0C0 */ public VariableSizeString OverlayFile;
+        /* 0x0C0 */ public GcFilename OverlayFile;
         [NMS(Index = 0)]
-        /* 0x0D0 */ public VariableSizeString TextureFile;
+        /* 0x0D0 */ public GcFilename TextureFile;
         [NMS(Index = 2)]
-        /* 0x0E0 */ public VariableSizeString TileTypesFile;
+        /* 0x0E0 */ public GcFilename TileTypesFile;
         [NMS(Index = 11, Size = 0x5, EnumType = typeof(GcGalaxyStarTypes.GalaxyStarTypeEnum))]
         /* 0x0F0 */ public GcWeatherWeightings[] WeatherOptions;
         [NMS(Index = 15)]

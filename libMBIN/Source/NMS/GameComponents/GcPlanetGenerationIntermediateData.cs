@@ -9,17 +9,17 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 5)]
         /* 0x000 */ public GcCreatureRoleDataTable CreatureRoles;
         [NMS(Index = 14)]
-        /* 0x020 */ public VariableSizeString CreatureAirFile;
+        /* 0x020 */ public GcFilename CreatureAirFile;
         [NMS(Index = 11)]
-        /* 0x030 */ public VariableSizeString CreatureCaveFile;
+        /* 0x030 */ public GcFilename CreatureCaveFile;
         [NMS(Index = 13)]
-        /* 0x040 */ public VariableSizeString CreatureExtraWaterFile;
+        /* 0x040 */ public GcFilename CreatureExtraWaterFile;
         [NMS(Index = 10)]
-        /* 0x050 */ public VariableSizeString CreatureLandFile;
+        /* 0x050 */ public GcFilename CreatureLandFile;
         [NMS(Index = 15)]
-        /* 0x060 */ public VariableSizeString CreatureRobotFile;
+        /* 0x060 */ public GcFilename CreatureRobotFile;
         [NMS(Index = 12)]
-        /* 0x070 */ public VariableSizeString CreatureWaterFile;
+        /* 0x070 */ public GcFilename CreatureWaterFile;
         [NMS(Index = 17)]
         /* 0x080 */ public List<int> ExternalObjectListIndices;
         [NMS(Index = 16)]
@@ -27,7 +27,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 0)]
         /* 0x0A0 */ public GcSeed Seed;
         [NMS(Index = 9)]
-        /* 0x0B0 */ public VariableSizeString TerrainFile;
+        /* 0x0B0 */ public GcFilename TerrainFile;
         [NMS(Index = 6)]
         /* 0x0C0 */ public GcTerrainControls Terrain;
         [NMS(Index = 7)]

@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3544F831EC84540F, NameHash = 0x9B13C1A9)]
+    [NMS(GUID = 0xE64ACE13CEDD3FCC, NameHash = 0x9B13C1A9)]
     public class GcPlayerWeaponClass : NMSTemplate
     {
-        // size: 0xA
+        // size: 0xB
         public enum WeaponClassEnum : uint {
             None,
             Projectile,
@@ -15,6 +15,7 @@ namespace libMBIN.NMS.GameComponents
             Spawner,
             SpawnerAlt,
             Fishing,
+            Gravity,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public WeaponClassEnum WeaponClass;

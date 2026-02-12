@@ -109,6 +109,7 @@ namespace libMBIN
                 Indent = true,
                 Encoding = Encoding.UTF8,
                 IndentChars = "\t",
+                NewLineChars = "\n"
             };
             using (var stringWriter = new EncodedStringWriter(Encoding.UTF8))
             using (var xmlTextWriter = XmlWriter.Create(stringWriter, xmlSettings))
