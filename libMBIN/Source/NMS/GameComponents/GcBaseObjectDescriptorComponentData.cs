@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcBaseObjectDescriptorComponentData : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x00 */ public VariableSizeString ProcSceneFile;
+        /* 0x00 */ public GcFilename ProcSceneFile;
         [NMS(Index = 1)]
         /* 0x10 */ public bool ForceShowPickUpLabel;
     }

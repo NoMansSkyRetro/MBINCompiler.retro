@@ -22,7 +22,7 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 16, MxmlName = "Twinkle Range")]
         /* 0x70 */ public Vector3f TwinkleRange;
         [NMS(Index = 0)]
-        /* 0x80 */ public VariableSizeString Material;
+        /* 0x80 */ public GcFilename Material;
         [NMS(Index = 23)]
         /* 0x90 */ public TkEmitterWindDrift WindDrift;
         // size: 0x3

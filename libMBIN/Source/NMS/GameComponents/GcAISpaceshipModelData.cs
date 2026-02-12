@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcAISpaceshipModelData : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x00 */ public VariableSizeString Filename;
+        /* 0x00 */ public GcFilename Filename;
         [NMS(Index = 2)]
         /* 0x10 */ public GcAISpaceshipRoles AIRole;
         [NMS(Index = 1)]

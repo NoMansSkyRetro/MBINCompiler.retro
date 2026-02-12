@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 8)]
         /* 0x70 */ public NMSString0x10 AttachLocator;
         [NMS(Index = 0)]
-        /* 0x80 */ public VariableSizeString Model;
+        /* 0x80 */ public GcFilename Model;
         [NMS(Index = 11)]
         /* 0x90 */ public float AttachScale;
         [NMS(Index = 12)]

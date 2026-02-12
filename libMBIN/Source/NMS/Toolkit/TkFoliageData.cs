@@ -6,7 +6,7 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 6)]
         /* 0x00 */ public Colour Colour;
         [NMS(Index = 0)]
-        /* 0x10 */ public VariableSizeString Material;
+        /* 0x10 */ public GcFilename Material;
         [NMS(Index = 4)]
         /* 0x20 */ public float AngleMultiplier;
         [NMS(Index = 2)]

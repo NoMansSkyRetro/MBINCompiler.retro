@@ -14,7 +14,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 12)]
         /* 0x40 */ public GcSeed Seed;
         [NMS(Index = 11)]
-        /* 0x50 */ public VariableSizeString SpecificModel;
+        /* 0x50 */ public GcFilename SpecificModel;
         [NMS(Index = 8)]
         /* 0x60 */ public float HoverHeight;
         [NMS(Index = 7)]

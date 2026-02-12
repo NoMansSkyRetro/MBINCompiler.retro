@@ -6,6 +6,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcFrigateTraitIcons : NMSTemplate
     {
         [NMS(Index = 0, Size = 0xB, EnumType = typeof(GcFrigateStatType.FrigateStatTypeEnum))]
-        /* 0x0 */ public VariableSizeString[] Icons;
+        /* 0x0 */ public GcFilename[] Icons;
     }
 }

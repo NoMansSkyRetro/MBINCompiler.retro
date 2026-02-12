@@ -4,6 +4,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcDroneResource : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x0 */ public VariableSizeString Resource;
+        /* 0x0 */ public GcFilename Resource;
     }
 }

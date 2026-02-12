@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x2BFE8A6E207F5B25, NameHash = 0x2524086B)]
+    [NMS(GUID = 0x6B5F182BDF90B97E, NameHash = 0x2524086B)]
     public class GcGameplayGlobals : NMSTemplate
     {
         [NMS(Index = 0)]
@@ -132,7 +132,7 @@ namespace libMBIN.NMS.Globals
         [NMS(Index = 662)]
         /* 0x0F80 */ public TkModelResource WeaponSpawnObject;
         [NMS(Index = 603)]
-        /* 0x0FA0 */ public VariableSizeString BaseBuildingTable;
+        /* 0x0FA0 */ public GcFilename BaseBuildingTable;
         [NMS(Index = 412)]
         /* 0x0FB0 */ public NMSString0x10 BeaconScan;
         [NMS(Index = 401)]
@@ -160,9 +160,9 @@ namespace libMBIN.NMS.Globals
         [NMS(Index = 187)]
         /* 0x1070 */ public List<NMSString0x10> HyperdriveAccess;
         [NMS(Index = 590)]
-        /* 0x1080 */ public VariableSizeString InitialDebrisScene;
+        /* 0x1080 */ public GcFilename InitialDebrisScene;
         [NMS(Index = 602)]
-        /* 0x1090 */ public VariableSizeString LegacyBaseBuildingTable;
+        /* 0x1090 */ public GcFilename LegacyBaseBuildingTable;
         [NMS(Index = 134)]
         /* 0x10A0 */ public NMSString0x10 MissionSurveyBugsID;
         [NMS(Index = 133)]
@@ -182,7 +182,7 @@ namespace libMBIN.NMS.Globals
         [NMS(Index = 398)]
         /* 0x1120 */ public NMSString0x10 ResourceDirtSubstanceID;
         [NMS(Index = 503)]
-        /* 0x1130 */ public VariableSizeString ResourceParticleFile;
+        /* 0x1130 */ public GcFilename ResourceParticleFile;
         [NMS(Index = 399)]
         /* 0x1140 */ public NMSString0x10 ResourceUnderwaterSubstanceID;
         [NMS(Index = 112)]

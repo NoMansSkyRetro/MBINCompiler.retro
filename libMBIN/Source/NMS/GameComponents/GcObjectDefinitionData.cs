@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcObjectDefinitionData : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x00 */ public VariableSizeString Filename;
+        /* 0x00 */ public GcFilename Filename;
         // size: 0x4
         public enum LifeTypeEnum : uint {
             Rock,

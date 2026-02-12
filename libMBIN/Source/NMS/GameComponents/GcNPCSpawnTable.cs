@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBF5915DD3FADF12B, NameHash = 0x94CC6B42)]
+    [NMS(GUID = 0x2025E789E570658A, NameHash = 0x94CC6B42)]
     public class GcNPCSpawnTable : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
-        /* 0x00 */ public VariableSizeString[] NPCModelNames;
+        /* 0x00 */ public GcFilename[] NPCModelNames;
         [NMS(Index = 1)]
-        /* 0x90 */ public VariableSizeString NPCMannequinModelName;
+        /* 0x90 */ public GcFilename NPCMannequinModelName;
         [NMS(Index = 4)]
         /* 0xA0 */ public List<GcNPCPlacementInfo> PlacementInfos;
         [NMS(Index = 3)]

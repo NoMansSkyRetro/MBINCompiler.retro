@@ -6,17 +6,17 @@ namespace libMBIN.NMS.Globals
     public class GcSceneOptions : NMSTemplate
     {
         [NMS(Index = 11)]
-        /* 0x00 */ public VariableSizeString AtmosphereFile;
+        /* 0x00 */ public GcFilename AtmosphereFile;
         [NMS(Index = 3)]
-        /* 0x10 */ public VariableSizeString BiomeFile;
+        /* 0x10 */ public GcFilename BiomeFile;
         [NMS(Index = 7)]
-        /* 0x20 */ public VariableSizeString CaveBiomeFile;
+        /* 0x20 */ public GcFilename CaveBiomeFile;
         [NMS(Index = 12)]
         /* 0x30 */ public List<Vector3f> ForceResource;
         [NMS(Index = 9)]
-        /* 0x40 */ public VariableSizeString TerrainFile;
+        /* 0x40 */ public GcFilename TerrainFile;
         [NMS(Index = 5)]
-        /* 0x50 */ public VariableSizeString WaterBiomeFile;
+        /* 0x50 */ public GcFilename WaterBiomeFile;
         [NMS(Index = 13)]
         /* 0x60 */ public float ForceResourceSize;
         [NMS(Index = 0)]

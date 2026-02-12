@@ -9,21 +9,21 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 8)]
         /* 0x000 */ public GcPlayerSpawnStateData PlayerState;
         [NMS(Index = 4, Size = 0x5)]
-        /* 0x0E0 */ public VariableSizeString[] PlanetFiles;
+        /* 0x0E0 */ public GcFilename[] PlanetFiles;
         [NMS(Index = 9)]
         /* 0x130 */ public List<NMSTemplate> Events;
         [NMS(Index = 0)]
-        /* 0x140 */ public VariableSizeString NextSettingFile;
+        /* 0x140 */ public GcFilename NextSettingFile;
         [NMS(Index = 2)]
-        /* 0x150 */ public List<VariableSizeString> PlanetSceneFiles;
+        /* 0x150 */ public List<GcFilename> PlanetSceneFiles;
         [NMS(Index = 10)]
         /* 0x160 */ public List<NMSTemplate> PostWarpEvents;
         [NMS(Index = 1)]
-        /* 0x170 */ public VariableSizeString SceneFile;
+        /* 0x170 */ public GcFilename SceneFile;
         [NMS(Index = 5)]
-        /* 0x180 */ public List<VariableSizeString> ShipPreloadFiles;
+        /* 0x180 */ public List<GcFilename> ShipPreloadFiles;
         [NMS(Index = 3)]
-        /* 0x190 */ public VariableSizeString SolarSystemFile;
+        /* 0x190 */ public GcFilename SolarSystemFile;
         [NMS(Index = 11)]
         /* 0x1A0 */ public NMSString0x10 SpawnerOptionId;
         [NMS(Index = 7)]

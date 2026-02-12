@@ -10,6 +10,6 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 0)]
         /* 0x10 */ public GcHUDComponent Data;
         [NMS(Index = 1)]
-        /* 0x38 */ public VariableSizeString Image;
+        /* 0x38 */ public GcFilename Image;
     }
 }

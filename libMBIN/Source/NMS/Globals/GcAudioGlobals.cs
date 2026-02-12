@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x7EBE352EF356930B, NameHash = 0x2BDD54A8)]
+    [NMS(GUID = 0x95828A6E57A3C4DC, NameHash = 0x2BDD54A8)]
     public class GcAudioGlobals : NMSTemplate
     {
         [NMS(Index = 36)]
@@ -18,9 +18,9 @@ namespace libMBIN.NMS.Globals
         /* 0x078 */ public Vector2f ByteBeatSpeakerMaxFrequency;
         [NMS(Index = 39)]
         /* 0x080 */ public Vector2f ByteBeatSpeakerMinFrequency;
-        [NMS(Index = 64)]
+        [NMS(Index = 68)]
         /* 0x088 */ public Vector2f CommsChatterFalloffFreighers;
-        [NMS(Index = 65)]
+        [NMS(Index = 69)]
         /* 0x090 */ public Vector2f CommsChatterFalloffShips;
         [NMS(Index = 12)]
         /* 0x098 */ public Vector2f ShorelineSenseRadius;
@@ -28,9 +28,9 @@ namespace libMBIN.NMS.Globals
         /* 0x0A0 */ public Vector2f ShorelineSenseUJitter;
         [NMS(Index = 11)]
         /* 0x0A8 */ public Vector2f ShorelineSenseVJitter;
-        [NMS(Index = 61)]
+        [NMS(Index = 65)]
         /* 0x0B0 */ public float ArmFoleySpeedMultiplier;
-        [NMS(Index = 62)]
+        [NMS(Index = 66)]
         /* 0x0B4 */ public float ArmWhooshFoleyValueTrigger;
         [NMS(Index = 47)]
         /* 0x0B8 */ public float AtlasStationActiveDistance;
@@ -96,7 +96,7 @@ namespace libMBIN.NMS.Globals
         /* 0x130 */ public float LadderStepDistance;
         [NMS(Index = 48)]
         /* 0x134 */ public float MiniStationActiveDistance;
-        [NMS(Index = 63)]
+        [NMS(Index = 67)]
         /* 0x138 */ public float MinSecondsBetweenArmWhooshes;
         [NMS(Index = 55)]
         /* 0x13C */ public float ObstructionAuxControlWhenHidden;
@@ -126,17 +126,25 @@ namespace libMBIN.NMS.Globals
         /* 0x16C */ public float ShorelineValidityRate;
         [NMS(Index = 22)]
         /* 0x170 */ public float ThirdPersonPushTowardsPlayer;
-        [NMS(Index = 14)]
-        /* 0x174 */ public float WaveintensityRTPCSmoothRate;
-        [NMS(Index = 60)]
-        /* 0x178 */ public bool EnableVRSpecificAudio;
+        [NMS(Index = 62)]
+        /* 0x174 */ public float TruckingMissionAlignmentSmoothTime;
         [NMS(Index = 59)]
-        /* 0x179 */ public bool LockListenerMatrix;
+        /* 0x178 */ public float TruckingMusicMinTimeBeforeStart;
+        [NMS(Index = 60)]
+        /* 0x17C */ public float TruckingMusicRampInTime;
+        [NMS(Index = 61)]
+        /* 0x180 */ public float TruckingMusicRampOutTime;
+        [NMS(Index = 14)]
+        /* 0x184 */ public float WaveintensityRTPCSmoothRate;
+        [NMS(Index = 64)]
+        /* 0x188 */ public bool EnableVRSpecificAudio;
+        [NMS(Index = 63)]
+        /* 0x189 */ public bool LockListenerMatrix;
         [NMS(Index = 51)]
-        /* 0x17A */ public bool ObstructionEnabled;
+        /* 0x18A */ public bool ObstructionEnabled;
         [NMS(Index = 56)]
-        /* 0x17B */ public bool PulseMusicEnabled;
+        /* 0x18B */ public bool PulseMusicEnabled;
         [NMS(Index = 5)]
-        /* 0x17C */ public bool UseShorelineAudioInOpenWater;
+        /* 0x18C */ public bool UseShorelineAudioInOpenWater;
     }
 }

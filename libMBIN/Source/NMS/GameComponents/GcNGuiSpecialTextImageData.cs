@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 0)]
         /* 0x00 */ public NMSString0x10 Name;
         [NMS(Index = 5)]
-        /* 0x10 */ public VariableSizeString Path;
+        /* 0x10 */ public GcFilename Path;
         [NMS(Index = 4)]
         /* 0x20 */ public Vector2f Size;
         [NMS(Index = 2)]

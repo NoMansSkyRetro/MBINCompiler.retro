@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcWeatherTable : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x11, EnumType = typeof(GcWeatherOptions.WeatherEnum))]
-        /* 0x000 */ public VariableSizeString[] Table;
+        /* 0x000 */ public GcFilename[] Table;
         [NMS(Index = 3, Size = 0x6, EnumType = typeof(GcHazardValueTypes.HazardValueEnum))]
         /* 0x110 */ public GcHazardValues[] DefaultRadiation;
         [NMS(Index = 4, Size = 0x6, EnumType = typeof(GcHazardValueTypes.HazardValueEnum))]

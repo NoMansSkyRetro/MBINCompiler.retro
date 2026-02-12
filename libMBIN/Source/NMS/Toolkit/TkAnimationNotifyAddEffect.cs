@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x8AAE66832D1072FB, NameHash = 0x3129A5A6)]
+    [NMS(GUID = 0xE2B3EF30D297F35D, NameHash = 0x3129A5A6)]
     public class TkAnimationNotifyAddEffect : NMSTemplate
     {
         [NMS(Index = 2)]

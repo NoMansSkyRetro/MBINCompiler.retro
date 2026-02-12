@@ -4,10 +4,10 @@ namespace libMBIN.NMS.GameComponents
     public class GcHUDMarkerData : NMSTemplate
     {
         [NMS(Index = 2)]
-        /* 0x00 */ public VariableSizeString Distance;
+        /* 0x00 */ public GcFilename Distance;
         [NMS(Index = 0)]
-        /* 0x10 */ public VariableSizeString Icon;
+        /* 0x10 */ public GcFilename Icon;
         [NMS(Index = 1)]
-        /* 0x20 */ public VariableSizeString IconBehind;
+        /* 0x20 */ public GcFilename IconBehind;
     }
 }

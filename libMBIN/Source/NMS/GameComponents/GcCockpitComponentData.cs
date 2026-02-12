@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCockpitComponentData : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x00 */ public VariableSizeString Cockpit;
+        /* 0x00 */ public GcFilename Cockpit;
         [NMS(Index = 4)]
         /* 0x10 */ public float FoVFixedDistance;
         [NMS(Index = 3)]

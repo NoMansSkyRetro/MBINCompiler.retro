@@ -97,13 +97,13 @@ namespace libMBIN.NMS.Globals
         [NMS(Index = 145)]
         /* 0x1018 */ public List<NMSString0x20> FrigateCaptainPuzzleIds;
         [NMS(Index = 133)]
-        /* 0x1028 */ public List<VariableSizeString> FrigateHologramModels;
+        /* 0x1028 */ public List<GcFilename> FrigateHologramModels;
         [NMS(Index = 138)]
-        /* 0x1038 */ public List<VariableSizeString> FrigateInteriorsToCache;
+        /* 0x1038 */ public List<GcFilename> FrigateInteriorsToCache;
         [NMS(Index = 136)]
         /* 0x1048 */ public List<int> FrigateLevelVictoriesRequired;
         [NMS(Index = 134)]
-        /* 0x1058 */ public List<VariableSizeString> FrigatePlanetModels;
+        /* 0x1058 */ public List<GcFilename> FrigatePlanetModels;
         [NMS(Index = 142)]
         /* 0x1068 */ public List<NMSString0x10> GhostShipFrigateTraits;
         [NMS(Index = 141)]

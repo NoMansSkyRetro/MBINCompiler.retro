@@ -8,7 +8,7 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 12)]
         /* 0x10 */ public Colour ColourOrigin;
         [NMS(Index = 0)]
-        /* 0x20 */ public VariableSizeString Material;
+        /* 0x20 */ public GcFilename Material;
         [NMS(Index = 6)]
         /* 0x30 */ public float Alpha;
         [NMS(Index = 7)]

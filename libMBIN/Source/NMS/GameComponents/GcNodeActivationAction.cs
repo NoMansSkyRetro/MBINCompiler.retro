@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcNodeActivationAction : NMSTemplate
     {
         [NMS(Index = 2)]
-        /* 0x00 */ public VariableSizeString SceneToAdd;
+        /* 0x00 */ public GcFilename SceneToAdd;
         // size: 0x6
         public enum NodeActiveStateEnum : uint {
             Activate,

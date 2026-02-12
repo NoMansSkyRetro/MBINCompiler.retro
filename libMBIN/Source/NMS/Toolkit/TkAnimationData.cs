@@ -19,7 +19,7 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 9)]
         /* 0x060 */ public List<NMSString0x40> ExtraStartNodes;
         [NMS(Index = 1)]
-        /* 0x070 */ public VariableSizeString Filename;
+        /* 0x070 */ public GcFilename Filename;
         [NMS(Index = 22)]
         /* 0x080 */ public List<TkAnimationNotify> Notifies;
         [NMS(Index = 27)]

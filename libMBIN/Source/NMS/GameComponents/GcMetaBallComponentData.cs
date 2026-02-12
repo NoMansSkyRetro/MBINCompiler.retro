@@ -8,7 +8,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 3)]
         /* 0x10 */ public Vector3f MinSize;
         [NMS(Index = 0)]
-        /* 0x20 */ public VariableSizeString File;
+        /* 0x20 */ public GcFilename File;
         [NMS(Index = 2)]
         /* 0x30 */ public float Radius;
         [NMS(Index = 1)]

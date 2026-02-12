@@ -6,13 +6,13 @@ namespace libMBIN.NMS.Toolkit
     public class TkLanguageFontTableEntry : NMSTemplate
     {
         [NMS(Index = 3)]
-        /* 0x00 */ public VariableSizeString ConsoleFont;
+        /* 0x00 */ public GcFilename ConsoleFont;
         [NMS(Index = 4)]
-        /* 0x10 */ public VariableSizeString ConsoleFont2;
+        /* 0x10 */ public GcFilename ConsoleFont2;
         [NMS(Index = 1)]
-        /* 0x20 */ public VariableSizeString GameFont;
+        /* 0x20 */ public GcFilename GameFont;
         [NMS(Index = 2)]
-        /* 0x30 */ public VariableSizeString GameFont2;
+        /* 0x30 */ public GcFilename GameFont2;
         [NMS(Index = 0)]
         /* 0x40 */ public TkLanguages Language;
     }

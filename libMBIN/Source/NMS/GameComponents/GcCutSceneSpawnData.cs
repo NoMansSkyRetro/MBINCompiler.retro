@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAB3AF2E1BF176B6A, NameHash = 0xDAA4D8E3)]
+    [NMS(GUID = 0x95129B5FA09F96D4, NameHash = 0xDAA4D8E3)]
     public class GcCutSceneSpawnData : NMSTemplate
     {
         [NMS(Index = 10)]
@@ -25,7 +25,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 6)]
         /* 0xB8 */ public GcSeed Seed;
         [NMS(Index = 3)]
-        /* 0xC8 */ public VariableSizeString TrimmedPath;
+        /* 0xC8 */ public GcFilename TrimmedPath;
         [NMS(Index = 0)]
         /* 0xD8 */ public int Guid;
         [NMS(Index = 4)]

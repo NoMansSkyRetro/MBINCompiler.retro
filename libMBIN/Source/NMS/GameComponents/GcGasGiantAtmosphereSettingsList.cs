@@ -7,9 +7,9 @@ namespace libMBIN.NMS.GameComponents
     public class GcGasGiantAtmosphereSettingsList : NMSTemplate
     {
         [NMS(Index = 1)]
-        /* 0x00 */ public List<VariableSizeString> LookUps;
+        /* 0x00 */ public List<GcFilename> LookUps;
         [NMS(Index = 2)]
-        /* 0x10 */ public List<VariableSizeString> Normals;
+        /* 0x10 */ public List<GcFilename> Normals;
         [NMS(Index = 0)]
         /* 0x20 */ public List<GcGasGiantAtmosphereSetting> Settings;
     }

@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcCreatureGenerationDomainEntry : NMSTemplate
     {
         [NMS(Index = 1)]
-        /* 0x00 */ public VariableSizeString File;
+        /* 0x00 */ public GcFilename File;
         [NMS(Index = 0)]
         /* 0x10 */ public GcCreatureGenerationDensity DensityModifier;
     }

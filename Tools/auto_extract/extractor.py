@@ -192,7 +192,7 @@ TYPE_MAPPING = {
     0x09: 'VariableSizeWString',
     0x0A: 'HashedString',
     0x0B: 'ENUM',
-    0x0C: 'VariableSizeString',  # Technically a "filename" -> GcFilename (?)
+    0x0C: 'GcFilename',  # Technically a "filename" -> GcFilename (?)
     0x0D: 'FLAGENUM',
     0x0E: 'float',
     0x0F: 'double',

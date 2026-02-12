@@ -4,18 +4,18 @@ using libMBIN.NMS.GameComponents;
 namespace libMBIN.NMS
 {
     [NMS(Size = 0x10, Alignment = 0x1)]
-    public class OptionalVariableSizeString : NMSTemplate, INMSVariableLengthString
+    public class GcFilename : NMSTemplate, INMSVariableLengthString
     {
         public string Value;
-
-        public string String {
-            get => StringValue();
-            set => Value = value;
-        }
 
         public string StringValue()
         {
             return this.Value;
+        }
+
+        public string String {
+            get => StringValue();
+            set => Value = value;
         }
 
         /// <summary>
@@ -27,14 +27,14 @@ namespace libMBIN.NMS
             return this.Value;
         }
 
-        public OptionalVariableSizeString(string str)
+        public GcFilename(string str)
         {
             this.Value = str;
         }
 
-        public OptionalVariableSizeString() { }
+        public GcFilename() { }
 
-        public static implicit operator OptionalVariableSizeString ( string str ) => new OptionalVariableSizeString { Value = str };
-        public static implicit operator string ( OptionalVariableSizeString str ) => str.Value;
+        public static implicit operator GcFilename ( string str ) => new GcFilename { Value = str };
+        public static implicit operator string ( GcFilename str ) => str.Value;
     }
 }

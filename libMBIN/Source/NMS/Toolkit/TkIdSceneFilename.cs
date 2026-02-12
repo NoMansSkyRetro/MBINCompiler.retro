@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkIdSceneFilename : NMSTemplate
     {
         [NMS(Index = 1)]
-        /* 0x00 */ public VariableSizeString Filename;
+        /* 0x00 */ public GcFilename Filename;
         [NMS(Index = 0)]
         /* 0x10 */ public NMSString0x10 Id;
     }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x521C307E5546E15C, NameHash = 0xF1C0C3FD)]
+    [NMS(GUID = 0x7C6F2AD5B587416A, NameHash = 0xF1C0C3FD)]
     public class GcAISpaceshipGlobals : NMSTemplate
     {
         [NMS(Index = 0)]
@@ -37,12 +37,12 @@ namespace libMBIN.NMS.Globals
         /* 0x4F0 */ public GcSpaceshipTravelData PlanetLanding;
         [NMS(Index = 80)]
         /* 0x538 */ public GcSpaceshipTravelData SlowCombatEffectAttackTravel;
-        [NMS(Index = 418)]
-        /* 0x580 */ public GcShipAIPlanetPatrolData WingmanPathData;
         [NMS(Index = 419)]
+        /* 0x580 */ public GcShipAIPlanetPatrolData WingmanPathData;
+        [NMS(Index = 420)]
         /* 0x5B8 */ public List<GcAIShipDebugSpawnData> DebugShipSpawns;
         [NMS(Index = 34)]
-        /* 0x5C8 */ public VariableSizeString EnergyShield;
+        /* 0x5C8 */ public GcFilename EnergyShield;
         [NMS(Index = 35)]
         /* 0x5D8 */ public NMSString0x10 EnergyShieldDepletedEffect;
         [NMS(Index = 36)]
@@ -50,9 +50,9 @@ namespace libMBIN.NMS.Globals
         [NMS(Index = 37)]
         /* 0x5F8 */ public NMSString0x10 EnergyShieldStartRechargeFromDepletedEffect;
         [NMS(Index = 145)]
-        /* 0x608 */ public VariableSizeString HangarFilename;
+        /* 0x608 */ public GcFilename HangarFilename;
         [NMS(Index = 144)]
-        /* 0x618 */ public VariableSizeString LegacyHangarFilename;
+        /* 0x618 */ public GcFilename LegacyHangarFilename;
         [NMS(Index = 132)]
         /* 0x628 */ public List<Vector2f> SpaceBattleGuardsRange;
         [NMS(Index = 131)]
@@ -75,7 +75,7 @@ namespace libMBIN.NMS.Globals
         /* 0x6B8 */ public GcCombatEffectsComponentData CombatEffectsComponentData;
         [NMS(Index = 360)]
         /* 0x700 */ public GcProjectileLineData ShipBullet;
-        [NMS(Index = 417)]
+        [NMS(Index = 418)]
         /* 0x728 */ public GcShipAIDeathData Death;
         [NMS(Index = 151)]
         /* 0x744 */ public TkHitCurveData FreighterLightHitCurve;
@@ -111,11 +111,11 @@ namespace libMBIN.NMS.Globals
         /* 0x79C */ public float AsteroidMiningSearchRadius;
         [NMS(Index = 195)]
         /* 0x7A0 */ public float AsteroidShootAngle;
-        [NMS(Index = 409)]
+        [NMS(Index = 410)]
         /* 0x7A4 */ public float AtmosphereEffectMax;
-        [NMS(Index = 408)]
+        [NMS(Index = 409)]
         /* 0x7A8 */ public float AtmosphereEffectMin;
-        [NMS(Index = 402)]
+        [NMS(Index = 403)]
         /* 0x7AC */ public float AtmosphereTerminalSpeed;
         [NMS(Index = 179)]
         /* 0x7B0 */ public float AttackAfterSpawnTime;
@@ -195,7 +195,7 @@ namespace libMBIN.NMS.Globals
         /* 0x844 */ public float BattleSpawnStationMinDistance;
         [NMS(Index = 205)]
         /* 0x848 */ public float BountySpawnAngle;
-        [NMS(Index = 403)]
+        [NMS(Index = 404)]
         /* 0x84C */ public float CircleApproachDistance;
         [NMS(Index = 98)]
         /* 0x850 */ public float CollisionRayLengthMax;
@@ -237,25 +237,25 @@ namespace libMBIN.NMS.Globals
         /* 0x898 */ public float DistanceFlareRange;
         [NMS(Index = 67)]
         /* 0x89C */ public float DistanceFlareSpeedRange;
-        [NMS(Index = 390)]
-        /* 0x8A0 */ public float DockingLandingBounceHeight;
-        [NMS(Index = 389)]
-        /* 0x8A4 */ public float DockingLandingBounceTime;
-        [NMS(Index = 386)]
-        /* 0x8A8 */ public float DockingLandingTime;
-        [NMS(Index = 387)]
-        /* 0x8AC */ public float DockingLandingTimeDirectional;
-        [NMS(Index = 392)]
-        /* 0x8B0 */ public float DockingRotateSpeed;
         [NMS(Index = 391)]
-        /* 0x8B4 */ public float DockingRotateStartTime;
+        /* 0x8A0 */ public float DockingLandingBounceHeight;
+        [NMS(Index = 390)]
+        /* 0x8A4 */ public float DockingLandingBounceTime;
+        [NMS(Index = 387)]
+        /* 0x8A8 */ public float DockingLandingTime;
         [NMS(Index = 388)]
+        /* 0x8AC */ public float DockingLandingTimeDirectional;
+        [NMS(Index = 393)]
+        /* 0x8B0 */ public float DockingRotateSpeed;
+        [NMS(Index = 392)]
+        /* 0x8B4 */ public float DockingRotateStartTime;
+        [NMS(Index = 389)]
         /* 0x8B8 */ public float DockingSpringTime;
         [NMS(Index = 26)]
         /* 0x8BC */ public float DockingWaitDistance;
-        [NMS(Index = 394)]
+        [NMS(Index = 395)]
         /* 0x8C0 */ public float DockWaitMaxTime;
-        [NMS(Index = 393)]
+        [NMS(Index = 394)]
         /* 0x8C4 */ public float DockWaitMinTime;
         [NMS(Index = 42)]
         /* 0x8C8 */ public float EnergyShieldFadeInRate;
@@ -291,11 +291,11 @@ namespace libMBIN.NMS.Globals
         /* 0x904 */ public float EscapeRollTime;
         [NMS(Index = 50)]
         /* 0x908 */ public float EscapeRollTimePlanet;
-        [NMS(Index = 414)]
-        /* 0x90C */ public float FinalDeathExplosionScale;
         [NMS(Index = 415)]
-        /* 0x910 */ public float FinalDeathExplosionTime;
+        /* 0x90C */ public float FinalDeathExplosionScale;
         [NMS(Index = 416)]
+        /* 0x910 */ public float FinalDeathExplosionTime;
+        [NMS(Index = 417)]
         /* 0x914 */ public float FinalDeathFadeTime;
         [NMS(Index = 204)]
         /* 0x918 */ public int FlybyCloseOdds;
@@ -349,503 +349,505 @@ namespace libMBIN.NMS.Globals
         /* 0x978 */ public float FreighterSpawnVisibleFreightersDistance;
         [NMS(Index = 303)]
         /* 0x97C */ public float FrigateSpawnMargin;
-        [NMS(Index = 405)]
-        /* 0x980 */ public float GroundCircleHeight;
         [NMS(Index = 406)]
+        /* 0x980 */ public float GroundCircleHeight;
+        [NMS(Index = 407)]
         /* 0x984 */ public float GroundCircleHeightMax;
         [NMS(Index = 229)]
         /* 0x988 */ public float HeightTestSampleDistance;
         [NMS(Index = 230)]
         /* 0x98C */ public float HeightTestSampleTime;
-        [NMS(Index = 401)]
+        [NMS(Index = 402)]
         /* 0x990 */ public float LandingDirectionalHoverPointReachedDistance;
-        [NMS(Index = 400)]
+        [NMS(Index = 401)]
         /* 0x994 */ public float LandingHoverPointReachedDistance;
         [NMS(Index = 124)]
         /* 0x998 */ public float LandingLongTipAngle;
-        [NMS(Index = 399)]
+        [NMS(Index = 400)]
         /* 0x99C */ public float LandingManeuvreAlignTime;
-        [NMS(Index = 398)]
+        [NMS(Index = 399)]
         /* 0x9A0 */ public float LandingManuevreTime;
         [NMS(Index = 123)]
         /* 0x9A4 */ public float LandingTipAngle;
         [NMS(Index = 278)]
         /* 0x9A8 */ public float LaserHitOffset;
+        [NMS(Index = 386)]
+        /* 0x9AC */ public float LowerLandingGearDistanceMultiplier;
         [NMS(Index = 14)]
-        /* 0x9AC */ public float MaxDifficultySpaceCombatSpeedExtra;
+        /* 0x9B0 */ public float MaxDifficultySpaceCombatSpeedExtra;
         [NMS(Index = 13)]
-        /* 0x9B0 */ public float MaxDifficultySpaceCombatTurnExtra;
+        /* 0x9B4 */ public float MaxDifficultySpaceCombatTurnExtra;
         [NMS(Index = 29)]
-        /* 0x9B4 */ public int MaxNumActivePolice;
+        /* 0x9B8 */ public int MaxNumActivePolice;
         [NMS(Index = 30)]
-        /* 0x9B8 */ public float MaxNumActivePoliceRadius;
+        /* 0x9BC */ public float MaxNumActivePoliceRadius;
         [NMS(Index = 28)]
-        /* 0x9BC */ public float MaxNumActiveTraderRadius;
+        /* 0x9C0 */ public float MaxNumActiveTraderRadius;
         [NMS(Index = 27)]
-        /* 0x9C0 */ public int MaxNumActiveTraders;
+        /* 0x9C4 */ public int MaxNumActiveTraders;
         [NMS(Index = 237)]
-        /* 0x9C4 */ public int MaxNumFreighters;
+        /* 0x9C8 */ public int MaxNumFreighters;
         [NMS(Index = 154)]
-        /* 0x9C8 */ public int MaxNumTurretMissiles;
-        [NMS(Index = 410)]
-        /* 0x9CC */ public float MaxTorque;
-        [NMS(Index = 31)]
-        /* 0x9D0 */ public int MinAggroDamage;
-        [NMS(Index = 15)]
-        /* 0x9D4 */ public float MinimumCircleTimeBeforeLanding;
-        [NMS(Index = 16)]
-        /* 0x9D8 */ public float MinimumTimeBetweenOutpostLandings;
-        [NMS(Index = 44)]
-        /* 0x9DC */ public float MinLaserFireTime;
-        [NMS(Index = 178)]
-        /* 0x9E0 */ public float MissileLaunchSpeed;
-        [NMS(Index = 147)]
-        /* 0x9E4 */ public float MissileRange;
-        [NMS(Index = 317)]
-        /* 0x9E8 */ public float MoveAvoidRange;
-        [NMS(Index = 316)]
-        /* 0x9EC */ public float MoveHeightAdjust;
-        [NMS(Index = 320)]
-        /* 0x9F0 */ public float MoveHeightCheckTime;
-        [NMS(Index = 318)]
-        /* 0x9F4 */ public int MoveHeightNumSamples;
-        [NMS(Index = 319)]
-        /* 0x9F8 */ public float MoveHeightSampleSectionSize;
-        [NMS(Index = 407)]
-        /* 0x9FC */ public float OrbitHeight;
-        [NMS(Index = 116)]
-        /* 0xA00 */ public float OutpostDockAIApproachSpeedForce;
-        [NMS(Index = 115)]
-        /* 0xA04 */ public float OutpostDockAIGetToApproachBrakeForce;
-        [NMS(Index = 114)]
-        /* 0xA08 */ public float OutpostDockAIGetToApproachForce;
-        [NMS(Index = 112)]
-        /* 0xA0C */ public float OutpostDockApproachDistance;
-        [NMS(Index = 122)]
-        /* 0xA10 */ public float OutpostDockApproachRenderFlickerOffset;
-        [NMS(Index = 121)]
-        /* 0xA14 */ public float OutpostDockApproachRenderRadius;
-        [NMS(Index = 111)]
-        /* 0xA18 */ public float OutpostDockApproachSpeedForce;
-        [NMS(Index = 113)]
-        /* 0xA1C */ public float OutpostDockApproachSpeedUpDamper;
-        [NMS(Index = 120)]
-        /* 0xA20 */ public float OutpostDockApproachUpAmount;
-        [NMS(Index = 109)]
-        /* 0xA24 */ public float OutpostDockGetToApproachBrakeForce;
-        [NMS(Index = 110)]
-        /* 0xA28 */ public float OutpostDockGetToApproachExtraBrakeForce;
-        [NMS(Index = 108)]
-        /* 0xA2C */ public float OutpostDockGetToApproachForce;
-        [NMS(Index = 106)]
-        /* 0xA30 */ public float OutpostDockMaxApproachSpeed;
-        [NMS(Index = 117)]
-        /* 0xA34 */ public float OutpostDockMaxForce;
-        [NMS(Index = 119)]
-        /* 0xA38 */ public float OutpostDockMaxTipLength;
-        [NMS(Index = 118)]
-        /* 0xA3C */ public float OutpostDockMinTipLength;
-        [NMS(Index = 107)]
-        /* 0xA40 */ public float OutpostDockOverspeedBrake;
-        [NMS(Index = 105)]
-        /* 0xA44 */ public float OutpostDockUpAlignMaxAngle;
-        [NMS(Index = 104)]
-        /* 0xA48 */ public float OutpostDockUpAlignMaxAngleFirstPerson;
-        [NMS(Index = 102)]
-        /* 0xA4C */ public float OutpostLandingNoiseAmp;
-        [NMS(Index = 101)]
-        /* 0xA50 */ public float OutpostLandingNoiseFreq;
-        [NMS(Index = 103)]
-        /* 0xA54 */ public float OutpostLandingNoiseOffset;
-        [NMS(Index = 231)]
-        /* 0xA58 */ public float OutpostToLandingDistance;
-        [NMS(Index = 221)]
-        /* 0xA5C */ public float PirateArriveTime;
-        [NMS(Index = 225)]
-        /* 0xA60 */ public float PirateBattleInterestTime;
-        [NMS(Index = 220)]
-        /* 0xA64 */ public float PirateBattleMaxTime;
-        [NMS(Index = 223)]
-        /* 0xA68 */ public float PirateBattleStartSpeed;
-        [NMS(Index = 93)]
-        /* 0xA6C */ public float PirateExtraDamage;
-        [NMS(Index = 356)]
-        /* 0xA70 */ public float PirateFlybyLength;
-        [NMS(Index = 226)]
-        /* 0xA74 */ public float PirateFreighterBattleDistance;
-        [NMS(Index = 216)]
-        /* 0xA78 */ public float PirateFreighterSpawnAttackAngle;
-        [NMS(Index = 217)]
-        /* 0xA7C */ public float PirateFreighterSpawnAttackOffset;
-        [NMS(Index = 218)]
-        /* 0xA80 */ public float PirateFreighterSpawnAttackSpread;
-        [NMS(Index = 176)]
-        /* 0xA84 */ public float PirateFreighterWarpOffset;
-        [NMS(Index = 224)]
-        /* 0xA88 */ public float PirateInterestTime;
-        [NMS(Index = 95)]
-        /* 0xA8C */ public float PirateMaintainBuildingTargetTime;
-        [NMS(Index = 315)]
-        /* 0xA90 */ public float PiratePlayerAttackRange;
-        [NMS(Index = 219)]
-        /* 0xA94 */ public float PirateSpawnAngle;
-        [NMS(Index = 61)]
-        /* 0xA98 */ public float PirateSpawnSpacing;
-        [NMS(Index = 222)]
-        /* 0xA9C */ public float PirateStartSpeed;
-        [NMS(Index = 312)]
-        /* 0xAA0 */ public float PitchFlip;
-        [NMS(Index = 46)]
-        /* 0xAA4 */ public float PlanetaryPirateHostileShipPerceptionRange;
-        [NMS(Index = 47)]
-        /* 0xAA8 */ public float PlanetaryPirateRaidFocusBuildingsTime;
-        [NMS(Index = 49)]
-        /* 0xAAC */ public int PlanetaryPirateRaidMaxTradersJoinCombat;
-        [NMS(Index = 48)]
-        /* 0xAB0 */ public float PlanetaryPirateRaidTradersEngageTime;
-        [NMS(Index = 233)]
-        /* 0xAB4 */ public float PlanetUpAlignTime;
-        [NMS(Index = 252)]
-        /* 0xAB8 */ public float PoliceAbortRange;
-        [NMS(Index = 251)]
-        /* 0xABC */ public float PoliceArriveTime;
-        [NMS(Index = 249)]
-        /* 0xAC0 */ public float PoliceEntranceCargoAttackWaitTime;
-        [NMS(Index = 248)]
-        /* 0xAC4 */ public float PoliceEntranceCargoOpenCommsWaitTime;
-        [NMS(Index = 247)]
-        /* 0xAC8 */ public float PoliceEntranceCargoProbingTime;
-        [NMS(Index = 250)]
-        /* 0xACC */ public float PoliceEntranceCargoScanHailNotificationWaitTime;
-        [NMS(Index = 246)]
-        /* 0xAD0 */ public float PoliceEntranceCargoScanStartTime;
-        [NMS(Index = 245)]
-        /* 0xAD4 */ public float PoliceEntranceEscalateIncomingTime;
-        [NMS(Index = 244)]
-        /* 0xAD8 */ public float PoliceEntranceEscalateProbingTime;
-        [NMS(Index = 243)]
-        /* 0xADC */ public float PoliceEntranceProbe;
-        [NMS(Index = 242)]
-        /* 0xAE0 */ public float PoliceEntranceStartTime;
-        [NMS(Index = 211)]
-        /* 0xAE4 */ public float PoliceEscapeMinTime;
-        [NMS(Index = 210)]
-        /* 0xAE8 */ public float PoliceEscapeTime;
-        [NMS(Index = 5)]
-        /* 0xAEC */ public float PoliceFreighterLaserActiveTime;
-        [NMS(Index = 4)]
-        /* 0xAF0 */ public float PoliceFreighterLaserRandomExtraPauseMax;
-        [NMS(Index = 2)]
-        /* 0xAF4 */ public float PoliceFreighterLaserRange;
-        [NMS(Index = 3)]
-        /* 0xAF8 */ public float PoliceFreighterLaserShootTime;
-        [NMS(Index = 7)]
-        /* 0xAFC */ public int PoliceFreighterProjectileBurstCount;
-        [NMS(Index = 8)]
-        /* 0xB00 */ public float PoliceFreighterProjectileBurstTime;
-        [NMS(Index = 11)]
-        /* 0xB04 */ public int PoliceFreighterProjectileModulo;
-        [NMS(Index = 9)]
-        /* 0xB08 */ public float PoliceFreighterProjectilePauseTime;
-        [NMS(Index = 10)]
-        /* 0xB0C */ public float PoliceFreighterProjectileRandomExtraPauseMax;
-        [NMS(Index = 6)]
-        /* 0xB10 */ public float PoliceFreighterProjectileRange;
-        [NMS(Index = 146)]
-        /* 0xB14 */ public float PoliceFreighterWarpOutRange;
-        [NMS(Index = 323)]
-        /* 0xB18 */ public float PoliceLaunchDistance;
-        [NMS(Index = 206)]
-        /* 0xB1C */ public float PoliceLaunchSpeed;
-        [NMS(Index = 207)]
-        /* 0xB20 */ public float PoliceLaunchTime;
-        [NMS(Index = 280)]
-        /* 0xB24 */ public int PoliceNumPerTarget;
-        [NMS(Index = 208)]
-        /* 0xB28 */ public float PolicePauseTime;
-        [NMS(Index = 209)]
-        /* 0xB2C */ public float PolicePauseTimeSpaceBattle;
-        [NMS(Index = 241)]
-        /* 0xB30 */ public float PoliceSpawnViewAngle;
-        [NMS(Index = 213)]
-        /* 0xB34 */ public float PoliceStationEngageRange;
-        [NMS(Index = 214)]
-        /* 0xB38 */ public int PoliceStationNumToLaunch;
-        [NMS(Index = 212)]
-        /* 0xB3C */ public float PoliceStationWaveTimer;
-        [NMS(Index = 253)]
-        /* 0xB40 */ public float PoliceWarnBeaconPulseTime;
-        [NMS(Index = 76)]
-        /* 0xB44 */ public float RewardLootAngularSpeed;
-        [NMS(Index = 74)]
-        /* 0xB48 */ public float RewardLootOffset;
-        [NMS(Index = 75)]
-        /* 0xB4C */ public float RewardLootOffsetSpeed;
-        [NMS(Index = 412)]
-        /* 0xB50 */ public float RollAmount;
-        [NMS(Index = 413)]
-        /* 0xB54 */ public float RollMinTurnAngle;
-        [NMS(Index = 24)]
-        /* 0xB58 */ public float SalvageRemovalTime;
-        [NMS(Index = 23)]
-        /* 0xB5C */ public float SalvageTime;
-        [NMS(Index = 25)]
-        /* 0xB60 */ public float SalvageValueMultiplier;
-        [NMS(Index = 329)]
-        /* 0xB64 */ public float ScaleHeightMax;
-        [NMS(Index = 328)]
-        /* 0xB68 */ public float ScaleHeightMin;
-        [NMS(Index = 324)]
-        /* 0xB6C */ public float Scaler;
-        [NMS(Index = 327)]
-        /* 0xB70 */ public float ScalerMaxDist;
-        [NMS(Index = 326)]
-        /* 0xB74 */ public float ScalerMinDist;
-        [NMS(Index = 325)]
-        /* 0xB78 */ public float ScaleTime;
-        [NMS(Index = 55)]
-        /* 0xB7C */ public float SentinelGunBrokenSlotChance;
-        [NMS(Index = 96)]
-        /* 0xB80 */ public float ShieldCollisionRadiusMultiplier;
-        [NMS(Index = 45)]
-        /* 0xB84 */ public float ShipAlertPirateRange;
+        /* 0x9CC */ public int MaxNumTurretMissiles;
         [NMS(Index = 411)]
-        /* 0xB88 */ public float ShipAngularFactor;
+        /* 0x9D0 */ public float MaxTorque;
+        [NMS(Index = 31)]
+        /* 0x9D4 */ public int MinAggroDamage;
+        [NMS(Index = 15)]
+        /* 0x9D8 */ public float MinimumCircleTimeBeforeLanding;
+        [NMS(Index = 16)]
+        /* 0x9DC */ public float MinimumTimeBetweenOutpostLandings;
+        [NMS(Index = 44)]
+        /* 0x9E0 */ public float MinLaserFireTime;
+        [NMS(Index = 178)]
+        /* 0x9E4 */ public float MissileLaunchSpeed;
+        [NMS(Index = 147)]
+        /* 0x9E8 */ public float MissileRange;
+        [NMS(Index = 317)]
+        /* 0x9EC */ public float MoveAvoidRange;
+        [NMS(Index = 316)]
+        /* 0x9F0 */ public float MoveHeightAdjust;
+        [NMS(Index = 320)]
+        /* 0x9F4 */ public float MoveHeightCheckTime;
+        [NMS(Index = 318)]
+        /* 0x9F8 */ public int MoveHeightNumSamples;
+        [NMS(Index = 319)]
+        /* 0x9FC */ public float MoveHeightSampleSectionSize;
+        [NMS(Index = 408)]
+        /* 0xA00 */ public float OrbitHeight;
+        [NMS(Index = 116)]
+        /* 0xA04 */ public float OutpostDockAIApproachSpeedForce;
+        [NMS(Index = 115)]
+        /* 0xA08 */ public float OutpostDockAIGetToApproachBrakeForce;
+        [NMS(Index = 114)]
+        /* 0xA0C */ public float OutpostDockAIGetToApproachForce;
+        [NMS(Index = 112)]
+        /* 0xA10 */ public float OutpostDockApproachDistance;
+        [NMS(Index = 122)]
+        /* 0xA14 */ public float OutpostDockApproachRenderFlickerOffset;
+        [NMS(Index = 121)]
+        /* 0xA18 */ public float OutpostDockApproachRenderRadius;
+        [NMS(Index = 111)]
+        /* 0xA1C */ public float OutpostDockApproachSpeedForce;
+        [NMS(Index = 113)]
+        /* 0xA20 */ public float OutpostDockApproachSpeedUpDamper;
+        [NMS(Index = 120)]
+        /* 0xA24 */ public float OutpostDockApproachUpAmount;
+        [NMS(Index = 109)]
+        /* 0xA28 */ public float OutpostDockGetToApproachBrakeForce;
+        [NMS(Index = 110)]
+        /* 0xA2C */ public float OutpostDockGetToApproachExtraBrakeForce;
+        [NMS(Index = 108)]
+        /* 0xA30 */ public float OutpostDockGetToApproachForce;
+        [NMS(Index = 106)]
+        /* 0xA34 */ public float OutpostDockMaxApproachSpeed;
+        [NMS(Index = 117)]
+        /* 0xA38 */ public float OutpostDockMaxForce;
+        [NMS(Index = 119)]
+        /* 0xA3C */ public float OutpostDockMaxTipLength;
+        [NMS(Index = 118)]
+        /* 0xA40 */ public float OutpostDockMinTipLength;
+        [NMS(Index = 107)]
+        /* 0xA44 */ public float OutpostDockOverspeedBrake;
+        [NMS(Index = 105)]
+        /* 0xA48 */ public float OutpostDockUpAlignMaxAngle;
+        [NMS(Index = 104)]
+        /* 0xA4C */ public float OutpostDockUpAlignMaxAngleFirstPerson;
+        [NMS(Index = 102)]
+        /* 0xA50 */ public float OutpostLandingNoiseAmp;
+        [NMS(Index = 101)]
+        /* 0xA54 */ public float OutpostLandingNoiseFreq;
+        [NMS(Index = 103)]
+        /* 0xA58 */ public float OutpostLandingNoiseOffset;
+        [NMS(Index = 231)]
+        /* 0xA5C */ public float OutpostToLandingDistance;
+        [NMS(Index = 221)]
+        /* 0xA60 */ public float PirateArriveTime;
+        [NMS(Index = 225)]
+        /* 0xA64 */ public float PirateBattleInterestTime;
+        [NMS(Index = 220)]
+        /* 0xA68 */ public float PirateBattleMaxTime;
+        [NMS(Index = 223)]
+        /* 0xA6C */ public float PirateBattleStartSpeed;
+        [NMS(Index = 93)]
+        /* 0xA70 */ public float PirateExtraDamage;
+        [NMS(Index = 356)]
+        /* 0xA74 */ public float PirateFlybyLength;
+        [NMS(Index = 226)]
+        /* 0xA78 */ public float PirateFreighterBattleDistance;
+        [NMS(Index = 216)]
+        /* 0xA7C */ public float PirateFreighterSpawnAttackAngle;
+        [NMS(Index = 217)]
+        /* 0xA80 */ public float PirateFreighterSpawnAttackOffset;
+        [NMS(Index = 218)]
+        /* 0xA84 */ public float PirateFreighterSpawnAttackSpread;
+        [NMS(Index = 176)]
+        /* 0xA88 */ public float PirateFreighterWarpOffset;
+        [NMS(Index = 224)]
+        /* 0xA8C */ public float PirateInterestTime;
+        [NMS(Index = 95)]
+        /* 0xA90 */ public float PirateMaintainBuildingTargetTime;
+        [NMS(Index = 315)]
+        /* 0xA94 */ public float PiratePlayerAttackRange;
+        [NMS(Index = 219)]
+        /* 0xA98 */ public float PirateSpawnAngle;
+        [NMS(Index = 61)]
+        /* 0xA9C */ public float PirateSpawnSpacing;
+        [NMS(Index = 222)]
+        /* 0xAA0 */ public float PirateStartSpeed;
+        [NMS(Index = 312)]
+        /* 0xAA4 */ public float PitchFlip;
+        [NMS(Index = 46)]
+        /* 0xAA8 */ public float PlanetaryPirateHostileShipPerceptionRange;
+        [NMS(Index = 47)]
+        /* 0xAAC */ public float PlanetaryPirateRaidFocusBuildingsTime;
+        [NMS(Index = 49)]
+        /* 0xAB0 */ public int PlanetaryPirateRaidMaxTradersJoinCombat;
+        [NMS(Index = 48)]
+        /* 0xAB4 */ public float PlanetaryPirateRaidTradersEngageTime;
+        [NMS(Index = 233)]
+        /* 0xAB8 */ public float PlanetUpAlignTime;
+        [NMS(Index = 252)]
+        /* 0xABC */ public float PoliceAbortRange;
+        [NMS(Index = 251)]
+        /* 0xAC0 */ public float PoliceArriveTime;
+        [NMS(Index = 249)]
+        /* 0xAC4 */ public float PoliceEntranceCargoAttackWaitTime;
+        [NMS(Index = 248)]
+        /* 0xAC8 */ public float PoliceEntranceCargoOpenCommsWaitTime;
+        [NMS(Index = 247)]
+        /* 0xACC */ public float PoliceEntranceCargoProbingTime;
+        [NMS(Index = 250)]
+        /* 0xAD0 */ public float PoliceEntranceCargoScanHailNotificationWaitTime;
+        [NMS(Index = 246)]
+        /* 0xAD4 */ public float PoliceEntranceCargoScanStartTime;
+        [NMS(Index = 245)]
+        /* 0xAD8 */ public float PoliceEntranceEscalateIncomingTime;
+        [NMS(Index = 244)]
+        /* 0xADC */ public float PoliceEntranceEscalateProbingTime;
+        [NMS(Index = 243)]
+        /* 0xAE0 */ public float PoliceEntranceProbe;
+        [NMS(Index = 242)]
+        /* 0xAE4 */ public float PoliceEntranceStartTime;
+        [NMS(Index = 211)]
+        /* 0xAE8 */ public float PoliceEscapeMinTime;
+        [NMS(Index = 210)]
+        /* 0xAEC */ public float PoliceEscapeTime;
+        [NMS(Index = 5)]
+        /* 0xAF0 */ public float PoliceFreighterLaserActiveTime;
+        [NMS(Index = 4)]
+        /* 0xAF4 */ public float PoliceFreighterLaserRandomExtraPauseMax;
+        [NMS(Index = 2)]
+        /* 0xAF8 */ public float PoliceFreighterLaserRange;
+        [NMS(Index = 3)]
+        /* 0xAFC */ public float PoliceFreighterLaserShootTime;
+        [NMS(Index = 7)]
+        /* 0xB00 */ public int PoliceFreighterProjectileBurstCount;
+        [NMS(Index = 8)]
+        /* 0xB04 */ public float PoliceFreighterProjectileBurstTime;
+        [NMS(Index = 11)]
+        /* 0xB08 */ public int PoliceFreighterProjectileModulo;
+        [NMS(Index = 9)]
+        /* 0xB0C */ public float PoliceFreighterProjectilePauseTime;
+        [NMS(Index = 10)]
+        /* 0xB10 */ public float PoliceFreighterProjectileRandomExtraPauseMax;
+        [NMS(Index = 6)]
+        /* 0xB14 */ public float PoliceFreighterProjectileRange;
+        [NMS(Index = 146)]
+        /* 0xB18 */ public float PoliceFreighterWarpOutRange;
+        [NMS(Index = 323)]
+        /* 0xB1C */ public float PoliceLaunchDistance;
+        [NMS(Index = 206)]
+        /* 0xB20 */ public float PoliceLaunchSpeed;
+        [NMS(Index = 207)]
+        /* 0xB24 */ public float PoliceLaunchTime;
+        [NMS(Index = 280)]
+        /* 0xB28 */ public int PoliceNumPerTarget;
+        [NMS(Index = 208)]
+        /* 0xB2C */ public float PolicePauseTime;
+        [NMS(Index = 209)]
+        /* 0xB30 */ public float PolicePauseTimeSpaceBattle;
+        [NMS(Index = 241)]
+        /* 0xB34 */ public float PoliceSpawnViewAngle;
+        [NMS(Index = 213)]
+        /* 0xB38 */ public float PoliceStationEngageRange;
+        [NMS(Index = 214)]
+        /* 0xB3C */ public int PoliceStationNumToLaunch;
+        [NMS(Index = 212)]
+        /* 0xB40 */ public float PoliceStationWaveTimer;
+        [NMS(Index = 253)]
+        /* 0xB44 */ public float PoliceWarnBeaconPulseTime;
+        [NMS(Index = 76)]
+        /* 0xB48 */ public float RewardLootAngularSpeed;
+        [NMS(Index = 74)]
+        /* 0xB4C */ public float RewardLootOffset;
+        [NMS(Index = 75)]
+        /* 0xB50 */ public float RewardLootOffsetSpeed;
+        [NMS(Index = 413)]
+        /* 0xB54 */ public float RollAmount;
+        [NMS(Index = 414)]
+        /* 0xB58 */ public float RollMinTurnAngle;
+        [NMS(Index = 24)]
+        /* 0xB5C */ public float SalvageRemovalTime;
+        [NMS(Index = 23)]
+        /* 0xB60 */ public float SalvageTime;
+        [NMS(Index = 25)]
+        /* 0xB64 */ public float SalvageValueMultiplier;
+        [NMS(Index = 329)]
+        /* 0xB68 */ public float ScaleHeightMax;
+        [NMS(Index = 328)]
+        /* 0xB6C */ public float ScaleHeightMin;
+        [NMS(Index = 324)]
+        /* 0xB70 */ public float Scaler;
+        [NMS(Index = 327)]
+        /* 0xB74 */ public float ScalerMaxDist;
+        [NMS(Index = 326)]
+        /* 0xB78 */ public float ScalerMinDist;
+        [NMS(Index = 325)]
+        /* 0xB7C */ public float ScaleTime;
+        [NMS(Index = 55)]
+        /* 0xB80 */ public float SentinelGunBrokenSlotChance;
+        [NMS(Index = 96)]
+        /* 0xB84 */ public float ShieldCollisionRadiusMultiplier;
+        [NMS(Index = 45)]
+        /* 0xB88 */ public float ShipAlertPirateRange;
+        [NMS(Index = 412)]
+        /* 0xB8C */ public float ShipAngularFactor;
         [NMS(Index = 345)]
-        /* 0xB8C */ public float ShipEscapeTimeBeforeWarpOut;
+        /* 0xB90 */ public float ShipEscapeTimeBeforeWarpOut;
         [NMS(Index = 350)]
-        /* 0xB90 */ public float ShipEscortBackForceTime;
+        /* 0xB94 */ public float ShipEscortBackForceTime;
         [NMS(Index = 355)]
-        /* 0xB94 */ public float ShipEscortForwardOffsetScaleMax;
+        /* 0xB98 */ public float ShipEscortForwardOffsetScaleMax;
         [NMS(Index = 354)]
-        /* 0xB98 */ public float ShipEscortForwardOffsetScaleMin;
+        /* 0xB9C */ public float ShipEscortForwardOffsetScaleMin;
         [NMS(Index = 349)]
-        /* 0xB9C */ public float ShipEscortFwdForceTime;
+        /* 0xBA0 */ public float ShipEscortFwdForceTime;
         [NMS(Index = 346)]
-        /* 0xBA0 */ public float ShipEscortLockOnDistance;
+        /* 0xBA4 */ public float ShipEscortLockOnDistance;
         [NMS(Index = 351)]
-        /* 0xBA4 */ public float ShipEscortPerpForceTime;
+        /* 0xBA8 */ public float ShipEscortPerpForceTime;
         [NMS(Index = 353)]
-        /* 0xBA8 */ public float ShipEscortRadialOffsetScaleMax;
+        /* 0xBAC */ public float ShipEscortRadialOffsetScaleMax;
         [NMS(Index = 352)]
-        /* 0xBAC */ public float ShipEscortRadialOffsetScaleMin;
+        /* 0xBB0 */ public float ShipEscortRadialOffsetScaleMin;
         [NMS(Index = 347)]
-        /* 0xBB0 */ public float ShipEscortVelocityBand;
+        /* 0xBB4 */ public float ShipEscortVelocityBand;
         [NMS(Index = 348)]
-        /* 0xBB4 */ public float ShipEscortVelocityBandForce;
+        /* 0xBB8 */ public float ShipEscortVelocityBandForce;
         [NMS(Index = 239)]
-        /* 0xBB8 */ public float ShipSpawnAnomalyRadius;
+        /* 0xBBC */ public float ShipSpawnAnomalyRadius;
         [NMS(Index = 238)]
-        /* 0xBBC */ public float ShipSpawnStationRadius;
+        /* 0xBC0 */ public float ShipSpawnStationRadius;
         [NMS(Index = 138)]
-        /* 0xBC0 */ public float SpaceBattleFlybyTime;
+        /* 0xBC4 */ public float SpaceBattleFlybyTime;
         [NMS(Index = 133)]
-        /* 0xBC4 */ public float SpaceBattleGuardOffset;
+        /* 0xBC8 */ public float SpaceBattleGuardOffset;
         [NMS(Index = 134)]
-        /* 0xBC8 */ public float SpaceBattleGuardUpOffset;
+        /* 0xBCC */ public float SpaceBattleGuardUpOffset;
         [NMS(Index = 136)]
-        /* 0xBCC */ public float SpaceBattleInitialPirateOffset;
+        /* 0xBD0 */ public float SpaceBattleInitialPirateOffset;
         [NMS(Index = 135)]
-        /* 0xBD0 */ public float SpaceBattleInitialPirateUpOffset;
+        /* 0xBD4 */ public float SpaceBattleInitialPirateUpOffset;
         [NMS(Index = 137)]
-        /* 0xBD4 */ public float SpaceBattleObstructionRadius;
+        /* 0xBD8 */ public float SpaceBattleObstructionRadius;
         [NMS(Index = 202)]
-        /* 0xBD8 */ public float SpaceStationTraderRequestTime;
-        [NMS(Index = 396)]
-        /* 0xBDC */ public float TakeOffExitHeightOffset;
+        /* 0xBDC */ public float SpaceStationTraderRequestTime;
         [NMS(Index = 397)]
-        /* 0xBE0 */ public float TakeOffExtraAIHeight;
-        [NMS(Index = 395)]
-        /* 0xBE4 */ public float TakeOffHoverPointReachedDistance;
+        /* 0xBE0 */ public float TakeOffExitHeightOffset;
+        [NMS(Index = 398)]
+        /* 0xBE4 */ public float TakeOffExtraAIHeight;
+        [NMS(Index = 396)]
+        /* 0xBE8 */ public float TakeOffHoverPointReachedDistance;
         [NMS(Index = 227)]
-        /* 0xBE8 */ public float TraderArriveSpeed;
+        /* 0xBEC */ public float TraderArriveSpeed;
         [NMS(Index = 228)]
-        /* 0xBEC */ public float TraderArriveTime;
+        /* 0xBF0 */ public float TraderArriveTime;
         [NMS(Index = 376)]
-        /* 0xBF0 */ public float TraderAtTime;
+        /* 0xBF4 */ public float TraderAtTime;
         [NMS(Index = 377)]
-        /* 0xBF4 */ public float TraderAtTimeBack;
+        /* 0xBF8 */ public float TraderAtTimeBack;
         [NMS(Index = 215)]
-        /* 0xBF8 */ public int TraderIgnoreHits;
+        /* 0xBFC */ public int TraderIgnoreHits;
         [NMS(Index = 272)]
-        /* 0xBFC */ public int TradeRouteDivisions;
+        /* 0xC00 */ public int TradeRouteDivisions;
         [NMS(Index = 274)]
-        /* 0xC00 */ public float TradeRouteFlickerAmp;
+        /* 0xC04 */ public float TradeRouteFlickerAmp;
         [NMS(Index = 273)]
-        /* 0xC04 */ public float TradeRouteFlickerFreq;
+        /* 0xC08 */ public float TradeRouteFlickerFreq;
         [NMS(Index = 262)]
-        /* 0xC08 */ public float TradeRouteFollowOffset;
+        /* 0xC0C */ public float TradeRouteFollowOffset;
         [NMS(Index = 275)]
-        /* 0xC0C */ public int TradeRouteMaxNum;
+        /* 0xC10 */ public int TradeRouteMaxNum;
         [NMS(Index = 261)]
-        /* 0xC10 */ public float TradeRouteSeekOutpostRange;
+        /* 0xC14 */ public float TradeRouteSeekOutpostRange;
         [NMS(Index = 270)]
-        /* 0xC14 */ public float TradeRouteSlowRange;
+        /* 0xC18 */ public float TradeRouteSlowRange;
         [NMS(Index = 271)]
-        /* 0xC18 */ public float TradeRouteSlowSpeed;
+        /* 0xC1C */ public float TradeRouteSlowSpeed;
         [NMS(Index = 264)]
-        /* 0xC1C */ public float TradeRouteSpawnDistance;
+        /* 0xC20 */ public float TradeRouteSpawnDistance;
         [NMS(Index = 269)]
-        /* 0xC20 */ public float TradeRouteSpeed;
+        /* 0xC24 */ public float TradeRouteSpeed;
         [NMS(Index = 268)]
-        /* 0xC24 */ public float TradeRouteStationRadius;
+        /* 0xC28 */ public float TradeRouteStationRadius;
         [NMS(Index = 265)]
-        /* 0xC28 */ public float TradeRouteTrailDrawDistance;
+        /* 0xC2C */ public float TradeRouteTrailDrawDistance;
         [NMS(Index = 266)]
-        /* 0xC2C */ public float TradeRouteTrailFadeTime;
+        /* 0xC30 */ public float TradeRouteTrailFadeTime;
         [NMS(Index = 267)]
-        /* 0xC30 */ public float TradeRouteTrailTimeOffset;
+        /* 0xC34 */ public float TradeRouteTrailTimeOffset;
         [NMS(Index = 378)]
-        /* 0xC34 */ public float TraderPerpTime;
+        /* 0xC38 */ public float TraderPerpTime;
         [NMS(Index = 198)]
-        /* 0xC38 */ public float TraderPostCombatRequestTime;
+        /* 0xC3C */ public float TraderPostCombatRequestTime;
         [NMS(Index = 197)]
-        /* 0xC3C */ public float TraderRequestTime;
+        /* 0xC40 */ public float TraderRequestTime;
         [NMS(Index = 379)]
-        /* 0xC40 */ public float TraderVelocityBand;
+        /* 0xC44 */ public float TraderVelocityBand;
         [NMS(Index = 380)]
-        /* 0xC44 */ public float TraderVelocityBandForce;
+        /* 0xC48 */ public float TraderVelocityBandForce;
         [NMS(Index = 196)]
-        /* 0xC48 */ public float TraderWantedTime;
+        /* 0xC4C */ public float TraderWantedTime;
         [NMS(Index = 200)]
-        /* 0xC4C */ public float TradingPostTraderRange;
+        /* 0xC50 */ public float TradingPostTraderRange;
         [NMS(Index = 201)]
-        /* 0xC50 */ public float TradingPostTraderRangeSpace;
+        /* 0xC54 */ public float TradingPostTraderRangeSpace;
         [NMS(Index = 199)]
-        /* 0xC54 */ public float TradingPostTraderRequestTime;
+        /* 0xC58 */ public float TradingPostTraderRequestTime;
         [NMS(Index = 32)]
-        /* 0xC58 */ public float TrailLandingFadeTime;
+        /* 0xC5C */ public float TrailLandingFadeTime;
         [NMS(Index = 256)]
-        /* 0xC5C */ public float TrailScale;
+        /* 0xC60 */ public float TrailScale;
         [NMS(Index = 259)]
-        /* 0xC60 */ public float TrailScaleFreighterMaxScale;
+        /* 0xC64 */ public float TrailScaleFreighterMaxScale;
         [NMS(Index = 258)]
-        /* 0xC64 */ public float TrailScaleMaxScale;
+        /* 0xC68 */ public float TrailScaleMaxScale;
         [NMS(Index = 255)]
-        /* 0xC68 */ public float TrailScaleMinDistance;
+        /* 0xC6C */ public float TrailScaleMinDistance;
         [NMS(Index = 257)]
-        /* 0xC6C */ public float TrailScaleRange;
+        /* 0xC70 */ public float TrailScaleRange;
         [NMS(Index = 385)]
-        /* 0xC70 */ public float TrailSpeedFadeFalloff;
+        /* 0xC74 */ public float TrailSpeedFadeFalloff;
         [NMS(Index = 384)]
-        /* 0xC74 */ public float TrailSpeedFadeMinSpeed;
-        [NMS(Index = 404)]
-        /* 0xC78 */ public float TravelMinBoostTime;
+        /* 0xC78 */ public float TrailSpeedFadeMinSpeed;
+        [NMS(Index = 405)]
+        /* 0xC7C */ public float TravelMinBoostTime;
         [NMS(Index = 156)]
-        /* 0xC7C */ public float TurretAlertLightIntensity;
+        /* 0xC80 */ public float TurretAlertLightIntensity;
         [NMS(Index = 155)]
-        /* 0xC80 */ public float TurretOriginOffset;
+        /* 0xC84 */ public float TurretOriginOffset;
         [NMS(Index = 322)]
-        /* 0xC84 */ public float TurretRandomAIShipOffset;
+        /* 0xC88 */ public float TurretRandomAIShipOffset;
         [NMS(Index = 321)]
-        /* 0xC88 */ public float TurretRandomOffset;
+        /* 0xC8C */ public float TurretRandomOffset;
         [NMS(Index = 17)]
-        /* 0xC8C */ public float VisibleDistance;
+        /* 0xC90 */ public float VisibleDistance;
         [NMS(Index = 334)]
-        /* 0xC90 */ public float WarpFadeInTime;
+        /* 0xC94 */ public float WarpFadeInTime;
         [NMS(Index = 383)]
-        /* 0xC94 */ public float WarpForce;
+        /* 0xC98 */ public float WarpForce;
         [NMS(Index = 341)]
-        /* 0xC98 */ public float WarpInAudioFXDelay;
+        /* 0xC9C */ public float WarpInAudioFXDelay;
         [NMS(Index = 338)]
-        /* 0xC9C */ public float WarpInDistance;
+        /* 0xCA0 */ public float WarpInDistance;
         [NMS(Index = 332)]
-        /* 0xCA0 */ public float WarpInPlayerLocatorMinOffset;
+        /* 0xCA4 */ public float WarpInPlayerLocatorMinOffset;
         [NMS(Index = 331)]
-        /* 0xCA4 */ public float WarpInPlayerLocatorTime;
+        /* 0xCA8 */ public float WarpInPlayerLocatorTime;
         [NMS(Index = 339)]
-        /* 0xCA8 */ public float WarpInPostSpeed;
+        /* 0xCAC */ public float WarpInPostSpeed;
         [NMS(Index = 340)]
-        /* 0xCAC */ public float WarpInPostSpeedFreighter;
+        /* 0xCB0 */ public float WarpInPostSpeedFreighter;
         [NMS(Index = 333)]
-        /* 0xCB0 */ public float WarpInTime;
+        /* 0xCB4 */ public float WarpInTime;
         [NMS(Index = 335)]
-        /* 0xCB4 */ public float WarpInTimeFreighter;
+        /* 0xCB8 */ public float WarpInTimeFreighter;
         [NMS(Index = 337)]
-        /* 0xCB8 */ public float WarpInVariance;
+        /* 0xCBC */ public float WarpInVariance;
         [NMS(Index = 342)]
-        /* 0xCBC */ public float WarpOutDistance;
+        /* 0xCC0 */ public float WarpOutDistance;
         [NMS(Index = 382)]
-        /* 0xCC0 */ public float WarpSpeed;
+        /* 0xCC4 */ public float WarpSpeed;
         [NMS(Index = 381)]
-        /* 0xCC4 */ public float WingmanAlign;
+        /* 0xCC8 */ public float WingmanAlign;
         [NMS(Index = 371)]
-        /* 0xCC8 */ public float WingmanAtTime;
+        /* 0xCCC */ public float WingmanAtTime;
         [NMS(Index = 372)]
-        /* 0xCCC */ public float WingmanAtTimeBack;
+        /* 0xCD0 */ public float WingmanAtTimeBack;
         [NMS(Index = 365)]
-        /* 0xCD0 */ public float WingmanHeightAdjust;
+        /* 0xCD4 */ public float WingmanHeightAdjust;
         [NMS(Index = 363)]
-        /* 0xCD4 */ public float WingmanLockArriveTime;
+        /* 0xCD8 */ public float WingmanLockArriveTime;
         [NMS(Index = 362)]
-        /* 0xCD8 */ public float WingmanLockBetweenTime;
+        /* 0xCDC */ public float WingmanLockBetweenTime;
         [NMS(Index = 361)]
-        /* 0xCDC */ public float WingmanLockDistance;
+        /* 0xCE0 */ public float WingmanLockDistance;
         [NMS(Index = 364)]
-        /* 0xCE0 */ public float WingmanMinHeight;
+        /* 0xCE4 */ public float WingmanMinHeight;
         [NMS(Index = 368)]
-        /* 0xCE4 */ public float WingmanOffset;
+        /* 0xCE8 */ public float WingmanOffset;
         [NMS(Index = 367)]
-        /* 0xCE8 */ public float WingmanOffsetStart;
+        /* 0xCEC */ public float WingmanOffsetStart;
         [NMS(Index = 373)]
-        /* 0xCEC */ public float WingmanPerpTime;
+        /* 0xCF0 */ public float WingmanPerpTime;
         [NMS(Index = 370)]
-        /* 0xCF0 */ public float WingmanRotate;
+        /* 0xCF4 */ public float WingmanRotate;
         [NMS(Index = 369)]
-        /* 0xCF4 */ public float WingmanSideOffset;
+        /* 0xCF8 */ public float WingmanSideOffset;
         [NMS(Index = 366)]
-        /* 0xCF8 */ public float WingmanStartTime;
+        /* 0xCFC */ public float WingmanStartTime;
         [NMS(Index = 374)]
-        /* 0xCFC */ public float WingmanVelocityBand;
+        /* 0xD00 */ public float WingmanVelocityBand;
         [NMS(Index = 375)]
-        /* 0xD00 */ public float WingmanVelocityBandForce;
+        /* 0xD04 */ public float WingmanVelocityBandForce;
         [NMS(Index = 283)]
-        /* 0xD04 */ public float WitnessHearingRange;
+        /* 0xD08 */ public float WitnessHearingRange;
         [NMS(Index = 285)]
-        /* 0xD08 */ public float WitnessSightAngle;
+        /* 0xD0C */ public float WitnessSightAngle;
         [NMS(Index = 284)]
-        /* 0xD0C */ public float WitnessSightRange;
+        /* 0xD10 */ public float WitnessSightRange;
         [NMS(Index = 263)]
-        /* 0xD10 */ public NMSString0x100 TradeRouteIcon;
-        [NMS(Index = 94, Size = 0x3C, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
-        /* 0xE10 */ public bool[] PirateAttackableBuildingClasses;
+        /* 0xD14 */ public NMSString0x100 TradeRouteIcon;
+        [NMS(Index = 94, Size = 0x3E, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]
+        /* 0xE14 */ public bool[] PirateAttackableBuildingClasses;
         [NMS(Index = 21)]
-        /* 0xE4C */ public bool AtmosphereEffectEnabled;
+        /* 0xE52 */ public bool AtmosphereEffectEnabled;
         [NMS(Index = 70)]
-        /* 0xE4D */ public bool AttackRepositionBoost;
+        /* 0xE53 */ public bool AttackRepositionBoost;
         [NMS(Index = 71)]
-        /* 0xE4E */ public bool AttackShipsFollowLeader;
+        /* 0xE54 */ public bool AttackShipsFollowLeader;
         [NMS(Index = 158)]
-        /* 0xE4F */ public bool DisableTradeRoutes;
+        /* 0xE55 */ public bool DisableTradeRoutes;
         [NMS(Index = 12)]
-        /* 0xE50 */ public bool DisplayShipAttackTypes;
+        /* 0xE56 */ public bool DisplayShipAttackTypes;
         [NMS(Index = 277)]
-        /* 0xE51 */ public bool EnableLoot;
+        /* 0xE57 */ public bool EnableLoot;
         [NMS(Index = 38)]
-        /* 0xE52 */ public bool EnergyShieldAlwaysVisible;
+        /* 0xE58 */ public bool EnergyShieldAlwaysVisible;
         [NMS(Index = 33)]
-        /* 0xE53 */ public bool EnergyShieldsEnabled;
+        /* 0xE59 */ public bool EnergyShieldsEnabled;
         [NMS(Index = 22)]
-        /* 0xE54 */ public bool FillUpOutposts;
+        /* 0xE5A */ public bool FillUpOutposts;
         [NMS(Index = 142)]
-        /* 0xE55 */ public bool FreighterAlertLights;
+        /* 0xE5B */ public bool FreighterAlertLights;
         [NMS(Index = 295)]
-        /* 0xE56 */ public bool FreighterIgnorePlayer;
+        /* 0xE5C */ public bool FreighterIgnorePlayer;
         [NMS(Index = 19)]
-        /* 0xE57 */ public bool FreightersAlwaysAttackPlayer;
+        /* 0xE5D */ public bool FreightersAlwaysAttackPlayer;
         [NMS(Index = 232)]
-        /* 0xE58 */ public bool FreightersSamePalette;
+        /* 0xE5E */ public bool FreightersSamePalette;
         [NMS(Index = 20)]
-        /* 0xE59 */ public bool GroundEffectEnabled;
+        /* 0xE5F */ public bool GroundEffectEnabled;
         [NMS(Index = 236)]
-        /* 0xE5A */ public bool PoliceSpawnEffect;
+        /* 0xE60 */ public bool PoliceSpawnEffect;
         [NMS(Index = 330)]
-        /* 0xE5B */ public bool ScaleDisabledWhenOnFreighter;
+        /* 0xE61 */ public bool ScaleDisabledWhenOnFreighter;
         [NMS(Index = 18)]
-        /* 0xE5C */ public bool TradersAttackPirates;
+        /* 0xE62 */ public bool TradersAttackPirates;
         [NMS(Index = 260)]
-        /* 0xE5D */ public TkCurveType TrailScaleCurve;
+        /* 0xE63 */ public TkCurveType TrailScaleCurve;
         [NMS(Index = 336)]
-        /* 0xE5E */ public TkCurveType WarpInCurve;
+        /* 0xE64 */ public TkCurveType WarpInCurve;
     }
 }

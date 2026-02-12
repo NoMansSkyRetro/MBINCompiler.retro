@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAF6C4A61507EA307, NameHash = 0xEFF2B2BC)]
+    [NMS(GUID = 0x7681E583B09C2B6F, NameHash = 0xEFF2B2BC)]
     public class GcMissionSequenceWaitForStatSeasonal : NMSTemplate
     {
-        [NMS(Index = 6)]
+        [NMS(Index = 7)]
         /* 0x00 */ public VariableSizeString DebugText;
         [NMS(Index = 0)]
         /* 0x10 */ public VariableSizeString Message;
@@ -13,9 +13,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x30 */ public NMSString0x10 StatGroup;
         [NMS(Index = 3)]
         /* 0x40 */ public int Amount;
-        [NMS(Index = 5)]
+        [NMS(Index = 6)]
         /* 0x44 */ public bool EncouragesFighting;
+        [NMS(Index = 5)]
+        /* 0x45 */ public bool TakeAmountFromMissionStat;
         [NMS(Index = 4)]
-        /* 0x45 */ public bool TakeAmountFromSeasonalData;
+        /* 0x46 */ public bool TakeAmountFromSeasonalData;
     }
 }

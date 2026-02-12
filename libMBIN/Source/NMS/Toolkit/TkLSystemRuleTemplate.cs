@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkLSystemRuleTemplate : NMSTemplate
     {
         [NMS(Index = 1)]
-        /* 0x00 */ public VariableSizeString LSystem;
+        /* 0x00 */ public GcFilename LSystem;
         [NMS(Index = 0)]
         /* 0x10 */ public NMSString0x20 Name;
     }

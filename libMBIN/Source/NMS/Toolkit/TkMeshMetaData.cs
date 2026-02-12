@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkMeshMetaData : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x00 */ public VariableSizeString IdString;
+        /* 0x00 */ public GcFilename IdString;
         [NMS(Index = 1)]
         /* 0x10 */ public ulong Hash;
         [NMS(Index = 7)]

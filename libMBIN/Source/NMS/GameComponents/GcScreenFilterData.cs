@@ -6,7 +6,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 0)]
         /* 0x00 */ public NMSString0x20A LocText;
         [NMS(Index = 1)]
-        /* 0x20 */ public VariableSizeString Filename;
+        /* 0x20 */ public GcFilename Filename;
         [NMS(Index = 2)]
         /* 0x30 */ public float FadeDistance;
         [NMS(Index = 4)]

@@ -6,7 +6,7 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 6)]
         /* 0x00 */ public NMSString0x20A MaterialAlternativeId;
         [NMS(Index = 1)]
-        /* 0x20 */ public VariableSizeString Map;
+        /* 0x20 */ public GcFilename Map;
         [NMS(Index = 0)]
         /* 0x30 */ public VariableSizeString Name;
         [NMS(Index = 9)]

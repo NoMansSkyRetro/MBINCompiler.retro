@@ -1,8 +1,9 @@
 using libMBIN.NMS.GameComponents;
+using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA7B7BB25C9EA98D3, NameHash = 0x40268557)]
+    [NMS(GUID = 0x9BF7E8A4F1A0E18F, NameHash = 0x40268557)]
     public class GcPlayerOwnershipData : NMSTemplate
     {
         [NMS(Index = 8)]
@@ -19,9 +20,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x440 */ public GcResourceElement Resource;
         [NMS(Index = 5)]
         /* 0x488 */ public GcInventoryLayout InventoryLayout;
+        [NMS(Index = 9)]
+        /* 0x4A0 */ public List<GcVehicleCargoData> VehicleCargo;
         [NMS(Index = 6)]
-        /* 0x4A0 */ public ulong Location;
+        /* 0x4B0 */ public ulong Location;
         [NMS(Index = 0)]
-        /* 0x4A8 */ public NMSString0x20 Name;
+        /* 0x4B8 */ public NMSString0x20 Name;
     }
 }

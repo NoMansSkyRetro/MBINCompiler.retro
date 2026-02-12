@@ -1,21 +1,23 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5B89095017F4B8B2, NameHash = 0x76EA6E6A)]
+    [NMS(GUID = 0xADE2E3BC2DDCD0B5, NameHash = 0x76EA6E6A)]
     public class GcIDLookupPath : NMSTemplate
     {
         [NMS(Index = 0)]
         /* 0x000 */ public NMSString0x10 Id;
         [NMS(Index = 1)]
         /* 0x010 */ public NMSString0x800 Path;
-        [NMS(Index = 5)]
-        /* 0x810 */ public NMSString0x80 DescriptionField;
         [NMS(Index = 6)]
+        /* 0x810 */ public NMSString0x80 DescriptionField;
+        [NMS(Index = 7)]
         /* 0x890 */ public NMSString0x80 ImageField;
-        [NMS(Index = 3)]
-        /* 0x910 */ public NMSString0x80 NameField;
         [NMS(Index = 4)]
+        /* 0x910 */ public NMSString0x80 NameField;
+        [NMS(Index = 5)]
         /* 0x990 */ public NMSString0x80 SubTitleField;
+        [NMS(Index = 3)]
+        /* 0xA10 */ public bool ExportToGame;
         [NMS(Index = 2)]
-        /* 0xA10 */ public bool GlobalSort;
+        /* 0xA11 */ public bool GlobalSort;
     }
 }

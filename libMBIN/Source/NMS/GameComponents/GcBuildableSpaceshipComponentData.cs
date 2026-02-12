@@ -6,6 +6,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcBuildableSpaceshipComponentData : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x0 */ public List<VariableSizeString> InitialLayouts;
+        /* 0x0 */ public List<GcFilename> InitialLayouts;
     }
 }

@@ -6,6 +6,6 @@ namespace libMBIN.NMS.GameComponents
     public class GcAtmosphereList : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x0 */ public List<VariableSizeString> Atmospheres;
+        /* 0x0 */ public List<GcFilename> Atmospheres;
     }
 }

@@ -18,7 +18,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 0)]
         /* 0x050 */ public GcShipHUDTargetIconData IconData;
         [NMS(Index = 1)]
-        /* 0x0B0 */ public VariableSizeString Arrow;
+        /* 0x0B0 */ public GcFilename Arrow;
         [NMS(Index = 14)]
         /* 0x0C0 */ public float ActivateTime;
         [NMS(Index = 13)]

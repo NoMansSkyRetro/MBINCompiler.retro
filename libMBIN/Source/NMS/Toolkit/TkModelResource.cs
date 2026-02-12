@@ -4,7 +4,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkModelResource : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x00 */ public VariableSizeString Filename;
+        /* 0x00 */ public GcFilename Filename;
         [NMS(Index = 2)]
         /* 0x10 */ public ulong Seed;
         [NMS(Index = 1)]

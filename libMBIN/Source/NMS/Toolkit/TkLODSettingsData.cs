@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xF4ADC343A0F6C5C8, NameHash = 0x6805DF13)]
+    [NMS(GUID = 0x479E7FEF11D4585D, NameHash = 0x6805DF13)]
     public class TkLODSettingsData : NMSTemplate
     {
         [NMS(Index = 1, Size = 0x6)]
@@ -13,23 +13,19 @@ namespace libMBIN.NMS.Toolkit
         /* 0x48 */ public int[] RegionLODRadius;
         [NMS(Index = 0, Size = 0x5)]
         /* 0x60 */ public float[] LODAdjust;
-        [NMS(Index = 9)]
-        /* 0x74 */ public int AsteroidCountMultiplier;
-        [NMS(Index = 10)]
-        /* 0x78 */ public int AsteroidDividerMultiplier;
-        [NMS(Index = 11)]
-        /* 0x7C */ public float AsteroidFadeRangeMultiplier;
-        [NMS(Index = 8)]
-        /* 0x80 */ public int ImposterResolutionMultiplier;
-        [NMS(Index = 12)]
-        /* 0x84 */ public int MaxAsteroidGenerationPerFrame;
-        [NMS(Index = 13)]
-        /* 0x88 */ public int MaxAsteroidGenerationPerFramePulseJump;
         [NMS(Index = 7)]
-        /* 0x8C */ public int NumberOfImposterViews;
-        [NMS(Index = 5)]
-        /* 0x90 */ public bool EnableOctahedralImposters;
+        /* 0x74 */ public int AsteroidCountMultiplier;
+        [NMS(Index = 8)]
+        /* 0x78 */ public int AsteroidDividerMultiplier;
+        [NMS(Index = 9)]
+        /* 0x7C */ public float AsteroidFadeRangeMultiplier;
+        [NMS(Index = 10)]
+        /* 0x80 */ public int MaxAsteroidGenerationPerFrame;
+        [NMS(Index = 11)]
+        /* 0x84 */ public int MaxAsteroidGenerationPerFramePulseJump;
         [NMS(Index = 6)]
-        /* 0x91 */ public bool ViewImpostersFromSpace;
+        /* 0x88 */ public int NumberOfImposterViews;
+        [NMS(Index = 5)]
+        /* 0x8C */ public bool ViewImpostersFromSpace;
     }
 }

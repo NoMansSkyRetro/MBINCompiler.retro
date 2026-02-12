@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAEBFF47C52D8945, NameHash = 0x8BC80049)]
+    [NMS(GUID = 0x334312A1462E54C6, NameHash = 0x8BC80049)]
     public class GcPaletteColourAlt : NMSTemplate
     {
         // size: 0x8

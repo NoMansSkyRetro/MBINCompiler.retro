@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x47422159B01CF433, NameHash = 0x51B5691)]
+    [NMS(GUID = 0xC0CABE062574890, NameHash = 0x51B5691)]
     public class GcWeatherProperties : NMSTemplate
     {
         [NMS(Index = 7)]
@@ -21,7 +21,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 29)]
         /* 0xA10 */ public GcLightShaftProperties StormLightShaftProperties;
         [NMS(Index = 10)]
-        /* 0xA40 */ public List<VariableSizeString> HeavyAir;
+        /* 0xA40 */ public List<GcFilename> HeavyAir;
         [NMS(Index = 0)]
         /* 0xA50 */ public NMSString0x10 Name;
         [NMS(Index = 23)]

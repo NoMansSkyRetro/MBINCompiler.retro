@@ -17,7 +17,7 @@ namespace libMBIN.NMS.Globals
         [NMS(Index = 42)]
         /* 0x140 */ public List<NMSString0x10> MiningSubstanceStarExtreme;
         [NMS(Index = 59)]
-        /* 0x150 */ public VariableSizeString RegionHotspotsTable;
+        /* 0x150 */ public GcFilename RegionHotspotsTable;
         [NMS(Index = 51)]
         /* 0x160 */ public GcTerrainEditing TerrainEditing;
         [NMS(Index = 48)]

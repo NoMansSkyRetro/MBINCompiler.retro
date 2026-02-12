@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x93D26B0E1084E957, NameHash = 0xA6E6CEBB)]
+    [NMS(GUID = 0x34B98DF4E75B5EAC, NameHash = 0xA6E6CEBB)]
     public class GcSettlementProductionSlotData : NMSTemplate
     {
         [NMS(Index = 0)]

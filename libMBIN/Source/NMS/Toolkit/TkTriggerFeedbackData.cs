@@ -1,22 +1,9 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x4B7A23EDAC7D0DF5, NameHash = 0xE68DA537)]
+    [NMS(GUID = 0x6ADF230D5D1292D7, NameHash = 0xE68DA537)]
     public class TkTriggerFeedbackData : NMSTemplate
     {
-        // size: 0x4
-        public enum FeedbackTypeEnum : uint {
-            None,
-            Feedback,
-            Weapon,
-            Vibration,
-        }
         [NMS(Index = 0)]
-        /* 0x0 */ public FeedbackTypeEnum FeedbackType;
-        [NMS(Index = 3)]
-        /* 0x4 */ public float Frequency;
-        [NMS(Index = 2)]
-        /* 0x8 */ public float Position;
-        [NMS(Index = 1)]
-        /* 0xC */ public float Strength;
+        /* 0x0 */ public NMSTemplate Effect;
     }
 }

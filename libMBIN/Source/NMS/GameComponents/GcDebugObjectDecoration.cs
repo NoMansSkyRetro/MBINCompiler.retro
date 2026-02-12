@@ -12,7 +12,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 6)]
         /* 0x30 */ public Vector3f Up;
         [NMS(Index = 0)]
-        /* 0x40 */ public VariableSizeString Filename;
+        /* 0x40 */ public GcFilename Filename;
         [NMS(Index = 1)]
         /* 0x50 */ public GcSeed Seed;
         [NMS(Index = 2)]

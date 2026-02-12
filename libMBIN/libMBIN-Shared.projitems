@@ -29,7 +29,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\MBIN\MBINHeader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Colour.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\Colour32.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\OptionalVariableSizeString.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\GcFilename.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\HashMap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\halfVector4.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\BaseTypes\HashedString.cs" />
@@ -225,6 +225,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBlockedMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBlockedUser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBoidData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBoneFollowerComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBootLogoData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBountySpawnInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcBreakTechByStatData.cs" />
@@ -512,6 +513,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCustomInventoryComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCustomNotifyTimerOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCustomSpaceStormComponentData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCustomVehicleCockpitOption.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCustomisationBackpackData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCustomisationBannerGroup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCustomisationBannerImageData.cs" />
@@ -654,6 +656,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcEngineComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcEntitlementRewardData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcEntitlementRewardsTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcEnvironmentLocation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcEnvironmentProperties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcEnvironmentSpawnData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcExactResource.cs" />
@@ -790,6 +793,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcGrabPlayerComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcGrabbableComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcGrabbableData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcGravityGunTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcGravityGunTableItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcGroundWormComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcGroupCondition.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcGyroSettingsData.cs" />
@@ -928,6 +933,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcLightShaftProperties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcLightingRigComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcLinkNetworkTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcLocalLimitFollowerEntry.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcLocalSubstanceType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcLodAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcLookAtComponentData.cs" />
@@ -1047,9 +1053,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionFeedingCreatures.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionFirstPurpleSystemValid.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionForceHideMultiplayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionFormatStat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionFreighterBattle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionFrigateCount.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionGameMode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionGrabbingRecyclableOfType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionGroup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionGunOut.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionHasActiveDetailMessage.cs" />
@@ -1146,6 +1154,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionMultiplayerFreighterAvailable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionNPCHabitationHasWorker.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionNearFossilDisplay.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionNearGrabbablePhysicsObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionNearObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionNearPole.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionNearRobotSite.cs" />
@@ -1156,6 +1165,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionNexusNearby.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionNumAtlasStationsVisited.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionNumBrokenSlots.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionNumPhysicsObjectsInVolume.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionNumberOfShipsOwned.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionOnFootCombatEnabled.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionOnMultiplayerMission.cs" />
@@ -1227,9 +1237,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionTutorialEnabled.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionUnclaimedStageReward.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionUnderwaterDepth.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionUsingGravityGun.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionUsingInteraction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionUsingPortal.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionUsingThirdPersonCamera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionVehicleHasTag.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionVehicleWeaponMode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionVisorActive.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionWaitForPirates.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMissionConditionWaitForTime.cs" />
@@ -1373,6 +1386,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcModSettingsInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcModelExplosionRule.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcModelExplosionRules.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcModelSpaceFollowerBoneEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcModelSpaceFollowerEntry.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcModelViewCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcModelViews.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcModularCustomisationColourData.cs" />
@@ -1392,6 +1407,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcModuleOverride.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMonth.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMonthlyRecurrence.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMoveableObjectComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMovementDirection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMultiColouriseComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMultiSpecificItemEntry.cs" />
@@ -1466,9 +1482,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcNameGeneratorTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcNameGeneratorWord.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcNetworkInterpolationComponentData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcNetworkOwnershipPriority.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcNetworkPlayerMarkerComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcNodeActivationAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcNumberedTextList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcObjectCounterVolumeComponentData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcObjectCounterVolumeType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcObjectDefinitionData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcObjectPlacementCategory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcObjectPlacementComponentData.cs" />
@@ -1701,6 +1720,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRealitySubstanceCraftingMix.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRealitySubstanceData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRecipeTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRecyclableComponentData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRecyclableReward.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRecyclableType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRecyclerComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRefinerRecipe.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRefinerRecipeElement.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRefinerUnitComponentData.cs" />
@@ -1736,6 +1759,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardCommunityContribution.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardCompleteMission.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardCompleteMultiMission.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardCorvetteProduct.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardCrashSiteFly.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardCrashSiteRepair.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardCustomExpeditionLogEntry.cs" />
@@ -1817,6 +1841,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardProductRecipe.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardPurpleSystems.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardRechargeTech.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardRecycleAllObjInVolume.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardRecycleSpecificObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardRefreshHazProt.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardReinitialise.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcRewardRemoveSettlementJobPerk.cs" />
@@ -2104,6 +2130,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcStatType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcStatValueData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcStateTimeEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcStaticTag.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcStats.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcStatsAchievements.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcStatsBonus.cs" />
@@ -2140,6 +2167,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcSyncBufferSaveDataArray.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcSynchronisedBufferData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcSynchronisedBufferType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcTagComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcTargetMissionSurveyOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcTechBoxData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcTechBoxTable.cs" />
@@ -2168,7 +2196,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcTextStylePlain.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcTextStyleShadow.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcTexturePrefetchData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcThereminComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcThirdPersonAnimParams.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcTileTypeOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcTileTypeSet.cs" />
@@ -2209,7 +2236,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVROverride_Layout.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVROverride_Text.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcValueData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleCargoData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleCheckpointComponentData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleCollisionInertia.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleGarageComponentData.cs" />
@@ -2217,7 +2246,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleRaceInviteComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleScanTable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleScanTableEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleScanTechReq.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleTracksComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleVisibilityComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleWeaponMode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVehicleWeaponMuzzleData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcVibrationChannelData.cs" />
@@ -2310,6 +2342,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcGalaxyGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcGameplayGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcGraphicsGlobals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcGravityGunGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcMultiplayerGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcNavigationGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcPlacementGlobals.cs" />
@@ -2426,6 +2459,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkCavesEnum.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkChordPathMapping.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkChordsImageLookup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkCommonNavMeshBuildParams.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkControllerButtonLookup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkControllerList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkControllerSpecification.cs" />
@@ -2469,6 +2503,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkHeavyAirSystem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkHitCurveData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkID256Array.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkIKPropagationLimitData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkIKPropagationLimitMode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkIOSDevicePreset.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkIOSPerDeviceSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkIdArray.cs" />
@@ -2512,7 +2548,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkLocalisationEntry.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkLocalisationTable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkMagicModelData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkMarkupVolumeData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkMaterialAlternative.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkMaterialClass.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkMaterialData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkMaterialFlags.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkMaterialFxFlags.cs" />
@@ -2563,6 +2601,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNGuiWindowLayoutData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNamedAudioIdArray.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNamedAudioIdArrayTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshAgentFamily.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshAgentFamilyConfig.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshAreaFlagNavigability.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshAreaFlags.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshAreaGroup.cs" />
@@ -2570,11 +2610,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshAreaNavigability.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshAreaType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshAreaTypeNavigability.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshBuildParams.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshFlockingParams.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshInclusionParams.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshInclusionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshMovementDebugVisOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshPathingQuality.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshPathingQualitySettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkNavMeshPolyFlags.cs" />
@@ -2652,7 +2690,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTextureResource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTrailData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTransformData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTriggerEffectFeedback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTriggerEffectMultiplePositionFeedback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTriggerEffectMultiplePositionVibration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTriggerEffectOff.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTriggerEffectSlopeFeedback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTriggerEffectVibration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTriggerEffectWeapon.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTriggerFeedbackData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTriggerVolumeData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTrophyData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTrophyEntry.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkTrophyEnum.cs" />
@@ -2667,7 +2713,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVertexStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVirtualBinding.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVirtualBindingAltLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVolumeMarkupType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVolumeNavMeshBuildParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVolumeNavMeshFamilyBuildParams.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVolumeTriggerType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVoxelGeneratorData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkVoxelGeneratorRegionData.cs" />
@@ -2683,6 +2731,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkWaveSpectrumData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkWeightedAnim.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkWeightedAnimLibrary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Toolkit\TkWindPhysicsComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\SketchNodes\SnIfValueIs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\SketchNodes\SnValueAsBool.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\SketchNodes\SnRandomNumber.cs" />

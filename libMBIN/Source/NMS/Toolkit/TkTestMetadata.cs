@@ -5,7 +5,7 @@ using System;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x9CAA27609B5D49A8, NameHash = 0x69A0FDE1)]
+    [NMS(GUID = 0x2E7C005A78FE2BFB, NameHash = 0x69A0FDE1)]
     public class TkTestMetadata : NMSTemplate
     {
         [NMS(Index = 47)]
@@ -43,11 +43,11 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 4)]
         /* 0x01F0 */ public List<LinkableNMSTemplate> TestLinkableClassPointerArray;
         [NMS(Index = 16)]
-        /* 0x0200 */ public VariableSizeString TestModelFilename;
+        /* 0x0200 */ public GcFilename TestModelFilename;
         [NMS(Index = 29)]
         /* 0x0210 */ public GcSeed TestSeed;
         [NMS(Index = 17)]
-        /* 0x0220 */ public VariableSizeString TestTextureFilename;
+        /* 0x0220 */ public GcFilename TestTextureFilename;
         [NMS(Index = 26)]
         /* 0x0230 */ public long TestInt64;
         [NMS(Index = 40)]

@@ -1,15 +1,17 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x471FA669503B263C, NameHash = 0x121D912E)]
+    [NMS(GUID = 0x24A1EE0BC8B4ADD3, NameHash = 0x121D912E)]
     public class GcMissionConditionHasTechnology : NMSTemplate
     {
         [NMS(Index = 0)]
         /* 0x00 */ public NMSString0x10 Technology;
+        [NMS(Index = 4)]
+        /* 0x10 */ public bool AllowedToSetPageHint;
         [NMS(Index = 1)]
-        /* 0x10 */ public bool AllowPartiallyInstalled;
+        /* 0x11 */ public bool AllowPartiallyInstalled;
         [NMS(Index = 3)]
-        /* 0x11 */ public bool TakeTechFromSeasonData;
+        /* 0x12 */ public bool TakeTechFromSeasonData;
         [NMS(Index = 2)]
-        /* 0x12 */ public bool TeachIfNotKnown;
+        /* 0x13 */ public bool TeachIfNotKnown;
     }
 }

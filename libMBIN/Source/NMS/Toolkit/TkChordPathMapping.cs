@@ -11,11 +11,11 @@ namespace libMBIN.NMS.Toolkit
         [NMS(Index = 0)]
         /* 0x20 */ public List<TkInputEnum> ButtonIds;
         [NMS(Index = 4)]
-        /* 0x30 */ public VariableSizeString OverlayIcon;
+        /* 0x30 */ public GcFilename OverlayIcon;
         [NMS(Index = 3)]
-        /* 0x40 */ public VariableSizeString SolidIcon;
+        /* 0x40 */ public GcFilename SolidIcon;
         [NMS(Index = 5)]
-        /* 0x50 */ public VariableSizeString SpecialIcon;
+        /* 0x50 */ public GcFilename SpecialIcon;
         [NMS(Index = 2)]
         /* 0x60 */ public NMSString0x10 TextTag;
     }

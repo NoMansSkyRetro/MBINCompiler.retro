@@ -6,7 +6,7 @@ namespace libMBIN.NMS.Toolkit
     public class TkImGuiData : NMSTemplate
     {
         [NMS(Index = 4, Size = 0xA)]
-        /* 0x0000 */ public VariableSizeString[] RecentToolbox;
+        /* 0x0000 */ public GcFilename[] RecentToolbox;
         [NMS(Index = 5, Size = 0x80)]
         /* 0x00A0 */ public TkImGuiWindowData[] WindowTable;
         [NMS(Index = 0)]

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC086B6E528BCBA0A, NameHash = 0xBCBC706D)]
+    [NMS(GUID = 0x6AEED2B5FEBAC7BF, NameHash = 0xBCBC706D)]
     public class GcWeatherEffect : NMSTemplate
     {
         [NMS(Index = 1)]
@@ -19,7 +19,7 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 0)]
         /* 0x060 */ public NMSString0x10 Id;
         [NMS(Index = 26)]
-        /* 0x070 */ public VariableSizeString ImpactGift;
+        /* 0x070 */ public GcFilename ImpactGift;
         [NMS(Index = 25)]
         /* 0x080 */ public GcAudioWwiseEvents Audio;
         [NMS(Index = 16)]

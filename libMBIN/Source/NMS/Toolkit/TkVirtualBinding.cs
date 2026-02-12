@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xCE876DBD14A27C51, NameHash = 0x16AA0D1F)]
+    [NMS(GUID = 0xFBEC870E983B467D, NameHash = 0x16AA0D1F)]
     public class TkVirtualBinding : NMSTemplate
     {
         [NMS(Index = 3)]

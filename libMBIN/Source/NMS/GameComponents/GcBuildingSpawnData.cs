@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1C42659A07530974, NameHash = 0x55D62B6D)]
+    [NMS(GUID = 0xBE60E65B85011B7D, NameHash = 0x55D62B6D)]
     public class GcBuildingSpawnData : NMSTemplate
     {
         [NMS(Index = 22)]

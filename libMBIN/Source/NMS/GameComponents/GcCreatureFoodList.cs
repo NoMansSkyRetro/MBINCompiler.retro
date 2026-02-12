@@ -8,6 +8,6 @@ namespace libMBIN.NMS.GameComponents
         [NMS(Index = 0)]
         /* 0x10 */ public NMSString0x10 FoodProduct;
         [NMS(Index = 1)]
-        /* 0x20 */ public VariableSizeString ResourceFile;
+        /* 0x20 */ public GcFilename ResourceFile;
     }
 }

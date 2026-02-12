@@ -4,7 +4,7 @@ namespace libMBIN.NMS.GameComponents
     public class GcSentinelResource : NMSTemplate
     {
         [NMS(Index = 0)]
-        /* 0x00 */ public VariableSizeString Resource;
+        /* 0x00 */ public GcFilename Resource;
         [NMS(Index = 1)]
         /* 0x10 */ public int BaseHealth;
         [NMS(Index = 2)]

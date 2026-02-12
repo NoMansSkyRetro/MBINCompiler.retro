@@ -2,13 +2,13 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x31F3CA1D5BD77BF5, NameHash = 0xC435CF34)]
+    [NMS(GUID = 0xFBD98A73E8E3C627, NameHash = 0xC435CF34)]
     public class GcResourceElement : NMSTemplate
     {
         [NMS(Index = 4)]
         /* 0x00 */ public VariableSizeString AltId;
         [NMS(Index = 0)]
-        /* 0x10 */ public VariableSizeString Filename;
+        /* 0x10 */ public GcFilename Filename;
         [NMS(Index = 3)]
         /* 0x20 */ public TkProceduralTextureChosenOptionList ProceduralTexture;
         [NMS(Index = 2)]

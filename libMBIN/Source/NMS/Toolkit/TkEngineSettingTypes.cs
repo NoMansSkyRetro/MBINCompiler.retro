@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x4BF0369E749D80C0, NameHash = 0xA0749579)]
+    [NMS(GUID = 0x79B8DA1FC10F4D2D, NameHash = 0xA0749579)]
     public class TkEngineSettingTypes : NMSTemplate
     {
-        // size: 0x36
+        // size: 0x38
         public enum EngineSettingEnum : uint {
             FullScreen,
             Borderless,
@@ -14,6 +14,8 @@ namespace libMBIN.NMS.Toolkit
             Monitor,
             FoVOnFoot,
             FoVInShip,
+            FoVOnFootFP,
+            FoVInShipFP,
             VSync,
             TextureQuality,
             AnimationQuality,

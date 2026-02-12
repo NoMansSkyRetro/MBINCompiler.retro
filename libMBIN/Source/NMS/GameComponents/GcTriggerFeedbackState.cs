@@ -3,13 +3,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x528BC4FFB5181AED, NameHash = 0xAFACAFA7)]
+    [NMS(GUID = 0x305439DE0F4FE5BA, NameHash = 0xAFACAFA7)]
     public class GcTriggerFeedbackState : NMSTemplate
     {
-        [NMS(Index = 0)]
-        /* 0x00 */ public NMSString0x10 Id;
         [NMS(Index = 2)]
-        /* 0x10 */ public TkTriggerFeedbackData Data;
+        /* 0x00 */ public TkTriggerFeedbackData Data;
+        [NMS(Index = 0)]
+        /* 0x10 */ public NMSString0x10 Id;
         [NMS(Index = 1)]
         /* 0x20 */ public GcInputActions Action;
     }

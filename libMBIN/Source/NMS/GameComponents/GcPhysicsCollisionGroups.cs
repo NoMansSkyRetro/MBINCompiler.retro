@@ -2,16 +2,17 @@ using System;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF6A9B5BF06808A9D, NameHash = 0x6A2D4F5A)]
+    [NMS(GUID = 0xAA7F6FA5A54E725A, NameHash = 0x6A2D4F5A)]
     public class GcPhysicsCollisionGroups : NMSTemplate
     {
-        // size: 0x48
+        // size: 0x4F
         [Flags]
         public enum CollisionGroupEnum : uint {
             Normal,
             Terrain,
             TerrainInstance,
             TerrainActivated,
+            Trigger,
             Water,
             Substance,
             Asteroid,
@@ -21,18 +22,23 @@ namespace libMBIN.NMS.GameComponents
             Ragdoll,
             Vehicle,
             Vehicle_Piloted,
+            Vehicle_BedFloor,
+            Vehicle_BedWall,
+            Vehicle_Wheels,
+            VehicleToVehicle,
             Creature,
             Spaceship,
             Spaceship_Landing,
             Debris,
             Shield,
             Loot,
-            Trigger,
+            PlayerMovableObject,
             CollidesWithNothing,
             CollidesWithEverything,
             DefaultRaycast,
             Raycast,
             Raycast_Camera,
+            Raycast_VehicleCamera,
             Raycast_SampleCollisionWithCamera,
             Raycast_PlayerInteract,
             Raycast_PlayerInteract_Shoot,
@@ -80,6 +86,7 @@ namespace libMBIN.NMS.GameComponents
             Raycast_CatchTerrainAndNormal,
             Raycast_CatchCreatureObstacles,
             Raycast_SpaceStationShipBuilderCamera,
+            Raycast_GravLaserObjectBlocking,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public CollisionGroupEnum CollisionGroup;
