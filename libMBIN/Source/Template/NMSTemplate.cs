@@ -857,7 +857,7 @@ namespace libMBIN
                         writer.Write( (Int32) 0 ); // String length
                         writer.Write( listEnding );
                         var fieldValue = (INMSVariableLengthString) fieldData;
-                        if (fieldType.Name == "VariableSizeString" && (fieldValue.String == "" || fieldValue.String == null)) {
+                        if (fieldType.Name == "VariableSizeString" && (fieldValue == null || fieldValue.String == "" || fieldValue.String == null)) {
                             // Do nothing since in this case we don't want to insert anything...
                         } else if (fieldType.Name == "HashedString") {
                             // Write some extra fields.
