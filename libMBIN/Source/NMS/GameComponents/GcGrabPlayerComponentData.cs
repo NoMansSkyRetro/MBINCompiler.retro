@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x9EC29EFA51C1FA26, NameHash = 0x5F8D3016)]
+    [NMS(GUID = 0xABBB84A7F92A5577, NameHash = 0x5F8D3016)]
     public class GcGrabPlayerComponentData : NMSTemplate
     {
         [NMS(Index = 18)]

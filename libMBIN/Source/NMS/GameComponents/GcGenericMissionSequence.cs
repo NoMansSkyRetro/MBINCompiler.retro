@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA6AB85BA75A834AC, NameHash = 0x7FD50C85)]
+    [NMS(GUID = 0x9076F1026AC55FBC, NameHash = 0x7FD50C85)]
     public class GcGenericMissionSequence : NMSTemplate
     {
         [NMS(Index = 24)]
@@ -98,7 +98,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x448 */ public MessageStartEnum MessageStart;
         [NMS(Index = 19)]
         /* 0x44C */ public GcMissionCategory MissionCategory;
-        // size: 0xB
+        // size: 0xC
         public enum MissionClassEnum : uint {
             Primary,
             Secondary,
@@ -111,6 +111,7 @@ namespace libMBIN.NMS.GameComponents
             BlackHole,
             FleetSupport,
             Settlement,
+            SecondaryTempMaxPriority,
         }
         [NMS(Index = 1)]
         /* 0x450 */ public MissionClassEnum MissionClass;

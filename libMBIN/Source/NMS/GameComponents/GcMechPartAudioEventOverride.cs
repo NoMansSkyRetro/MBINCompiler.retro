@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x56EEE9C1B55D9DF1, NameHash = 0x46EB7A3E)]
+    [NMS(GUID = 0x9231920C7CD4A3C8, NameHash = 0x46EB7A3E)]
     public class GcMechPartAudioEventOverride : NMSTemplate
     {
         [NMS(Index = 0)]
