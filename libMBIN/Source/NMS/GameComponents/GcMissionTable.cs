@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x71E81DD8AE5B1EB, NameHash = 0x4E2556EB)]
+    [NMS(GUID = 0x925866B71D938B47, NameHash = 0x4E2556EB)]
     public class GcMissionTable : NMSTemplate
     {
         [NMS(Index = 0, KeyField = "MissionID")]

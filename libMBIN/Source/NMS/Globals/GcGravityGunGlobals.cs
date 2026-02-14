@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x56B2EAA2FBBACAB6, NameHash = 0x8BB80F0F)]
+    [NMS(GUID = 0xAB4A13E063AAE362, NameHash = 0x8BB80F0F)]
     public class GcGravityGunGlobals : NMSTemplate
     {
         [NMS(Index = 35)]
@@ -44,49 +44,55 @@ namespace libMBIN.NMS.Globals
         /* 0x5C */ public float GrabRotationBobTorqueStrength;
         [NMS(Index = 32)]
         /* 0x60 */ public float GrabRotationBobTorqueVariationSpeed;
-        [NMS(Index = 39)]
-        /* 0x64 */ public float ImpactDamageMaxDamage;
-        [NMS(Index = 38)]
-        /* 0x68 */ public float ImpactDamageMaxImpulse;
-        [NMS(Index = 37)]
-        /* 0x6C */ public float ImpactDamageMinImpulse;
+        [NMS(Index = 42)]
+        /* 0x64 */ public float ImpactAggressiveDamageMaxDamage;
+        [NMS(Index = 41)]
+        /* 0x68 */ public float ImpactAggressiveDamageMaxImpulse;
         [NMS(Index = 40)]
-        /* 0x70 */ public float ImpactDamageModifierOnTruck;
+        /* 0x6C */ public float ImpactAggressiveDamageMinImpulse;
+        [NMS(Index = 39)]
+        /* 0x70 */ public float ImpactDamageMaxDamage;
+        [NMS(Index = 38)]
+        /* 0x74 */ public float ImpactDamageMaxImpulse;
+        [NMS(Index = 37)]
+        /* 0x78 */ public float ImpactDamageMinImpulse;
+        [NMS(Index = 43)]
+        /* 0x7C */ public float ImpactDamageModifierOnTruck;
         [NMS(Index = 36)]
-        /* 0x74 */ public float ImpactDamageSpeedThreshold;
+        /* 0x80 */ public float ImpactDamageSpeedThreshold;
         [NMS(Index = 16)]
-        /* 0x78 */ public float InitialGrabSpeed;
+        /* 0x84 */ public float InitialGrabSpeed;
         [NMS(Index = 18)]
-        /* 0x7C */ public float InitialGrabTimeMinSeconds;
+        /* 0x88 */ public float InitialGrabTimeMinSeconds;
         [NMS(Index = 2)]
-        /* 0x80 */ public float PushForceUpComponent;
+        /* 0x8C */ public float PushForceUpComponent;
         [NMS(Index = 3)]
-        /* 0x84 */ public float PushPower;
+        /* 0x90 */ public float PushPower;
         [NMS(Index = 6)]
-        /* 0x88 */ public float PushPowerInScrapyard;
+        /* 0x94 */ public float PushPowerInScrapyard;
         [NMS(Index = 4)]
-        /* 0x8C */ public float PushPowerInScrapyardDistance;
+        /* 0x98 */ public float PushPowerInScrapyardDistance;
         [NMS(Index = 8)]
-        /* 0x90 */ public float PushPowerSentinel;
+        /* 0x9C */ public float PushPowerSentinel;
         [NMS(Index = 7)]
-        /* 0x94 */ public float PushPowerSentinelEject;
+        /* 0xA0 */ public float PushPowerSentinelEject;
         [NMS(Index = 5)]
-        /* 0x98 */ public float PushPowerToxicInScrapyard;
+        /* 0xA4 */ public float PushPowerToxicInScrapyard;
         [NMS(Index = 9)]
-        /* 0x9C */ public float ThresholdForAngularEjectionVelocity;
+        /* 0xA8 */ public float ThresholdForAngularEjectionVelocity;
         [NMS(Index = 1)]
-        /* 0xA0 */ public int WeaponChargeGrab;
+        /* 0xAC */ public int WeaponChargeGrab;
         [NMS(Index = 0)]
-        /* 0xA4 */ public int WeaponChargePush;
+        /* 0xB0 */ public int WeaponChargePush;
         [NMS(Index = 13)]
-        /* 0xA8 */ public TkCurveType EjectPowerCurve;
+        /* 0xB4 */ public TkCurveType EjectPowerCurve;
         [NMS(Index = 28)]
-        /* 0xA9 */ public bool GrabPositionBobEnabled;
+        /* 0xB5 */ public bool GrabPositionBobEnabled;
         [NMS(Index = 31)]
-        /* 0xAA */ public bool GrabRotationBobEnabled;
+        /* 0xB6 */ public bool GrabRotationBobEnabled;
         [NMS(Index = 19)]
-        /* 0xAB */ public bool GrabUseDynamicPhysics;
+        /* 0xB7 */ public bool GrabUseDynamicPhysics;
         [NMS(Index = 17)]
-        /* 0xAC */ public TkCurveType InitialGrabCurve;
+        /* 0xB8 */ public TkCurveType InitialGrabCurve;
     }
 }
