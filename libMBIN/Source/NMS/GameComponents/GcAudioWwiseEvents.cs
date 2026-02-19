@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAF8E17A03066BC64, NameHash = 0x7A0D33C8)]
+    [NMS(GUID = 0x8C8A62326C9C3DED, NameHash = 0x7A0D33C8)]
     public class GcAudioWwiseEvents : NMSTemplate
     {
-        // size: 0xAF9
+        // size: 0xAFC
         public enum AkEventEnum : uint {
             INVALID_EVENT = 0x0,
             ABANDONED_DOOR_UNLOCK = 0x264BED2D,
@@ -2136,6 +2136,9 @@ namespace libMBIN.NMS.GameComponents
             SCAN_OFF = 0x70FDCEA8,
             SCAN_ON = 0x8022EEB2,
             SCRAP_DESTROY = 0x8ED2EF33,
+            SCRAPYARD_ROBOARM01 = 0xDA03FD7E,
+            SCRAPYARD_ROBOARM02 = 0xDA03FD7D,
+            SCRAPYARD_ROBOARM03 = 0xDA03FD7C,
             SEAHORSE_SWIM = 0x22E468,
             SEAURCHINCLOSE = 0x39AEF411,
             SEAURCHINEXTEND = 0x7A044893,

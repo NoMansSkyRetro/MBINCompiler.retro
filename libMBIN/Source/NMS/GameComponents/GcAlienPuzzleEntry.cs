@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x41D1433A520CB1CA, NameHash = 0x35D4E04)]
+    [NMS(GUID = 0x3D6AC837CD2759, NameHash = 0x35D4E04)]
     public class GcAlienPuzzleEntry : NMSTemplate
     {
         [NMS(Index = 2)]

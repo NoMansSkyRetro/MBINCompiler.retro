@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x2164FDC513B2C3CC, NameHash = 0x29022DE4)]
+    [NMS(GUID = 0xF6D75ABA7B82C788, NameHash = 0x29022DE4)]
     public class GcRobotGlobals : NMSTemplate
     {
         [NMS(Index = 109)]
