@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xB546AF0CE9322B6B, NameHash = 0xBADBD713)]
+    [NMS(GUID = 0xD830A202FB69E2A4, NameHash = 0xBADBD713)]
     public class GcQuickMenuActions : NMSTemplate
     {
-        // size: 0x41
+        // size: 0x42
         public enum QuickMenuActionsEnum : uint {
             None,
             CallFreighter,
@@ -54,6 +54,7 @@ namespace libMBIN.NMS.GameComponents
             SummonPet,
             SummonPetSubMenu,
             WarpToNexus,
+            SeasonRecovery,
             PetUI,
             ByteBeatSubMenu,
             ByteBeatPlay,
