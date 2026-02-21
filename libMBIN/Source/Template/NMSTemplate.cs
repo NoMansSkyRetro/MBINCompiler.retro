@@ -909,7 +909,9 @@ namespace libMBIN
 
         public void AppendToWriter( BinaryWriter writer, ref List<Tuple<long, object>> additionalData, ref int addtDataIndex, Type parent, UInt32 listEnding = 0xAAAAAA01, byte paddingByte = 0 ) {
             long templatePosition = writer.BaseStream.Position;
+            #if DEBUG_TEMPLATE
             Logger.LogDebug( $"[C] writing {GetType().Name} to offset 0x{templatePosition:X} (parent: {parent.Name})" );
+            #endif
             var type = GetType();
             var fields = type.GetFields().OrderBy( field => field.MetadataToken ); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
@@ -963,7 +965,9 @@ namespace libMBIN
                 var template = (NMSTemplate) entry;
                 var listObjects = new List<Tuple<long, object>>();     // new list of objects so that this data is serialised first
                 var addtData = new Dictionary<long, object>();
+                #if DEBUG_TEMPLATE
                 Logger.LogDebug( $"[C] writing {template.GetType().Name} to offset 0x{writer.BaseStream.Position:X}" );
+                #endif
                 // pass the new listObject object in place of additionalData so that this branch is serialised before the whole layer
                 template.AppendToWriter( writer, ref listObjects, ref addtDataIndexThis, GetType(), paddingByte: paddingByte );
                 for ( int i = 0; i < listObjects.Count; i++ ) {
@@ -1062,7 +1066,9 @@ namespace libMBIN
             int addtDataIndexThis = addtDataIndex;
 
             foreach ( var entry in list ) {
+                #if DEBUG_TEMPLATE
                 DebugLogTemplate( $"[C] writing {entry.GetType().Name} to offset 0x{writer.BaseStream.Position:X}" );
+                #endif
                 SerializeValue( writer, entry.GetType(), entry, null, null, ref additionalData, ref addtDataIndexThis, listEnding, paddingByte );
             }
         }
@@ -1125,7 +1131,9 @@ namespace libMBIN
 
                     if ( typeof(INMSVariableLengthString).IsAssignableFrom(data.Item2.GetType()) ) {
                         var str = (INMSVariableLengthString) data.Item2;
+                        #if DEBUG_TEMPLATE
                         Logger.LogDebug($"[C+] Writing {str.StringValue()} to 0x{writer.BaseStream.Position:X}");
+                        #endif
                         long stringPos = writer.BaseStream.Position;
                         writer.WriteString(str.StringValue(), Encoding.UTF8, null, true, paddingByte);
                         long stringEndPos = writer.BaseStream.Position;
