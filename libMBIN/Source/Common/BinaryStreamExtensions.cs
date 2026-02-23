@@ -27,7 +27,7 @@ namespace libMBIN {
                 } else {
                     writer.Write( new byte[alignBy - mod] );
                 }
-                NMSTemplate.DebugLogTemplate( $"[C] aligned {name} to offset 0x{writer.BaseStream.Position:X}" );
+                //NMSTemplate.DebugLogTemplate( $"[C] aligned {name} to offset 0x{writer.BaseStream.Position:X}" );
             }
         }
 
