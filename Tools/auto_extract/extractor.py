@@ -131,7 +131,7 @@ EXTRA_CLASSES = [
     "cCollisionShapeType"
 ]
 # Classes that don't look like globals but actually are.
-ACTUALLY_GLOBALS = ['GcSceneOptions', 'GcSmokeTestOptions', 'GcDebugOptions']
+ACTUALLY_GLOBALS = ['GcSceneOptions', 'GcSmokeTestOptions', 'GcDebugOptions', 'GcCollisionTable']
 NAME_MAPPING = {
     'GcDefaulMissionProduct': 'GcDefaultMissionProduct',
     'GcDefaulMissionSubstance': 'GcDefaultMissionSubstance',

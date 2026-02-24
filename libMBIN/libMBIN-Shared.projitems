@@ -315,7 +315,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCloudProperties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCockpitComponentData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCollisionCapsule.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcCollisionTable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcColourModifier.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcColourPaletteData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcColouriseComponentData.cs" />
@@ -2331,6 +2330,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcBuildingGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcCameraGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcCharacterGlobals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcCollisionTable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcCreatureGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcDebugEditorGlobals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\Globals\GcDebugOptions.cs" />
