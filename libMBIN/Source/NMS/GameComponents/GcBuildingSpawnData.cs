@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBE60E65B85011B7D, NameHash = 0x55D62B6D)]
+    [NMS(GUID = 0x8464212632ED6662, NameHash = 0x55D62B6D)]
     public class GcBuildingSpawnData : NMSTemplate
     {
         [NMS(Index = 22)]
@@ -18,43 +18,43 @@ namespace libMBIN.NMS.GameComponents
         /* 0x78 */ public int[] ClusterLayouts;
         [NMS(Index = 11)]
         /* 0x98 */ public TkNoiseFlattenOptions FlattenType;
-        [NMS(Index = 7)]
-        /* 0xA0 */ public GcBuildingClassification Classification;
         [NMS(Index = 9)]
-        /* 0xA4 */ public int ClusterLayoutCount;
+        /* 0xA0 */ public int ClusterLayoutCount;
         [NMS(Index = 10)]
-        /* 0xA8 */ public float ClusterSpacing;
+        /* 0xA4 */ public float ClusterSpacing;
         [NMS(Index = 0)]
-        /* 0xAC */ public float Density;
+        /* 0xA8 */ public float Density;
         [NMS(Index = 20)]
-        /* 0xB0 */ public int InstanceID;
+        /* 0xAC */ public int InstanceID;
         [NMS(Index = 2)]
-        /* 0xB4 */ public int LSystemID;
+        /* 0xB0 */ public int LSystemID;
         [NMS(Index = 19)]
-        /* 0xB8 */ public float MaxHeight;
+        /* 0xB4 */ public float MaxHeight;
         [NMS(Index = 16)]
-        /* 0xBC */ public float MaxXZRotation;
+        /* 0xB8 */ public float MaxXZRotation;
         [NMS(Index = 18)]
-        /* 0xC0 */ public float MinHeight;
+        /* 0xBC */ public float MinHeight;
         [NMS(Index = 17)]
-        /* 0xC4 */ public float Radius;
+        /* 0xC0 */ public float Radius;
         [NMS(Index = 15, MxmlName = "Scale ")]
-        /* 0xC8 */ public float Scale;
+        /* 0xC4 */ public float Scale;
         [NMS(Index = 4)]
-        /* 0xCC */ public int WFCBuildingPreset;
+        /* 0xC8 */ public int WFCBuildingPreset;
         [NMS(Index = 3)]
-        /* 0xD0 */ public int WFCModuleSet;
+        /* 0xCC */ public int WFCModuleSet;
         [NMS(Index = 13)]
-        /* 0xD4 */ public bool AlignToNormal;
+        /* 0xD0 */ public bool AlignToNormal;
         [NMS(Index = 5)]
-        /* 0xD5 */ public bool AutoCollision;
+        /* 0xD1 */ public bool AutoCollision;
         [NMS(Index = 23)]
-        /* 0xD6 */ public bool BuildingSizeCalculated;
+        /* 0xD2 */ public bool BuildingSizeCalculated;
+        [NMS(Index = 7)]
+        /* 0xD3 */ public GcBuildingClassification Classification;
         [NMS(Index = 12)]
-        /* 0xD7 */ public bool GivesShelter;
+        /* 0xD4 */ public bool GivesShelter;
         [NMS(Index = 24)]
-        /* 0xD8 */ public bool IgnoreParticlesAABB;
+        /* 0xD5 */ public bool IgnoreParticlesAABB;
         [NMS(Index = 14)]
-        /* 0xD9 */ public bool LowerIntoGround;
+        /* 0xD6 */ public bool LowerIntoGround;
     }
 }

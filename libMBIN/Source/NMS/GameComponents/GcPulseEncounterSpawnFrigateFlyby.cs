@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x50EB340570AC93D4, NameHash = 0x332E71B4)]
+    [NMS(GUID = 0x944DA346529C6423, NameHash = 0x332E71B4)]
     public class GcPulseEncounterSpawnFrigateFlyby : NMSTemplate
     {
         [NMS(Index = 3)]

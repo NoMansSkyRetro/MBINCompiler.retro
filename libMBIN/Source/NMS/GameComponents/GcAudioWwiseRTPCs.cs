@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xE2250ED3E5F40D3B, NameHash = 0xA7A8D1DB)]
+    [NMS(GUID = 0x51AD4A2F9D56A195, NameHash = 0xA7A8D1DB)]
     public class GcAudioWwiseRTPCs : NMSTemplate
     {
-        // size: 0x6B
+        // size: 0x6D
         public enum AkRTPCEnum : uint {
             INVALID_RTPC = 0x0,
             BASE_BATTERY_CHARGING = 0x7C13B3BA,
@@ -17,9 +17,11 @@ namespace libMBIN.NMS.GameComponents
             COMMS_CHATTER_PIRATES = 0x54E82B11,
             COMMS_CHATTER_POLICE = 0xD547E7BB,
             CREATURE_EXISTENCE = 0xBBAE19A3,
+            CREATURE_SIZE_PET_BATTLE = 0xB2C4DB29,
             CREATURES_STEP_SIZE = 0xE1067D02,
             DOPPLER_DROID_SMALL = 0x1F092F38,
             GAMEOBJECT_DISTANCE = 0x8EB54518,
+            GAMETABLE_DISTANCE_SCALE = 0x6C5F29D2,
             GLOBAL_HAZARD_LEVEL = 0xFDD1B808,
             GLOBAL_HEALTH_LEVEL = 0x2A61033E,
             GLOBAL_SHIELD_LEVEL = 0xEA9FE763,

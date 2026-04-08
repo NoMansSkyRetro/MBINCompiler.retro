@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC5528B369C9796B3, NameHash = 0xBB646461)]
+    [NMS(GUID = 0xDAFA914F4EEBB3B4, NameHash = 0xBB646461)]
     public class GcTradeSettings : NMSTemplate
     {
         [NMS(Index = 24)]
@@ -27,35 +27,37 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0828 */ public GcTradeData MapShop;
         [NMS(Index = 7)]
         /* 0x0910 */ public GcTradeData NexusTechSpecialist;
+        [NMS(Index = 26)]
+        /* 0x09F8 */ public GcTradeData PetShop;
         [NMS(Index = 20)]
-        /* 0x09F8 */ public GcTradeData PirateTech;
+        /* 0x0AE0 */ public GcTradeData PirateTech;
         [NMS(Index = 21)]
-        /* 0x0AE0 */ public GcTradeData PirateVisitor;
+        /* 0x0BC8 */ public GcTradeData PirateVisitor;
         [NMS(Index = 17)]
-        /* 0x0BC8 */ public GcTradeData Scrap;
+        /* 0x0CB0 */ public GcTradeData Scrap;
         [NMS(Index = 18)]
-        /* 0x0CB0 */ public GcTradeData SeasonRewardsShop;
+        /* 0x0D98 */ public GcTradeData SeasonRewardsShop;
         [NMS(Index = 8)]
-        /* 0x0D98 */ public GcTradeData Ship;
+        /* 0x0E80 */ public GcTradeData Ship;
         [NMS(Index = 3)]
-        /* 0x0E80 */ public GcTradeData ShipTechSpecialist;
+        /* 0x0F68 */ public GcTradeData ShipTechSpecialist;
         [NMS(Index = 1)]
-        /* 0x0F68 */ public GcTradeData Shop;
+        /* 0x1050 */ public GcTradeData Shop;
         [NMS(Index = 19)]
-        /* 0x1050 */ public GcTradeData SmugglerStation;
+        /* 0x1138 */ public GcTradeData SmugglerStation;
         [NMS(Index = 0)]
-        /* 0x1138 */ public GcTradeData SpaceStation;
+        /* 0x1220 */ public GcTradeData SpaceStation;
         [NMS(Index = 4)]
-        /* 0x1220 */ public GcTradeData SuitTechSpecialist;
+        /* 0x1308 */ public GcTradeData SuitTechSpecialist;
         [NMS(Index = 2)]
-        /* 0x1308 */ public GcTradeData TechShop;
+        /* 0x13F0 */ public GcTradeData TechShop;
         [NMS(Index = 10)]
-        /* 0x13F0 */ public GcTradeData TraShip;
+        /* 0x14D8 */ public GcTradeData TraShip;
         [NMS(Index = 6)]
-        /* 0x14D8 */ public GcTradeData VehicleTechSpecialist;
+        /* 0x15C0 */ public GcTradeData VehicleTechSpecialist;
         [NMS(Index = 11)]
-        /* 0x15C0 */ public GcTradeData WarShip;
+        /* 0x16A8 */ public GcTradeData WarShip;
         [NMS(Index = 5)]
-        /* 0x16A8 */ public GcTradeData WeapTechSpecialist;
+        /* 0x1790 */ public GcTradeData WeapTechSpecialist;
     }
 }

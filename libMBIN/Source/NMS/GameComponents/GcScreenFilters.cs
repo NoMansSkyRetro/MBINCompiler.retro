@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1A0CD3B0154181CF, NameHash = 0x99BB0142)]
+    [NMS(GUID = 0x498FB3D132A27D14, NameHash = 0x99BB0142)]
     public class GcScreenFilters : NMSTemplate
     {
-        // size: 0x54
+        // size: 0x55
         public enum ScreenFilterEnum : uint {
             Default,
             DefaultStorm,
@@ -40,6 +40,7 @@ namespace libMBIN.NMS.GameComponents
             GBGrey,
             Binoculars,
             Surveying,
+            PetSurvey,
             Nexus,
             SpaceStation,
             Freighter,

@@ -1,10 +1,10 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF627EA567E83B353, NameHash = 0xF2F460E6)]
+    [NMS(GUID = 0x3E03F64CC3EEC1, NameHash = 0xF2F460E6)]
     public class GcBuildingClassification : NMSTemplate
     {
         // size: 0x3E
-        public enum BuildingClassEnum : uint {
+        public enum BuildingClassEnum : byte {
             None,
             TerrainResource,
             Shelter,

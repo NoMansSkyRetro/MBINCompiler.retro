@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xA0AC732D03AC6BAB, NameHash = 0xA6F502B8)]
+    [NMS(GUID = 0xC6122BA1FCDC06BC, NameHash = 0xA6F502B8)]
     public class TkDynamicPhysicsComponentData : NMSTemplate
     {
         [NMS(Index = 1)]
@@ -15,24 +15,24 @@ namespace libMBIN.NMS.Toolkit
             Glass,
         }
         [NMS(Index = 2)]
-        /* 0x44 */ public PhysicsSurfacePropertiesEnum PhysicsSurfaceProperties;
+        /* 0x48 */ public PhysicsSurfacePropertiesEnum PhysicsSurfaceProperties;
         [NMS(Index = 11)]
-        /* 0x48 */ public float SimpleCharacterCollisionFwdOffset;
+        /* 0x4C */ public float SimpleCharacterCollisionFwdOffset;
         [NMS(Index = 9)]
-        /* 0x4C */ public float SimpleCharacterCollisionHeight;
+        /* 0x50 */ public float SimpleCharacterCollisionHeight;
         [NMS(Index = 10)]
-        /* 0x50 */ public float SimpleCharacterCollisionHeightOffset;
+        /* 0x54 */ public float SimpleCharacterCollisionHeightOffset;
         [NMS(Index = 8)]
-        /* 0x54 */ public float SimpleCharacterCollisionRadius;
+        /* 0x58 */ public float SimpleCharacterCollisionRadius;
         [NMS(Index = 4)]
-        /* 0x58 */ public float SpinOnCreate;
+        /* 0x5C */ public float SpinOnCreate;
         [NMS(Index = 5)]
-        /* 0x5C */ public bool Animated;
+        /* 0x60 */ public bool Animated;
         [NMS(Index = 3)]
-        /* 0x5D */ public bool DisableGravity;
+        /* 0x61 */ public bool DisableGravity;
         [NMS(Index = 7)]
-        /* 0x5E */ public bool RotateSimpleCharacterCollisionCapsule;
+        /* 0x62 */ public bool RotateSimpleCharacterCollisionCapsule;
         [NMS(Index = 6)]
-        /* 0x5F */ public bool UseSimpleCharacterCollision;
+        /* 0x63 */ public bool UseSimpleCharacterCollision;
     }
 }

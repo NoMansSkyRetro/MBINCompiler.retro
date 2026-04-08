@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x54CE447B1FB78A07, NameHash = 0x79FEF5EB)]
+    [NMS(GUID = 0xC9DF94B23FE3CB44, NameHash = 0x79FEF5EB)]
     public class GcBiomeData : NMSTemplate
     {
         [NMS(Index = 14)]

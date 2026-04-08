@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x89D12E1AD28101DA, NameHash = 0xFC6CA276)]
+    [NMS(GUID = 0x3A921FD15352C1AE, NameHash = 0xFC6CA276)]
     public class GcPlayerGlobals : NMSTemplate
     {
         [NMS(Index = 30)]

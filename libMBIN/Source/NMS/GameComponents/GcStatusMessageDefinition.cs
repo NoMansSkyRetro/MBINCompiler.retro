@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBF9DFBF2515F6DCE, NameHash = 0xA29CFBD3)]
+    [NMS(GUID = 0xDF60F41FD943049E, NameHash = 0xA29CFBD3)]
     public class GcStatusMessageDefinition : NMSTemplate
     {
         [NMS(Index = 5)]
@@ -15,7 +15,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x50 */ public float DisplayDurationMultiplier;
         [NMS(Index = 9)]
         /* 0x54 */ public float Distance;
-        [NMS(Index = 13)]
+        [NMS(Index = 14)]
         /* 0x58 */ public GcStatusMessageMissionMarkup MissionMarkup;
         // size: 0x8
         public enum ReplicateToEnum : uint {
@@ -36,13 +36,15 @@ namespace libMBIN.NMS.GameComponents
         /* 0x61 */ public bool AddPetNamePrefix;
         [NMS(Index = 2)]
         /* 0x62 */ public bool AddPlayerNamePrefix;
+        [NMS(Index = 13)]
+        /* 0x63 */ public bool AllowedInGameTable;
         [NMS(Index = 6)]
-        /* 0x63 */ public bool IncludePlayerName;
+        /* 0x64 */ public bool IncludePlayerName;
         [NMS(Index = 11)]
-        /* 0x64 */ public bool OnlyInMultiplayer;
+        /* 0x65 */ public bool OnlyInMultiplayer;
         [NMS(Index = 12)]
-        /* 0x65 */ public bool OnlyOnFireteam;
+        /* 0x66 */ public bool OnlyOnFireteam;
         [NMS(Index = 8)]
-        /* 0x66 */ public bool PostLocally;
+        /* 0x67 */ public bool PostLocally;
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x419A9FCA5C4A4EB6, NameHash = 0x99889B85)]
+    [NMS(GUID = 0xFD546E7CD7A7A0E2, NameHash = 0x99889B85)]
     public class GcPetBehaviourTable : NMSTemplate
     {
         [NMS(Index = 0, Size = 0x1C, EnumType = typeof(GcPetBehaviours.PetBehaviourEnum))]
@@ -16,31 +16,31 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0E20 */ public GcCreaturePetTraitRanges[] TraitRanges;
         [NMS(Index = 6, Size = 0x3, EnumType = typeof(GcCreaturePetTraits.PetTraitEnum))]
         /* 0x0F28 */ public GcPetTraitMoodModifierList[] TraitMoodModifiers;
-        [NMS(Index = 7, Size = 0x9, EnumType = typeof(GcCreaturePetRewardActions.PetActionEnum))]
+        [NMS(Index = 7, Size = 0xA, EnumType = typeof(GcCreaturePetRewardActions.PetActionEnum))]
         /* 0x0F88 */ public GcPetActionMoodModifier[] RewardMoodModifier;
         [NMS(Index = 5, Size = 0x2, EnumType = typeof(GcCreaturePetMood.PetMoodEnum))]
-        /* 0x0FD0 */ public float[] MoodIncreaseTime;
+        /* 0x0FD8 */ public float[] MoodIncreaseTime;
         [NMS(Index = 9, Size = 0x2, EnumType = typeof(GcCreaturePetMood.PetMoodEnum))]
-        /* 0x0FD8 */ public float[] MoodValuesOnAdopt;
+        /* 0x0FE0 */ public float[] MoodValuesOnAdopt;
         [NMS(Index = 10, Size = 0x2, EnumType = typeof(GcCreaturePetMood.PetMoodEnum))]
-        /* 0x0FE0 */ public float[] MoodValuesOnHatch;
+        /* 0x0FE8 */ public float[] MoodValuesOnHatch;
         [NMS(Index = 15)]
-        /* 0x0FE8 */ public float AccessoryGyroDamping;
+        /* 0x0FF0 */ public float AccessoryGyroDamping;
         [NMS(Index = 13)]
-        /* 0x0FEC */ public float AccessoryGyroFollowMotionStrength;
+        /* 0x0FF4 */ public float AccessoryGyroFollowMotionStrength;
         [NMS(Index = 16)]
-        /* 0x0FF0 */ public float AccessoryGyroStrength;
+        /* 0x0FF8 */ public float AccessoryGyroStrength;
         [NMS(Index = 14)]
-        /* 0x0FF4 */ public float AccessoryGyroToNeutralStrength;
+        /* 0x0FFC */ public float AccessoryGyroToNeutralStrength;
         [NMS(Index = 1)]
-        /* 0x0FF8 */ public float GlobalCooldownModifier;
+        /* 0x1000 */ public float GlobalCooldownModifier;
         [NMS(Index = 4)]
-        /* 0x0FFC */ public float PlayerActivityDecreaseTime;
+        /* 0x1004 */ public float PlayerActivityDecreaseTime;
         [NMS(Index = 3)]
-        /* 0x1000 */ public float PlayerActivityIncreaseTime;
+        /* 0x1008 */ public float PlayerActivityIncreaseTime;
         [NMS(Index = 2)]
-        /* 0x1004 */ public float UsefulBehaviourLinkedCooldownAmount;
+        /* 0x100C */ public float UsefulBehaviourLinkedCooldownAmount;
         [NMS(Index = 17)]
-        /* 0x1008 */ public bool AccessoryGyroActive;
+        /* 0x1010 */ public bool AccessoryGyroActive;
     }
 }

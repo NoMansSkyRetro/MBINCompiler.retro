@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x576382D59B5CC958, NameHash = 0xC8C2FA1E)]
+    [NMS(GUID = 0xC15FDA40C326A4EC, NameHash = 0xC8C2FA1E)]
     public class GcRealityGameIcons : NMSTemplate
     {
-        // size: 0x73
+        // size: 0x75
         public enum GameIconsEnum : uint {
             Stamina,
             NoStamina,
@@ -120,6 +120,8 @@ namespace libMBIN.NMS.GameComponents
             StaffWeapon,
             CorvetteShip,
             InvalidShipBuild,
+            GeneIcon,
+            PetShop,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public GameIconsEnum GameIcons;

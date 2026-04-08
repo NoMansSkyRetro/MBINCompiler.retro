@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDA30A9750A4884B5, NameHash = 0x60BCEB20)]
+    [NMS(GUID = 0x21A2D1355FC6146B, NameHash = 0x60BCEB20)]
     public class GcSimpleInteractionComponentData : NMSTemplate
     {
         [NMS(Index = 20)]
@@ -60,7 +60,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x218 */ public GcRarity Rarity;
         [NMS(Index = 32)]
         /* 0x21C */ public GcDiscoveryType ScanIcon;
-        // size: 0x28
+        // size: 0x29
         public enum SimpleInteractionTypeEnum : uint {
             Interact,
             Treasure,
@@ -102,6 +102,7 @@ namespace libMBIN.NMS.GameComponents
             CorvetteMissionBoard,
             CorvetteRampSwitch,
             RoverDumpSwitch,
+            JoinTable,
         }
         [NMS(Index = 0)]
         /* 0x220 */ public SimpleInteractionTypeEnum SimpleInteractionType;

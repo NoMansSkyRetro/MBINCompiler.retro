@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x6B5F182BDF90B97E, NameHash = 0x2524086B)]
+    [NMS(GUID = 0xDB732C703021851E, NameHash = 0x2524086B)]
     public class GcGameplayGlobals : NMSTemplate
     {
         [NMS(Index = 0)]
@@ -433,939 +433,939 @@ namespace libMBIN.NMS.Globals
         /* 0x157C */ public float DeadPlanetGravityFactor;
         [NMS(Index = 378)]
         /* 0x1580 */ public int DeathMoneyPenalty;
-        [NMS(Index = 452)]
-        /* 0x1584 */ public GcBuildingClassification DebugScanForceBuildingType;
         [NMS(Index = 343)]
-        /* 0x1588 */ public float DeepWaterJellyCrimeModMax;
+        /* 0x1584 */ public float DeepWaterJellyCrimeModMax;
         [NMS(Index = 394)]
-        /* 0x158C */ public float DeepWaterResourceMulMax;
+        /* 0x1588 */ public float DeepWaterResourceMulMax;
         [NMS(Index = 659)]
-        /* 0x1590 */ public float DerelictPulseEncounterAtmosphericEffectChance;
+        /* 0x158C */ public float DerelictPulseEncounterAtmosphericEffectChance;
         [NMS(Index = 276)]
-        /* 0x1594 */ public float DestroyEffectHeight;
+        /* 0x1590 */ public float DestroyEffectHeight;
         [NMS(Index = 277)]
-        /* 0x1598 */ public float DestroyEffectMaxScale;
+        /* 0x1594 */ public float DestroyEffectMaxScale;
         [NMS(Index = 128)]
-        /* 0x159C */ public float DistanceFromBaseComputerWhenTeleporting;
+        /* 0x1598 */ public float DistanceFromBaseComputerWhenTeleporting;
         [NMS(Index = 404)]
-        /* 0x15A0 */ public float DockNodeBuyRadius;
+        /* 0x159C */ public float DockNodeBuyRadius;
         [NMS(Index = 284)]
-        /* 0x15A4 */ public int EarlyPiratesToBeKilled;
+        /* 0x15A0 */ public int EarlyPiratesToBeKilled;
         [NMS(Index = 347)]
-        /* 0x15A8 */ public float EmergencyBuildingScanEventDistance;
+        /* 0x15A4 */ public float EmergencyBuildingScanEventDistance;
         [NMS(Index = 348)]
-        /* 0x15AC */ public float EmergencyBuildingScanEventTime;
+        /* 0x15A8 */ public float EmergencyBuildingScanEventTime;
         [NMS(Index = 278)]
-        /* 0x15B0 */ public float EventTargetSpeed;
+        /* 0x15AC */ public float EventTargetSpeed;
         [NMS(Index = 477)]
-        /* 0x15B4 */ public float ExcitingNearRange;
+        /* 0x15B0 */ public float ExcitingNearRange;
         [NMS(Index = 475)]
-        /* 0x15B8 */ public float ExcitingViewAngle;
+        /* 0x15B4 */ public float ExcitingViewAngle;
         [NMS(Index = 476)]
-        /* 0x15BC */ public float ExcitingViewRange;
+        /* 0x15B8 */ public float ExcitingViewRange;
         [NMS(Index = 585)]
-        /* 0x15C0 */ public float ExplosionForce;
+        /* 0x15BC */ public float ExplosionForce;
         [NMS(Index = 586)]
-        /* 0x15C4 */ public float ExplosionForceMaxForceRadius;
+        /* 0x15C0 */ public float ExplosionForceMaxForceRadius;
         [NMS(Index = 584)]
-        /* 0x15C8 */ public float ExplosionRadiusMultiplier;
+        /* 0x15C4 */ public float ExplosionRadiusMultiplier;
         [NMS(Index = 622)]
-        /* 0x15CC */ public int FourthRaceSpawnPercentage;
+        /* 0x15C8 */ public int FourthRaceSpawnPercentage;
         [NMS(Index = 301)]
-        /* 0x15D0 */ public float FreighterBattleRadius;
+        /* 0x15CC */ public float FreighterBattleRadius;
         [NMS(Index = 313)]
-        /* 0x15D4 */ public float FreighterCargoPodHealthFraction;
+        /* 0x15D0 */ public float FreighterCargoPodHealthFraction;
         [NMS(Index = 312)]
-        /* 0x15D8 */ public float FreighterFuelRodHealthFraction;
+        /* 0x15D4 */ public float FreighterFuelRodHealthFraction;
         [NMS(Index = 363)]
-        /* 0x15DC */ public int FreighterStartPecent;
+        /* 0x15D8 */ public int FreighterStartPecent;
         [NMS(Index = 632)]
-        /* 0x15E0 */ public float GasGiantGravityFactor;
+        /* 0x15DC */ public float GasGiantGravityFactor;
         [NMS(Index = 596)]
-        /* 0x15E4 */ public float GoalGapVoxelDist;
+        /* 0x15E0 */ public float GoalGapVoxelDist;
         [NMS(Index = 103)]
-        /* 0x15E8 */ public int GPSRandomChangeTimeBuilderCorruption;
+        /* 0x15E4 */ public int GPSRandomChangeTimeBuilderCorruption;
         [NMS(Index = 101)]
-        /* 0x15EC */ public int GPSRandomChangeTimeMid;
+        /* 0x15E8 */ public int GPSRandomChangeTimeMid;
         [NMS(Index = 102)]
-        /* 0x15F0 */ public int GPSRandomChangeTimeNarrow;
+        /* 0x15EC */ public int GPSRandomChangeTimeNarrow;
         [NMS(Index = 100)]
-        /* 0x15F4 */ public int GPSRandomChangeTimeWide;
+        /* 0x15F0 */ public int GPSRandomChangeTimeWide;
         [NMS(Index = 244)]
-        /* 0x15F8 */ public float GrabPlayerCooldownTime;
+        /* 0x15F4 */ public float GrabPlayerCooldownTime;
         [NMS(Index = 619)]
-        /* 0x15FC */ public int GuildStockReplenishTime;
+        /* 0x15F8 */ public int GuildStockReplenishTime;
         [NMS(Index = 620)]
-        /* 0x1600 */ public int GuildStockReplenishTimeSubstance;
+        /* 0x15FC */ public int GuildStockReplenishTimeSubstance;
         [NMS(Index = 533)]
-        /* 0x1604 */ public float GunDownAngle;
+        /* 0x1600 */ public float GunDownAngle;
         [NMS(Index = 530)]
-        /* 0x1608 */ public float GunOffsetAggressiveX;
+        /* 0x1604 */ public float GunOffsetAggressiveX;
         [NMS(Index = 531)]
-        /* 0x160C */ public float GunOffsetAggressiveY;
+        /* 0x1608 */ public float GunOffsetAggressiveY;
         [NMS(Index = 532)]
-        /* 0x1610 */ public float GunOffsetAggressiveZ;
+        /* 0x160C */ public float GunOffsetAggressiveZ;
         [NMS(Index = 527)]
-        /* 0x1614 */ public float GunOffsetX;
+        /* 0x1610 */ public float GunOffsetX;
         [NMS(Index = 528)]
-        /* 0x1618 */ public float GunOffsetY;
+        /* 0x1614 */ public float GunOffsetY;
         [NMS(Index = 529)]
-        /* 0x161C */ public float GunOffsetZ;
+        /* 0x1618 */ public float GunOffsetZ;
         [NMS(Index = 534)]
-        /* 0x1620 */ public float GunUpAngle;
+        /* 0x161C */ public float GunUpAngle;
         [NMS(Index = 283)]
-        /* 0x1624 */ public int HardModeTechDamageHighPercent;
+        /* 0x1620 */ public int HardModeTechDamageHighPercent;
         [NMS(Index = 281)]
-        /* 0x1628 */ public int HardModeTechDamageMidNum;
+        /* 0x1624 */ public int HardModeTechDamageMidNum;
         [NMS(Index = 282)]
-        /* 0x162C */ public int HardModeTechDamageMidPercent;
+        /* 0x1628 */ public int HardModeTechDamageMidPercent;
         [NMS(Index = 170)]
-        /* 0x1630 */ public float HeatAlertTime;
+        /* 0x162C */ public float HeatAlertTime;
         [NMS(Index = 171)]
-        /* 0x1634 */ public float HeatDamageBoost;
+        /* 0x1630 */ public float HeatDamageBoost;
         [NMS(Index = 175)]
-        /* 0x1638 */ public float HeatMaxPowerPoint;
+        /* 0x1634 */ public float HeatMaxPowerPoint;
         [NMS(Index = 172)]
-        /* 0x163C */ public float HeatWidthBoost;
+        /* 0x1638 */ public float HeatWidthBoost;
         [NMS(Index = 173)]
-        /* 0x1640 */ public float HeatWidthBoostAlt;
+        /* 0x163C */ public float HeatWidthBoostAlt;
         [NMS(Index = 243)]
-        /* 0x1644 */ public float HitEffectMinTime;
+        /* 0x1640 */ public float HitEffectMinTime;
         [NMS(Index = 536)]
-        /* 0x1648 */ public float HitOffset;
+        /* 0x1644 */ public float HitOffset;
         [NMS(Index = 191)]
-        /* 0x164C */ public float HmdInteractionRangeMinDistance;
+        /* 0x1648 */ public float HmdInteractionRangeMinDistance;
         [NMS(Index = 190)]
-        /* 0x1650 */ public float HmdInteractionRangeMinRange;
+        /* 0x164C */ public float HmdInteractionRangeMinRange;
         [NMS(Index = 192)]
-        /* 0x1654 */ public float HmdInteractionRangeMultiplier;
+        /* 0x1650 */ public float HmdInteractionRangeMultiplier;
         [NMS(Index = 298)]
-        /* 0x1658 */ public float HoursBetweenBattles;
+        /* 0x1654 */ public float HoursBetweenBattles;
         [NMS(Index = 601)]
-        /* 0x165C */ public float HoursBetweenMiniStation;
+        /* 0x1658 */ public float HoursBetweenMiniStation;
         [NMS(Index = 422)]
-        /* 0x1660 */ public float HoverTimeToScan;
+        /* 0x165C */ public float HoverTimeToScan;
         [NMS(Index = 423)]
-        /* 0x1664 */ public float HoverTimeToScanCreatures;
+        /* 0x1660 */ public float HoverTimeToScanCreatures;
         [NMS(Index = 424)]
-        /* 0x1668 */ public int HoverVisiblePointsNeeded;
+        /* 0x1664 */ public int HoverVisiblePointsNeeded;
         [NMS(Index = 485)]
-        /* 0x166C */ public float HUDArrowPrimaryScaler;
+        /* 0x1668 */ public float HUDArrowPrimaryScaler;
         [NMS(Index = 490)]
-        /* 0x1670 */ public float HUDDamageOffset;
+        /* 0x166C */ public float HUDDamageOffset;
         [NMS(Index = 492)]
-        /* 0x1674 */ public float HUDDamageRadius;
+        /* 0x1670 */ public float HUDDamageRadius;
         [NMS(Index = 491)]
-        /* 0x1678 */ public float HUDDamageScaler;
+        /* 0x1674 */ public float HUDDamageScaler;
         [NMS(Index = 495)]
-        /* 0x167C */ public float HUDLabelAngle;
+        /* 0x1678 */ public float HUDLabelAngle;
         [NMS(Index = 496)]
-        /* 0x1680 */ public float HUDLabelAngleOffset;
+        /* 0x167C */ public float HUDLabelAngleOffset;
         [NMS(Index = 497)]
-        /* 0x1684 */ public float HUDLabelOffsetX;
+        /* 0x1680 */ public float HUDLabelOffsetX;
         [NMS(Index = 498)]
-        /* 0x1688 */ public float HUDLabelOffsetY;
+        /* 0x1684 */ public float HUDLabelOffsetY;
         [NMS(Index = 499)]
-        /* 0x168C */ public float HUDLabelOffsetZ;
+        /* 0x1688 */ public float HUDLabelOffsetZ;
         [NMS(Index = 500)]
-        /* 0x1690 */ public float HUDLabelScale;
+        /* 0x168C */ public float HUDLabelScale;
         [NMS(Index = 494)]
-        /* 0x1694 */ public float HUDLabelTime;
+        /* 0x1690 */ public float HUDLabelTime;
         [NMS(Index = 484)]
-        /* 0x1698 */ public float HUDLockOnAudioTime;
+        /* 0x1694 */ public float HUDLockOnAudioTime;
         [NMS(Index = 520)]
-        /* 0x169C */ public float HUDReticuleMoveAim;
+        /* 0x1698 */ public float HUDReticuleMoveAim;
         [NMS(Index = 519)]
-        /* 0x16A0 */ public float HUDReticuleMoveBack;
+        /* 0x169C */ public float HUDReticuleMoveBack;
         [NMS(Index = 513)]
-        /* 0x16A4 */ public float HUDScaleAdd;
+        /* 0x16A0 */ public float HUDScaleAdd;
         [NMS(Index = 518)]
-        /* 0x16A8 */ public float HUDScaleFarTarget;
+        /* 0x16A4 */ public float HUDScaleFarTarget;
         [NMS(Index = 517)]
-        /* 0x16AC */ public float HUDScaleMax;
+        /* 0x16A8 */ public float HUDScaleMax;
         [NMS(Index = 515)]
-        /* 0x16B0 */ public float HUDScaleMin;
+        /* 0x16AC */ public float HUDScaleMin;
         [NMS(Index = 516)]
-        /* 0x16B4 */ public float HUDScaleMinAim;
+        /* 0x16B0 */ public float HUDScaleMinAim;
         [NMS(Index = 514)]
-        /* 0x16B8 */ public float HUDScaleRadius;
+        /* 0x16B4 */ public float HUDScaleRadius;
         [NMS(Index = 474)]
-        /* 0x16BC */ public float HUDStoreFlashTime;
+        /* 0x16B8 */ public float HUDStoreFlashTime;
         [NMS(Index = 61)]
-        /* 0x16C0 */ public float IllegalTechProductTradingMod;
+        /* 0x16BC */ public float IllegalTechProductTradingMod;
         [NMS(Index = 58)]
-        /* 0x16C4 */ public float InfestedPlanetDeepSpaceFlybyMultiplier;
+        /* 0x16C0 */ public float InfestedPlanetDeepSpaceFlybyMultiplier;
         [NMS(Index = 77)]
-        /* 0x16C8 */ public float InitialLocationProtectionRadiusMultiplier;
+        /* 0x16C4 */ public float InitialLocationProtectionRadiusMultiplier;
         [NMS(Index = 270)]
-        /* 0x16CC */ public float InteractionAttractTime;
+        /* 0x16C8 */ public float InteractionAttractTime;
         [NMS(Index = 595)]
-        /* 0x16D0 */ public float InteractionComponentUpdateDistance;
+        /* 0x16CC */ public float InteractionComponentUpdateDistance;
         [NMS(Index = 271)]
-        /* 0x16D4 */ public float InteractionDescriptionTextTime;
+        /* 0x16D0 */ public float InteractionDescriptionTextTime;
         [NMS(Index = 269)]
-        /* 0x16D8 */ public float InteractionMessageModuleDisplayTime;
+        /* 0x16D4 */ public float InteractionMessageModuleDisplayTime;
         [NMS(Index = 266)]
-        /* 0x16DC */ public float InteractionMinTimeBeforeHighlightedOptionSelection;
+        /* 0x16D8 */ public float InteractionMinTimeBeforeHighlightedOptionSelection;
         [NMS(Index = 267)]
-        /* 0x16E0 */ public float InteractionMinTimeBetweenStickOptionHighlights;
+        /* 0x16DC */ public float InteractionMinTimeBetweenStickOptionHighlights;
         [NMS(Index = 272)]
-        /* 0x16E4 */ public float InteractionMinTimeForResponseText;
+        /* 0x16E0 */ public float InteractionMinTimeForResponseText;
         [NMS(Index = 274)]
-        /* 0x16E8 */ public GcInteractionType InteractionOverrideFrom;
+        /* 0x16E4 */ public GcInteractionType InteractionOverrideFrom;
         [NMS(Index = 275)]
-        /* 0x16EC */ public GcInteractionType InteractionOverrideTo;
+        /* 0x16E8 */ public GcInteractionType InteractionOverrideTo;
         [NMS(Index = 582)]
-        /* 0x16F0 */ public float InteractionPickupAngle;
+        /* 0x16EC */ public float InteractionPickupAngle;
         [NMS(Index = 583)]
-        /* 0x16F4 */ public float InteractionPickupRadius;
+        /* 0x16F0 */ public float InteractionPickupRadius;
         [NMS(Index = 268)]
-        /* 0x16F8 */ public float InteractionStickOptionStrength;
+        /* 0x16F4 */ public float InteractionStickOptionStrength;
         [NMS(Index = 550)]
-        /* 0x16FC */ public float InteractionTorchFoV;
+        /* 0x16F8 */ public float InteractionTorchFoV;
         [NMS(Index = 551)]
-        /* 0x1700 */ public float InteractionTorchStrength;
+        /* 0x16FC */ public float InteractionTorchStrength;
         [NMS(Index = 599)]
-        /* 0x1704 */ public float JumpToCenterFuelCost;
+        /* 0x1700 */ public float JumpToCenterFuelCost;
         [NMS(Index = 588)]
-        /* 0x1708 */ public float LaserExplosionForce;
+        /* 0x1704 */ public float LaserExplosionForce;
         [NMS(Index = 589)]
-        /* 0x170C */ public float LaserExplosionForceMaxForceRadius;
+        /* 0x1708 */ public float LaserExplosionForceMaxForceRadius;
         [NMS(Index = 587)]
-        /* 0x1710 */ public float LaserExplosionForceRadius;
+        /* 0x170C */ public float LaserExplosionForceRadius;
         [NMS(Index = 18)]
-        /* 0x1714 */ public int LaserRechargeHintThresholdEarly;
+        /* 0x1710 */ public int LaserRechargeHintThresholdEarly;
         [NMS(Index = 19)]
-        /* 0x1718 */ public int LaserRechargeHintThresholdLate;
+        /* 0x1714 */ public int LaserRechargeHintThresholdLate;
         [NMS(Index = 606)]
-        /* 0x171C */ public float LightStrength;
+        /* 0x1718 */ public float LightStrength;
         [NMS(Index = 479)]
-        /* 0x1720 */ public float LineWidth;
+        /* 0x171C */ public float LineWidth;
         [NMS(Index = 480)]
-        /* 0x1724 */ public float LockOffFactor;
+        /* 0x1720 */ public float LockOffFactor;
         [NMS(Index = 352)]
-        /* 0x1728 */ public float LowSentinelProbability;
+        /* 0x1724 */ public float LowSentinelProbability;
         [NMS(Index = 353)]
-        /* 0x172C */ public float LowSentinelProbabilitySurvival;
+        /* 0x1728 */ public float LowSentinelProbabilitySurvival;
         [NMS(Index = 511)]
-        /* 0x1730 */ public float MapFOV;
+        /* 0x172C */ public float MapFOV;
         [NMS(Index = 508)]
-        /* 0x1734 */ public float MapHeight;
+        /* 0x1730 */ public float MapHeight;
         [NMS(Index = 509)]
-        /* 0x1738 */ public float MapOffset;
+        /* 0x1734 */ public float MapOffset;
         [NMS(Index = 512)]
-        /* 0x173C */ public float MapRadius;
+        /* 0x1738 */ public float MapRadius;
         [NMS(Index = 510)]
-        /* 0x1740 */ public float MapTargetOffset;
+        /* 0x173C */ public float MapTargetOffset;
         [NMS(Index = 80)]
-        /* 0x1744 */ public int MaxActiveWeatherHazardGifts;
+        /* 0x1740 */ public int MaxActiveWeatherHazardGifts;
         [NMS(Index = 5)]
-        /* 0x1748 */ public int MaxCookingRank;
+        /* 0x1744 */ public int MaxCookingRank;
         [NMS(Index = 126)]
-        /* 0x174C */ public float MaxDistanceForLadderTeleport;
+        /* 0x1748 */ public float MaxDistanceForLadderTeleport;
         [NMS(Index = 359)]
-        /* 0x1750 */ public int MaxDronesAggressive;
+        /* 0x174C */ public int MaxDronesAggressive;
         [NMS(Index = 360)]
-        /* 0x1754 */ public int MaxDronesAggressiveSurvival;
+        /* 0x1750 */ public int MaxDronesAggressiveSurvival;
         [NMS(Index = 355)]
-        /* 0x1758 */ public int MaxDronesLow;
+        /* 0x1754 */ public int MaxDronesLow;
         [NMS(Index = 356)]
-        /* 0x175C */ public int MaxDronesLowSurvival;
+        /* 0x1758 */ public int MaxDronesLowSurvival;
         [NMS(Index = 357)]
-        /* 0x1760 */ public int MaxDronesNormal;
+        /* 0x175C */ public int MaxDronesNormal;
         [NMS(Index = 358)]
-        /* 0x1764 */ public int MaxDronesNormalSurvival;
+        /* 0x1760 */ public int MaxDronesNormalSurvival;
         [NMS(Index = 84)]
-        /* 0x1768 */ public float MaxMeteorSurfaceAngle;
+        /* 0x1764 */ public float MaxMeteorSurfaceAngle;
         [NMS(Index = 265)]
-        /* 0x176C */ public int MaxNumMissionsFromMissionGiver;
+        /* 0x1768 */ public int MaxNumMissionsFromMissionGiver;
         [NMS(Index = 201)]
-        /* 0x1770 */ public int MaxNumSameGroupTech;
+        /* 0x176C */ public int MaxNumSameGroupTech;
         [NMS(Index = 240)]
-        /* 0x1774 */ public float MaxPossibleShipDamagePotential;
+        /* 0x1770 */ public float MaxPossibleShipDamagePotential;
         [NMS(Index = 379)]
-        /* 0x1778 */ public int MaxResourceCrystalBlobSize;
+        /* 0x1774 */ public int MaxResourceCrystalBlobSize;
         [NMS(Index = 630)]
-        /* 0x177C */ public float MaxRespawnOnGroundHeight;
+        /* 0x1778 */ public float MaxRespawnOnGroundHeight;
         [NMS(Index = 502)]
-        /* 0x1780 */ public float MaxSpawnTime;
+        /* 0x177C */ public float MaxSpawnTime;
         [NMS(Index = 470)]
-        /* 0x1784 */ public float MaxStandingTechDiscount;
+        /* 0x1780 */ public float MaxStandingTechDiscount;
         [NMS(Index = 115)]
-        /* 0x1788 */ public int MaxTorpedoesInFlight;
+        /* 0x1784 */ public int MaxTorpedoesInFlight;
         [NMS(Index = 20)]
-        /* 0x178C */ public int MeleeHintThresholdEarly;
+        /* 0x1788 */ public int MeleeHintThresholdEarly;
         [NMS(Index = 21)]
-        /* 0x1790 */ public int MeleeHintThresholdLate;
+        /* 0x178C */ public int MeleeHintThresholdLate;
         [NMS(Index = 6)]
-        /* 0x1794 */ public int MinCookingRank;
+        /* 0x1790 */ public int MinCookingRank;
         [NMS(Index = 330)]
-        /* 0x1798 */ public float MissileApproachTime;
+        /* 0x1794 */ public float MissileApproachTime;
         [NMS(Index = 324)]
-        /* 0x179C */ public float MissileBrakeForceMax;
+        /* 0x1798 */ public float MissileBrakeForceMax;
         [NMS(Index = 323)]
-        /* 0x17A0 */ public float MissileBrakeForceMin;
+        /* 0x179C */ public float MissileBrakeForceMin;
         [NMS(Index = 326)]
-        /* 0x17A4 */ public float MissileBrakeTime;
+        /* 0x17A0 */ public float MissileBrakeTime;
         [NMS(Index = 322)]
-        /* 0x17A8 */ public float MissileForceMax;
+        /* 0x17A4 */ public float MissileForceMax;
         [NMS(Index = 321)]
-        /* 0x17AC */ public float MissileForceMin;
+        /* 0x17A8 */ public float MissileForceMin;
         [NMS(Index = 327)]
-        /* 0x17B0 */ public float MissileHitRadius;
+        /* 0x17AC */ public float MissileHitRadius;
         [NMS(Index = 316)]
-        /* 0x17B4 */ public float MissileLockTime;
+        /* 0x17B0 */ public float MissileLockTime;
         [NMS(Index = 320)]
-        /* 0x17B8 */ public float MissileMaxSpeed;
+        /* 0x17B4 */ public float MissileMaxSpeed;
         [NMS(Index = 315)]
-        /* 0x17BC */ public float MissileMaxTurnAngle;
+        /* 0x17B8 */ public float MissileMaxTurnAngle;
         [NMS(Index = 329)]
-        /* 0x17C0 */ public float MissileMinCircleTime;
+        /* 0x17BC */ public float MissileMinCircleTime;
         [NMS(Index = 328)]
-        /* 0x17C4 */ public float MissileOffset;
+        /* 0x17C0 */ public float MissileOffset;
         [NMS(Index = 317)]
-        /* 0x17C8 */ public float MissileReloadTime;
+        /* 0x17C4 */ public float MissileReloadTime;
         [NMS(Index = 319)]
-        /* 0x17CC */ public float MissileRotateMax;
+        /* 0x17C8 */ public float MissileRotateMax;
         [NMS(Index = 318)]
-        /* 0x17D0 */ public float MissileRotateMin;
+        /* 0x17CC */ public float MissileRotateMin;
         [NMS(Index = 331)]
-        /* 0x17D4 */ public float MissileRotateSpeed;
+        /* 0x17D0 */ public float MissileRotateSpeed;
         [NMS(Index = 325)]
-        /* 0x17D8 */ public float MissileThreatTime;
+        /* 0x17D4 */ public float MissileThreatTime;
         [NMS(Index = 237)]
-        /* 0x17DC */ public float MissionEventAllowResetDistance;
+        /* 0x17D8 */ public float MissionEventAllowResetDistance;
         [NMS(Index = 144)]
-        /* 0x17E0 */ public float MissionSurveyAutoScanDistance;
+        /* 0x17DC */ public float MissionSurveyAutoScanDistance;
         [NMS(Index = 145)]
-        /* 0x17E4 */ public float MissionSurveyAutoScanFlattenRadiusMul;
+        /* 0x17E0 */ public float MissionSurveyAutoScanFlattenRadiusMul;
         [NMS(Index = 140)]
-        /* 0x17E8 */ public float MissionSurveyBeginScanPercentageEvent;
+        /* 0x17E4 */ public float MissionSurveyBeginScanPercentageEvent;
         [NMS(Index = 139)]
-        /* 0x17EC */ public float MissionSurveyBeginScanPercentageScannable;
+        /* 0x17E8 */ public float MissionSurveyBeginScanPercentageScannable;
         [NMS(Index = 151)]
-        /* 0x17F0 */ public float MissionSurveyInShipArrivedDistance;
+        /* 0x17EC */ public float MissionSurveyInShipArrivedDistance;
         [NMS(Index = 135)]
-        /* 0x17F4 */ public float MissionSurveyMarkerAutoHideTime;
+        /* 0x17F0 */ public float MissionSurveyMarkerAutoHideTime;
         [NMS(Index = 149)]
-        /* 0x17F8 */ public float MissionSurveyMaxAngleOffset;
+        /* 0x17F4 */ public float MissionSurveyMaxAngleOffset;
         [NMS(Index = 131)]
-        /* 0x17FC */ public float MissionSurveyMaxGuidanceDistance;
+        /* 0x17F8 */ public float MissionSurveyMaxGuidanceDistance;
         [NMS(Index = 132)]
-        /* 0x1800 */ public float MissionSurveyMaxGuidanceDistanceWorms;
+        /* 0x17FC */ public float MissionSurveyMaxGuidanceDistanceWorms;
         [NMS(Index = 137)]
-        /* 0x1804 */ public float MissionSurveyMaxScanAngle;
+        /* 0x1800 */ public float MissionSurveyMaxScanAngle;
         [NMS(Index = 138)]
-        /* 0x1808 */ public float MissionSurveyMaxScanAngleScannableComp;
+        /* 0x1804 */ public float MissionSurveyMaxScanAngleScannableComp;
         [NMS(Index = 150)]
-        /* 0x180C */ public float MissionSurveyMaxSignalConeAngle;
+        /* 0x1808 */ public float MissionSurveyMaxSignalConeAngle;
         [NMS(Index = 143)]
-        /* 0x1810 */ public float MissionSurveyRevealWithoutScanDistance;
+        /* 0x180C */ public float MissionSurveyRevealWithoutScanDistance;
         [NMS(Index = 136)]
-        /* 0x1814 */ public float MissionSurveyScanRangeMultiplier;
+        /* 0x1810 */ public float MissionSurveyScanRangeMultiplier;
         [NMS(Index = 141)]
-        /* 0x1818 */ public float MissionSurveyScanSpeed;
+        /* 0x1814 */ public float MissionSurveyScanSpeed;
         [NMS(Index = 142)]
-        /* 0x181C */ public float MissionSurveyScanSpeedScannableComp;
+        /* 0x1818 */ public float MissionSurveyScanSpeedScannableComp;
         [NMS(Index = 147)]
-        /* 0x1820 */ public float MissionSurveySonarMaxPulseSpeed;
+        /* 0x181C */ public float MissionSurveySonarMaxPulseSpeed;
         [NMS(Index = 146)]
-        /* 0x1824 */ public float MissionSurveySonarMinPulseSpeed;
+        /* 0x1820 */ public float MissionSurveySonarMinPulseSpeed;
         [NMS(Index = 148)]
-        /* 0x1828 */ public float MissionSurveySonarPulseSpeedBandCount;
+        /* 0x1824 */ public float MissionSurveySonarPulseSpeedBandCount;
         [NMS(Index = 521)]
-        /* 0x182C */ public float MouseSensitivity;
+        /* 0x1828 */ public float MouseSensitivity;
         [NMS(Index = 522)]
-        /* 0x1830 */ public float MouseSensitivityShip;
+        /* 0x182C */ public float MouseSensitivityShip;
         [NMS(Index = 523)]
-        /* 0x1834 */ public float MouseSensitivityVehicle;
+        /* 0x1830 */ public float MouseSensitivityVehicle;
         [NMS(Index = 120)]
-        /* 0x1838 */ public float MultidimensionalFadeTime;
+        /* 0x1834 */ public float MultidimensionalFadeTime;
         [NMS(Index = 340)]
-        /* 0x183C */ public float NewDiscoveryDisplayTime;
+        /* 0x1838 */ public float NewDiscoveryDisplayTime;
         [NMS(Index = 679)]
-        /* 0x1840 */ public int NexusDespawnSquaredDistance;
+        /* 0x183C */ public int NexusDespawnSquaredDistance;
         [NMS(Index = 71)]
-        /* 0x1844 */ public int NexusRecipeCostNaniteMultiplier;
+        /* 0x1840 */ public int NexusRecipeCostNaniteMultiplier;
         [NMS(Index = 354)]
-        /* 0x1848 */ public float NonAggressiveLushSurvivalProbabability;
+        /* 0x1844 */ public float NonAggressiveLushSurvivalProbabability;
         [NMS(Index = 623)]
-        /* 0x184C */ public int NonDominantRaceSpawnPercentage;
+        /* 0x1848 */ public int NonDominantRaceSpawnPercentage;
         [NMS(Index = 624)]
-        /* 0x1850 */ public int NonDominantRaceSpawnPercentagePirate;
+        /* 0x184C */ public int NonDominantRaceSpawnPercentagePirate;
         [NMS(Index = 471)]
-        /* 0x1854 */ public float NonNaturalCostMul;
+        /* 0x1850 */ public float NonNaturalCostMul;
         [NMS(Index = 168)]
-        /* 0x1858 */ public float NormalModeHeatBonus;
+        /* 0x1854 */ public float NormalModeHeatBonus;
         [NMS(Index = 12)]
-        /* 0x185C */ public float NPCNavNodeSearchUpDistScaling;
+        /* 0x1858 */ public float NPCNavNodeSearchUpDistScaling;
         [NMS(Index = 30)]
-        /* 0x1860 */ public float NPCWaitWhenRevealedTime;
+        /* 0x185C */ public float NPCWaitWhenRevealedTime;
         [NMS(Index = 346)]
-        /* 0x1864 */ public int NumMissionsPerSolarSystem;
+        /* 0x1860 */ public int NumMissionsPerSolarSystem;
         [NMS(Index = 481)]
-        /* 0x1868 */ public float OffscreenFadeDistance;
+        /* 0x1864 */ public float OffscreenFadeDistance;
         [NMS(Index = 482)]
-        /* 0x186C */ public float OffscreenMinDot;
+        /* 0x1868 */ public float OffscreenMinDot;
         [NMS(Index = 176)]
-        /* 0x1870 */ public float OverheatDecay;
+        /* 0x186C */ public float OverheatDecay;
         [NMS(Index = 174)]
-        /* 0x1874 */ public float OverheatGenerosity;
+        /* 0x1870 */ public float OverheatGenerosity;
         [NMS(Index = 524)]
-        /* 0x1878 */ public float PainTime;
+        /* 0x1874 */ public float PainTime;
         [NMS(Index = 78)]
-        /* 0x187C */ public float PartyPlanetSearchDistance;
+        /* 0x1878 */ public float PartyPlanetSearchDistance;
         [NMS(Index = 667)]
-        /* 0x1880 */ public int PersonalInventoryMinHeightMax;
+        /* 0x187C */ public int PersonalInventoryMinHeightMax;
         [NMS(Index = 666)]
-        /* 0x1884 */ public int PersonalInventoryMinWidthMax;
+        /* 0x1880 */ public int PersonalInventoryMinWidthMax;
         [NMS(Index = 669)]
-        /* 0x1888 */ public int PersonalTechInventoryMinHeightMax;
+        /* 0x1884 */ public int PersonalTechInventoryMinHeightMax;
         [NMS(Index = 668)]
-        /* 0x188C */ public int PersonalTechInventoryMinWidthMax;
+        /* 0x1888 */ public int PersonalTechInventoryMinWidthMax;
         [NMS(Index = 368)]
-        /* 0x1890 */ public float PirateEarlySpawnTime;
+        /* 0x188C */ public float PirateEarlySpawnTime;
         [NMS(Index = 116)]
-        /* 0x1894 */ public float PirateFreighterBattleNoTargetLeaderTime;
+        /* 0x1890 */ public float PirateFreighterBattleNoTargetLeaderTime;
         [NMS(Index = 305)]
-        /* 0x1898 */ public float PirateFreighterBeginFleeHealthFraction;
+        /* 0x1894 */ public float PirateFreighterBeginFleeHealthFraction;
         [NMS(Index = 302)]
-        /* 0x189C */ public int PirateFreighterFrigateCountForReinforce;
+        /* 0x1898 */ public int PirateFreighterFrigateCountForReinforce;
         [NMS(Index = 308)]
-        /* 0x18A0 */ public float PirateFreighterRewardDelayTime;
+        /* 0x189C */ public float PirateFreighterRewardDelayTime;
         [NMS(Index = 310)]
-        /* 0x18A4 */ public float PirateFreighterRewardDelayTimeEscaped;
+        /* 0x18A0 */ public float PirateFreighterRewardDelayTimeEscaped;
         [NMS(Index = 309)]
-        /* 0x18A8 */ public float PirateFreighterRewardMessageDelayTime;
+        /* 0x18A4 */ public float PirateFreighterRewardMessageDelayTime;
         [NMS(Index = 311)]
-        /* 0x18AC */ public float PirateFreighterRewardMessageDelayTimeEscaped;
+        /* 0x18A8 */ public float PirateFreighterRewardMessageDelayTimeEscaped;
         [NMS(Index = 304)]
-        /* 0x18B0 */ public float PirateFreighterWarpChargeTime;
+        /* 0x18AC */ public float PirateFreighterWarpChargeTime;
         [NMS(Index = 303)]
-        /* 0x18B4 */ public float PirateFreighterWarpChargeTimeToAddPerBrokenEngine;
+        /* 0x18B0 */ public float PirateFreighterWarpChargeTimeToAddPerBrokenEngine;
         [NMS(Index = 48)]
-        /* 0x18B8 */ public float PirateGroundAccelerator;
+        /* 0x18B4 */ public float PirateGroundAccelerator;
         [NMS(Index = 49)]
-        /* 0x18BC */ public float PirateGroundInventoryAccelerator;
+        /* 0x18B8 */ public float PirateGroundInventoryAccelerator;
         [NMS(Index = 287)]
-        /* 0x18C0 */ public float PirateInterestDistance;
+        /* 0x18BC */ public float PirateInterestDistance;
         [NMS(Index = 288)]
-        /* 0x18C4 */ public float PirateInterestDistanceMPMission;
+        /* 0x18C0 */ public float PirateInterestDistanceMPMission;
         [NMS(Index = 286)]
-        /* 0x18C8 */ public int PirateInterestOverride;
+        /* 0x18C4 */ public int PirateInterestOverride;
         [NMS(Index = 47)]
-        /* 0x18CC */ public float PirateRaidAccelerator;
+        /* 0x18C8 */ public float PirateRaidAccelerator;
         [NMS(Index = 285)]
-        /* 0x18D0 */ public int PlanetPirateFlybyMaxRepeatCounter;
+        /* 0x18CC */ public int PlanetPirateFlybyMaxRepeatCounter;
         [NMS(Index = 575)]
-        /* 0x18D4 */ public float PlayerAmbientSpotLightIntensity;
+        /* 0x18D0 */ public float PlayerAmbientSpotLightIntensity;
         [NMS(Index = 577)]
-        /* 0x18D8 */ public float PlayerAmbientSpotLightOffsetY;
+        /* 0x18D4 */ public float PlayerAmbientSpotLightOffsetY;
         [NMS(Index = 578)]
-        /* 0x18DC */ public float PlayerAmbientSpotLightOffsetZ;
+        /* 0x18D8 */ public float PlayerAmbientSpotLightOffsetZ;
         [NMS(Index = 55)]
-        /* 0x18E0 */ public float PoliceAcceleratorNoCargoNormal;
+        /* 0x18DC */ public float PoliceAcceleratorNoCargoNormal;
         [NMS(Index = 56)]
-        /* 0x18E4 */ public float PoliceAcceleratorNoCargoSkipScanOdds;
+        /* 0x18E0 */ public float PoliceAcceleratorNoCargoSkipScanOdds;
         [NMS(Index = 54)]
-        /* 0x18E8 */ public float PoliceAcceleratorNoCargoWealthy;
+        /* 0x18E4 */ public float PoliceAcceleratorNoCargoWealthy;
         [NMS(Index = 51)]
-        /* 0x18EC */ public float PoliceAcceleratorPulseExtra;
+        /* 0x18E8 */ public float PoliceAcceleratorPulseExtra;
         [NMS(Index = 52)]
-        /* 0x18F0 */ public int PoliceAcceleratorSmugglingItemsMax;
+        /* 0x18EC */ public int PoliceAcceleratorSmugglingItemsMax;
         [NMS(Index = 53)]
-        /* 0x18F4 */ public float PoliceAcceleratorSmugglingMulMax;
+        /* 0x18F0 */ public float PoliceAcceleratorSmugglingMulMax;
         [NMS(Index = 50)]
-        /* 0x18F8 */ public float PoliceAcceleratorStationLockOn;
+        /* 0x18F4 */ public float PoliceAcceleratorStationLockOn;
         [NMS(Index = 292)]
-        /* 0x18FC */ public float PoliceInterestDistance;
+        /* 0x18F8 */ public float PoliceInterestDistance;
         [NMS(Index = 293)]
-        /* 0x1900 */ public float PoliceInterestDistanceMPMission;
+        /* 0x18FC */ public float PoliceInterestDistanceMPMission;
         [NMS(Index = 291)]
-        /* 0x1904 */ public int PoliceInterestOverride;
+        /* 0x1900 */ public int PoliceInterestOverride;
         [NMS(Index = 615)]
-        /* 0x1908 */ public int ProductItemStockDecayTime;
+        /* 0x1904 */ public int ProductItemStockDecayTime;
         [NMS(Index = 616)]
-        /* 0x190C */ public int ProductItemStockReplenishTime;
+        /* 0x1908 */ public int ProductItemStockReplenishTime;
         [NMS(Index = 349)]
-        /* 0x1910 */ public float ProjectileLightIntensity;
+        /* 0x190C */ public float ProjectileLightIntensity;
         [NMS(Index = 478)]
-        /* 0x1914 */ public float ProjectileSpeedBoost;
+        /* 0x1910 */ public float ProjectileSpeedBoost;
         [NMS(Index = 652)]
-        /* 0x1918 */ public float PulseEncounterChance;
+        /* 0x1914 */ public float PulseEncounterChance;
         [NMS(Index = 656)]
-        /* 0x191C */ public float PulseEncounterChanceBlue;
+        /* 0x1918 */ public float PulseEncounterChanceBlue;
         [NMS(Index = 655)]
-        /* 0x1920 */ public float PulseEncounterChanceGreen;
+        /* 0x191C */ public float PulseEncounterChanceGreen;
         [NMS(Index = 654)]
-        /* 0x1924 */ public float PulseEncounterChanceRed;
+        /* 0x1920 */ public float PulseEncounterChanceRed;
         [NMS(Index = 653)]
-        /* 0x1928 */ public float PulseEncounterChanceStandard;
+        /* 0x1924 */ public float PulseEncounterChanceStandard;
         [NMS(Index = 651)]
-        /* 0x192C */ public float PulseEncounterCheckTimer;
+        /* 0x1928 */ public float PulseEncounterCheckTimer;
         [NMS(Index = 657)]
-        /* 0x1930 */ public float PulseEncounterStopPower;
+        /* 0x192C */ public float PulseEncounterStopPower;
         [NMS(Index = 658)]
-        /* 0x1934 */ public float PulseEncounterStopSpeed;
+        /* 0x1930 */ public float PulseEncounterStopSpeed;
         [NMS(Index = 384)]
-        /* 0x1938 */ public int RareProductEffectiveness;
+        /* 0x1934 */ public int RareProductEffectiveness;
         [NMS(Index = 382)]
-        /* 0x193C */ public int RareSubstanceEffectiveness;
+        /* 0x1938 */ public int RareSubstanceEffectiveness;
         [NMS(Index = 183)]
-        /* 0x1940 */ public int RefinerProductsMadeInTime;
+        /* 0x193C */ public int RefinerProductsMadeInTime;
         [NMS(Index = 185)]
-        /* 0x1944 */ public int RefinerProductsMadeInTimeSurvival;
+        /* 0x1940 */ public int RefinerProductsMadeInTimeSurvival;
         [NMS(Index = 184)]
-        /* 0x1948 */ public int RefinerSubsMadeInTime;
+        /* 0x1944 */ public int RefinerSubsMadeInTime;
         [NMS(Index = 186)]
-        /* 0x194C */ public int RefinerSubsMadeInTimeSurvival;
+        /* 0x1948 */ public int RefinerSubsMadeInTimeSurvival;
         [NMS(Index = 393)]
-        /* 0x1950 */ public int ResourceCommonMaxAmount;
+        /* 0x194C */ public int ResourceCommonMaxAmount;
         [NMS(Index = 392)]
-        /* 0x1954 */ public int ResourceCommonMinAmount;
+        /* 0x1950 */ public int ResourceCommonMinAmount;
         [NMS(Index = 391)]
-        /* 0x1958 */ public int ResourceCommonReducer;
+        /* 0x1954 */ public int ResourceCommonReducer;
         [NMS(Index = 397)]
-        /* 0x195C */ public int ResourceDirtMaxAmount;
+        /* 0x1958 */ public int ResourceDirtMaxAmount;
         [NMS(Index = 396)]
-        /* 0x1960 */ public int ResourceDirtMinAmount;
+        /* 0x195C */ public int ResourceDirtMinAmount;
         [NMS(Index = 395)]
-        /* 0x1964 */ public int ResourceDirtReducer;
+        /* 0x1960 */ public int ResourceDirtReducer;
         [NMS(Index = 390)]
-        /* 0x1968 */ public int ResourceMaxAmount;
+        /* 0x1964 */ public int ResourceMaxAmount;
         [NMS(Index = 389)]
-        /* 0x196C */ public int ResourceMinAmount;
+        /* 0x1968 */ public int ResourceMinAmount;
         [NMS(Index = 506)]
-        /* 0x1970 */ public int ResourceParticleMaxNum;
+        /* 0x196C */ public int ResourceParticleMaxNum;
         [NMS(Index = 507)]
-        /* 0x1974 */ public int ResourceParticleMinNum;
+        /* 0x1970 */ public int ResourceParticleMinNum;
         [NMS(Index = 504)]
-        /* 0x1978 */ public float ResourceParticleSpeed;
+        /* 0x1974 */ public float ResourceParticleSpeed;
         [NMS(Index = 505)]
-        /* 0x197C */ public float ResourceParticleSpread;
+        /* 0x1978 */ public float ResourceParticleSpread;
         [NMS(Index = 388)]
-        /* 0x1980 */ public int ResourceReducer;
+        /* 0x197C */ public int ResourceReducer;
         [NMS(Index = 40)]
-        /* 0x1984 */ public int RocketLockerFuelUse;
+        /* 0x1980 */ public int RocketLockerFuelUse;
         [NMS(Index = 642)]
-        /* 0x1988 */ public float SalvageShipExplodeShipDistance;
+        /* 0x1984 */ public float SalvageShipExplodeShipDistance;
         [NMS(Index = 638)]
-        /* 0x198C */ public float SalvageShipExplodeSpeed;
+        /* 0x1988 */ public float SalvageShipExplodeSpeed;
         [NMS(Index = 637)]
-        /* 0x1990 */ public float SalvageShipHeightOffset;
+        /* 0x198C */ public float SalvageShipHeightOffset;
         [NMS(Index = 643)]
-        /* 0x1994 */ public float SalvageShipOneRevolutionTime;
+        /* 0x1990 */ public float SalvageShipOneRevolutionTime;
         [NMS(Index = 636)]
-        /* 0x1998 */ public float SalvageShipPitch;
+        /* 0x1994 */ public float SalvageShipPitch;
         [NMS(Index = 641)]
-        /* 0x199C */ public float SalvageShipShowShipDistance;
+        /* 0x1998 */ public float SalvageShipShowShipDistance;
         [NMS(Index = 639)]
-        /* 0x19A0 */ public float SalvageShipShowShipSpeed;
+        /* 0x199C */ public float SalvageShipShowShipSpeed;
         [NMS(Index = 640)]
-        /* 0x19A4 */ public float SalvageShipShowShipSpeedSwitching;
+        /* 0x19A0 */ public float SalvageShipShowShipSpeedSwitching;
         [NMS(Index = 105)]
-        /* 0x19A8 */ public int SalvageSubstanceValueThreshold;
+        /* 0x19A4 */ public int SalvageSubstanceValueThreshold;
         [NMS(Index = 104)]
-        /* 0x19AC */ public float SalvageValueAsProds;
+        /* 0x19A8 */ public float SalvageValueAsProds;
         [NMS(Index = 645)]
-        /* 0x19B0 */ public float SalvageWeaponHeightOffset;
+        /* 0x19AC */ public float SalvageWeaponHeightOffset;
         [NMS(Index = 647)]
-        /* 0x19B4 */ public float SalvageWeaponMaxSize;
+        /* 0x19B0 */ public float SalvageWeaponMaxSize;
         [NMS(Index = 644)]
-        /* 0x19B8 */ public float SalvageWeaponPitch;
+        /* 0x19B4 */ public float SalvageWeaponPitch;
         [NMS(Index = 646)]
-        /* 0x19BC */ public float SalvageWeaponScale;
+        /* 0x19B8 */ public float SalvageWeaponScale;
         [NMS(Index = 339)]
-        /* 0x19C0 */ public float ScanAngle;
+        /* 0x19BC */ public float ScanAngle;
         [NMS(Index = 408)]
-        /* 0x19C4 */ public float ScanAngleCutoff;
+        /* 0x19C0 */ public float ScanAngleCutoff;
         [NMS(Index = 235)]
-        /* 0x19C8 */ public float ScannableComponentMarkerOffset;
+        /* 0x19C4 */ public float ScannableComponentMarkerOffset;
         [NMS(Index = 236)]
-        /* 0x19CC */ public float ScannableComponentPlaceMarkerOffset;
+        /* 0x19C8 */ public float ScannableComponentPlaceMarkerOffset;
         [NMS(Index = 459)]
-        /* 0x19D0 */ public float ScannerAnalyzeFXRate;
+        /* 0x19CC */ public float ScannerAnalyzeFXRate;
         [NMS(Index = 234)]
-        /* 0x19D4 */ public float ScannerIconsClumpRadius;
+        /* 0x19D0 */ public float ScannerIconsClumpRadius;
         [NMS(Index = 456)]
-        /* 0x19D8 */ public float ScannerMarkerFadeTime;
+        /* 0x19D4 */ public float ScannerMarkerFadeTime;
         [NMS(Index = 458)]
-        /* 0x19DC */ public float ScannerPhysicsProbeAABBSize;
+        /* 0x19D8 */ public float ScannerPhysicsProbeAABBSize;
         [NMS(Index = 457)]
-        /* 0x19E0 */ public float ScannerSmallMarkerFadeTime;
+        /* 0x19DC */ public float ScannerSmallMarkerFadeTime;
         [NMS(Index = 460)]
-        /* 0x19E4 */ public float ScannerSubstanceTimePerTrigger;
+        /* 0x19E0 */ public float ScannerSubstanceTimePerTrigger;
         [NMS(Index = 461)]
-        /* 0x19E8 */ public float ScannerTuningA;
+        /* 0x19E4 */ public float ScannerTuningA;
         [NMS(Index = 462)]
-        /* 0x19EC */ public float ScannerTuningB;
+        /* 0x19E8 */ public float ScannerTuningB;
         [NMS(Index = 463)]
-        /* 0x19F0 */ public float ScannerTuningC;
+        /* 0x19EC */ public float ScannerTuningC;
         [NMS(Index = 464)]
-        /* 0x19F4 */ public float ScannerTuningD;
+        /* 0x19F0 */ public float ScannerTuningD;
         [NMS(Index = 465)]
-        /* 0x19F8 */ public float ScannerTuningResourceOffset1;
+        /* 0x19F4 */ public float ScannerTuningResourceOffset1;
         [NMS(Index = 466)]
-        /* 0x19FC */ public float ScannerTuningResourceOffset2;
+        /* 0x19F8 */ public float ScannerTuningResourceOffset2;
         [NMS(Index = 467)]
-        /* 0x1A00 */ public float ScannerTuningSmoothStepAmount;
+        /* 0x19FC */ public float ScannerTuningSmoothStepAmount;
         [NMS(Index = 468)]
-        /* 0x1A04 */ public float ScannerTuningTrailingEdge;
+        /* 0x1A00 */ public float ScannerTuningTrailingEdge;
         [NMS(Index = 332)]
-        /* 0x1A08 */ public float ScanStartTimeDelayMinDist;
+        /* 0x1A04 */ public float ScanStartTimeDelayMinDist;
         [NMS(Index = 333)]
-        /* 0x1A0C */ public float ScanStartTimeDelayRange;
+        /* 0x1A08 */ public float ScanStartTimeDelayRange;
         [NMS(Index = 334)]
-        /* 0x1A10 */ public float ScanStartTimeDistanceDelayTime;
+        /* 0x1A0C */ public float ScanStartTimeDistanceDelayTime;
         [NMS(Index = 335)]
-        /* 0x1A14 */ public float ScanStickyDecay;
+        /* 0x1A10 */ public float ScanStickyDecay;
         [NMS(Index = 27)]
-        /* 0x1A18 */ public float ScanToRevealDelayOverride;
+        /* 0x1A14 */ public float ScanToRevealDelayOverride;
         [NMS(Index = 31)]
-        /* 0x1A1C */ public float ScanToRevealVFXBaseScalingSize;
+        /* 0x1A18 */ public float ScanToRevealVFXBaseScalingSize;
         [NMS(Index = 629)]
-        /* 0x1A20 */ public float ScrapDroneProbability;
+        /* 0x1A1C */ public float ScrapDroneProbability;
         [NMS(Index = 189)]
-        /* 0x1A24 */ public float SeasonalMessageModuleAttractDistanceMul;
+        /* 0x1A20 */ public float SeasonalMessageModuleAttractDistanceMul;
         [NMS(Index = 373)]
-        /* 0x1A28 */ public int SentinelsHigh;
+        /* 0x1A24 */ public int SentinelsHigh;
         [NMS(Index = 374)]
-        /* 0x1A2C */ public int SentinelsLow;
+        /* 0x1A28 */ public int SentinelsLow;
         [NMS(Index = 98)]
-        /* 0x1A30 */ public float ShipBulletTraceLineWidth;
+        /* 0x1A2C */ public float ShipBulletTraceLineWidth;
         [NMS(Index = 611)]
-        /* 0x1A34 */ public float ShipDisplayDamageMultiplier;
+        /* 0x1A30 */ public float ShipDisplayDamageMultiplier;
         [NMS(Index = 406)]
-        /* 0x1A38 */ public float ShipInteractRadius;
+        /* 0x1A34 */ public float ShipInteractRadius;
         [NMS(Index = 57)]
-        /* 0x1A3C */ public float ShipInterestAcceleratorInAsteroidField;
+        /* 0x1A38 */ public float ShipInterestAcceleratorInAsteroidField;
         [NMS(Index = 671)]
-        /* 0x1A40 */ public int ShipInventoryMinHeightMax;
+        /* 0x1A3C */ public int ShipInventoryMinHeightMax;
         [NMS(Index = 670)]
-        /* 0x1A44 */ public int ShipInventoryMinWidthMax;
+        /* 0x1A40 */ public int ShipInventoryMinWidthMax;
         [NMS(Index = 59)]
-        /* 0x1A48 */ public float ShipMiningMul;
+        /* 0x1A44 */ public float ShipMiningMul;
         [NMS(Index = 453)]
-        /* 0x1A4C */ public float ShipScanOffset;
+        /* 0x1A48 */ public float ShipScanOffset;
         [NMS(Index = 454)]
-        /* 0x1A50 */ public float ShipScanOffsetGap;
+        /* 0x1A4C */ public float ShipScanOffsetGap;
         [NMS(Index = 72)]
-        /* 0x1A54 */ public float ShipScanPlanetRechargeMultiplier;
+        /* 0x1A50 */ public float ShipScanPlanetRechargeMultiplier;
         [NMS(Index = 73)]
-        /* 0x1A58 */ public float ShipScanSpaceRechargeMultiplier;
+        /* 0x1A54 */ public float ShipScanSpaceRechargeMultiplier;
         [NMS(Index = 673)]
-        /* 0x1A5C */ public int ShipTechInventoryMinHeightMax;
+        /* 0x1A58 */ public int ShipTechInventoryMinHeightMax;
         [NMS(Index = 672)]
-        /* 0x1A60 */ public int ShipTechInventoryMinWidthMax;
+        /* 0x1A5C */ public int ShipTechInventoryMinWidthMax;
         [NMS(Index = 204)]
-        /* 0x1A64 */ public float ShootableAggroForgetTime;
+        /* 0x1A60 */ public float ShootableAggroForgetTime;
         [NMS(Index = 203)]
-        /* 0x1A68 */ public float ShootableAggroMinStartTime;
+        /* 0x1A64 */ public float ShootableAggroMinStartTime;
         [NMS(Index = 202)]
-        /* 0x1A6C */ public float ShootableArmourHighlightHitTime;
+        /* 0x1A68 */ public float ShootableArmourHighlightHitTime;
         [NMS(Index = 581)]
-        /* 0x1A70 */ public float SimpleInteractionMessageTime;
+        /* 0x1A6C */ public float SimpleInteractionMessageTime;
         [NMS(Index = 579)]
-        /* 0x1A74 */ public float SimpleInteractionPickupAngle;
+        /* 0x1A70 */ public float SimpleInteractionPickupAngle;
         [NMS(Index = 580)]
-        /* 0x1A78 */ public float SimpleInteractionPickupRadius;
+        /* 0x1A74 */ public float SimpleInteractionPickupRadius;
         [NMS(Index = 60)]
-        /* 0x1A7C */ public float SmugglerSellingMarkup;
+        /* 0x1A78 */ public float SmugglerSellingMarkup;
         [NMS(Index = 300)]
-        /* 0x1A80 */ public float SpaceBattleAnyHostileShipsRadius;
+        /* 0x1A7C */ public float SpaceBattleAnyHostileShipsRadius;
         [NMS(Index = 306)]
-        /* 0x1A84 */ public int SpaceBattleMaxTorpedosTargetingLeaderShip;
+        /* 0x1A80 */ public int SpaceBattleMaxTorpedosTargetingLeaderShip;
         [NMS(Index = 307)]
-        /* 0x1A88 */ public int SpaceBattleMaxTorpedosTargetingNonLeaderShip;
+        /* 0x1A84 */ public int SpaceBattleMaxTorpedosTargetingNonLeaderShip;
         [NMS(Index = 299)]
-        /* 0x1A8C */ public float SpaceBattleRadius;
+        /* 0x1A88 */ public float SpaceBattleRadius;
         [NMS(Index = 296)]
-        /* 0x1A90 */ public float SpaceCombatRadius;
+        /* 0x1A8C */ public float SpaceCombatRadius;
         [NMS(Index = 542)]
-        /* 0x1A94 */ public float SpaceSpeedReadoutMultiplier;
+        /* 0x1A90 */ public float SpaceSpeedReadoutMultiplier;
         [NMS(Index = 661)]
-        /* 0x1A98 */ public float SpawnerWeaponRange;
+        /* 0x1A94 */ public float SpawnerWeaponRange;
         [NMS(Index = 279)]
-        /* 0x1A9C */ public int SpecialMiningAmount;
+        /* 0x1A98 */ public int SpecialMiningAmount;
         [NMS(Index = 280)]
-        /* 0x1AA0 */ public float SpecialMiningTime;
+        /* 0x1A9C */ public float SpecialMiningTime;
         [NMS(Index = 39)]
-        /* 0x1AA4 */ public float SpecialTechSlotBonus;
+        /* 0x1AA0 */ public float SpecialTechSlotBonus;
         [NMS(Index = 541)]
-        /* 0x1AA8 */ public float SpeedReadoutMultiplier;
+        /* 0x1AA4 */ public float SpeedReadoutMultiplier;
         [NMS(Index = 3)]
-        /* 0x1AAC */ public float SpookMessageChance;
+        /* 0x1AA8 */ public float SpookMessageChance;
         [NMS(Index = 4)]
-        /* 0x1AB0 */ public float SpookMessageCooldown;
+        /* 0x1AAC */ public float SpookMessageCooldown;
         [NMS(Index = 2)]
-        /* 0x1AB4 */ public float SpookMessageThreshold;
+        /* 0x1AB0 */ public float SpookMessageThreshold;
         [NMS(Index = 86)]
-        /* 0x1AB8 */ public float StormBonusJetpackMod;
+        /* 0x1AB4 */ public float StormBonusJetpackMod;
         [NMS(Index = 90)]
-        /* 0x1ABC */ public GcPlayerHazardType StormBonusJetpackWeather;
+        /* 0x1AB8 */ public GcPlayerHazardType StormBonusJetpackWeather;
         [NMS(Index = 89)]
-        /* 0x1AC0 */ public float StormBonusMiningAmountMod;
+        /* 0x1ABC */ public float StormBonusMiningAmountMod;
         [NMS(Index = 93)]
-        /* 0x1AC4 */ public GcPlayerHazardType StormBonusMiningAmountWeather;
+        /* 0x1AC0 */ public GcPlayerHazardType StormBonusMiningAmountWeather;
         [NMS(Index = 88)]
-        /* 0x1AC8 */ public float StormBonusMiningHeatMod;
+        /* 0x1AC4 */ public float StormBonusMiningHeatMod;
         [NMS(Index = 92)]
-        /* 0x1ACC */ public GcPlayerHazardType StormBonusMiningHeatWeather;
+        /* 0x1AC8 */ public GcPlayerHazardType StormBonusMiningHeatWeather;
         [NMS(Index = 87)]
-        /* 0x1AD0 */ public float StormBonusSprintMod;
+        /* 0x1ACC */ public float StormBonusSprintMod;
         [NMS(Index = 91)]
-        /* 0x1AD4 */ public GcPlayerHazardType StormBonusSprintWeather;
+        /* 0x1AD0 */ public GcPlayerHazardType StormBonusSprintWeather;
         [NMS(Index = 85)]
-        /* 0x1AD8 */ public float StormGravityChangeTime;
+        /* 0x1AD4 */ public float StormGravityChangeTime;
         [NMS(Index = 617)]
-        /* 0x1ADC */ public int SubstanceItemStockDecayTime;
+        /* 0x1AD8 */ public int SubstanceItemStockDecayTime;
         [NMS(Index = 618)]
-        /* 0x1AE0 */ public int SubstanceItemStockReplenishTime;
+        /* 0x1ADC */ public int SubstanceItemStockReplenishTime;
         [NMS(Index = 152)]
-        /* 0x1AE4 */ public float SurveyBeginScanPercentage;
+        /* 0x1AE0 */ public float SurveyBeginScanPercentage;
         [NMS(Index = 160)]
-        /* 0x1AE8 */ public float SurveyMaxDistance;
+        /* 0x1AE4 */ public float SurveyMaxDistance;
         [NMS(Index = 154)]
-        /* 0x1AEC */ public float SurveyScanMaxSpeed;
+        /* 0x1AE8 */ public float SurveyScanMaxSpeed;
         [NMS(Index = 153)]
-        /* 0x1AF0 */ public float SurveyScanMinSpeed;
+        /* 0x1AEC */ public float SurveyScanMinSpeed;
         [NMS(Index = 157)]
-        /* 0x1AF4 */ public float SurveySonarMaxPulseSpeed;
+        /* 0x1AF0 */ public float SurveySonarMaxPulseSpeed;
         [NMS(Index = 159)]
-        /* 0x1AF8 */ public float SurveySonarMiddleRangeMax;
+        /* 0x1AF4 */ public float SurveySonarMiddleRangeMax;
         [NMS(Index = 158)]
-        /* 0x1AFC */ public float SurveySonarMiddleRangeMin;
+        /* 0x1AF8 */ public float SurveySonarMiddleRangeMin;
         [NMS(Index = 156)]
-        /* 0x1B00 */ public float SurveySonarMinPulseSpeed;
+        /* 0x1AFC */ public float SurveySonarMinPulseSpeed;
         [NMS(Index = 155)]
-        /* 0x1B04 */ public float SurveySonarPulseSpeedBandCount;
+        /* 0x1B00 */ public float SurveySonarPulseSpeedBandCount;
         [NMS(Index = 246)]
-        /* 0x1B08 */ public float TapInteractionDecay;
+        /* 0x1B04 */ public float TapInteractionDecay;
         [NMS(Index = 245)]
-        /* 0x1B0C */ public float TapInteractionIncreaseAmount;
+        /* 0x1B08 */ public float TapInteractionIncreaseAmount;
         [NMS(Index = 43)]
-        /* 0x1B10 */ public float TechDamageChanceShieldedMax;
+        /* 0x1B0C */ public float TechDamageChanceShieldedMax;
         [NMS(Index = 45)]
-        /* 0x1B14 */ public float TechDamageChanceShieldLevelMax;
+        /* 0x1B10 */ public float TechDamageChanceShieldLevelMax;
         [NMS(Index = 44)]
-        /* 0x1B18 */ public float TechDamageChanceShieldLevelMin;
+        /* 0x1B14 */ public float TechDamageChanceShieldLevelMin;
         [NMS(Index = 46)]
-        /* 0x1B1C */ public float TechDamageChanceToSelectPrimary;
+        /* 0x1B18 */ public float TechDamageChanceToSelectPrimary;
         [NMS(Index = 83)]
-        /* 0x1B20 */ public GcTechnologyCategory TechnologyOverrideForSmuggler;
+        /* 0x1B1C */ public GcTechnologyCategory TechnologyOverrideForSmuggler;
         [NMS(Index = 121)]
-        /* 0x1B24 */ public float TeleporterDistanceTravelledMultiplier;
+        /* 0x1B20 */ public float TeleporterDistanceTravelledMultiplier;
         [NMS(Index = 219)]
-        /* 0x1B28 */ public float TerrainResourceCompassRange;
+        /* 0x1B24 */ public float TerrainResourceCompassRange;
         [NMS(Index = 218)]
-        /* 0x1B2C */ public float TerrainResourceScanRange;
+        /* 0x1B28 */ public float TerrainResourceScanRange;
         [NMS(Index = 217)]
-        /* 0x1B30 */ public float TerrainResourceScanTime;
+        /* 0x1B2C */ public float TerrainResourceScanTime;
         [NMS(Index = 421)]
-        /* 0x1B34 */ public float TimeToDisplayScanResults;
+        /* 0x1B30 */ public float TimeToDisplayScanResults;
         [NMS(Index = 544)]
-        /* 0x1B38 */ public int TorchCookieIndex;
+        /* 0x1B34 */ public int TorchCookieIndex;
         [NMS(Index = 547)]
-        /* 0x1B3C */ public int TorchDimCookieIndex;
+        /* 0x1B38 */ public int TorchDimCookieIndex;
         [NMS(Index = 548)]
-        /* 0x1B40 */ public float TorchDimFoV;
+        /* 0x1B3C */ public float TorchDimFoV;
         [NMS(Index = 549)]
-        /* 0x1B44 */ public float TorchDimStrength;
+        /* 0x1B40 */ public float TorchDimStrength;
         [NMS(Index = 572)]
-        /* 0x1B48 */ public float TorchFollowCameraPitch;
+        /* 0x1B44 */ public float TorchFollowCameraPitch;
         [NMS(Index = 573)]
-        /* 0x1B4C */ public float TorchFollowCameraTime;
+        /* 0x1B48 */ public float TorchFollowCameraTime;
         [NMS(Index = 545)]
-        /* 0x1B50 */ public float TorchFoV;
+        /* 0x1B4C */ public float TorchFoV;
         [NMS(Index = 567)]
-        /* 0x1B54 */ public float TorchHandOffsetX;
+        /* 0x1B50 */ public float TorchHandOffsetX;
         [NMS(Index = 568)]
-        /* 0x1B58 */ public float TorchHandOffsetY;
+        /* 0x1B54 */ public float TorchHandOffsetY;
         [NMS(Index = 569)]
-        /* 0x1B5C */ public float TorchHandOffsetZ;
+        /* 0x1B58 */ public float TorchHandOffsetZ;
         [NMS(Index = 558)]
-        /* 0x1B60 */ public float TorchOffsetX;
+        /* 0x1B5C */ public float TorchOffsetX;
         [NMS(Index = 559)]
-        /* 0x1B64 */ public float TorchOffsetY;
+        /* 0x1B60 */ public float TorchOffsetY;
         [NMS(Index = 561)]
-        /* 0x1B68 */ public float TorchOffsetZ;
+        /* 0x1B64 */ public float TorchOffsetZ;
         [NMS(Index = 560)]
-        /* 0x1B6C */ public float TorchOffsetZMin;
+        /* 0x1B68 */ public float TorchOffsetZMin;
         [NMS(Index = 566)]
-        /* 0x1B70 */ public float TorchOffsetZMinSpeed;
+        /* 0x1B6C */ public float TorchOffsetZMinSpeed;
         [NMS(Index = 565)]
-        /* 0x1B74 */ public float TorchOffsetZSpeedRange;
+        /* 0x1B70 */ public float TorchOffsetZSpeedRange;
         [NMS(Index = 571)]
-        /* 0x1B78 */ public float TorchRotation;
+        /* 0x1B74 */ public float TorchRotation;
         [NMS(Index = 562)]
-        /* 0x1B7C */ public float TorchStaffOffsetY;
+        /* 0x1B78 */ public float TorchStaffOffsetY;
         [NMS(Index = 564)]
-        /* 0x1B80 */ public float TorchStaffOffsetZ;
+        /* 0x1B7C */ public float TorchStaffOffsetZ;
         [NMS(Index = 563)]
-        /* 0x1B84 */ public float TorchStaffOffsetZMin;
+        /* 0x1B80 */ public float TorchStaffOffsetZMin;
         [NMS(Index = 546)]
-        /* 0x1B88 */ public float TorchStrength;
+        /* 0x1B84 */ public float TorchStrength;
         [NMS(Index = 114)]
-        /* 0x1B8C */ public float TorpedoCooldown;
+        /* 0x1B88 */ public float TorpedoCooldown;
         [NMS(Index = 118)]
-        /* 0x1B90 */ public float TorpedoCooldownRandomExtra;
+        /* 0x1B8C */ public float TorpedoCooldownRandomExtra;
         [NMS(Index = 117)]
-        /* 0x1B94 */ public float TorpedoInitialWait;
+        /* 0x1B90 */ public float TorpedoInitialWait;
         [NMS(Index = 119)]
-        /* 0x1B98 */ public float TorpedoLaunchWarning;
+        /* 0x1B94 */ public float TorpedoLaunchWarning;
         [NMS(Index = 386)]
-        /* 0x1B9C */ public int TunnelStatReducer;
+        /* 0x1B98 */ public int TunnelStatReducer;
         [NMS(Index = 22)]
-        /* 0x1BA0 */ public float TurretAITargetingDistanceFactor;
+        /* 0x1B9C */ public float TurretAITargetingDistanceFactor;
         [NMS(Index = 26)]
-        /* 0x1BA4 */ public float TurretAITargetingFocusPlayerFactor;
+        /* 0x1BA0 */ public float TurretAITargetingFocusPlayerFactor;
         [NMS(Index = 25)]
-        /* 0x1BA8 */ public float TurretAITargetingLastHitFactor;
+        /* 0x1BA4 */ public float TurretAITargetingLastHitFactor;
         [NMS(Index = 23)]
-        /* 0x1BAC */ public float TurretAITargetingPitchAngleFactor;
+        /* 0x1BA8 */ public float TurretAITargetingPitchAngleFactor;
         [NMS(Index = 24)]
-        /* 0x1BB0 */ public float TurretAITargetingYawAngleFactor;
+        /* 0x1BAC */ public float TurretAITargetingYawAngleFactor;
         [NMS(Index = 552)]
-        /* 0x1BB4 */ public float UndergroundTorchFoV;
+        /* 0x1BB0 */ public float UndergroundTorchFoV;
         [NMS(Index = 553)]
-        /* 0x1BB8 */ public float UndergroundTorchStrength;
+        /* 0x1BB4 */ public float UndergroundTorchStrength;
         [NMS(Index = 556)]
-        /* 0x1BBC */ public float UnderwaterAmbientLightStrength;
+        /* 0x1BB8 */ public float UnderwaterAmbientLightStrength;
         [NMS(Index = 79)]
-        /* 0x1BC0 */ public float UnderwaterLightningDamageDistanceMultiplier;
+        /* 0x1BBC */ public float UnderwaterLightningDamageDistanceMultiplier;
         [NMS(Index = 554)]
-        /* 0x1BC4 */ public float UnderwaterTorchFoV;
+        /* 0x1BC0 */ public float UnderwaterTorchFoV;
         [NMS(Index = 555)]
-        /* 0x1BC8 */ public float UnderwaterTorchStrengthMax;
+        /* 0x1BC4 */ public float UnderwaterTorchStrengthMax;
         [NMS(Index = 557)]
-        /* 0x1BCC */ public float UnderwaterTorchVolumetricStrength;
+        /* 0x1BC8 */ public float UnderwaterTorchVolumetricStrength;
         [NMS(Index = 99)]
-        /* 0x1BD0 */ public float VehicleAllIconScanTime;
+        /* 0x1BCC */ public float VehicleAllIconScanTime;
         [NMS(Index = 675)]
-        /* 0x1BD4 */ public int VehicleInventoryMinHeightMax;
+        /* 0x1BD0 */ public int VehicleInventoryMinHeightMax;
         [NMS(Index = 674)]
-        /* 0x1BD8 */ public int VehicleInventoryMinWidthMax;
+        /* 0x1BD4 */ public int VehicleInventoryMinWidthMax;
         [NMS(Index = 626)]
-        /* 0x1BDC */ public float ViciousSentinelProbability;
+        /* 0x1BD8 */ public float ViciousSentinelProbability;
         [NMS(Index = 627)]
-        /* 0x1BE0 */ public float ViciousStormProbability;
+        /* 0x1BDC */ public float ViciousStormProbability;
         [NMS(Index = 628)]
-        /* 0x1BE4 */ public float ViciousWeatherProbability;
+        /* 0x1BE0 */ public float ViciousWeatherProbability;
         [NMS(Index = 387)]
-        /* 0x1BE8 */ public float VoxelAsteroidResourceChance;
+        /* 0x1BE4 */ public float VoxelAsteroidResourceChance;
         [NMS(Index = 297)]
-        /* 0x1BEC */ public int WarpsBetweenBattles;
+        /* 0x1BE8 */ public int WarpsBetweenBattles;
         [NMS(Index = 600)]
-        /* 0x1BF0 */ public int WarpsBetweenMiniStation;
+        /* 0x1BEC */ public int WarpsBetweenMiniStation;
         [NMS(Index = 342)]
-        /* 0x1BF4 */ public float WaterLandingDamageMultiplier;
+        /* 0x1BF0 */ public float WaterLandingDamageMultiplier;
         [NMS(Index = 381)]
-        /* 0x1BF8 */ public float WaypointScanTime;
+        /* 0x1BF4 */ public float WaypointScanTime;
         [NMS(Index = 677)]
-        /* 0x1BFC */ public int WeaponInventoryMinHeightMax;
+        /* 0x1BF8 */ public int WeaponInventoryMinHeightMax;
         [NMS(Index = 676)]
-        /* 0x1C00 */ public int WeaponInventoryMinWidthMax;
+        /* 0x1BFC */ public int WeaponInventoryMinWidthMax;
         [NMS(Index = 82)]
-        /* 0x1C04 */ public float WeatherHazardGiftLifeTime;
+        /* 0x1C00 */ public float WeatherHazardGiftLifeTime;
         [NMS(Index = 81)]
-        /* 0x1C08 */ public float WeatherHazardGiftMaxDistance;
+        /* 0x1C04 */ public float WeatherHazardGiftMaxDistance;
         [NMS(Index = 420)]
-        /* 0x1C0C */ public float ZoomFindBuildingRange;
+        /* 0x1C08 */ public float ZoomFindBuildingRange;
         [NMS(Index = 403)]
-        /* 0x1C10 */ public NMSString0x20 DepotResource;
+        /* 0x1C0C */ public NMSString0x20 DepotResource;
         [NMS(Index = 402)]
-        /* 0x1C30 */ public NMSString0x20 RobotResource;
+        /* 0x1C2C */ public NMSString0x20 RobotResource;
         [NMS(Index = 197)]
-        /* 0x1C50 */ public bool AllowBinocularMarker;
+        /* 0x1C4C */ public bool AllowBinocularMarker;
         [NMS(Index = 196)]
-        /* 0x1C51 */ public bool AllowDeconstruct;
+        /* 0x1C4D */ public bool AllowDeconstruct;
         [NMS(Index = 166)]
-        /* 0x1C52 */ public bool AllowSpaceScanEvents;
+        /* 0x1C4E */ public bool AllowSpaceScanEvents;
         [NMS(Index = 212)]
-        /* 0x1C53 */ public TkCurveType AtmosphereEntryCurve;
+        /* 0x1C4F */ public TkCurveType AtmosphereEntryCurve;
         [NMS(Index = 469)]
-        /* 0x1C54 */ public bool Autolevel;
+        /* 0x1C50 */ public bool Autolevel;
         [NMS(Index = 220)]
-        /* 0x1C55 */ public bool BinocsDisplayUnknownCreatures;
+        /* 0x1C51 */ public bool BinocsDisplayUnknownCreatures;
         [NMS(Index = 227)]
-        /* 0x1C56 */ public TkCurveType BinocularScanTargetHeightCurve;
+        /* 0x1C52 */ public TkCurveType BinocularScanTargetHeightCurve;
         [NMS(Index = 167)]
-        /* 0x1C57 */ public bool CanMoveTechnology;
+        /* 0x1C53 */ public bool CanMoveTechnology;
         [NMS(Index = 613)]
-        /* 0x1C58 */ public bool ChangePricesLocally;
+        /* 0x1C54 */ public bool ChangePricesLocally;
         [NMS(Index = 540)]
-        /* 0x1C59 */ public bool DebugDrawTriggerBoxes;
+        /* 0x1C55 */ public bool DebugDrawTriggerBoxes;
         [NMS(Index = 38)]
-        /* 0x1C5A */ public bool DebugPrintShootables;
+        /* 0x1C56 */ public bool DebugPrintShootables;
         [NMS(Index = 451)]
-        /* 0x1C5B */ public bool DebugScanForceBuilding;
+        /* 0x1C57 */ public bool DebugScanForceBuilding;
+        [NMS(Index = 452)]
+        /* 0x1C58 */ public GcBuildingClassification DebugScanForceBuildingType;
         [NMS(Index = 195)]
-        /* 0x1C5C */ public bool DisableAnomalyAmbientSpawn;
+        /* 0x1C59 */ public bool DisableAnomalyAmbientSpawn;
         [NMS(Index = 608)]
-        /* 0x1C5D */ public bool DisableBasePowerHUDOverlay;
+        /* 0x1C5A */ public bool DisableBasePowerHUDOverlay;
         [NMS(Index = 163)]
-        /* 0x1C5E */ public bool DisableGalaxyMapInQuickMenu;
+        /* 0x1C5B */ public bool DisableGalaxyMapInQuickMenu;
         [NMS(Index = 164)]
-        /* 0x1C5F */ public bool DisableNexusInQuickMenu;
+        /* 0x1C5C */ public bool DisableNexusInQuickMenu;
         [NMS(Index = 200)]
-        /* 0x1C60 */ public bool EnableShootHitEffect;
+        /* 0x1C5D */ public bool EnableShootHitEffect;
         [NMS(Index = 41)]
-        /* 0x1C61 */ public bool EnableTechPackaging;
+        /* 0x1C5E */ public bool EnableTechPackaging;
         [NMS(Index = 165)]
-        /* 0x1C62 */ public bool EnableTeleporters;
+        /* 0x1C5F */ public bool EnableTeleporters;
         [NMS(Index = 198)]
-        /* 0x1C63 */ public bool EveryMaintenanceIsBroken;
+        /* 0x1C60 */ public bool EveryMaintenanceIsBroken;
         [NMS(Index = 341)]
-        /* 0x1C64 */ public bool FailToFindBuildings;
+        /* 0x1C61 */ public bool FailToFindBuildings;
         [NMS(Index = 194)]
-        /* 0x1C65 */ public bool FreighterRequiresRGBHyperdriveUpgrades;
+        /* 0x1C62 */ public bool FreighterRequiresRGBHyperdriveUpgrades;
         [NMS(Index = 483)]
-        /* 0x1C66 */ public bool HUDUpdateFromData;
+        /* 0x1C63 */ public bool HUDUpdateFromData;
         [NMS(Index = 193)]
-        /* 0x1C67 */ public bool InstallTechWithInteraction;
+        /* 0x1C64 */ public bool InstallTechWithInteraction;
         [NMS(Index = 273)]
-        /* 0x1C68 */ public bool InteractionOverride;
+        /* 0x1C65 */ public bool InteractionOverride;
         [NMS(Index = 609)]
-        /* 0x1C69 */ public bool KeepAttackingMaxWantedLevel;
+        /* 0x1C66 */ public bool KeepAttackingMaxWantedLevel;
         [NMS(Index = 130)]
-        /* 0x1C6A */ public bool MissionSurveySuggestSurveyForNearScannables;
+        /* 0x1C67 */ public bool MissionSurveySuggestSurveyForNearScannables;
         [NMS(Index = 182)]
-        /* 0x1C6B */ public TkCurveType OverheatColourCurve;
+        /* 0x1C68 */ public TkCurveType OverheatColourCurve;
         [NMS(Index = 181)]
-        /* 0x1C6C */ public TkCurveType OverheatColourCurveShip;
+        /* 0x1C69 */ public TkCurveType OverheatColourCurveShip;
         [NMS(Index = 177)]
-        /* 0x1C6D */ public TkCurveType OverheatCurve;
+        /* 0x1C6A */ public TkCurveType OverheatCurve;
         [NMS(Index = 525)]
-        /* 0x1C6E */ public TkCurveType PainCurve;
+        /* 0x1C6B */ public TkCurveType PainCurve;
         [NMS(Index = 501)]
-        /* 0x1C6F */ public bool PlayHitEffectsOnZeroDamage;
+        /* 0x1C6C */ public bool PlayHitEffectsOnZeroDamage;
         [NMS(Index = 13)]
-        /* 0x1C70 */ public bool RewardInventoryClassItemFromShipSalvage;
+        /* 0x1C6D */ public bool RewardInventoryClassItemFromShipSalvage;
         [NMS(Index = 28)]
-        /* 0x1C71 */ public bool ScanToRevealIgnoreRequirements;
+        /* 0x1C6E */ public bool ScanToRevealIgnoreRequirements;
         [NMS(Index = 29)]
-        /* 0x1C72 */ public bool ScanToRevealNPCsAlwaysTriggersCameraEvent;
+        /* 0x1C6F */ public bool ScanToRevealNPCsAlwaysTriggersCameraEvent;
         [NMS(Index = 455)]
-        /* 0x1C73 */ public TkCurveType ShipScanCurve;
+        /* 0x1C70 */ public TkCurveType ShipScanCurve;
         [NMS(Index = 614)]
-        /* 0x1C74 */ public bool ShowPriceMarkupsAsPercentages;
+        /* 0x1C71 */ public bool ShowPriceMarkupsAsPercentages;
         [NMS(Index = 199)]
-        /* 0x1C75 */ public bool SpawnResourceBlobsOnPartDelete;
+        /* 0x1C72 */ public bool SpawnResourceBlobsOnPartDelete;
         [NMS(Index = 37)]
-        /* 0x1C76 */ public bool TechMustBeInTechInventory;
+        /* 0x1C73 */ public bool TechMustBeInTechInventory;
         [NMS(Index = 570)]
-        /* 0x1C77 */ public bool TorchDisabledInTheDay;
+        /* 0x1C74 */ public bool TorchDisabledInTheDay;
         [NMS(Index = 664)]
-        /* 0x1C78 */ public bool UseCustomSaveDirectory;
+        /* 0x1C75 */ public bool UseCustomSaveDirectory;
         [NMS(Index = 450)]
-        /* 0x1C79 */ public bool UseDebugScan;
+        /* 0x1C76 */ public bool UseDebugScan;
         [NMS(Index = 610)]
-        /* 0x1C7A */ public bool UseMultiplierBonus;
+        /* 0x1C77 */ public bool UseMultiplierBonus;
         [NMS(Index = 178)]
-        /* 0x1C7B */ public bool UseOverheatColour;
+        /* 0x1C78 */ public bool UseOverheatColour;
         [NMS(Index = 36)]
-        /* 0x1C7C */ public bool UseSecondaryBiomeSubstances;
+        /* 0x1C79 */ public bool UseSecondaryBiomeSubstances;
         [NMS(Index = 612)]
-        /* 0x1C7D */ public bool UseTradingCostTable;
+        /* 0x1C7A */ public bool UseTradingCostTable;
     }
 }

@@ -2,7 +2,7 @@ using libMBIN.NMS.Toolkit;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0xBCB1CCAFDD6709F5, NameHash = 0x80EBCD8A)]
+    [NMS(GUID = 0x991D1695C40B30C, NameHash = 0x80EBCD8A)]
     public class TkNGuiGraphicStyle : NMSTemplate
     {
         [NMS(Index = 2)]
@@ -15,10 +15,11 @@ namespace libMBIN.NMS.Toolkit
         /* 0x150 */ public Vector2f CustomMaxStart;
         [NMS(Index = 16)]
         /* 0x158 */ public Vector2f CustomMinStart;
-        // size: 0x6
+        // size: 0x7
         public enum AnimateEnum : uint {
             None,
             WipeRightToLeft,
+            WipeLeftToRight,
             SimpleWipe,
             SimpleWipeDown,
             CustomWipe,

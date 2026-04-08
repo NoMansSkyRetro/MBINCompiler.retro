@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAE8CC7A15DAEA247, NameHash = 0xC1383C3B)]
+    [NMS(GUID = 0x9325A746F290F2DE, NameHash = 0xC1383C3B)]
     public class GcLandingGearComponentData : NMSTemplate
     {
         [NMS(Index = 0)]
