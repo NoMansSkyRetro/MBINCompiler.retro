@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF5DE4E72C49CDE53, NameHash = 0x30F7EE46)]
+    [NMS(GUID = 0x8512B4562B5449A8, NameHash = 0x30F7EE46)]
     public class GcScanEventSave : NMSTemplate
     {
         [NMS(Index = 4)]
@@ -17,13 +17,13 @@ namespace libMBIN.NMS.GameComponents
         /* 0x50 */ public ulong GalacticAddress;
         [NMS(Index = 8)]
         /* 0x58 */ public ulong MissionSeed;
-        [NMS(Index = 5)]
-        /* 0x60 */ public GcBuildingClassification BuildingClass;
         [NMS(Index = 9)]
-        /* 0x64 */ public GcPlayerMissionParticipantType ParticipantType;
+        /* 0x60 */ public GcPlayerMissionParticipantType ParticipantType;
         [NMS(Index = 0)]
-        /* 0x68 */ public int Table;
+        /* 0x64 */ public int Table;
         [NMS(Index = 6)]
-        /* 0x6C */ public float Time;
+        /* 0x68 */ public float Time;
+        [NMS(Index = 5)]
+        /* 0x6C */ public GcBuildingClassification BuildingClass;
     }
 }

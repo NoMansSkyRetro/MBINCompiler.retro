@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x971D1B510B115FBF, NameHash = 0x5C7DD06F)]
+    [NMS(GUID = 0xB07F1FFE2C3476E8, NameHash = 0x5C7DD06F)]
     public class GcProductData : NMSTemplate
     {
         [NMS(Index = 14)]
@@ -79,18 +79,16 @@ namespace libMBIN.NMS.GameComponents
         /* 0x1D0 */ public float NormalisedValueOffWorld;
         [NMS(Index = 30)]
         /* 0x1D4 */ public float NormalisedValueOnWorld;
-        [NMS(Index = 43)]
-        /* 0x1D8 */ public GcScannerIconTypes PinObjectiveScannableType;
         [NMS(Index = 17)]
-        /* 0x1DC */ public GcRarity Rarity;
+        /* 0x1D8 */ public GcRarity Rarity;
         [NMS(Index = 28)]
-        /* 0x1E0 */ public int RecipeCost;
+        /* 0x1DC */ public int RecipeCost;
         [NMS(Index = 21)]
-        /* 0x1E4 */ public int StackMultiplier;
+        /* 0x1E0 */ public int StackMultiplier;
         [NMS(Index = 32)]
-        /* 0x1E8 */ public GcTradeCategory TradeCategory;
+        /* 0x1E4 */ public GcTradeCategory TradeCategory;
         [NMS(Index = 16)]
-        /* 0x1EC */ public GcProductCategory Type;
+        /* 0x1E8 */ public GcProductCategory Type;
         // size: 0x7
         public enum WikiCategoryEnum : uint {
             NotEnabled,
@@ -102,30 +100,32 @@ namespace libMBIN.NMS.GameComponents
             Cooking,
         }
         [NMS(Index = 33)]
-        /* 0x1F0 */ public WikiCategoryEnum WikiCategory;
+        /* 0x1EC */ public WikiCategoryEnum WikiCategory;
         [NMS(Index = 1)]
-        /* 0x1F4 */ public NMSString0x80 Name;
+        /* 0x1F0 */ public NMSString0x80 Name;
         [NMS(Index = 2)]
-        /* 0x274 */ public NMSString0x80 NameLower;
+        /* 0x270 */ public NMSString0x80 NameLower;
         [NMS(Index = 54)]
-        /* 0x2F4 */ public bool CanSendToOtherPlayers;
+        /* 0x2F0 */ public bool CanSendToOtherPlayers;
         [NMS(Index = 19)]
-        /* 0x2F5 */ public bool Consumable;
+        /* 0x2F1 */ public bool Consumable;
         [NMS(Index = 46)]
-        /* 0x2F6 */ public bool CookingIngredient;
+        /* 0x2F2 */ public bool CookingIngredient;
         [NMS(Index = 52)]
-        /* 0x2F7 */ public bool EggModifierIngredient;
+        /* 0x2F3 */ public bool EggModifierIngredient;
         [NMS(Index = 50)]
-        /* 0x2F8 */ public bool GoodForSelling;
+        /* 0x2F4 */ public bool GoodForSelling;
         [NMS(Index = 37)]
-        /* 0x2F9 */ public bool IsCraftable;
+        /* 0x2F5 */ public bool IsCraftable;
         [NMS(Index = 53)]
-        /* 0x2FA */ public bool IsTechbox;
+        /* 0x2F6 */ public bool IsTechbox;
         [NMS(Index = 45)]
-        /* 0x2FB */ public bool NeverPinnable;
+        /* 0x2F7 */ public bool NeverPinnable;
         [NMS(Index = 44)]
-        /* 0x2FC */ public bool PinObjectiveEasyToRefine;
+        /* 0x2F8 */ public bool PinObjectiveEasyToRefine;
+        [NMS(Index = 43)]
+        /* 0x2F9 */ public GcScannerIconTypes PinObjectiveScannableType;
         [NMS(Index = 29)]
-        /* 0x2FD */ public bool SpecificChargeOnly;
+        /* 0x2FA */ public bool SpecificChargeOnly;
     }
 }

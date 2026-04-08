@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEDE7DEEA1757C55E, NameHash = 0xFD3342FE)]
+    [NMS(GUID = 0x69E9538FC66061D2, NameHash = 0xFD3342FE)]
     public class GcBuildingDefinitionTable : NMSTemplate
     {
         [NMS(Index = 1, Size = 0x3E, EnumType = typeof(GcBuildingClassification.BuildingClassEnum))]

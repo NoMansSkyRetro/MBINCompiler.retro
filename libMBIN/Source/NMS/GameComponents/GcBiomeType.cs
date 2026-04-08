@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xAF7120F3BC22E0B3, NameHash = 0xCA9B582D)]
+    [NMS(GUID = 0xC3DD677117D8635B, NameHash = 0xCA9B582D)]
     public class GcBiomeType : NMSTemplate
     {
         // size: 0x11

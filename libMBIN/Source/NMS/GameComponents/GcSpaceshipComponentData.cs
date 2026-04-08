@@ -3,24 +3,24 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF0AE85EDC9346A96, NameHash = 0x4600F6B4)]
+    [NMS(GUID = 0x5DBA8D5AF31C1BD9, NameHash = 0x4600F6B4)]
     public class GcSpaceshipComponentData : NMSTemplate
     {
         [NMS(Index = 7)]
         /* 0x00 */ public TkModelRendererData Renderer;
         [NMS(Index = 1)]
-        /* 0xB0 */ public GcFilename Cockpit;
+        /* 0xC0 */ public GcFilename Cockpit;
         [NMS(Index = 0)]
-        /* 0xC0 */ public GcSpaceshipClasses Class;
+        /* 0xD0 */ public GcSpaceshipClasses Class;
         [NMS(Index = 5)]
-        /* 0xC4 */ public int DefaultHealth;
+        /* 0xD4 */ public int DefaultHealth;
         [NMS(Index = 6)]
-        /* 0xC8 */ public float FoVFixedDistance;
+        /* 0xD8 */ public float FoVFixedDistance;
         [NMS(Index = 4)]
-        /* 0xCC */ public float MaxHeadPitchDown;
+        /* 0xDC */ public float MaxHeadPitchDown;
         [NMS(Index = 3)]
-        /* 0xD0 */ public float MaxHeadPitchUp;
+        /* 0xE0 */ public float MaxHeadPitchUp;
         [NMS(Index = 2)]
-        /* 0xD4 */ public float MaxHeadTurn;
+        /* 0xE4 */ public float MaxHeadTurn;
     }
 }

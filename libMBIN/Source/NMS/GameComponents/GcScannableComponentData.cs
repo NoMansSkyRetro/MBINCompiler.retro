@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x3B5FBC73FF6C4DCE, NameHash = 0x4E404FB0)]
+    [NMS(GUID = 0x9FF2F2F5FEF26496, NameHash = 0x4E404FB0)]
     public class GcScannableComponentData : NMSTemplate
     {
         [NMS(Index = 17)]
@@ -16,14 +16,40 @@ namespace libMBIN.NMS.GameComponents
         /* 0x34 */ public GcDiscoveryType BinocsDiscoIconOverride;
         [NMS(Index = 3)]
         /* 0x38 */ public float CompassRangeMultiplier;
-        [NMS(Index = 11)]
-        /* 0x3C */ public GcScannerIconTypes Icon;
         [NMS(Index = 23)]
-        /* 0x40 */ public float MarkerOffsetOverride;
+        /* 0x3C */ public float MarkerOffsetOverride;
         [NMS(Index = 22)]
-        /* 0x44 */ public float MinDisplayDistanceOverride;
+        /* 0x40 */ public float MinDisplayDistanceOverride;
+        [NMS(Index = 0)]
+        /* 0x44 */ public float ScanRange;
+        [NMS(Index = 2)]
+        /* 0x48 */ public float ScanTime;
+        [NMS(Index = 1)]
+        /* 0x4C */ public NMSString0x20 ScanName;
+        [NMS(Index = 19)]
+        /* 0x6C */ public bool AllowedToMerge;
+        [NMS(Index = 6)]
+        /* 0x6D */ public bool CanTagIcon;
+        [NMS(Index = 7)]
+        /* 0x6E */ public bool ClearTagOnArrival;
+        [NMS(Index = 8)]
+        /* 0x6F */ public bool DisableIfBuildingPart;
+        [NMS(Index = 9)]
+        /* 0x70 */ public bool DisableIfInBase;
+        [NMS(Index = 24)]
+        /* 0x71 */ public bool ForceCompassMarkerOnForScannerIcon;
+        [NMS(Index = 18)]
+        /* 0x72 */ public bool GetIconAndNameFromSettlementBuilding;
+        [NMS(Index = 5)]
+        /* 0x73 */ public bool HideCompassInAlwaysShowRange;
+        [NMS(Index = 11)]
+        /* 0x74 */ public GcScannerIconTypes Icon;
+        [NMS(Index = 14)]
+        /* 0x75 */ public bool IsPlacedMarker;
+        [NMS(Index = 20)]
+        /* 0x76 */ public bool MarkerActiveWithNodeInactive;
         // size: 0x6
-        public enum ScannableTypeEnum : uint {
+        public enum ScannableTypeEnum : byte {
             Binoculars,
             BinocularsHotspots,
             Scanner,
@@ -32,38 +58,12 @@ namespace libMBIN.NMS.GameComponents
             None,
         }
         [NMS(Index = 13)]
-        /* 0x48 */ public ScannableTypeEnum ScannableType;
-        [NMS(Index = 0)]
-        /* 0x4C */ public float ScanRange;
-        [NMS(Index = 2)]
-        /* 0x50 */ public float ScanTime;
-        [NMS(Index = 1)]
-        /* 0x54 */ public NMSString0x20 ScanName;
-        [NMS(Index = 19)]
-        /* 0x74 */ public bool AllowedToMerge;
-        [NMS(Index = 6)]
-        /* 0x75 */ public bool CanTagIcon;
-        [NMS(Index = 7)]
-        /* 0x76 */ public bool ClearTagOnArrival;
-        [NMS(Index = 8)]
-        /* 0x77 */ public bool DisableIfBuildingPart;
-        [NMS(Index = 9)]
-        /* 0x78 */ public bool DisableIfInBase;
-        [NMS(Index = 24)]
-        /* 0x79 */ public bool ForceCompassMarkerOnForScannerIcon;
-        [NMS(Index = 18)]
-        /* 0x7A */ public bool GetIconAndNameFromSettlementBuilding;
-        [NMS(Index = 5)]
-        /* 0x7B */ public bool HideCompassInAlwaysShowRange;
-        [NMS(Index = 14)]
-        /* 0x7C */ public bool IsPlacedMarker;
-        [NMS(Index = 20)]
-        /* 0x7D */ public bool MarkerActiveWithNodeInactive;
+        /* 0x77 */ public ScannableTypeEnum ScannableType;
         [NMS(Index = 15)]
-        /* 0x7E */ public bool ShowInFreighterBranchRoom;
+        /* 0x78 */ public bool ShowInFreighterBranchRoom;
         [NMS(Index = 16)]
-        /* 0x7F */ public bool TellPlayerIfFreighterObjectUsed;
+        /* 0x79 */ public bool TellPlayerIfFreighterObjectUsed;
         [NMS(Index = 10)]
-        /* 0x80 */ public bool UseModelNode;
+        /* 0x7A */ public bool UseModelNode;
     }
 }

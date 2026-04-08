@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x51E3BE11EDC48BBE, NameHash = 0xBFA48A64)]
+    [NMS(GUID = 0xCC4B05FC46453682, NameHash = 0xBFA48A64)]
     public class GcSentinelMechWeaponData : NMSTemplate
     {
         [NMS(Index = 27)]

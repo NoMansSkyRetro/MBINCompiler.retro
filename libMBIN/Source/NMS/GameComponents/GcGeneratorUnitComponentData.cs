@@ -2,13 +2,13 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x84C802DE45D7B35, NameHash = 0x45C7860)]
+    [NMS(GUID = 0x723B0BB6D6E89EDC, NameHash = 0x45C7860)]
     public class GcGeneratorUnitComponentData : NMSTemplate
     {
         [NMS(Index = 3)]
         /* 0x000 */ public GcMaintenanceComponentData MaintenanceData;
         [NMS(Index = 2, Size = 0x11, EnumType = typeof(GcBiomeType.BiomeEnum))]
-        /* 0x410 */ public NMSString0x10[] BiomeGasRewards;
+        /* 0x430 */ public NMSString0x10[] BiomeGasRewards;
         // size: 0x4
         public enum GeneratorUnitTypeEnum : uint {
             MiningUnit,
@@ -17,8 +17,8 @@ namespace libMBIN.NMS.GameComponents
             SeaHarvester,
         }
         [NMS(Index = 0)]
-        /* 0x520 */ public GeneratorUnitTypeEnum GeneratorUnitType;
+        /* 0x540 */ public GeneratorUnitTypeEnum GeneratorUnitType;
         [NMS(Index = 1)]
-        /* 0x524 */ public int ResourceMaintenanceSlotOverride;
+        /* 0x544 */ public int ResourceMaintenanceSlotOverride;
     }
 }

@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xEA03339014C51B9B, NameHash = 0x1AD5DE55)]
+    [NMS(GUID = 0xD7685478BFB8AC3A, NameHash = 0x1AD5DE55)]
     public class GcRewardOpenPage : NMSTemplate
     {
-        // size: 0x18
+        // size: 0x19
         public enum PageToOpenEnum : uint {
             FreighterShipTransfer,
             DisplayPortalUa,
@@ -29,6 +29,7 @@ namespace libMBIN.NMS.GameComponents
             BoneShop,
             BiggsBarterShop,
             BiggsBasicShop,
+            PetShop,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public PageToOpenEnum PageToOpen;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x54394A320EC7AE6C, NameHash = 0xC6DB83D2)]
+    [NMS(GUID = 0x478E1FE2AFDE2520, NameHash = 0xC6DB83D2)]
     public class GcSolarSystemData : NMSTemplate
     {
         [NMS(Index = 26)]

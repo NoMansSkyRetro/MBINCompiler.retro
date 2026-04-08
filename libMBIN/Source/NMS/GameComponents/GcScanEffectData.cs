@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7D663D623F11DE0, NameHash = 0xF2988209)]
+    [NMS(GUID = 0x28AA3CF292A139A2, NameHash = 0xF2988209)]
     public class GcScanEffectData : NMSTemplate
     {
         [NMS(Index = 2)]
@@ -9,9 +9,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x10 */ public NMSString0x10 Id;
         [NMS(Index = 3)]
         /* 0x20 */ public float BasecolourIntensity;
-        [NMS(Index = 12)]
-        /* 0x24 */ public float FadeInTime;
         [NMS(Index = 13)]
+        /* 0x24 */ public float FadeInTime;
+        [NMS(Index = 14)]
         /* 0x28 */ public float FadeOutTime;
         [NMS(Index = 5)]
         /* 0x2C */ public float FresnelIntensity;
@@ -31,13 +31,17 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38 */ public float ScanlinesSeparation;
         [NMS(Index = 7)]
         /* 0x3C */ public float WaveOffset;
-        [NMS(Index = 9)]
-        /* 0x40 */ public bool FixedUpAxis;
         [NMS(Index = 11)]
-        /* 0x41 */ public bool ModelFade;
+        /* 0x40 */ public bool Additive;
+        [NMS(Index = 9)]
+        /* 0x41 */ public bool FixedUpAxis;
+        [NMS(Index = 12)]
+        /* 0x42 */ public bool ModelFade;
         [NMS(Index = 10)]
-        /* 0x42 */ public bool Transparent;
+        /* 0x43 */ public bool Transparent;
+        [NMS(Index = 15)]
+        /* 0x44 */ public bool UseBaseColourForAll;
         [NMS(Index = 8)]
-        /* 0x43 */ public bool WaveActive;
+        /* 0x45 */ public bool WaveActive;
     }
 }

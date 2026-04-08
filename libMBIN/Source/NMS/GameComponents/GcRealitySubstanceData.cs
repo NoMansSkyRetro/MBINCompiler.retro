@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBD3875DF84D8C752, NameHash = 0x77C00C01)]
+    [NMS(GUID = 0xECF9BE2D663BCF77, NameHash = 0x77C00C01)]
     public class GcRealitySubstanceData : NMSTemplate
     {
         [NMS(Index = 8)]
@@ -44,31 +44,31 @@ namespace libMBIN.NMS.GameComponents
         /* 0x120 */ public float NormalisedValueOffWorld;
         [NMS(Index = 17)]
         /* 0x124 */ public float NormalisedValueOnWorld;
-        [NMS(Index = 25)]
-        /* 0x128 */ public GcScannerIconTypes PinObjectiveScannableType;
         [NMS(Index = 12)]
-        /* 0x12C */ public GcRarity Rarity;
+        /* 0x128 */ public GcRarity Rarity;
         [NMS(Index = 15)]
-        /* 0x130 */ public int StackMultiplier;
+        /* 0x12C */ public int StackMultiplier;
         [NMS(Index = 19)]
-        /* 0x134 */ public GcTradeCategory TradeCategory;
+        /* 0x130 */ public GcTradeCategory TradeCategory;
         [NMS(Index = 0)]
-        /* 0x138 */ public NMSString0x20 Name;
+        /* 0x134 */ public NMSString0x20 Name;
         [NMS(Index = 1)]
-        /* 0x158 */ public NMSString0x20 NameLower;
+        /* 0x154 */ public NMSString0x20 NameLower;
         [NMS(Index = 3)]
-        /* 0x178 */ public NMSString0x20 Symbol;
+        /* 0x174 */ public NMSString0x20 Symbol;
         [NMS(Index = 28)]
-        /* 0x198 */ public bool CookingIngredient;
+        /* 0x194 */ public bool CookingIngredient;
         [NMS(Index = 30)]
-        /* 0x199 */ public bool EasyToRefine;
+        /* 0x195 */ public bool EasyToRefine;
         [NMS(Index = 31)]
-        /* 0x19A */ public bool EggModifierIngredient;
+        /* 0x196 */ public bool EggModifierIngredient;
         [NMS(Index = 29)]
-        /* 0x19B */ public bool GoodForSelling;
+        /* 0x197 */ public bool GoodForSelling;
         [NMS(Index = 27)]
-        /* 0x19C */ public bool OnlyFoundInPurpleSytems;
+        /* 0x198 */ public bool OnlyFoundInPurpleSytems;
+        [NMS(Index = 25)]
+        /* 0x199 */ public GcScannerIconTypes PinObjectiveScannableType;
         [NMS(Index = 20)]
-        /* 0x19D */ public bool WikiEnabled;
+        /* 0x19A */ public bool WikiEnabled;
     }
 }

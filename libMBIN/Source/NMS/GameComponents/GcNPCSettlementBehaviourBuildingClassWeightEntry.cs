@@ -2,14 +2,14 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x64DA181227D639BC, NameHash = 0xA3D4C382)]
+    [NMS(GUID = 0x6D4382D82FEA318C, NameHash = 0xA3D4C382)]
     public class GcNPCSettlementBehaviourBuildingClassWeightEntry : NMSTemplate
     {
-        [NMS(Index = 0)]
-        /* 0x0 */ public GcBuildingClassification BuildingClass;
         [NMS(Index = 1)]
-        /* 0x4 */ public float EntryWeight;
+        /* 0x0 */ public float EntryWeight;
         [NMS(Index = 2)]
-        /* 0x8 */ public float ExitWeight;
+        /* 0x4 */ public float ExitWeight;
+        [NMS(Index = 0)]
+        /* 0x8 */ public GcBuildingClassification BuildingClass;
     }
 }

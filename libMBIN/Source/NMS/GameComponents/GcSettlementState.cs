@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x73A2E00F191DD125, NameHash = 0x552AF47D)]
+    [NMS(GUID = 0x82D6A4899AFE123C, NameHash = 0x552AF47D)]
     public class GcSettlementState : NMSTemplate
     {
         [NMS(Index = 2)]
@@ -52,23 +52,23 @@ namespace libMBIN.NMS.GameComponents
         /* 0x454 */ public int[] Stats;
         [NMS(Index = 19)]
         /* 0x474 */ public int DbVersion;
-        [NMS(Index = 23)]
-        /* 0x478 */ public GcBuildingClassification NextBuildingUpgradeClass;
         [NMS(Index = 22)]
-        /* 0x47C */ public int NextBuildingUpgradeIndex;
+        /* 0x478 */ public int NextBuildingUpgradeIndex;
         [NMS(Index = 8)]
-        /* 0x480 */ public GcSettlementJudgementType PendingJudgementType;
+        /* 0x47C */ public GcSettlementJudgementType PendingJudgementType;
         [NMS(Index = 25)]
-        /* 0x484 */ public GcAlienRace Race;
+        /* 0x480 */ public GcAlienRace Race;
         [NMS(Index = 29)]
-        /* 0x488 */ public ushort Population;
+        /* 0x484 */ public ushort Population;
         [NMS(Index = 17)]
-        /* 0x48A */ public NMSString0x40 DbResourceId;
+        /* 0x486 */ public NMSString0x40 DbResourceId;
         [NMS(Index = 6)]
-        /* 0x4CA */ public NMSString0x40 Name;
+        /* 0x4C6 */ public NMSString0x40 Name;
         [NMS(Index = 0)]
-        /* 0x50A */ public NMSString0x40 UniqueId;
+        /* 0x506 */ public NMSString0x40 UniqueId;
         [NMS(Index = 21)]
-        /* 0x54A */ public bool IsReported;
+        /* 0x546 */ public bool IsReported;
+        [NMS(Index = 23)]
+        /* 0x547 */ public GcBuildingClassification NextBuildingUpgradeClass;
     }
 }

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF90D615AB6C19943, NameHash = 0x363A19F4)]
+    [NMS(GUID = 0x29EC6ED5DD8C6D87, NameHash = 0x363A19F4)]
     public class GcSettlementMaterialTable : NMSTemplate
     {
         [NMS(Index = 3, Size = 0x4)]
