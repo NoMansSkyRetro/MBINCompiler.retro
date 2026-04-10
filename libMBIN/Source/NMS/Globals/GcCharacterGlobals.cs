@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x290EFA32F967C46F, NameHash = 0x72EA4972)]
+    [NMS(GUID = 0x8AD4BC6E7E9779D0, NameHash = 0x72EA4972)]
     public class GcCharacterGlobals : NMSTemplate
     {
         [NMS(Index = 14)]
@@ -139,7 +139,7 @@ namespace libMBIN.NMS.Globals
         /* 0x1A0 */ public float NPCFlavourIdleTimeMin;
         [NMS(Index = 95)]
         /* 0x1A4 */ public GcNPCPropType NPCForceProp;
-        [NMS(Index = 180)]
+        [NMS(Index = 181)]
         /* 0x1A8 */ public float NPCHackMoveUpToStopFallingThoughFloor;
         [NMS(Index = 101)]
         /* 0x1AC */ public float NPCIKBodyWeightNormal;
@@ -201,171 +201,173 @@ namespace libMBIN.NMS.Globals
         /* 0x21C */ public float NPCPerceptionRadius;
         [NMS(Index = 111)]
         /* 0x220 */ public float NPCPermittedNavigationDelayFactor;
+        [NMS(Index = 180)]
+        /* 0x224 */ public float NPCPOISelectionForActiveGameTableMultiplier;
         [NMS(Index = 179)]
-        /* 0x224 */ public float NPCPOISelectionNearbyNPCBaseMultiplier;
+        /* 0x228 */ public float NPCPOISelectionNearbyNPCBaseMultiplier;
         [NMS(Index = 96)]
-        /* 0x228 */ public float NPCPropScaleTime;
+        /* 0x22C */ public float NPCPropScaleTime;
         [NMS(Index = 98)]
-        /* 0x22C */ public float NPCReactCooldown;
+        /* 0x230 */ public float NPCReactCooldown;
         [NMS(Index = 97)]
-        /* 0x230 */ public float NPCReactionChance;
+        /* 0x234 */ public float NPCReactionChance;
         [NMS(Index = 171)]
-        /* 0x234 */ public float NPCReactToPlayerPresenceDist;
+        /* 0x238 */ public float NPCReactToPlayerPresenceDist;
         [NMS(Index = 173)]
-        /* 0x238 */ public float NPCReactToPlayerPresenceGloablCooldown;
+        /* 0x23C */ public float NPCReactToPlayerPresenceGloablCooldown;
         [NMS(Index = 172)]
-        /* 0x23C */ public float NPCReactToPlayerPresenceIndividualCooldown;
+        /* 0x240 */ public float NPCReactToPlayerPresenceIndividualCooldown;
         [NMS(Index = 174)]
-        /* 0x240 */ public float NPCReactToPlayerPresenceStaticTimer;
+        /* 0x244 */ public float NPCReactToPlayerPresenceStaticTimer;
         [NMS(Index = 116)]
-        /* 0x244 */ public float NPCRunSpeed;
+        /* 0x248 */ public float NPCRunSpeed;
         [NMS(Index = 117)]
-        /* 0x248 */ public float NPCRunSpeedGek;
+        /* 0x24C */ public float NPCRunSpeedGek;
         [NMS(Index = 3)]
-        /* 0x24C */ public float NPCScalingMaxRandomVariance;
+        /* 0x250 */ public float NPCScalingMaxRandomVariance;
         [NMS(Index = 142)]
-        /* 0x250 */ public float NPCSeatedLookAtLateralReduction;
+        /* 0x254 */ public float NPCSeatedLookAtLateralReduction;
         [NMS(Index = 130)]
-        /* 0x254 */ public float NPCSlowStaticTurnAngle;
+        /* 0x258 */ public float NPCSlowStaticTurnAngle;
         [NMS(Index = 103)]
-        /* 0x258 */ public float NPCSpineAdjustGek;
+        /* 0x25C */ public float NPCSpineAdjustGek;
         [NMS(Index = 104)]
-        /* 0x25C */ public float NPCSpineAdjustVykeen;
+        /* 0x260 */ public float NPCSpineAdjustVykeen;
         [NMS(Index = 109)]
-        /* 0x260 */ public float NPCStaticDistance;
+        /* 0x264 */ public float NPCStaticDistance;
         [NMS(Index = 110)]
-        /* 0x264 */ public float NPCStaticTimeUntilFail;
+        /* 0x268 */ public float NPCStaticTimeUntilFail;
         [NMS(Index = 124)]
-        /* 0x268 */ public float NPCStaticTurnTime;
+        /* 0x26C */ public float NPCStaticTurnTime;
         [NMS(Index = 151)]
-        /* 0x26C */ public float NPCSteeringAvoidStrength;
+        /* 0x270 */ public float NPCSteeringAvoidStrength;
         [NMS(Index = 155)]
-        /* 0x270 */ public float NPCSteeringCollisionAvoidAngle;
+        /* 0x274 */ public float NPCSteeringCollisionAvoidAngle;
         [NMS(Index = 156)]
-        /* 0x274 */ public float NPCSteeringCollisionAvoidStrength;
+        /* 0x278 */ public float NPCSteeringCollisionAvoidStrength;
         [NMS(Index = 154)]
-        /* 0x278 */ public float NPCSteeringComingTowardsDegrees;
+        /* 0x27C */ public float NPCSteeringComingTowardsDegrees;
         [NMS(Index = 150)]
-        /* 0x27C */ public float NPCSteeringFollowStrength;
+        /* 0x280 */ public float NPCSteeringFollowStrength;
         [NMS(Index = 149)]
-        /* 0x280 */ public float NPCSteeringObstacleAvoidStrength;
+        /* 0x284 */ public float NPCSteeringObstacleAvoidStrength;
         [NMS(Index = 152)]
-        /* 0x284 */ public float NPCSteeringRadius;
+        /* 0x288 */ public float NPCSteeringRadius;
         [NMS(Index = 158)]
-        /* 0x288 */ public float NPCSteeringRayLength;
+        /* 0x28C */ public float NPCSteeringRayLength;
         [NMS(Index = 159)]
-        /* 0x28C */ public float NPCSteeringRaySphereSize;
+        /* 0x290 */ public float NPCSteeringRaySphereSize;
         [NMS(Index = 157)]
-        /* 0x290 */ public float NPCSteeringRaySpread;
+        /* 0x294 */ public float NPCSteeringRaySpread;
         [NMS(Index = 153)]
-        /* 0x294 */ public float NPCSteeringRepelDist;
+        /* 0x298 */ public float NPCSteeringRepelDist;
         [NMS(Index = 147)]
-        /* 0x298 */ public float NPCSteeringSpringTime;
+        /* 0x29C */ public float NPCSteeringSpringTime;
         [NMS(Index = 125)]
-        /* 0x29C */ public float NPCTeleportEffectTime;
+        /* 0x2A0 */ public float NPCTeleportEffectTime;
         [NMS(Index = 114)]
-        /* 0x2A0 */ public float NPCWalkSpeed;
+        /* 0x2A4 */ public float NPCWalkSpeed;
         [NMS(Index = 115)]
-        /* 0x2A4 */ public float NPCWalkSpeedGek;
+        /* 0x2A8 */ public float NPCWalkSpeedGek;
         [NMS(Index = 113)]
-        /* 0x2A8 */ public float NPCWalkSpeedMech;
+        /* 0x2AC */ public float NPCWalkSpeedMech;
         [NMS(Index = 99)]
-        /* 0x2AC */ public float NPCWithScanEventReactCooldown;
+        /* 0x2B0 */ public float NPCWithScanEventReactCooldown;
         [NMS(Index = 169)]
-        /* 0x2B0 */ public float NPCWithScanEventReactToPlayerPresenceDist;
+        /* 0x2B4 */ public float NPCWithScanEventReactToPlayerPresenceDist;
         [NMS(Index = 170)]
-        /* 0x2B4 */ public float NPCWithScanEventReactToPlayerPresenceIndividualCooldown;
+        /* 0x2B8 */ public float NPCWithScanEventReactToPlayerPresenceIndividualCooldown;
         [NMS(Index = 4)]
-        /* 0x2B8 */ public float PitchTest;
+        /* 0x2BC */ public float PitchTest;
         [NMS(Index = 81)]
-        /* 0x2BC */ public float RagdollConeLimit;
+        /* 0x2C0 */ public float RagdollConeLimit;
         [NMS(Index = 80)]
-        /* 0x2C0 */ public float RagdollDamping;
+        /* 0x2C4 */ public float RagdollDamping;
         [NMS(Index = 84)]
-        /* 0x2C4 */ public float RagdollMotorFadeEnd;
+        /* 0x2C8 */ public float RagdollMotorFadeEnd;
         [NMS(Index = 83)]
-        /* 0x2C8 */ public float RagdollMotorFadeStart;
+        /* 0x2CC */ public float RagdollMotorFadeStart;
         [NMS(Index = 79)]
-        /* 0x2CC */ public float RagdollTau;
+        /* 0x2D0 */ public float RagdollTau;
         [NMS(Index = 82)]
-        /* 0x2D0 */ public float RagdollTwistLimit;
+        /* 0x2D4 */ public float RagdollTwistLimit;
         [NMS(Index = 24)]
-        /* 0x2D4 */ public float RocketBootsLandedTurnSpeed;
+        /* 0x2D8 */ public float RocketBootsLandedTurnSpeed;
         [NMS(Index = 25)]
-        /* 0x2D8 */ public float RocketBootsTurnSpeed;
+        /* 0x2DC */ public float RocketBootsTurnSpeed;
         [NMS(Index = 5)]
-        /* 0x2DC */ public float RollTest;
+        /* 0x2E0 */ public float RollTest;
         [NMS(Index = 70)]
-        /* 0x2E0 */ public float RootedAnimInterpolationTime;
+        /* 0x2E4 */ public float RootedAnimInterpolationTime;
         [NMS(Index = 62)]
-        /* 0x2E4 */ public float RotateToFaceSlopeSpeed;
+        /* 0x2E8 */ public float RotateToFaceSlopeSpeed;
         [NMS(Index = 38)]
-        /* 0x2E8 */ public float RoughSeaIdleSwimmingPitchRotation;
+        /* 0x2EC */ public float RoughSeaIdleSwimmingPitchRotation;
         [NMS(Index = 92)]
-        /* 0x2EC */ public float SitPostureChangeTimeMax;
+        /* 0x2F0 */ public float SitPostureChangeTimeMax;
         [NMS(Index = 91)]
-        /* 0x2F0 */ public float SitPostureChangeTimeMin;
+        /* 0x2F4 */ public float SitPostureChangeTimeMin;
         [NMS(Index = 57)]
-        /* 0x2F4 */ public float SlidingBrake;
+        /* 0x2F8 */ public float SlidingBrake;
         [NMS(Index = 56)]
-        /* 0x2F8 */ public float SlopeAngleForDownhillClimb;
+        /* 0x2FC */ public float SlopeAngleForDownhillClimb;
         [NMS(Index = 58)]
-        /* 0x2FC */ public float SlopeAngleForSlide;
+        /* 0x300 */ public float SlopeAngleForSlide;
         [NMS(Index = 55)]
-        /* 0x300 */ public float SlopeAngleForUphillClimb;
+        /* 0x304 */ public float SlopeAngleForUphillClimb;
         [NMS(Index = 86)]
-        /* 0x304 */ public float SmoothVelocitySpeed;
+        /* 0x308 */ public float SmoothVelocitySpeed;
         [NMS(Index = 36)]
-        /* 0x308 */ public float SwimmingPitchRotationSurfaceExtra;
+        /* 0x30C */ public float SwimmingPitchRotationSurfaceExtra;
         [NMS(Index = 44)]
-        /* 0x30C */ public float SwimmingRollSmoothTime;
+        /* 0x310 */ public float SwimmingRollSmoothTime;
         [NMS(Index = 45)]
-        /* 0x310 */ public float SwimmingRollSmoothTimeWithWeapon;
+        /* 0x314 */ public float SwimmingRollSmoothTimeWithWeapon;
         [NMS(Index = 42)]
-        /* 0x314 */ public float SwimmingSmoothTime;
+        /* 0x318 */ public float SwimmingSmoothTime;
         [NMS(Index = 41)]
-        /* 0x318 */ public float SwimmingSmoothTimeMin;
+        /* 0x31C */ public float SwimmingSmoothTimeMin;
         [NMS(Index = 43)]
-        /* 0x31C */ public float SwimmingSmoothTimeWithWeapon;
+        /* 0x320 */ public float SwimmingSmoothTimeWithWeapon;
         [NMS(Index = 77)]
-        /* 0x320 */ public float TimeAfterDeathRagdollIsEnabledBackward;
+        /* 0x324 */ public float TimeAfterDeathRagdollIsEnabledBackward;
         [NMS(Index = 76)]
-        /* 0x324 */ public float TimeAfterDeathRagdollIsEnabledForward;
+        /* 0x328 */ public float TimeAfterDeathRagdollIsEnabledForward;
         [NMS(Index = 78)]
-        /* 0x328 */ public float TimeAfterDeathRagdollIsEnabledWhenBlocked;
+        /* 0x32C */ public float TimeAfterDeathRagdollIsEnabledWhenBlocked;
         [NMS(Index = 65)]
-        /* 0x32C */ public float TimeFallingUntilPanic;
+        /* 0x330 */ public float TimeFallingUntilPanic;
         [NMS(Index = 63)]
-        /* 0x330 */ public float TimeNotOnGroundToBeConsideredInAir;
+        /* 0x334 */ public float TimeNotOnGroundToBeConsideredInAir;
         [NMS(Index = 64)]
-        /* 0x334 */ public float TimeNotOnGroundToUseFallingCamera;
+        /* 0x338 */ public float TimeNotOnGroundToUseFallingCamera;
         [NMS(Index = 87)]
-        /* 0x338 */ public float TimeToShowSplashEffect;
+        /* 0x33C */ public float TimeToShowSplashEffect;
         [NMS(Index = 60)]
-        /* 0x33C */ public float TrudgeUphillSpeed;
+        /* 0x340 */ public float TrudgeUphillSpeed;
         [NMS(Index = 88)]
-        /* 0x340 */ public float UnderwaterToAirTolerance;
+        /* 0x344 */ public float UnderwaterToAirTolerance;
         [NMS(Index = 59)]
-        /* 0x344 */ public float UphillSpeedMultiplier;
+        /* 0x348 */ public float UphillSpeedMultiplier;
         [NMS(Index = 89)]
-        /* 0x348 */ public float WaterBottomSmoothPushUp;
+        /* 0x34C */ public float WaterBottomSmoothPushUp;
         [NMS(Index = 90)]
-        /* 0x34C */ public float WaterBottomSmoothPushUpDepth;
+        /* 0x350 */ public float WaterBottomSmoothPushUpDepth;
         [NMS(Index = 6)]
-        /* 0x350 */ public float WaterEffectFadeSpring;
+        /* 0x354 */ public float WaterEffectFadeSpring;
         [NMS(Index = 7)]
-        /* 0x354 */ public float WaterEffectSpeedFadeMax;
+        /* 0x358 */ public float WaterEffectSpeedFadeMax;
         [NMS(Index = 8)]
-        /* 0x358 */ public float WaterEffectSpeedFadeMin;
+        /* 0x35C */ public float WaterEffectSpeedFadeMin;
         [NMS(Index = 29)]
-        /* 0x35C */ public float YawPullSpeed;
+        /* 0x360 */ public float YawPullSpeed;
         [NMS(Index = 108)]
-        /* 0x360 */ public bool NPCBehaviourInfo;
+        /* 0x364 */ public bool NPCBehaviourInfo;
         [NMS(Index = 94)]
-        /* 0x361 */ public bool NPCLightsAlwaysOn;
+        /* 0x365 */ public bool NPCLightsAlwaysOn;
         [NMS(Index = 134)]
-        /* 0x362 */ public bool NPCLookAtEnabled;
+        /* 0x366 */ public bool NPCLookAtEnabled;
         [NMS(Index = 93)]
-        /* 0x363 */ public bool NPCUseBehaviourTree;
+        /* 0x367 */ public bool NPCUseBehaviourTree;
     }
 }

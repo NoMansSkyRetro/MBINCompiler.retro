@@ -1012,6 +1012,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMessageCutSceneAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMessageFiendCrime.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMessageNPCBehaviourEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMessageNPCGameTableEvent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMessagePetBehaviourEvent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMessageProjectileImpact.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcMessageProjectileLaunch.cs" />
@@ -1575,6 +1576,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPetBattlerAIBuffsOnTarget.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPetBattlerAIDebuffsOnSelf.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPetBattlerAIRampBuilding.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPetBattlerAISacrifice.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPetBattlerAISelectCriteriaLowHealth.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPetBattlerAffinity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Source\NMS\GameComponents\GcPetBattlerAffinityEffectiveness.cs" />
