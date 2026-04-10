@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA3037E022CC7B2B2, NameHash = 0x7A0D33C8)]
+    [NMS(GUID = 0x32D5FED6BF0CCBAF, NameHash = 0x7A0D33C8)]
     public class GcAudioWwiseEvents : NMSTemplate
     {
-        // size: 0xB35
+        // size: 0xB36
         public enum AkEventEnum : uint {
             INVALID_EVENT = 0x0,
             ABANDONED_DOOR_UNLOCK = 0x264BED2D,
@@ -641,6 +641,7 @@ namespace libMBIN.NMS.GameComponents
             GAMETABLE_DESTROYED = 0xE224A1D9,
             GAMETABLE_END = 0x101B4A17,
             GAMETABLE_HEAL = 0xBD172CAE,
+            GAMETABLE_KO = 0x3360A92E,
             GAMETABLE_LAUNCH_BARREN = 0xC657B9A,
             GAMETABLE_LAUNCH_COLD = 0x26D531C2,
             GAMETABLE_LAUNCH_FIRE = 0x243998A8,

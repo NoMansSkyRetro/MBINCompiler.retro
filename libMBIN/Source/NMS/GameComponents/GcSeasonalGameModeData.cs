@@ -4,280 +4,280 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x42AB277F69C3B6FF, NameHash = 0xC2909BE6)]
+    [NMS(GUID = 0xDC02B6B5CD788DED, NameHash = 0xC2909BE6)]
     public class GcSeasonalGameModeData : NMSTemplate
     {
         [NMS(Index = 76, Size = 0x1E)]
         /* 0x0000 */ public GcPetData[] SpecificPets;
         [NMS(Index = 68)]
-        /* 0x4FB0 */ public GcInventoryContainer Inventory;
+        /* 0x5910 */ public GcInventoryContainer Inventory;
         [NMS(Index = 70)]
-        /* 0x5110 */ public GcInventoryContainer Inventory_Cargo;
+        /* 0x5A70 */ public GcInventoryContainer Inventory_Cargo;
         [NMS(Index = 69)]
-        /* 0x5270 */ public GcInventoryContainer Inventory_TechOnly;
+        /* 0x5BD0 */ public GcInventoryContainer Inventory_TechOnly;
         [NMS(Index = 71)]
-        /* 0x53D0 */ public GcInventoryContainer ShipInventory;
+        /* 0x5D30 */ public GcInventoryContainer ShipInventory;
         [NMS(Index = 72)]
-        /* 0x5530 */ public GcInventoryContainer WeaponInventory;
+        /* 0x5E90 */ public GcInventoryContainer WeaponInventory;
         [NMS(Index = 122)]
-        /* 0x5690 */ public GcTradeData SeasonalUAStationTradeData;
+        /* 0x5FF0 */ public GcTradeData SeasonalUAStationTradeData;
         [NMS(Index = 42)]
-        /* 0x5778 */ public GcMissionSequenceDetailMessage InitialJoaoBox;
+        /* 0x60D8 */ public GcMissionSequenceDetailMessage InitialJoaoBox;
         [NMS(Index = 43)]
-        /* 0x5810 */ public GcMissionSequenceDetailMessage InitialJoaoBoxNoMainSave;
+        /* 0x6170 */ public GcMissionSequenceDetailMessage InitialJoaoBoxNoMainSave;
         [NMS(Index = 93, Size = 0x3, EnumType = typeof(GcExperienceBossType.ExperienceBossTypeEnum))]
-        /* 0x58A8 */ public NMSString0x10[] AltBossRewards;
+        /* 0x6208 */ public NMSString0x10[] AltBossRewards;
         [NMS(Index = 73)]
-        /* 0x58D8 */ public GcSeasonTransferInventoryConfig SeasonTransferInventoryConfig;
+        /* 0x6238 */ public GcSeasonTransferInventoryConfig SeasonTransferInventoryConfig;
         [NMS(Index = 33)]
-        /* 0x5908 */ public NMSString0x20A CommunityProgressTitle;
+        /* 0x6268 */ public NMSString0x20A CommunityProgressTitle;
         [NMS(Index = 36)]
-        /* 0x5928 */ public NMSString0x20A CommunityTierCompleteLabel;
+        /* 0x6288 */ public NMSString0x20A CommunityTierCompleteLabel;
         [NMS(Index = 34)]
-        /* 0x5948 */ public NMSString0x20A CommunityTierLabel;
+        /* 0x62A8 */ public NMSString0x20A CommunityTierLabel;
         [NMS(Index = 35)]
-        /* 0x5968 */ public NMSString0x20A CommunityTierProgressLabel;
+        /* 0x62C8 */ public NMSString0x20A CommunityTierProgressLabel;
         [NMS(Index = 22)]
-        /* 0x5988 */ public NMSString0x20A FinalCantRewardMessage;
+        /* 0x62E8 */ public NMSString0x20A FinalCantRewardMessage;
         [NMS(Index = 8)]
-        /* 0x59A8 */ public NMSString0x20A FinalStageTitle;
+        /* 0x6308 */ public NMSString0x20A FinalStageTitle;
         [NMS(Index = 31)]
-        /* 0x59C8 */ public NMSString0x20A MainMissionMessage;
+        /* 0x6328 */ public NMSString0x20A MainMissionMessage;
         [NMS(Index = 30)]
-        /* 0x59E8 */ public NMSString0x20A MainMissionTitle;
+        /* 0x6348 */ public NMSString0x20A MainMissionTitle;
         [NMS(Index = 9)]
-        /* 0x5A08 */ public NMSString0x20A MilestoneWithStageLocId;
+        /* 0x6368 */ public NMSString0x20A MilestoneWithStageLocId;
         [NMS(Index = 28)]
-        /* 0x5A28 */ public NMSString0x20A SeasonName;
+        /* 0x6388 */ public NMSString0x20A SeasonName;
         [NMS(Index = 29)]
-        /* 0x5A48 */ public NMSString0x20A SeasonNameUpper;
+        /* 0x63A8 */ public NMSString0x20A SeasonNameUpper;
         [NMS(Index = 24)]
-        /* 0x5A68 */ public TkTextureResource MainIcon;
+        /* 0x63C8 */ public TkTextureResource MainIcon;
         [NMS(Index = 65)]
-        /* 0x5A80 */ public GcInventoryLayout ShipInventoryLayout;
+        /* 0x63E0 */ public GcInventoryLayout ShipInventoryLayout;
         [NMS(Index = 66)]
-        /* 0x5A98 */ public GcInventoryLayout ShipTechInventoryLayout;
+        /* 0x63F8 */ public GcInventoryLayout ShipTechInventoryLayout;
         [NMS(Index = 64)]
-        /* 0x5AB0 */ public GcInventoryLayout WeaponInventoryLayout;
+        /* 0x6410 */ public GcInventoryLayout WeaponInventoryLayout;
         [NMS(Index = 105)]
-        /* 0x5AC8 */ public List<NMSString0x10> AdditionalKnownProducts;
+        /* 0x6428 */ public List<NMSString0x10> AdditionalKnownProducts;
         [NMS(Index = 106)]
-        /* 0x5AD8 */ public List<NMSString0x10> AdditionalKnownTech;
+        /* 0x6438 */ public List<NMSString0x10> AdditionalKnownTech;
         [NMS(Index = 39)]
-        /* 0x5AE8 */ public List<NMSString0x10> AdditionalTradeProducts;
+        /* 0x6448 */ public List<NMSString0x10> AdditionalTradeProducts;
         [NMS(Index = 131)]
-        /* 0x5AF8 */ public GcSeed BlockShipRepairUntilMilestoneWithSeedComplete;
+        /* 0x6458 */ public GcSeed BlockShipRepairUntilMilestoneWithSeedComplete;
         [NMS(Index = 16)]
-        /* 0x5B08 */ public NMSString0x10 CreateContextSaveDataMask;
+        /* 0x6468 */ public NMSString0x10 CreateContextSaveDataMask;
         [NMS(Index = 20)]
-        /* 0x5B18 */ public NMSString0x10 FinalReward;
+        /* 0x6478 */ public NMSString0x10 FinalReward;
         [NMS(Index = 21)]
-        /* 0x5B28 */ public NMSString0x10 FinalRewardSwitchAlt;
+        /* 0x6488 */ public NMSString0x10 FinalRewardSwitchAlt;
         [NMS(Index = 41)]
-        /* 0x5B38 */ public List<int> ForceBlackHolesAtPartyUAs;
+        /* 0x6498 */ public List<int> ForceBlackHolesAtPartyUAs;
         [NMS(Index = 103)]
-        /* 0x5B48 */ public List<NMSString0x10> ForgottenProducts;
+        /* 0x64A8 */ public List<NMSString0x10> ForgottenProducts;
         [NMS(Index = 104)]
-        /* 0x5B58 */ public List<NMSString0x10> ForgottenTech;
+        /* 0x64B8 */ public List<NMSString0x10> ForgottenTech;
         [NMS(Index = 52)]
-        /* 0x5B68 */ public GcFilename FreighterBaseOverrideFilename;
+        /* 0x64C8 */ public GcFilename FreighterBaseOverrideFilename;
         [NMS(Index = 60)]
-        /* 0x5B78 */ public NMSString0x10 IntroSequencePOI;
+        /* 0x64D8 */ public NMSString0x10 IntroSequencePOI;
         [NMS(Index = 102)]
-        /* 0x5B88 */ public List<NMSString0x10> NeverLearnableTech;
+        /* 0x64E8 */ public List<NMSString0x10> NeverLearnableTech;
         [NMS(Index = 40)]
-        /* 0x5B98 */ public List<NMSString0x10> NeverTradeProducts;
+        /* 0x64F8 */ public List<NMSString0x10> NeverTradeProducts;
         [NMS(Index = 54)]
-        /* 0x5BA8 */ public GcFilename OverrideFreighterFilename;
+        /* 0x6508 */ public GcFilename OverrideFreighterFilename;
         [NMS(Index = 50)]
-        /* 0x5BB8 */ public GcFilename OverrideMTFilename;
+        /* 0x6518 */ public GcFilename OverrideMTFilename;
         [NMS(Index = 120)]
-        /* 0x5BC8 */ public List<GcProductData> ProductTable;
+        /* 0x6528 */ public List<GcProductData> ProductTable;
         [NMS(Index = 75)]
-        /* 0x5BD8 */ public List<GcSeasonPetConstraints> RandomPetConstraints;
+        /* 0x6538 */ public List<GcSeasonPetConstraints> RandomPetConstraints;
         [NMS(Index = 78)]
-        /* 0x5BE8 */ public List<GcSandwormTimerAndFrequencyOverride> SandwormOverrides;
+        /* 0x6548 */ public List<GcSandwormTimerAndFrequencyOverride> SandwormOverrides;
         [NMS(Index = 114)]
-        /* 0x5BF8 */ public GcScanEventTable ScanEventTable;
+        /* 0x6558 */ public GcScanEventTable ScanEventTable;
         [NMS(Index = 48)]
-        /* 0x5C08 */ public GcSeed ShipSeed;
+        /* 0x6568 */ public GcSeed ShipSeed;
         [NMS(Index = 113)]
-        /* 0x5C18 */ public List<GcSeasonalStage> Stages;
+        /* 0x6578 */ public List<GcSeasonalStage> Stages;
         [NMS(Index = 97)]
-        /* 0x5C28 */ public NMSString0x10 StartPlanetRareSubstanceOverride;
+        /* 0x6588 */ public NMSString0x10 StartPlanetRareSubstanceOverride;
         [NMS(Index = 116)]
-        /* 0x5C38 */ public List<GcPersistedStatData> StatsToPersistOnReset;
+        /* 0x6598 */ public List<GcPersistedStatData> StatsToPersistOnReset;
         [NMS(Index = 121)]
-        /* 0x5C48 */ public List<GcRealitySubstanceData> SubstanceTable;
+        /* 0x65A8 */ public List<GcRealitySubstanceData> SubstanceTable;
         [NMS(Index = 17)]
-        /* 0x5C58 */ public NMSString0x10 SwitchContextSaveDataMask;
+        /* 0x65B8 */ public NMSString0x10 SwitchContextSaveDataMask;
         [NMS(Index = 119)]
-        /* 0x5C68 */ public List<GcTechnology> TechnologyTable;
+        /* 0x65C8 */ public List<GcTechnology> TechnologyTable;
         [NMS(Index = 62)]
-        /* 0x5C78 */ public List<GcBuildingClassification> ValidSpawnBuildings;
+        /* 0x65D8 */ public List<GcBuildingClassification> ValidSpawnBuildings;
         [NMS(Index = 47)]
-        /* 0x5C88 */ public GcSeed WeaponSeed;
+        /* 0x65E8 */ public GcSeed WeaponSeed;
         [NMS(Index = 2)]
-        /* 0x5C98 */ public ulong EndTimeUTC;
+        /* 0x65F8 */ public ulong EndTimeUTC;
         [NMS(Index = 3)]
-        /* 0x5CA0 */ public ulong Hash;
+        /* 0x6600 */ public ulong Hash;
         [NMS(Index = 1)]
-        /* 0x5CA8 */ public ulong StartTimeUTC;
+        /* 0x6608 */ public ulong StartTimeUTC;
         [NMS(Index = 19)]
-        /* 0x5CB0 */ public ulong UAOverrideValue;
+        /* 0x6610 */ public ulong UAOverrideValue;
         [NMS(Index = 15)]
-        /* 0x5CB8 */ public GcDifficultySettingsData DifficultyMinimums;
+        /* 0x6618 */ public GcDifficultySettingsData DifficultyMinimums;
         [NMS(Index = 91)]
-        /* 0x5D18 */ public Vector2f CustomFrigateFlybyTimer;
+        /* 0x6678 */ public Vector2f CustomFrigateFlybyTimer;
         [NMS(Index = 92)]
-        /* 0x5D20 */ public Vector2f CustomPiratePlanetFlybyTimer;
+        /* 0x6680 */ public Vector2f CustomPiratePlanetFlybyTimer;
         [NMS(Index = 108)]
-        /* 0x5D28 */ public float AbandonedFreighterHazardProtectionMul;
+        /* 0x6688 */ public float AbandonedFreighterHazardProtectionMul;
         [NMS(Index = 85)]
-        /* 0x5D2C */ public float BuildingRadiusShipOffsetMultiplier;
+        /* 0x668C */ public float BuildingRadiusShipOffsetMultiplier;
         [NMS(Index = 14)]
-        /* 0x5D30 */ public GcDifficultyPresetType DifficultySettingPreset;
+        /* 0x6690 */ public GcDifficultyPresetType DifficultySettingPreset;
         [NMS(Index = 27)]
-        /* 0x5D34 */ public int DisplayNumber;
+        /* 0x6694 */ public int DisplayNumber;
         [NMS(Index = 84)]
-        /* 0x5D38 */ public float DistanceFromShipAtStartOfGame;
+        /* 0x6698 */ public float DistanceFromShipAtStartOfGame;
         [NMS(Index = 111)]
-        /* 0x5D3C */ public float EnergyDrainMultiplier;
+        /* 0x669C */ public float EnergyDrainMultiplier;
         [NMS(Index = 109)]
-        /* 0x5D40 */ public float FarmPlantsTimerMul;
+        /* 0x66A0 */ public float FarmPlantsTimerMul;
         [NMS(Index = 99)]
-        /* 0x5D44 */ public int FreighterBattleEarlyWarpsOverride;
+        /* 0x66A4 */ public int FreighterBattleEarlyWarpsOverride;
         [NMS(Index = 53)]
-        /* 0x5D48 */ public GcAlienRace FreighterRace;
+        /* 0x66A8 */ public GcAlienRace FreighterRace;
         [NMS(Index = 13)]
-        /* 0x5D4C */ public GcGameMode GameMode;
+        /* 0x66AC */ public GcGameMode GameMode;
         [NMS(Index = 110)]
-        /* 0x5D50 */ public float HazardProtectionDrainMultiplier;
+        /* 0x66B0 */ public float HazardProtectionDrainMultiplier;
         [NMS(Index = 112)]
-        /* 0x5D54 */ public int QuestSubstanceReducer;
+        /* 0x66B4 */ public int QuestSubstanceReducer;
         [NMS(Index = 26)]
-        /* 0x5D58 */ public int RemixNumber;
+        /* 0x66B8 */ public int RemixNumber;
         [NMS(Index = 81)]
-        /* 0x5D5C */ public float SandwormGlobalOverrideSpawnChance;
+        /* 0x66BC */ public float SandwormGlobalOverrideSpawnChance;
         [NMS(Index = 80)]
-        /* 0x5D60 */ public float SandwormGlobalOverrideTimer;
+        /* 0x66C0 */ public float SandwormGlobalOverrideTimer;
         [NMS(Index = 0)]
-        /* 0x5D64 */ public int SeasonId;
+        /* 0x66C4 */ public int SeasonId;
         [NMS(Index = 25)]
-        /* 0x5D68 */ public int SeasonNumber;
+        /* 0x66C8 */ public int SeasonNumber;
         [NMS(Index = 10)]
-        /* 0x5D6C */ public GcAudioWwiseEvents SeasonStartMusicOverride;
+        /* 0x66CC */ public GcAudioWwiseEvents SeasonStartMusicOverride;
         [NMS(Index = 49)]
-        /* 0x5D70 */ public GcSpaceshipClasses ShipType;
+        /* 0x66D0 */ public GcSpaceshipClasses ShipType;
         [NMS(Index = 77)]
-        /* 0x5D74 */ public int StartingPetSlots;
+        /* 0x66D4 */ public int StartingPetSlots;
         [NMS(Index = 46)]
-        /* 0x5D78 */ public int StartingSuitCargoSlots;
+        /* 0x66D8 */ public int StartingSuitCargoSlots;
         [NMS(Index = 44)]
-        /* 0x5D7C */ public int StartingSuitSlots;
+        /* 0x66DC */ public int StartingSuitSlots;
         [NMS(Index = 45)]
-        /* 0x5D80 */ public int StartingSuitTechSlots;
+        /* 0x66E0 */ public int StartingSuitTechSlots;
         [NMS(Index = 128)]
-        /* 0x5D84 */ public GcScreenFilters StartingUAScreenFilter;
+        /* 0x66E4 */ public GcScreenFilters StartingUAScreenFilter;
         [NMS(Index = 101)]
-        /* 0x5D88 */ public int TechCostMultiplier;
+        /* 0x66E8 */ public int TechCostMultiplier;
         [NMS(Index = 23)]
-        /* 0x5D8C */ public NMSString0x200 FinalRewardDescription;
+        /* 0x66EC */ public NMSString0x200 FinalRewardDescription;
         [NMS(Index = 63)]
-        /* 0x5F8C */ public NMSString0x80 UseSpawnBuildingNearUDA;
+        /* 0x68EC */ public NMSString0x80 UseSpawnBuildingNearUDA;
         [NMS(Index = 6)]
-        /* 0x600C */ public NMSString0x20 Description;
+        /* 0x696C */ public NMSString0x20 Description;
         [NMS(Index = 18)]
-        /* 0x602C */ public NMSString0x20 SeasonalUAOverride;
+        /* 0x698C */ public NMSString0x20 SeasonalUAOverride;
         [NMS(Index = 5)]
-        /* 0x604C */ public NMSString0x20 Subtitle;
+        /* 0x69AC */ public NMSString0x20 Subtitle;
         [NMS(Index = 7)]
-        /* 0x606C */ public NMSString0x20 Summary;
+        /* 0x69CC */ public NMSString0x20 Summary;
         [NMS(Index = 4)]
-        /* 0x608C */ public NMSString0x20 Title;
+        /* 0x69EC */ public NMSString0x20 Title;
         [NMS(Index = 94)]
-        /* 0x60AC */ public bool AllowMissionDetailMessages;
+        /* 0x6A0C */ public bool AllowMissionDetailMessages;
         [NMS(Index = 133)]
-        /* 0x60AD */ public bool AllowOnlyCorvetteShipPurchases;
+        /* 0x6A0D */ public bool AllowOnlyCorvetteShipPurchases;
         [NMS(Index = 134)]
-        /* 0x60AE */ public bool AllowSaveContextMultitoolTransfer;
+        /* 0x6A0E */ public bool AllowSaveContextMultitoolTransfer;
         [NMS(Index = 135)]
-        /* 0x60AF */ public bool AllowSaveContextShipTransfer;
+        /* 0x6A0F */ public bool AllowSaveContextShipTransfer;
         [NMS(Index = 88)]
-        /* 0x60B0 */ public bool AlwaysStormy;
+        /* 0x6A10 */ public bool AlwaysStormy;
         [NMS(Index = 124)]
-        /* 0x60B1 */ public bool AlwaysUseSeasonalStationTradeData;
+        /* 0x6A11 */ public bool AlwaysUseSeasonalStationTradeData;
         [NMS(Index = 89)]
-        /* 0x60B2 */ public bool BlockAggressiveSentinelsInStartSystem;
+        /* 0x6A12 */ public bool BlockAggressiveSentinelsInStartSystem;
         [NMS(Index = 90)]
-        /* 0x60B3 */ public bool BlockExtremeWeatherInStartSystem;
+        /* 0x6A13 */ public bool BlockExtremeWeatherInStartSystem;
         [NMS(Index = 12)]
-        /* 0x60B4 */ public bool BlockFirstSpaceMusic;
+        /* 0x6A14 */ public bool BlockFirstSpaceMusic;
         [NMS(Index = 87)]
-        /* 0x60B5 */ public bool BlockStormsAtStart;
+        /* 0x6A15 */ public bool BlockStormsAtStart;
         [NMS(Index = 61)]
-        /* 0x60B6 */ public bool CarnageMode;
+        /* 0x6A16 */ public bool CarnageMode;
         [NMS(Index = 117)]
-        /* 0x60B7 */ public bool CompatibleWithState;
+        /* 0x6A17 */ public bool CompatibleWithState;
         [NMS(Index = 37)]
-        /* 0x60B8 */ public bool DefaultToPvPOff;
+        /* 0x6A18 */ public bool DefaultToPvPOff;
         [NMS(Index = 32)]
-        /* 0x60B9 */ public bool DoCommunityMissionTextSubstitutions;
+        /* 0x6A19 */ public bool DoCommunityMissionTextSubstitutions;
         [NMS(Index = 59)]
-        /* 0x60BA */ public bool ForceAllSentinelsAggressive;
+        /* 0x6A1A */ public bool ForceAllSentinelsAggressive;
         [NMS(Index = 58)]
-        /* 0x60BB */ public bool ForceAllSystemsAbandoned;
+        /* 0x6A1B */ public bool ForceAllSystemsAbandoned;
         [NMS(Index = 100)]
-        /* 0x60BC */ public bool ForceDeepSpaceAmbientFrigatesOnInfested;
+        /* 0x6A1C */ public bool ForceDeepSpaceAmbientFrigatesOnInfested;
         [NMS(Index = 96)]
-        /* 0x60BD */ public bool ForceStartPlanetToHaveScrap;
+        /* 0x6A1D */ public bool ForceStartPlanetToHaveScrap;
         [NMS(Index = 57)]
-        /* 0x60BE */ public bool ForceStartSystemAbandoned;
+        /* 0x6A1E */ public bool ForceStartSystemAbandoned;
         [NMS(Index = 56)]
-        /* 0x60BF */ public bool ForceStartSystemTernary;
+        /* 0x6A1F */ public bool ForceStartSystemTernary;
         [NMS(Index = 118)]
-        /* 0x60C0 */ public bool HasBeenConverted;
+        /* 0x6A20 */ public bool HasBeenConverted;
         [NMS(Index = 107)]
-        /* 0x60C1 */ public bool IncreaseXClassTechOddsWithCommTier;
+        /* 0x6A21 */ public bool IncreaseXClassTechOddsWithCommTier;
         [NMS(Index = 38)]
-        /* 0x60C2 */ public bool MustCraftInBases;
+        /* 0x6A22 */ public bool MustCraftInBases;
         [NMS(Index = 132)]
-        /* 0x60C3 */ public bool NeverAllowShipPurchases;
+        /* 0x6A23 */ public bool NeverAllowShipPurchases;
         [NMS(Index = 130)]
-        /* 0x60C4 */ public bool OnlyCorvetteLauncherCanBeRepaired;
+        /* 0x6A24 */ public bool OnlyCorvetteLauncherCanBeRepaired;
         [NMS(Index = 129)]
-        /* 0x60C5 */ public bool OnlyCorvettesSpawnWhenPlayerTeleports;
+        /* 0x6A25 */ public bool OnlyCorvettesSpawnWhenPlayerTeleports;
         [NMS(Index = 127)]
-        /* 0x60C6 */ public bool OverrideStartingUAScreenFilter;
+        /* 0x6A26 */ public bool OverrideStartingUAScreenFilter;
         [NMS(Index = 11)]
-        /* 0x60C7 */ public bool PlayStartMusicInIntro;
+        /* 0x6A27 */ public bool PlayStartMusicInIntro;
         [NMS(Index = 126)]
-        /* 0x60C8 */ public bool PurpleSystemsUnlocked;
+        /* 0x6A28 */ public bool PurpleSystemsUnlocked;
         [NMS(Index = 115)]
-        /* 0x60C9 */ public bool ResetSaveOnDeath;
+        /* 0x6A29 */ public bool ResetSaveOnDeath;
         [NMS(Index = 79)]
-        /* 0x60CA */ public bool SandwormGlobalOverride;
+        /* 0x6A2A */ public bool SandwormGlobalOverride;
         [NMS(Index = 83)]
-        /* 0x60CB */ public bool ShipIsAtDifferentBuildingToPlayer;
+        /* 0x6A2B */ public bool ShipIsAtDifferentBuildingToPlayer;
         [NMS(Index = 86)]
-        /* 0x60CC */ public bool ShipStartsDamaged;
+        /* 0x6A2C */ public bool ShipStartsDamaged;
         [NMS(Index = 55)]
-        /* 0x60CD */ public bool StartAboardFreighter;
+        /* 0x6A2D */ public bool StartAboardFreighter;
         [NMS(Index = 82)]
-        /* 0x60CE */ public bool StartNextToShip;
+        /* 0x6A2E */ public bool StartNextToShip;
         [NMS(Index = 51)]
-        /* 0x60CF */ public bool StartWithFreighter;
+        /* 0x6A2F */ public bool StartWithFreighter;
         [NMS(Index = 98)]
-        /* 0x60D0 */ public bool TrashInventoryOnGalaxyTravel;
+        /* 0x6A30 */ public bool TrashInventoryOnGalaxyTravel;
         [NMS(Index = 67)]
-        /* 0x60D1 */ public bool UseDefaultAppearance;
+        /* 0x6A31 */ public bool UseDefaultAppearance;
         [NMS(Index = 74)]
-        /* 0x60D2 */ public bool UseRandomPet;
+        /* 0x6A32 */ public bool UseRandomPet;
         [NMS(Index = 123)]
-        /* 0x60D3 */ public bool UseSeasonalUAStationTradeData;
+        /* 0x6A33 */ public bool UseSeasonalUAStationTradeData;
         [NMS(Index = 125)]
-        /* 0x60D4 */ public bool UseSpookHazardOnly;
+        /* 0x6A34 */ public bool UseSpookHazardOnly;
         [NMS(Index = 95)]
-        /* 0x60D5 */ public bool UseStartPlanetObjectListOverrides;
+        /* 0x6A35 */ public bool UseStartPlanetObjectListOverrides;
     }
 }

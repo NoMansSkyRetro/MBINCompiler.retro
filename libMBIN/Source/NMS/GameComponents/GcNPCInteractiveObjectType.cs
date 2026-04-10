@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x17DA9F6737D42E2C, NameHash = 0xADA5A448)]
+    [NMS(GUID = 0x208B04FCFB95FF18, NameHash = 0xADA5A448)]
     public class GcNPCInteractiveObjectType : NMSTemplate
     {
-        // size: 0x8
+        // size: 0x9
         public enum NPCInteractiveObjectTypeEnum : uint {
             Idle,
             Generic,
@@ -12,6 +12,7 @@ namespace libMBIN.NMS.GameComponents
             WatchShip,
             Shop,
             Dance,
+            SpectateGameTable,
             None,
         }
         [NMS(Index = 0)]
