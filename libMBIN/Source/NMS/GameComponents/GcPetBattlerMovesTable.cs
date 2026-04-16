@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xBA6BBC09227D91B9, NameHash = 0x49261BF3)]
+    [NMS(GUID = 0xB859FE93EE77A89F, NameHash = 0x49261BF3)]
     public class GcPetBattlerMovesTable : NMSTemplate
     {
         [NMS(Index = 0)]
