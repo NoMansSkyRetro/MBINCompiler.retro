@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x47A8D9BE08A88D3C, NameHash = 0xCA24B3F1)]
+    [NMS(GUID = 0x28825B6E8E051A79, NameHash = 0xCA24B3F1)]
     public class GcBuildableShipGlobals : NMSTemplate
     {
         [NMS(Index = 2)]

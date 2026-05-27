@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDFD8F73A729AE6EC, NameHash = 0x5EB151C3)]
+    [NMS(GUID = 0x17E3E0F80722702D, NameHash = 0x5EB151C3)]
     public class GcRewardCommunityContribution : NMSTemplate
     {
         [NMS(Index = 3)]
@@ -18,8 +18,10 @@ namespace libMBIN.NMS.GameComponents
             StatsDiff,
         }
         [NMS(Index = 1)]
-        /* 0x28 */ public SubmitTypeEnum SubmitType;
+        /* 0xA8 */ public SubmitTypeEnum SubmitType;
         [NMS(Index = 4)]
-        /* 0x2C */ public bool AutosaveOnHandIn;
+        /* 0xAC */ public bool AutosaveOnHandIn;
+        [NMS(Index = 5)]
+        /* 0xAD */ public bool DoTeamScorePopup;
     }
 }

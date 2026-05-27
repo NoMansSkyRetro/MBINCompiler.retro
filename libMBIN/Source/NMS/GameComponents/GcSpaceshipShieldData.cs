@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x1246E8E4447F704D, NameHash = 0x4CEEFEA1)]
+    [NMS(GUID = 0x7A9D710E388B1AE2, NameHash = 0x4CEEFEA1)]
     public class GcSpaceshipShieldData : NMSTemplate
     {
         [NMS(Index = 6)]
@@ -15,7 +15,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x28 */ public float RechargeDelayTime;
         [NMS(Index = 3)]
         /* 0x2C */ public float RechargeTime;
+        [NMS(Index = 7)]
+        /* 0x30 */ public bool BlockHullDamageWhileActive;
         [NMS(Index = 5)]
-        /* 0x30 */ public bool StartDepletedWhenEnabled;
+        /* 0x31 */ public bool StartDepletedWhenEnabled;
     }
 }

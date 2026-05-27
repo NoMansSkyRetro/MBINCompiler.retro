@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xA192FB6E91B6C857, NameHash = 0x466CC80B)]
+    [NMS(GUID = 0xF6379E87D508BD36, NameHash = 0x466CC80B)]
     public class GcStatusMessageDefinitions : NMSTemplate
     {
         [NMS(Index = 1, MxmlName = "Mission Markup Colour")]

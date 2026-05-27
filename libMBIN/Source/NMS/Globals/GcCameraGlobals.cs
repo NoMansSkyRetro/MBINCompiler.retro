@@ -4,82 +4,82 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0xFED24CCA02AFF5F5, NameHash = 0xFE7187F)]
+    [NMS(GUID = 0x7427F64F3024C2FB, NameHash = 0xFE7187F)]
     public class GcCameraGlobals : NMSTemplate
     {
-        [NMS(Index = 384)]
+        [NMS(Index = 385)]
         /* 0x0000 */ public TkModelRendererData CameraCreatureCustomiseBack;
-        [NMS(Index = 380)]
-        /* 0x00C0 */ public TkModelRendererData CameraCreatureCustomiseDefault;
-        [NMS(Index = 383)]
-        /* 0x0180 */ public TkModelRendererData CameraCreatureCustomiseFront;
         [NMS(Index = 381)]
-        /* 0x0240 */ public TkModelRendererData CameraCreatureCustomiseLeft;
+        /* 0x00C0 */ public TkModelRendererData CameraCreatureCustomiseDefault;
+        [NMS(Index = 384)]
+        /* 0x0180 */ public TkModelRendererData CameraCreatureCustomiseFront;
         [NMS(Index = 382)]
+        /* 0x0240 */ public TkModelRendererData CameraCreatureCustomiseLeft;
+        [NMS(Index = 383)]
         /* 0x0300 */ public TkModelRendererData CameraCreatureCustomiseRight;
-        [NMS(Index = 378)]
-        /* 0x03C0 */ public TkModelRendererData CameraNPCShipInteraction;
         [NMS(Index = 379)]
+        /* 0x03C0 */ public TkModelRendererData CameraNPCShipInteraction;
+        [NMS(Index = 380)]
         /* 0x0480 */ public TkModelRendererData CameraNPCShopInteraction;
         [NMS(Index = 13)]
         /* 0x0540 */ public TkModelRendererData FreighterCustomisationStandardCamera;
         [NMS(Index = 14)]
         /* 0x0600 */ public TkModelRendererData FreighterCustomisationStandardCameraAlt;
-        [NMS(Index = 327, Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
+        [NMS(Index = 328, Size = 0x9, EnumType = typeof(GcAlienRace.AlienRaceEnum))]
         /* 0x06C0 */ public Vector3f[] FirstPersonCamOffset;
-        [NMS(Index = 222)]
-        /* 0x0750 */ public GcCameraFreeSettings BaseBuildingFreeCameraSettings;
         [NMS(Index = 223)]
+        /* 0x0750 */ public GcCameraFreeSettings BaseBuildingFreeCameraSettings;
+        [NMS(Index = 224)]
         /* 0x0790 */ public GcCameraFreeSettings ShipConstructionFreeCameraSettings;
-        [NMS(Index = 143)]
-        /* 0x07D0 */ public Vector3f BuildableShipMaxSizeCameraOffset;
-        [NMS(Index = 145)]
-        /* 0x07E0 */ public Vector3f BuildableShipMaxSizeForCamera;
         [NMS(Index = 144)]
+        /* 0x07D0 */ public Vector3f BuildableShipMaxSizeCameraOffset;
+        [NMS(Index = 146)]
+        /* 0x07E0 */ public Vector3f BuildableShipMaxSizeForCamera;
+        [NMS(Index = 145)]
         /* 0x07F0 */ public Vector3f BuildableShipMinSizeForCamera;
-        [NMS(Index = 221)]
+        [NMS(Index = 222)]
         /* 0x0800 */ public Vector3f BuildingModeInitialOffset;
-        [NMS(Index = 328)]
+        [NMS(Index = 329)]
         /* 0x0810 */ public Vector3f FirstPersonInShipCamOffset;
-        [NMS(Index = 163)]
-        /* 0x0820 */ public Vector3f InteractionHailingFocusOffset;
-        [NMS(Index = 153)]
-        /* 0x0830 */ public Vector3f InteractionOffset;
-        [NMS(Index = 161)]
-        /* 0x0840 */ public Vector3f InteractionOffsetCronus;
-        [NMS(Index = 158)]
-        /* 0x0850 */ public Vector3f InteractionOffsetDefault;
-        [NMS(Index = 154)]
-        /* 0x0860 */ public Vector3f InteractionOffsetExtraVR;
-        [NMS(Index = 155)]
-        /* 0x0870 */ public Vector3f InteractionOffsetExtraVRSeated;
-        [NMS(Index = 159)]
-        /* 0x0880 */ public Vector3f InteractionOffsetGek;
         [NMS(Index = 164)]
-        /* 0x0890 */ public Vector3f InteractionOffsetRecruitment;
-        [NMS(Index = 160)]
-        /* 0x08A0 */ public Vector3f InteractionOffsetSpiderman;
+        /* 0x0820 */ public Vector3f InteractionHailingFocusOffset;
+        [NMS(Index = 154)]
+        /* 0x0830 */ public Vector3f InteractionOffset;
         [NMS(Index = 162)]
+        /* 0x0840 */ public Vector3f InteractionOffsetCronus;
+        [NMS(Index = 159)]
+        /* 0x0850 */ public Vector3f InteractionOffsetDefault;
+        [NMS(Index = 155)]
+        /* 0x0860 */ public Vector3f InteractionOffsetExtraVR;
+        [NMS(Index = 156)]
+        /* 0x0870 */ public Vector3f InteractionOffsetExtraVRSeated;
+        [NMS(Index = 160)]
+        /* 0x0880 */ public Vector3f InteractionOffsetGek;
+        [NMS(Index = 165)]
+        /* 0x0890 */ public Vector3f InteractionOffsetRecruitment;
+        [NMS(Index = 161)]
+        /* 0x08A0 */ public Vector3f InteractionOffsetSpiderman;
+        [NMS(Index = 163)]
         /* 0x08B0 */ public Vector3f InteractionShipFocusOffset;
         [NMS(Index = 36)]
         /* 0x08C0 */ public Colour MiniportalFlashColour;
-        [NMS(Index = 151)]
+        [NMS(Index = 152)]
         /* 0x08D0 */ public Vector3f ModelViewOffset;
-        [NMS(Index = 311)]
-        /* 0x08E0 */ public Vector3f OffsetCamOffset;
         [NMS(Index = 312)]
+        /* 0x08E0 */ public Vector3f OffsetCamOffset;
+        [NMS(Index = 313)]
         /* 0x08F0 */ public Vector3f OffsetCamRotation;
-        [NMS(Index = 189)]
-        /* 0x0900 */ public Vector3f OffsetForFleetInteraction;
         [NMS(Index = 190)]
+        /* 0x0900 */ public Vector3f OffsetForFleetInteraction;
+        [NMS(Index = 191)]
         /* 0x0910 */ public Vector3f OffsetForFrigateInteraction;
-        [NMS(Index = 219)]
-        /* 0x0920 */ public Vector3f PhotoModeShipOffset;
         [NMS(Index = 220)]
+        /* 0x0920 */ public Vector3f PhotoModeShipOffset;
+        [NMS(Index = 221)]
         /* 0x0930 */ public Vector3f PhotoModeVRFPOffset;
-        [NMS(Index = 156)]
-        /* 0x0940 */ public Vector3f ShopInteractionOffsetExtraVR;
         [NMS(Index = 157)]
+        /* 0x0940 */ public Vector3f ShopInteractionOffsetExtraVR;
+        [NMS(Index = 158)]
         /* 0x0950 */ public Vector3f ShopInteractionOffsetExtraVRSeated;
         [NMS(Index = 42)]
         /* 0x0960 */ public Colour VehicleExitFlashColour;
@@ -88,706 +88,708 @@ namespace libMBIN.NMS.Globals
         [NMS(Index = 140)]
         /* 0x0980 */ public GcCameraFollowSettings AlienShipFollowCam;
         [NMS(Index = 127)]
-        /* 0x0A88 */ public GcCameraFollowSettings BikeFollowCam;
+        /* 0x0A90 */ public GcCameraFollowSettings BikeFollowCam;
         [NMS(Index = 123)]
-        /* 0x0B90 */ public GcCameraFollowSettings BuggyFollowCam;
-        [NMS(Index = 146)]
-        /* 0x0C98 */ public GcCameraFollowSettings BuildingIndoorsCam;
+        /* 0x0BA0 */ public GcCameraFollowSettings BuggyFollowCam;
         [NMS(Index = 147)]
-        /* 0x0DA0 */ public GcCameraFollowSettings BuildingOutdoorsCam;
+        /* 0x0CB0 */ public GcCameraFollowSettings BuildingIndoorsCam;
         [NMS(Index = 148)]
-        /* 0x0EA8 */ public GcCameraFollowSettings BuildingUnderwaterCam;
-        [NMS(Index = 99)]
-        /* 0x0FB0 */ public GcCameraFollowSettings CharacterAbandCam;
-        [NMS(Index = 98)]
-        /* 0x10B8 */ public GcCameraFollowSettings CharacterAbandCombatCam;
-        [NMS(Index = 101)]
-        /* 0x11C0 */ public GcCameraFollowSettings CharacterAirborneCam;
-        [NMS(Index = 106)]
-        /* 0x12C8 */ public GcCameraFollowSettings CharacterAirborneCombatCam;
-        [NMS(Index = 91)]
-        /* 0x13D0 */ public GcCameraFollowSettings CharacterCombatCam;
-        [NMS(Index = 96)]
-        /* 0x14D8 */ public GcCameraFollowSettings CharacterCorvetteBuildCam;
-        [NMS(Index = 95)]
-        /* 0x15E0 */ public GcCameraFollowSettings CharacterCorvetteCam;
-        [NMS(Index = 105)]
-        /* 0x16E8 */ public GcCameraFollowSettings CharacterFallingCam;
-        [NMS(Index = 93)]
-        /* 0x17F0 */ public GcCameraFollowSettings CharacterFishingCam;
-        [NMS(Index = 115)]
-        /* 0x18F8 */ public GcCameraFollowSettings CharacterGrabbedCam;
-        [NMS(Index = 94)]
-        /* 0x1A00 */ public GcCameraFollowSettings CharacterIndoorCam;
-        [NMS(Index = 102)]
-        /* 0x1B08 */ public GcCameraFollowSettings CharacterMeleeBoostCam;
-        [NMS(Index = 92)]
-        /* 0x1C10 */ public GcCameraFollowSettings CharacterMiningCam;
-        [NMS(Index = 100)]
-        /* 0x1D18 */ public GcCameraFollowSettings CharacterNexusCam;
-        [NMS(Index = 117)]
-        /* 0x1E20 */ public GcCameraFollowSettings CharacterRideCam;
-        [NMS(Index = 120)]
-        /* 0x1F28 */ public GcCameraFollowSettings CharacterRideCamHuge;
-        [NMS(Index = 119)]
-        /* 0x2030 */ public GcCameraFollowSettings CharacterRideCamLarge;
-        [NMS(Index = 118)]
-        /* 0x2138 */ public GcCameraFollowSettings CharacterRideCamMedium;
-        [NMS(Index = 103)]
-        /* 0x2240 */ public GcCameraFollowSettings CharacterRocketBootsCam;
-        [NMS(Index = 104)]
-        /* 0x2348 */ public GcCameraFollowSettings CharacterRocketBootsChargeCam;
-        [NMS(Index = 90)]
-        /* 0x2450 */ public GcCameraFollowSettings CharacterRunCam;
-        [NMS(Index = 116)]
-        /* 0x2558 */ public GcCameraFollowSettings CharacterSitCam;
-        [NMS(Index = 107)]
-        /* 0x2660 */ public GcCameraFollowSettings CharacterSpaceCam;
-        [NMS(Index = 112)]
-        /* 0x2768 */ public GcCameraFollowSettings CharacterSpacewalkCombatCam;
-        [NMS(Index = 108)]
-        /* 0x2870 */ public GcCameraFollowSettings CharacterSteepSlopeCam;
-        [NMS(Index = 109)]
-        /* 0x2978 */ public GcCameraFollowSettings CharacterSurfaceWaterCam;
-        [NMS(Index = 89)]
-        /* 0x2A80 */ public GcCameraFollowSettings CharacterUnarmedCam;
-        [NMS(Index = 97)]
-        /* 0x2B88 */ public GcCameraFollowSettings CharacterUndergroundCam;
-        [NMS(Index = 110)]
-        /* 0x2C90 */ public GcCameraFollowSettings CharacterUnderwaterCam;
-        [NMS(Index = 111)]
-        /* 0x2D98 */ public GcCameraFollowSettings CharacterUnderwaterCombatCam;
-        [NMS(Index = 114)]
-        /* 0x2EA0 */ public GcCameraFollowSettings CharacterUnderwaterJetpackAscentCam;
-        [NMS(Index = 113)]
-        /* 0x2FA8 */ public GcCameraFollowSettings CharacterUnderwaterJetpackCam;
-        [NMS(Index = 142)]
-        /* 0x30B0 */ public GcCameraFollowSettings CorvetteFollowCam;
-        [NMS(Index = 135)]
-        /* 0x31B8 */ public GcCameraFollowSettings DropshipFollowCam;
-        [NMS(Index = 130)]
-        /* 0x32C0 */ public GcCameraFollowSettings FlatbedFollowCam;
-        [NMS(Index = 124)]
-        /* 0x33C8 */ public GcCameraFollowSettings HovercraftFollowCam;
-        [NMS(Index = 132)]
-        /* 0x34D0 */ public GcCameraFollowSettings MechCombatCam;
-        [NMS(Index = 18)]
-        /* 0x35D8 */ public GcCameraFollowSettings MechFirstPersonCam;
-        [NMS(Index = 131)]
-        /* 0x36E0 */ public GcCameraFollowSettings MechFollowCam;
-        [NMS(Index = 133)]
-        /* 0x37E8 */ public GcCameraFollowSettings MechJetpackCam;
-        [NMS(Index = 141)]
-        /* 0x38F0 */ public GcCameraFollowSettings RobotShipFollowCam;
-        [NMS(Index = 137)]
-        /* 0x39F8 */ public GcCameraFollowSettings RoyalShipFollowCam;
-        [NMS(Index = 138)]
-        /* 0x3B00 */ public GcCameraFollowSettings SailShipFollowCam;
-        [NMS(Index = 139)]
-        /* 0x3C08 */ public GcCameraFollowSettings ScienceShipFollowCam;
-        [NMS(Index = 136)]
-        /* 0x3D10 */ public GcCameraFollowSettings ShuttleFollowCam;
-        [NMS(Index = 134)]
-        /* 0x3E18 */ public GcCameraFollowSettings SpaceshipFollowCam;
-        [NMS(Index = 125)]
-        /* 0x3F20 */ public GcCameraFollowSettings SubmarineFollowCam;
-        [NMS(Index = 126)]
-        /* 0x4028 */ public GcCameraFollowSettings SubmarineFollowCamSurface;
-        [NMS(Index = 129)]
-        /* 0x4130 */ public GcCameraFollowSettings TruckFollowCam;
-        [NMS(Index = 17)]
-        /* 0x4238 */ public GcCameraFollowSettings VehicleCam;
-        [NMS(Index = 16)]
-        /* 0x4340 */ public GcCameraFollowSettings VehicleCamHmd;
-        [NMS(Index = 128)]
-        /* 0x4448 */ public GcCameraFollowSettings WheeledBikeFollowCam;
-        [NMS(Index = 373)]
-        /* 0x4550 */ public GcCameraAnimationData AmbientCameraAnimations;
-        [NMS(Index = 374)]
-        /* 0x4570 */ public TkModelResource AmbientDroneAnimations;
-        [NMS(Index = 9)]
-        /* 0x4590 */ public List<GcCameraAerialViewDataTableEntry> AerialViewDataTable;
-        [NMS(Index = 375)]
-        /* 0x45A0 */ public GcFilename CameraAmbientAnimationsData;
-        [NMS(Index = 15)]
-        /* 0x45B0 */ public List<GcCameraFollowSettings> Cameras;
-        [NMS(Index = 286)]
-        /* 0x45C0 */ public List<GcCameraShakeData> CameraShakeTable;
-        [NMS(Index = 386)]
-        /* 0x45D0 */ public List<Vector3f> SavedCameraFacing;
-        [NMS(Index = 385)]
-        /* 0x45E0 */ public List<TkBigPosData> SavedCameraPositions;
-        [NMS(Index = 388)]
-        /* 0x45F0 */ public GcCameraWarpSettings CorvetteWarpSettings;
-        [NMS(Index = 389)]
-        /* 0x4644 */ public GcCameraWarpSettings FreighterWarpSettings;
-        [NMS(Index = 390)]
-        /* 0x4698 */ public GcCameraWarpSettings PirateFreighterWarpSettings;
-        [NMS(Index = 387)]
-        /* 0x46EC */ public GcCameraWarpSettings WarpSettings;
-        [NMS(Index = 6)]
-        /* 0x4740 */ public GcCameraFocusBuildingControlSettings FocusBuildingModeDistanceControlSettings;
-        [NMS(Index = 4)]
-        /* 0x4760 */ public GcCameraFocusBuildingControlSettings FocusBuildingModePitchControlSettings;
-        [NMS(Index = 7)]
-        /* 0x4780 */ public GcCameraFocusBuildingControlSettings FocusBuildingModePlanarControlSettings;
-        [NMS(Index = 8)]
-        /* 0x47A0 */ public GcCameraFocusBuildingControlSettings FocusBuildingModeVerticalControlSettings;
-        [NMS(Index = 5)]
-        /* 0x47C0 */ public GcCameraFocusBuildingControlSettings FocusBuildingModeYawControlSettings;
-        [NMS(Index = 152)]
-        /* 0x47E0 */ public Vector2f ModelViewFocusOffset;
-        [NMS(Index = 194)]
-        /* 0x47E8 */ public Vector2f PitchForFrigateInteraction;
-        [NMS(Index = 195)]
-        /* 0x47F0 */ public Vector2f RotationForFrigateInteraction;
-        [NMS(Index = 231)]
-        /* 0x47F8 */ public float AerialViewBackTime;
-        [NMS(Index = 232)]
-        /* 0x47FC */ public float AerialViewBlendTime;
-        [NMS(Index = 228)]
-        /* 0x4800 */ public float AerialViewDownDistance;
-        [NMS(Index = 229)]
-        /* 0x4804 */ public float AerialViewPause;
-        [NMS(Index = 230)]
-        /* 0x4808 */ public float AerialViewStartTime;
-        [NMS(Index = 60)]
-        /* 0x480C */ public float BinocularFlashStrength;
-        [NMS(Index = 59)]
-        /* 0x4810 */ public float BinocularFlashTime;
-        [NMS(Index = 289)]
-        /* 0x4814 */ public float BobAmount;
-        [NMS(Index = 287)]
-        /* 0x4818 */ public float BobAmountAbandFreighter;
-        [NMS(Index = 290)]
-        /* 0x481C */ public float BobFactor;
-        [NMS(Index = 288)]
-        /* 0x4820 */ public float BobFactorAbandFreighter;
-        [NMS(Index = 291)]
-        /* 0x4824 */ public float BobFocus;
-        [NMS(Index = 295)]
-        /* 0x4828 */ public float BobFwdAmount;
-        [NMS(Index = 293)]
-        /* 0x482C */ public float BobRollAmount;
-        [NMS(Index = 292)]
-        /* 0x4830 */ public float BobRollFactor;
-        [NMS(Index = 294)]
-        /* 0x4834 */ public float BobRollOffset;
-        [NMS(Index = 224)]
-        /* 0x4838 */ public float BuildingModeMaxDistance;
-        [NMS(Index = 377)]
-        /* 0x483C */ public float CameraAmbientAutoSwitchMaxTime;
-        [NMS(Index = 376)]
-        /* 0x4840 */ public float CameraAmbientAutoSwitchMinTime;
-        [NMS(Index = 296)]
-        /* 0x4844 */ public float CamSeed1;
-        [NMS(Index = 297)]
-        /* 0x4848 */ public float CamSeed2;
-        [NMS(Index = 300)]
-        /* 0x484C */ public float CamWander1Amplitude;
-        [NMS(Index = 298)]
-        /* 0x4850 */ public float CamWander1Phase;
-        [NMS(Index = 301)]
-        /* 0x4854 */ public float CamWander2Amplitude;
-        [NMS(Index = 299)]
-        /* 0x4858 */ public float CamWander2Phase;
-        [NMS(Index = 319)]
-        /* 0x485C */ public float CharCamAutoDirStartTime;
-        [NMS(Index = 322)]
-        /* 0x4860 */ public float CharCamDeflectSpeed;
-        [NMS(Index = 314)]
-        /* 0x4864 */ public float CharCamFocusHeight;
-        [NMS(Index = 317)]
-        /* 0x4868 */ public float CharCamHeight;
-        [NMS(Index = 320)]
-        /* 0x486C */ public float CharCamLookOffset;
-        [NMS(Index = 321)]
-        /* 0x4870 */ public float CharCamLookOffsetFactor;
-        [NMS(Index = 315)]
-        /* 0x4874 */ public float CharCamMaxDistance;
-        [NMS(Index = 316)]
-        /* 0x4878 */ public float CharCamMinDistance;
-        [NMS(Index = 323)]
-        /* 0x487C */ public float CharCamMinSpeed;
-        [NMS(Index = 318)]
-        /* 0x4880 */ public float CharCamOffsetTime;
-        [NMS(Index = 324)]
-        /* 0x4884 */ public float CharCamRightStickX;
-        [NMS(Index = 325)]
-        /* 0x4888 */ public float CharCamRightStickY;
-        [NMS(Index = 329)]
-        /* 0x488C */ public float CloseFactorSpring;
-        [NMS(Index = 370)]
-        /* 0x4890 */ public float CreatureInteractionCamSpring;
-        [NMS(Index = 357)]
-        /* 0x4894 */ public float CreatureInteractionDistMulMax;
-        [NMS(Index = 356)]
-        /* 0x4898 */ public float CreatureInteractionDistMulMin;
-        [NMS(Index = 364)]
-        /* 0x489C */ public float CreatureInteractionDownhillPitchTransfer;
-        [NMS(Index = 369)]
-        /* 0x48A0 */ public float CreatureInteractionFoVMax;
-        [NMS(Index = 368)]
-        /* 0x48A4 */ public float CreatureInteractionFoVMin;
-        [NMS(Index = 367)]
-        /* 0x48A8 */ public float CreatureInteractionFoVSplitSize;
-        [NMS(Index = 371)]
-        /* 0x48AC */ public float CreatureInteractionHeadHeightSpring;
-        [NMS(Index = 363)]
-        /* 0x48B0 */ public float CreatureInteractionMaxDownhillPitchAroundPlayer;
-        [NMS(Index = 365)]
-        /* 0x48B4 */ public float CreatureInteractionMaxUphillPitchAroundPlayer;
-        [NMS(Index = 353)]
-        /* 0x48B8 */ public float CreatureInteractionMinDist;
-        [NMS(Index = 362)]
-        /* 0x48BC */ public float CreatureInteractionPitchMax;
-        [NMS(Index = 361)]
-        /* 0x48C0 */ public float CreatureInteractionPitchMin;
-        [NMS(Index = 360)]
-        /* 0x48C4 */ public float CreatureInteractionPitchSplit;
-        [NMS(Index = 355)]
-        /* 0x48C8 */ public float CreatureInteractionPushCameraDownAmount;
-        [NMS(Index = 354)]
-        /* 0x48CC */ public float CreatureInteractionPushCameraDownForCreatureBiggerThan;
-        [NMS(Index = 366)]
-        /* 0x48D0 */ public float CreatureInteractionUphillPitchTransfer;
-        [NMS(Index = 359)]
-        /* 0x48D4 */ public float CreatureInteractionYawMax;
-        [NMS(Index = 358)]
-        /* 0x48D8 */ public float CreatureInteractionYawMin;
-        [NMS(Index = 352)]
-        /* 0x48DC */ public float CreatureSizeMax;
-        [NMS(Index = 351)]
-        /* 0x48E0 */ public float CreatureSizeMin;
-        [NMS(Index = 278)]
-        /* 0x48E4 */ public float DebugAICamAt;
-        [NMS(Index = 277)]
-        /* 0x48E8 */ public float DebugAICamUp;
-        [NMS(Index = 304)]
-        /* 0x48EC */ public float DebugCameraFastFactor;
-        [NMS(Index = 306)]
-        /* 0x48F0 */ public float DebugCameraHeightForAccelerateBegin;
-        [NMS(Index = 308)]
-        /* 0x48F4 */ public float DebugCameraHeightForAccelerateEnd;
-        [NMS(Index = 309)]
-        /* 0x48F8 */ public float DebugCameraMaxSpeed;
-        [NMS(Index = 303)]
-        /* 0x48FC */ public float DebugCameraSlowFactor;
-        [NMS(Index = 305)]
-        /* 0x4900 */ public float DebugCameraSpaceFastFactor;
-        [NMS(Index = 307)]
-        /* 0x4904 */ public float DebugCameraSpeedAtPlanetThreshold;
-        [NMS(Index = 275)]
-        /* 0x4908 */ public float DebugMoveCamHeight;
-        [NMS(Index = 274)]
-        /* 0x490C */ public float DebugMoveCamSpeed;
-        [NMS(Index = 28)]
-        /* 0x4910 */ public float DebugPlanetJumpFarHeight;
-        [NMS(Index = 27)]
-        /* 0x4914 */ public float DebugPlanetJumpNearHeight;
-        [NMS(Index = 302)]
-        /* 0x4918 */ public float DebugSpaceStationTeleportOffset;
-        [NMS(Index = 186)]
-        /* 0x491C */ public float DistanceForFleetInteraction;
-        [NMS(Index = 187)]
-        /* 0x4920 */ public float DistanceForFrigateInteraction;
-        [NMS(Index = 188)]
-        /* 0x4924 */ public float DistanceForFrigatePurchaseInteraction;
-        [NMS(Index = 326)]
-        /* 0x4928 */ public float FirstPersonCamHeight;
-        [NMS(Index = 330)]
-        /* 0x492C */ public float FirstPersonFoV;
-        [NMS(Index = 284)]
-        /* 0x4930 */ public float FirstPersonSlerpAway;
-        [NMS(Index = 285)]
-        /* 0x4934 */ public float FirstPersonSlerpTowards;
-        [NMS(Index = 334)]
-        /* 0x4938 */ public float FirstPersonZoom1FoV;
-        [NMS(Index = 335)]
-        /* 0x493C */ public float FirstPersonZoom2FoV;
-        [NMS(Index = 191)]
-        /* 0x4940 */ public float FleetUIOrbitRate;
-        [NMS(Index = 193)]
-        /* 0x4944 */ public float FleetUIVerticalMotionAmplitude;
-        [NMS(Index = 192)]
-        /* 0x4948 */ public float FleetUIVerticalMotionDuration;
-        [NMS(Index = 58)]
-        /* 0x494C */ public float FlybyInVehicleDamper;
-        [NMS(Index = 54)]
-        /* 0x4950 */ public float FlybyMinRange;
-        [NMS(Index = 56)]
-        /* 0x4954 */ public float FlybyMinRelativeSpeed;
-        [NMS(Index = 55)]
-        /* 0x4958 */ public float FlybyRange;
-        [NMS(Index = 57)]
-        /* 0x495C */ public float FlybyRelativeSpeedRange;
-        [NMS(Index = 3)]
-        /* 0x4960 */ public float FocusBuildingModeMaxFOV;
-        [NMS(Index = 2)]
-        /* 0x4964 */ public float FocusBuildingModeMinFOV;
-        [NMS(Index = 1)]
-        /* 0x4968 */ public float FocusBuildingModeStartDistance;
-        [NMS(Index = 349)]
-        /* 0x496C */ public float FoVAdjust;
-        [NMS(Index = 346)]
-        /* 0x4970 */ public float FoVSpring;
-        [NMS(Index = 347)]
-        /* 0x4974 */ public float FoVSpringSights;
-        [NMS(Index = 348)]
-        /* 0x4978 */ public float FoVSpringSightsPassive;
-        [NMS(Index = 180)]
-        /* 0x497C */ public float FrigateCaptainLateralShiftAmount;
+        /* 0x0DC0 */ public GcCameraFollowSettings BuildingOutdoorsCam;
         [NMS(Index = 149)]
-        /* 0x4980 */ public float FrontendModelCameraSpringTime;
-        [NMS(Index = 23)]
-        /* 0x4984 */ public float HmdEyeExtraTurnAngle;
-        [NMS(Index = 25)]
-        /* 0x4988 */ public float HmdEyeExtraTurnHeadAngleRange;
-        [NMS(Index = 24)]
-        /* 0x498C */ public float HmdEyeExtraTurnMinHeadAngle;
-        [NMS(Index = 22)]
-        /* 0x4990 */ public float HmdEyeLookAngle;
-        [NMS(Index = 282)]
-        /* 0x4994 */ public float IndoorCamShakeDamper;
-        [NMS(Index = 166)]
-        /* 0x4998 */ public float InteractionHeadHeightCronus;
-        [NMS(Index = 165)]
-        /* 0x499C */ public float InteractionHeadHeightDefault;
-        [NMS(Index = 167)]
-        /* 0x49A0 */ public float InteractionHeadHeightGek;
-        [NMS(Index = 169)]
-        /* 0x49A4 */ public float InteractionHeadHeightSpiderman;
-        [NMS(Index = 168)]
-        /* 0x49A8 */ public float InteractionHeadHeightVykeen;
-        [NMS(Index = 173)]
-        /* 0x49AC */ public float InteractionHeadPosHeightAdjust;
-        [NMS(Index = 176)]
-        /* 0x49B0 */ public float InteractionHeadPosHeightAdjustCronus;
-        [NMS(Index = 175)]
-        /* 0x49B4 */ public float InteractionHeadPosHeightAdjustSpiderman;
-        [NMS(Index = 174)]
-        /* 0x49B8 */ public float InteractionHeadPosHeightAdjustVykeen;
+        /* 0x0ED0 */ public GcCameraFollowSettings BuildingUnderwaterCam;
+        [NMS(Index = 99)]
+        /* 0x0FE0 */ public GcCameraFollowSettings CharacterAbandCam;
+        [NMS(Index = 98)]
+        /* 0x10F0 */ public GcCameraFollowSettings CharacterAbandCombatCam;
+        [NMS(Index = 101)]
+        /* 0x1200 */ public GcCameraFollowSettings CharacterAirborneCam;
+        [NMS(Index = 106)]
+        /* 0x1310 */ public GcCameraFollowSettings CharacterAirborneCombatCam;
+        [NMS(Index = 91)]
+        /* 0x1420 */ public GcCameraFollowSettings CharacterCombatCam;
+        [NMS(Index = 96)]
+        /* 0x1530 */ public GcCameraFollowSettings CharacterCorvetteBuildCam;
+        [NMS(Index = 95)]
+        /* 0x1640 */ public GcCameraFollowSettings CharacterCorvetteCam;
+        [NMS(Index = 105)]
+        /* 0x1750 */ public GcCameraFollowSettings CharacterFallingCam;
+        [NMS(Index = 93)]
+        /* 0x1860 */ public GcCameraFollowSettings CharacterFishingCam;
+        [NMS(Index = 115)]
+        /* 0x1970 */ public GcCameraFollowSettings CharacterGrabbedCam;
+        [NMS(Index = 94)]
+        /* 0x1A80 */ public GcCameraFollowSettings CharacterIndoorCam;
+        [NMS(Index = 102)]
+        /* 0x1B90 */ public GcCameraFollowSettings CharacterMeleeBoostCam;
+        [NMS(Index = 92)]
+        /* 0x1CA0 */ public GcCameraFollowSettings CharacterMiningCam;
+        [NMS(Index = 100)]
+        /* 0x1DB0 */ public GcCameraFollowSettings CharacterNexusCam;
+        [NMS(Index = 117)]
+        /* 0x1EC0 */ public GcCameraFollowSettings CharacterRideCam;
+        [NMS(Index = 120)]
+        /* 0x1FD0 */ public GcCameraFollowSettings CharacterRideCamHuge;
+        [NMS(Index = 119)]
+        /* 0x20E0 */ public GcCameraFollowSettings CharacterRideCamLarge;
+        [NMS(Index = 118)]
+        /* 0x21F0 */ public GcCameraFollowSettings CharacterRideCamMedium;
+        [NMS(Index = 103)]
+        /* 0x2300 */ public GcCameraFollowSettings CharacterRocketBootsCam;
+        [NMS(Index = 104)]
+        /* 0x2410 */ public GcCameraFollowSettings CharacterRocketBootsChargeCam;
+        [NMS(Index = 90)]
+        /* 0x2520 */ public GcCameraFollowSettings CharacterRunCam;
+        [NMS(Index = 116)]
+        /* 0x2630 */ public GcCameraFollowSettings CharacterSitCam;
+        [NMS(Index = 107)]
+        /* 0x2740 */ public GcCameraFollowSettings CharacterSpaceCam;
+        [NMS(Index = 112)]
+        /* 0x2850 */ public GcCameraFollowSettings CharacterSpacewalkCombatCam;
+        [NMS(Index = 108)]
+        /* 0x2960 */ public GcCameraFollowSettings CharacterSteepSlopeCam;
+        [NMS(Index = 109)]
+        /* 0x2A70 */ public GcCameraFollowSettings CharacterSurfaceWaterCam;
+        [NMS(Index = 89)]
+        /* 0x2B80 */ public GcCameraFollowSettings CharacterUnarmedCam;
+        [NMS(Index = 97)]
+        /* 0x2C90 */ public GcCameraFollowSettings CharacterUndergroundCam;
+        [NMS(Index = 110)]
+        /* 0x2DA0 */ public GcCameraFollowSettings CharacterUnderwaterCam;
+        [NMS(Index = 111)]
+        /* 0x2EB0 */ public GcCameraFollowSettings CharacterUnderwaterCombatCam;
+        [NMS(Index = 114)]
+        /* 0x2FC0 */ public GcCameraFollowSettings CharacterUnderwaterJetpackAscentCam;
+        [NMS(Index = 113)]
+        /* 0x30D0 */ public GcCameraFollowSettings CharacterUnderwaterJetpackCam;
+        [NMS(Index = 142)]
+        /* 0x31E0 */ public GcCameraFollowSettings CorvetteFollowCam;
+        [NMS(Index = 135)]
+        /* 0x32F0 */ public GcCameraFollowSettings DropshipFollowCam;
+        [NMS(Index = 130)]
+        /* 0x3400 */ public GcCameraFollowSettings FlatbedFollowCam;
+        [NMS(Index = 124)]
+        /* 0x3510 */ public GcCameraFollowSettings HovercraftFollowCam;
+        [NMS(Index = 132)]
+        /* 0x3620 */ public GcCameraFollowSettings MechCombatCam;
+        [NMS(Index = 18)]
+        /* 0x3730 */ public GcCameraFollowSettings MechFirstPersonCam;
+        [NMS(Index = 131)]
+        /* 0x3840 */ public GcCameraFollowSettings MechFollowCam;
+        [NMS(Index = 133)]
+        /* 0x3950 */ public GcCameraFollowSettings MechJetpackCam;
+        [NMS(Index = 141)]
+        /* 0x3A60 */ public GcCameraFollowSettings RobotShipFollowCam;
+        [NMS(Index = 137)]
+        /* 0x3B70 */ public GcCameraFollowSettings RoyalShipFollowCam;
+        [NMS(Index = 138)]
+        /* 0x3C80 */ public GcCameraFollowSettings SailShipFollowCam;
+        [NMS(Index = 139)]
+        /* 0x3D90 */ public GcCameraFollowSettings ScienceShipFollowCam;
+        [NMS(Index = 136)]
+        /* 0x3EA0 */ public GcCameraFollowSettings ShuttleFollowCam;
+        [NMS(Index = 134)]
+        /* 0x3FB0 */ public GcCameraFollowSettings SpaceshipFollowCam;
+        [NMS(Index = 125)]
+        /* 0x40C0 */ public GcCameraFollowSettings SubmarineFollowCam;
+        [NMS(Index = 126)]
+        /* 0x41D0 */ public GcCameraFollowSettings SubmarineFollowCamSurface;
+        [NMS(Index = 143)]
+        /* 0x42E0 */ public GcCameraFollowSettings SwarmDroneFollowCam;
+        [NMS(Index = 129)]
+        /* 0x43F0 */ public GcCameraFollowSettings TruckFollowCam;
+        [NMS(Index = 17)]
+        /* 0x4500 */ public GcCameraFollowSettings VehicleCam;
+        [NMS(Index = 16)]
+        /* 0x4610 */ public GcCameraFollowSettings VehicleCamHmd;
+        [NMS(Index = 128)]
+        /* 0x4720 */ public GcCameraFollowSettings WheeledBikeFollowCam;
+        [NMS(Index = 374)]
+        /* 0x4830 */ public GcCameraAnimationData AmbientCameraAnimations;
+        [NMS(Index = 375)]
+        /* 0x4850 */ public TkModelResource AmbientDroneAnimations;
+        [NMS(Index = 9)]
+        /* 0x4870 */ public List<GcCameraAerialViewDataTableEntry> AerialViewDataTable;
+        [NMS(Index = 376)]
+        /* 0x4880 */ public GcFilename CameraAmbientAnimationsData;
+        [NMS(Index = 15)]
+        /* 0x4890 */ public List<GcCameraFollowSettings> Cameras;
+        [NMS(Index = 287)]
+        /* 0x48A0 */ public List<GcCameraShakeData> CameraShakeTable;
+        [NMS(Index = 387)]
+        /* 0x48B0 */ public List<Vector3f> SavedCameraFacing;
+        [NMS(Index = 386)]
+        /* 0x48C0 */ public List<TkBigPosData> SavedCameraPositions;
+        [NMS(Index = 389)]
+        /* 0x48D0 */ public GcCameraWarpSettings CorvetteWarpSettings;
+        [NMS(Index = 390)]
+        /* 0x4924 */ public GcCameraWarpSettings FreighterWarpSettings;
+        [NMS(Index = 391)]
+        /* 0x4978 */ public GcCameraWarpSettings PirateFreighterWarpSettings;
+        [NMS(Index = 388)]
+        /* 0x49CC */ public GcCameraWarpSettings WarpSettings;
+        [NMS(Index = 6)]
+        /* 0x4A20 */ public GcCameraFocusBuildingControlSettings FocusBuildingModeDistanceControlSettings;
+        [NMS(Index = 4)]
+        /* 0x4A40 */ public GcCameraFocusBuildingControlSettings FocusBuildingModePitchControlSettings;
+        [NMS(Index = 7)]
+        /* 0x4A60 */ public GcCameraFocusBuildingControlSettings FocusBuildingModePlanarControlSettings;
+        [NMS(Index = 8)]
+        /* 0x4A80 */ public GcCameraFocusBuildingControlSettings FocusBuildingModeVerticalControlSettings;
+        [NMS(Index = 5)]
+        /* 0x4AA0 */ public GcCameraFocusBuildingControlSettings FocusBuildingModeYawControlSettings;
+        [NMS(Index = 153)]
+        /* 0x4AC0 */ public Vector2f ModelViewFocusOffset;
+        [NMS(Index = 195)]
+        /* 0x4AC8 */ public Vector2f PitchForFrigateInteraction;
         [NMS(Index = 196)]
-        /* 0x49BC */ public float InteractionModeBlendTime;
-        [NMS(Index = 197)]
-        /* 0x49C0 */ public float InteractionModeFocusCamBlend;
-        [NMS(Index = 198)]
-        /* 0x49C4 */ public float InteractionModeFoV;
-        [NMS(Index = 172)]
-        /* 0x49C8 */ public float InteractionPitchAdjustDeadZone;
-        [NMS(Index = 171)]
-        /* 0x49CC */ public float InteractionPitchAdjustStrength;
-        [NMS(Index = 170)]
-        /* 0x49D0 */ public float InteractionPitchAdjustTime;
-        [NMS(Index = 184)]
-        /* 0x49D4 */ public float LocalMissionBoardLateralShiftAmount;
-        [NMS(Index = 63)]
-        /* 0x49D8 */ public float MaxCreatureRidingYaw;
-        [NMS(Index = 62)]
-        /* 0x49DC */ public float MaxFirstPersonCameraPitch;
-        [NMS(Index = 87)]
-        /* 0x49E0 */ public float MechCameraArmShootOffsetY;
-        [NMS(Index = 88)]
-        /* 0x49E4 */ public float MechCameraCombatFakeSpeed;
-        [NMS(Index = 86)]
-        /* 0x49E8 */ public float MechCameraExtraYPostLandingBlendTime;
-        [NMS(Index = 85)]
-        /* 0x49EC */ public float MechCameraNoExtraYTimeAfterLand;
-        [NMS(Index = 242)]
-        /* 0x49F0 */ public float MechCamSpringStrengthMax;
-        [NMS(Index = 241)]
-        /* 0x49F4 */ public float MechCamSpringStrengthMin;
-        [NMS(Index = 226)]
-        /* 0x49F8 */ public float MeleeBoostedFoV;
-        [NMS(Index = 227)]
-        /* 0x49FC */ public float MeleeFoV;
-        [NMS(Index = 61)]
-        /* 0x4A00 */ public float MinFirstPersonCameraPitch;
-        [NMS(Index = 200)]
-        /* 0x4A04 */ public float MinInteractFocusAngle;
-        [NMS(Index = 35)]
-        /* 0x4A08 */ public float MiniportalFlashStrength;
-        [NMS(Index = 34)]
-        /* 0x4A0C */ public float MiniportalFlashTime;
-        [NMS(Index = 271)]
-        /* 0x4A10 */ public float ModelViewDefaultPitch;
-        [NMS(Index = 272)]
-        /* 0x4A14 */ public float ModelViewDefaultYaw;
-        [NMS(Index = 268)]
-        /* 0x4A18 */ public float ModelViewDistSpeed;
-        [NMS(Index = 150)]
-        /* 0x4A1C */ public float ModelViewFlashTime;
-        [NMS(Index = 201)]
-        /* 0x4A20 */ public float ModelViewInterpTime;
-        [NMS(Index = 270)]
-        /* 0x4A24 */ public float ModelViewMaxDist;
-        [NMS(Index = 269)]
-        /* 0x4A28 */ public float ModelViewMinDist;
-        [NMS(Index = 267)]
-        /* 0x4A2C */ public float ModelViewMouseMoveSpeed;
-        [NMS(Index = 266)]
-        /* 0x4A30 */ public float ModelViewMouseRotateSnapStrength;
-        [NMS(Index = 265)]
-        /* 0x4A34 */ public float ModelViewMouseRotateSpeed;
-        [NMS(Index = 264)]
-        /* 0x4A38 */ public float ModelViewRotateSpeed;
-        [NMS(Index = 263)]
-        /* 0x4A3C */ public float MouseSensitivity;
-        [NMS(Index = 283)]
-        /* 0x4A40 */ public float NoControlCamShakeDamper;
-        [NMS(Index = 183)]
-        /* 0x4A44 */ public float NPCTradeLateralShiftAmount;
-        [NMS(Index = 185)]
-        /* 0x4A48 */ public float NPCTradeLateralShiftTime;
-        [NMS(Index = 313)]
-        /* 0x4A4C */ public float ObjectFocusTime;
-        [NMS(Index = 310)]
-        /* 0x4A50 */ public float OffsetCamFOV;
-        [NMS(Index = 12)]
-        /* 0x4A54 */ public float OffsetCombatCameraHorizontalAngle;
-        [NMS(Index = 280)]
-        /* 0x4A58 */ public float PainShakeTime;
-        [NMS(Index = 215)]
-        /* 0x4A5C */ public float PhotoModeCollisionRadius;
-        [NMS(Index = 217)]
-        /* 0x4A60 */ public float PhotoModeFlashDuration;
-        [NMS(Index = 218)]
-        /* 0x4A64 */ public float PhotoModeFlashIntensity;
-        [NMS(Index = 211)]
-        /* 0x4A68 */ public float PhotoModeMaxDistance;
-        [NMS(Index = 214)]
-        /* 0x4A6C */ public float PhotoModeMaxDistanceClampBuffer;
-        [NMS(Index = 213)]
-        /* 0x4A70 */ public float PhotoModeMaxDistanceClampForce;
-        [NMS(Index = 212)]
-        /* 0x4A74 */ public float PhotoModeMaxDistanceSpace;
-        [NMS(Index = 209)]
-        /* 0x4A78 */ public float PhotoModeMoveSpeed;
-        [NMS(Index = 216)]
-        /* 0x4A7C */ public float PhotoModeRollSpeed;
-        [NMS(Index = 210)]
-        /* 0x4A80 */ public float PhotoModeTurnSpeed;
-        [NMS(Index = 208)]
-        /* 0x4A84 */ public float PhotoModeVelocitySmoothTime;
-        [NMS(Index = 181)]
-        /* 0x4A88 */ public float PilotDetailsLateralShiftAmount;
-        [NMS(Index = 182)]
-        /* 0x4A8C */ public float RecruitmentLateralShiftAmount;
-        [NMS(Index = 19)]
-        /* 0x4A90 */ public float RevealedNPCHeadOffset;
-        [NMS(Index = 225)]
-        /* 0x4A94 */ public float RunningFoVAdjust;
-        [NMS(Index = 0)]
-        /* 0x4A98 */ public float ScanCameraLookAtTime;
-        [NMS(Index = 10)]
-        /* 0x4A9C */ public float SClassLandingShakeMultiplier;
-        [NMS(Index = 238)]
-        /* 0x4AA0 */ public float ScreenshotBackDistance;
-        [NMS(Index = 236)]
-        /* 0x4AA4 */ public float ScreenshotBendDownAmount;
-        [NMS(Index = 235)]
-        /* 0x4AA8 */ public float ScreenshotHorizonFaceFactor;
-        [NMS(Index = 234)]
-        /* 0x4AAC */ public float ScreenshotHorizonHeight;
-        [NMS(Index = 239)]
-        /* 0x4AB0 */ public float ScreenshotInTime;
-        [NMS(Index = 240)]
-        /* 0x4AB4 */ public float ScreenshotOutTime;
-        [NMS(Index = 237)]
-        /* 0x4AB8 */ public float ScreenshotRightDistance;
-        [NMS(Index = 199)]
-        /* 0x4ABC */ public float ShipBuilderFoV;
-        [NMS(Index = 262)]
-        /* 0x4AC0 */ public float ShipCamAimFOV;
-        [NMS(Index = 244)]
-        /* 0x4AC4 */ public float ShipCamFastSpringStrengthMax;
-        [NMS(Index = 243)]
-        /* 0x4AC8 */ public float ShipCamFastSpringStrengthMin;
-        [NMS(Index = 250)]
-        /* 0x4ACC */ public float ShipCamLookInterp;
-        [NMS(Index = 251)]
-        /* 0x4AD0 */ public float ShipCamMinReturnTime;
-        [NMS(Index = 258)]
-        /* 0x4AD4 */ public float ShipCamMotionInterp;
-        [NMS(Index = 257)]
-        /* 0x4AD8 */ public float ShipCamMotionMaxLagPitchAngle;
-        [NMS(Index = 256)]
-        /* 0x4ADC */ public float ShipCamMotionMaxLagTurnAngle;
-        [NMS(Index = 254)]
-        /* 0x4AE0 */ public float ShipCamMotionPitch;
-        [NMS(Index = 255)]
-        /* 0x4AE4 */ public float ShipCamMotionPitchMod;
-        [NMS(Index = 253)]
-        /* 0x4AE8 */ public float ShipCamMotionTurn;
-        [NMS(Index = 248)]
-        /* 0x4AEC */ public float ShipCamPitch;
-        [NMS(Index = 249)]
-        /* 0x4AF0 */ public float ShipCamPitchMod;
-        [NMS(Index = 252)]
-        /* 0x4AF4 */ public float ShipCamReturnTime;
-        [NMS(Index = 260)]
-        /* 0x4AF8 */ public float ShipCamRollAmountMax;
-        [NMS(Index = 259)]
-        /* 0x4AFC */ public float ShipCamRollAmountMin;
-        [NMS(Index = 261)]
-        /* 0x4B00 */ public float ShipCamRollSpeedScaler;
-        [NMS(Index = 246)]
-        /* 0x4B04 */ public float ShipCamSpringStrengthMax;
-        [NMS(Index = 245)]
-        /* 0x4B08 */ public float ShipCamSpringStrengthMin;
-        [NMS(Index = 247)]
-        /* 0x4B0C */ public float ShipCamTurn;
-        [NMS(Index = 51)]
-        /* 0x4B10 */ public float ShipFirstPersonBlendOffset;
-        [NMS(Index = 50)]
-        /* 0x4B14 */ public float ShipFirstPersonBlendTime;
-        [NMS(Index = 342)]
-        /* 0x4B18 */ public float ShipFoVBoost;
-        [NMS(Index = 338)]
-        /* 0x4B1C */ public float ShipFoVMax;
-        [NMS(Index = 341)]
-        /* 0x4B20 */ public float ShipFoVMax3rdPerson;
-        [NMS(Index = 336)]
-        /* 0x4B24 */ public float ShipFoVMin;
-        [NMS(Index = 337)]
-        /* 0x4B28 */ public float ShipFoVMin2;
-        [NMS(Index = 340)]
-        /* 0x4B2C */ public float ShipFoVMin3rdPerson;
-        [NMS(Index = 343)]
-        /* 0x4B30 */ public float ShipFoVMiniJump;
-        [NMS(Index = 344)]
-        /* 0x4B34 */ public float ShipFoVSpring;
-        [NMS(Index = 345)]
-        /* 0x4B38 */ public float ShipMiniJumpFoVSpring;
-        [NMS(Index = 281)]
-        /* 0x4B3C */ public float ShipShakeDamper;
-        [NMS(Index = 47)]
-        /* 0x4B40 */ public float ShipThirdPersonBlendOffset;
-        [NMS(Index = 49)]
-        /* 0x4B44 */ public float ShipThirdPersonBlendOutOffset;
-        [NMS(Index = 48)]
-        /* 0x4B48 */ public float ShipThirdPersonBlendOutTime;
-        [NMS(Index = 45)]
-        /* 0x4B4C */ public float ShipThirdPersonBlendTime;
-        [NMS(Index = 46)]
-        /* 0x4B50 */ public float ShipThirdPersonBlendWithOffsetTime;
-        [NMS(Index = 53)]
-        /* 0x4B54 */ public float ShipThirdPersonEnterBlendOffset;
-        [NMS(Index = 52)]
-        /* 0x4B58 */ public float ShipThirdPersonEnterBlendTime;
-        [NMS(Index = 339)]
-        /* 0x4B5C */ public float ShipWarpFoV;
-        [NMS(Index = 20)]
-        /* 0x4B60 */ public float SpecialVehicleMouseRecentreTime;
-        [NMS(Index = 21)]
-        /* 0x4B64 */ public float SpecialVehicleMouseRecentreWeaponTime;
-        [NMS(Index = 32)]
-        /* 0x4B68 */ public float ThirdPersonAfterIntroCamBlendTime;
-        [NMS(Index = 202)]
-        /* 0x4B6C */ public float ThirdPersonBlendInTime;
-        [NMS(Index = 203)]
-        /* 0x4B70 */ public float ThirdPersonBlendOutTime;
-        [NMS(Index = 121)]
-        /* 0x4B74 */ public float ThirdPersonCameraChangeBlendTime;
-        [NMS(Index = 122)]
-        /* 0x4B78 */ public float ThirdPersonCameraChangeMinimumBlend;
-        [NMS(Index = 66)]
-        /* 0x4B7C */ public float ThirdPersonCloseDistance;
-        [NMS(Index = 67)]
-        /* 0x4B80 */ public float ThirdPersonCloseDistanceX;
-        [NMS(Index = 65)]
-        /* 0x4B84 */ public float ThirdPersonClosePitch;
-        [NMS(Index = 204)]
-        /* 0x4B88 */ public float ThirdPersonCollisionPushOffsetReducerStart;
-        [NMS(Index = 205)]
-        /* 0x4B8C */ public float ThirdPersonCollisionPushOffsetReducerVehicleRearAngle;
-        [NMS(Index = 333)]
-        /* 0x4B90 */ public float ThirdPersonCombatFoV;
-        [NMS(Index = 74)]
-        /* 0x4B94 */ public float ThirdPersonDownhillAdjustMaxAngle;
-        [NMS(Index = 78)]
-        /* 0x4B98 */ public float ThirdPersonDownhillAdjustMaxAnglePrime;
-        [NMS(Index = 73)]
-        /* 0x4B9C */ public float ThirdPersonDownhillAdjustMinAngle;
-        [NMS(Index = 77)]
-        /* 0x4BA0 */ public float ThirdPersonDownhillAdjustMinAnglePrime;
-        [NMS(Index = 72)]
-        /* 0x4BA4 */ public float ThirdPersonDownhillAdjustSpringTimeMax;
-        [NMS(Index = 71)]
-        /* 0x4BA8 */ public float ThirdPersonDownhillAdjustSpringTimeMin;
-        [NMS(Index = 331)]
-        /* 0x4BAC */ public float ThirdPersonFoV;
-        [NMS(Index = 206)]
-        /* 0x4BB0 */ public float ThirdPersonOffsetSpringTime;
-        [NMS(Index = 68)]
-        /* 0x4BB4 */ public float ThirdPersonRotationBackAdjustAngleMax;
-        [NMS(Index = 64)]
-        /* 0x4BB8 */ public float ThirdPersonRotationBackAdjustAngleMin;
-        [NMS(Index = 33)]
-        /* 0x4BBC */ public float ThirdPersonSkipIntroCamBlendTime;
-        [NMS(Index = 82)]
-        /* 0x4BC0 */ public float ThirdPersonUphillAdjustCrossSlopeMaxAngle;
-        [NMS(Index = 81)]
-        /* 0x4BC4 */ public float ThirdPersonUphillAdjustCrossSlopeMinAngle;
-        [NMS(Index = 76)]
-        /* 0x4BC8 */ public float ThirdPersonUphillAdjustMaxAngle;
-        [NMS(Index = 80)]
-        /* 0x4BCC */ public float ThirdPersonUphillAdjustMaxAnglePrime;
-        [NMS(Index = 75)]
-        /* 0x4BD0 */ public float ThirdPersonUphillAdjustMinAngle;
-        [NMS(Index = 79)]
-        /* 0x4BD4 */ public float ThirdPersonUphillAdjustMinAnglePrime;
-        [NMS(Index = 70)]
-        /* 0x4BD8 */ public float ThirdPersonUphillAdjustSpringTimeMax;
-        [NMS(Index = 69)]
-        /* 0x4BDC */ public float ThirdPersonUphillAdjustSpringTimeMin;
-        [NMS(Index = 29)]
-        /* 0x4BE0 */ public float TogglePerspectiveBlendTime;
-        [NMS(Index = 31)]
-        /* 0x4BE4 */ public float UnderwaterCameraExtraVertOffset;
-        [NMS(Index = 179)]
-        /* 0x4BE8 */ public float VehicleCameraVertRotationLimitBlendTime;
-        [NMS(Index = 178)]
-        /* 0x4BEC */ public float VehicleCameraVertRotationMax;
-        [NMS(Index = 177)]
-        /* 0x4BF0 */ public float VehicleCameraVertRotationMin;
-        [NMS(Index = 41)]
-        /* 0x4BF4 */ public float VehicleExitFlashStrength;
-        [NMS(Index = 40)]
-        /* 0x4BF8 */ public float VehicleExitFlashTime;
-        [NMS(Index = 332)]
-        /* 0x4BFC */ public float VehicleFirstPersonFoV;
-        [NMS(Index = 43)]
-        /* 0x4C00 */ public float VehicleFirstToThirdExitOffsetY;
-        [NMS(Index = 44)]
-        /* 0x4C04 */ public float VehicleFirstToThirdExitOffsetZ;
-        [NMS(Index = 84)]
-        /* 0x4C08 */ public float VehicleThirdPersonShootOffsetBlendOutTime;
-        [NMS(Index = 83)]
-        /* 0x4C0C */ public float VehicleThirdPersonShootOffsetReturnTime;
-        [NMS(Index = 38)]
-        /* 0x4C10 */ public float VRGravityChangeMaxFlashTime;
-        [NMS(Index = 37)]
-        /* 0x4C14 */ public float VRGravityChangeMinFlashTime;
-        [NMS(Index = 279)]
-        /* 0x4C18 */ public float VRShakeMultiplier;
+        /* 0x4AD0 */ public Vector2f RotationForFrigateInteraction;
+        [NMS(Index = 232)]
+        /* 0x4AD8 */ public float AerialViewBackTime;
         [NMS(Index = 233)]
-        /* 0x4C1C */ public TkCurveType AerialViewCurve;
-        [NMS(Index = 350)]
-        /* 0x4C1D */ public bool CreatureInteractionInterpolateDuringHold;
-        [NMS(Index = 276)]
-        /* 0x4C1E */ public bool DebugAICam;
-        [NMS(Index = 273)]
-        /* 0x4C1F */ public bool DebugMoveCam;
+        /* 0x4ADC */ public float AerialViewBlendTime;
+        [NMS(Index = 229)]
+        /* 0x4AE0 */ public float AerialViewDownDistance;
+        [NMS(Index = 230)]
+        /* 0x4AE4 */ public float AerialViewPause;
+        [NMS(Index = 231)]
+        /* 0x4AE8 */ public float AerialViewStartTime;
+        [NMS(Index = 60)]
+        /* 0x4AEC */ public float BinocularFlashStrength;
+        [NMS(Index = 59)]
+        /* 0x4AF0 */ public float BinocularFlashTime;
+        [NMS(Index = 290)]
+        /* 0x4AF4 */ public float BobAmount;
+        [NMS(Index = 288)]
+        /* 0x4AF8 */ public float BobAmountAbandFreighter;
+        [NMS(Index = 291)]
+        /* 0x4AFC */ public float BobFactor;
+        [NMS(Index = 289)]
+        /* 0x4B00 */ public float BobFactorAbandFreighter;
+        [NMS(Index = 292)]
+        /* 0x4B04 */ public float BobFocus;
+        [NMS(Index = 296)]
+        /* 0x4B08 */ public float BobFwdAmount;
+        [NMS(Index = 294)]
+        /* 0x4B0C */ public float BobRollAmount;
+        [NMS(Index = 293)]
+        /* 0x4B10 */ public float BobRollFactor;
+        [NMS(Index = 295)]
+        /* 0x4B14 */ public float BobRollOffset;
+        [NMS(Index = 225)]
+        /* 0x4B18 */ public float BuildingModeMaxDistance;
+        [NMS(Index = 378)]
+        /* 0x4B1C */ public float CameraAmbientAutoSwitchMaxTime;
+        [NMS(Index = 377)]
+        /* 0x4B20 */ public float CameraAmbientAutoSwitchMinTime;
+        [NMS(Index = 297)]
+        /* 0x4B24 */ public float CamSeed1;
+        [NMS(Index = 298)]
+        /* 0x4B28 */ public float CamSeed2;
+        [NMS(Index = 301)]
+        /* 0x4B2C */ public float CamWander1Amplitude;
+        [NMS(Index = 299)]
+        /* 0x4B30 */ public float CamWander1Phase;
+        [NMS(Index = 302)]
+        /* 0x4B34 */ public float CamWander2Amplitude;
+        [NMS(Index = 300)]
+        /* 0x4B38 */ public float CamWander2Phase;
+        [NMS(Index = 320)]
+        /* 0x4B3C */ public float CharCamAutoDirStartTime;
+        [NMS(Index = 323)]
+        /* 0x4B40 */ public float CharCamDeflectSpeed;
+        [NMS(Index = 315)]
+        /* 0x4B44 */ public float CharCamFocusHeight;
+        [NMS(Index = 318)]
+        /* 0x4B48 */ public float CharCamHeight;
+        [NMS(Index = 321)]
+        /* 0x4B4C */ public float CharCamLookOffset;
+        [NMS(Index = 322)]
+        /* 0x4B50 */ public float CharCamLookOffsetFactor;
+        [NMS(Index = 316)]
+        /* 0x4B54 */ public float CharCamMaxDistance;
+        [NMS(Index = 317)]
+        /* 0x4B58 */ public float CharCamMinDistance;
+        [NMS(Index = 324)]
+        /* 0x4B5C */ public float CharCamMinSpeed;
+        [NMS(Index = 319)]
+        /* 0x4B60 */ public float CharCamOffsetTime;
+        [NMS(Index = 325)]
+        /* 0x4B64 */ public float CharCamRightStickX;
+        [NMS(Index = 326)]
+        /* 0x4B68 */ public float CharCamRightStickY;
+        [NMS(Index = 330)]
+        /* 0x4B6C */ public float CloseFactorSpring;
+        [NMS(Index = 371)]
+        /* 0x4B70 */ public float CreatureInteractionCamSpring;
+        [NMS(Index = 358)]
+        /* 0x4B74 */ public float CreatureInteractionDistMulMax;
+        [NMS(Index = 357)]
+        /* 0x4B78 */ public float CreatureInteractionDistMulMin;
+        [NMS(Index = 365)]
+        /* 0x4B7C */ public float CreatureInteractionDownhillPitchTransfer;
+        [NMS(Index = 370)]
+        /* 0x4B80 */ public float CreatureInteractionFoVMax;
+        [NMS(Index = 369)]
+        /* 0x4B84 */ public float CreatureInteractionFoVMin;
+        [NMS(Index = 368)]
+        /* 0x4B88 */ public float CreatureInteractionFoVSplitSize;
         [NMS(Index = 372)]
-        /* 0x4C20 */ public bool FollowDrawCamProbes;
-        [NMS(Index = 30)]
-        /* 0x4C21 */ public bool LockFollowSpring;
+        /* 0x4B8C */ public float CreatureInteractionHeadHeightSpring;
+        [NMS(Index = 364)]
+        /* 0x4B90 */ public float CreatureInteractionMaxDownhillPitchAroundPlayer;
+        [NMS(Index = 366)]
+        /* 0x4B94 */ public float CreatureInteractionMaxUphillPitchAroundPlayer;
+        [NMS(Index = 354)]
+        /* 0x4B98 */ public float CreatureInteractionMinDist;
+        [NMS(Index = 363)]
+        /* 0x4B9C */ public float CreatureInteractionPitchMax;
+        [NMS(Index = 362)]
+        /* 0x4BA0 */ public float CreatureInteractionPitchMin;
+        [NMS(Index = 361)]
+        /* 0x4BA4 */ public float CreatureInteractionPitchSplit;
+        [NMS(Index = 356)]
+        /* 0x4BA8 */ public float CreatureInteractionPushCameraDownAmount;
+        [NMS(Index = 355)]
+        /* 0x4BAC */ public float CreatureInteractionPushCameraDownForCreatureBiggerThan;
+        [NMS(Index = 367)]
+        /* 0x4BB0 */ public float CreatureInteractionUphillPitchTransfer;
+        [NMS(Index = 360)]
+        /* 0x4BB4 */ public float CreatureInteractionYawMax;
+        [NMS(Index = 359)]
+        /* 0x4BB8 */ public float CreatureInteractionYawMin;
+        [NMS(Index = 353)]
+        /* 0x4BBC */ public float CreatureSizeMax;
+        [NMS(Index = 352)]
+        /* 0x4BC0 */ public float CreatureSizeMin;
+        [NMS(Index = 279)]
+        /* 0x4BC4 */ public float DebugAICamAt;
+        [NMS(Index = 278)]
+        /* 0x4BC8 */ public float DebugAICamUp;
+        [NMS(Index = 305)]
+        /* 0x4BCC */ public float DebugCameraFastFactor;
+        [NMS(Index = 307)]
+        /* 0x4BD0 */ public float DebugCameraHeightForAccelerateBegin;
+        [NMS(Index = 309)]
+        /* 0x4BD4 */ public float DebugCameraHeightForAccelerateEnd;
+        [NMS(Index = 310)]
+        /* 0x4BD8 */ public float DebugCameraMaxSpeed;
+        [NMS(Index = 304)]
+        /* 0x4BDC */ public float DebugCameraSlowFactor;
+        [NMS(Index = 306)]
+        /* 0x4BE0 */ public float DebugCameraSpaceFastFactor;
+        [NMS(Index = 308)]
+        /* 0x4BE4 */ public float DebugCameraSpeedAtPlanetThreshold;
+        [NMS(Index = 276)]
+        /* 0x4BE8 */ public float DebugMoveCamHeight;
+        [NMS(Index = 275)]
+        /* 0x4BEC */ public float DebugMoveCamSpeed;
+        [NMS(Index = 28)]
+        /* 0x4BF0 */ public float DebugPlanetJumpFarHeight;
+        [NMS(Index = 27)]
+        /* 0x4BF4 */ public float DebugPlanetJumpNearHeight;
+        [NMS(Index = 303)]
+        /* 0x4BF8 */ public float DebugSpaceStationTeleportOffset;
+        [NMS(Index = 187)]
+        /* 0x4BFC */ public float DistanceForFleetInteraction;
+        [NMS(Index = 188)]
+        /* 0x4C00 */ public float DistanceForFrigateInteraction;
+        [NMS(Index = 189)]
+        /* 0x4C04 */ public float DistanceForFrigatePurchaseInteraction;
+        [NMS(Index = 327)]
+        /* 0x4C08 */ public float FirstPersonCamHeight;
+        [NMS(Index = 331)]
+        /* 0x4C0C */ public float FirstPersonFoV;
+        [NMS(Index = 285)]
+        /* 0x4C10 */ public float FirstPersonSlerpAway;
+        [NMS(Index = 286)]
+        /* 0x4C14 */ public float FirstPersonSlerpTowards;
+        [NMS(Index = 335)]
+        /* 0x4C18 */ public float FirstPersonZoom1FoV;
+        [NMS(Index = 336)]
+        /* 0x4C1C */ public float FirstPersonZoom2FoV;
+        [NMS(Index = 192)]
+        /* 0x4C20 */ public float FleetUIOrbitRate;
+        [NMS(Index = 194)]
+        /* 0x4C24 */ public float FleetUIVerticalMotionAmplitude;
+        [NMS(Index = 193)]
+        /* 0x4C28 */ public float FleetUIVerticalMotionDuration;
+        [NMS(Index = 58)]
+        /* 0x4C2C */ public float FlybyInVehicleDamper;
+        [NMS(Index = 54)]
+        /* 0x4C30 */ public float FlybyMinRange;
+        [NMS(Index = 56)]
+        /* 0x4C34 */ public float FlybyMinRelativeSpeed;
+        [NMS(Index = 55)]
+        /* 0x4C38 */ public float FlybyRange;
+        [NMS(Index = 57)]
+        /* 0x4C3C */ public float FlybyRelativeSpeedRange;
+        [NMS(Index = 3)]
+        /* 0x4C40 */ public float FocusBuildingModeMaxFOV;
+        [NMS(Index = 2)]
+        /* 0x4C44 */ public float FocusBuildingModeMinFOV;
+        [NMS(Index = 1)]
+        /* 0x4C48 */ public float FocusBuildingModeStartDistance;
+        [NMS(Index = 350)]
+        /* 0x4C4C */ public float FoVAdjust;
+        [NMS(Index = 347)]
+        /* 0x4C50 */ public float FoVSpring;
+        [NMS(Index = 348)]
+        /* 0x4C54 */ public float FoVSpringSights;
+        [NMS(Index = 349)]
+        /* 0x4C58 */ public float FoVSpringSightsPassive;
+        [NMS(Index = 181)]
+        /* 0x4C5C */ public float FrigateCaptainLateralShiftAmount;
+        [NMS(Index = 150)]
+        /* 0x4C60 */ public float FrontendModelCameraSpringTime;
+        [NMS(Index = 23)]
+        /* 0x4C64 */ public float HmdEyeExtraTurnAngle;
+        [NMS(Index = 25)]
+        /* 0x4C68 */ public float HmdEyeExtraTurnHeadAngleRange;
+        [NMS(Index = 24)]
+        /* 0x4C6C */ public float HmdEyeExtraTurnMinHeadAngle;
+        [NMS(Index = 22)]
+        /* 0x4C70 */ public float HmdEyeLookAngle;
+        [NMS(Index = 283)]
+        /* 0x4C74 */ public float IndoorCamShakeDamper;
+        [NMS(Index = 167)]
+        /* 0x4C78 */ public float InteractionHeadHeightCronus;
+        [NMS(Index = 166)]
+        /* 0x4C7C */ public float InteractionHeadHeightDefault;
+        [NMS(Index = 168)]
+        /* 0x4C80 */ public float InteractionHeadHeightGek;
+        [NMS(Index = 170)]
+        /* 0x4C84 */ public float InteractionHeadHeightSpiderman;
+        [NMS(Index = 169)]
+        /* 0x4C88 */ public float InteractionHeadHeightVykeen;
+        [NMS(Index = 174)]
+        /* 0x4C8C */ public float InteractionHeadPosHeightAdjust;
+        [NMS(Index = 177)]
+        /* 0x4C90 */ public float InteractionHeadPosHeightAdjustCronus;
+        [NMS(Index = 176)]
+        /* 0x4C94 */ public float InteractionHeadPosHeightAdjustSpiderman;
+        [NMS(Index = 175)]
+        /* 0x4C98 */ public float InteractionHeadPosHeightAdjustVykeen;
+        [NMS(Index = 197)]
+        /* 0x4C9C */ public float InteractionModeBlendTime;
+        [NMS(Index = 198)]
+        /* 0x4CA0 */ public float InteractionModeFocusCamBlend;
+        [NMS(Index = 199)]
+        /* 0x4CA4 */ public float InteractionModeFoV;
+        [NMS(Index = 173)]
+        /* 0x4CA8 */ public float InteractionPitchAdjustDeadZone;
+        [NMS(Index = 172)]
+        /* 0x4CAC */ public float InteractionPitchAdjustStrength;
+        [NMS(Index = 171)]
+        /* 0x4CB0 */ public float InteractionPitchAdjustTime;
+        [NMS(Index = 185)]
+        /* 0x4CB4 */ public float LocalMissionBoardLateralShiftAmount;
+        [NMS(Index = 63)]
+        /* 0x4CB8 */ public float MaxCreatureRidingYaw;
+        [NMS(Index = 62)]
+        /* 0x4CBC */ public float MaxFirstPersonCameraPitch;
+        [NMS(Index = 87)]
+        /* 0x4CC0 */ public float MechCameraArmShootOffsetY;
+        [NMS(Index = 88)]
+        /* 0x4CC4 */ public float MechCameraCombatFakeSpeed;
+        [NMS(Index = 86)]
+        /* 0x4CC8 */ public float MechCameraExtraYPostLandingBlendTime;
+        [NMS(Index = 85)]
+        /* 0x4CCC */ public float MechCameraNoExtraYTimeAfterLand;
+        [NMS(Index = 243)]
+        /* 0x4CD0 */ public float MechCamSpringStrengthMax;
+        [NMS(Index = 242)]
+        /* 0x4CD4 */ public float MechCamSpringStrengthMin;
+        [NMS(Index = 227)]
+        /* 0x4CD8 */ public float MeleeBoostedFoV;
+        [NMS(Index = 228)]
+        /* 0x4CDC */ public float MeleeFoV;
+        [NMS(Index = 61)]
+        /* 0x4CE0 */ public float MinFirstPersonCameraPitch;
+        [NMS(Index = 201)]
+        /* 0x4CE4 */ public float MinInteractFocusAngle;
+        [NMS(Index = 35)]
+        /* 0x4CE8 */ public float MiniportalFlashStrength;
+        [NMS(Index = 34)]
+        /* 0x4CEC */ public float MiniportalFlashTime;
+        [NMS(Index = 272)]
+        /* 0x4CF0 */ public float ModelViewDefaultPitch;
+        [NMS(Index = 273)]
+        /* 0x4CF4 */ public float ModelViewDefaultYaw;
+        [NMS(Index = 269)]
+        /* 0x4CF8 */ public float ModelViewDistSpeed;
+        [NMS(Index = 151)]
+        /* 0x4CFC */ public float ModelViewFlashTime;
+        [NMS(Index = 202)]
+        /* 0x4D00 */ public float ModelViewInterpTime;
+        [NMS(Index = 271)]
+        /* 0x4D04 */ public float ModelViewMaxDist;
+        [NMS(Index = 270)]
+        /* 0x4D08 */ public float ModelViewMinDist;
+        [NMS(Index = 268)]
+        /* 0x4D0C */ public float ModelViewMouseMoveSpeed;
+        [NMS(Index = 267)]
+        /* 0x4D10 */ public float ModelViewMouseRotateSnapStrength;
+        [NMS(Index = 266)]
+        /* 0x4D14 */ public float ModelViewMouseRotateSpeed;
+        [NMS(Index = 265)]
+        /* 0x4D18 */ public float ModelViewRotateSpeed;
+        [NMS(Index = 264)]
+        /* 0x4D1C */ public float MouseSensitivity;
+        [NMS(Index = 284)]
+        /* 0x4D20 */ public float NoControlCamShakeDamper;
+        [NMS(Index = 184)]
+        /* 0x4D24 */ public float NPCTradeLateralShiftAmount;
+        [NMS(Index = 186)]
+        /* 0x4D28 */ public float NPCTradeLateralShiftTime;
+        [NMS(Index = 314)]
+        /* 0x4D2C */ public float ObjectFocusTime;
+        [NMS(Index = 311)]
+        /* 0x4D30 */ public float OffsetCamFOV;
+        [NMS(Index = 12)]
+        /* 0x4D34 */ public float OffsetCombatCameraHorizontalAngle;
+        [NMS(Index = 281)]
+        /* 0x4D38 */ public float PainShakeTime;
+        [NMS(Index = 216)]
+        /* 0x4D3C */ public float PhotoModeCollisionRadius;
+        [NMS(Index = 218)]
+        /* 0x4D40 */ public float PhotoModeFlashDuration;
+        [NMS(Index = 219)]
+        /* 0x4D44 */ public float PhotoModeFlashIntensity;
+        [NMS(Index = 212)]
+        /* 0x4D48 */ public float PhotoModeMaxDistance;
+        [NMS(Index = 215)]
+        /* 0x4D4C */ public float PhotoModeMaxDistanceClampBuffer;
+        [NMS(Index = 214)]
+        /* 0x4D50 */ public float PhotoModeMaxDistanceClampForce;
+        [NMS(Index = 213)]
+        /* 0x4D54 */ public float PhotoModeMaxDistanceSpace;
+        [NMS(Index = 210)]
+        /* 0x4D58 */ public float PhotoModeMoveSpeed;
+        [NMS(Index = 217)]
+        /* 0x4D5C */ public float PhotoModeRollSpeed;
+        [NMS(Index = 211)]
+        /* 0x4D60 */ public float PhotoModeTurnSpeed;
+        [NMS(Index = 209)]
+        /* 0x4D64 */ public float PhotoModeVelocitySmoothTime;
+        [NMS(Index = 182)]
+        /* 0x4D68 */ public float PilotDetailsLateralShiftAmount;
+        [NMS(Index = 183)]
+        /* 0x4D6C */ public float RecruitmentLateralShiftAmount;
+        [NMS(Index = 19)]
+        /* 0x4D70 */ public float RevealedNPCHeadOffset;
+        [NMS(Index = 226)]
+        /* 0x4D74 */ public float RunningFoVAdjust;
+        [NMS(Index = 0)]
+        /* 0x4D78 */ public float ScanCameraLookAtTime;
+        [NMS(Index = 10)]
+        /* 0x4D7C */ public float SClassLandingShakeMultiplier;
+        [NMS(Index = 239)]
+        /* 0x4D80 */ public float ScreenshotBackDistance;
+        [NMS(Index = 237)]
+        /* 0x4D84 */ public float ScreenshotBendDownAmount;
+        [NMS(Index = 236)]
+        /* 0x4D88 */ public float ScreenshotHorizonFaceFactor;
+        [NMS(Index = 235)]
+        /* 0x4D8C */ public float ScreenshotHorizonHeight;
+        [NMS(Index = 240)]
+        /* 0x4D90 */ public float ScreenshotInTime;
+        [NMS(Index = 241)]
+        /* 0x4D94 */ public float ScreenshotOutTime;
+        [NMS(Index = 238)]
+        /* 0x4D98 */ public float ScreenshotRightDistance;
+        [NMS(Index = 200)]
+        /* 0x4D9C */ public float ShipBuilderFoV;
+        [NMS(Index = 263)]
+        /* 0x4DA0 */ public float ShipCamAimFOV;
+        [NMS(Index = 245)]
+        /* 0x4DA4 */ public float ShipCamFastSpringStrengthMax;
+        [NMS(Index = 244)]
+        /* 0x4DA8 */ public float ShipCamFastSpringStrengthMin;
+        [NMS(Index = 251)]
+        /* 0x4DAC */ public float ShipCamLookInterp;
+        [NMS(Index = 252)]
+        /* 0x4DB0 */ public float ShipCamMinReturnTime;
+        [NMS(Index = 259)]
+        /* 0x4DB4 */ public float ShipCamMotionInterp;
+        [NMS(Index = 258)]
+        /* 0x4DB8 */ public float ShipCamMotionMaxLagPitchAngle;
+        [NMS(Index = 257)]
+        /* 0x4DBC */ public float ShipCamMotionMaxLagTurnAngle;
+        [NMS(Index = 255)]
+        /* 0x4DC0 */ public float ShipCamMotionPitch;
+        [NMS(Index = 256)]
+        /* 0x4DC4 */ public float ShipCamMotionPitchMod;
+        [NMS(Index = 254)]
+        /* 0x4DC8 */ public float ShipCamMotionTurn;
+        [NMS(Index = 249)]
+        /* 0x4DCC */ public float ShipCamPitch;
+        [NMS(Index = 250)]
+        /* 0x4DD0 */ public float ShipCamPitchMod;
+        [NMS(Index = 253)]
+        /* 0x4DD4 */ public float ShipCamReturnTime;
+        [NMS(Index = 261)]
+        /* 0x4DD8 */ public float ShipCamRollAmountMax;
+        [NMS(Index = 260)]
+        /* 0x4DDC */ public float ShipCamRollAmountMin;
+        [NMS(Index = 262)]
+        /* 0x4DE0 */ public float ShipCamRollSpeedScaler;
+        [NMS(Index = 247)]
+        /* 0x4DE4 */ public float ShipCamSpringStrengthMax;
+        [NMS(Index = 246)]
+        /* 0x4DE8 */ public float ShipCamSpringStrengthMin;
+        [NMS(Index = 248)]
+        /* 0x4DEC */ public float ShipCamTurn;
+        [NMS(Index = 51)]
+        /* 0x4DF0 */ public float ShipFirstPersonBlendOffset;
+        [NMS(Index = 50)]
+        /* 0x4DF4 */ public float ShipFirstPersonBlendTime;
+        [NMS(Index = 343)]
+        /* 0x4DF8 */ public float ShipFoVBoost;
+        [NMS(Index = 339)]
+        /* 0x4DFC */ public float ShipFoVMax;
+        [NMS(Index = 342)]
+        /* 0x4E00 */ public float ShipFoVMax3rdPerson;
+        [NMS(Index = 337)]
+        /* 0x4E04 */ public float ShipFoVMin;
+        [NMS(Index = 338)]
+        /* 0x4E08 */ public float ShipFoVMin2;
+        [NMS(Index = 341)]
+        /* 0x4E0C */ public float ShipFoVMin3rdPerson;
+        [NMS(Index = 344)]
+        /* 0x4E10 */ public float ShipFoVMiniJump;
+        [NMS(Index = 345)]
+        /* 0x4E14 */ public float ShipFoVSpring;
+        [NMS(Index = 346)]
+        /* 0x4E18 */ public float ShipMiniJumpFoVSpring;
+        [NMS(Index = 282)]
+        /* 0x4E1C */ public float ShipShakeDamper;
+        [NMS(Index = 47)]
+        /* 0x4E20 */ public float ShipThirdPersonBlendOffset;
+        [NMS(Index = 49)]
+        /* 0x4E24 */ public float ShipThirdPersonBlendOutOffset;
+        [NMS(Index = 48)]
+        /* 0x4E28 */ public float ShipThirdPersonBlendOutTime;
+        [NMS(Index = 45)]
+        /* 0x4E2C */ public float ShipThirdPersonBlendTime;
+        [NMS(Index = 46)]
+        /* 0x4E30 */ public float ShipThirdPersonBlendWithOffsetTime;
+        [NMS(Index = 53)]
+        /* 0x4E34 */ public float ShipThirdPersonEnterBlendOffset;
+        [NMS(Index = 52)]
+        /* 0x4E38 */ public float ShipThirdPersonEnterBlendTime;
+        [NMS(Index = 340)]
+        /* 0x4E3C */ public float ShipWarpFoV;
+        [NMS(Index = 20)]
+        /* 0x4E40 */ public float SpecialVehicleMouseRecentreTime;
+        [NMS(Index = 21)]
+        /* 0x4E44 */ public float SpecialVehicleMouseRecentreWeaponTime;
+        [NMS(Index = 32)]
+        /* 0x4E48 */ public float ThirdPersonAfterIntroCamBlendTime;
+        [NMS(Index = 203)]
+        /* 0x4E4C */ public float ThirdPersonBlendInTime;
+        [NMS(Index = 204)]
+        /* 0x4E50 */ public float ThirdPersonBlendOutTime;
+        [NMS(Index = 121)]
+        /* 0x4E54 */ public float ThirdPersonCameraChangeBlendTime;
+        [NMS(Index = 122)]
+        /* 0x4E58 */ public float ThirdPersonCameraChangeMinimumBlend;
+        [NMS(Index = 66)]
+        /* 0x4E5C */ public float ThirdPersonCloseDistance;
+        [NMS(Index = 67)]
+        /* 0x4E60 */ public float ThirdPersonCloseDistanceX;
+        [NMS(Index = 65)]
+        /* 0x4E64 */ public float ThirdPersonClosePitch;
+        [NMS(Index = 205)]
+        /* 0x4E68 */ public float ThirdPersonCollisionPushOffsetReducerStart;
+        [NMS(Index = 206)]
+        /* 0x4E6C */ public float ThirdPersonCollisionPushOffsetReducerVehicleRearAngle;
+        [NMS(Index = 334)]
+        /* 0x4E70 */ public float ThirdPersonCombatFoV;
+        [NMS(Index = 74)]
+        /* 0x4E74 */ public float ThirdPersonDownhillAdjustMaxAngle;
+        [NMS(Index = 78)]
+        /* 0x4E78 */ public float ThirdPersonDownhillAdjustMaxAnglePrime;
+        [NMS(Index = 73)]
+        /* 0x4E7C */ public float ThirdPersonDownhillAdjustMinAngle;
+        [NMS(Index = 77)]
+        /* 0x4E80 */ public float ThirdPersonDownhillAdjustMinAnglePrime;
+        [NMS(Index = 72)]
+        /* 0x4E84 */ public float ThirdPersonDownhillAdjustSpringTimeMax;
+        [NMS(Index = 71)]
+        /* 0x4E88 */ public float ThirdPersonDownhillAdjustSpringTimeMin;
+        [NMS(Index = 332)]
+        /* 0x4E8C */ public float ThirdPersonFoV;
         [NMS(Index = 207)]
-        /* 0x4C22 */ public bool MaxBob;
+        /* 0x4E90 */ public float ThirdPersonOffsetSpringTime;
+        [NMS(Index = 68)]
+        /* 0x4E94 */ public float ThirdPersonRotationBackAdjustAngleMax;
+        [NMS(Index = 64)]
+        /* 0x4E98 */ public float ThirdPersonRotationBackAdjustAngleMin;
+        [NMS(Index = 33)]
+        /* 0x4E9C */ public float ThirdPersonSkipIntroCamBlendTime;
+        [NMS(Index = 82)]
+        /* 0x4EA0 */ public float ThirdPersonUphillAdjustCrossSlopeMaxAngle;
+        [NMS(Index = 81)]
+        /* 0x4EA4 */ public float ThirdPersonUphillAdjustCrossSlopeMinAngle;
+        [NMS(Index = 76)]
+        /* 0x4EA8 */ public float ThirdPersonUphillAdjustMaxAngle;
+        [NMS(Index = 80)]
+        /* 0x4EAC */ public float ThirdPersonUphillAdjustMaxAnglePrime;
+        [NMS(Index = 75)]
+        /* 0x4EB0 */ public float ThirdPersonUphillAdjustMinAngle;
+        [NMS(Index = 79)]
+        /* 0x4EB4 */ public float ThirdPersonUphillAdjustMinAnglePrime;
+        [NMS(Index = 70)]
+        /* 0x4EB8 */ public float ThirdPersonUphillAdjustSpringTimeMax;
+        [NMS(Index = 69)]
+        /* 0x4EBC */ public float ThirdPersonUphillAdjustSpringTimeMin;
+        [NMS(Index = 29)]
+        /* 0x4EC0 */ public float TogglePerspectiveBlendTime;
+        [NMS(Index = 31)]
+        /* 0x4EC4 */ public float UnderwaterCameraExtraVertOffset;
+        [NMS(Index = 180)]
+        /* 0x4EC8 */ public float VehicleCameraVertRotationLimitBlendTime;
+        [NMS(Index = 179)]
+        /* 0x4ECC */ public float VehicleCameraVertRotationMax;
+        [NMS(Index = 178)]
+        /* 0x4ED0 */ public float VehicleCameraVertRotationMin;
+        [NMS(Index = 41)]
+        /* 0x4ED4 */ public float VehicleExitFlashStrength;
+        [NMS(Index = 40)]
+        /* 0x4ED8 */ public float VehicleExitFlashTime;
+        [NMS(Index = 333)]
+        /* 0x4EDC */ public float VehicleFirstPersonFoV;
+        [NMS(Index = 43)]
+        /* 0x4EE0 */ public float VehicleFirstToThirdExitOffsetY;
+        [NMS(Index = 44)]
+        /* 0x4EE4 */ public float VehicleFirstToThirdExitOffsetZ;
+        [NMS(Index = 84)]
+        /* 0x4EE8 */ public float VehicleThirdPersonShootOffsetBlendOutTime;
+        [NMS(Index = 83)]
+        /* 0x4EEC */ public float VehicleThirdPersonShootOffsetReturnTime;
+        [NMS(Index = 38)]
+        /* 0x4EF0 */ public float VRGravityChangeMaxFlashTime;
+        [NMS(Index = 37)]
+        /* 0x4EF4 */ public float VRGravityChangeMinFlashTime;
+        [NMS(Index = 280)]
+        /* 0x4EF8 */ public float VRShakeMultiplier;
+        [NMS(Index = 234)]
+        /* 0x4EFC */ public TkCurveType AerialViewCurve;
+        [NMS(Index = 351)]
+        /* 0x4EFD */ public bool CreatureInteractionInterpolateDuringHold;
+        [NMS(Index = 277)]
+        /* 0x4EFE */ public bool DebugAICam;
+        [NMS(Index = 274)]
+        /* 0x4EFF */ public bool DebugMoveCam;
+        [NMS(Index = 373)]
+        /* 0x4F00 */ public bool FollowDrawCamProbes;
+        [NMS(Index = 30)]
+        /* 0x4F01 */ public bool LockFollowSpring;
+        [NMS(Index = 208)]
+        /* 0x4F02 */ public bool MaxBob;
         [NMS(Index = 11)]
-        /* 0x4C23 */ public bool OffsetCombatCameraHorizontal;
+        /* 0x4F03 */ public bool OffsetCombatCameraHorizontal;
         [NMS(Index = 26)]
-        /* 0x4C24 */ public bool PauseThirdPersonCamInPause;
+        /* 0x4F04 */ public bool PauseThirdPersonCamInPause;
     }
 }

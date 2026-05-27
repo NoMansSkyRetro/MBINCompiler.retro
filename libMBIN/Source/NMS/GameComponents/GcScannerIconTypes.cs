@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCD8D2AA993FFFD70, NameHash = 0x1BEA2B30)]
+    [NMS(GUID = 0xC86E2DFFB718F423, NameHash = 0x1BEA2B30)]
     public class GcScannerIconTypes : NMSTemplate
     {
-        // size: 0x4C
+        // size: 0x4E
         public enum ScanIconTypeEnum : byte {
             None,
             Health,
@@ -81,6 +81,8 @@ namespace libMBIN.NMS.GameComponents
             BuriedFossil,
             BuriedFossilHazard,
             GravityGunCargo,
+            Swarm,
+            SwarmHive,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public ScanIconTypeEnum ScanIconType;

@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC3ABDCD30EF8B57A, NameHash = 0xD8FBEE24)]
+    [NMS(GUID = 0x290626E6A03AFF14, NameHash = 0xD8FBEE24)]
     public class GcMissionConditionAIShipCount : NMSTemplate
     {
         [NMS(Index = 1)]

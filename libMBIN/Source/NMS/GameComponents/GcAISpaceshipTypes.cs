@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x57A373F8916D3253, NameHash = 0xDA426786)]
+    [NMS(GUID = 0x9A8514074A937619, NameHash = 0xDA426786)]
     public class GcAISpaceshipTypes : NMSTemplate
     {
-        // size: 0x7
+        // size: 0x8
         public enum ShipTypeEnum : uint {
             None,
             Pirate,
@@ -12,6 +12,7 @@ namespace libMBIN.NMS.GameComponents
             Freighter,
             PlayerSquadron,
             DefenceForce,
+            SwarmDrone,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public ShipTypeEnum ShipType;

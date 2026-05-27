@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xDB8CE1C0FD6872E2, NameHash = 0x88C80333)]
+    [NMS(GUID = 0xB0EC612C914FE81A, NameHash = 0x88C80333)]
     public class GcStaticTag : NMSTemplate
     {
-        // size: 0x9
+        // size: 0xA
         public enum StaticTagEnum : uint {
             None = 0x0,
             GravityLaserGrabbable = 0x1,
@@ -14,6 +14,7 @@ namespace libMBIN.NMS.GameComponents
             ScrapyardToxBin = 0x20,
             ScrapyardRadBin = 0x40,
             ScrapyardExpBin = 0x80,
+            TruckCargoSwarm = 0x100,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public StaticTagEnum StaticTag;

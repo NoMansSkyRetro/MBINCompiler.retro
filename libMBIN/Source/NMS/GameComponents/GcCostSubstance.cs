@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x2E56A3307B8077B5, NameHash = 0xD9E54037)]
+    [NMS(GUID = 0x255D50B7689A1346, NameHash = 0xD9E54037)]
     public class GcCostSubstance : NMSTemplate
     {
         [NMS(Index = 2)]
@@ -17,9 +17,11 @@ namespace libMBIN.NMS.GameComponents
         /* 0x38 */ public GcLocalSubstanceType LocalSubstanceType;
         [NMS(Index = 3)]
         /* 0x3C */ public int UseSpecificPlanetIndexForLocalSubstance;
+        [NMS(Index = 8)]
+        /* 0x40 */ public bool TakeAmountFromSeasonData;
         [NMS(Index = 7)]
-        /* 0x40 */ public bool UseDefaultAmount;
+        /* 0x41 */ public bool UseDefaultAmount;
         [NMS(Index = 4)]
-        /* 0x41 */ public bool UseRandomPlanetIndex;
+        /* 0x42 */ public bool UseRandomPlanetIndex;
     }
 }

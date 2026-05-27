@@ -2,22 +2,26 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x626EC52A162A65E1, NameHash = 0xEFC01E37)]
+    [NMS(GUID = 0xB23026517B0057BA, NameHash = 0xEFC01E37)]
     public class GcMissionSequenceTeleport : NMSTemplate
     {
         [NMS(Index = 1)]
         /* 0x00 */ public VariableSizeString DebugText;
         [NMS(Index = 0)]
         /* 0x10 */ public VariableSizeString Message;
-        [NMS(Index = 6)]
-        /* 0x20 */ public float EffectTime;
         [NMS(Index = 5)]
-        /* 0x24 */ public float SequenceTime;
+        /* 0x20 */ public GcAudioWwiseEvents AudioEvent;
+        [NMS(Index = 6)]
+        /* 0x24 */ public float AudioTime;
+        [NMS(Index = 8)]
+        /* 0x28 */ public float EffectTime;
+        [NMS(Index = 7)]
+        /* 0x2C */ public float SequenceTime;
         [NMS(Index = 2)]
-        /* 0x28 */ public GcTeleporterType TeleporterType;
+        /* 0x30 */ public GcTeleporterType TeleporterType;
         [NMS(Index = 3)]
-        /* 0x2C */ public bool DoCameraShake;
+        /* 0x34 */ public bool DoCameraShake;
         [NMS(Index = 4)]
-        /* 0x2D */ public bool DoWhiteout;
+        /* 0x35 */ public bool DoWhiteout;
     }
 }

@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x940188D749A36309, NameHash = 0xC8C2FA1E)]
+    [NMS(GUID = 0xE53AA67FE6E6FEC5, NameHash = 0xC8C2FA1E)]
     public class GcRealityGameIcons : NMSTemplate
     {
-        // size: 0x7D
+        // size: 0x7E
         public enum GameIconsEnum : uint {
             Stamina,
             NoStamina,
@@ -130,6 +130,7 @@ namespace libMBIN.NMS.GameComponents
             BClassSmall,
             AClassSmall,
             SClassSmall,
+            SwarmDrone,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public GameIconsEnum GameIcons;
