@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x922676C3718BDC65, NameHash = 0x5F03B020)]
+    [NMS(GUID = 0x4FC1D950607C1652, NameHash = 0x5F03B020)]
     public class GcStatusMessageMissionMarkup : NMSTemplate
     {
-        // size: 0x12
+        // size: 0x13
         public enum MissionMarkupEnum : uint {
             KillFiend,
             KillPirate,
@@ -15,6 +15,7 @@ namespace libMBIN.NMS.GameComponents
             KillDepot,
             KillWorms,
             KillSpookSquids,
+            KillSwarm,
             FeedCreature,
             CollectBones,
             CollectScrap,

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC12A908F5EC0DA14, NameHash = 0xC499EBDE)]
+    [NMS(GUID = 0xC4AC7375B9456E65, NameHash = 0xC499EBDE)]
     public class GcAmbientModeCameras : NMSTemplate
     {
         [NMS(Index = 0)]

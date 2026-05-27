@@ -3,7 +3,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.Globals
 {
-    [NMS(GUID = 0x73288D06B7A7AC10, NameHash = 0xA10A7EF5)]
+    [NMS(GUID = 0x82F00F2F4F2AA48E, NameHash = 0xA10A7EF5)]
     public class GcGalaxyGlobals : NMSTemplate
     {
         [NMS(Index = 124, Size = 0x10, EnumType = typeof(GcGalaxyMarkerTypes.GalaxyMarkerTypeEnum))]

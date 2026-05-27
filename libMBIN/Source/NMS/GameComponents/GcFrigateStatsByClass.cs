@@ -2,10 +2,10 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x54C8C8914D03ED1F, NameHash = 0x5525EF02)]
+    [NMS(GUID = 0x39DD19F8C3BC9D2, NameHash = 0x5525EF02)]
     public class GcFrigateStatsByClass : NMSTemplate
     {
-        [NMS(Index = 0, Size = 0xA, EnumType = typeof(GcFrigateClass.FrigateClassEnum))]
+        [NMS(Index = 0, Size = 0xB, EnumType = typeof(GcFrigateClass.FrigateClassEnum))]
         /* 0x0 */ public GcFrigateStats[] FrigateClass;
     }
 }

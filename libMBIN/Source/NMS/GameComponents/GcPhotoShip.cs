@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC810C015C2A3D2F6, NameHash = 0x94E48FB7)]
+    [NMS(GUID = 0x54988B2AD57EB6ED, NameHash = 0x94E48FB7)]
     public class GcPhotoShip : NMSTemplate
     {
-        // size: 0xB
+        // size: 0xC
         public enum PhotoShipTypeEnum : uint {
             Freighter,
             Dropship,
@@ -16,6 +16,7 @@ namespace libMBIN.NMS.GameComponents
             Sail,
             Robot,
             Corvette,
+            SwarmDrone,
         }
         [NMS(Index = 0)]
         /* 0x0 */ public PhotoShipTypeEnum PhotoShipType;

@@ -5,7 +5,7 @@ using System;
 
 namespace libMBIN.NMS.Toolkit
 {
-    [NMS(GUID = 0x6A8A6E7461E92CD3, NameHash = 0x69A0FDE1)]
+    [NMS(GUID = 0x1EC89096D066AAA1, NameHash = 0x69A0FDE1)]
     public class TkTestMetadata : NMSTemplate
     {
         [NMS(Index = 47)]
@@ -78,8 +78,10 @@ namespace libMBIN.NMS.Toolkit
         }
         [NMS(Index = 50)]
         /* 0x029C */ public DocOptionalEnumEnum DocOptionalEnum;
+        [NMS(Index = 55)]
+        /* 0x02A0 */ public TkEqualityEnum EqualityEnumOverride;
         [NMS(Index = 46)]
-        /* 0x02A0 */ public GcAudioWwiseEvents TestAudioEvent;
+        /* 0x02A4 */ public GcAudioWwiseEvents TestAudioEvent;
         // size: 0x4
         public enum TestEnumEnum : uint {
             Default,
@@ -88,7 +90,7 @@ namespace libMBIN.NMS.Toolkit
             Option3,
         }
         [NMS(Index = 10)]
-        /* 0x02A4 */ public TestEnumEnum TestEnum;
+        /* 0x02A8 */ public TestEnumEnum TestEnum;
         // size: 0x4
         public enum TestEnumClassEnum : uint {
             Default,
@@ -97,7 +99,7 @@ namespace libMBIN.NMS.Toolkit
             Option3,
         }
         [NMS(Index = 11)]
-        /* 0x02A8 */ public TestEnumClassEnum TestEnumClass;
+        /* 0x02AC */ public TestEnumClassEnum TestEnumClass;
         // size: 0x4
         public enum TestEnumUInt32BitFieldEnum : uint {
             None = 0x0,
@@ -106,9 +108,9 @@ namespace libMBIN.NMS.Toolkit
             Enum3 = 0x4,
         }
         [NMS(Index = 13)]
-        /* 0x02AC */ public TestEnumUInt32BitFieldEnum TestEnumUInt32BitField;
+        /* 0x02B0 */ public TestEnumUInt32BitFieldEnum TestEnumUInt32BitField;
         [NMS(Index = 15)]
-        /* 0x02B0 */ public TkLanguages TestExternalEnum;
+        /* 0x02B4 */ public TkLanguages TestExternalEnum;
         // size: 0x4
         [Flags]
         public enum TestFlagsEnum : uint {
@@ -118,9 +120,9 @@ namespace libMBIN.NMS.Toolkit
             Flag3 = 0x4,
         }
         [NMS(Index = 18)]
-        /* 0x02B4 */ public TestFlagsEnum TestFlags;
+        /* 0x02B8 */ public TestFlagsEnum TestFlags;
         [NMS(Index = 19)]
-        /* 0x02B8 */ public float TestFloat;
+        /* 0x02BC */ public float TestFloat;
         // size: 0x3
         public enum TestInlineEnumEnum : uint {
             Default,
@@ -128,41 +130,41 @@ namespace libMBIN.NMS.Toolkit
             Other,
         }
         [NMS(Index = 14)]
-        /* 0x02BC */ public TestInlineEnumEnum TestInlineEnum;
+        /* 0x02C0 */ public TestInlineEnumEnum TestInlineEnum;
         [NMS(Index = 25)]
-        /* 0x02C0 */ public int TestInt;
+        /* 0x02C4 */ public int TestInt;
         [NMS(Index = 27)]
-        /* 0x02C4 */ public GcNodeID TestNodeHandle;
+        /* 0x02C8 */ public GcNodeID TestNodeHandle;
         [NMS(Index = 28)]
-        /* 0x02C8 */ public GcResource TestResource;
+        /* 0x02CC */ public GcResource TestResource;
         [NMS(Index = 39)]
-        /* 0x02CC */ public uint TestUInt32;
+        /* 0x02D0 */ public uint TestUInt32;
         [NMS(Index = 24)]
-        /* 0x02D0 */ public short TestInt16;
+        /* 0x02D4 */ public short TestInt16;
         [NMS(Index = 38)]
-        /* 0x02D2 */ public ushort TestUInt16;
+        /* 0x02D6 */ public ushort TestUInt16;
         [NMS(Index = 37)]
-        /* 0x02D4 */ public NMSString0x800 TestString2048;
+        /* 0x02D8 */ public NMSString0x800 TestString2048;
         [NMS(Index = 36)]
-        /* 0x0AD4 */ public NMSString0x400 TestString1024;
+        /* 0x0AD8 */ public NMSString0x400 TestString1024;
         [NMS(Index = 35)]
-        /* 0x0ED4 */ public NMSString0x200 TestString512;
+        /* 0x0ED8 */ public NMSString0x200 TestString512;
         [NMS(Index = 34)]
-        /* 0x10D4 */ public NMSString0x100 TestString256;
+        /* 0x10D8 */ public NMSString0x100 TestString256;
         [NMS(Index = 33)]
-        /* 0x11D4 */ public NMSString0x80 TestString128;
+        /* 0x11D8 */ public NMSString0x80 TestString128;
         [NMS(Index = 48)]
-        /* 0x1254 */ public NMSString0x40 DocRenamedString64;
+        /* 0x1258 */ public NMSString0x40 DocRenamedString64;
         [NMS(Index = 32)]
-        /* 0x1294 */ public NMSString0x40 TestString64;
+        /* 0x1298 */ public NMSString0x40 TestString64;
         [NMS(Index = 31)]
-        /* 0x12D4 */ public NMSString0x20 TestString;
+        /* 0x12D8 */ public NMSString0x20 TestString;
         [NMS(Index = 6)]
-        /* 0x12F4 */ public Colour32 TestColour32;
+        /* 0x12F8 */ public Colour32 TestColour32;
         [NMS(Index = 0)]
-        /* 0x12F8 */ public bool TestBool;
+        /* 0x12FC */ public bool TestBool;
         [NMS(Index = 1)]
-        /* 0x12F9 */ public byte TestByte;
+        /* 0x12FD */ public byte TestByte;
         // size: 0x3
         public enum TestEnumUInt8Enum : byte {
             Enum1,
@@ -170,8 +172,8 @@ namespace libMBIN.NMS.Toolkit
             Enum3,
         }
         [NMS(Index = 12)]
-        /* 0x12FA */ public TestEnumUInt8Enum TestEnumUInt8;
+        /* 0x12FE */ public TestEnumUInt8Enum TestEnumUInt8;
         [NMS(Index = 23)]
-        /* 0x12FB */ public sbyte TestInt8;
+        /* 0x12FF */ public sbyte TestInt8;
     }
 }

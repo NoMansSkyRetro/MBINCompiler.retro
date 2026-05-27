@@ -3,27 +3,31 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x34C91B1521FDE4C7, NameHash = 0xC72226FB)]
+    [NMS(GUID = 0x96C69E0B03F33F45, NameHash = 0xC72226FB)]
     public class GcMissionSequenceShowMessage : NMSTemplate
     {
         [NMS(Index = 7)]
         /* 0x00 */ public Colour OSDMessageColour;
-        [NMS(Index = 14)]
-        /* 0x10 */ public VariableSizeString DebugText;
-        [NMS(Index = 2)]
-        /* 0x20 */ public VariableSizeString Message;
-        [NMS(Index = 5)]
-        /* 0x30 */ public VariableSizeString OSDMessage;
-        [NMS(Index = 6)]
-        /* 0x40 */ public VariableSizeString OSDMessageSubtitle;
-        [NMS(Index = 12)]
-        /* 0x50 */ public NMSString0x10 StatusMessageDefinition;
         [NMS(Index = 13)]
-        /* 0x60 */ public List<NMSTemplate> UseConditionsForTextFormatting;
+        /* 0x10 */ public NMSString0x10 CameraShakeID;
+        [NMS(Index = 18)]
+        /* 0x20 */ public VariableSizeString DebugText;
+        [NMS(Index = 2)]
+        /* 0x30 */ public VariableSizeString Message;
+        [NMS(Index = 5)]
+        /* 0x40 */ public VariableSizeString OSDMessage;
+        [NMS(Index = 6)]
+        /* 0x50 */ public VariableSizeString OSDMessageSubtitle;
+        [NMS(Index = 12)]
+        /* 0x60 */ public NMSString0x10 StatusMessageDefinition;
+        [NMS(Index = 17)]
+        /* 0x70 */ public List<NMSTemplate> UseConditionsForTextFormatting;
         [NMS(Index = 3)]
-        /* 0x70 */ public GcAudioWwiseEvents AudioEvent;
+        /* 0x80 */ public GcAudioWwiseEvents AudioEvent;
         [NMS(Index = 0)]
-        /* 0x74 */ public GcMissionCategory Category;
+        /* 0x84 */ public GcMissionCategory Category;
+        [NMS(Index = 16)]
+        /* 0x88 */ public float EffectTime;
         // size: 0x5
         public enum OSDMessageStyleEnum : uint {
             Standard,
@@ -33,16 +37,20 @@ namespace libMBIN.NMS.GameComponents
             Spook,
         }
         [NMS(Index = 8)]
-        /* 0x78 */ public OSDMessageStyleEnum OSDMessageStyle;
+        /* 0x8C */ public OSDMessageStyleEnum OSDMessageStyle;
         [NMS(Index = 4)]
-        /* 0x7C */ public float OSDTime;
+        /* 0x90 */ public float OSDTime;
         [NMS(Index = 1)]
-        /* 0x80 */ public float Time;
+        /* 0x94 */ public float Time;
         [NMS(Index = 10)]
-        /* 0x84 */ public bool DisableIcon;
+        /* 0x98 */ public bool DisableIcon;
         [NMS(Index = 11)]
-        /* 0x85 */ public bool DisableTitlePrefix;
+        /* 0x99 */ public bool DisableTitlePrefix;
+        [NMS(Index = 14)]
+        /* 0x9A */ public bool DoCameraShake;
+        [NMS(Index = 15)]
+        /* 0x9B */ public bool DoWhiteout;
         [NMS(Index = 9)]
-        /* 0x86 */ public bool OSDUseMissionIcon;
+        /* 0x9C */ public bool OSDUseMissionIcon;
     }
 }

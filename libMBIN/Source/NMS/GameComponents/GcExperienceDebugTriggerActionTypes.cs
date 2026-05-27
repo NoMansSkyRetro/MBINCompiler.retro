@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xFF1165A703C76264, NameHash = 0x3849DC69)]
+    [NMS(GUID = 0x1273685A6590A97F, NameHash = 0x3849DC69)]
     public class GcExperienceDebugTriggerActionTypes : NMSTemplate
     {
-        // size: 0x3A
+        // size: 0x3B
         public enum ExperienceDebugTriggerActionEnum : uint {
             None,
             Drones,
@@ -18,6 +18,7 @@ namespace libMBIN.NMS.GameComponents
             Mechs,
             SpaceBattle,
             PirateSpaceBattle,
+            SwarmSpaceBattle,
             ClearPirateSpaceBattle,
             RespawnInShip,
             DebugWalker,

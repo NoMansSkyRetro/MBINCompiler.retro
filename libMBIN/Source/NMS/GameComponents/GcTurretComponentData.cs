@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x7FC3BE48DA2CF3B4, NameHash = 0x34C4758E)]
+    [NMS(GUID = 0xD712FD8E39C9B381, NameHash = 0x34C4758E)]
     public class GcTurretComponentData : NMSTemplate
     {
         [NMS(Index = 1)]
@@ -89,7 +89,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0xD1 */ public bool FireInTurretFacing;
         [NMS(Index = 7)]
         /* 0xD2 */ public bool HasFreighterAlertLight;
+        [NMS(Index = 38)]
+        /* 0xD3 */ public bool IsPrimaryFreighterTurret;
         [NMS(Index = 32)]
-        /* 0xD3 */ public bool RemotePlayersCanDamage;
+        /* 0xD4 */ public bool RemotePlayersCanDamage;
     }
 }

@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x24FD2AC99E617A7B, NameHash = 0x24CF3513)]
+    [NMS(GUID = 0xE834F7E86924C019, NameHash = 0x24CF3513)]
     public class GcPhotoShips : NMSTemplate
     {
         [NMS(Index = 1)]

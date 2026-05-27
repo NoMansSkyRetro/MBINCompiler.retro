@@ -3,184 +3,184 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x58E0ED7959A34868, NameHash = 0xF873D7AD)]
+    [NMS(GUID = 0x34C256D067AA1682, NameHash = 0xF873D7AD)]
     public class GcScannerIcons : NMSTemplate
     {
-        [NMS(Index = 40, Size = 0x4C, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
+        [NMS(Index = 40, Size = 0x4E, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
         /* 0x0000 */ public Colour[] ScannableColours;
         [NMS(Index = 62, Size = 0x4)]
-        /* 0x04C0 */ public Colour[] NetworkFSPlayerColours;
+        /* 0x04E0 */ public Colour[] NetworkFSPlayerColours;
         [NMS(Index = 41)]
-        /* 0x0500 */ public Colour BuildingColour;
+        /* 0x0520 */ public Colour BuildingColour;
         [NMS(Index = 42)]
-        /* 0x0510 */ public Colour GenericColour;
+        /* 0x0530 */ public Colour GenericColour;
         [NMS(Index = 43)]
-        /* 0x0520 */ public Colour RelicColour;
+        /* 0x0540 */ public Colour RelicColour;
         [NMS(Index = 44)]
-        /* 0x0530 */ public Colour SignalColour;
+        /* 0x0550 */ public Colour SignalColour;
         [NMS(Index = 45)]
-        /* 0x0540 */ public Colour UnknownColour;
-        [NMS(Index = 38, Size = 0x4C, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
-        /* 0x0550 */ public GcScannerIcon[] ScannableIcons;
-        [NMS(Index = 39, Size = 0x4C, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
-        /* 0x15F0 */ public GcScannerIcon[] ScannableIconsBinocs;
+        /* 0x0560 */ public Colour UnknownColour;
+        [NMS(Index = 38, Size = 0x4E, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
+        /* 0x0570 */ public GcScannerIcon[] ScannableIcons;
+        [NMS(Index = 39, Size = 0x4E, EnumType = typeof(GcScannerIconTypes.ScanIconTypeEnum))]
+        /* 0x1680 */ public GcScannerIcon[] ScannableIconsBinocs;
         [NMS(Index = 35, Size = 0x25, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypeEnum))]
-        /* 0x2690 */ public GcScannerIcon[] BuildingIcons;
+        /* 0x2790 */ public GcScannerIcon[] BuildingIcons;
         [NMS(Index = 36, Size = 0x25, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypeEnum))]
-        /* 0x2EA8 */ public GcScannerIcon[] BuildingIconsBinocs;
+        /* 0x2FA8 */ public GcScannerIcon[] BuildingIconsBinocs;
         [NMS(Index = 37, Size = 0x25, EnumType = typeof(GcScannerBuildingIconTypes.ScanBuildingIconTypeEnum))]
-        /* 0x36C0 */ public GcScannerIcon[] BuildingIconsHuge;
+        /* 0x37C0 */ public GcScannerIcon[] BuildingIconsHuge;
         [NMS(Index = 5, Size = 0x7, EnumType = typeof(GcVehicleType.VehicleTypeEnum))]
-        /* 0x3ED8 */ public GcScannerIcon[] Vehicles;
+        /* 0x3FD8 */ public GcScannerIcon[] Vehicles;
         [NMS(Index = 34, Size = 0x6, EnumType = typeof(GcGenericIconTypes.GenericIconTypeEnum))]
-        /* 0x4060 */ public GcScannerIcon[] GenericIcons;
+        /* 0x4160 */ public GcScannerIcon[] GenericIcons;
         [NMS(Index = 63, Size = 0x4)]
-        /* 0x41B0 */ public GcScannerIcon[] NetworkFSPlayerCorvetteTeleporter;
+        /* 0x42B0 */ public GcScannerIcon[] NetworkFSPlayerCorvetteTeleporter;
         [NMS(Index = 60, Size = 0x4)]
-        /* 0x4290 */ public GcScannerIcon[] NetworkFSPlayerMarkers;
+        /* 0x4390 */ public GcScannerIcon[] NetworkFSPlayerMarkers;
         [NMS(Index = 61, Size = 0x4)]
-        /* 0x4370 */ public GcScannerIcon[] NetworkFSPlayerMarkersShip;
+        /* 0x4470 */ public GcScannerIcon[] NetworkFSPlayerMarkersShip;
         [NMS(Index = 64, Size = 0x4)]
-        /* 0x4450 */ public GcScannerIcon[] NetworkPlayerFreighter;
+        /* 0x4550 */ public GcScannerIcon[] NetworkPlayerFreighter;
         [NMS(Index = 73, Size = 0x5, EnumType = typeof(GcScannerIconHighlightTypes.ScannerIconHighlightTypeEnum))]
-        /* 0x4530 */ public TkTextureResource[] HighlightIcons;
+        /* 0x4630 */ public TkTextureResource[] HighlightIcons;
         [NMS(Index = 33)]
-        /* 0x45A8 */ public GcScannerIcon ArrowLarge;
+        /* 0x46A8 */ public GcScannerIcon ArrowLarge;
         [NMS(Index = 32)]
-        /* 0x45E0 */ public GcScannerIcon ArrowSmall;
+        /* 0x46E0 */ public GcScannerIcon ArrowSmall;
         [NMS(Index = 51)]
-        /* 0x4618 */ public GcScannerIcon BaseBuildingMarker;
+        /* 0x4718 */ public GcScannerIcon BaseBuildingMarker;
         [NMS(Index = 18)]
-        /* 0x4650 */ public GcScannerIcon Battle;
+        /* 0x4750 */ public GcScannerIcon Battle;
         [NMS(Index = 22)]
-        /* 0x4688 */ public GcScannerIcon BattleSmall;
+        /* 0x4788 */ public GcScannerIcon BattleSmall;
         [NMS(Index = 66)]
-        /* 0x46C0 */ public GcScannerIcon BlackHole;
+        /* 0x47C0 */ public GcScannerIcon BlackHole;
         [NMS(Index = 15)]
-        /* 0x46F8 */ public GcScannerIcon Bounty1;
+        /* 0x47F8 */ public GcScannerIcon Bounty1;
         [NMS(Index = 16)]
-        /* 0x4730 */ public GcScannerIcon Bounty2;
+        /* 0x4830 */ public GcScannerIcon Bounty2;
         [NMS(Index = 17)]
-        /* 0x4768 */ public GcScannerIcon Bounty3;
+        /* 0x4868 */ public GcScannerIcon Bounty3;
         [NMS(Index = 21)]
-        /* 0x47A0 */ public GcScannerIcon BountySmall;
+        /* 0x48A0 */ public GcScannerIcon BountySmall;
         [NMS(Index = 24)]
-        /* 0x47D8 */ public GcScannerIcon Checkpoint;
+        /* 0x48D8 */ public GcScannerIcon Checkpoint;
         [NMS(Index = 29)]
-        /* 0x4810 */ public GcScannerIcon CircleAnimation;
+        /* 0x4910 */ public GcScannerIcon CircleAnimation;
         [NMS(Index = 3)]
-        /* 0x4848 */ public GcScannerIcon Corvette;
+        /* 0x4948 */ public GcScannerIcon Corvette;
         [NMS(Index = 28)]
-        /* 0x4880 */ public GcScannerIcon CorvetteDeployedTeleporter;
+        /* 0x4980 */ public GcScannerIcon CorvetteDeployedTeleporter;
         [NMS(Index = 68)]
-        /* 0x48B8 */ public GcScannerIcon CreatureAction;
+        /* 0x49B8 */ public GcScannerIcon CreatureAction;
         [NMS(Index = 67)]
-        /* 0x48F0 */ public GcScannerIcon CreatureCurious;
+        /* 0x49F0 */ public GcScannerIcon CreatureCurious;
         [NMS(Index = 70)]
-        /* 0x4928 */ public GcScannerIcon CreatureDanger;
+        /* 0x4A28 */ public GcScannerIcon CreatureDanger;
         [NMS(Index = 46)]
-        /* 0x4960 */ public GcScannerIcon CreatureDiscovered;
+        /* 0x4A60 */ public GcScannerIcon CreatureDiscovered;
         [NMS(Index = 71)]
-        /* 0x4998 */ public GcScannerIcon CreatureFiend;
+        /* 0x4A98 */ public GcScannerIcon CreatureFiend;
         [NMS(Index = 79)]
-        /* 0x49D0 */ public GcScannerIcon CreatureInteraction;
+        /* 0x4AD0 */ public GcScannerIcon CreatureInteraction;
         [NMS(Index = 72)]
-        /* 0x4A08 */ public GcScannerIcon CreatureMilk;
+        /* 0x4B08 */ public GcScannerIcon CreatureMilk;
         [NMS(Index = 69)]
-        /* 0x4A40 */ public GcScannerIcon CreatureTame;
+        /* 0x4B40 */ public GcScannerIcon CreatureTame;
         [NMS(Index = 47)]
-        /* 0x4A78 */ public GcScannerIcon CreatureUndiscovered;
+        /* 0x4B78 */ public GcScannerIcon CreatureUndiscovered;
         [NMS(Index = 48)]
-        /* 0x4AB0 */ public GcScannerIcon CreatureUnknown;
+        /* 0x4BB0 */ public GcScannerIcon CreatureUnknown;
         [NMS(Index = 9)]
-        /* 0x4AE8 */ public GcScannerIcon DamagedFrigate;
+        /* 0x4BE8 */ public GcScannerIcon DamagedFrigate;
         [NMS(Index = 14)]
-        /* 0x4B20 */ public GcScannerIcon Death;
+        /* 0x4C20 */ public GcScannerIcon Death;
         [NMS(Index = 20)]
-        /* 0x4B58 */ public GcScannerIcon DeathSmall;
+        /* 0x4C58 */ public GcScannerIcon DeathSmall;
         [NMS(Index = 31)]
-        /* 0x4B90 */ public GcScannerIcon DiamondAnimation;
+        /* 0x4C90 */ public GcScannerIcon DiamondAnimation;
         [NMS(Index = 13)]
-        /* 0x4BC8 */ public GcScannerIcon EditingBase;
+        /* 0x4CC8 */ public GcScannerIcon EditingBase;
         [NMS(Index = 11)]
-        /* 0x4C00 */ public GcScannerIcon Expedition;
+        /* 0x4D00 */ public GcScannerIcon Expedition;
         [NMS(Index = 6)]
-        /* 0x4C38 */ public GcScannerIcon Freighter;
+        /* 0x4D38 */ public GcScannerIcon Freighter;
         [NMS(Index = 7)]
-        /* 0x4C70 */ public GcScannerIcon FreighterBase;
+        /* 0x4D70 */ public GcScannerIcon FreighterBase;
         [NMS(Index = 86)]
-        /* 0x4CA8 */ public GcScannerIcon FriendlyDrone;
+        /* 0x4DA8 */ public GcScannerIcon FriendlyDrone;
         [NMS(Index = 25)]
-        /* 0x4CE0 */ public GcScannerIcon Garage;
+        /* 0x4DE0 */ public GcScannerIcon Garage;
         [NMS(Index = 30)]
-        /* 0x4D18 */ public GcScannerIcon HexAnimation;
+        /* 0x4E18 */ public GcScannerIcon HexAnimation;
         [NMS(Index = 49)]
-        /* 0x4D50 */ public GcScannerIcon MessageBeacon;
+        /* 0x4E50 */ public GcScannerIcon MessageBeacon;
         [NMS(Index = 50)]
-        /* 0x4D88 */ public GcScannerIcon MessageBeaconSmall;
+        /* 0x4E88 */ public GcScannerIcon MessageBeaconSmall;
         [NMS(Index = 78)]
-        /* 0x4DC0 */ public GcScannerIcon MissionAbandonedFreighter;
+        /* 0x4EC0 */ public GcScannerIcon MissionAbandonedFreighter;
         [NMS(Index = 75)]
-        /* 0x4DF8 */ public GcScannerIcon MissionEnterBuilding;
+        /* 0x4EF8 */ public GcScannerIcon MissionEnterBuilding;
         [NMS(Index = 77)]
-        /* 0x4E30 */ public GcScannerIcon MissionEnterFreighter;
+        /* 0x4F30 */ public GcScannerIcon MissionEnterFreighter;
         [NMS(Index = 74)]
-        /* 0x4E68 */ public GcScannerIcon MissionEnterOrbit;
+        /* 0x4F68 */ public GcScannerIcon MissionEnterOrbit;
         [NMS(Index = 76)]
-        /* 0x4EA0 */ public GcScannerIcon MissionEnterStation;
+        /* 0x4FA0 */ public GcScannerIcon MissionEnterStation;
         [NMS(Index = 56)]
-        /* 0x4ED8 */ public GcScannerIcon MonumentMarker;
+        /* 0x4FD8 */ public GcScannerIcon MonumentMarker;
         [NMS(Index = 57)]
-        /* 0x4F10 */ public GcScannerIcon NetworkPlayerMarker;
+        /* 0x5010 */ public GcScannerIcon NetworkPlayerMarker;
         [NMS(Index = 58)]
-        /* 0x4F48 */ public GcScannerIcon NetworkPlayerMarkerShip;
+        /* 0x5048 */ public GcScannerIcon NetworkPlayerMarkerShip;
         [NMS(Index = 59)]
-        /* 0x4F80 */ public GcScannerIcon NetworkPlayerMarkerVehicle;
+        /* 0x5080 */ public GcScannerIcon NetworkPlayerMarkerVehicle;
         [NMS(Index = 26)]
-        /* 0x4FB8 */ public GcScannerIcon NPC;
+        /* 0x50B8 */ public GcScannerIcon NPC;
         [NMS(Index = 85)]
-        /* 0x4FF0 */ public GcScannerIcon OtherPlayerSettlement;
+        /* 0x50F0 */ public GcScannerIcon OtherPlayerSettlement;
         [NMS(Index = 81)]
-        /* 0x5028 */ public GcScannerIcon Pet;
+        /* 0x5128 */ public GcScannerIcon Pet;
         [NMS(Index = 83)]
-        /* 0x5060 */ public GcScannerIcon PetActivity;
+        /* 0x5160 */ public GcScannerIcon PetActivity;
         [NMS(Index = 80)]
-        /* 0x5098 */ public GcScannerIcon PetInteraction;
+        /* 0x5198 */ public GcScannerIcon PetInteraction;
         [NMS(Index = 82)]
-        /* 0x50D0 */ public GcScannerIcon PetSad;
+        /* 0x51D0 */ public GcScannerIcon PetSad;
         [NMS(Index = 87)]
-        /* 0x5108 */ public GcScannerIcon PirateRaid;
+        /* 0x5208 */ public GcScannerIcon PirateRaid;
         [NMS(Index = 54)]
-        /* 0x5140 */ public GcScannerIcon PlanetPoleEast;
+        /* 0x5240 */ public GcScannerIcon PlanetPoleEast;
         [NMS(Index = 52)]
-        /* 0x5178 */ public GcScannerIcon PlanetPoleNorth;
+        /* 0x5278 */ public GcScannerIcon PlanetPoleNorth;
         [NMS(Index = 53)]
-        /* 0x51B0 */ public GcScannerIcon PlanetPoleSouth;
+        /* 0x52B0 */ public GcScannerIcon PlanetPoleSouth;
         [NMS(Index = 55)]
-        /* 0x51E8 */ public GcScannerIcon PlanetPoleWest;
+        /* 0x52E8 */ public GcScannerIcon PlanetPoleWest;
         [NMS(Index = 12)]
-        /* 0x5220 */ public GcScannerIcon PlayerBase;
+        /* 0x5320 */ public GcScannerIcon PlayerBase;
         [NMS(Index = 8)]
-        /* 0x5258 */ public GcScannerIcon PlayerFreighter;
+        /* 0x5358 */ public GcScannerIcon PlayerFreighter;
         [NMS(Index = 84)]
-        /* 0x5290 */ public GcScannerIcon PlayerSettlement;
+        /* 0x5390 */ public GcScannerIcon PlayerSettlement;
         [NMS(Index = 65)]
-        /* 0x52C8 */ public GcScannerIcon PortalMarker;
+        /* 0x53C8 */ public GcScannerIcon PortalMarker;
         [NMS(Index = 10)]
-        /* 0x5300 */ public GcScannerIcon PurchasableFrigate;
+        /* 0x5400 */ public GcScannerIcon PurchasableFrigate;
         [NMS(Index = 27)]
-        /* 0x5338 */ public GcScannerIcon SettlementNPC;
+        /* 0x5438 */ public GcScannerIcon SettlementNPC;
         [NMS(Index = 2)]
-        /* 0x5370 */ public GcScannerIcon Ship;
+        /* 0x5470 */ public GcScannerIcon Ship;
         [NMS(Index = 19)]
-        /* 0x53A8 */ public GcScannerIcon ShipSmall;
+        /* 0x54A8 */ public GcScannerIcon ShipSmall;
         [NMS(Index = 0)]
-        /* 0x53E0 */ public GcScannerIcon TaggedBuilding;
+        /* 0x54E0 */ public GcScannerIcon TaggedBuilding;
         [NMS(Index = 1)]
-        /* 0x5418 */ public GcScannerIcon TaggedPlanet;
+        /* 0x5518 */ public GcScannerIcon TaggedPlanet;
         [NMS(Index = 23)]
-        /* 0x5450 */ public GcScannerIcon TimedEvent;
+        /* 0x5550 */ public GcScannerIcon TimedEvent;
         [NMS(Index = 4)]
-        /* 0x5488 */ public GcScannerIcon VehicleGeneric;
+        /* 0x5588 */ public GcScannerIcon VehicleGeneric;
     }
 }
