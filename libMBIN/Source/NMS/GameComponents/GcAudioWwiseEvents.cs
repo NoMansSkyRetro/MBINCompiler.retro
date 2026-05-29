@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5C0D94B6892FF6AB, NameHash = 0x7A0D33C8)]
+    [NMS(GUID = 0x7AD418B7C611B68B, NameHash = 0x7A0D33C8)]
     public class GcAudioWwiseEvents : NMSTemplate
     {
-        // size: 0xB56
+        // size: 0xB57
         public enum AkEventEnum : uint {
             INVALID_EVENT = 0x0,
             ABANDONED_DOOR_UNLOCK = 0x264BED2D,
@@ -2147,6 +2147,7 @@ namespace libMBIN.NMS.GameComponents
             POWERMODULE_NOTE_F_STOP = 0xD89D1D4F,
             POWERMODULE_NOTE_G = 0x662C5961,
             POWERMODULE_NOTE_G_STOP = 0xD42B64,
+            PRISMATIC_CORE_LP = 0x79CD7DD2,
             PROTOROLLER = 0x98F8B9B1,
             PROTOROLLER_STOP = 0xC4BC74D4,
             PS5_VIBRATION_TONE = 0xCF5E1783,
