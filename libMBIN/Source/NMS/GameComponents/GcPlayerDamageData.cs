@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xC6D578219ACC01FC, NameHash = 0x9776BBFB)]
+    [NMS(GUID = 0x4AD24064AFEA28D4, NameHash = 0x9776BBFB)]
     public class GcPlayerDamageData : NMSTemplate
     {
         [NMS(Index = 7)]
@@ -21,7 +21,7 @@ namespace libMBIN.NMS.GameComponents
         /* 0x098 */ public NMSString0x10 CameraShakeNoShield;
         [NMS(Index = 13)]
         /* 0x0A8 */ public NMSString0x10 CameraShakeShield;
-        [NMS(Index = 20)]
+        [NMS(Index = 21)]
         /* 0x0B8 */ public List<GcBreakTechByStatData> DamageTechWithStat;
         [NMS(Index = 2)]
         /* 0x0C8 */ public NMSString0x10 DeathStat;
@@ -37,6 +37,8 @@ namespace libMBIN.NMS.GameComponents
         /* 0x0F4 */ public int HazardDrain;
         [NMS(Index = 6)]
         /* 0x0F8 */ public GcAudioWwiseEvents HitMessageAudio;
+        [NMS(Index = 18)]
+        /* 0x0FC */ public float PlayerDamageMultiplier;
         // size: 0x5
         public enum PlayerDamageTypeEnum : uint {
             Normal,
@@ -45,19 +47,19 @@ namespace libMBIN.NMS.GameComponents
             Freeze,
             Scorch,
         }
-        [NMS(Index = 19)]
-        /* 0x0FC */ public PlayerDamageTypeEnum PlayerDamageType;
+        [NMS(Index = 20)]
+        /* 0x100 */ public PlayerDamageTypeEnum PlayerDamageType;
         [NMS(Index = 11)]
-        /* 0x100 */ public float PushForce;
-        [NMS(Index = 21)]
-        /* 0x104 */ public float TechDamageChance;
+        /* 0x104 */ public float PushForce;
+        [NMS(Index = 22)]
+        /* 0x108 */ public float TechDamageChance;
         [NMS(Index = 17)]
-        /* 0x108 */ public bool AllowDeathInInteraction;
-        [NMS(Index = 18)]
-        /* 0x109 */ public bool DoFullDamageToSelf;
+        /* 0x10C */ public bool AllowDeathInInteraction;
+        [NMS(Index = 19)]
+        /* 0x10D */ public bool DoFullDamageToSelf;
         [NMS(Index = 16)]
-        /* 0x10A */ public bool ForceDamageInInteraction;
+        /* 0x10E */ public bool ForceDamageInInteraction;
         [NMS(Index = 15)]
-        /* 0x10B */ public bool ShowTrackIcon;
+        /* 0x10F */ public bool ShowTrackIcon;
     }
 }

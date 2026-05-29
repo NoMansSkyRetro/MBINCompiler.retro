@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF1687F5DF00DBCAD, NameHash = 0x37EE71BB)]
+    [NMS(GUID = 0xBF816B43895C7A0D, NameHash = 0x37EE71BB)]
     public class GcScanEventData : NMSTemplate
     {
         [NMS(Index = 46)]
