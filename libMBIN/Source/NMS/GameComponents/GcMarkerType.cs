@@ -1,9 +1,9 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xD58453E281363F1, NameHash = 0xE51499F8)]
+    [NMS(GUID = 0x17A126A7CE2C5D9E, NameHash = 0xE51499F8)]
     public class GcMarkerType : NMSTemplate
     {
-        // size: 0x4A
+        // size: 0x4B
         public enum MarkerTypeEnum : byte {
             Default,
             PlanetPoleNorth,
@@ -27,6 +27,7 @@ namespace libMBIN.NMS.GameComponents
             Bounty,
             PlanetRaid,
             Battle,
+            SwarmHiveBattle,
             SpaceSignal,
             BlackHole,
             SpaceAnomalySignal,
