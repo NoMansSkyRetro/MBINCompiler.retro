@@ -2,7 +2,7 @@ using libMBIN.NMS.GameComponents;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xCAB5EBDED128423E, NameHash = 0x389D6F3B)]
+    [NMS(GUID = 0xE8AF5C28F3FF1837, NameHash = 0x389D6F3B)]
     public class GcMissionConditionHostileShipEncounterActive : NMSTemplate
     {
         [NMS(Index = 1)]

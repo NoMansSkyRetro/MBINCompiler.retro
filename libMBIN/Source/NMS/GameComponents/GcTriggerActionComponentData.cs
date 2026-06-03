@@ -1,24 +1,23 @@
 using libMBIN.NMS.GameComponents;
-using System.Collections.Generic;
 
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0xF81D425C4F66EFAA, NameHash = 0x20597571)]
+    [NMS(GUID = 0xE2813EFD2D28E870, NameHash = 0x20597571)]
     public class GcTriggerActionComponentData : NMSTemplate
     {
+        [NMS(Index = 2, KeyField = "StateID")]
+        /* 0x00 */ public HashMap<GcActionTriggerState> States;
         [NMS(Index = 4)]
-        /* 0x00 */ public NMSString0x10 PersistentState;
-        [NMS(Index = 2)]
-        /* 0x10 */ public List<GcActionTriggerState> States;
+        /* 0x30 */ public NMSString0x10 PersistentState;
         [NMS(Index = 0)]
-        /* 0x20 */ public bool HideModel;
+        /* 0x40 */ public bool HideModel;
         [NMS(Index = 6)]
-        /* 0x21 */ public bool LinkStateToBaseGrid;
+        /* 0x41 */ public bool LinkStateToBaseGrid;
         [NMS(Index = 3)]
-        /* 0x22 */ public bool Persistent;
+        /* 0x42 */ public bool Persistent;
         [NMS(Index = 5)]
-        /* 0x23 */ public bool ResetShotTimeOnStateChange;
+        /* 0x43 */ public bool ResetShotTimeOnStateChange;
         [NMS(Index = 1)]
-        /* 0x24 */ public bool StartInactive;
+        /* 0x44 */ public bool StartInactive;
     }
 }
