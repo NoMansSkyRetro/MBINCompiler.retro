@@ -1,6 +1,6 @@
 namespace libMBIN.NMS.GameComponents
 {
-    [NMS(GUID = 0x5969251BBAF2D500, NameHash = 0xC402725B)]
+    [NMS(GUID = 0x858E518ECD524D03, NameHash = 0xC402725B)]
     public class GcMoveableObjectComponentData : NMSTemplate
     {
         [NMS(Index = 10)]
@@ -37,11 +37,9 @@ namespace libMBIN.NMS.GameComponents
         /* 0x6C */ public float OnTruckImpactStrengthModifier;
         [NMS(Index = 12)]
         /* 0x70 */ public float OnTruckMinRelativeVelocityModifier;
-        [NMS(Index = 19)]
-        /* 0x74 */ public bool DeactivateSimpleInteractionUntilGrabbed;
         [NMS(Index = 18)]
-        /* 0x75 */ public bool NotifyParentEncounterWhenGrabbed;
+        /* 0x74 */ public bool NotifyParentEncounterWhenGrabbed;
         [NMS(Index = 9)]
-        /* 0x76 */ public bool UseGravGunGrabRotationTarget;
+        /* 0x75 */ public bool UseGravGunGrabRotationTarget;
     }
 }
