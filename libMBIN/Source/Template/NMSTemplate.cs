@@ -810,9 +810,10 @@ namespace libMBIN
                     IEnumerable<byte> end = Enumerable.Repeat((byte)0xEB, 4);
                     byte[] hashPadding = start.Concat(new byte[(8 << (int)templ.EndPaddingLShift) - 8]).Concat(end).ToArray();
                     // This is always added at the start.
-                    // Also set the offset as -1. We'll add a check for this to avoid writing an offset in this case.
+                    // Also set the offset as -8. This indicates that the value is an alignment value
+                    // (+ve values are handled as offsets, -ve are handled as alignments).
 
-                    additionalData.Insert( addtDataIndex, new Tuple<long, object>( -1, hashPadding ) );
+                    additionalData.Insert( addtDataIndex, new Tuple<long, object>( -8, hashPadding ) );
                     addtDataIndex++;
                     if ( addtDataIndex >= additionalData.Count ) {
                         additionalData.Add( hmData );
@@ -1176,10 +1177,13 @@ namespace libMBIN
                     } else if ( data.Item2.GetType() == typeof( byte[] ) ) {
                         // write the offset in the list header
                         long dataPosition = writer.BaseStream.Position;
-                        if (data.Item1 != -1) {
+                        if (data.Item1 >= 0) {
                             writer.BaseStream.Position = data.Item1;
                             writer.Write( dataPosition - data.Item1 );
                             writer.BaseStream.Position = dataPosition;
+                        } else {
+                            // We'll use the absolute value of the "position" as the alignment value as a lazy hack...
+                            writer.Align((int)Math.Abs(data.Item1), data.Item2.GetType().Name, paddingByte);
                         }
                         SerializeValue( writer, data.Item2.GetType(), data.Item2, attributes, null, ref additionalData, ref i, paddingByte: paddingByte );     // passing i here *should* be fine as we will only be writing bytes which can't affect i
 
@@ -1313,12 +1317,12 @@ namespace libMBIN
                                         data.ID = IdData.Value;
                                         if (!IdCounter.ContainsKey(IdData.Value)) {
                                             IdCounter.Add(IdData.Value, 1);
-                                        } else {
+                                        } else if (!(listType == typeof(NMSTemplate) || listType == typeof(LinkableNMSTemplate))) {
                                             data.Index = IdCounter[IdData.Value].ToString();
                                             IdCounter[IdData.Value] = IdCounter[IdData.Value] + 1;
                                         }
                                     }
-                                } else {
+                                } else if (!(listType == typeof(NMSTemplate) || listType == typeof(LinkableNMSTemplate))) {
                                     data.Index = i.ToString();
                                 }
                                 listProperty.Elements.Add( data );
