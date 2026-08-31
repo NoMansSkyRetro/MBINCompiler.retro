@@ -306,7 +306,8 @@ namespace MBINCompiler.Commands {
             Async.SynchronizeTask( errorLock, ref errorTask, () => {
                 warnedFiles.Add( filePath );
                 warnings.Add( msg );
-                if (Logger.LogStream.BaseStream.Position != lastPosition) msg = $"\n{msg}";
+                // LogStream is null under --nolog; warnings must not crash the convert
+                if (Logger.LogStream != null && Logger.LogStream.BaseStream.Position != lastPosition) msg = $"\n{msg}";
                 Logger.LogWarning( $"{msg}" );
                 using ( var indentInfo = new Logger.IndentScope() ) {
                     Logger.LogMessage( false, Console.Out, null, "" ); // newline, console only
@@ -320,7 +321,7 @@ namespace MBINCompiler.Commands {
                     }
                     //Logger.LogMessage( true, Console.Out, null, "" ); // newline, console and log
                 }
-                lastPosition = Logger.LogStream.BaseStream.Position;
+                if (Logger.LogStream != null) lastPosition = Logger.LogStream.BaseStream.Position;
             });
         }
 

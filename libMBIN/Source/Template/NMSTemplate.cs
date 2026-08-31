@@ -468,7 +468,8 @@ namespace libMBIN
                         return array;
                     } else {
                         reader.Align( AlignOf(field) );
-                        return DeserializeBinaryTemplate(reader, fieldType);
+                        // direct nested field: use the compile-time type, not a name lookup
+                        return DeserializeBinaryTemplate(reader, field);
                     }
             }
         }
@@ -478,9 +479,26 @@ namespace libMBIN
             if (templateName.StartsWith("c") && templateName.Length > 1) templateName = templateName.Substring(1);
 
             NMSTemplate obj = TemplateFromName(templateName);
-            
+
             //DebugLog("Gk Hack: " + "Deserializing Template: " + templateName);
-            
+
+            return DeserializeBinaryObject( reader, obj, templateName );
+        }
+
+        /// <summary>
+        /// Deserialize into the field's compile-time type. Name lookup (GetTemplateType) is only
+        /// correct for roots and list entries, where the name comes from the file; a direct
+        /// nested field must use the type it was compiled against, otherwise a same-named
+        /// struct in the active version folder gets instantiated and SetValue throws.
+        /// </summary>
+        public static NMSTemplate DeserializeBinaryTemplate(BinaryReader reader, Type type)
+        {
+            var obj = Activator.CreateInstance( type ) as NMSTemplate;
+            return DeserializeBinaryObject( reader, obj, type.Name );
+        }
+
+        private static NMSTemplate DeserializeBinaryObject(BinaryReader reader, NMSTemplate obj, string templateName)
+        {
             if (obj == null) return null;
 
             long templatePosition = reader.BaseStream.Position;
@@ -1058,7 +1076,8 @@ namespace libMBIN
                     var dictData = GetType().GetMethod(field.Name + "Dict");
                     if ( dictData != null ) {
                         Dictionary<int, string> dataDict = (Dictionary<int, string>) dictData.Invoke( this, null );
-                        valueString = dataDict[(int) value];
+                        // unknown keys keep the raw int instead of crashing; the reader accepts both
+                        if ( dataDict.TryGetValue( (int) value, out var dictName ) ) valueString = dictName;
                     }
                     // mirror of the {Field}Values() mapping in DeserializeEXmlValue; without
                     // this the raw int is written and the reader maps it back to -1
@@ -1297,8 +1316,12 @@ namespace libMBIN
                         if ( String.IsNullOrEmpty( xmlProperty.Value ) ) return -1;
 
                         Dictionary<int, string> dataDict = (Dictionary<int, string>) dictData.Invoke( template, null );
-                        int key = dataDict.Where( kvp => kvp.Value == xmlProperty.Value ).Select( kvp => kvp.Key ).FirstOrDefault();
-                        return key;
+                        foreach ( var kvp in dataDict ) {
+                            if ( kvp.Value == xmlProperty.Value ) return kvp.Key;
+                        }
+                        // raw int written for a key the dict does not carry
+                        if ( int.TryParse( xmlProperty.Value, out var rawKey ) ) return rawKey;
+                        return 0;
                     }
 
                     if ( valuesMethod != null ) {
@@ -1342,7 +1365,7 @@ namespace libMBIN
                         if (type == typeof(EXmlProperty)) {
                             element = DeserializeEXmlValue(template, elementType, field, (EXmlProperty)innerXmlData, templateType, settings);
                         }  else if (type == typeof(EXmlData)) {
-                            element = DeserializeEXml(innerXmlData); // child template if <Data> tag or <Property> tag with value ending in .xml (todo: better way of finding <Property> child templates)
+                            element = DeserializeEXml(innerXmlData, elementType); // child template if <Data> tag or <Property> tag with value ending in .xml (todo: better way of finding <Property> child templates)
                         } else if (type == typeof(EXmlMeta)) {
                             DebugLogComment(((EXmlMeta)innerXmlData).Comment);
                         }
@@ -1376,7 +1399,7 @@ namespace libMBIN
 
                         for (int i = 0; i < data.Count; ++i) {
                             if (data[i].GetType() == typeof(EXmlProperty)) {
-                                NMSTemplate element = DeserializeEXml(data[i]);
+                                NMSTemplate element = DeserializeEXml(data[i], fieldType.GetElementType());
                                 if (fieldType.GetElementType().Name == "NMSString0x20A") {
                                     element = new NMS.NMSString0x20A(element.ToString());
                                 }
@@ -1433,7 +1456,7 @@ namespace libMBIN
             }
         }
 
-        public static NMSTemplate DeserializeEXml( EXmlBase xmlData ) {    // this is the inital code that is run when converting exml to mbin.
+        public static NMSTemplate DeserializeEXml( EXmlBase xmlData, Type expectedType = null ) {    // this is the inital code that is run when converting exml to mbin.
         // this code is run to parse over the exml file and put it into a data structure that is processed by SerializeBytes() (I think...)
 
             NMSTemplate template = null;
@@ -1441,12 +1464,24 @@ namespace libMBIN
             //DebugLog(xmlData.Name);
             //DebugLog(xmlData.GetType().ToString());
 
+            string xmlTemplateName = null;
             if ( xmlData.GetType() == typeof( EXmlData ) ) {
-                template = TemplateFromName( ((EXmlData) xmlData).Template );
+                xmlTemplateName = ((EXmlData) xmlData).Template;
             } else if ( xmlData.GetType() == typeof( EXmlProperty ) ) {
-                template = TemplateFromName( ((EXmlProperty) xmlData).Value.Replace( ".xml", "" ) );
+                xmlTemplateName = ((EXmlProperty) xmlData).Value.Replace( ".xml", "" );
             } else if ( xmlData.GetType() == typeof( EXmlMeta ) ) {
                 DebugLogComment( ((EXmlMeta) xmlData).Comment );
+            }
+            if ( xmlTemplateName != null ) {
+                // prefer the field's compile-time type: a same-named struct in the active
+                // version folder must not be substituted into a base-typed field (mirrors
+                // the binary path in DeserializeBinaryTemplate(reader, Type))
+                if ( expectedType != null && expectedType != typeof( NMSTemplate )
+                     && expectedType.Name == xmlTemplateName ) {
+                    template = Activator.CreateInstance( expectedType ) as NMSTemplate;
+                } else {
+                    template = TemplateFromName( xmlTemplateName );
+                }
             }
 
             /*
@@ -1477,7 +1512,7 @@ namespace libMBIN
                         DebugLogPropertyName( xmlProperty.Name );
                         if ((field.FieldType == typeof( NMSTemplate ) || field.FieldType.BaseType == typeof( NMSTemplate ))
                             && !typeof(NMS.INMSString).IsAssignableFrom(field.FieldType)) {
-                            fieldValue = DeserializeEXml( xmlProperty );
+                            fieldValue = DeserializeEXml( xmlProperty, field.FieldType );
                         } else {
                             Type fieldType = field.FieldType;
                             NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
@@ -1487,7 +1522,7 @@ namespace libMBIN
                     } else if ( xmlElement.GetType() == typeof( EXmlData ) ) {
                         EXmlData innerXmlData = (EXmlData) xmlElement;
                         FieldInfo field = templateType.GetField( innerXmlData.Name );
-                        NMSTemplate innerTemplate = DeserializeEXml( innerXmlData );
+                        NMSTemplate innerTemplate = DeserializeEXml( innerXmlData, field.FieldType );
                         field.SetValue( template, innerTemplate );
                     } else if ( xmlElement.GetType() == typeof( EXmlMeta ) ) {
                         EXmlMeta xmlMeta = (EXmlMeta) xmlElement;

@@ -2,7 +2,8 @@
 {
     public class GcRewardDestructTable : NMSTemplate
     {
-        [NMS(Size = 5)]
+        // 6 categories since Foundation (BuildingPart added); rc1/1.09.1 have 5
+        [NMS(Size = 6)]
         public GcRewardDestructRarities[] Categories;
     }
 }
