@@ -205,19 +205,21 @@ namespace libMBIN
         }
 
         public void SetDefaultsV0( Type type = null ) {
+            // name-based so the per-version folder variants (libMBIN.V1_38.Structs.TkAnimMetadata, ...)
+            // get the special header treatment too, not just the base NMS.Toolkit types
             // MBIN_MAGIC_PC is only used by TkGeometryData (*.MBIN.PC)
-            MagicID      = type == typeof(NMS.Toolkit.TkGeometryData) ? MBIN_MAGIC_PC : MBIN_MAGIC;
+            MagicID      = type?.Name == "TkGeometryData" ? MBIN_MAGIC_PC : MBIN_MAGIC;
             FormatID     = MBIN_VERSION;
             Timestamp    = 0;
             TemplateGUID = type?.GetCustomAttribute<NMSAttribute>()?.GUID ?? 0;
             TemplateName = string.Empty;
             EndPadding   = 0;
 
-            if (type == typeof( NMS.Toolkit.TkAnimMetadata ) ) {
+            if (type?.Name == "TkAnimMetadata") {
                 Tag         = TKANIMMETADATA_TAG;
                 EndPadding  = TKANIMMETADATA_PADDING;
             }
-            else if (type == typeof(NMS.Toolkit.TkGeometryData))
+            else if (type?.Name == "TkGeometryData")
             {
                 Tag        = TKGEOMETRYDATA_TAG;
                 EndPadding = TKGEOMETRYDATA_PADDING;
@@ -226,7 +228,7 @@ namespace libMBIN
 
         public void SetDefaultsV1( Type type = null ) {
             SetDefaultsV0( type );
-            if ( type == typeof( NMS.Toolkit.TkAnimMetadata ) | type == typeof(NMS.Toolkit.TkGeometryData)) return;
+            if ( type?.Name == "TkAnimMetadata" | type?.Name == "TkGeometryData" ) return;
 
             Tag = MBINCVER_TAG;
 
@@ -238,7 +240,7 @@ namespace libMBIN
 
         public void SetDefaultsV2( Type type = null ) {
             SetDefaultsV0( type );
-            if (type == typeof(NMS.Toolkit.TkAnimMetadata) | type == typeof(NMS.Toolkit.TkGeometryData)) return;
+            if (type?.Name == "TkAnimMetadata" | type?.Name == "TkGeometryData") return;
 
             FormatAPI = 2;
             VersionNMS = Version.NMSVersion;

@@ -262,7 +262,7 @@ namespace MBINCompiler.Commands {
                 if ( nms != null && nms.Broken ) FileIsBroken( inputPath, data );
 
                 if ( data is null ) throw new InvalidDataException( $"Failed to deserialize EXML." );
-                if ( data is libMBIN.NMS.Toolkit.TkGeometryData ) fileOut += ".PC";
+                if ( data.GetType().Name == "TkGeometryData" ) fileOut += ".PC";
 
                 var mbin = new MBINFile( msOut ) { Header = new MBINHeader() };
                 mbin.Header.SetDefaults( data.GetType(), FormatVersion );

@@ -938,9 +938,10 @@ namespace libMBIN
 
                 UInt32 listEnding = 0xAAAAAA01;
 
-                if ( GetType() == typeof( NMS.Toolkit.TkAnimMetadata ) ) {
+                // name-based so per-version folder variants get their era's list ending too
+                if ( GetType().Name == "TkAnimMetadata" ) {
                     listEnding = 0xFEFEFE01;
-                } else if ( GetType() == typeof( NMS.Toolkit.TkGeometryData ) ) {
+                } else if ( GetType().Name == "TkGeometryData" ) {
                     listEnding = 0x00000001;
                 }
 
