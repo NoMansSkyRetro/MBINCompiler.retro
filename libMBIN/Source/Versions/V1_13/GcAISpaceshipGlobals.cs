@@ -1,4 +1,4 @@
-// generated output for subroutine:
+﻿// generated output for subroutine:
 // __int64 __fastcall GcAISpaceshipGlobals_LoadDefaults(__int64 a1) -----> hash: C7EC6D18
 // hash of whole input: 21519724
 
@@ -517,6 +517,10 @@ using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; 
         [NMS(Size = 0x4, Ignore = true)]
         public byte[] PaddingB3C;
         public GcShipAIPlanetPatrolData UnknownB40;
+
+        // 8 zero bytes at the tail of the 1.13/1.24 files (payload 0xB80)
+        [NMS(Size = 0x8, Ignore = true)]
+        public byte[] PaddingB78;
 
     }
 }

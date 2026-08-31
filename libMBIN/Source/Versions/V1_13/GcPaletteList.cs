@@ -1,4 +1,5 @@
-﻿namespace libMBIN.V1_24.Structs
+﻿using libMBIN.NMS.GameComponents;
+namespace libMBIN.V1_13.Structs
 {
     public class GcPaletteList : NMSTemplate
     {

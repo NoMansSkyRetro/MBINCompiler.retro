@@ -409,5 +409,9 @@
         public byte[] PaddingB3C;
         public GcShipAIPlanetPatrolData UnknownB40;
 
+        // 8 zero bytes at the tail of the 1.13/1.24 files (payload 0xB80)
+        [NMS(Size = 0x8, Ignore = true)]
+        public byte[] PaddingB78;
+
     }
 }

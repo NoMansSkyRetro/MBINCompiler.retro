@@ -1,4 +1,4 @@
-using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; using libMBIN.NMS.Toolkit; namespace libMBIN.V1_13.Structs
+﻿using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; using libMBIN.NMS.Toolkit; namespace libMBIN.V1_13.Structs
 {
     public class GcSkyGlobals : NMSTemplate
     {
@@ -241,5 +241,9 @@ using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; 
         public float Unknown88C;     // offset: 2188, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v8 + 2188) = 1065353216;
         // line:   return result;
         // line: }
-    }
+    
+        // 1.13: forty RGBA colours appended at 0x750 (payload 0x9D0 = 2512)
+        [NMS(Size = 40)]
+        public Colour[] UnknownColours750;
+}
 }

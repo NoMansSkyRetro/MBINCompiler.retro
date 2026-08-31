@@ -21,5 +21,9 @@
         {
             return new[] { "Undecided", "On", "Off" };
         }
-    }
+    
+        // zero block at the tail of the shipped file (payload grows per era)
+        [NMS(Size = 0x644, Ignore = true)]
+        public byte[] Padding323C;
+}
 }

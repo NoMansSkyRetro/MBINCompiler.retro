@@ -1,4 +1,4 @@
-﻿namespace libMBIN.V1_24.Structs
+﻿namespace libMBIN.V1_13.Structs
 {
     // Same GUID in every build but the settings count grew per era: the bool array is one
     // entry per engine setting (payloads 52/56/56/60 for 1.09.1/1.13/1.24/1.38).

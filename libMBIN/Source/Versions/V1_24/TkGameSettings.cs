@@ -10,5 +10,10 @@
 
         [NMS(Size = 0x1F, EnumValue = new[] { "Player_Forward", "Player_Back", "Player_Left", "Player_Right", "Player_SwimUp", "Player_SwimDown", "Player_Interact", "Player_Melee", "Player_Scan", "Player_Torch", "Player_Binoculars", "Player_Zoom", "Player_ShowHUD", "Player_Jump", "Player_Run", "Player_Shoot", "Player_Grenade", "Player_Reload", "Player_ChangeWeapon", "Ship_Thrust", "Ship_Brake", "Ship_Boost", "Ship_RollLeft", "Ship_RollRight", "Ship_Exit", "Ship_Land", "Ship_Shoot", "Ship_ChangeWeapon", "Ship_Scan", "Ship_PulseJump", "Ship_GalacticMap" })]
         public GcInputActionMapping[] KeyMapping;
+
+        // 1.24: additional keybinding entries past the named 31 (all -1/unbound in the
+        // shipped file); kept as raw bytes so the round-trip is lossless
+        [NMS(Size = 0x1E0, Ignore = true)]
+        public byte[] PaddingFC;
     }
 }

@@ -126,7 +126,8 @@ namespace libMBIN.V1_24.Structs
         public GcSpaceSkyColours Unknown900;
 
         public float Unknown9B0;
-        public long Unknown9B4;
+        public float Unknown9B4; // was hidden in the long's 8-alignment gap (-1.0f in the file)
+        public long Unknown9B8;
 
         public Colour Unknown9C0;
         public Colour Unknown9D0;

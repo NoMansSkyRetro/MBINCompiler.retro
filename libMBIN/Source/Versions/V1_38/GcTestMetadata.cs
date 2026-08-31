@@ -100,5 +100,11 @@ namespace libMBIN.V1_38.Structs
 
         [NMS(Size = 0xC, Ignore = true)]
         public byte[] Padding6A4;
-    }
+    
+        // 1.38: sixteen bytes appended to the fixed tail (0, 2, 0, 0 in the shipped file)
+        public int Unknown6B0;
+        public int Unknown6B4;
+        public int Unknown6B8;
+        public int Unknown6BC;
+}
 }

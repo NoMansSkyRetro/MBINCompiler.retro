@@ -1089,6 +1089,11 @@ namespace libMBIN
 
                     break;
                 case "Single":
+                    if ( float.IsNaN( (float) value ) ) {
+                        // keep NaN payload bits: "NaN" text canonicalizes to 0xFFC00000 on parse
+                        valueString = $"NaN(0x{BitConverter.ToUInt32( BitConverter.GetBytes( (float) value ), 0 ):X8})";
+                        break;
+                    }
                     // prefer the default, short-form string format
                     valueString = ((float) value).ToString( System.Globalization.CultureInfo.InvariantCulture);
                     if ( float.Parse( valueString ) != (float) value ) { // the default string format may not be accurate
@@ -1298,6 +1303,10 @@ namespace libMBIN
                 case "String":
                     return xmlProperty.Value;
                 case "Single":
+                    // NaN(0x........) preserves NaN payload bits; see SerializeEXmlValue
+                    if (xmlProperty.Value.StartsWith("NaN(0x"))
+                        return BitConverter.ToSingle(BitConverter.GetBytes(
+                            Convert.ToUInt32(xmlProperty.Value.Substring(4).TrimEnd(')'), 16)), 0);
                     return float.Parse(xmlProperty.Value);
                 case "Boolean":
                     return bool.Parse(xmlProperty.Value);
