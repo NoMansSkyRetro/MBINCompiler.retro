@@ -1,4 +1,4 @@
-using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; using libMBIN.NMS.Toolkit; namespace libMBIN.V1_13.Structs
+﻿using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; using libMBIN.NMS.Toolkit; namespace libMBIN.V1_13.Structs
 {
     // loaded at 0x141624650
     public class GcGraphicsGlobals : NMSTemplate
@@ -13,6 +13,31 @@ using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; 
         public float Unknown18;
         public float Unknown1C;
 
+        // 1.13: twenty-four floats inserted here (Foundation graphics presets)
+        public float Foundation20;
+        public float Foundation24;
+        public float Foundation28;
+        public float Foundation2C;
+        public float Foundation30;
+        public float Foundation34;
+        public float Foundation38;
+        public float Foundation3C;
+        public float Foundation40;
+        public float Foundation44;
+        public float Foundation48;
+        public float Foundation4C;
+        public float Foundation50;
+        public float Foundation54;
+        public float Foundation58;
+        public float Foundation5C;
+        public float Foundation60;
+        public float Foundation64;
+        public float Foundation68;
+        public float Foundation6C;
+        public float Foundation70;
+        public float Foundation74;
+        public float Foundation78;
+        public float Foundation7C;
         public float Unknown20;
         public float Unknown24;
         public float Unknown28;
@@ -251,17 +276,44 @@ using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; 
 
         public GcPlanetWaterData Unknown640;
 
+        // 1.13: sixteen more values before the fade block
+        public float Foundation7F0_0;
+        public float Foundation7F0_1;
+        public float Foundation7F0_2;
+        public float Foundation7F0_3;
+        public float Foundation7F0_4;
+        public float Foundation7F0_5;
+        public float Foundation7F0_6;
+        public float Foundation7F0_7;
+        public float Foundation7F0_8;
+        public float Foundation7F0_9;
+        public float Foundation7F0_10;
+        public float Foundation7F0_11;
+        public float Foundation7F0_12;
+        public float Foundation7F0_13;
+        public float Foundation7F0_14;
+        public float Foundation7F0_15;
         public float Unknown7F0;
         public float Unknown7F4;
         public float Unknown7F8;
         public float Unknown7FC;
 
-        public bool Unknown800;
+        public int Unknown800; // the file holds 3 here; a bool normalized it to 1
 
         [NMS(Size = 4)]
         public int[] Unknown804;
 
         public int Unknown814;
+
+        // 1.13: eight dwords appended (0.5f, 1, 0x500, four 4.0f, 0)
+        public float Foundation818;
+        public int Foundation81C;
+        public int Foundation820;
+        public float Foundation824;
+        public float Foundation828;
+        public float Foundation82C;
+        public float Foundation830;
+        public int Foundation834;
 
         [NMS(Size = 8, Ignore = true)]
         public byte[] Padding818;
