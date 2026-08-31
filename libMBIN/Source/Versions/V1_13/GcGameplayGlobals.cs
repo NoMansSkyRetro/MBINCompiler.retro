@@ -6,6 +6,35 @@ namespace libMBIN.V1_13.Structs
 {
     public class GcGameplayGlobals : NMSTemplate
     {
+        // 1.13: twenty-seven dwords prepended (Foundation base-building globals)
+        public int Foundation0_0;
+        public int Foundation0_1;
+        public int Foundation0_2;
+        public int Foundation0_3;
+        public float Foundation0_4;
+        public float Foundation0_5;
+        public int Foundation0_6;
+        public float Foundation0_7;
+        public float Foundation0_8;
+        public float Foundation0_9;
+        public float Foundation0_10;
+        public float Foundation0_11;
+        public float Foundation0_12;
+        public float Foundation0_13;
+        public float Foundation0_14;
+        public float Foundation0_15;
+        public float Foundation0_16;
+        public float Foundation0_17;
+        public int Foundation0_18;
+        public float Foundation0_19;
+        public float Foundation0_20;
+        public float Foundation0_21;
+        public float Foundation0_22;
+        public int Foundation0_23;
+        public int Foundation0_24;
+        public float Foundation0_25;
+        public int Foundation0_26;
+
         // generated with MBINRawTemplateParser
 
         // line: char *__fastcall sub_14014DB40(__int64 a1)
@@ -54,6 +83,15 @@ namespace libMBIN.V1_13.Structs
         public int Unknown84;     // offset: 132, sz: 4, origin: 10, parsed: 10        // line:   *(_DWORD *)(a1 + 132) = 10;
         public int Unknown88;     // offset: 136, sz: 4, origin: 30, parsed: 30        // line:   *(_DWORD *)(a1 + 136) = 30;
         public float Unknown8C;     // offset: 140, sz: 4, origin: 1106247680, parsed: 30        // line:   *(_DWORD *)(a1 + 140) = 1106247680;
+        // 1.13: eight dwords inserted
+        public float Foundation90_0;
+        public float Foundation90_1;
+        public float Foundation90_2;
+        public float Foundation90_3;
+        public float Foundation90_4;
+        public float Foundation90_5;
+        public int Foundation90_6;
+        public int Foundation90_7;
         public float Unknown90;     // offset: 144, sz: 4, origin: 1106247680, parsed: 30        // line:   *(_DWORD *)(a1 + 144) = 1106247680;
         public float Unknown94;     // offset: 148, sz: 4, origin: 1114636288, parsed: 60        // line:   *(_DWORD *)(a1 + 148) = 1114636288;
         public float Unknown98;     // offset: 152, sz: 4, origin: 1114636288, parsed: 60        // line:   *(_DWORD *)(a1 + 152) = 1114636288;
@@ -69,6 +107,7 @@ namespace libMBIN.V1_13.Structs
         public float UnknownC0;     // offset: 192, sz: 4, origin: 1123024896, parsed: 120        // line:   *(_DWORD *)(a1 + 192) = 1123024896;
         // line:   v1 = a1;
         public int UnknownC4;     // offset: 196, sz: 4, origin: 10, parsed: 10        // line:   *(_DWORD *)(a1 + 196) = 10;
+        public int Foundation154; // 1.13: fills the alignment gap before the long (value 10)
         public long UnknownC8;     // offset: 200, sz: 8, origin: 30i64, parsed: 30        // line:   *(_QWORD *)(a1 + 200) = 30i64;
         public float UnknownD0;     // offset: 208, sz: 4, origin: 1120403456, parsed: 100        // line:   *(_DWORD *)(a1 + 208) = 1120403456;
         public float UnknownD4;     // offset: 212, sz: 4, origin: 1082130432, parsed: 4        // line:   *(_DWORD *)(a1 + 212) = 1082130432;
@@ -396,6 +435,87 @@ namespace libMBIN.V1_13.Structs
 
         // missing 8 bytes at offset 1044
         // could be a subroutine, padding or something that the parser skipped
+        // 1.13: four 80-byte blocks inserted
+        public int Foundation418_0;
+        public int Foundation418_1;
+        public int Foundation418_2;
+        public int Foundation418_3;
+        public int Foundation418_4;
+        public int Foundation418_5;
+        public float Foundation418_6;
+        public float Foundation418_7;
+        public float Foundation418_8;
+        public float Foundation418_9;
+        public float Foundation418_10;
+        public float Foundation418_11;
+        public float Foundation418_12;
+        public int Foundation418_13;
+        public int Foundation418_14;
+        public int Foundation418_15;
+        public int Foundation418_16;
+        public int Foundation418_17;
+        public int Foundation418_18;
+        public int Foundation418_19;
+        public int Foundation418_20;
+        public int Foundation418_21;
+        public float Foundation418_22;
+        public float Foundation418_23;
+        public float Foundation418_24;
+        public float Foundation418_25;
+        public float Foundation418_26;
+        public float Foundation418_27;
+        public float Foundation418_28;
+        public int Foundation418_29;
+        public int Foundation418_30;
+        public int Foundation418_31;
+        public int Foundation418_32;
+        public int Foundation418_33;
+        public int Foundation418_34;
+        public int Foundation418_35;
+        public int Foundation418_36;
+        public int Foundation418_37;
+        public float Foundation418_38;
+        public float Foundation418_39;
+        public float Foundation418_40;
+        public float Foundation418_41;
+        public float Foundation418_42;
+        public float Foundation418_43;
+        public float Foundation418_44;
+        public int Foundation418_45;
+        public int Foundation418_46;
+        public int Foundation418_47;
+        public int Foundation418_48;
+        public int Foundation418_49;
+        public int Foundation418_50;
+        public int Foundation418_51;
+        public int Foundation418_52;
+        public int Foundation418_53;
+        public float Foundation418_54;
+        public float Foundation418_55;
+        public float Foundation418_56;
+        public float Foundation418_57;
+        public float Foundation418_58;
+        public float Foundation418_59;
+        public float Foundation418_60;
+        public int Foundation418_61;
+        public int Foundation418_62;
+        public int Foundation418_63;
+        public int Foundation418_64;
+        public int Foundation418_65;
+        public int Foundation418_66;
+        public int Foundation418_67;
+        public int Foundation418_68;
+        public int Foundation418_69;
+        public float Foundation418_70;
+        public float Foundation418_71;
+        public float Foundation418_72;
+        public float Foundation418_73;
+        public float Foundation418_74;
+        public float Foundation418_75;
+        public float Foundation418_76;
+        public int Foundation418_77;
+        public int Foundation418_78;
+        public int Foundation418_79;
         [NMS(Size = 0x8, Ignore = true)]
         public byte[] Padding418;        // offset: 1048, sz: 8, comment: auto padding 
 
@@ -525,11 +645,6 @@ namespace libMBIN.V1_13.Structs
         public float UnknownA50;     // offset: 2640, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(v1 + 2640) = 1092616192;
         public float UnknownA54;     // offset: 2644, sz: 4, origin: 1008981770, parsed: 0.01        // line:   *(_DWORD *)(v1 + 2644) = 1008981770;
         public float UnknownA58;     // offset: 2648, sz: 4, origin: 1050253722, parsed: 0.3        // line:   *(_DWORD *)(v1 + 2648) = 1050253722;
-        public float UnknownA5C;     // offset: 2652, sz: 4, origin: 1114636288, parsed: 60        // line:   *(_DWORD *)(v1 + 2652) = 1114636288;
-        public float UnknownA60;     // offset: 2656, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 2656) = 1065353216;
-        public float UnknownA64;     // offset: 2660, sz: 4, origin: 1095761920, parsed: 13        // line:   *(_DWORD *)(v1 + 2660) = 1095761920;
-        public float UnknownA68;     // offset: 2664, sz: 4, origin: 1065353216, parsed: 1        // line:   *(_DWORD *)(v1 + 2664) = 1065353216;
-        public float UnknownA6C;     // offset: 2668, sz: 4, origin: 1077936128, parsed: 3        // line:   *(_DWORD *)(v1 + 2668) = 1077936128;
         public float UnknownA70;     // offset: 2672, sz: 4, origin: 1101004800, parsed: 20        // line:   *(_DWORD *)(v1 + 2672) = 1101004800;
         public float UnknownA74;     // offset: 2676, sz: 4, origin: 1140457472, parsed: 500        // line:   *(_DWORD *)(v1 + 2676) = 1140457472;
         public float UnknownA78;     // offset: 2680, sz: 4, origin: 1092616192, parsed: 10        // line:   *(_DWORD *)(v1 + 2680) = 1092616192;
@@ -552,6 +667,7 @@ namespace libMBIN.V1_13.Structs
         // could be a subroutine, padding or something that the parser skipped
         [NMS(Size = 0xD, Ignore = true)]
         public byte[] PaddingAA3;        // offset: 2723, sz: 13, comment: auto padding 
+        public int FoundationAB0; // 1.13: one dword before the effects path block
 
         public bool UnknownAB0;     // offset: 2736, sz: 1, origin: 0, parsed: 0        // line:   *(_BYTE *)(v1 + 2736) = 0;
 
@@ -594,15 +710,19 @@ namespace libMBIN.V1_13.Structs
         public float UnknownBA4;     // offset: 2980, sz: 4, origin: 1114636288, parsed: 60        // line:   *(_DWORD *)(v1 + 2980) = 1114636288;
         public float UnknownBA8;     // offset: 2984, sz: 4, origin: 1084227584, parsed: 5        // line:   *(_DWORD *)(v1 + 2984) = 1084227584;
         public float UnknownBAC;     // offset: 2988, sz: 4, origin: 1148846080, parsed: 1000        // line:   *(_DWORD *)(v1 + 2988) = 1148846080;
-        public int UnknownBB0;     // offset: 2992, sz: 4, origin: 3, parsed: 3        // line:   *(_DWORD *)(v1 + 2992) = 3;
-        public float UnknownBB4;     // offset: 2996, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 2996) = 0x40000000;
-        public float UnknownBB8;     // offset: 3000, sz: 4, origin: 1167867904, parsed: 5000        // line:   *(_DWORD *)(v1 + 3000) = 1167867904;
         public int UnknownBBC;     // offset: 3004, sz: 4, origin: 3, parsed: 3        // line:   *(_DWORD *)(v1 + 3004) = 3;
         public float UnknownBC0;     // offset: 3008, sz: 4, origin: 0x40000000, parsed: 2        // line:   *(_DWORD *)(v1 + 3008) = 0x40000000;
         // line:   return result;
         // line: }
 
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] PaddingBC4;        // offset: 3012, sz: 8, comment: manual padding to fit size
+        // 1.13 tail: the base-building table path plus seven dwords
+        [NMS(Size = 0x80)]
+        public string FoundationBaseBuildingTablePath;
+        public int FoundationTail1;
+        public int FoundationTail2;
+        public float FoundationTail3;
+        public float FoundationTail4;
+        public int FoundationTail5;
+        public int FoundationTail6;
     }
 }
