@@ -33,10 +33,12 @@ namespace libMBIN {
 
         /// <summary>
         /// Namespace prefix of the active build's own struct folder, e.g. "1.24" -> libMBIN.V1_24.
-        /// Builds with no dedicated folder (rc1) map to a prefix that matches nothing, so they
-        /// fall back to the base set; partial folders fall back per template.
+        /// rc1 maps to libMBIN.V1_00, its folder for disc-layout fixes; the base set stays the
+        /// per-template fallback for every build.
         /// </summary>
-        public static string FolderPrefix => "libMBIN.V" + (ActiveId ?? "").Replace( ".", "_" );
+        public static string FolderPrefix =>
+            ActiveId == "rc1" ? "libMBIN.V1_00"
+                              : "libMBIN.V" + (ActiveId ?? "").Replace( ".", "_" );
 
         /// <summary>True if a type belongs to some version's dedicated folder (not the base set).</summary>
         public static bool IsVersionedNamespace( string ns ) => ns != null && ns.StartsWith( "libMBIN.V1_" );

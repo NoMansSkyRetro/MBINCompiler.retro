@@ -11,13 +11,19 @@ builds (naming and layout) that carrying per-field version deltas would be its o
 instead each build gets a **complete, self-contained struct set in its own namespace folder**,
 all compiled into the one libMBIN:
 
-| Build(s) | Struct set | Source |
-|----------|-----------|--------|
-| rc1 / fallback | base, `libMBIN.NMS.*` | the `rc1` branch defs (in truth a mixed RC1/1.09.1-era set) |
-| 1.09.1 (Release) | `libMBIN.V1_09_1.*` | derived per struct; falls back to base |
-| 1.13 (Foundation) | `libMBIN.V1_13.*` | imported `1a6c980e` (last pre-Path-Finder commit); falls back to base |
-| 1.24 (Path Finder) | `libMBIN.V1_24.*` | imported `1.24.4` tag (its csproj's file list) |
-| 1.38 (Atlas Rises) | `libMBIN.V1_38.*` | imported `1.38.0.2` tag |
+| Build(s) | Struct set | Source | Improvements past the source |
+|----------|-----------|--------|------------------------------|
+| rc1 / fallback | base, `libMBIN.NMS.*` | the `rc1` branch defs (in truth a mixed RC1/1.09.1-era set) | kept frozen during the PC-build work; RC1-specific fixes now land in `V1_00` |
+| RC1 (PS4 disc) | `libMBIN.V1_00.*` | derived per struct against the disc psarcs | in progress; shadows base only where the disc layout differs |
+| 1.09.1 (Release) | `libMBIN.V1_09_1.*` | derived per struct; falls back to base | ~30 structs derived from file evidence (globals, saves, reality/reward tables, the voxel/planet chain, launch-era GcSolarGenerationGlobals); 762/763 byte-perfect |
+| 1.13 (Foundation) | `libMBIN.V1_13.*` | imported `1a6c980e` (last pre-Path-Finder commit); falls back to base | ~60 structs fixed or rebuilt (GcUIGlobals and GcScannerIcons re-derived from the 1.24 defs, mission/reward/cost tables, planet chain, fog byte sentinel); 773/774 byte-perfect |
+| 1.24 (Path Finder) | `libMBIN.V1_24.*` | imported `1.24.4` tag (its csproj's file list) | base-infra dedup (the single biggest win: 119 to 173 clean), mission/reward/cost table shapes, 8-aligned requirement lists; 780/781 byte-perfect |
+| 1.38 (Atlas Rises) | `libMBIN.V1_38.*` | imported `1.38.0.2` tag | solar-system SystemShips, save mission-progress shapes, cost model, layout-list bool, biome option alignment; 829/830 byte-perfect |
+
+Serializer-level fixes benefit every build at once: type-exact nested deserialization,
+lossless Ignore-padding, NaN payload preservation, the vanilla anim block order with its
+0xFE fill, list-data alignment semantics, and raw-index emission for enums whose name
+lists contain duplicates.
 
 The sets coexist because their namespaces differ; they share the one modern serializer
 (`libMBIN.NMSTemplate`) via namespace walk-up. Geometry's `TkGeometryData` is dropped from the
@@ -49,6 +55,46 @@ cheap files. The thing we avoid is bespoke deltas.
 - Census + tooling live in NMS.retro.py `tools/mbin/`: `guid_census.py` (per-template GUIDs
   per build), `body_diff.py` (byte-level build compare), `verify_roundtrip.py` (the
   acceptance test: extract per-template samples, decompile, recompile, byte-compare).
+
+## How the sets were derived (the Claude workflow)
+
+The struct sets were brought to byte-perfect by Claude (Anthropic's coding agent) running
+an autonomous evidence-driven loop against the shipped game files. No struct change was
+ever accepted on theory alone; the round-trip harness was the referee for every edit.
+
+The loop, per failing file:
+
+1. **Verify** - `verify_roundtrip.py <build>` extracts N samples per root template from
+   the real PAKs/psarcs, decompiles each to EXML, recompiles, and byte-compares past the
+   0x60 header. Its failing list picks the next target.
+2. **Localize** - word-level `difflib` over original-vs-round-trip payloads (or
+   `globals_diff.py` original-vs-original across two builds) turns a failure into a
+   handful of INSERT/DELETE/REPLACE runs with exact offsets.
+3. **Identify** - for generic (polymorphic) lists, the `{offset, cGc...name}` entry
+   table in the file itself maps every element to its type, start offset, and extent;
+   for flat globals, `dumplayout` gives the compiled field-to-offset map to overlay on
+   the diff.
+4. **Decode** - hexdump the disputed region and read it semantically: resolutions,
+   FoV floats, path strings, item ids, RGBA rows, seeds. Values that decode as
+   plausible game data confirm a layout; garbage refutes it.
+5. **Fix in the right place** - the era def in that build's folder (never the shared
+   base), or the serializer when the behaviour is era-universal.
+6. **Re-test** - single file first, then the full per-build matrix, then all five
+   builds whenever a serializer or shared type changed. Commit only on a clean matrix.
+
+Recurring bug classes this loop caught: fields hidden inside Ignore-padding (data
+zeroed on round-trip), unaligned `byte[]` padding standing in for aligned fields,
+era-inserted fields the imports missed, structs whose element data is 8-aligned in the
+engine's allocator versus packed neighbours (settled by measuring `{start mod 8,
+extent-to-next}` across every instance in a file rather than guessing), bools reading
+sentinel bytes (0x8F, 0xFEFEFEFE), duplicated names in enum lists making the
+name-to-index mapping lossy, and custom-serializer block ordering in the anim files.
+
+Wrong hypotheses were cheap because the harness rejected them within a minute: a
+blanket 8-alignment of list data looked right for two tables and was reverted when the
+matrix showed three other builds regressing. Where a whole struct had no usable
+ancestor (launch-era `GcSolarGenerationGlobals`), the layout was reconstructed
+field-by-field from a value-anchored side-by-side decode of the two builds' payloads.
 
 ## Status (2026-08-31, final)
 
