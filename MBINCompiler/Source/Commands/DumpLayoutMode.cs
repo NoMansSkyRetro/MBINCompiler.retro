@@ -32,8 +32,12 @@ namespace MBINCompiler.Commands {
             string build = RetroVersion.Selected?.Id ?? RetroVersion.CompiledInId;
 
             var baseType = typeof( NMSTemplate );
+            // Dump the active era's definitions only, so the two eras' same-named structs don't
+            // collide: 2017 era (1.24+) dumps libMBIN.Models.*, pre-2017 dumps the rest.
+            bool want2017 = NMSVersion.ActiveRank >= NMSVersion.Rank( "1.24" );
             var structs = baseType.Assembly.GetTypes()
                 .Where( t => t.IsSubclassOf( baseType ) && !t.IsAbstract )
+                .Where( t => ( t.Namespace?.StartsWith( "libMBIN.Models" ) ?? false ) == want2017 )
                 .OrderBy( t => t.Name, StringComparer.Ordinal );
 
             var sb = new StringBuilder();

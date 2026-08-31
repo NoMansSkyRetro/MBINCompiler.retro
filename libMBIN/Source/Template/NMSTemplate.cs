@@ -45,9 +45,11 @@ namespace libMBIN
         internal static readonly Dictionary<string, Type> PreTemplateMap  = BuildTemplateMap( false );
         internal static readonly Dictionary<string, Type> Template2017Map = BuildTemplateMap( true );
 
-        internal static Dictionary<string, Type> NMSTemplateMap =>
-            ( NMSVersion.ActiveRank >= NMSVersion.Rank( "1.24" ) && Template2017Map.Count > 0 )
-                ? Template2017Map : PreTemplateMap;
+        // The 2017 defs are used once imported and the active build is 1.24+. They OVERLAY the
+        // pre-2017 base: a name present in the 2017 set resolves there, everything else (infra
+        // types like MBINHeader/NMSString, base types, and any struct not in the 2017 set) falls
+        // back to the pre-2017 defs.
+        internal static bool Use2017Defs => NMSVersion.ActiveRank >= NMSVersion.Rank( "1.24" ) && Template2017Map.Count > 0;
 
         #region DebugLog
         // Conditionally compile methods for Release optimization.
@@ -91,8 +93,10 @@ namespace libMBIN
         #endregion
 
         public static Type GetTemplateType(string name) {
-            Type type = null;
-            if ( NMSTemplateMap.TryGetValue( name, out type ) ) return type;
+            // 2017 era: prefer the imported 2017 def; fall back to the pre-2017/base defs for
+            // infra types (MBINHeader, NMSString...) and any struct not in the 2017 set.
+            if ( Use2017Defs && Template2017Map.TryGetValue( name, out var t2017 ) ) return t2017;
+            if ( PreTemplateMap.TryGetValue( name, out var tPre ) ) return tPre;
             return null;
         }
 
@@ -123,7 +127,7 @@ namespace libMBIN
         }
 
         public static int OffsetOf(string className, string fieldName) {
-            return OffsetOf(NMSTemplateMap[className], fieldName);
+            return OffsetOf(GetTemplateType(className), fieldName);
         }
 
         /// <summary>
