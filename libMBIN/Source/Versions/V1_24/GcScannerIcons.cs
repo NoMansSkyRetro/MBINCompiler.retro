@@ -60,7 +60,11 @@ namespace libMBIN.V1_24.Structs
         /* 0x4750 */ public Colour SignalColour;
         /* 0x4760 */ public Colour UnknownColour;
 
-        /* 0x4770 */ public TkTextureResource CreatureDiscovered;
+        // eight more RGBA colours in the 1.24 file before the creature textures
+        [NMS(Size = 8)]
+        public Colour[] UnknownColours4770;
+
+        /* 0x47F0 */ public TkTextureResource CreatureDiscovered;
         /* 0x47F4 */ public TkTextureResource CreatureUndiscovered;
         /* 0x4878 */ public TkTextureResource CreatureUnknown;
         /* 0x48FC */ public TkTextureResource MessageBeacon;

@@ -60,12 +60,25 @@ namespace libMBIN.V1_38.Structs
         /* 0x4750 */ public Colour SignalColour;
         /* 0x4760 */ public Colour UnknownColour;
 
-        /* 0x4770 */ public TkTextureResource CreatureDiscovered;
+        // eight more RGBA colours in the 1.38 file before the creature textures
+        [NMS(Size = 8)]
+        public Colour[] UnknownColours4770;
+
+        /* 0x47F0 */ public TkTextureResource CreatureDiscovered;
         /* 0x47F4 */ public TkTextureResource CreatureUndiscovered;
         /* 0x4878 */ public TkTextureResource CreatureUnknown;
         /* 0x48FC */ public TkTextureResource MessageBeacon;
         /* 0x4980 */ public TkTextureResource MessageBeaconSmall;
         /* 0x4A04 */ public TkTextureResource BaseBuildingMarker;
+
+        // 1.38 additions (names from the shipped paths)
+        public TkTextureResource NetworkPlayer;
+        public TkTextureResource PlanetPoleNorth;
+        public TkTextureResource PlanetPoleSouth;
+        public TkTextureResource Monument;
+        public TkTextureResource NetworkPlayerShip;
+        public TkTextureResource NetworkPlayerVehicle;
+        public TkTextureResource BuildingRune;
 
         [NMS(Size = 8, Ignore = true)]
         /* 0x4A88 */ public byte[] EndPadding;
