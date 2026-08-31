@@ -29,10 +29,25 @@ namespace libMBIN
 {
     public class NMSTemplate
     {
-        internal static readonly Dictionary<string, Type> NMSTemplateMap = Assembly.GetExecutingAssembly()
-                .GetTypes()
-                .Where(t => t.BaseType == typeof(NMSTemplate))
-                .ToDictionary(t => t.Name);
+        // Pre-2017 struct defs live under libMBIN.NMS.* (the rc1 base); the imported 2017 defs
+        // (1.24/1.38) live under libMBIN.Models.*. Same-named structs across the two eras would
+        // collide in a single name->type map, so keep one map per era and route by the active
+        // build: 1.24+ uses the 2017 defs, everything else (incl. no active build) the pre-2017
+        // defs. Until the 2017 defs are imported that map is empty and it falls back to pre-2017,
+        // so behaviour is unchanged for the single-era case.
+        private static bool Is2017Def( Type t ) => t.Namespace != null && t.Namespace.StartsWith( "libMBIN.Models" );
+
+        private static Dictionary<string, Type> BuildTemplateMap( bool era2017 ) =>
+            Assembly.GetExecutingAssembly().GetTypes()
+                .Where( t => t.BaseType == typeof( NMSTemplate ) && Is2017Def( t ) == era2017 )
+                .GroupBy( t => t.Name ).ToDictionary( g => g.Key, g => g.First() );
+
+        internal static readonly Dictionary<string, Type> PreTemplateMap  = BuildTemplateMap( false );
+        internal static readonly Dictionary<string, Type> Template2017Map = BuildTemplateMap( true );
+
+        internal static Dictionary<string, Type> NMSTemplateMap =>
+            ( NMSVersion.ActiveRank >= NMSVersion.Rank( "1.24" ) && Template2017Map.Count > 0 )
+                ? Template2017Map : PreTemplateMap;
 
         #region DebugLog
         // Conditionally compile methods for Release optimization.

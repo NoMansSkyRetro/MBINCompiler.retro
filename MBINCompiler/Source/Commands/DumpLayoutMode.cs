@@ -26,15 +26,10 @@ namespace MBINCompiler.Commands {
     internal class DumpLayoutCommand : Command<DumpLayoutCommand> {
 
         public override int ExecuteCommand( CommandLineParser options ) {
-            // Only the compiled-in (rc1) definitions exist in this binary; warn if a different
-            // build was requested so the dump is not mistaken for that build's own layout.
-            string requested = RetroVersion.Selected?.Id;
-            if ( requested != null && requested != RetroVersion.CompiledInId ) {
-                CommandLine.ShowWarning(
-                    $"--nms-version {requested}: this binary carries the {RetroVersion.CompiledInId} " +
-                    "definitions; dumping those. Per-build definition sets are the RE frontier." );
-            }
-            string build = RetroVersion.CompiledInId;
+            // Layout reflects the active build: version-tagged fields are gated per build, so a
+            // struct with [NMSVersion] deltas dumps its correct per-build size/fields. Structs
+            // with no deltas fall back to the compiled-in (pre-2017 / rc1) layout.
+            string build = RetroVersion.Selected?.Id ?? RetroVersion.CompiledInId;
 
             var baseType = typeof( NMSTemplate );
             var structs = baseType.Assembly.GetTypes()
@@ -50,6 +45,7 @@ namespace MBINCompiler.Commands {
 
                 var fields = new List<(string name, string type, int off, int size)>();
                 foreach ( var f in t.GetFields( BindingFlags.Public | BindingFlags.Instance ) ) {
+                    if ( !NMSVersion.IsActive( f ) ) continue; // only the active build's fields
                     int off; int sz;
                     try { off = NMSTemplate.OffsetOf( t, f.Name ); } catch { off = -1; }
                     try { sz  = NMSTemplate.SizeOf( f ); }          catch { sz  = -1; }
