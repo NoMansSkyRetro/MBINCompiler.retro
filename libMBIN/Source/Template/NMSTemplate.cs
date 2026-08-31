@@ -803,6 +803,7 @@ namespace libMBIN
             //List<KeyValuePair<long, String>> entryOffsetNamePairs = new List<KeyValuePair<long, String>>();
 
             if ( type.Name != "EmptyNode" ) {
+                int queueStart = addtDataIndex;
                 foreach ( var field in fields ) {
                     var fieldAddr = writer.BaseStream.Position - templatePosition;      // location of the data within the struct
                     //Logger.LogDebug($"fieldAddr: 0x{fieldAddr:X}, templatePos: 0x{templatePosition:X}, name: {field.FieldType.Name}, value: {field.GetValue(this)}");
@@ -811,6 +812,22 @@ namespace libMBIN
                     SerializeValue( writer, field.FieldType, fieldData, settings, field, ref additionalData, ref addtDataIndex, listEnding );
                 }
                 writer.Align( AlignOf(type), type.Name ); // This is to remove the need for end padding
+
+                // vanilla writes the anim frame vector blocks as rotations, scales, translations;
+                // swap the queued Translations/Scales blocks so the disk order matches (headers stay put)
+                if ( type.Name == "TkAnimNodeFrameData" ) {
+                    int transIdx = -1, scaleIdx = -1;
+                    for ( int qi = queueStart; qi < addtDataIndex && qi < additionalData.Count; qi++ ) {
+                        long rel = additionalData[qi].Item1 - templatePosition;
+                        if ( rel == 0x10 ) transIdx = qi;
+                        else if ( rel == 0x20 ) scaleIdx = qi;
+                    }
+                    if ( transIdx >= 0 && scaleIdx >= 0 && transIdx < scaleIdx ) {
+                        var tmp = additionalData[transIdx];
+                        additionalData[transIdx] = additionalData[scaleIdx];
+                        additionalData[scaleIdx] = tmp;
+                    }
+                }
             } else {
                 SerializeValue( writer, type, null, null, null, ref additionalData, ref addtDataIndex, listEnding );
             }
@@ -923,8 +940,10 @@ namespace libMBIN
 
         public void SerializeList( BinaryWriter writer, IList list, long listHeaderPosition, ref List<Tuple<long, object>> additionalData, int addtDataIndex, UInt32 listEnding = (UInt32) 0xAAAAAA01 ) {
             // first thing we want to do is align the writer with the location of the first element of the list
+            // vanilla's anim writer memsets its buffer with 0xFE, so those pad bytes survive in the files
             if ( list.Count != 0 ) {
-                writer.Align( AlignOf(list[0].GetType()), list[0].GetType().Name );
+                byte fill = ( listEnding == 0xFEFEFE01 ) ? (byte) 0xFE : (byte) 0;
+                writer.Align( AlignOf(list[0].GetType()), list[0].GetType().Name, fill );
             }
 
             long listPosition = writer.BaseStream.Position;
