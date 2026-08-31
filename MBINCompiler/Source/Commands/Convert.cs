@@ -280,18 +280,18 @@ namespace MBINCompiler.Commands {
                       , filePath, mbin );
         }
         private static void FileIsUnrecognized( string filePath, MBINFile mbin, ulong expectedGUID = 0L ) {
-            WarnBroken( "File not recognized. You may need to use an older (or newer) version of MBINCompiler."
+            WarnBroken( "File not recognized. You may need to use an older (or newer) version of MBINCompiler.retro."
                       , filePath, mbin, null, expectedGUID );
         }
         private static void FileIsUnused(string filePath, MBINFile mbin)
         {
-            WarnBroken("This file is not supported by MBINCompiler as it is no longer used by the game. Do not report issues decompiling this file anywhere as it is not expected to."
+            WarnBroken("This file is not supported by MBINCompiler.retro as it is no longer used by the game. Do not report issues decompiling this file anywhere as it is not expected to."
                       , filePath, mbin);
         }
         private static void  FileIsBroken( string filePath, MBINFile mbin    ) => _FileIsBroken( filePath, mbin, null );
         private static void  FileIsBroken( string filePath, NMSTemplate data ) => _FileIsBroken( filePath, null, data );
         private static void _FileIsBroken( string filePath, MBINFile mbin, NMSTemplate data ) {
-            WarnBroken( "There are known issues with this file in the current version of MBINCompiler."
+            WarnBroken( "There are known issues with this file in the current version of MBINCompiler.retro.retro."
                       , filePath, mbin, data );
         }
 

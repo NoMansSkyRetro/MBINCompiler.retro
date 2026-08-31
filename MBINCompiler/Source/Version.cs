@@ -9,7 +9,7 @@ namespace MBINCompiler
         /// Get the version string for both MBINCompiler and libMBIN.
         /// Human-friendly formatted.
         /// </summary>
-        public static string GetVersionStringVerbose() => $"MBINCompiler v{libMBIN.Version.GetString()}";
+        public static string GetVersionStringVerbose() => $"MBINCompiler.retro v{libMBIN.Version.GetString()}";
 
         /// <summary>
         /// Get the version string without any decoration (just "X.X.X.X").
@@ -39,8 +39,8 @@ namespace MBINCompiler
 
             return !quiet
                 ? ( versionString != "0.0.0.0" )
-                ? "Compiled with MBINCompiler v" + versionString
-                : "Unknown MBIN version!\nNot compiled by MBINCompiler."
+                ? "Compiled with MBINCompiler.retro v" + versionString
+                : "Unknown MBIN version!\nNot compiled by MBINCompiler.retro."
                 : versionString;
         }
 

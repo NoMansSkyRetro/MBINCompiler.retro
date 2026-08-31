@@ -14,7 +14,7 @@ all compiled into the one libMBIN:
 | Build(s) | Struct set | Source | Improvements past the source |
 |----------|-----------|--------|------------------------------|
 | rc1 / fallback | base, `libMBIN.NMS.*` | the `rc1` branch defs (in truth a mixed RC1/1.09.1-era set) | kept frozen during the PC-build work; RC1-specific fixes now land in `V1_00` |
-| RC1 (PS4 disc) | `libMBIN.V1_00.*` | derived per struct against the disc psarcs | in progress; shadows base only where the disc layout differs |
+| RC1 (PS4 disc) | `libMBIN.V1_00.*` | the `rc1` branch defs, improved per struct | started from the RC1 branch definitions and fixed the structs whose disc layout differs, verified against the disc psarcs (and, for the structural cases, the PS4 `eboot` decompile) |
 | 1.09.1 (Release) | `libMBIN.V1_09_1.*` | derived per struct; falls back to base | ~30 structs derived from file evidence (globals, saves, reality/reward tables, the voxel/planet chain, launch-era GcSolarGenerationGlobals); 762/763 byte-perfect |
 | 1.13 (Foundation) | `libMBIN.V1_13.*` | imported `1a6c980e` (last pre-Path-Finder commit); falls back to base | ~60 structs fixed or rebuilt (GcUIGlobals and GcScannerIcons re-derived from the 1.24 defs, mission/reward/cost tables, planet chain, fog byte sentinel); 773/774 byte-perfect |
 | 1.24 (Path Finder) | `libMBIN.V1_24.*` | imported `1.24.4` tag (its csproj's file list) | base-infra dedup (the single biggest win: 119 to 173 clean), mission/reward/cost table shapes, 8-aligned requirement lists; 780/781 byte-perfect |

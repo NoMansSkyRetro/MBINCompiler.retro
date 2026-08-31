@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MBINCompiler")]
+[assembly: AssemblyTitle("MBINCompiler.retro")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MBINCompiler")]
+[assembly: AssemblyProduct("MBINCompiler.retro")]
 [assembly: AssemblyCopyright("Copyright © emoose 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

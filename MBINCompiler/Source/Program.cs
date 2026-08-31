@@ -95,12 +95,12 @@ namespace MBINCompiler {
 
             Logger.EnableTraceLogging = true;
 
-            Logger.LogMessage("VERSION", $"MBINCompiler v{Version.GetVersionStringCompact()}");
+            Logger.LogMessage("VERSION", $"MBINCompiler.retro v{Version.GetVersionStringCompact()}");
             Logger.LogMessage("ARGS", $"\"{string.Join("\" \"", args)}\"\n");
             using (var indent = new Logger.IndentScope()) {
                 Logger.LogMessage("If you encounter any errors, please submit a bug report and include this log file.\n" +
                     "Please check that there isn't already a similar issue open before creating a new one.\n" +
-                    "https://github.com/monkeyman192/MBINCompiler/issues\n");
+                    "https://github.com/NoMansSkyRetro/MBINCompiler.retro/issues\n");
             }
         }
     }

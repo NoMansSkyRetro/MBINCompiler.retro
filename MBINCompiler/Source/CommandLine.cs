@@ -54,7 +54,7 @@ namespace MBINCompiler {
             if (Console.IsOutputRedirected) return (int)code;
             using (var forceConsole = new ForceConsoleOutput())
             {
-                Console.Out.Write("MBINCompiler registered to the system path.");
+                Console.Out.Write("MBINCompiler.retro registered to the system path.");
             }
             WaitForKeypress();
             return (int)code;

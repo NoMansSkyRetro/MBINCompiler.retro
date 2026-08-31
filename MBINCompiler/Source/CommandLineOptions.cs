@@ -120,7 +120,7 @@ namespace MBINCompiler
             new Option { shortName = 'f', longName = "force",
                             description = "Skip files with errors and continue processing.\n" +
                                         "Do not pause for errors.\n" +
-                                        "(Any errors will be written to MBINCompiler.log)" },
+                                        "(Any errors will be written to MBINCompiler.retro.log)" },
 
             new Option { longName = "no-version", description = "Hide version info in EXML header." },
 
@@ -200,7 +200,7 @@ namespace MBINCompiler
                     FormatWrapped( "  help",     20, "Show this help info.", true ) +
                     FormatWrapped( "  version",  20, "Show version info.", true ) +
                     FormatWrapped( "  convert",  20, "Convert files between MBIN and EXML formats.", true ) +
-                    FormatWrapped( "  register", 20, "Add MBINCompiler to your systems PATH variable.", true) +
+                    FormatWrapped( "  register", 20, "Add MBINCompiler.retro to your systems PATH variable.", true) +
                     FormatWrapped( "  dumplayout", 20, "Dump per-build struct layouts (name/type/offset/size) as JSON.", true) );
 
             if ( OPTIONS_GENERAL.Count > 0 ) {
