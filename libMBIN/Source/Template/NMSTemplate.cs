@@ -1054,6 +1054,13 @@ namespace libMBIN
                         Dictionary<int, string> dataDict = (Dictionary<int, string>) dictData.Invoke( this, null );
                         valueString = dataDict[(int) value];
                     }
+                    // mirror of the {Field}Values() mapping in DeserializeEXmlValue; without
+                    // this the raw int is written and the reader maps it back to -1
+                    var writeValuesMethod = GetType().GetMethod(field.Name + "Values");
+                    if ( writeValuesMethod != null ) {
+                        string[] writeValues = (string[]) writeValuesMethod.Invoke( this, null );
+                        if ( (int) value >= 0 && (int) value < writeValues.Length ) valueString = writeValues[(int) value];
+                    }
 
                     break;
                 case "Single":
@@ -1288,7 +1295,10 @@ namespace libMBIN
                         if ( String.IsNullOrEmpty( xmlProperty.Value ) ) return -1;
 
                         string[] values = (string[]) valuesMethod.Invoke( template, null );
-                        return Array.FindIndex( values, v => v == xmlProperty.Value );
+                        int enumIndex = Array.FindIndex( values, v => v == xmlProperty.Value );
+                        // accept a raw int too, so EXMLs from before the writer mapped names still compile
+                        if ( enumIndex < 0 && int.TryParse( xmlProperty.Value, out var rawEnum ) ) return rawEnum;
+                        return enumIndex;
                     //} else if (settings?.EnumValue != null) {
                     //    if (String.IsNullOrEmpty(xmlProperty.Value)) return -1;
                     //    return Array.FindIndex(settings.EnumValue, v => v == xmlProperty.Value);

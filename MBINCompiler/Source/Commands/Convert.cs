@@ -19,6 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Threading.Tasks;
 
 using libMBIN;
@@ -256,8 +257,9 @@ namespace MBINCompiler.Commands {
                 data = EXmlFile.ReadTemplateFromStream( fIn, out templateName );
 
                 Type type = NMSTemplate.GetTemplateType( templateName );
-                var nms = (NMSAttribute) (data.GetType().GetCustomAttributes( typeof( NMSAttribute ), false )?[0] ?? null);
-                if ( nms.Broken ) FileIsBroken( inputPath, data );
+                // the retro-era defs mostly carry no class-level [NMS] attribute
+                var nms = data.GetType().GetCustomAttribute<NMSAttribute>();
+                if ( nms != null && nms.Broken ) FileIsBroken( inputPath, data );
 
                 if ( data is null ) throw new InvalidDataException( $"Failed to deserialize EXML." );
                 if ( data is libMBIN.NMS.Toolkit.TkGeometryData ) fileOut += ".PC";
