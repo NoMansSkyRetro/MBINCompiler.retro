@@ -50,24 +50,32 @@ cheap files. The thing we avoid is bespoke deltas.
   per build), `body_diff.py` (byte-level build compare), `verify_roundtrip.py` (the
   acceptance test: extract per-template samples, decompile, recompile, byte-compare).
 
-## Status (2026-08-31)
+## Status (2026-08-31, second pass)
 
 Round-trip verification (per-template samples; byte-perfect past the header):
-rc1 114/171 (base set frozen by request), 1.09.1 169/184, 1.13 171/191,
-1.24 186/195, 1.38 197/208. The RC1 set lives frozen in
-`libMBIN/Source/Versions/RC1` (namespace unchanged, still the per-template fallback).
+rc1 114/171 (base set frozen by request), 1.09.1 181/184, 1.13 188/191,
+**1.24 194/195 and 1.38 207/208 - complete except INPUTTEST (by design)**.
+The RC1 set lives frozen in `libMBIN/Source/Versions/RC1` (namespace unchanged,
+still the per-template fallback).
 
-## Open (the remaining tail, in rough effort order)
+Landed since the first pass: planets/voxel chains (all builds), solar systems
+(era SystemShips is a flat preload-cache list), mission tables (StartScanEvent
+0xA0 8-aligned, GetToScanEvent 0x118, BasePartNear 0x18, FreighterBattle packed
+0xC), GcUIGlobals-1.13 (derived from the 1.24 def; 17 model views, no Exocraft),
+reward tables in 1.09.1/1.13/1.24 (product/recipe/tech-recipe shapes, empty
+StartPurchase, 8-aligned Specific*/Substance data), 1.38 saves (mission
+participant 0x20), anims on every build (vanilla writes Rot/Scale/Trans block
+order, 0xFE alignment fill, CanCompress sentinel), LAYOUTLIST (trailing bool),
+and the cost tables in all three eras (measured per-type alignment/size model;
+GcCostBuildingParts is a 0x20 description plus a list of 0x18 part counts).
 
-- 1.13-era head-region reworks: GcUIGlobals, GcGameplayGlobals (1.13 delta),
-  GcEnvironmentGlobals (+56), GcGraphicsGlobals (+192), GcScannerIcons - each adds
-  colour/texture blocks the Foundation update introduced.
-- 1.09.1 deep structs: GcDefaultSaveData, GcRealityManagerData (DEFAULTREALITY),
-  GcPlanetData, GcSolarGenerationGlobals, TkVoxelGeneratorSettingsArray, GcSkyGlobals.
-- GcCostTable: the cost subtypes (GcCostSubstance at least) are far larger in the era
-  files than any def; needs entry-level modeling (fails in all four PC builds).
-- GcMissionTable small per-era drifts; TkNGuiLayoutList 1.38 (6 bytes).
-- TkAnimMetadata custom serializer writes two float sections in swapped order
-  (same-size byte-diffs on every anim).
-- METADATA/INPUTTEST.MBIN has an invalid header in every build ("Not a valid MBIN") -
-  possibly not a real MBIN; ignore or special-case.
+## Open (the remaining tail)
+
+- 1.13 GcScannerIcons (-2560: era texture/colour grid differs; irregular).
+- GcSkyGlobals: 1.13 one byte (a fog-struct first byte 0x8F normalized to 01);
+  1.09.1 same-size diff (struct heavily reworked between disc and release).
+- 1.09.1 GcSolarGenerationGlobals: decompile reads past EOF; no era def exists
+  in any historical set; needs full derivation (384-byte payload).
+- METADATA/INPUTTEST.MBIN: pre-2500 debug input capture, older header layout -
+  intentionally unsupported in every build.
+- rc1 stays frozen (44 dec-fail / 12 byte-diff untouched by request).
