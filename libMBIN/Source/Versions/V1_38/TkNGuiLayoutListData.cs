@@ -1,4 +1,4 @@
-﻿namespace libMBIN.V1_38.Structs
+namespace libMBIN.V1_38.Structs
 {
     public class TkNGuiLayoutListData : NMSTemplate
     {
@@ -8,5 +8,6 @@
         public string Filename;
         [NMS(Size = 0x80)]
         public string Default;
+        public bool Unknown180;
     }
 }
