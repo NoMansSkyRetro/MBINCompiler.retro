@@ -1,4 +1,4 @@
-﻿using libMBIN.NMS;
+using libMBIN.NMS;
 using System.Collections.Generic;
 
 using libMBIN.NMS.Toolkit;
@@ -23,8 +23,8 @@ namespace libMBIN.V1_13.Structs
         [NMS(Size = 4, Ignore = true)]
         /* 0x2C4 */ public byte[] Padding2C4;
 
-        // 1.13: a list inserted here (empty in every shipped biome file)
-        public List<NMSTemplate> Unknown2C8;
+        // 1.13: an int list inserted here (e.g. {2,3} in the interactive-flora files)
+        public List<int> Unknown2C8;
 
         [NMS(Size = 0x10)]
         /* 0x2C8 */ public string Placement;
