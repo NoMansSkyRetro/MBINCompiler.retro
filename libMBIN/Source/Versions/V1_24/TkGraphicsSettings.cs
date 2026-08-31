@@ -8,9 +8,9 @@ namespace libMBIN.V1_24.Structs
 		/* 0x04 */ public bool FullScreen;
         /* 0x05 */ public bool Borderless;
         /* 0x08 */ public int Monitor;
-        [NMS(Size = 0x10, Ignore = true)]
-        /* 0x10 */ public byte[] Padding10;
-        /* 0x10  public TkMonitorNames; */      // unknown type... whatever it is, it is a list...
+        // was [NMS(Size=0x10, Ignore=true)] byte[] Padding10: unaligned byte[] read from
+        // 0x0C and shifted every later field by 4; the real field is an 8-aligned list
+        /* 0x10 */ public List<NMSString0x20> MonitorNames;
 		/* 0x20 */ public bool UseScreenResolution;
         /* 0x24 */ public int ResolutionWidth;
         /* 0x28 */ public int ResolutionHeight;
@@ -66,7 +66,8 @@ namespace libMBIN.V1_24.Structs
 		/* 0x70 */ public int TexturePageSizeKb;
 		/* 0x74 */ public bool ShowRequirementsWarnings;
 		/* 0x75 */ public bool RemoveBaseBuildingRestrictions;
-		[NMS(Size = 3, Ignore = true)]
+		// Size was 3 to resync the -4 drift the old Padding10 byte[] caused; true padding is 2
+		[NMS(Size = 2, Ignore = true)]
 		/* 0x76 */ public byte[] Padding76;
 		/* 0x78 */ public int BaseBuildingLimit;
         /* 0x7C */ public float MouseClickSpeedMultiplier;

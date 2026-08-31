@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
-namespace libMBIN.V1_38.Structs
+using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; using libMBIN.NMS.Toolkit; namespace libMBIN.V1_13.Structs
 {
     public class TkGraphicsSettings : NMSTemplate
     {
@@ -15,7 +15,7 @@ namespace libMBIN.V1_38.Structs
         /* 0x24 */ public int ResolutionWidth;
         /* 0x28 */ public int ResolutionHeight;
         /* 0x2C */ public int VSyncEx;
-		public string[] VsyncExValues()
+		public string[] VsyncValues()
 		{
 			return new string[] { "Off", "On", "Adaptive" };
 		}
@@ -41,7 +41,7 @@ namespace libMBIN.V1_38.Structs
             return new string[] { "Low", "Normal", "High" };
         }
         /* 0x44 */ public int AntiAliasingEx2;
-        public string[] AntiAliasingEX2Values()
+        public string[] AntiAliasingValues()
         {
             return new string[] { "Auto", "None", "FXAA", "TAA_LOW", "TAA", "TAA_FXAA", "SSAA4" };
         }
@@ -56,27 +56,20 @@ namespace libMBIN.V1_38.Structs
         /* 0x58 */ public float FoVInShip;
         /* 0x5C */ public int Brightness;
         /* 0x60 */ public int MaxframeRate;
-		/* 0x64 */ public int NumHighThreads;
-		/* 0x68 */ public int NumLowThreads;
-		/* 0x6C */ public int TextureStreamingEx;
-		public string[] TextureStreamingExValues()
+        /* 0x64 */ public bool NoHudMode;
+		/* 0x68 */ public int NumHighThreads;
+		/* 0x6C */ public int NumLowThreads;
+		/* 0x70 */ public int TextureStreaming;
+		public string[] TextureStreamingValues()
 		{
-			return new string[] { "Off", "On", "Auto" };
+			return new string[] { "Off", "On" };
 		}
-		/* 0x70 */ public int TexturePageSizeKb;
-		/* 0x74 */ public bool ShowRequirementsWarnings;
-		/* 0x75 */ public bool RemoveBaseBuildingRestrictions;
+		/* 0x74 */ public int TexturePageSizeKb;
+		/* 0x78 */ public bool ShowRequirementsWarnings;
+		/* 0x79 */ public bool RemoveBaseBuildingRestrictions;
 		// Size was 3 to resync the -4 drift the old Padding10 byte[] caused; true padding is 2
 		[NMS(Size = 2, Ignore = true)]
-		/* 0x76 */ public byte[] Padding76;
-		/* 0x78 */ public int BaseBuildingLimit;
-        /* 0x7C */ public float MouseClickSpeedMultiplier;
-        /* 0x80 */ public int AmbientOcclusion;
-        public string[] AmbientOcclusionValues()
-        {
-            return new string[] { "SSAO", "HBAO", "Off" };
-        }
-        /* 0x84 */ public bool UseHDR;
-        /* 0x85 */ public bool UseLightShafts;
+		/* 0x7A */ public byte[] Padding80;
+		/* 0x7C */ public int BaseBuildingLimit;
     }
 }

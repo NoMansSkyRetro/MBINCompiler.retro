@@ -1254,7 +1254,11 @@ namespace libMBIN
 
                 NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
                 if ( settings == null ) settings = new NMSAttribute();
-                if ( settings.Ignore ) continue;
+                // Ignore(=padding) fields ARE read/written in binary, so dropping them here
+                // made every EXML round-trip zero those regions; the retro defs use padding
+                // over regions that still hold real (unmapped) data, so keep it lossless.
+                // EXMLs without these properties still compile (field stays null -> zeros).
+                if ( settings.Ignore && field.GetValue( this ) == null ) continue;
 
                 xmlData.Elements.Add( SerializeEXmlValue( field.FieldType, field, settings, field.GetValue( this ) ) );
             }
