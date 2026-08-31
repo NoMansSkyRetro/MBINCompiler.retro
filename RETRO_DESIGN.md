@@ -50,11 +50,13 @@ cheap files. The thing we avoid is bespoke deltas.
   per build), `body_diff.py` (byte-level build compare), `verify_roundtrip.py` (the
   acceptance test: extract per-template samples, decompile, recompile, byte-compare).
 
-## Status (2026-08-31, second pass)
+## Status (2026-08-31, final)
 
 Round-trip verification (per-template samples; byte-perfect past the header):
-rc1 114/171 (base set frozen by request), 1.09.1 181/184, 1.13 188/191,
-**1.24 194/195 and 1.38 207/208 - complete except INPUTTEST (by design)**.
+**all four PC builds are complete: 1.09.1 183/184, 1.13 190/191, 1.24 194/195,
+1.38 207/208 - the single failure in each is METADATA/INPUTTEST.MBIN, a
+pre-2500 debug capture with an older header, unsupported by design.**
+rc1 stays at 114/171 (base set frozen by request).
 The RC1 set lives frozen in `libMBIN/Source/Versions/RC1` (namespace unchanged,
 still the per-template fallback).
 
@@ -69,13 +71,10 @@ order, 0xFE alignment fill, CanCompress sentinel), LAYOUTLIST (trailing bool),
 and the cost tables in all three eras (measured per-type alignment/size model;
 GcCostBuildingParts is a 0x20 description plus a list of 0x18 part counts).
 
-## Open (the remaining tail)
+## Open
 
-- 1.13 GcScannerIcons (-2560: era texture/colour grid differs; irregular).
-- GcSkyGlobals: 1.13 one byte (a fog-struct first byte 0x8F normalized to 01);
-  1.09.1 same-size diff (struct heavily reworked between disc and release).
-- 1.09.1 GcSolarGenerationGlobals: decompile reads past EOF; no era def exists
-  in any historical set; needs full derivation (384-byte payload).
 - METADATA/INPUTTEST.MBIN: pre-2500 debug input capture, older header layout -
   intentionally unsupported in every build.
 - rc1 stays frozen (44 dec-fail / 12 byte-diff untouched by request).
+- Coverage is per-template sampled (3 files per root template per build); a
+  wider sample may still surface rare per-file variants.
