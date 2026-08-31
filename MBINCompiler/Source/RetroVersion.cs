@@ -52,6 +52,7 @@ namespace MBINCompiler {
         public static bool Select( string id ) {
             if ( !TryParse( id, out var b ) ) return false;
             Selected = b;
+            NMSVersion.SetActive( b.Id ); // drive libMBIN's version-filtered field walk
             return true;
         }
 

@@ -124,7 +124,7 @@ namespace libMBIN
         /// <returns></returns>
         public static int OffsetOf(Type type, string fieldName)
         {
-            var fields = type.GetFields().OrderBy(field => field.MetadataToken);
+            var fields = type.GetFields().OrderBy(field => field.MetadataToken).Where(NMSVersion.IsActive);
             int offset = 0;
             foreach (var field in fields)
             {
@@ -222,7 +222,7 @@ namespace libMBIN
                     // fields.
                     int max_alignment = 1;
                     int alignment = 1;
-                    foreach (FieldInfo field in type.GetFields()) {
+                    foreach (FieldInfo field in type.GetFields().Where(NMSVersion.IsActive)) {
                         alignment = AlignOf(field.FieldType);
                         // If the current size doesn't match the alignment of the current field,
                         // then align it.
@@ -314,7 +314,7 @@ namespace libMBIN
                     if (type.BaseType == typeof(NMSTemplate)) {
                         alignment = 1;
 
-                        foreach (FieldInfo field in type.GetFields()) {
+                        foreach (FieldInfo field in type.GetFields().Where(NMSVersion.IsActive)) {
                             int align = AlignOf(field.FieldType);
                             if (align > alignment) {
                                 alignment = align;
@@ -471,7 +471,7 @@ namespace libMBIN
                 }
 
                 var type = obj.GetType();
-                var fields = type.GetFields().OrderBy( field => field.MetadataToken ); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
+                var fields = type.GetFields().OrderBy( field => field.MetadataToken ).Where(NMSVersion.IsActive); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
                 foreach ( var field in fields ) {
                     NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
                     if ( field.FieldType.IsEnum ) {
@@ -752,7 +752,7 @@ namespace libMBIN
             long templatePosition = writer.BaseStream.Position;
             //Logger.LogDebug( $"[C] writing {GetType().Name} to offset 0x{templatePosition:X} (parent: {parent.Name})" );
             var type = GetType();
-            var fields = type.GetFields().OrderBy( field => field.MetadataToken ); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
+            var fields = type.GetFields().OrderBy( field => field.MetadataToken ).Where(NMSVersion.IsActive); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
             //var entryOffsetNamePairs = new Dictionary<long, string>();
             //List<KeyValuePair<long, String>> entryOffsetNamePairs = new List<KeyValuePair<long, String>>();
@@ -1218,7 +1218,7 @@ namespace libMBIN
                 xmlData = new EXmlData { Template = type.Name };
             }
 
-            var fields = type.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
+            var fields = type.GetFields().OrderBy(field => field.MetadataToken).Where(NMSVersion.IsActive); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
             foreach ( var field in fields ) {
 
@@ -1416,7 +1416,7 @@ namespace libMBIN
             if (template == null) return null;
 
             Type templateType = template.GetType();
-            var templateFields = templateType.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
+            var templateFields = templateType.GetFields().OrderBy(field => field.MetadataToken).Where(NMSVersion.IsActive); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
             foreach (var templateField in templateFields) {
                 // check to see if the object has a default value in the struct
