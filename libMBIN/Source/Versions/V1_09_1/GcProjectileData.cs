@@ -22,8 +22,9 @@ namespace libMBIN.V1_09_1.Structs
         /* 0x2D8 */ public int MiningDamage;
         /* 0x2DC */ public int Bounces;
         /* 0x2E0 */ public bool HitOnBounce;
+        public int Unknown2F4; // hidden in the alignment gap before PlayerDamage (1 for homing-ish projectiles)
 
-        /* 0x2E8 */ public GcProjectileDamageId PlayerDamage; // 0xC string + a bool the base def's NMSString0x10 swallowed
+        /* 0x2E8 */ public NMSString0x10 PlayerDamage;
         /* 0x300 */ public Colour Colour;
         [NMS(Size = 4, Ignore = true)]
         /* 0x310 */ public byte[] Padding310;
@@ -31,17 +32,5 @@ namespace libMBIN.V1_09_1.Structs
         /* 0x314 */ public ClassEnum Class;
         /* 0x318 */ public NMSString0x10 DefaultImpact;
         /* 0x328 */ public List<GcProjectileImpactData> Impacts;
-    }
-
-    // 1.09.1-era: PlayerDamage is a 12-char id followed by a flag byte, packed where the
-    // base def declared a full NMSString0x10 (same 16 bytes, same 8-alignment)
-    [NMS(Size = 0x10, Alignment = 0x8)]
-    public class GcProjectileDamageId : NMSTemplate
-    {
-        [NMS(Size = 0xC)]
-        public string Id;
-        public bool Unknown2F4;
-        [NMS(Size = 3, Ignore = true)]
-        public byte[] Padding;
     }
 }

@@ -19,5 +19,8 @@ namespace libMBIN.V1_13.Structs
         /* 0xB5 */ public byte UnknownB5;
         /* 0xB6 */ public ushort UnknownB6; // real 16-bit value hidden in the bool's alignment gap
         /* 0xB8 */ public float MaxSpawnDistance;
-    }
+    
+        // 1.13: a real value (looks like an id hash) in what 1.09.1 leaves as end padding
+        public float UnknownBC;
+}
 }

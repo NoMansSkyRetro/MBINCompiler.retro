@@ -19,5 +19,8 @@ namespace libMBIN.V1_09_1.Structs
         /* 0xB5 */ public byte UnknownB5;
         /* 0xB6 */ public ushort UnknownB6; // real 16-bit value hidden in the bool's alignment gap
         /* 0xB8 */ public float MaxSpawnDistance;
-    }
+    
+        // real value (100.0 in one PlanetEffects entry) in what the base def leaves as end padding
+        public float UnknownBC;
+}
 }
