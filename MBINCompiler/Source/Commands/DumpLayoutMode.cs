@@ -26,18 +26,19 @@ namespace MBINCompiler.Commands {
     internal class DumpLayoutCommand : Command<DumpLayoutCommand> {
 
         public override int ExecuteCommand( CommandLineParser options ) {
-            // Layout reflects the active build: version-tagged fields are gated per build, so a
-            // struct with [NMSVersion] deltas dumps its correct per-build size/fields. Structs
-            // with no deltas fall back to the compiled-in (pre-2017 / rc1) layout.
+            // Dump the active build's own struct folder: a build with a dedicated folder
+            // (1.24 -> libMBIN.V1_24, 1.38 -> libMBIN.V1_38) dumps that folder; builds using the
+            // base set (rc1 / 1.09.1 / 1.13) dump the non-versioned structs.
             string build = RetroVersion.Selected?.Id ?? RetroVersion.CompiledInId;
+            string folder = NMSVersion.FolderPrefix;
 
             var baseType = typeof( NMSTemplate );
-            // Dump the active era's definitions only, so the two eras' same-named structs don't
-            // collide: 2017 era (1.24+) dumps libMBIN.Models.*, pre-2017 dumps the rest.
-            bool want2017 = NMSVersion.ActiveRank >= NMSVersion.Rank( "1.24" );
+            bool anyInFolder = baseType.Assembly.GetTypes().Any( t => t.Namespace?.StartsWith( folder ) ?? false );
             var structs = baseType.Assembly.GetTypes()
                 .Where( t => t.IsSubclassOf( baseType ) && !t.IsAbstract )
-                .Where( t => ( t.Namespace?.StartsWith( "libMBIN.Models" ) ?? false ) == want2017 )
+                .Where( t => anyInFolder
+                    ? ( t.Namespace?.StartsWith( folder ) ?? false )
+                    : !NMSVersion.IsVersionedNamespace( t.Namespace ) )
                 .OrderBy( t => t.Name, StringComparer.Ordinal );
 
             var sb = new StringBuilder();
@@ -49,7 +50,6 @@ namespace MBINCompiler.Commands {
 
                 var fields = new List<(string name, string type, int off, int size)>();
                 foreach ( var f in t.GetFields( BindingFlags.Public | BindingFlags.Instance ) ) {
-                    if ( !NMSVersion.IsActive( f ) ) continue; // only the active build's fields
                     int off; int sz;
                     try { off = NMSTemplate.OffsetOf( t, f.Name ); } catch { off = -1; }
                     try { sz  = NMSTemplate.SizeOf( f ); }          catch { sz  = -1; }

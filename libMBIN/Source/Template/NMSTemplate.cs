@@ -29,27 +29,30 @@ namespace libMBIN
 {
     public class NMSTemplate
     {
-        // Pre-2017 struct defs live under libMBIN.NMS.* (the rc1 base); the imported 2017 defs
-        // (1.24/1.38) live under libMBIN.Models.*. Same-named structs across the two eras would
-        // collide in a single name->type map, so keep one map per era and route by the active
-        // build: 1.24+ uses the 2017 defs, everything else (incl. no active build) the pre-2017
-        // defs. Until the 2017 defs are imported that map is empty and it falls back to pre-2017,
-        // so behaviour is unchanged for the single-era case.
-        private static bool Is2017Def( Type t ) => t.Namespace != null && t.Namespace.StartsWith( "libMBIN.Models" );
+        // Each targeted build has a complete struct set in its own namespace folder
+        // (libMBIN.V1_24.*, libMBIN.V1_38.*); the base set (rc1 structs in libMBIN.NMS.* plus
+        // shared infra like MBINHeader / NMSString) serves rc1/1.09.1/1.13 and backs every build
+        // for infra types. The active build resolves in its own folder first, then the base.
+        private static string FolderOf( Type t ) {           // "libMBIN.V1_38.Structs.X" -> "libMBIN.V1_38"
+            string ns = t.Namespace;
+            int dot = ns.IndexOf( '.', "libMBIN.".Length );
+            return dot < 0 ? ns : ns.Substring( 0, dot );
+        }
 
-        private static Dictionary<string, Type> BuildTemplateMap( bool era2017 ) =>
+        private static Dictionary<string, Type> ToNameMap( IEnumerable<Type> types ) =>
+            types.GroupBy( t => t.Name ).ToDictionary( g => g.Key, g => g.First() );
+
+        // Base set: everything not in a per-version folder (rc1 structs + shared infra).
+        internal static readonly Dictionary<string, Type> BaseTemplateMap =
+            ToNameMap( Assembly.GetExecutingAssembly().GetTypes()
+                .Where( t => t.BaseType == typeof( NMSTemplate ) && !NMSVersion.IsVersionedNamespace( t.Namespace ) ) );
+
+        // One name->type map per version folder, keyed by folder prefix (e.g. "libMBIN.V1_38").
+        internal static readonly Dictionary<string, Dictionary<string, Type>> VersionTemplateMaps =
             Assembly.GetExecutingAssembly().GetTypes()
-                .Where( t => t.BaseType == typeof( NMSTemplate ) && Is2017Def( t ) == era2017 )
-                .GroupBy( t => t.Name ).ToDictionary( g => g.Key, g => g.First() );
-
-        internal static readonly Dictionary<string, Type> PreTemplateMap  = BuildTemplateMap( false );
-        internal static readonly Dictionary<string, Type> Template2017Map = BuildTemplateMap( true );
-
-        // The 2017 defs are used once imported and the active build is 1.24+. They OVERLAY the
-        // pre-2017 base: a name present in the 2017 set resolves there, everything else (infra
-        // types like MBINHeader/NMSString, base types, and any struct not in the 2017 set) falls
-        // back to the pre-2017 defs.
-        internal static bool Use2017Defs => NMSVersion.ActiveRank >= NMSVersion.Rank( "1.24" ) && Template2017Map.Count > 0;
+                .Where( t => t.BaseType == typeof( NMSTemplate ) && NMSVersion.IsVersionedNamespace( t.Namespace ) )
+                .GroupBy( FolderOf )
+                .ToDictionary( g => g.Key, g => ToNameMap( g ) );
 
         #region DebugLog
         // Conditionally compile methods for Release optimization.
@@ -93,10 +96,11 @@ namespace libMBIN
         #endregion
 
         public static Type GetTemplateType(string name) {
-            // 2017 era: prefer the imported 2017 def; fall back to the pre-2017/base defs for
-            // infra types (MBINHeader, NMSString...) and any struct not in the 2017 set.
-            if ( Use2017Defs && Template2017Map.TryGetValue( name, out var t2017 ) ) return t2017;
-            if ( PreTemplateMap.TryGetValue( name, out var tPre ) ) return tPre;
+            // Prefer the active build's own folder; fall back to the base set for shared infra
+            // (MBINHeader, NMSString...) and for builds with no dedicated folder (rc1/1.09.1/1.13).
+            if ( VersionTemplateMaps.TryGetValue( NMSVersion.FolderPrefix, out var vmap )
+                 && vmap.TryGetValue( name, out var tv ) ) return tv;
+            if ( BaseTemplateMap.TryGetValue( name, out var tb ) ) return tb;
             return null;
         }
 
@@ -143,7 +147,7 @@ namespace libMBIN
         /// <returns></returns>
         public static int OffsetOf(Type type, string fieldName)
         {
-            var fields = type.GetFields().OrderBy(field => field.MetadataToken).Where(NMSVersion.IsActive);
+            var fields = type.GetFields().OrderBy(field => field.MetadataToken);
             int offset = 0;
             foreach (var field in fields)
             {
@@ -241,7 +245,7 @@ namespace libMBIN
                     // fields.
                     int max_alignment = 1;
                     int alignment = 1;
-                    foreach (FieldInfo field in type.GetFields().Where(NMSVersion.IsActive)) {
+                    foreach (FieldInfo field in type.GetFields()) {
                         alignment = AlignOf(field.FieldType);
                         // If the current size doesn't match the alignment of the current field,
                         // then align it.
@@ -333,7 +337,7 @@ namespace libMBIN
                     if (type.BaseType == typeof(NMSTemplate)) {
                         alignment = 1;
 
-                        foreach (FieldInfo field in type.GetFields().Where(NMSVersion.IsActive)) {
+                        foreach (FieldInfo field in type.GetFields()) {
                             int align = AlignOf(field.FieldType);
                             if (align > alignment) {
                                 alignment = align;
@@ -490,7 +494,7 @@ namespace libMBIN
                 }
 
                 var type = obj.GetType();
-                var fields = type.GetFields().OrderBy( field => field.MetadataToken ).Where(NMSVersion.IsActive); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
+                var fields = type.GetFields().OrderBy( field => field.MetadataToken ); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
                 foreach ( var field in fields ) {
                     NMSAttribute settings = field.GetCustomAttribute<NMSAttribute>();
                     if ( field.FieldType.IsEnum ) {
@@ -771,7 +775,7 @@ namespace libMBIN
             long templatePosition = writer.BaseStream.Position;
             //Logger.LogDebug( $"[C] writing {GetType().Name} to offset 0x{templatePosition:X} (parent: {parent.Name})" );
             var type = GetType();
-            var fields = type.GetFields().OrderBy( field => field.MetadataToken ).Where(NMSVersion.IsActive); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
+            var fields = type.GetFields().OrderBy( field => field.MetadataToken ); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
             //var entryOffsetNamePairs = new Dictionary<long, string>();
             //List<KeyValuePair<long, String>> entryOffsetNamePairs = new List<KeyValuePair<long, String>>();
@@ -1237,7 +1241,7 @@ namespace libMBIN
                 xmlData = new EXmlData { Template = type.Name };
             }
 
-            var fields = type.GetFields().OrderBy(field => field.MetadataToken).Where(NMSVersion.IsActive); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
+            var fields = type.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
             foreach ( var field in fields ) {
 
@@ -1435,7 +1439,7 @@ namespace libMBIN
             if (template == null) return null;
 
             Type templateType = template.GetType();
-            var templateFields = templateType.GetFields().OrderBy(field => field.MetadataToken).Where(NMSVersion.IsActive); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
+            var templateFields = templateType.GetFields().OrderBy(field => field.MetadataToken); // hack to get fields in order of declaration (todo: use something less hacky, this might break mono?)
 
             foreach (var templateField in templateFields) {
                 // check to see if the object has a default value in the struct

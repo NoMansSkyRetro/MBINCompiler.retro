@@ -1,16 +1,18 @@
 using System;
-using System.Reflection;
 
 namespace libMBIN {
 
     /// <summary>
-    /// Retro multi-version support. Struct fields that differ across the targeted legacy NMS
-    /// builds carry <see cref="NMSVersionAttribute"/>; the (de)serialise field walk includes
-    /// only the fields valid for the active build. Untagged fields belong to every build.
+    /// Retro multi-version support. This fork carries a complete struct definition set per
+    /// targeted NMS build, each in its own namespace folder, all compiled into one libMBIN:
     ///
-    /// With no active build set (<see cref="ActiveRank"/> &lt; 0) nothing is filtered, so the
-    /// behaviour is identical to single-version libMBIN. MBINCompiler's RetroVersion sets the
-    /// active build from --nms-version / autodetection.
+    ///   rc1 / 1.09.1 / 1.13   the base set        libMBIN.NMS.*      (the rc1 branch defs)
+    ///   1.24 (Path Finder)    libMBIN.V1_24.*     (imported 1.24.4 tag)
+    ///   1.38 (Atlas Rises)    libMBIN.V1_38.*     (imported 1.38.0.2 tag)
+    ///
+    /// The active build selects which folder resolves a template (see
+    /// NMSTemplate.GetTemplateType); there are no per-field version deltas. MBINCompiler's
+    /// RetroVersion sets the active build from --nms-version / autodetection.
     /// </summary>
     public static class NMSVersion {
 
@@ -19,32 +21,22 @@ namespace libMBIN {
 
         public static int Rank( string id ) => id == null ? -1 : Array.IndexOf( Order, id );
 
-        /// <summary>Active build rank, or -1 for "no filtering" (single-version behaviour).</summary>
-        public static int ActiveRank = -1;
+        /// <summary>Active build id, or null for the base (rc1) set.</summary>
+        public static string ActiveId = null;
 
-        public static void SetActive( string id ) => ActiveRank = Rank( id );
-        public static void Clear() => ActiveRank = -1;
+        public static int ActiveRank => Rank( ActiveId );
 
-        /// <summary>Is this field present in the active build? Untagged = yes; no active build = yes.</summary>
-        public static bool IsActive( FieldInfo field ) {
-            if ( ActiveRank < 0 ) return true;
-            var v = field.GetCustomAttribute<NMSVersionAttribute>();
-            if ( v == null ) return true;
-            if ( v.FirstRank >= 0 && ActiveRank < v.FirstRank ) return false;
-            if ( v.LastRank  >= 0 && ActiveRank > v.LastRank )  return false;
-            return true;
-        }
-    }
+        public static void SetActive( string id ) => ActiveId = id;
+        public static void Clear() => ActiveId = null;
 
-    /// <summary>Marks a struct field as present only for a range of NMS builds (see <see cref="NMSVersion.Order"/>).</summary>
-    [AttributeUsage( AttributeTargets.Field, AllowMultiple = false )]
-    public class NMSVersionAttribute : Attribute {
-        /// <summary>First build id the field appears in (inclusive). Null = from the earliest build.</summary>
-        public string First { get; set; }
-        /// <summary>Last build id the field appears in (inclusive). Null = through the latest build.</summary>
-        public string Last  { get; set; }
+        /// <summary>
+        /// Namespace prefix of the active build's own struct folder, e.g. "1.24" -> libMBIN.V1_24.
+        /// Builds with no dedicated folder (rc1/1.09.1/1.13) map to a prefix that matches nothing,
+        /// so they fall back to the base set.
+        /// </summary>
+        public static string FolderPrefix => "libMBIN.V" + (ActiveId ?? "").Replace( ".", "_" );
 
-        public int FirstRank => NMSVersion.Rank( First );
-        public int LastRank  => NMSVersion.Rank( Last );
+        /// <summary>True if a type belongs to some version's dedicated folder (not the base set).</summary>
+        public static bool IsVersionedNamespace( string ns ) => ns != null && ns.StartsWith( "libMBIN.V1_" );
     }
 }

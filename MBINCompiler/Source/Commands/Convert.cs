@@ -188,6 +188,13 @@ namespace MBINCompiler.Commands {
             MBINFile mbin = new MBINFile( fIn );
             if ( !(mbin.Load() && mbin.Header.IsValid) ) throw new InvalidDataException( "Not a valid MBIN file!" );
 
+            // Retro: unless --nms-version was given, pick the build from the header stamp so a
+            // stamped file uses the right era's defs automatically (unstamped -> pre-2017 base).
+            if ( RetroVersion.Selected == null ) {
+                var detected = RetroVersion.Detect( mbin.Header );
+                if ( detected != null ) NMSVersion.SetActive( detected.Value.Id ); else NMSVersion.Clear();
+            }
+
             Type type = NMSTemplate.GetTemplateType( mbin.Header.GetXMLTemplateName() );
             // Get the Attribute. If there isn't one just don't worry about it...
             object[] attr = type.GetCustomAttributes( typeof( NMSAttribute ), false );

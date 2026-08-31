@@ -1,63 +1,51 @@
 # MBINCompiler.retro design
 
-Goal: **one** libMBIN that reads/writes every targeted legacy build (RC1 / 1.09.1, 1.13,
-1.24, 1.38), version-selected at runtime, not a pile of era libMBINs loaded side by side.
+Goal: **one** binary that reads/writes every targeted legacy NMS build, version-selected at
+runtime, with no pile of era binaries and no hand-maintained per-field deltas.
 
-## Why one libMBIN, not several
+## One binary, one complete struct folder per build
 
-libMBIN ships with MBINCompiler and shares its version; "the RC1 libMBIN" just means libMBIN
-built from the `rc1` branch (our base). Each era's definitions live in a different place and
-toolchain:
+libMBIN and MBINCompiler ship together and share a version; "the RC1 libMBIN" just means
+libMBIN built from the `rc1` branch (our base). The struct definitions changed enough between
+builds (naming and layout) that carrying per-field version deltas would be its own clutter, so
+instead each build gets a **complete, self-contained struct set in its own namespace folder**,
+all compiled into the one libMBIN:
 
-| Era | Source | Toolchain |
-|-----|--------|-----------|
-| RC1 / launch (1.09.1) | `rc1` branch (base) | net6, modern, has `OffsetOf` |
-| 1.24 | `1.24.4` tag | net452, 2017, no `OffsetOf` |
-| 1.38 | `1.38.0.2` tag | net452, 2017, no `OffsetOf` |
-| 1.13 | none exists | — |
+| Build(s) | Struct set | Source |
+|----------|-----------|--------|
+| rc1 / 1.09.1 / 1.13 | base, `libMBIN.NMS.*` | the `rc1` branch defs |
+| 1.24 (Path Finder) | `libMBIN.V1_24.*` | imported `1.24.4` tag (its csproj's file list) |
+| 1.38 (Atlas Rises) | `libMBIN.V1_38.*` | imported `1.38.0.2` tag |
 
-Loading the 2017 net452 assemblies into a net6 host is the "hacked together" path we reject.
-Instead we keep the single modern `rc1` libMBIN and make its struct definitions
-version-aware.
+The sets coexist because their namespaces differ; they share the one modern serializer
+(`libMBIN.NMSTemplate`) via namespace walk-up. Geometry's `TkGeometryData` is dropped from the
+imported sets (out of scope; its 2017 `CustomDeserialize` signature predates the base's, and
+the base keeps its own).
 
-## Mechanism
+Duplication between 1.24 and 1.38 (534 of ~700 shared structs are byte-identical) is just
+cheap files. The thing we avoid is bespoke deltas.
 
-1. **Active version.** `RetroVersion.Selected` (from `--nms-version`) or autodetection from
-   the MBIN header stamp / globals GUID. Already wired.
-2. **Version-tagged fields.** A field that differs across builds carries a version range,
-   e.g. `[NMSVersion(First="1.24", Last="1.38")]`, plus a per-version type/size when those
-   changed. The (de)serialize field walk includes only fields valid for the active version.
-   Stable fields (~half of them) carry no tag and apply to every build. Struct size and
-   alignment fall out of the filtered field set, the same way libMBIN already derives them.
-3. **Lookup by `TemplateName`, not GUID.** `cGcEnvironmentGlobals` is stable across builds;
-   its GUID is not. GUIDs become a per-build table used only for detection and for writing a
-   correct header on compile.
+## Routing
 
-## Where the per-version data comes from
+- Active build: `NMSVersion.ActiveId`, set from `--nms-version` or autodetection (the MBIN
+  header stamp / globals GUID; see `MBINCompiler/Source/RetroVersion.cs`).
+- `NMSTemplate.GetTemplateType(name)` resolves in the active build's folder first
+  (`libMBIN.V1_24` / `libMBIN.V1_38`), then falls back to the base set for shared infra
+  (`MBINHeader`, `NMSString`, …) and for builds with no dedicated folder (rc1/1.09.1/1.13).
+- With no active build, only the base set is used, so single-version behaviour is unchanged.
 
-`layouts/layout_<build>.json` are authoritative field/offset/size dumps from each build's own
-serializer (`layouts/README.md`). Diffing them field by field yields exactly the version
-tags; a generator applies them to the divergent structs and leaves the stable ones alone.
-The 2017 tags also supply better field *names* for 1.24/1.38 (where `rc1` still has
-`Unknown<offset>`), reconciled in during generation.
+## Status
 
-This is the same layout data NMS.retro.py's `gen_structs.py` consumes for its Python
-`versioned_struct` classes; here it is retargeted to C# attributes on one libMBIN.
+- rc1 / 1.24 / 1.38 folders build and decompile in one binary; a real 1.24 and a real 1.38
+  globals file each decode via their own defs. Autodetection and `--nms-version` both route.
+- `dumplayout` dumps the active build's folder (rc1 525 / 1.24 703 / 1.38 894 templates) and is
+  still the per-build layout export for NMS.retro.py's `gen_structs.py` (`layouts/`).
 
-## Phases
+## Open
 
-- **P1 (done): data + plumbing.** Per-build layouts + dumplayout patches vendored; version
-  selection + `dumplayout` + detection already in the CLI.
-- **P2: the mechanism.** `NMSVersion` attribute + version-filtered field walk in
-  `NMSTemplate`, and `TemplateName`+version lookup. Proven on `GcEnvironmentGlobals` so one
-  binary round-trips both a 1.24 and a 1.38 MBIN.
-- **P3: the bulk.** Generate/port per-version deltas across all divergent structs from the
-  layout diffs + tag names.
-- **P4: 1.13.** No tag exists; bisect libMBIN history for a GUID-matching commit or derive
-  from exe RE.
-
-## Open decisions
-
-- Attribute shape: extend `NMSAttribute` (add `Versions=`) vs a separate `[NMSVersion]`.
-- Whether per-version *type* changes need a full second field or an attribute-carried type.
-- 1.13 sourcing (P4).
+- **1.13** has no tag: give it its own `libMBIN.V1_13.*` folder once a def set exists (bisect
+  libMBIN history for GUID-matching structs, or derive from exe RE), else it uses the base set.
+- **Recompile (EXML -> MBIN)** fidelity is bounded by the incomplete `rc1` base and the
+  era tags for some complex structs (e.g. `GcEnvironmentGlobals`); decompile is the solid path.
+- `--nms-version=1.09.1` currently resolves to the base set (same as rc1); a dedicated 1.09.1
+  folder is only needed if its layout is shown to differ from rc1.

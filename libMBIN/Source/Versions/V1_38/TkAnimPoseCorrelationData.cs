@@ -1,0 +1,13 @@
+﻿namespace libMBIN.V1_38.Structs
+{
+    public class TkAnimPoseCorrelationData : NMSTemplate // 0x28 bytes
+    {
+        [NMS(Size = 0x10)]
+        public string ItemA;
+        [NMS(Size = 0x10)]
+        public string ItemB;
+        public float Correlation;
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding24;
+    }
+}
