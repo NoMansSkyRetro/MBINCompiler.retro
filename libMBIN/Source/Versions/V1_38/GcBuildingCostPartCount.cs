@@ -1,9 +1,11 @@
-﻿namespace libMBIN.V1_38.Structs
+namespace libMBIN.V1_38.Structs
 {
     public class GcBuildingCostPartCount : NMSTemplate
     {
         [NMS(Size = 0x10)]
         public string Id;
         public int Count;
+        [NMS(Size = 4, Ignore = true)]
+        public byte[] Padding14;
     }
 }

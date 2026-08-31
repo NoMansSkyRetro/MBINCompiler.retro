@@ -1,6 +1,7 @@
-﻿namespace libMBIN.V1_38.Structs
+using libMBIN.NMS;
+namespace libMBIN.V1_38.Structs
 {
-    [NMS(Size = 0x20)]
+    [NMS(Size = 0x20, Alignment = 0x8)]
     public class GcCostProduct : NMSTemplate
     {
         /* 0x00 */ public GcDefaultMissionProductEnum Default;

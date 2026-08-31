@@ -1,9 +1,12 @@
-﻿namespace libMBIN.V1_38.Structs
+using System.Collections.Generic;
+using libMBIN.NMS;
+namespace libMBIN.V1_38.Structs
 {
+    [NMS(Alignment = 0x8)]
     public class GcCostBuildingParts : NMSTemplate
     {
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x20)]
         public string Description;
-        public GcBuildingCostPartCount RequiredParts;
+        public List<GcBuildingCostPartCount> RequiredParts;
     }
 }

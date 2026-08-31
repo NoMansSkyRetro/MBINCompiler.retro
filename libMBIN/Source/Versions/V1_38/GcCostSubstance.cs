@@ -1,5 +1,7 @@
-﻿namespace libMBIN.V1_38.Structs
+using libMBIN.NMS;
+namespace libMBIN.V1_38.Structs
 {
+    [NMS(Alignment = 0x8)]
     public class GcCostSubstance : NMSTemplate
     {
         public GcDefaultMissionSubstanceEnum Default; // maybe?
