@@ -103,9 +103,32 @@ root template: **all four PC builds are complete - 1.09.1 762/763,
 1.13 773/774, 1.24 780/781, 1.38 829/830 (3144 of 3148 sampled files;
 the single failure in each build is METADATA/INPUTTEST.MBIN, a pre-2500
 debug capture with an older header, unsupported by design).**
-rc1 stays at 114/171 (base set frozen by request).
-The RC1 set lives frozen in `libMBIN/Source/Versions/RC1` (namespace unchanged,
-still the per-template fallback).
+The base `rc1` set lives untouched in `libMBIN/Source/Versions/RC1` (still the
+per-template fallback); disc-specific fixes land in the new `V1_00` folder
+(`libMBIN.V1_00.Structs`, routed for `--nms-version=rc1`). **rc1 is now 159/171
+clean** (up from the frozen 114) across the full corpus, not sampled.
+
+### RC1 (V1_00): from file bytes, then from the PS4 binary
+
+The disc is a genuinely older era - smaller globals, 27 palettes vs 38, 7 biomes
+vs 9, 5 factions vs 6, fewer strings and tails everywhere. The first pass derived
+V1_00 defs from file bytes alone (unique-dword shift maps + value-anchored decode
+against the byte-perfect 1.09.1 counterparts): terrain/audio/solar/environment/UI
+globals, the palette/biome/building/reward/product/selectable tables, the full
+planet chain (hazard 3x6, an extra day-colour weather block, 0x320 building spawn,
+0x378 creature role), procedural textures, and the previously-parked GcSkyGlobals
+(disc fog `IsRaining` is a float, plus two extra tail colour rows).
+
+For the structural items that file-byte guessing could not disambiguate, the PS4
+disc `eboot.bin` was extracted from the retail pkg and decompiled in Ghidra (see
+`E:\NMSLegacy_Decomp\PS4_EXTRACTION_README.md` and the `ps4_extract_eboot.ps1` /
+`ps4_self_to_elf.py` / `build_ps4_ghidra.py` scripts). This is the true RC1-era
+source (the MBINCompiler RC1 branch predates it). The decompile carries the game's
+template reflection registry (548 types) and a per-struct field walker that spells
+out every field's name, offset and type. Weather was the first decompile-driven
+win: disc `GcWeatherProperties` has two 8-float Sky/MaxSky horizon blocks the PC
+era lacks, standard fog, and a 3x6 hazard-triplet tail (Min/Average/Max) with no
+Override bools - byte-perfect on the first build from the walker output.
 
 Landed since the first pass: planets/voxel chains (all builds), solar systems
 (era SystemShips is a flat preload-cache list), mission tables (StartScanEvent
@@ -122,6 +145,14 @@ GcCostBuildingParts is a 0x20 description plus a list of 0x18 part counts).
 
 - METADATA/INPUTTEST.MBIN: pre-2500 debug input capture, older header layout -
   intentionally unsupported in every build.
-- rc1 stays frozen (44 dec-fail / 12 byte-diff untouched by request).
-- Coverage is per-template sampled (verified clean at 40 files per root
-  template per build); a full-corpus sweep may still surface rare variants.
+- rc1 (V1_00): 159/171 clean; 11 files remain (plus INPUTTEST). Each is a large or
+  custom-serializer reconstruction now unblocked by the PS4 decompile but not yet
+  done: the saves (`GcPlayerStateData`, the whole player-save struct) x2, DefaultReality
+  (`GcRealityManagerData`), `GcRobotGlobals` (hand-loaded, not in the reflection registry -
+  its head needs byte-derivation; its `GcDroneData` sub-struct is registered), the anims x2
+  and geometry x2 (custom serializers whose disc vertex/frame formats differ). The field
+  walkers for the registered ones are found via `FUN_00d80dc0(name, ctor, namecheck, helper)`
+  then the function immediately after the namecheck.
+- Coverage is per-template sampled for the PC builds (verified clean at 40 files per
+  root template per build); a full-corpus sweep may still surface rare variants. rc1
+  is verified across its full corpus.
