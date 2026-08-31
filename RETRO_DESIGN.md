@@ -52,11 +52,12 @@ cheap files. The thing we avoid is bespoke deltas.
 
 ## Status (2026-08-31, final)
 
-Round-trip verification, byte-perfect past the header, at EIGHT samples per
-root template: **all four PC builds are complete - 1.09.1 308/309,
-1.13 318/319, 1.24 325/326, 1.38 341/342. The single failure in each is
-METADATA/INPUTTEST.MBIN, a pre-2500 debug capture with an older header,
-unsupported by design.** rc1 stays at 114/171 (base set frozen by request).
+Round-trip verification, byte-perfect past the header, at FORTY samples per
+root template: **all four PC builds are complete - 1.09.1 762/763,
+1.13 773/774, 1.24 780/781, 1.38 829/830 (3144 of 3148 sampled files;
+the single failure in each build is METADATA/INPUTTEST.MBIN, a pre-2500
+debug capture with an older header, unsupported by design).**
+rc1 stays at 114/171 (base set frozen by request).
 The RC1 set lives frozen in `libMBIN/Source/Versions/RC1` (namespace unchanged,
 still the per-template fallback).
 
@@ -76,5 +77,5 @@ GcCostBuildingParts is a 0x20 description plus a list of 0x18 part counts).
 - METADATA/INPUTTEST.MBIN: pre-2500 debug input capture, older header layout -
   intentionally unsupported in every build.
 - rc1 stays frozen (44 dec-fail / 12 byte-diff untouched by request).
-- Coverage is per-template sampled (verified clean at 8 files per root
+- Coverage is per-template sampled (verified clean at 40 files per root
   template per build); a full-corpus sweep may still surface rare variants.
