@@ -9,5 +9,7 @@
         [NMS(Size = 0x10)]
         /* 0x100 */ public string Event;
         /* 0x110 */ public float Distance;
+        [NMS(Size = 4, Ignore = true)]
+        /* 0x114 */ public byte[] Padding114;
     }
 }
