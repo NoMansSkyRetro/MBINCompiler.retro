@@ -1,5 +1,5 @@
 using libMBIN.NMS;
-namespace libMBIN.V1_24.Structs
+namespace libMBIN.V1_13.Structs
 {
     [NMS(Alignment = 0x8)]
     public class GcCostSubstance : NMSTemplate
