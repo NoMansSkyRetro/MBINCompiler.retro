@@ -1,4 +1,4 @@
-using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; using libMBIN.NMS.Toolkit; namespace libMBIN.V1_13.Structs
+﻿using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; using libMBIN.NMS.Toolkit; namespace libMBIN.V1_13.Structs
 {
     public class GcPlayerSpawnStateData : NMSTemplate
     {
@@ -15,6 +15,5 @@ using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; 
         /* 0x054 */ public byte[] Padding54; 
 		/* 0x060 */ public Vector4f FreighterPositionInSystem;
 		/* 0x070 */ public Vector4f FreighterTransformAt;
-		/* 0x080 */ public Vector4f FreighterTransformUp;
-    }
+		/* 0x080 */    }
 }
