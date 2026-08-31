@@ -31,38 +31,40 @@ using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; 
         [NMS(Size = 0x80)]
         public string CostTable;
 
-        public GcRealityIconTable Icons;
-
-        [NMS(Size = 6, EnumValue = new string[6] { "None", "NoOxygen", "ExtremeHeat", "ExtremeCold", "ToxicGas", "Radiation" })]
-        public Colour[] HazardColours;
-
-        [NMS(Size = 3, EnumValue = new string[3] { "Common", "Uncommon", "Rare" })]
-        public Colour[] RarityColours;
-
-        [NMS(Size = 6, EnumValue = new string[6] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "BuildingPart" })]
-        /* 0x19A0 */ public Colour[] SubstanceCategoryColours;
-
-        [NMS(Size = 6, EnumValue = new string[6] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "BuildingPart" })]
-        public TkTextureResource[] SubstanceChargeIcons;
-
-        // 1.09.1: 68 stat icons (the era list of 77 names came later)
-        [NMS(Size = 68)]
-        public TkTextureResource[] StatCategoryIcons;
+        // 1.09.1 icon region, derived from DEFAULTREALITY bytes: 35 icons, one dword,
+        // 14 colours, 75 icons (some with empty paths), five dwords, one icon, one dword
+        [NMS(Size = 35)]
+        public TkTextureResource[] IconsA;
+        public int Unknown179C;
+        [NMS(Size = 14)]
+        public Colour[] Colours17A0;
+        [NMS(Size = 75)]
+        public TkTextureResource[] IconsB;
+        public int Unknown3F2C;
+        public int Unknown3F30;
+        public int Unknown3F34;
+        public int Unknown3F38;
+        public int Unknown3F3C;
+        [NMS(Size = 1)]
+        public TkTextureResource[] IconsC;
+        public int Unknown3FC4;
 
         // 1.09.1: eleven flat stat groups (the Suit/Weapon/Ship split came later)
         [NMS(Size = 11)]
         public GcStatsGroup[] StatGroups;
 
-
-        public List<int> SuitUpgradePrices;
-
+        // 1.09.1 tail, derived from DEFAULTREALITY bytes: an extra stats list, the two
+        // never-lists, one trade block, twelve loose dwords, the 37 suit upgrade prices,
+        // and a four-string list before the price limits
+        public List<GcStatsEntry> UnknownStatsList;
         public List<NMSString0x10> NeverSellableItems;
-
         public List<NMSString0x10> NeverOfferedForSale;
-
-        // 1.09.1: trade settings come after the price lists
-        public GcTradeSettings TradeSettings;
-
+        public GcTradeData TradeSpaceStation;
+        public int UnknownT0; public int UnknownT1; public int UnknownT2; public float UnknownT3;
+        public int UnknownT4; public int UnknownT5; public int UnknownT6; public int UnknownT7;
+        public int UnknownT8; public int UnknownT9; public float UnknownT10; public int UnknownT11;
+        public List<int> SuitUpgradePrices;
+        public List<NMSString0x10> Unknown47C0;
         [NMS(Size = 6, EnumValue = new string[6] { "Commodity", "Technology", "Fuel", "Tradeable", "Special", "BuildingPart" })]
         public float[] NormalizedPriceLimits;
 
