@@ -15,6 +15,7 @@
         [NMS(Size = 7)]
         public TkNoiseFeatureData[] Features;
 
+        public float Unknown125C; // 1.09.1: extra dword before the cave block
         public TkNoiseCaveData CavesUnderground;
         public float MinimumCaveDepth;
         public float CaveRoofSmoothingDist;
@@ -23,6 +24,7 @@
         public float BuildingSmoothingRadius;
         public float BuildingSmoothingHeight;
         public float WaterFadeInDistance;
+        public float Unknown12FC;
         
         public TkVoxelGeneratorRegionData Regions;
     }
