@@ -1103,7 +1103,11 @@ namespace libMBIN
                     var writeValuesMethod = GetType().GetMethod(field.Name + "Values");
                     if ( writeValuesMethod != null ) {
                         string[] writeValues = (string[]) writeValuesMethod.Invoke( this, null );
-                        if ( (int) value >= 0 && (int) value < writeValues.Length ) valueString = writeValues[(int) value];
+                        if ( (int) value >= 0 && (int) value < writeValues.Length ) {
+                            string candidate = writeValues[(int) value];
+                            // a duplicated name can't be mapped back to the right index; keep the raw int
+                            if ( Array.IndexOf( writeValues, candidate ) == (int) value ) valueString = candidate;
+                        }
                     }
 
                     break;

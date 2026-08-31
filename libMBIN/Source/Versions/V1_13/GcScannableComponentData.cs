@@ -10,8 +10,5 @@ using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; 
         public GcScannerIconTypes IconType;
         public bool PermanentIcon;
         public float PermanentIconRadius;
-
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding;
     }
 }

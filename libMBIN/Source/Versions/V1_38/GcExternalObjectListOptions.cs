@@ -1,6 +1,7 @@
-﻿using libMBIN.NMS;
+using libMBIN.NMS;
 namespace libMBIN.V1_38.Structs
 {
+    [NMS(Alignment = 0x8)]
     public class GcExternalObjectListOptions : NMSTemplate      // size: 0x230
     {
         [NMS(Size = 0x10)]
