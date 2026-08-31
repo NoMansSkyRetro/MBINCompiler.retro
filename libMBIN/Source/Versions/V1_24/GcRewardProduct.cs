@@ -9,5 +9,6 @@
         public bool[] AllowedProductTypes;
         public int AmountMin;
         public int AmountMax;
+        public int Unknown18;
     }
 }

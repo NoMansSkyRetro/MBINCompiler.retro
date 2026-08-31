@@ -1,12 +1,12 @@
-﻿namespace libMBIN.V1_24.Structs
+namespace libMBIN.V1_13.Structs
 {
-    public class GcRewardSignalScan : NMSTemplate
+    public class GcRewardSignalScan : NMSTemplate // 0x8
     {
         public int SignalScanType;
-        public int Unknown4;
         public string[] SignalScanTypeValues()
         {
             return new[] { "None", "DropPod", "Shelter", "Search", "Relic", "Industrial" };
         }
+        public int Unknown4;
     }
 }

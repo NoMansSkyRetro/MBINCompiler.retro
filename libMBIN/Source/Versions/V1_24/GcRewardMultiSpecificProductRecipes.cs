@@ -8,7 +8,7 @@ namespace libMBIN.V1_24.Structs
         public List<NMSString0x10> ProductIds;
         [NMS(Size = 0x10)]
         public string DisplayProductId;
-        [NMS(Size = 0x10)]
+        [NMS(Size = 0x20)]
         public string SetName;
     }
 }

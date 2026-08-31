@@ -8,5 +8,6 @@
         public int ItemLevel;
         [NMS(Size = 4, EnumValue = new[] { "Component", "Device", "Consumable", "Curiosity" })]
         public bool[] AllowedProductTypes;
+        public int Unknown14;
     }
 }
