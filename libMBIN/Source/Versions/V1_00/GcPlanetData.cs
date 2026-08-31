@@ -49,7 +49,7 @@ namespace libMBIN.V1_00.Structs
 
         public GcPlanetSentinelData SentinelData;
 
-        [NMS(Size = 0xC, Ignore = true)]
+        [NMS(Size = 4, Ignore = true)]
         public byte[] Padding2E94;
     }
 }

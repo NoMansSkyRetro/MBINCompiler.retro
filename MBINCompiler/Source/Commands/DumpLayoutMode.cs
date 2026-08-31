@@ -34,11 +34,12 @@ namespace MBINCompiler.Commands {
 
             var baseType = typeof( NMSTemplate );
             bool anyInFolder = baseType.Assembly.GetTypes().Any( t => t.Namespace?.StartsWith( folder ) ?? false );
+            bool dumpAll = Environment.GetEnvironmentVariable( "MBIN_DUMPLAYOUT_ALL" ) == "1";
             var structs = baseType.Assembly.GetTypes()
                 .Where( t => t.IsSubclassOf( baseType ) && !t.IsAbstract )
-                .Where( t => anyInFolder
+                .Where( t => dumpAll || ( anyInFolder
                     ? ( t.Namespace?.StartsWith( folder ) ?? false )
-                    : !NMSVersion.IsVersionedNamespace( t.Namespace ) )
+                    : !NMSVersion.IsVersionedNamespace( t.Namespace ) ) )
                 .OrderBy( t => t.Name, StringComparer.Ordinal );
 
             var sb = new StringBuilder();
@@ -60,7 +61,7 @@ namespace MBINCompiler.Commands {
 
                 if ( !firstStruct ) sb.Append( ',' );
                 firstStruct = false;
-                sb.Append( JsonStr( t.Name ) ).Append( ":{" );
+                sb.Append( JsonStr( dumpAll ? t.FullName : t.Name ) ).Append( ":{" );
                 sb.Append( "\"guid\":\"" ).Append( guid.ToString( "X16" ) ).Append( "\"," );
                 sb.Append( "\"size\":" ).Append( total ).Append( ',' );
                 sb.Append( "\"fields\":[" );
