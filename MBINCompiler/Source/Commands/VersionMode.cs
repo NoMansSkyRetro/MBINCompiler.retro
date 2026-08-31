@@ -21,6 +21,12 @@ namespace MBINCompiler.Commands {
             }
 
             CommandLine.ShowVersion( mbin, Quiet );
+            if ( !Quiet ) {
+                var retro = RetroVersion.Detect( mbin.Header );
+                Logger.LogInfo( retro != null
+                    ? $"Retro build: {retro.Value.Id} ({retro.Value.Name})"
+                    : "Retro build: undetermined (no timestamp stamp); use --nms-version to select." );
+            }
             return (int) ErrorCode.Success;
         }
 

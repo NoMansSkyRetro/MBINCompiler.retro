@@ -33,6 +33,7 @@ namespace MBINCompiler {
             options.AddOptions( "convert",  OPTIONS_CONVERT );
             options.AddOptions( "list",     OPTIONS_LIST    );
             options.AddOptions( "register", OPTIONS_REGISTER);
+            options.AddOptions( "dumplayout", OPTIONS_DUMPLAYOUT );
 
             // save the error state
             bool invalidArguments = !options.Parse( "convert" );
@@ -52,13 +53,20 @@ namespace MBINCompiler {
             // initialize remaining global options
             DebugMode = options.GetOptionSwitch( "debug" );
 
+            // retro: which NMS build to target (overrides autodetection where it applies)
+            string nmsVersion = options.GetOptionArg( "nms-version" )?.value;
+            if ( nmsVersion != null && !RetroVersion.Select( nmsVersion ) )
+                return CommandLine.ShowCommandLineError(
+                    $"Invalid --nms-version \"{nmsVersion}\". Expected one of: {RetroVersion.IdList()}" );
+
             // execute the appropriate mode
             try {
                 switch (options.Verb) {
-                    case "help":     return HelpCommand.Execute( options );
-                    case "version":  return VersionCommand.Execute( options );
-                    case "list":     return ListCommand.Execute( options );
-                    case "register": return RegisterCommand.Execute( options );
+                    case "help":       return HelpCommand.Execute( options );
+                    case "version":    return VersionCommand.Execute( options );
+                    case "list":       return ListCommand.Execute( options );
+                    case "register":   return RegisterCommand.Execute( options );
+                    case "dumplayout": return DumpLayoutCommand.Execute( options );
                     default:         
                         if ( !NoLog ) StartLogging( args );
                         return ConvertCommand.Execute( options );

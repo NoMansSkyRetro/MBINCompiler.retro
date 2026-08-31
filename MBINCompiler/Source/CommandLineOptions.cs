@@ -89,7 +89,12 @@ namespace MBINCompiler
                             description = "Do not generate a log for the conversion."},
 
             new Option { longName = "debug", isHidden = true,
-                            description = "Unhide the help info for hidden debug options." }
+                            description = "Unhide the help info for hidden debug options." },
+
+            new Option { longName = "nms-version", param = "<Version>",
+                            description = "\nTarget a specific legacy NMS build.\n" +
+                                        "<Version> is one of: rc1, 1.09.1, 1.13, 1.24, 1.38.\n" +
+                                        "Stamped MBINs are autodetected; use this for the rest." }
         };
 
         public static readonly List<Option> OPTIONS_HELP = new List<Option> {
@@ -163,6 +168,9 @@ namespace MBINCompiler
         {
         };
 
+        public static readonly List<Option> OPTIONS_DUMPLAYOUT = new List<Option> {
+        };
+
         private static string FormatWrapped( string prefix, int padleft, string txt, bool trim = false )
         {
             txt = CommandLine.WrapLine( txt, padleft );
@@ -185,13 +193,15 @@ namespace MBINCompiler
                    $"    {exe} help [<Option>...]\n" +
                    $"    {exe} version [<Option>...] [<File>]\n" +
                    $"    {exe} register [<Option>...] \n" +
+                   $"    {exe} dumplayout [--nms-version=<Version>] > layout.json\n" +
                    $"    {exe} [convert] [<Option>...] <Path> [<Path>...]\n" );
 
             sb.Append( "\n\nModes:\n\n" +
                     FormatWrapped( "  help",     20, "Show this help info.", true ) +
                     FormatWrapped( "  version",  20, "Show version info.", true ) +
                     FormatWrapped( "  convert",  20, "Convert files between MBIN and EXML formats.", true ) +
-                    FormatWrapped( "  register", 20, "Add MBINCompiler to your systems PATH variable.", true) );
+                    FormatWrapped( "  register", 20, "Add MBINCompiler to your systems PATH variable.", true) +
+                    FormatWrapped( "  dumplayout", 20, "Dump per-build struct layouts (name/type/offset/size) as JSON.", true) );
 
             if ( OPTIONS_GENERAL.Count > 0 ) {
                 sb.Append( "\n\nGeneral Options:\n" );

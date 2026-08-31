@@ -1,3 +1,49 @@
+# RetroMBINCompiler
+
+A fork of [monkeyman192's MBINCompiler](https://github.com/monkeyman192/MBINCompiler/tree/rc1)
+(`rc1` branch) that targets **legacy** No Man's Sky builds. Enormous thanks to monkeyman192
+and the MBINCompiler contributors; this fork just carries their `rc1` work sideways to the
+old versions. Everything below this section is the upstream README, unchanged.
+
+Targeted versions:
+
+| Id       | Update                     |
+|----------|----------------------------|
+| `rc1`    | Release Candidate / launch |
+| `1.09.1` | The Initial Release        |
+| `1.13`   | The Foundation update      |
+| `1.24`   | The Path Finder update     |
+| `1.38`   | Atlas Rises                |
+
+The `rc1` struct definitions (the launch layout) ship and are exercised now; per-build
+definition sets for 1.13 / 1.24 / 1.38 are the remaining reverse-engineering frontier.
+
+### What this fork adds
+
+- **Version autodetection + `--nms-version` flag.** Vanilla (uncompiled) MBINs carry no
+  MBINCompiler version, so stock MBINCompiler reports "Unknown". This fork identifies the
+  build from the MBIN header's timestamp stamp / globals GUID, e.g.
+
+  ```
+  MBINCompiler version FILE.GLOBAL.MBIN
+  → Retro build: 1.24 (Path Finder)
+  ```
+
+  Files that carry no stamp (most non-`*.GLOBAL` MBINs) can't be autodetected; select the
+  build explicitly with `--nms-version=<rc1|1.09.1|1.13|1.24|1.38>`.
+
+- **`dumplayout` command.** Emits every struct's authoritative memory layout
+  (name / type / offset / size) as JSON, straight from libMBIN's own `OffsetOf`/`SizeOf`:
+
+  ```
+  MBINCompiler dumplayout > layout.json
+  ```
+
+  This is the retro pipeline's first-class output: per-build struct layouts for tools that
+  read the game's structs from memory.
+
+---
+
 # MBINCompiler
 **Project Owner**: monkeyman192
 
