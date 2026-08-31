@@ -13,7 +13,7 @@ namespace libMBIN
         private static readonly XmlSerializer Serializer = new XmlSerializer(typeof(EXmlData));
         private static readonly XmlSerializerNamespaces Namespaces = new XmlSerializerNamespaces(new[] { new XmlQualifiedName("", "") });
 
-        private static XmlReaderSettings readerSettings = new XmlReaderSettings();
+        private static XmlReaderSettings readerSettings = new XmlReaderSettings { CheckCharacters = false };
 
         public static NMSTemplate ReadTemplate( string filePath ) {
             string templateName;
@@ -105,7 +105,10 @@ namespace libMBIN
             var xmlSettings = new XmlWriterSettings
             {
                 Indent = true,
-                Encoding = Encoding.UTF8
+                Encoding = Encoding.UTF8,
+                // a def misreading binary bytes as a string must not abort the whole convert;
+                // let the garbage through so the harness reports a byte-diff to diagnose
+                CheckCharacters = false
             };
             using (var stringWriter = new EncodedStringWriter(Encoding.UTF8))
             using (var xmlTextWriter = XmlWriter.Create(stringWriter, xmlSettings))
