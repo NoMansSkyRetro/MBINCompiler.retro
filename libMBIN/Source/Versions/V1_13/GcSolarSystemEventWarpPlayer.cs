@@ -1,0 +1,10 @@
+using System.Collections.Generic;
+
+using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; using libMBIN.NMS.Toolkit; namespace libMBIN.V1_13.Structs
+{
+    public class GcSolarSystemEventWarpPlayer : NMSTemplate
+    {
+        /* 0x00 */ public GcSolarSystemLocatorChoice Locator;
+        /* 0x2C */ public float Time;
+    }
+}
