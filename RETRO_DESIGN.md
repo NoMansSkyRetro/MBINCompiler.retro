@@ -50,11 +50,24 @@ cheap files. The thing we avoid is bespoke deltas.
   per build), `body_diff.py` (byte-level build compare), `verify_roundtrip.py` (the
   acceptance test: extract per-template samples, decompile, recompile, byte-compare).
 
-## Open
+## Status (2026-08-31)
 
-- The per-build def grind, verified by `verify_roundtrip.py`: fix the base set for the RC1
-  disc, populate `V1_09_1`/`V1_13` for the roots whose GUIDs differ from every imported
-  era, and repair the imported 2017 sets (whose Ignore-paddings hide real fields; see the
-  TkGraphicsSettings fix pattern - unaligned `byte[]` paddings that shift later fields).
-- Where a root's GUID matches 1.24/1.38, copying that def tree into the older build's
-  folder is correct by construction, but only worth it once the V1_24 def itself verifies.
+Round-trip verification (per-template samples; byte-perfect past the header):
+rc1 114/171 (base set frozen by request), 1.09.1 169/184, 1.13 171/191,
+1.24 186/195, 1.38 197/208. The RC1 set lives frozen in
+`libMBIN/Source/Versions/RC1` (namespace unchanged, still the per-template fallback).
+
+## Open (the remaining tail, in rough effort order)
+
+- 1.13-era head-region reworks: GcUIGlobals, GcGameplayGlobals (1.13 delta),
+  GcEnvironmentGlobals (+56), GcGraphicsGlobals (+192), GcScannerIcons - each adds
+  colour/texture blocks the Foundation update introduced.
+- 1.09.1 deep structs: GcDefaultSaveData, GcRealityManagerData (DEFAULTREALITY),
+  GcPlanetData, GcSolarGenerationGlobals, TkVoxelGeneratorSettingsArray, GcSkyGlobals.
+- GcCostTable: the cost subtypes (GcCostSubstance at least) are far larger in the era
+  files than any def; needs entry-level modeling (fails in all four PC builds).
+- GcMissionTable small per-era drifts; TkNGuiLayoutList 1.38 (6 bytes).
+- TkAnimMetadata custom serializer writes two float sections in swapped order
+  (same-size byte-diffs on every anim).
+- METADATA/INPUTTEST.MBIN has an invalid header in every build ("Not a valid MBIN") -
+  possibly not a real MBIN; ignore or special-case.
