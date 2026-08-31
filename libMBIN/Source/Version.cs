@@ -7,25 +7,13 @@
         // Used by libMBIN.AssemblyInfo, MBINCompiler.AssemblyInfo
         // and (this) libMBIN.Version
         //
-        // The format is "Major.Minor.Release.Prerelease"
+        // The format is "Major.Minor.Patch.Prerelease".
         //
-        // The Major and Minor version numbers should match the NMS version that is supported.
-        // The 3rd version number indicates the libMBIN Release version.
-        // The 4th version number indicates the libMBIN Pre-Release version.
-        //
-        // Note that ver X.X.0.0 does not make sense!
-        // *.*.0.1 is the first (developement) prerelase
-        // *.*.1.0 is the first (master) release
-        // Following this convention, the type of release can be determined by the version
-        // numbers. If the prerelease version is 0, then it is a master release. Otherwise
-        // if the prerelease version is not 0, then the build is a (development) prerelease.
-        // 
-        // When the Minor version is reset or incremented:
-        //      the Release    version should be reset to 0
-        //      the Prerelease version should be reset to 1
-        // When the Release version is incremented:
-        //      the Prerelease version should be reset to 0
-        internal const string VERSION_STRING = "1.0.1.1";
+        // MBINCompiler.retro versions itself independently (it targets many NMS builds at
+        // once), so it follows plain semver: Major.Minor.Patch, starting at 1.0.0. The 4th
+        // number is an optional prerelease counter - if it is non-zero the build displays a
+        // "-pre{N}" suffix; a zero 4th number is a normal release.
+        internal const string VERSION_STRING = "1.0.0.0";
 
         /// <summary>Shorthand for AssemblyVersion.Major</summary>
         public static int Major      => AssemblyVersion.Major;
@@ -52,7 +40,7 @@
         ///     If the current assembly version is a prerelease (<see cref="Release"/> is 0 or <see cref="Prerelease"/> is not 0) then "-pre{Prerelease}" is returned.
         ///     Otherwise returns an emptry string.
         /// </returns>
-        public static string GetSuffix() => (Release == 0 || Prerelease != 0) ? $"-pre{Prerelease}" : "";
+        public static string GetSuffix() => (Prerelease != 0) ? $"-pre{Prerelease}" : "";
 
         /// <summary>
         ///     Returns the assembly version in a human-readable string format.
@@ -60,7 +48,7 @@
         /// </summary>
         /// <returns>"{<see cref="Major"/>}.{<see cref="Minor"/>}.{<see cref="Release"/>}{<see cref="GetSuffix">Suffix</see>}"</returns>
         public static string GetString() {
-            return $"{AssemblyVersion.Major}.{AssemblyVersion.Minor:00}.{AssemblyVersion.Build}"  + GetSuffix();
+            return $"{AssemblyVersion.Major}.{AssemblyVersion.Minor}.{AssemblyVersion.Build}"  + GetSuffix();
         }
     }
 }
