@@ -1,4 +1,5 @@
-﻿namespace libMBIN.V1_24.Structs
+﻿using libMBIN.NMS;
+namespace libMBIN.V1_24.Structs
 {
     public class TkImGuiSettings : NMSTemplate // 0x190 bytes       // used in GCGRAPHICSGLOBALS.GLOBAL
     {

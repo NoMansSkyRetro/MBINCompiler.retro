@@ -1,4 +1,5 @@
-﻿namespace libMBIN.V1_38.Structs
+﻿using libMBIN.NMS;
+namespace libMBIN.V1_38.Structs
 {
     [NMS(Alignment = 0x10)]
     public class GcMissionSequenceShowMessage : NMSTemplate     // size: 0x230

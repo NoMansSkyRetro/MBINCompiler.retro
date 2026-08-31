@@ -1,4 +1,5 @@
-﻿namespace libMBIN.V1_24.Structs.Unfinished
+﻿using libMBIN.NMS;
+namespace libMBIN.V1_24.Structs.Unfinished
 {
     public class GcRobotGlobals : NMSTemplate
     {

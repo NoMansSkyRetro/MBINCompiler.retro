@@ -1,4 +1,5 @@
-﻿namespace libMBIN.V1_24.Structs
+﻿using libMBIN.NMS;
+namespace libMBIN.V1_24.Structs
 {
     public class GcAsteroidGeneratorAssignment : NMSTemplate // 0x48 bytes
     {

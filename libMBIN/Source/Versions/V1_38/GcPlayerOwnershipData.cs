@@ -1,4 +1,5 @@
-﻿namespace libMBIN.V1_38.Structs
+﻿using libMBIN.NMS;
+namespace libMBIN.V1_38.Structs
 {
     public class GcPlayerOwnershipData : NMSTemplate        // size: 0x3D0
     {

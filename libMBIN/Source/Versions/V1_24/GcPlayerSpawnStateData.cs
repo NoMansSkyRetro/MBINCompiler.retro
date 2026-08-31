@@ -1,4 +1,5 @@
-﻿namespace libMBIN.V1_24.Structs
+﻿using libMBIN.NMS;
+namespace libMBIN.V1_24.Structs
 {
     public class GcPlayerSpawnStateData : NMSTemplate           // possibly in a global? cf. sub_14022A510 in 1.2 exe
     {

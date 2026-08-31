@@ -1,4 +1,5 @@
-﻿namespace libMBIN.V1_24.Structs
+﻿using libMBIN.NMS;
+namespace libMBIN.V1_24.Structs
 {
     public class GcBuildingGlobals : NMSTemplate
     {
@@ -86,5 +87,11 @@
         public float Unknown104;
         public float Unknown108; // unused?
         public int Unknown10C; // unused? only int in the file?
+
+        // added in Path Finder (50.0f, 0, 0, 0 in the shipped globals)
+        public float Unknown110;
+        public float Unknown114;
+        public float Unknown118;
+        public float Unknown11C;
     }
 }

@@ -1,5 +1,5 @@
 ﻿using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; using libMBIN.NMS.Toolkit;
-namespace libMBIN.V1_13.Structs
+namespace libMBIN.V1_09_1.Structs
 {
     // Derived from the frozen base (RC1) def: five Colours inserted at 0x40
     // (globals_diff.py GCGALAXYGLOBALS.GLOBAL.MBIN rc1 1.09.1); 1.13 is byte-identical.

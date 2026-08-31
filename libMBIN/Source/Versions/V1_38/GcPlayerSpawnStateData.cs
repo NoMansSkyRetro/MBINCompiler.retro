@@ -1,4 +1,5 @@
-﻿namespace libMBIN.V1_38.Structs
+﻿using libMBIN.NMS;
+namespace libMBIN.V1_38.Structs
 {
     [NMS(Size = 0x80)]
     public class GcPlayerSpawnStateData : NMSTemplate

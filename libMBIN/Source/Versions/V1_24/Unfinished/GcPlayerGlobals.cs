@@ -1,4 +1,5 @@
-﻿// generated output for subroutine:
+﻿using libMBIN.NMS;
+// generated output for subroutine:
 // char *__fastcall sub_140153C50(__int64 a1) -----> hash: 5FCBDD7
 // hash of whole input: A92EA4F
 

@@ -1,8 +1,8 @@
 ﻿using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; using libMBIN.NMS.Toolkit;
-namespace libMBIN.V1_13.Structs
+namespace libMBIN.V1_24.Structs
 {
-    // Derived from the frozen base (RC1) def: five Colours inserted at 0x40
-    // (globals_diff.py GCGALAXYGLOBALS.GLOBAL.MBIN rc1 1.09.1); 1.13 is byte-identical.
+    // 1.24: the 1.09.1/1.13 layout plus 28 dwords inserted at 0x330
+    // (globals_diff.py GCGALAXYGLOBALS.GLOBAL.MBIN 1.13 1.24).
     public class GcGalaxyGlobals : NMSTemplate
     {
         public float Unknown0;
@@ -53,7 +53,7 @@ namespace libMBIN.V1_13.Structs
         public float Unknown378;
         public float Unknown37C;
         public float Unknown380;
-        public int Unknown384;
+        public float Unknown384;
         public float Unknown388;
         public float Unknown38C;
         public float Unknown390;
@@ -64,10 +64,10 @@ namespace libMBIN.V1_13.Structs
         public float Unknown3A4;
         public float Unknown3A8;
         public float Unknown3AC;
-        public int Unknown3B0;
-        public int Unknown3B4;
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] Padding3B8;
+        public float Unknown3B0;
+        public float Unknown3B4;
+        public float Unknown3B8;
+        public float Unknown3BC;
         public float Unknown3C0;
         public float Unknown3C4;
         public float Unknown3C8;
@@ -79,10 +79,9 @@ namespace libMBIN.V1_13.Structs
         public float Unknown3E0;
         public float Unknown3E4;
         public float Unknown3E8;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding3EC;
+        public float Unknown3EC;
         public float Unknown3F0;
-        public float Unknown3F4;
+        public int Unknown3F4;
         public float Unknown3F8;
         public float Unknown3FC;
         public float Unknown400;
@@ -92,27 +91,28 @@ namespace libMBIN.V1_13.Structs
         public float Unknown410;
         public float Unknown414;
         public float Unknown418;
-        [NMS(Size = 0x4, Ignore = true)]
-        public byte[] Padding41C;
-        public float Unknown420;
-        public float Unknown424;
-        public float Unknown428;
-        public float Unknown42C;
+        public float Unknown41C;
+        public int Unknown420;
+        public int Unknown424;
+        [NMS(Size = 0x8, Ignore = true)]
+        public byte[] Padding428;
         public float Unknown430;
         public float Unknown434;
         public float Unknown438;
         public float Unknown43C;
         public float Unknown440;
-        [NMS(Size = 0xC, Ignore = true)]
-        public byte[] Padding444;
+        public float Unknown444;
+        public float Unknown448;
+        public float Unknown44C;
         public float Unknown450;
         public float Unknown454;
         public float Unknown458;
-        public float Unknown45C;
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] Padding45C;
         public float Unknown460;
         public float Unknown464;
-        [NMS(Size = 0x8, Ignore = true)]
-        public byte[] Padding468;
+        public float Unknown468;
+        public float Unknown46C;
         public float Unknown470;
         public float Unknown474;
         public float Unknown478;
@@ -120,7 +120,8 @@ namespace libMBIN.V1_13.Structs
         public float Unknown480;
         public float Unknown484;
         public float Unknown488;
-        public float Unknown48C;
+        [NMS(Size = 0x4, Ignore = true)]
+        public byte[] Padding48C;
         public float Unknown490;
         public float Unknown494;
         public float Unknown498;
@@ -130,17 +131,16 @@ namespace libMBIN.V1_13.Structs
         public float Unknown4A8;
         public float Unknown4AC;
         public float Unknown4B0;
-        public float Unknown4B4;
-        public float Unknown4B8;
-        public float Unknown4BC;
+        [NMS(Size = 0xC, Ignore = true)]
+        public byte[] Padding4B4;
         public float Unknown4C0;
         public float Unknown4C4;
         public float Unknown4C8;
         public float Unknown4CC;
         public float Unknown4D0;
         public float Unknown4D4;
-        public float Unknown4D8;
-        public float Unknown4DC;
+        [NMS(Size = 0x8, Ignore = true)]
+        public byte[] Padding4D8;
         public float Unknown4E0;
         public float Unknown4E4;
         public float Unknown4E8;
@@ -167,20 +167,20 @@ namespace libMBIN.V1_13.Structs
         public float Unknown53C;
         public float Unknown540;
         public float Unknown544;
-        public int Unknown548;
-        public int Unknown54C;
-        public int Unknown550;
-        public int Unknown554;
-        public int Unknown558;
-        public int Unknown55C;
-        public int Unknown560;
-        public int Unknown564;
-        public int Unknown568;
-        public int Unknown56C;
-        public int Unknown570;
-        public int Unknown574;
-        public int Unknown578;
-        public int Unknown57C;
+        public float Unknown548;
+        public float Unknown54C;
+        public float Unknown550;
+        public float Unknown554;
+        public float Unknown558;
+        public float Unknown55C;
+        public float Unknown560;
+        public float Unknown564;
+        public float Unknown568;
+        public float Unknown56C;
+        public float Unknown570;
+        public float Unknown574;
+        public float Unknown578;
+        public float Unknown57C;
         public float Unknown580;
         public float Unknown584;
         public float Unknown588;
@@ -189,9 +189,37 @@ namespace libMBIN.V1_13.Structs
         public float Unknown594;
         public float Unknown598;
         public float Unknown59C;
-        public GcGalaxyRenderSetupData Template5A0;
-        public GcGalaxyGenerationSetupData Template790;
-        public GcGalaxyRenderSetupData Template900;
-        public GcGalaxyGenerationSetupData TemplateAF0;
+        public float Unknown5A0;
+        public float Unknown5A4;
+        public float Unknown5A8;
+        public float Unknown5AC;
+        public float Unknown5B0;
+        public float Unknown5B4;
+        public int Unknown5B8;
+        public int Unknown5BC;
+        public int Unknown5C0;
+        public int Unknown5C4;
+        public int Unknown5C8;
+        public int Unknown5CC;
+        public int Unknown5D0;
+        public int Unknown5D4;
+        public int Unknown5D8;
+        public int Unknown5DC;
+        public int Unknown5E0;
+        public int Unknown5E4;
+        public int Unknown5E8;
+        public int Unknown5EC;
+        public float Unknown5F0;
+        public float Unknown5F4;
+        public float Unknown5F8;
+        public float Unknown5FC;
+        public float Unknown600;
+        public float Unknown604;
+        public float Unknown608;
+        public float Unknown60C;
+        public GcGalaxyRenderSetupData Template610;
+        public GcGalaxyGenerationSetupData Template800;
+        public GcGalaxyRenderSetupData Template970;
+        public GcGalaxyGenerationSetupData TemplateB60;
     }
 }

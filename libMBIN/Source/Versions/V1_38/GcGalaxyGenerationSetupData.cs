@@ -1,3 +1,4 @@
+﻿using libMBIN.NMS;
 namespace libMBIN.V1_38.Structs
 {
     [NMS(Size = 0x180)]

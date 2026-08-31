@@ -1,3 +1,4 @@
+﻿using libMBIN.NMS;
 namespace libMBIN.V1_38.Structs
 {
     public class GcCameraAnomalySetupData : NMSTemplate     // size: 0x40
