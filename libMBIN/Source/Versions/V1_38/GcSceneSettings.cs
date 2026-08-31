@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using libMBIN.NMS;
+using System.Collections.Generic;
 
 namespace libMBIN.V1_38.Structs       // size: 0x4E0
 {

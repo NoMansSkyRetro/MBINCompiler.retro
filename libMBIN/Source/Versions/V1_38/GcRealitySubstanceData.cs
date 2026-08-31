@@ -1,4 +1,5 @@
-﻿namespace libMBIN.V1_38.Structs
+﻿using libMBIN.NMS;
+namespace libMBIN.V1_38.Structs
 {
     public class GcRealitySubstanceData : NMSTemplate       // size: 0x200
     {

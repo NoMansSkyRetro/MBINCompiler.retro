@@ -403,8 +403,12 @@ namespace libMBIN
                             // todo: get rid of this nastiness
                             MethodInfo method = typeof( NMSTemplate ).GetMethod( "DeserializeList", BindingFlags.Static | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic )
                                                          .MakeGenericMethod( new Type[] { itemType } );
-                            var list = method.Invoke( null, new object[] { reader, fieldInfo, settings, templatePosition, parent } );
-                            return list;
+                            try {
+                                return method.Invoke( null, new object[] { reader, fieldInfo, settings, templatePosition, parent } );
+                            } catch ( TargetInvocationException e ) when ( e.InnerException != null ) {
+                                // surface the real error, not "Exception has been thrown by the target of an invocation"
+                                throw e.InnerException;
+                            }
                         }
                     }
                     return null;
@@ -972,7 +976,8 @@ namespace libMBIN
 
                         writer.BaseStream.Position = data.Item1;
                         writer.Write( stringPos - data.Item1 );
-                        writer.Write( (Int32) (stringEndPos - stringPos) );
+                        // vanilla stores strlen, excluding the NUL terminator just written
+                        writer.Write( (Int32) (stringEndPos - stringPos - 1) );
                         writer.Write( listEnding );
 
                         writer.BaseStream.Position = stringEndPos;

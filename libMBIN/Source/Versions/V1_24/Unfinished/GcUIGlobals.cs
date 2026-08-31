@@ -1,3 +1,4 @@
+﻿using libMBIN.NMS;
 // generated output for subroutine:
 // signed __int64 __fastcall raw_GcUIGlobals(__int64 a1) -----> hash: 21D52E2
 // hash of whole input: 8AEA2A75

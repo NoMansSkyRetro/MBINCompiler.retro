@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using libMBIN.NMS;
+using System.Collections.Generic;
 
 namespace libMBIN.V1_24.Structs
 {
     public class GcTestMetadata : NMSTemplate // size = 0x6A4
     {
         public bool TestBool;
+        public byte TestByte;   // name from the modern def; era def lost it in the align gap
         public int TestInt;
         public short TestInt16;
         public ushort TestUInt16;

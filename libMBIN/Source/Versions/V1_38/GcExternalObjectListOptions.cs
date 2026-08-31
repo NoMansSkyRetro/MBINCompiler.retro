@@ -1,4 +1,5 @@
-﻿namespace libMBIN.V1_38.Structs
+﻿using libMBIN.NMS;
+namespace libMBIN.V1_38.Structs
 {
     public class GcExternalObjectListOptions : NMSTemplate      // size: 0x230
     {
