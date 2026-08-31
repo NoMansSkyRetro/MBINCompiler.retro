@@ -16,8 +16,8 @@ namespace MBINCompiler.Commands {
     ///
     /// This is the retro pipeline's first-class output: per-build struct layouts for tools
     /// that read the game's structs from memory (see the MBINCompiler.retro notes in the
-    /// README). The compiled-in definitions are the rc1 / launch layout; --nms-version only
-    /// labels the dump, since a single binary carries one definition set.
+    /// README). --nms-version selects the build; the dump is that build's effective set
+    /// (its own folder overlaid on the shared base), exactly as the runtime resolves types.
     ///
     /// stdout is a flat { "StructName": { guid, size, fields:[{name,type,offset,size}] } }
     /// map (a drop-in for NMS.retro.py's gen_structs.py); the build id + template count go to
@@ -26,21 +26,34 @@ namespace MBINCompiler.Commands {
     internal class DumpLayoutCommand : Command<DumpLayoutCommand> {
 
         public override int ExecuteCommand( CommandLineParser options ) {
-            // Dump the active build's own struct folder: a build with a dedicated folder
-            // (1.24 -> libMBIN.V1_24, 1.38 -> libMBIN.V1_38) dumps that folder; builds using the
-            // base set (rc1 / 1.09.1 / 1.13) dump the non-versioned structs.
+            // Dump the active build's *effective* struct set, exactly as the runtime resolves it
+            // (NMSTemplate.GetTemplateType): the build's own folder wins per template name, and
+            // every name it does not override falls back to the shared base set. So 1.24/1.38
+            // (near-complete folders) and 1.09.1/1.13 (small delta folders over the base) all
+            // emit the full layout their build actually uses, not just the folder's overrides.
             string build = RetroVersion.Selected?.Id ?? RetroVersion.CompiledInId;
             string folder = NMSVersion.FolderPrefix;
 
             var baseType = typeof( NMSTemplate );
-            bool anyInFolder = baseType.Assembly.GetTypes().Any( t => t.Namespace?.StartsWith( folder ) ?? false );
+            // Match the resolver's universe (NMSTemplate.BaseTemplateMap / VersionTemplateMaps):
+            // direct NMSTemplate subclasses, split into the active folder vs the base set.
+            var all = baseType.Assembly.GetTypes()
+                .Where( t => t.BaseType == baseType && !t.IsAbstract );
+            var folderMap = all.Where( t => t.Namespace?.StartsWith( folder ) ?? false )
+                .GroupBy( t => t.Name ).ToDictionary( g => g.Key, g => g.First() );
+            var baseMap = all.Where( t => !NMSVersion.IsVersionedNamespace( t.Namespace ) )
+                .GroupBy( t => t.Name ).ToDictionary( g => g.Key, g => g.First() );
+
             bool dumpAll = Environment.GetEnvironmentVariable( "MBIN_DUMPLAYOUT_ALL" ) == "1";
-            var structs = baseType.Assembly.GetTypes()
-                .Where( t => t.IsSubclassOf( baseType ) && !t.IsAbstract )
-                .Where( t => dumpAll || ( anyInFolder
-                    ? ( t.Namespace?.StartsWith( folder ) ?? false )
-                    : !NMSVersion.IsVersionedNamespace( t.Namespace ) ) )
-                .OrderBy( t => t.Name, StringComparer.Ordinal );
+            IEnumerable<Type> structs;
+            if ( dumpAll ) {
+                structs = all.OrderBy( t => t.FullName, StringComparer.Ordinal );
+            } else {
+                var names = new SortedSet<string>( StringComparer.Ordinal );
+                names.UnionWith( baseMap.Keys );
+                names.UnionWith( folderMap.Keys );
+                structs = names.Select( n => folderMap.TryGetValue( n, out var tv ) ? tv : baseMap[n] );
+            }
 
             var sb = new StringBuilder();
             sb.Append( '{' );
