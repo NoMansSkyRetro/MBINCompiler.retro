@@ -2,6 +2,5 @@ using libMBIN.NMS; using libMBIN.NMS.GameComponents; using libMBIN.NMS.Globals; 
 {
     public class GcRewardStartPurchase : NMSTemplate
     {
-        public bool Dummy; // unused?
     }
 }
