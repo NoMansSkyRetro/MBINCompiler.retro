@@ -54,7 +54,7 @@ namespace libMBIN.V1_38.Structs
         /* 0x1780 */ public GcSpaceSkyProperties Sky;
         [NMS(Size = 0x80)]
         /* 0x1820 */ public string HeavyAir;
-        /* 0x18A0 */ public List<GcAISpaceshipPreloadCacheDataTable> SystemShips;
+        /* 0x18A0 */ public List<GcAISpaceshipPreloadCacheData> SystemShips;
         /* 0x18B0 */ public GcAlienRace InhabitingRace;
         /* 0x18B4 */ public GcPlanetTradingData TradingData;
         /* 0x18BC */ public GcPlayerConflictData ConflistData;
