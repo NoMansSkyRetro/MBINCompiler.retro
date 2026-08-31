@@ -1,4 +1,4 @@
-# RetroMBINCompiler
+# MBINCompiler.retro
 
 A fork of [monkeyman192's MBINCompiler](https://github.com/monkeyman192/MBINCompiler/tree/rc1)
 (`rc1` branch) that targets **legacy** No Man's Sky builds. Enormous thanks to monkeyman192

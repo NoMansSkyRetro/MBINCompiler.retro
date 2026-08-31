@@ -15,7 +15,7 @@ namespace MBINCompiler.Commands {
     /// logic is never reimplemented.
     ///
     /// This is the retro pipeline's first-class output: per-build struct layouts for tools
-    /// that read the game's structs from memory (see the RetroMBINCompiler notes in the
+    /// that read the game's structs from memory (see the MBINCompiler.retro notes in the
     /// README). The compiled-in definitions are the rc1 / launch layout; --nms-version only
     /// labels the dump, since a single binary carries one definition set.
     ///
