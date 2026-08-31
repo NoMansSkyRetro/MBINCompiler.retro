@@ -6,7 +6,9 @@ namespace libMBIN {
     /// Retro multi-version support. This fork carries a complete struct definition set per
     /// targeted NMS build, each in its own namespace folder, all compiled into one libMBIN:
     ///
-    ///   rc1 / 1.09.1 / 1.13   the base set        libMBIN.NMS.*      (the rc1 branch defs)
+    ///   rc1                   the base set        libMBIN.NMS.*      (the rc1 branch defs)
+    ///   1.09.1 (Release)      libMBIN.V1_09_1.*   (derived per struct, falls back to base)
+    ///   1.13 (Foundation)     libMBIN.V1_13.*     (imported 1a6c980e, falls back to base)
     ///   1.24 (Path Finder)    libMBIN.V1_24.*     (imported 1.24.4 tag)
     ///   1.38 (Atlas Rises)    libMBIN.V1_38.*     (imported 1.38.0.2 tag)
     ///
@@ -31,8 +33,8 @@ namespace libMBIN {
 
         /// <summary>
         /// Namespace prefix of the active build's own struct folder, e.g. "1.24" -> libMBIN.V1_24.
-        /// Builds with no dedicated folder (rc1/1.09.1/1.13) map to a prefix that matches nothing,
-        /// so they fall back to the base set.
+        /// Builds with no dedicated folder (rc1) map to a prefix that matches nothing, so they
+        /// fall back to the base set; partial folders fall back per template.
         /// </summary>
         public static string FolderPrefix => "libMBIN.V" + (ActiveId ?? "").Replace( ".", "_" );
 

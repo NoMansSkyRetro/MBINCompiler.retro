@@ -13,7 +13,9 @@ all compiled into the one libMBIN:
 
 | Build(s) | Struct set | Source |
 |----------|-----------|--------|
-| rc1 / 1.09.1 / 1.13 | base, `libMBIN.NMS.*` | the `rc1` branch defs |
+| rc1 / fallback | base, `libMBIN.NMS.*` | the `rc1` branch defs (in truth a mixed RC1/1.09.1-era set) |
+| 1.09.1 (Release) | `libMBIN.V1_09_1.*` | derived per struct; falls back to base |
+| 1.13 (Foundation) | `libMBIN.V1_13.*` | imported `1a6c980e` (last pre-Path-Finder commit); falls back to base |
 | 1.24 (Path Finder) | `libMBIN.V1_24.*` | imported `1.24.4` tag (its csproj's file list) |
 | 1.38 (Atlas Rises) | `libMBIN.V1_38.*` | imported `1.38.0.2` tag |
 
@@ -29,23 +31,30 @@ cheap files. The thing we avoid is bespoke deltas.
 
 - Active build: `NMSVersion.ActiveId`, set from `--nms-version` or autodetection (the MBIN
   header stamp / globals GUID; see `MBINCompiler/Source/RetroVersion.cs`).
-- `NMSTemplate.GetTemplateType(name)` resolves in the active build's folder first
-  (`libMBIN.V1_24` / `libMBIN.V1_38`), then falls back to the base set for shared infra
-  (`MBINHeader`, `NMSString`, …) and for builds with no dedicated folder (rc1/1.09.1/1.13).
+- `NMSTemplate.GetTemplateType(name)` resolves in the active build's folder first, then
+  falls back to the base set for shared infra (`MBINHeader`, `NMSString`, …), for builds
+  with no dedicated folder (rc1), and for templates a partial folder doesn't carry yet.
 - With no active build, only the base set is used, so single-version behaviour is unchanged.
 
-## Status
+## Ground truth (proven 2026-08-30)
 
-- rc1 / 1.24 / 1.38 folders build and decompile in one binary; a real 1.24 and a real 1.38
-  globals file each decode via their own defs. Autodetection and `--nms-version` both route.
-- `dumplayout` dumps the active build's folder (rc1 525 / 1.24 703 / 1.38 894 templates) and is
-  still the per-build layout export for NMS.retro.py's `gen_structs.py` (`layouts/`).
+- **RC1 (PS4 disc) is NOT 1.09.1.** Byte-diffing the 15,526 path-shared MBINs between the
+  disc psarcs (`E:\NMS_PS4\nms-arc`) and 1.09.1's PAKs: 10,681 identical, but ~40 root
+  templates changed layout (every `*.GLOBAL` single-struct file changed size). The `rc1`
+  branch defs are themselves a mix: several structs match 1.09.1's sizes, not the disc's.
+- **Template GUIDs are HG-stamped layout hashes** in every V0 MBIN header. PC-to-PC GUID
+  equality proves layout equality per root-template tree (1.09.1 vs 1.24: 60 of 114 roots
+  identical; 1.13 vs 1.24: 84 of 118). PS4-vs-PC GUIDs differ even for byte-identical
+  files, so never compare GUIDs across platforms.
+- Census + tooling live in NMS.retro.py `tools/mbin/`: `guid_census.py` (per-template GUIDs
+  per build), `body_diff.py` (byte-level build compare), `verify_roundtrip.py` (the
+  acceptance test: extract per-template samples, decompile, recompile, byte-compare).
 
 ## Open
 
-- **1.13** has no tag: give it its own `libMBIN.V1_13.*` folder once a def set exists (bisect
-  libMBIN history for GUID-matching structs, or derive from exe RE), else it uses the base set.
-- **Recompile (EXML -> MBIN)** fidelity is bounded by the incomplete `rc1` base and the
-  era tags for some complex structs (e.g. `GcEnvironmentGlobals`); decompile is the solid path.
-- `--nms-version=1.09.1` currently resolves to the base set (same as rc1); a dedicated 1.09.1
-  folder is only needed if its layout is shown to differ from rc1.
+- The per-build def grind, verified by `verify_roundtrip.py`: fix the base set for the RC1
+  disc, populate `V1_09_1`/`V1_13` for the roots whose GUIDs differ from every imported
+  era, and repair the imported 2017 sets (whose Ignore-paddings hide real fields; see the
+  TkGraphicsSettings fix pattern - unaligned `byte[]` paddings that shift later fields).
+- Where a root's GUID matches 1.24/1.38, copying that def tree into the older build's
+  folder is correct by construction, but only worth it once the V1_24 def itself verifies.
